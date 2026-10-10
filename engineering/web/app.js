@@ -21,6 +21,8 @@
     fixture:["Test fixture","#b79864"],tool:["Selected CAD part","#d4aa72"],
     b1tpu:["B1 magnetic TPU insert","#a8bd80"],spine:["B1 fixed sensor spine","#24897f"],
     magnet:["B1 embedded magnets","#cc8047"],plug:["B1 flush retaining plugs","#e1bf67"],pcb:["B1 fixed sensor heads","#716b9b"],
+    backer:["B2 removable backer","#2e746e"],spacer:["B2 locating spacers","#78afa1"],
+    electronics:["B2 component envelopes","#8374a2"],nail:["T0 / T1 thin nail pads","#d69936"],
   };
   function choose(){
     const model=data.models.find(m=>m.id===select.value);
@@ -29,7 +31,8 @@
     document.getElementById("model-note").textContent=model.note;
     const controls=document.getElementById("layer-controls");controls.replaceChildren();
     for(const group of viewer.visible){
-      const [label,color]=layerDefinitions[group],row=element("label",null);
+      const definition=group==="pcb"&&model.id.startsWith("b2")?["B2 single PCB","#48967e"]:layerDefinitions[group];
+      const [label,color]=definition||[group,"#71979c"],row=element("label",null);
       const input=element("input",null,{type:"checkbox","data-layer":group,"aria-label":label});
       input.checked=true;input.addEventListener("change",()=>{input.checked?viewer.visible.add(group):viewer.visible.delete(group);viewer.draw();});
       const swatch=element("span",null,{class:"swatch"});swatch.style.backgroundColor=color;
@@ -46,17 +49,20 @@
     });
   }
   const partsBody=document.getElementById("parts-table");
-  for(const [design,prefix] of [[data.r1,""],[data.l1,"l1/"],[data.b1,"b1/"]]){
+  const designParts=[[data.r1,""],[data.l1,"l1/"],[data.b1,"b1/"],
+    ...Object.entries(data.prototypes||{}).map(([id,plan])=>[plan,`prototypes/${id}/`])];
+  for(const [design,prefix] of designParts){
     for(const part of design.parts){
       const row=element("tr",null),name=element("td",part.id.replaceAll("_"," "));
       const purpose=element("td",part.purpose);
-      purpose.append(element("small",part.print_note||part.material+(part.kind==="reference_only"?" · purchased reference; do not fabricate":" · physical qualification pending")));
+      purpose.append(element("small",part.print_note||part.material+(part.kind==="reference_only"?" · reference envelope; follow the build guide":" · physical qualification pending")));
       const files=element("td",null);files.append(link("STEP ↓","downloads/"+prefix+part.step),link("STL ↓","downloads/"+prefix+part.stl));
       row.append(name,purpose,files);partsBody.append(row);
     }
   }
-  const partCount=data.r1.parts.length+data.l1.parts.length+data.b1.parts.length;
-  document.getElementById("part-count").textContent=`${partCount} digital solids, including three purchased/component references`;
+  const partCount=designParts.reduce((n,[plan])=>n+plan.parts.length,0);
+  const referenceCount=designParts.reduce((n,[plan])=>n+plan.parts.filter(p=>p.kind==="reference_only").length,0);
+  document.getElementById("part-count").textContent=`${partCount} digital solids, including ${referenceCount} component references`;
   document.getElementById("digital-count").textContent=partCount;
   for(const candidate of data.study.candidates){
     const row=element("tr",null),name=element("td",null),coverage=element("td",candidate.coverage),next=element("td",candidate.next),state=element("td",null);

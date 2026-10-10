@@ -1,0 +1,68 @@
+{
+  "revision": "B2.1",
+  "status": "development; not physically assembled",
+  "basis": "Preserved B1 sensor and magnet poses; consolidated electronics and separate mechanically registered backer.",
+  "pcb": {
+    "thickness_mm": 0.8,
+    "layers": 4,
+    "ground_layer": "In1.Cu and B.Cu ground pours around signal routes; continuity checked by KiCad",
+    "track_width_mm": 0.15,
+    "clearance_mm": 0.15,
+    "edge_clearance_mm": 0.2,
+    "via_diameter_mm": 0.45,
+    "via_drill_mm": 0.2,
+    "grid_mm": 0.1,
+    "sensor_arm_width_mm": 3.0,
+    "backbone_width_mm": 6.0,
+    "controller_bay_yz_mm": [-19.5, 6.5, -8.8, 27.0],
+    "mux_part": "TCA9548ARGER",
+    "mux_address": "0x70",
+    "mux_package": "RGE, VQFN-24 with exposed pad",
+    "nail_adc_part": "ADS1115IDGSR",
+    "nail_adc_address": "0x48",
+    "nail_adc_package": "DGS, VSSOP-10",
+    "sensor_part": "MLX90393SLW-ABA-011",
+    "sensor_count": 5,
+    "upstream_pullup_ohm": 4700,
+    "branch_pullup_ohm": 10000,
+    "nail_pull_down_ohm": 10000,
+    "nail_continuity_resistor_ohm_at_each_pad": 100000,
+    "supply_v": 3.3,
+    "bus_hz": 100000,
+    "main_cable": ["3V3", "GND", "SCL", "SDA"],
+    "nail_leads": ["T0 excitation", "T0 sense", "T1 excitation", "T1 sense"],
+    "notes": [
+      "No DC/DC converter or magnetic inductor on the sensing board.",
+      "Use one TCA branch at a time; all magnetic heads retain address 0x0C.",
+      "Keep the continuity resistors at the far ends of both nail leads, not on this PCB.",
+      "Do not change Hall axes or sensor-center positions when simplifying packaging.",
+      "Four-layer stack and copper balance need fabricator review before ordering."
+    ]
+  },
+  "mechanical": {
+    "material": "PETG prototype backer; qualification pending",
+    "pcb_seat_clearance_mm": 0.15,
+    "back_thickness_mm": 1.2,
+    "board_bore_mm": 5.0,
+    "shoulder_outside_diameter_mm": 4.85,
+    "shoulder_height_mm": 0.65,
+    "spacer_outer_diameter_mm": 7.0,
+    "clamp_copper_keepout_diameter_mm": 7.2,
+    "fastener_clearance_mm": 3.2,
+    "seat_compliance_mm": 0.1,
+    "reserved_fastener_head_height_mm": 2.4,
+    "reserved_fastener_head_diameter_mm": 6.0,
+    "notes": [
+      "Board registration uses the two existing B1 side-mount axes.",
+      "Spacers bottom on the rigid frame, not the bending TPU.",
+      "Two separate shouldered spacers register the PCB, which is sandwiched between the spacer faces and a removable backer.",
+      "The board is clamped on bare annuli; electrical copper stays outside the fastener keepout. The 0.825 mm nominal shoulder wall must be inspected after printing.",
+      "Confirm jaw housing, connector, cable and fastener length on the actual installed drive."
+    ]
+  },
+  "source_references": [
+    "https://media.melexis.com/-/media/files/documents/datasheets/mlx90393-datasheet-melexis.pdf",
+    "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+    "https://www.ti.com/lit/ds/symlink/ads1115.pdf"
+  ]
+}

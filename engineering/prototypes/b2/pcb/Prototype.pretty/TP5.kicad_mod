@@ -1,0 +1,8 @@
+(footprint "TP5" (layer "F.Cu") (at 0 0) (attr smd)
+(property "Reference" "TP5" (at 0 0) (layer "F.Fab") (effects (font (size 0.6 0.6) (thickness 0.1))))
+(property "Value" "Solder wires 3V3 GND SCL SDA" (at 0 1) (layer "F.Fab") hide (effects (font (size 0.5 0.5) (thickness 0.1))))
+(pad "1" smd rect (at -2.4 0 -0) (size 0.9 1) (layers "F.Cu" "F.Mask"))
+(pad "2" smd rect (at -0.8 0 -0) (size 0.9 1) (layers "F.Cu" "F.Mask"))
+(pad "3" smd rect (at 0.8 0 -0) (size 0.9 1) (layers "F.Cu" "F.Mask"))
+(pad "4" smd rect (at 2.4 0 -0) (size 0.9 1) (layers "F.Cu" "F.Mask"))
+)

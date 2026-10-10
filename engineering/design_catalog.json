@@ -1,7 +1,7 @@
 {
   "schema": "yam-design-pages/1",
   "groups": [
-    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1 and B1 have assembly files and readout code. All still require physical qualification."},
+    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1 and B2 have assembly files and readout code. All still require physical qualification."},
     {"id": "concept", "title": "Our next design concepts", "description": "Separate ideas and engineering studies. Check each page for exactly which files exist and which work remains."},
     {"id": "research", "title": "Alternative sensing approaches", "description": "Reference approaches considered in the study. These are not completed ENPIRE designs."}
   ],
@@ -97,31 +97,41 @@
       "related": ["B2", "R1", "L1", "RECESSED"]
     },
     {
-      "id": "B2", "slug": "b2", "title": "B2 · One magnetic PCB", "group": "concept",
-      "status": "Board layout concept", "status_detail": "A board envelope, component allocation and printable fit witness exist. Copper routing, electrical DRC and board retention are unfinished.",
-      "summary": "Consolidate B1's separate magnetic boards and readout into one rigid shaped PCB while keeping the initial magnet and sensor positions.",
-      "signal": "The same intended magnetic observations as B1; no working B2 electronics have been built.",
-      "best_for": "Reducing manual head placement and wiring before repeated builds.",
-      "tradeoff": "A larger irregular PCB may cost more to fabricate or replace. Fewer parts do not remove calibration or interference.",
+      "id": "B2", "slug": "b2", "title": "B2 · One magnetic PCB", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "B2.1 supplies a routed four-layer PCB with clean independent KiCad DRC, checked mounting CAD, a firmware package and raw recorder. No physical B2 has been tested.",
+      "summary": "Put all five magnetic sensors, the multiplexer and nail ADC on one shaped PCB. Register it with two spacers and a removable backer; retain B1's TPU, magnets and two thin nail pads.",
+      "signal": "Raw magnetic observations and nail conductance, with a distinct B2 recording identity. Force still requires physical calibration.",
+      "best_for": "Testing whether one registered board improves assembly and consistency compared with the five-board B1 pilot.",
+      "tradeoff": "The routing band is wider within the original side profile. Whole-board repair cost, magnetic interference and calibration transfer still need measurement.",
       "sensors": [
-        ["S0–S4", "Five MLX90393SLW-ABA-011 ICs; planned reuse of the B1 sensing choice", "On one rigid PCB at the released B1 head poses"],
+        ["S0–S4 / U1–U5", "Five MLX90393SLW-ABA-011 ICs", "On one rigid PCB at the released B1 head positions and orientations"],
         ["M0–M3", "The same four 3 × 1 mm N48 magnets and TPU cartridge for the first comparison", "Inside the B1-style TPU pockets"],
         ["T0 / T1", "Retain the two N0 nail pads in the initial comparison", "On the nail prongs; their leads are still required"],
-        ["Readout", "TCA9548A and nail ADC intended for the reserved controller bay", "Near the base of the single board; final component layout is pending"]
+        ["U10 / U11", "TCA9548ARGER multiplexer + ADS1115IDGSR nail ADC", "In the base bay on that same PCB"],
+        ["Pico", "Raspberry Pi Pico RP2040 running yam-b2/1", "At the wrist/base; J1 connects 3V3, GND, SCL/GP5 and SDA/GP4"]
       ],
-      "placement": "All five B1 heads share a common board plane. The proposed main connection to the external Pico uses four conductors instead of the specified twenty-conductor head harness; nail leads and USB are excluded from that count.",
-      "visual": {"path": "assets/concepts/b2_board_concept.svg", "alt": "B2 single-board outline with five preserved head positions and reserved controller bay", "caption": "Outline/allocation study only. This is not PCB routing or an orderable circuit board."},
-      "schematic": ["Same magnetic TPU", "One five-head PCB", "Four-wire bus target", "External Pico"],
+      "placement": "The component face points inward toward the magnets. Two shouldered spacers register the board on the original B1 mount axes; a removable backer holds it. J1 has four upstream conductors. J2 has four separate nail leads, with a 100 kΩ continuity resistor at each nail pad. TP1–TP5 are test lands, not head-wire connectors.",
+      "visual": {"path": "assets/prototypes/b2/b2_placement.svg", "alt": "B2 single board with S0-S4 sensor positions, M0-M3 magnets and the two nail pads", "caption": "Placement from the B2.1 design. Sensor poses are preserved; the connecting band and mounting parts are revised. Physical testing remains pending."},
+      "schematic": ["B1 TPU + nail pads", "One five-head PCB", "Four-wire upstream bus", "B2 raw recording"],
+      "viewer_model": "b2_assembly",
+      "prototype_cad_group": "b2",
       "resources": [
-        ["Layout", "Board outline and existing head poses", "assets/concepts/b2_layout.json"],
-        ["Fit witness", "B2 outline STEP", "assets/concepts/cad/b2_pcb_fit_witness.step"],
-        ["Fit witness", "B2 outline STL — print for dimensions only", "assets/concepts/cad/b2_pcb_fit_witness.stl"],
-        ["Drawings", "B2/C1 concept review PDF", "assets/concepts/concept_review.pdf"],
-        ["Study", "Scalability evidence and assumptions", "architecture.html"],
-        ["Source", "Layout generator and parameters in the complete source", "downloads/enpire-source.zip"]
+        ["Assembly", "Complete B2.1 build, wiring and test instructions", "build-b2.html"],
+        ["Materials", "B2 bill of materials", "downloads/b2_bom.csv"],
+        ["PCB", "Checked Gerbers and drill files", "downloads/b2_main_fabrication.zip"],
+        ["PCB source", "Editable checked KiCad board", "assets/prototypes/b2/pcb/b2_main.kicad_pcb"],
+        ["PCB check", "Independent DRC and manufacturing receipt", "assets/prototypes/b2/pcb/pcb_checks.json"],
+        ["Assembly view", "Actual component-side copper and placement", "assets/prototypes/b2/pcb/b2_assembly.svg"],
+        ["Wiring", "Pico, single PCB and remote nail-pad connections", "assets/prototypes/b2/b2-wiring.svg"],
+        ["Drawings", "B2 assembly and dimensional review PDF", "downloads/b2_review_drawings.pdf"],
+        ["Firmware", "Four-file Pico firmware ZIP", "downloads/b2_firmware.zip"],
+        ["Recording", "B2 specimen record", "downloads/b2_specimen.json"],
+        ["All designs", "Build-and-compare campaign", "build-all.html"],
+        ["Source", "Generators, firmware, raw recorder and software checks", "downloads/enpire-source.zip"],
+        ["Earlier study", "Preserved B2 outline concept", "assets/concepts/b2_board_concept.svg"]
       ],
-      "missing": ["Routed PCB, complete schematic/footprint placement and Gerbers", "Final board registration, clamp/backer and connector", "Installed drive clearance and physical batch tests", "B2-specific validated firmware or force calibration"],
-      "next_steps": ["Check the printed outline witness against the actual finger and drive.", "Finish component placement, retention and routing before ordering PCBs.", "Compare assembly time, repair cost and calibration transfer against B1."],
+      "missing": ["Physical PCB assembly, power, readout and sensor-axis checks", "Installed-drive fit, loaded clearance, cable motion and retention measurements", "Measured contact reliability and force performance through 20 N", "Repeated-build assembly time, repair cost and calibration-transfer results"],
+      "next_steps": ["Print the board witness, backer and locating spacers and check the actual installed drive.", "Populate one PCB, connect both nail pads and verify every channel and fault condition.", "Record the common bench tests with matched B1 controls before deciding whether B2 is better."],
       "related": ["B1", "RECESSED", "NAIL", "C1"]
     },
     {

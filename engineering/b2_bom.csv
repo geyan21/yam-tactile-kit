@@ -1,0 +1,29 @@
+category,item,quantity,part_or_spec,location,reference,notes
+PCB,Consolidated B2 board,1,0.8 mm four-layer board from the checked B2 fabrication ZIP,Fixed finger side,engineering/designs/b2.json,Fit witness first; no head wires between TP1-TP5
+IC,Magnetic sensors,5,MLX90393SLW-ABA-011,U1-U5 at original B1 poses,https://media.melexis.com/-/media/files/documents/datasheets/mlx90393-datasheet-melexis.pdf,Confirm pin 1 and ground exposed pads
+IC,I2C multiplexer,1,TCA9548ARGER,U10 in base bay,https://www.ti.com/lit/ds/symlink/tca9548a.pdf,RGE QFN pinout; address 0x70
+IC,Nail ADC,1,ADS1115IDGSR,U11 in base bay,https://www.ti.com/lit/ds/symlink/ads1115.pdf,DGS VSSOP-10; address 0x48
+Passive,Sensor decoupling,10,100 nF 16 V X7R 0402,C11-C52,engineering/electronics/b1/b1_head.json,Two per magnetic sensor
+Passive,Branch pull-ups,10,10 kohm 1 percent 0402,R11-R52,engineering/electronics/b1/b1_head.json,One pair per mux branch
+Passive,Controller decoupling,2,100 nF 16 V X7R 0402,C100-C101,engineering/designs/b2.json,One close to each controller IC
+Passive,Bulk capacitor,1,1 uF 10 V X7R 0402,C102,engineering/designs/b2.json,Local supply reservoir
+Passive,Upstream pull-ups,2,4.7 kohm 1 percent 0402,R100-R101,engineering/designs/b2.json,Account for any additional external pull-ups
+Passive,Reset pull-up,1,10 kohm 1 percent 0402,R102,engineering/designs/b2.json,TCA RESET pulled high
+Passive,Reference-divider resistors,4,10 kohm 1 percent 0402,R103-R106,engineering/designs/b2.json,AIN2 supply half and AIN3 independent check half
+Passive,Nail pull-downs,2,10 kohm 1 percent 0402,R107-R108,engineering/firmware/b2/config.json,Change firmware record if resistance changes
+Nail,Continuity resistors,2,100 kohm 1 percent,One across each nail pad at the fingertip,engineering/docs/ELECTRONICS.md,Must remain at the remote pad end
+Controller,USB microcontroller,1,Raspberry Pi Pico RP2040,Wrist/base,engineering/scripts/prepare_b2_firmware.py,Copy all four files from the B2 firmware ZIP
+Mechanical,Removable backer,1,B2 PETG backer from checked CAD,Behind PCB,engineering/scripts/build_b2_parts.py,Inspect cable exits and seating
+Mechanical,Locating spacer 1,1,B2 spacer 1 from checked CAD,First retained B1 side-fastener axis,engineering/scripts/build_b2_parts.py,Measure bore and locating shoulder after printing
+Mechanical,Locating spacer 2,1,B2 spacer 2 from checked CAD,Second retained B1 side-fastener axis,engineering/scripts/build_b2_parts.py,Do not swap measured lengths if they differ
+Mechanical,Seating film,1 cut sheet,0.10 mm insulating transfer tape or measured insulating shim,Between board and backer,engineering/designs/b2.json,Record actual mounted thickness
+Mechanical,Fasteners and washers,2 sets,Nonmagnetic M3 with head envelope at most 6 mm diameter and 2.4 mm projection,Original side-fastener axes,engineering/designs/b2.json,Select lengths from actual stack and preserve original finger clamping
+Reuse,Original hard frame,1,Existing ENPIRE/YAM hard finger,Original drive,engineering/docs/GEOMETRY.md,Keep original root and nail geometry
+Reuse,Magnetic TPU insert,1,Released B1 insert,Compliant finger region,engineering/docs/BUILD_B1.md,Use same TPU process as paired B1 control
+Reuse,Magnet plugs,4,Released B1 flush plugs,Four magnet pockets,engineering/docs/BUILD_B1.md,Verify retention
+Magnet,Axial disc magnets,4,S-03-01-N N48 3 x 1 mm,Released B1 M0-M3 locations,https://www.supermagnete.de/eng/data_sheet_S-03-01-N.pdf,North toward positive native X
+Nail,N0 contact laminates,2,Released R1 N0 stack and cut patterns,Two hard nail prongs,engineering/docs/BUILD_R1.md,About 0.40 mm nominal mounted thickness; keep notch open
+Cable,Upstream bus leads,4 conductors,Flexible insulated stranded wire,J1 to Pico,engineering/docs/BUILD_B2.md,3V3 GND SCL SDA; no 5 V signal connection
+Cable,Nail leads,4 conductors,Flexible insulated stranded wire,J2 to T0 and T1,engineering/docs/BUILD_B2.md,Two electrode leads per nail pad
+Fixture,Independent force reference,1 shared,At least 25 N capacity with documented uncertainty at most 0.05 N,Bench,engineering/campaign/requirements.json,L1 is not an independent force reference until separately qualified
+Fixture,Displacement measurement,1 shared,Dial indicator or calibrated camera suitable for the 0.1 mm provisional screen,Bench,engineering/campaign/requirements.json,Record resolution and setup

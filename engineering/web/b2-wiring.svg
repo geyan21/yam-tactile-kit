@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+<title id="title">B2 wiring: one magnetic PCB and two nail pads</title>
+<desc id="desc">Pico GP4 and GP5 connect to the shared I2C bus of one B2 PCB. A TCA9548A selects five MLX90393 heads. An ADS1115 reads two nail pads and two reference dividers. Continuity resistors are located at the nail pads.</desc>
+<rect width="1280" height="820" fill="#f7f9f5"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#567d70"/></marker></defs>
+<g font-family="sans-serif" fill="#203f46">
+<text x="30" y="38" font-size="27" font-weight="bold">B2 · one PCB, four upstream wires, two nail pads</text>
+<text x="30" y="70" font-size="17">Logical wiring diagram. Use the placement drawing and PCB pin-1 marks for physical assembly.</text>
+<rect x="25" y="118" width="255" height="283" rx="12" fill="#e3e9ec" stroke="#9aa9b0"/>
+<text x="48" y="152" font-size="22" font-weight="bold">Pico at wrist / bench</text>
+<text x="48" y="191" font-size="17">3V3 output → J1.1</text>
+<text x="48" y="226" font-size="17">GND → J1.2</text>
+<text x="48" y="261" font-size="17">GP5 / SCL → J1.3</text>
+<text x="48" y="296" font-size="17">GP4 / SDA → J1.4</text>
+<text x="48" y="344" font-size="16">MicroPython · yam-b2/1</text>
+<text x="48" y="374" font-size="15">USB records raw observations.</text>
+<path d="M285 255H333" stroke="#567d70" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="348" y="110" width="900" height="423" rx="13" fill="#dcece2" stroke="#3c8770" stroke-width="2"/>
+<text x="373" y="142" font-size="22" font-weight="bold">Everything inside this box is on ONE fixed B2 board</text>
+<rect x="378" y="174" width="267" height="160" rx="8" fill="white" stroke="#819d90"/>
+<text x="397" y="207" font-size="19" font-weight="bold">U10 · TCA9548ARGER</text>
+<text x="397" y="238" font-size="17">I²C address 0x70</text>
+<text x="397" y="269" font-size="16">Select one branch at a time.</text>
+<text x="397" y="306" font-size="15">RESET: 10 kΩ pull-up to 3V3</text>
+<path d="M646 250H701M701 190V367M701 190H734M701 234H734M701 278H734M701 322H734M701 366H734" fill="none" stroke="#557b6e" stroke-width="2"/>
+<g font-size="17">
+<rect x="743" y="170" width="470" height="37" rx="5" fill="#ece6f3"/><text x="756" y="195">Branch 0 → S0 / U1 · MLX90393 · 0x0C</text>
+<rect x="743" y="214" width="470" height="37" rx="5" fill="#ece6f3"/><text x="756" y="239">Branch 1 → S1 / U2 · MLX90393 · 0x0C</text>
+<rect x="743" y="258" width="470" height="37" rx="5" fill="#ece6f3"/><text x="756" y="283">Branch 2 → S2 / U3 · MLX90393 · 0x0C</text>
+<rect x="743" y="302" width="470" height="37" rx="5" fill="#ece6f3"/><text x="756" y="327">Branch 3 → S3 / U4 · MLX90393 · 0x0C</text>
+<rect x="743" y="346" width="470" height="37" rx="5" fill="#ece6f3"/><text x="756" y="371">Branch 4 → S4 / U5 · reference · 0x0C</text>
+</g>
+<rect x="378" y="366" width="267" height="135" rx="8" fill="white" stroke="#819d90"/>
+<text x="397" y="398" font-size="19" font-weight="bold">U11 · ADS1115IDGSR</text>
+<text x="397" y="429" font-size="17">Same upstream bus · 0x48</text>
+<text x="397" y="458" font-size="16">AIN0 = T0 · AIN1 = T1</text>
+<text x="397" y="485" font-size="15">AIN2 / AIN3 = separate checks</text>
+<text x="734" y="421" font-size="16">U1–U5 each have two 100 nF capacitors.</text>
+<text x="734" y="450" font-size="16">Each branch has 10 kΩ SDA/SCL pull-ups.</text>
+<text x="734" y="479" font-size="16">Upstream SDA/SCL each have 4.7 kΩ pull-ups.</text>
+<text x="734" y="508" font-size="15">All electronics and pull-ups operate at 3.3 V.</text>
+<rect x="25" y="561" width="605" height="209" rx="12" fill="#f2e8d6" stroke="#b18c55"/>
+<text x="47" y="593" font-size="21" font-weight="bold">At the nail · repeat this circuit for T0 and T1</text>
+<path d="M55 644H165M165 644V622H344V644H400M165 644V688H344V644M400 644H570" fill="none" stroke="#98733a" stroke-width="2"/>
+<rect x="196" y="609" width="118" height="28" fill="white" stroke="#98733a"/>
+<text x="255" y="629" text-anchor="middle" font-size="15">N0 nail cell</text>
+<rect x="197" y="676" width="117" height="25" fill="white" stroke="#98733a"/>
+<text x="255" y="694" text-anchor="middle" font-size="14">100 kΩ</text>
+<text x="49" y="669" font-size="15">3V3 lead</text>
+<text x="433" y="668" font-size="15">Sense lead</text>
+<text x="47" y="739" font-size="16">The continuity resistor stays at the fingertip, across the cell.</text>
+<rect x="657" y="561" width="591" height="209" rx="12" fill="#e9eef0" stroke="#99a8ac"/>
+<text x="681" y="593" font-size="21" font-weight="bold">J2 · four nail leads, rear cable exit</text>
+<text x="681" y="631" font-size="17">1 = T0 excitation · 2 = T0 sense</text>
+<text x="681" y="665" font-size="17">3 = T1 excitation · 4 = T1 sense</text>
+<text x="681" y="704" font-size="16">Each sense node has a 10 kΩ pull-down to GND.</text>
+<text x="681" y="738" font-size="15">AIN2 / AIN3 each use a separate 10 kΩ + 10 kΩ divider.</text>
+<text x="30" y="802" font-size="15">Magnets move in the TPU; the PCB stays fixed. Raw field and conductance require physical force/contact calibration.</text>
+</g></svg>

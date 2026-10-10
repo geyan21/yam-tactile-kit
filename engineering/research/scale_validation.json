@@ -26,7 +26,7 @@
   },
   "readiness": {
     "B1": "Existing digital build package; hardware untested",
-    "B2": "Finish PCB routing/DRC, retention and installed clearance before physical comparison",
+    "B2": "B2.1 digital PCB and support package completed; physical fit, assembly, readout and qualification pending",
     "C1": "Validate bonded-gauge coupon, then design the gripper adapter and cross-axis calibration before integrated comparison"
   },
   "production_acceptance": {

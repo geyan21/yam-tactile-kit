@@ -4,9 +4,9 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The build study has three separate prototypes. **R1** places six replaceable resistive cells on the real ENPIRE contact profile. **L1** routes the complete finger's normal load through a purchased strain-gauge cell and aluminum carriers. **B1** adds embedded TPU magnets and a fixed sensor spine while preserving the thin nail. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Four have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, and **B2.1** consolidated magnetic electronics with a removable support. All require physical assembly and testing.
 
-**Available:** editable CAD generators; 28 checked STEP/STL solids including three purchased/component references; an electrode cut sheet; assembly drawings; three BOMs; B1 editable PCB and checked Gerbers/drills; separate firmware and raw recorders; R1/L1 force analysis; material recipes; and student test plans.
+**Available:** editable CAD generators; 32 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; four BOMs; B1/B2 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1 force analysis; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -22,7 +22,7 @@ For B1, follow [assembly](docs/BUILD_B1.md), [electronics](docs/B1_ELECTRONICS.m
 
 Start with [sensor choice and placement](docs/SENSORS.md) for the exact IC, magnets, two nail pads, and their labeled locations. Its SVG, coordinate files and page are generated from the unchanged release by `scripts/explain_sensor_placement.py`; edit `templates/sensor_guide.md` for the explanatory text, then regenerate with the CAD environment's Python.
 
-The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` contains separate B2/C1 exploration artifacts, not additional qualified build parts. Reproduce them with the CAD interpreter running `scripts/screen_magnetic_scaling.py` and then `scripts/build_design_concepts.py`. Their source/output hashes are checked independently of the preserved R1/L1/B1 release. `research/` contains the source index, quote template and scale-validation plan.
+The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` retains the earlier B2/C1 explorations; `prototypes/b2/` contains the later B2.1 build package. Both are checked independently of the preserved R1/L1/B1 release. `research/` contains sources and scale-validation plans; `campaign/` preserves the full twelve-design objective and comparison requirements.
 
 ## File map
 
@@ -94,3 +94,35 @@ build/engineering/tools/cad-venv/bin/python engineering/scripts/freeze_b1_releas
 ```
 
 Use KiCad 10 for the PCB check, or obtain the project-local official tool with `prepare_b1_eda.py --extract`. Its download provenance is recorded. The B1 freezer verifies `r1_l1_snapshot_manifest.json` before adding the new files. A full intentional R1/L1 regeneration needs a separately reviewed new baseline manifest; do not overwrite the retained baseline casually.
+
+## Reproduce B2.1 separately
+
+Follow [BUILD_B2.md](docs/BUILD_B2.md). The component and magnet poses come from
+the retained B1 release. The new board has a wider routing band inside the
+same outer side profile, with separate locating spacers and a removable backer.
+
+After collecting the geometry sources and preparing the existing CAD
+environment, run:
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_b2_pcb.py
+/usr/bin/python3 engineering/scripts/check_prototype_pcb.py \
+  build/engineering/prototypes/b2/pcb --name b2_main --export
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_b2_parts.py
+/usr/bin/python3 engineering/scripts/prepare_b2_firmware.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/draw_b2.py
+/usr/bin/python3 engineering/scripts/freeze_b2_prototype.py
+/usr/bin/python3 -m unittest discover -s engineering/tests -p test_b2.py -v
+/usr/bin/python3 engineering/scripts/build_site.py
+/usr/bin/python3 engineering/scripts/check_site.py
+```
+
+The checker defaults to the project-local KiCad tool prepared for B1. Supply
+`--kicad-cli /usr/bin/kicad-cli` to use an installed KiCad 10 instead. Every
+check keeps its own timestamped directory, including failed attempts.
+
+`prototype_pcb.py` writes explicit embedded footprints and nets;
+`prototype_route.py` supplies bounded routing; KiCad independently checks the
+result. `prototype_cad.py` verifies solids and exports. The separate B2 snapshot
+contains fabrication files, firmware, visualizations and their input hashes.
+These are digital checks; the physical comparison remains open.

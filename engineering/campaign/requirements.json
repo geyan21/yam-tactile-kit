@@ -1,0 +1,59 @@
+{
+  "schema": "yam-all-design-build-campaign/1",
+  "objective": "Build all twelve designs and determine which are suitable for thin-tip precision grasping with reliable contact and normal-force feedback through 20 N per finger.",
+  "evidence_policy": {
+    "physical_winner": null,
+    "physical_specimens_tested": 0,
+    "rules": [
+      "CAD, circuit checks, simulations and synthetic tests establish only their stated digital properties.",
+      "Do not award physical performance points for a missing experiment.",
+      "Keep raw measurements, failed builds, unavailable readings and build times.",
+      "Use independent specimens and held-out sessions; do not count adjacent frames as independent trials.",
+      "A material coupon is a development step, not completion of the installed-finger requirement.",
+      "An engineering priority is a work order, not a measured winner."
+    ]
+  },
+  "requirements": {
+    "normal_force_range_n": [0.2, 20],
+    "contact_detection_target_n": 0.2,
+    "force_rmse_n_max": 0.5,
+    "force_absolute_error_limit": "max(0.5 N, 0.1 * reference_force_n)",
+    "contact_miss_probability_max": 0.01,
+    "false_contact_probability_max": 0.01,
+    "confidence": 0.95,
+    "confidence_scope": "one-sided, per separately declared condition; not a simultaneous family guarantee",
+    "pilot_independent_specimens_per_design": 3,
+    "confirmation_presentations_per_label_and_region": 300,
+    "required_regions": ["left nail", "right nail", "nail edges and notch", "distal TPU", "middle TPU", "proximal TPU"],
+    "precision_screen_added_tip_motion_mm_at_20n": 0.1,
+    "precision_screen_is_provisional": true,
+    "force_levels_n": [0, 0.2, 0.5, 1, 2, 5, 10, 15, 20],
+    "required_tests": [
+      "part identity, power, raw acquisition and fault behavior",
+      "installed fit and preservation of leading-tip access",
+      "contact threshold and false-contact events",
+      "held-out loading/unloading at different contact positions and contact areas",
+      "zero return, hysteresis, drift and long holds",
+      "added tip motion and recovery",
+      "no-contact jaw/motor motion and gravity poses",
+      "steel proximity, cable movement and temperature changes",
+      "repeated loading, surface wear and replacement",
+      "timed independent assembly, rework, calibration and replacement",
+      "representative precision tasks using a fixed task protocol"
+    ]
+  },
+  "designs": [
+    {"id": "R1", "slug": "r1", "development": "existing integrated prototype package", "physical_evidence": "missing"},
+    {"id": "L1", "slug": "l1", "development": "existing integrated prototype package", "physical_evidence": "missing"},
+    {"id": "B1", "slug": "b1", "development": "existing integrated prototype package", "physical_evidence": "missing"},
+    {"id": "B2", "slug": "b2", "development": "B2.1 digital prototype package completed; fabrication, assembly and measurements pending", "physical_evidence": "missing"},
+    {"id": "C1", "slug": "c1", "development": "finish strain bridges, structural checks, fixtures, adapter and acquisition", "physical_evidence": "missing"},
+    {"id": "NAIL", "slug": "rigid-nail", "development": "design a bare-tip base-sensing mechanism, readout and frame interface", "physical_evidence": "missing"},
+    {"id": "RECESSED", "slug": "recessed-magnetic", "development": "design revised frame, board protection and full-motion clearance study", "physical_evidence": "missing"},
+    {"id": "F1", "slug": "flexible-matrix", "development": "design array stack, artwork, readout and shaped finger integration", "physical_evidence": "missing"},
+    {"id": "CAPACITIVE", "slug": "capacitive", "development": "design shielded compression cells, readout and finger integration", "physical_evidence": "missing"},
+    {"id": "PNEUMATIC", "slug": "pneumatic", "development": "design chambers, sealing, pressure readout and nail coverage", "physical_evidence": "missing"},
+    {"id": "O1", "slug": "optical", "development": "design optical path, sensing surface, camera processing and nail coverage", "physical_evidence": "missing"},
+    {"id": "FORCE_BUTTON", "slug": "force-button", "development": "design controlled load coupling, readout and installed-finger interface", "physical_evidence": "missing"}
+  ]
+}

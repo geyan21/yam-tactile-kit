@@ -70,13 +70,18 @@ def main():
                 checks={}
                 for name in ("enpire-engineering-kit.zip","r1_cut_sheet.pdf","cad/nail_cover_mold.step",
                              "l1/cad/l1_floating_finger_carrier.step","l1_review_drawings.pdf","l1_finger_plan.json",
-                             "b1/cad/b1_magnetic_tpu_insert.step","b1_review_drawings.pdf","b1_head_fabrication.zip"):
+                             "b1/cad/b1_magnetic_tpu_insert.step","b1_review_drawings.pdf","b1_head_fabrication.zip",
+                             "b2_main_fabrication.zip","b2_firmware.zip","b2_review_drawings.pdf",
+                             "prototypes/b2/cad/b2_removable_backer.step","campaign_requirements.json"):
                     remote=read(SITE+"downloads/"+name)
                     local=(ROOT/"build/site/downloads"/name).read_bytes()
                     checks[name]=content_hash(remote,name)==content_hash(local,name)
                 summary["download_hashes_match"]=checks
                 summary["b1_guide_pages_match"]={name:read(SITE+name)==(ROOT/"build/site"/name).read_bytes()
-                    for name in ("build-b1.html","b1-electronics.html","b1-testing.html","sensors.html","architecture.html")}
+                    for name in ("build-b1.html","b1-electronics.html","b1-testing.html","sensors.html","architecture.html","build-b2.html","build-all.html")}
+                summary["b2_prototype_assets_match"]={name:read(SITE+"assets/prototypes/b2/"+name)==(ROOT/"build/site/assets/prototypes/b2"/name).read_bytes()
+                    for name in ("prototype_snapshot.json","b2_manifest.json","b2_placement.svg","b2-wiring.svg",
+                                 "b2_assembly.png","b2_exploded.png","models.json","pcb/pcb_checks.json","pcb/b2_main.kicad_pcb")}
                 summary["sensor_placement_assets_match"]={name:read(SITE+"assets/"+name)==(ROOT/"build/site/assets"/name).read_bytes()
                     for name in ("sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg")}
                 summary["architecture_artifacts_match"]={name:read(SITE+"assets/concepts/"+name)==(ROOT/"build/site/assets/concepts"/name).read_bytes()
@@ -105,6 +110,8 @@ def main():
             and all(summary.get("separate_design_pages_match",{}).values())
             and bool(summary.get("design_assets_match"))
             and all(summary.get("design_assets_match",{}).values())
+            and bool(summary.get("b2_prototype_assets_match"))
+            and all(summary.get("b2_prototype_assets_match",{}).values())
             and any(run["conclusion"]=="success" for run in summary["runs"])
         )
         record["publication"]=summary

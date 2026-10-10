@@ -9,10 +9,10 @@ document.getElementById("page").addEventListener("load",async()=>{
     await pause(800);
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
-    check("all R1, L1 and B1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===56);
-    check("current designs and two new concepts listed separately",d.querySelectorAll("#candidate-table tr").length===7);
+    check("all R1, L1, B1 and B2 STEP/STL links present",d.querySelectorAll("#parts-table a").length===64);
+    check("all twelve designs are listed separately",d.querySelectorAll("#candidate-table tr").length===12);
     check("scalability study is reachable",d.querySelector('a[href="architecture.html"]')!==null);
-    check("design directory is prominent and candidates have their own pages",d.querySelector('.hero a[href="designs.html"]')&&d.querySelectorAll("#candidate-table a").length===7);
+    check("design directory is prominent and candidates have their own pages",d.querySelector('.hero a[href="designs.html"]')&&d.querySelectorAll("#candidate-table a").length===12);
     const before=w.EngineeringUI.viewer.yaw;
     d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
     await pause(100);check("keyboard rotates actual mesh",w.EngineeringUI.viewer.yaw!==before);
@@ -42,6 +42,9 @@ document.getElementById("page").addEventListener("load",async()=>{
     check("B1 actual compliant insert assembly renders",inspect("b1_assembly"));
     check("B1 fixed and moving components are separate layers",d.querySelector('[data-layer="spine"]')&&d.querySelector('[data-layer="b1tpu"]')&&d.querySelector('[data-layer="magnet"]')&&d.querySelector('[data-layer="pcb"]'));
     check("B1 fabrication and build guide reachable",d.querySelector('a[href="downloads/b1_head_fabrication.zip"]')&&d.querySelector('a[href="build-b1.html"]'));
+    check("B2 consolidated assembly renders",inspect("b2_assembly"));
+    check("B2 distinct board, backer, spacer, IC and nail layers exist",["pcb","backer","spacer","electronics","nail"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
+    check("all-design campaign is reachable",d.querySelector('.hero a[href="build-all.html"]')!==null);
     const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
     force.value="10";force.dispatchEvent(new w.Event("input"));
     check("load explorer responds to applied force",d.getElementById("load-moment-value").textContent!==moment&&d.getElementById("load-force-value").textContent==="10.0 N");

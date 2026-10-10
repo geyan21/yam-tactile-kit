@@ -96,9 +96,14 @@ def shell(title,body,catalog,active="",scripts=""):
 
 def cad_table(item):
     group=item.get("cad_group")
-    if not group:return ""
-    plan=json.loads((ROOT/"engineering/release"/group/f"{group}_manifest.json").read_text())
-    prefix="" if group=="r1" else group+"/"
+    prototype=item.get("prototype_cad_group")
+    if not group and not prototype:return ""
+    if prototype:
+        plan=json.loads((ROOT/"engineering/prototypes"/prototype/f"{prototype}_manifest.json").read_text())
+        prefix="prototypes/"+prototype+"/"
+    else:
+        plan=json.loads((ROOT/"engineering/release"/group/f"{group}_manifest.json").read_text())
+        prefix="" if group=="r1" else group+"/"
     rows=[]
     for part in plan["parts"]:
         kind="Reference envelope only" if part.get("kind")=="reference_only" else "Prototype part/tooling"
@@ -170,7 +175,7 @@ def catalog_content(catalog):
     counts={group["id"]:sum(item["group"]==group["id"] for item in catalog["designs"]) for group in catalog["groups"]}
     return f'''<div class="design-intro"><p class="eyebrow">ONE PAGE PER DESIGN</p><h1>Choose a design.<br>See exactly what exists.</h1>
 <p class="design-summary">Each page gives its purpose, sensor choice, placement, visuals, available files and remaining work.</p>
-<p class="design-stage-detail">The three prototype packages have build files. The concept and research pages explain their limits. No design is yet physically qualified through the 20 N per finger target.</p></div>
+<p class="design-stage-detail">{counts["prototype"]} prototype packages have build files. The concept and research pages explain their limits. No design is yet physically qualified through the 20 N per finger target. <a href="build-all.html">Follow the all-design build and comparison campaign →</a></p></div>
 <nav class="design-section-nav" aria-label="Design categories"><a href="#prototype">{counts["prototype"]} prototype packages</a><a href="#concept">{counts["concept"]} concepts</a><a href="#research">{counts["research"]} alternative approaches</a></nav>'''+ "".join(cards)
 
 

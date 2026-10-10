@@ -23,6 +23,7 @@ SITE=ROOT/"build/site"
 RELEASE=ROOT/"engineering/release"
 WEB=ROOT/"engineering/web"
 DOCS=[
+    ("BUILD_ALL","build-all","Build & compare all designs"),
     ("SENSORS","sensors","Sensor choice & placement"),
     ("ARCHITECTURE","architecture","Scalability & better designs"),
     ("START","start","Student starting packet"),("GEOMETRY","geometry","Measured geometry"),
@@ -35,6 +36,7 @@ DOCS=[
     ("BUILD_B1","build-b1","Build B1 magnetic insert"),
     ("B1_ELECTRONICS","b1-electronics","B1 wiring & code"),
     ("B1_TESTING","b1-testing","B1 bending & force tests"),
+    ("BUILD_B2","build-b2","Build B2 consolidated PCB"),
 ]
 
 
@@ -56,14 +58,24 @@ def verify_snapshot():
             raise ValueError(f"Concept artifact changed: {name}")
     if hashlib.sha256((RELEASE/"b1/b1_manifest.json").read_bytes()).hexdigest()!=concept_snapshot["basis_b1_release"]:
         raise ValueError("Concept basis does not match released B1")
+    for path in sorted((ROOT/"engineering/prototypes").glob("*/prototype_snapshot.json")):
+        snapshot=json.loads(path.read_text())
+        if hashlib.sha256((RELEASE/"release_manifest.json").read_bytes()).hexdigest()!=snapshot["shared_release_sha256"]:
+            raise ValueError(f"Prototype release basis changed: {snapshot['id']}")
+        for name,expected in snapshot["source_hashes"].items():
+            if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+                raise ValueError(f"Stale prototype source: {name}")
+        for name,expected in snapshot["files"].items():
+            if hashlib.sha256((path.parent/name).read_bytes()).hexdigest()!=expected:
+                raise ValueError(f"Prototype artifact changed: {path.parent.name}/{name}")
     return manifest
 
 
 def source_entries():
     roots=[ROOT/"README.md",ROOT/"LICENSE",ROOT/".gitignore",ROOT/".github/workflows",ROOT/"src/tactile_kit"]
     roots += [ROOT/"engineering"/name for name in (
-        "README.md","bom.csv","l1_bom.csv","b1_bom.csv","study.json","design_catalog.json","requirements.in","requirements.lock",
-        "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics","research","concepts",
+        "README.md","bom.csv","l1_bom.csv","b1_bom.csv","b2_bom.csv","study.json","design_catalog.json","requirements.in","requirements.lock",
+        "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics","research","concepts","prototypes","campaign",
     )]
     entries={}
     for root in roots:
@@ -92,6 +104,9 @@ def chapter(source):
         ("https://geyan21.github.io/yam-tactile-kit/",""),
         ("../release/","assets/"),("../web/","assets/"),
         ("../concepts/","assets/concepts/"),("../research/","downloads/"),
+        ("../campaign/requirements.json","downloads/campaign_requirements.json"),
+        ("../prototypes/","assets/prototypes/"),
+        ("../b2_bom.csv","downloads/b2_bom.csv"),
         ("../templates/","downloads/"),("../l1_bom.csv","downloads/l1_bom.csv"),("../b1_bom.csv","downloads/b1_bom.csv"),
     ):
         text=text.replace(f"]({old}",f"]({new}")
@@ -106,7 +121,7 @@ def document_page(title,body,active=""):
 <title>{html.escape(title)} · ENPIRE tactile</title><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/design-pages.css"></head><body>
 <a class="skip" href="#document">Skip to instructions</a>
 <header><a class="brand" href="index.html">ENPIRE <b>TACTILE</b></a><nav aria-label="Main"><a href="designs.html">Designs</a><a href="index.html#build">Files</a><a href="index.html#evidence">Results</a><a href="https://github.com/geyan21/yam-tactile-kit">GitHub ↗</a></nav></header>
-<main class="doc-layout"><aside class="doc-nav" aria-label="Chapters"><span class="label">BUILD PACKET / R1 + L1 + B1</span>{nav}<hr><a href="guide.html">Complete printable guide</a><a href="downloads/enpire-engineering-kit.zip" download>Download everything ↓</a></aside>
+<main class="doc-layout"><aside class="doc-nav" aria-label="Chapters"><span class="label">BUILD &amp; TEST GUIDES</span>{nav}<hr><a href="guide.html">Complete printable guide</a><a href="downloads/enpire-engineering-kit.zip" download>Download everything ↓</a></aside>
 <article class="doc-body" id="document"><p class="doc-source">Experimental design · 20 N per finger qualification target · physical measurements pending</p>{body}</article></main>
 <footer><a href="index.html">← Engineering notebook</a><a href="downloads/enpire-source.zip" download>Source, CAD and documentation ↓</a></footer></body></html>'''
 
@@ -128,6 +143,11 @@ def main():
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
         shutil.copytree(ROOT/"engineering/concepts",assets/"concepts")
+        shutil.copytree(ROOT/"engineering/prototypes",assets/"prototypes")
+        shutil.copyfile(ROOT/"engineering/campaign/requirements.json",downloads/"campaign_requirements.json")
+        for folder in sorted((ROOT/"engineering/prototypes").iterdir()):
+            if folder.is_dir() and (folder/"cad").exists():
+                shutil.copytree(folder/"cad",downloads/"prototypes"/folder.name/"cad")
         for name in ("architecture_evidence.json","quote_template.json","scale_validation.json"):
             shutil.copyfile(ROOT/"engineering/research"/name,downloads/name)
         shutil.copytree(RELEASE/"r1/cad",downloads/"cad")
@@ -148,16 +168,26 @@ def main():
             (ROOT/"engineering/templates/b1_specimen.json","b1_specimen.json"),
             (RELEASE/"b1/b1_review_drawings.pdf","b1_review_drawings.pdf"),
             (RELEASE/"b1/pcb/b1_head_fabrication.zip","b1_head_fabrication.zip"),
+            (ROOT/"engineering/b2_bom.csv","b2_bom.csv"),
+            (ROOT/"engineering/templates/b2_specimen.json","b2_specimen.json"),
+            (ROOT/"engineering/prototypes/b2/b2_review_drawings.pdf","b2_review_drawings.pdf"),
+            (ROOT/"engineering/prototypes/b2/b2_firmware.zip","b2_firmware.zip"),
+            (ROOT/"engineering/prototypes/b2/pcb/b2_main_fabrication.zip","b2_main_fabrication.zip"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
         l1_models=json.loads((RELEASE/"l1/models.json").read_text())
         b1_models=json.loads((RELEASE/"b1/models.json").read_text())
+        prototype_models=[];prototype_plans={}
+        for path in sorted((ROOT/"engineering/prototypes").glob("*/models.json")):
+            prototype_models.extend(json.loads(path.read_text()))
+            prototype_plans[path.parent.name]=json.loads((path.parent/f"{path.parent.name}_manifest.json").read_text())
         payload={
-            "models":[r1_models[0],b1_models[0],*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
+            "models":[r1_models[0],b1_models[0],*prototype_models,*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
             "r1":json.loads((RELEASE/"r1/r1_manifest.json").read_text()),
             "l1":json.loads((RELEASE/"l1/l1_manifest.json").read_text()),
             "b1":json.loads((RELEASE/"b1/b1_manifest.json").read_text()),
+            "prototypes":prototype_plans,
             "l1Contacts":json.loads((RELEASE/"l1/contact_sites.json").read_text())["sites"],
             "study":json.loads((ROOT/"engineering/study.json").read_text()),
             "designPages":{item["id"]:item["slug"]+".html" for item in catalog["designs"]},
@@ -181,6 +211,8 @@ def main():
         designs={str(path.relative_to(RELEASE)):path.read_bytes() for path in RELEASE.rglob("*") if path.is_file() and path.name!="models.json"}
         designs.update({"concepts/"+str(path.relative_to(ROOT/"engineering/concepts")):path.read_bytes()
                         for path in (ROOT/"engineering/concepts").rglob("*") if path.is_file()})
+        designs.update({"prototypes/"+str(path.relative_to(ROOT/"engineering/prototypes")):path.read_bytes()
+                        for path in (ROOT/"engineering/prototypes").rglob("*") if path.is_file() and path.name!="models.json"})
         write_zip(downloads/"enpire-designs.zip",designs)
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
@@ -197,7 +229,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile R1.0 + L1.0 + B1.0 engineering packet\n\n"
+            "ENPIRE tactile engineering packet: R1 + L1 + B1 + B2.1 prototype packages\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
@@ -205,6 +237,8 @@ def main():
             "R1: six local tactile zones. L1: purchased load cell in the complete finger force path.\n"
             "B1: separate compliant magnetic insert, fixed sensor spine, PCB files and raw readout.\n"
             "B1 files: source/engineering/release/b1; electronics source: source/engineering/electronics/b1.\n"
+            "B2.1 files: source/engineering/prototypes/b2; instructions: website/build-b2.html.\n"
+            "All twelve designs and planned comparisons: website/build-all.html.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()
@@ -218,8 +252,9 @@ def main():
         ):
             shutil.copyfile(downloads/new,downloads/old)
         summary={
-            "site":"build/site","cad_parts":sum(len(payload[name]["parts"]) for name in ("r1","l1","b1")),
+            "site":"build/site","cad_parts":sum(len(payload[name]["parts"]) for name in ("r1","l1","b1"))+sum(len(p["parts"]) for p in prototype_plans.values()),
             "purchased_reference_solids":3,
+            "additional_prototype_reference_solids":sum(p.get("kind")=="reference_only" for plan in prototype_plans.values() for p in plan["parts"]),
             "separate_concept_solids":2,
             "documents":len(DOCS)+len(catalog["designs"]),"design_pages":len(catalog["designs"]),
             "requested_per_finger_force_n":20,

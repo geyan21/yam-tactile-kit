@@ -15,7 +15,7 @@ The decision is driven by reliable contact and grip-force feedback with a thin, 
 | Baby Fin Ray optical | Dense contact shape and texture | Requires hollow optical path, illumination, and a changed compliant structure | Occlusion under bend, gel wear, camera timing, nail coverage | Primary fabrication method reviewed |
 | L1 root normal-force cell | Aggregate normal load including hard-frame contacts | Leaves contact surfaces intact; adds 20 mm reach and a larger root | Off-axis load, moments, stiffness, housing fit, cable route | Aluminum carriers, purchased-cell readout and test fixtures supplied; unbuilt |
 | B1 magnetic insert | Local deformation/field observations; optional nail pressure pads | Original contact envelope, added side spine | Magnetic interference, calibration transfer, TPU mechanics and retention | CAD, PCB and raw readout supplied; unbuilt |
-| B2 consolidated magnetic PCB | Same intended measurements as B1 | One rigid board at the same head poses | Fewer manual connections without sacrificing registration or serviceability | Outline and allocation study; no routed PCB |
+| B2 consolidated magnetic PCB | Magnetic observations and nail conductance; force calibration pending | One rigid board at the same head poses, with two locating spacers and a backer | Compare assembly, consistency and whole-board repair against B1 | B2.1 checked PCB, CAD and readout package; physically untested |
 | C1 differential strain | Aggregate normal force inferred from two calibrated bending measurements | Requires a new controlled root load path | Gain matching, drift, stiffness, cross-axis response | Analytical screen and metal bench coupon; no adapter |
 
 ## Resistive: manufacturability versus force stability

@@ -1,0 +1,6 @@
+(version 1)
+(rule "clearance" (constraint clearance (min 0.15mm)))
+(rule "copper to edge" (constraint edge_clearance (min 0.2mm)))
+(rule "track width" (constraint track_width (min 0.15mm)))
+(rule "via drill" (constraint hole_size (min 0.20mm)))
+(rule "via diameter" (constraint via_diameter (min 0.45mm)))

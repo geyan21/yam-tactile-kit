@@ -1,0 +1,23 @@
+{
+  "schema": "yam-prototype-pcb-check/1",
+  "violations": 0,
+  "unconnected": 0,
+  "tool": "10.0.7",
+  "source_sha256": "0943dfa4558a8ffdcf971da9fa6a8e8dd4881193343e9ce32a5fcc6c3163ea79",
+  "physical_boards_tested": 0,
+  "checked_pcb_sha256": "89969723b345837a752d9c924bd0703ac6ea3b5cefe5687967e18904e91e0a56",
+  "files": {
+    "b2_main-B_Cu.gbl": "4149a07b43a2a1ac707e396312b9042391b353c82b81ccf341dd07e67620f77c",
+    "b2_main-B_Mask.gbs": "3441d0f1cbbf9896ab9e1228972de21ba3edff46644ab08ddbbc9ddc868dcedb",
+    "b2_main-Edge_Cuts.gm1": "a900ac0255951184563d36e44b8a2fcfa82d32fcd7cc1d05a9936404102f03cd",
+    "b2_main-F_Cu.gtl": "2de02f1407f2d6ed6f078a647e7042a02b14548e4cba407897d3eb0f9c5e3d2c",
+    "b2_main-F_Mask.gts": "74aed1936fbe9a44b6951ec79a1c0770677dde6f858e3302cc4d1c5293985f7c",
+    "b2_main-F_Paste.gtp": "02adb768fa6335c5f8a7c1ff71a644bee68c302a20c456d77f8c2f6aeec562cc",
+    "b2_main-F_Silkscreen.gto": "673df1b7c5346909eab3542a1719348e2d8d43d3ab1d592ca0ab558e7acd2b72",
+    "b2_main-In1_Cu.g1": "0c099562572df0853bb587f971a0a818bb9b1cdd081a02f5c3c3ed45c0ec788d",
+    "b2_main-In2_Cu.g2": "de363303ae7d0a48c26e35e6dba478cb8d264ea0b36f024fca5f4dfa53ca0e16",
+    "b2_main-job.gbrjob": "95c92a81469a211e6cf5b009978a62eed0270da0964af1055c177873a67377c6",
+    "b2_main.drl": "0adef86a376801d822c41ad5563a467e80ab87d2a5944be9a5114ddf8e44a753"
+  },
+  "limits": "Copper and connectivity only. Physical assembly, power, sensor axes, fit, readout and performance remain untested."
+}

@@ -6,23 +6,26 @@
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.
 
-[Magnetic scalability and alternative designs](engineering/docs/ARCHITECTURE.md) compares the current pilot with a consolidated B2 board concept and a C1 differential-strain force coupon. It includes primary-source evidence, calculations, concept CAD, and a cost/validation plan. B2 has no routed PCB; C1 has no completed gripper adapter.
+[Build and compare all twelve designs](engineering/docs/BUILD_ALL.md) tracks the full campaign and common test targets. [B2.1](engineering/docs/BUILD_B2.md) now has a routed PCB, checked mounting parts and raw acquisition package. The [architecture study](engineering/docs/ARCHITECTURE.md) retains the earlier B2/C1 concepts and research evidence. C1 still has no completed gripper adapter.
 
 **Concrete B1 prototype recommendation:** five MLX90393SLW-ABA-011 heads fixed beside four magnets embedded in the bending TPU, plus two thin N0 pressure-film pads on the object-facing nail prongs. The [sensor placement guide](engineering/docs/SENSORS.md) labels every head, magnet and pad and supplies exact coordinates. Physical qualification remains pending.
 
-Three separate prototype packages are supplied:
+Four separate prototype packages are supplied:
 
 | Prototype | Design | First measurement |
 |---|---|---|
 | R1 local tactile skin | Two shaped nail cells and four cast saddles matched to the actual TPU profile | Thin-tip contact coverage, force drift and wear |
 | L1 root normal force | A purchased TAL220B cell between the original finger and two aluminum carriers | Held-out off-center loads, followed by an integrated-finger test using the same calibration slope |
 | B1 magnetic bending insert | Four magnets in the TPU, five fixed magnetic heads, new side spine and custom PCB; original hard frame and thin nail retained | Original-vs-B1 bending, magnet retention, interference, then physical force calibration |
+| B2 consolidated magnetic PCB | Same sensor/magnet poses on one checked PCB with two locating spacers, a removable backer and two N0 nail pads | Installed fit, first-board operation, then matched B1/B2 contact, force and assembly-time tests |
 
-The package contains 28 checked STEP/STL solids, including three purchased/component references; R1 electrode patterns; carrier/fixture drawings; B1 editable PCB and checked fabrication files; separate BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. B1 adds no reach but adds side thickness. R1/L1 CAD and geometry sources remain hash-verified and unchanged.
+The package contains 32 checked STEP/STL solids, including four component references; R1 electrode patterns; carrier/fixture drawings; B1 and B2 editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. R1/L1/B1 and the earlier concept snapshots remain preserved. B2's new package is separate under `engineering/prototypes/b2`.
 
 **Status: digital design and software checks completed; physical prototype assembly and validation pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
 
 For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md), [PCB/wiring/code](engineering/docs/B1_ELECTRONICS.md), and [bending and force tests](engineering/docs/B1_TESTING.md). B1 raw magnetic data are not calibrated force; optional R1 nail cells supply hard-tip contact coverage.
+
+For the consolidated version, use [the complete B2 build guide](engineering/docs/BUILD_B2.md). Its two nail cells are enabled in the supplied firmware. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the eight remaining designs and the physical evidence still required.
 
 ## Start here
 

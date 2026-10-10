@@ -6,6 +6,8 @@
 
 The recommendation is based on primary literature, an audit of our actual B1 parts, and the new calculations below. **No B1, B2 or C1 hardware has been qualified.** “Better” here means a promising design change with a stated benefit and a test that could reject it.
 
+**Build status:** [B2.1 now has a separate prototype package](BUILD_B2.md) with a routed PCB, clean independent DRC, checked mounting CAD and raw acquisition. Its physical tests remain pending. The earlier B2 figures below are retained concept studies. The [all-twelve-design campaign](BUILD_ALL.md) tracks the current work and common evaluation targets.
+
 ## What the magnetic evidence actually supports
 
 [eFlesh](https://arxiv.org/html/2506.09994v1) demonstrates printed structures with commodity magnets. Its normal-force experiment spans **0–30 N**, reporting **0.27 N validation RMSE**, using a **40 × 40 mm instance and a plate indenter**. That supports the modality's potential through our requested range; it does not establish 20 N performance at this narrow ENPIRE finger's small contact patches.
@@ -50,7 +52,7 @@ Test the installed motor, both jaws, the complete opening range, steel parts app
 
 [Open the separate B2 page: sensors, placement, files and remaining work](https://geyan21.github.io/yam-tactile-kit/b2.html).
 
-**B2 keeps the sensing principle and sensor positions, but consolidates the electronics.** Inspection confirms that all five B1 heads already share a common PCB plane, so a single rigid board is geometrically possible.
+**B2 keeps the sensing principle and sensor positions, but consolidates the electronics.** The B2.1 package completes the first PCB and removable support design. The original allocation study below explains its starting geometry.
 
 ![B2 consolidated PCB outline and component allocation](../concepts/b2_board_concept.svg)
 
@@ -69,7 +71,7 @@ Use one mechanically registered PCB and a reviewed clamp/backer instead of separ
 | Repair | Individual head can be replaced | Whole-board replacement may cost more |
 | PCB manufacture | Small repeated two-layer heads | Larger irregular board; four layers proposed |
 
-The supplied [B2 layout JSON](../concepts/b2_layout.json) and [STEP](../concepts/cad/b2_pcb_fit_witness.step) / [STL fit witness](../concepts/cad/b2_pcb_fit_witness.stl) let the student check the envelope. The outline occupies about **898 mm²** and includes a reserved controller bay. It has **no copper routing, DRC, finalized retention or production Gerbers**. The controller bay still needs a complete component placement and drive-clearance review.
+The preserved [early B2 layout JSON](../concepts/b2_layout.json) and [STEP](../concepts/cad/b2_pcb_fit_witness.step) / [STL](../concepts/cad/b2_pcb_fit_witness.stl) describe the **898 mm² unrouted concept**, with a reserved controller bay. They are historical fit-study files. **Use [B2.1's current page and files](https://geyan21.github.io/yam-tactile-kit/b2.html) for a build.** B2.1 widens the connecting band inside the outer side profile, completes the copper, and adds locating spacers and a removable backer. Actual drive clearance and hardware performance still need physical checks.
 
 Do not equate fewer pieces with lower finished-unit cost: panel utilization, four-layer fabrication, board replacement, calibration and rejected builds can offset the labor saving. Obtain actual assembled-board quotes at 1, 10 and 100 fingers.
 
@@ -145,12 +147,19 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 
 [Honeywell's FMA](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf) offers a 25 N digital force sensor. Its maximum ±8% full-scale total error band corresponds to ±2 N under the specified conditions, including 5 V and 20–80% of force range. It does not establish a 0.2 N contact threshold or performance outside those conditions. It remains an integration option, not an automatic precision upgrade.
 
-## What I would build next
+## Build and compare the full set
 
-1. **Build and characterize a small B1 pilot first.** Use the actual motor, steel objects, jaw openings and task contacts. Keep the unmodified finger and R1/L1 controls.
-2. **If magnetic interference and unit-transfer results are acceptable, finish B2.** Route the consolidated board, finish its mechanical registration/retention, validate clearance, and compare timed assembly and calibration against B1.
-3. **Build the C1 gauge coupon in parallel if absolute grip force is the main failure.** First verify the moment-difference principle and residual drift; design the actual gripper adapter only after that. Add local contact sensing if contact location or non-normal contacts are needed.
-4. **Promote capacitive or pneumatic sensing if magnets fail the intended environment.** Do not switch based solely on a paper's best error number or an IC's nominal resolution.
+The active request is to build all twelve designs and find which are good for
+the actual tasks. Follow [the common campaign](BUILD_ALL.md). R1, L1, B1 and
+B2.1 have prototype files; the remaining eight approaches need the listed
+development work. Each will keep its own design page, build package and
+physical evidence.
+
+Use the actual motor, steel objects, jaw openings and task contacts. Keep an
+unmodified control, time assembly and calibration, and preserve failed tests.
+C1's moment-difference principle and the alternative material stacks require
+their own coupon and installed-finger validation. A design earns a
+recommendation from the measured contact, force, precision and task results.
 
 For 1–3 student prototypes, the existing magnetic kit is a reasonable learning tool. For ten repeatable lab fingers, a single registered board and a documented replacement/calibration process become important. At a hundred fingers, require quotes, yield, calibration labor, repair cost and measured transfer across units. “Four cheap magnets” is not a costed manufacturing process.
 

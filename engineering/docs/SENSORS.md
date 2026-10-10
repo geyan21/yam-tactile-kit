@@ -6,7 +6,7 @@ For one page per design, use [the design directory](https://geyan21.github.io/ya
 
 This is the concrete prototype recommendation for your thin-tip, dexterous gripper. B1 is still awaiting physical validation and force calibration through the requested 20 N per finger range.
 
-**Before ordering a batch, read [the scalability and alternative-design study](ARCHITECTURE.md).** B1 is the current pilot build. B2 proposes one consolidated magnetic board; C1 explores a magnet-free force element. Those new concepts are not yet complete gripper build packages.
+**For the consolidated version, use [B2.1's complete build guide](BUILD_B2.md).** It places these same five magnetic sensors on one checked PCB, with the mux and nail ADC on that board. The tables below describe the five-board B1 pilot. C1 remains a force-element study. Follow [the all-design campaign](BUILD_ALL.md) and [the architecture comparison](ARCHITECTURE.md) for the current status and planned measurements.
 
 ![Labeled positions of five magnetic sensor heads, four embedded magnets and two pressure-film nail pads](../web/sensor-placement.svg)
 
