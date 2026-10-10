@@ -1,4 +1,4 @@
-name: Test and publish design lab
+name: Test and publish engineering packet
 
 on:
   push:
@@ -24,10 +24,12 @@ jobs:
         id: python
         with:
           python-version: '3.12'
-      - name: Verify calculations and clean reproduction
-        run: '"${{ steps.python.outputs.python-path }}" -m unittest discover -s tests -v'
-      - name: Build portable website
-        run: '"${{ steps.python.outputs.python-path }}" scripts/reproduce.py --repository-url "https://github.com/${{ github.repository }}"'
+      - name: Verify acquisition and calibration fault handling
+        run: '"${{ steps.python.outputs.python-path }}" -m unittest discover -s engineering/tests -v'
+      - name: Verify geometry snapshot and build portable website
+        run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/build_site.py'
+      - name: Verify packaged files and links
+        run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/check_site.py'
       - name: Upload Pages website
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4

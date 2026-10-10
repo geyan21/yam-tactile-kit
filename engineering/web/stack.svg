@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<rect width="800" height="450" fill="#fff"/><g font-family="sans-serif" fill="#173039">
+<text x="35" y="40" font-size="20" font-weight="bold">One independent resistive cell</text><text x="35" y="65" font-size="13" fill="#536870">Functional layer order • schematic thicknesses • no adhesive inside the active sandwich</text>
+<path d="M212 86v31m-8-8 8 8 8-8" fill="none" stroke="#173039" stroke-width="2"/><text x="250" y="105" font-size="14">Contact load</text>
+<g stroke="#4d695b" stroke-width="1">
+<rect x="65" y="126" width="300" height="40" rx="8" fill="#b7caa3"/><rect x="65" y="173" width="300" height="13" fill="#ddbd75"/>
+<rect x="85" y="192" width="260" height="8" fill="#cb8245"/><rect x="77" y="205" width="276" height="20" fill="#3b4549"/>
+<rect x="85" y="230" width="260" height="8" fill="#cb8245"/><rect x="65" y="244" width="300" height="13" fill="#ddbd75"/>
+<rect x="65" y="271" width="300" height="45" rx="4" fill="#d2ddc7"/>
+<rect x="65" y="332" width="300" height="28" rx="4" fill="#708691"/>
+</g>
+<g font-size="14"><text x="395" y="151">Cover • pads and N1 nail • 0.40 mm</text><text x="395" y="185">Insulating polyimide backing</text><text x="395" y="202">Bare copper electrode → measurement node</text><text x="395" y="221">0.10 mm conductive film • separate island</text><text x="395" y="240">Bare copper electrode → 3.3 V</text><text x="395" y="258">Insulating polyimide backing</text><text x="395" y="297">Matched cast saddle on TPU regions</text><text x="395" y="350">N0 nail omits the cover and saddle</text></g>
+<path d="M85 196H45V380H175M345 234h35v146H250" fill="none" stroke="#cb8245" stroke-width="3"/>
+<text x="35" y="408" font-size="13" fill="#536870">Keep solder joints, edge seals and strain relief outside the contact patch. Measure the final bond lines.</text>
+</g></svg>

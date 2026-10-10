@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Engineering website functional check</title>
+<body><iframe id="page" src="index.html" title="Website under test" style="width:1180px;height:900px"></iframe><pre id="qa-results">pending</pre>
+<script>
+/* Local functional tests. No test fixture is published as hardware evidence. */
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+document.getElementById("page").addEventListener("load",async()=>{
+  const checks=[];const check=(name,value)=>checks.push({name,passed:Boolean(value)});
+  try{
+    await pause(800);
+    const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
+    check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
+    check("individual STEP and STL links present",d.querySelectorAll("#parts-table a").length===26);
+    check("all five sensor alternatives listed",d.querySelectorAll("#candidate-table tr").length===5);
+    const before=w.EngineeringUI.viewer.yaw;
+    d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
+    await pause(100);check("keyboard rotates actual mesh",w.EngineeringUI.viewer.yaw!==before);
+    const layer=d.querySelector('[data-layer="frame"]'),count=Number(d.getElementById("cad").dataset.faces);
+    layer.click();await pause(120);check("layer toggle removes frame geometry",Number(d.getElementById("cad").dataset.faces)<count);
+    layer.click();
+    const select=d.getElementById("model-select");select.value="nail_cover_mold";select.dispatchEvent(new w.Event("change"));
+    await pause(120);check("actual mold CAD renders",d.getElementById("cad").dataset.model==="nail_cover_mold"&&Number(d.getElementById("cad").dataset.faces)>50);
+    check("performance plot initially empty",d.querySelectorAll("#result-plot circle").length===0);
+    let rejected=false;
+    try{w.EngineeringUI.renderReport({schema:"yam-calibration/1",evidence_kind:"synthetic",channels:[]});}catch(_){rejected=true;}
+    check("synthetic report is rejected",rejected);
+    frame.style.width="390px";await pause(180);
+    check("mobile page has no horizontal overflow",d.documentElement.scrollWidth<=w.innerWidth+1);
+    check("20 N requirement visible",d.body.innerText.includes("20 N per finger"));
+    check("PDF cut sheet reachable",d.querySelector('a[href="downloads/r1_cut_sheet.pdf"]')!==null);
+  }catch(error){checks.push({name:error.stack||error.message,passed:false});}
+  document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks});
+});
+</script></body></html>

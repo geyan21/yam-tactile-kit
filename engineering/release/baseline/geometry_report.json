@@ -1,0 +1,105 @@
+{
+  "parts": {
+    "hard_frame": {
+      "source_file": "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/i2rt_UCG_Hard.stl",
+      "sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+      "vertices": 4842,
+      "triangles": 9748,
+      "native_bounds": [
+        [
+          -24.710813522338867,
+          -117.6470718383789,
+          -4.3130645751953125
+        ],
+        [
+          6.889186382293701,
+          -2.7699999809265137,
+          28.283239364624023
+        ]
+      ],
+      "native_extents": [
+        31.59999990463257,
+        114.87707185745239,
+        32.596303939819336
+      ],
+      "is_watertight": true,
+      "native_volume": 22747.22106269297,
+      "units": "mm per baseline source catalog"
+    },
+    "soft_insert": {
+      "source_file": "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/I2RT_UCG_Soft.stl",
+      "sha256": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc",
+      "vertices": 1760,
+      "triangles": 3588,
+      "native_bounds": [
+        [
+          -15.0,
+          -94.80520629882812,
+          -3.2147531509399414
+        ],
+        [
+          1.734723475976807e-15,
+          -13.770000457763672,
+          26.58323860168457
+        ]
+      ],
+      "native_extents": [
+        15.000000000000002,
+        81.03520584106445,
+        29.79799175262451
+      ],
+      "is_watertight": true,
+      "native_volume": 11586.940579251399,
+      "units": "mm per baseline source catalog"
+    },
+    "nvidia_sim_finger": {
+      "source_file": "build/engineering/sources/NVlabs__ENPIRE/enpire/env/forge/robot/models/station/assets/gripper_finger.stl",
+      "sha256": "08fec57f3a8d3517d1eba3576e5273235539e36c955af0c9288d76eaeee7efc3",
+      "vertices": 3952,
+      "triangles": 8264,
+      "native_bounds": [
+        [
+          -0.02471081353724003,
+          -0.11764640361070633,
+          -0.004313064739108086
+        ],
+        [
+          0.006889186333864927,
+          -0.0027699999045580626,
+          0.028283240273594856
+        ]
+      ],
+      "native_extents": [
+        0.031599999871104956,
+        0.11487640370614827,
+        0.03259630501270294
+      ],
+      "is_watertight": true,
+      "native_volume": 3.380470556219638e-05,
+      "units": "native units; simulation transform/scale still to verify"
+    }
+  },
+  "cross_sections": {
+    "width_axis_native": 0,
+    "profile_axes_native": [
+      1,
+      2
+    ],
+    "fractions_across_width": [
+      0.15,
+      0.3,
+      0.5,
+      0.7,
+      0.85
+    ],
+    "hausdorff_distances_to_middle_mm": [
+      3.552713678800501e-15,
+      3.552713678800501e-15,
+      0.0,
+      3.552713678800501e-15,
+      3.552713678800501e-15
+    ],
+    "maximum_distance_mm": 3.552713678800501e-15,
+    "claim": "Cross-section similarity is a static geometry observation, not proof of FPC survival during compliant deformation."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "revision": "R1.0",
+  "status": "designed; awaiting fabrication and bench measurements",
+  "name": "Six independent resistive cells on the actual ENPIRE contact surfaces",
+  "source_mesh_sha256": {
+    "hard": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "soft": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc"
+  },
+  "nail": {
+    "default_variant": "N0_sealed_insulating_laminate",
+    "seal_inset_mm": 0.15,
+    "active_inset_mm": 0.55,
+    "proximal_sensor_v_mm": -4.0,
+    "cover_nominal_mm": 0.4,
+    "laminate_nominal_mm": 0.3,
+    "mounting_adhesive_nominal_mm": 0.1,
+    "variants": {
+      "N0": {"added_nominal_mm": 0.4, "surface": "sealed insulating laminate; no extra silicone cover"},
+      "N1": {"added_nominal_mm": 0.8, "surface": "same laminate plus 0.40 mm silicone cover"}
+    },
+    "note": "Start with N0 to preserve access; compare N1 for friction and wear. Measure installed thickness. No hard-frame recess."
+  },
+  "pad": {
+    "width_mm": 13.0,
+    "surface_sampling_mm": 0.1,
+    "smooth_sigma_mm": 1.2,
+    "saddle_min_z_thickness_mm": 0.4,
+    "assembly_clearance_z_mm": 0.15,
+    "laminate_nominal_mm": 0.3,
+    "cover_nominal_mm": 0.4,
+    "zones_native_y_mm": [[-90.0, -76.0], [-73.0, -59.0], [-56.0, -42.0], [-39.0, -23.0]],
+    "note": "Saddles match the measured serrated profile. Their front faces are smoothed. Z thickness differs from normal thickness on slopes."
+  },
+  "channels": [
+    {"id": 0, "name": "nail_negative_u", "adc_address": "0x48", "adc_input": 0},
+    {"id": 1, "name": "nail_positive_u", "adc_address": "0x48", "adc_input": 1},
+    {"id": 2, "name": "pad_distal", "adc_address": "0x48", "adc_input": 2},
+    {"id": 3, "name": "pad_mid_distal", "adc_address": "0x48", "adc_input": 3},
+    {"id": 4, "name": "pad_mid_proximal", "adc_address": "0x49", "adc_input": 0},
+    {"id": 5, "name": "pad_proximal", "adc_address": "0x49", "adc_input": 1}
+  ],
+  "readout": {
+    "controller": "Raspberry Pi Pico / RP2040 running MicroPython",
+    "supply_v": 3.3,
+    "adc": "two ADS1115 breakouts",
+    "adc_full_scale_v": 4.096,
+    "adc_conversion_rate_sps": 860,
+    "target_complete_frame_hz": 50,
+    "pull_down_ohm": 10000,
+    "cell_parallel_continuity_resistor_ohm": 100000,
+    "reference_divider_ohm": [10000, 10000],
+    "sda_gpio": 4,
+    "scl_gpio": 5,
+    "supply_monitor": {"adc_address": "0x49", "adc_input": 2},
+    "electrical_check": {"adc_address": "0x49", "adc_input": 3}
+  },
+  "pilot_limits": {
+    "requested_per_finger_force_n": 20,
+    "bringup_reference_force_n": [0, 0.2, 0.5, 1, 2, 5],
+    "qualification_reference_force_n": [0, 0.2, 0.5, 1, 2, 5, 10, 15, 20],
+    "note": "20 N per finger is the requested qualification range, not a verified rating. Check low loads first. Use representative contact fixtures at high loads and stop on damage, bottoming, or nonrecovering deformation."
+  }
+}

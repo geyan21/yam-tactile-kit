@@ -1,111 +1,39 @@
-# YAM Tactile Kit
+# ENPIRE / YAM tactile engineering study
 
-A reproducible design review and interactive lab for a thin, replaceable YAM finger with force sensing at its base and an optional surface pressure strip.
+[Visual website](https://geyan21.github.io/yam-tactile-kit/) · [Student starting packet](engineering/docs/START.md) · [Build R1](engineering/docs/BUILD_R1.md) · [Sensor comparison](engineering/docs/COMPARISON.md)
 
-[Interactive design lab](https://geyan21.github.io/yam-tactile-kit/) ·
-[Complete online guide](https://geyan21.github.io/yam-tactile-kit/guide.html) ·
-[Download everything](https://geyan21.github.io/yam-tactile-kit/downloads/yam-tactile-complete.zip)
+The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.
 
-The landing page contains all visualizations, the full instructions, and separate downloads for design files, source code, documentation, and the offline website. The complete kit ZIP contains all of them together.
+The current R1 design uses two shaped resistive cells on the PETG nail and four cast saddles matched to the actual TPU contact profile. The package contains thirteen STEP/STL tooling parts, full-size electrode patterns, a BOM, wiring, Pico firmware, a guided bench recorder, calibration analysis, material recipes, and a test protocol.
 
-**Release 0.1.0 reproduces a concept, calculations, visualizations, and a calibration exercise. No YAM hardware has been fabricated, fitted, or qualified by this project.** The example geometry is illustrative. The supplied calibration data is synthetic.
-
-## Reproduce the release
-
-Requirements: Python 3.10 or newer; a modern web browser. There are no third-party Python packages, JavaScript packages, network downloads, or build-service accounts required.
-
-Obtain the source from this repository or the source ZIP linked above. The browser visualization and guide are also available online without installing anything.
-
-Run these commands from this repository's root. `/usr/bin/python3` is the interpreter used for the verified Linux build. On another system, substitute the explicit path to your Python 3 interpreter.
-
-```sh
-/usr/bin/python3 scripts/reproduce.py
-/usr/bin/python3 -m unittest discover -s tests -v
-/usr/bin/python3 scripts/serve.py --port 8766
-```
-
-Open `http://127.0.0.1:8766/`. The server listens on this machine only. Use the host's approved remote desktop or VPN workflow when working remotely; this project does not create a tunnel.
-
-The website is also usable offline by opening `build/site/index.html`. Stop the foreground web server with Ctrl+C in its own terminal.
-
-The build creates:
-
-| Output | Purpose |
-| --- | --- |
-| `build/site/index.html` | Interactive assembly, pad-layout and force-path visualization |
-| `build/site/guide.html` | Complete replication and hardware-development guide |
-| `build/yam-tactile-complete.zip` | Complete handoff: source, website, documentation, design files, and file hashes |
-| `build/yam-tactile-site.zip` | Prebuilt offline website; extract and open `index.html` without running Python |
-| `build/site/downloads/yam-tactile-designs.zip` | Editable conceptual CAD envelopes, component STLs, JSON, SVG drawings, BOM, and templates |
-| `build/site/downloads/yam-tactile-docs.zip` | Standalone offline HTML guide and Markdown source documents |
-| `build/design/` | Generated concept geometry, including OpenSCAD source and closed component meshes |
-| `build/design-summary.json` | Auditable envelope and force-budget calculations |
-| `build/finger-concept.svg` | Parameterized, dimension-labeled concept drawing |
-| `build/calibration-report.json` | Fit and held-out evaluation of the synthetic calibration exercise |
-| `build/site/downloads/yam-tactile-kit.zip` | Complete portable source repository |
-| `build/site/downloads/source-manifest.json` | SHA-256 for every file in the source archive |
-| `build/records/` | Timestamped execution records, including commands and process identities |
-
-The archive contains all source, documentation, templates, example data, and tests. Generated output and execution logs are separate from source. The archive's own manifest is excluded from its list of hashed source files.
+**Status: digital design and software checks completed; physical prototype assembly and validation pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
 
 ## Start here
 
-- [Replication guide](docs/REPLICATE.md): commands, expected results, customization, offline use, and export.
-- [Design files](docs/DESIGN_FILES.md): what is included, how to edit the envelopes, and their limits.
-- [Hardware development guide](docs/HARDWARE.md): measurement, mechanics, components, electrical interface, assembly, and service.
-- [Calibration guide](docs/CALIBRATION.md): CSV format, fitting, holdout design, and interpreting the synthetic example.
-- [Validation plan](docs/VALIDATION.md): physical tests required before claiming a usable gripper.
-- [Original design review](docs/DESIGN_REVIEW.md): rationale and primary references.
-- [Scope and provenance](docs/SCOPE.md): implemented artifacts, unverified hardware, and upstream licensing.
+1. [Measure and identify the actual finger](engineering/docs/GEOMETRY.md).
+2. [Print tooling and assemble R1](engineering/docs/BUILD_R1.md).
+3. [Wire, check, and record the sensor](engineering/docs/ELECTRONICS.md).
+4. [Compare cover materials](engineering/docs/MATERIALS.md).
+5. [Qualify contact, 20 N range, wear, replacement, and dexterity](engineering/docs/TESTING.md).
 
-## Change the example
+The website provides individual STEP/STL downloads, an offline guide, all source code, and a complete portable ZIP. Geometry generators and editable design parameters are under [`engineering`](engineering/README.md).
 
-Copy `examples/design.example.json`, edit the values, and rebuild:
+## Rebuild the webpage
 
-```sh
-/usr/bin/python3 scripts/reproduce.py --design examples/design.example.json
-```
-
-The website supports editing the same parameters and importing/exporting that JSON format. Website changes stay in the browser until exported. They do not rewrite files on disk.
-
-The 3D view and CAD exports are generic component envelopes. Mounting holes, a selected force element, calibrated spring geometry, and manufacturing tolerances are not modeled. See [design/README.md](design/README.md) before using any mesh or CAD file.
-
-Record your actual finger measurements separately in `hardware/measurements.template.json`. Its unknown fields are deliberately `null`; the builder never fills them from the illustrative design.
-
-## Calibrate recorded data
+The published CAD snapshot is included. Building the website requires only Python 3.10+:
 
 ```sh
-/usr/bin/python3 scripts/calibrate.py \
-  --input examples/calibration.synthetic.csv \
-  --output build/calibration-report.json
+/usr/bin/python3 -m unittest discover -s engineering/tests -v
+/usr/bin/python3 engineering/scripts/build_site.py
+/usr/bin/python3 engineering/scripts/check_site.py
 ```
 
-Use the documented CSV format for real measurements. The analysis fits two raw channels to reference normal force and evaluates a separate held-out set. It does not connect to a sensor, command a robot, or make a measured sensor production-ready.
+Open `build/site/index.html`, or use a local static file server. Interactive geometry and report inspection also work from the extracted offline website.
 
-## Optional browser verification and Git export
+Full CAD regeneration uses the separate locked environment described in [engineering/README.md](engineering/README.md). It verifies the original mesh hashes, CAD solid validity, STEP round trips, and closed STL exports. Those are digital checks, not physical tests.
 
-With a local Chrome/Chromium executable:
+## Evidence and provenance
 
-```sh
-/usr/bin/python3 scripts/verify_browser.py --browser /usr/bin/google-chrome
-```
+The input meshes come from a pinned community YAM baseline, corroborated by the original MakerWorld file sizes. Exact original-file identity and physical fit must still be checked. Attribution belongs to Wenli Xiao / ENPIRE; see [geometry provenance](engineering/docs/GEOMETRY.md) and the generated release notice.
 
-This opens only the local generated website, checks interactions, and saves desktop/mobile screenshots and a result record. It starts and closes its own temporary HTTP server and browser. It does not use a remote debugging port.
-
-With Git installed:
-
-```sh
-/usr/bin/python3 scripts/export_git.py --git /usr/bin/git
-```
-
-This creates a Git bundle from a fresh temporary copy of the archive. It does not commit to or change any surrounding repository. To obtain a separate repository:
-
-```sh
-/usr/bin/git clone build/yam-tactile-kit.bundle yam-tactile-kit-copy
-```
-
-## What to build physically
-
-The recommended first mechanical prototype retains the working thin finger and adds a characterized force element at its mount. Evaluate a flat FlexiTac coupon separately before a custom narrow FPC. Exact mounting geometry, force-element selection, PCB layout, protective structure, and qualification remain hardware development work. The BOM is a component/specification checklist with unresolved part selections, not an order-ready kit.
-
-No external sensor firmware, FPC fabrication files, or manufacturer CAD is redistributed here. See `docs/SCOPE.md` and the linked primary sources before using an upstream design commercially.
+The previous v0.1 root-force visualization is preserved in Git history and legacy files. It is not the hardware developed in this engineering packet.

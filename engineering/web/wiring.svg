@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<rect width="800" height="450" fill="#fff"/><g font-family="sans-serif" fill="#173039">
+<text x="30" y="39" font-size="20" font-weight="bold">Six cells • two ADCs • one USB stream</text><text x="30" y="64" font-size="13" fill="#536870">All logic and excitation at 3.3 V. U1 ADDR→GND; U2 ADDR→3.3 V.</text>
+<g fill="#edf2ed" stroke="#657c89"><rect x="30" y="112" width="175" height="202" rx="8"/><rect x="280" y="106" width="195" height="116" rx="8"/><rect x="280" y="258" width="195" height="116" rx="8"/></g>
+<g font-size="14"><text x="49" y="139" font-weight="bold">Raspberry Pi Pico</text><text x="49" y="172">GP4 / pin 6 · SDA</text><text x="49" y="197">GP5 / pin 7 · SCL</text><text x="49" y="248">3V3 / pin 36</text><text x="49" y="273">GND / pin 38</text><text x="49" y="298">USB to computer</text>
+<text x="296" y="132" font-weight="bold">U1 · ADS1115 · 0x48</text><text x="296" y="163">A0 → CH0 nail</text><text x="296" y="180">A1 → CH1 nail</text><text x="296" y="197">A2/A3 → CH2/CH3</text>
+<text x="296" y="284" font-weight="bold">U2 · ADS1115 · 0x49</text><text x="296" y="315">A0/A1 → CH4/CH5</text><text x="296" y="332">A2 → supply divider</text><text x="296" y="349">A3 → check divider</text></g>
+<path d="M205 167h28V146h47M233 167v137h47" stroke="#268479" fill="none" stroke-width="3"/><path d="M205 192h38v-29h37M243 192v128h37" stroke="#c66d31" fill="none" stroke-width="3"/>
+<text x="535" y="112" font-size="14" font-weight="bold">Repeat once per cell</text><text x="609" y="146" font-size="13">3.3 V</text><path d="M626 153v23m0-17h106v17" stroke="#aa5542" stroke-width="2"/>
+<rect x="596" y="176" width="60" height="44" fill="#dce5d2" stroke="#657c89"/><text x="608" y="203" font-size="13">Film</text>
+<rect x="722" y="176" width="20" height="44" fill="#fff" stroke="#173039"/><path d="M732 220v21H626" fill="none" stroke="#173039" stroke-width="2"/><text x="673" y="169" font-size="11">100 kΩ at cell</text>
+<path d="M626 220v38m0-17h85" stroke="#173039" fill="none" stroke-width="2"/><circle cx="626" cy="241" r="4" fill="#173039"/><text x="666" y="232" font-size="12">To ADC</text>
+<rect x="613" y="258" width="26" height="44" fill="#fff" stroke="#173039"/><text x="653" y="284" font-size="12">10 kΩ initial</text><path d="M626 302v22m-13 0h26m-20 6h14m-10 6h6" stroke="#173039" fill="none" stroke-width="2"/><text x="609" y="355" font-size="12">GND</text>
+<text x="30" y="412" font-size="12" fill="#536870">References: two 10 kΩ / 10 kΩ dividers. Six 100 kΩ cell-end resistors check lead continuity.</text>
+</g></svg>

@@ -1,0 +1,84 @@
+{
+  "source": "Same pinned mesh as baseline audit; manufacturing and fastener fit unverified.",
+  "nail_thickness_sampling_pitch_mm": 0.3,
+  "nail_thickness_contact_edge_inset_mm": 0.1,
+  "nail_min_thickness_mm": 1.352538772739822,
+  "nail_max_thickness_mm": 13.299606071086888,
+  "nail_samples": 3519,
+  "ray_measurement_note": "First solid interval inward from the contact plane, not total material along a ray.",
+  "mount_circle_sections": [
+    {
+      "native_y": -8.0,
+      "center_xz": [
+        -20.71081355639414,
+        14.283239662486217
+      ],
+      "radius_mm": 2.2997515574635257,
+      "radial_error_mm": 0.0004995419672728652
+    },
+    {
+      "native_y": -8.0,
+      "center_xz": [
+        0.2891864694121907,
+        14.283239662492724
+      ],
+      "radius_mm": 2.299704104360283,
+      "radial_error_mm": 0.0005927830341265761
+    },
+    {
+      "native_y": -10.0,
+      "center_xz": [
+        -20.71081355654404,
+        14.283239662632297
+      ],
+      "radius_mm": 2.2984247065543006,
+      "radial_error_mm": 0.003152873508358134
+    },
+    {
+      "native_y": -10.0,
+      "center_xz": [
+        0.2891864694005519,
+        14.283239662644815
+      ],
+      "radius_mm": 2.2983330922287335,
+      "radial_error_mm": 0.00333471017378395
+    },
+    {
+      "native_y": -12.0,
+      "center_xz": [
+        -20.71081355651879,
+        14.283239662619115
+      ],
+      "radius_mm": 2.2985972086693063,
+      "radial_error_mm": 0.0028079057669123664
+    },
+    {
+      "native_y": -12.0,
+      "center_xz": [
+        0.28918646941228776,
+        14.283239662557751
+      ],
+      "radius_mm": 2.2991213546500404,
+      "radial_error_mm": 0.0017582789085945905
+    },
+    {
+      "native_y": -13.5,
+      "center_xz": [
+        -20.7108135563958,
+        14.283239662493783
+      ],
+      "radius_mm": 2.2997103502380543,
+      "radial_error_mm": 0.0005819087319109961
+    },
+    {
+      "native_y": -13.5,
+      "center_xz": [
+        0.28918641630789643,
+        14.283240164495721
+      ],
+      "radius_mm": 3.2980925428433965,
+      "radial_error_mm": 0.0038173809411068405
+    }
+  ],
+  "decision": "Use removable surface laminates for the first nail prototype; do not machine a recess into the thin tip."
+}

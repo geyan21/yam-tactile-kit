@@ -1,0 +1,24 @@
+id,quantity_per_finger,part_or_specification,purpose,procurement_reference,qualification_note
+R1-01,1,Raspberry Pi Pico RP2040,USB acquisition controller,https://www.raspberrypi.com/products/raspberry-pi-pico/,Use MicroPython RP2 firmware; record version
+R1-02,2,ADS1115 16-bit ADC breakout with ADDR pin,Independent analog acquisition,https://www.adafruit.com/product/1085,Not ADS1015; wire at 3.3 V and set different addresses
+R1-03,10,10 kohm 1% resistor,Six sensor dividers plus two supply dividers,Generic reputable electronics distributor,Measure actual values before calibration
+R1-04,1,0.10 mm pressure-sensitive conductive film,Separate islands for all six cells,https://www.adafruit.com/product/1361,Reference listing out of stock 2026-10-10; record equivalent supplier and lot
+R1-05,1,25-35 micrometre bare copper foil,Two electrodes per cell,Generic electronics or metal foil supplier,Do not put adhesive between bare copper and conductive film
+R1-06,1,Thin polyimide insulating tape,Electrode carrier and edge insulation,Generic electronics distributor,Measure complete laminate thickness
+R1-07,12,Fine insulated stranded leads 34-36 AWG,Two leads per cell,Generic electronics distributor,Strain relief and passive bend check required
+R1-08,1,PETG filament,Reusable molds and dimensional gauge,Use lab stock; record grade,Original hard frame control remains unchanged
+R1-09,1,Dragon Skin 10 Slow trial kit,Saddles and initial cover,https://www.smooth-on.com/products/dragon-skin-10-slow/,1A:1B; 45 minute pot life; 7 hour demold at 23 C
+R1-10,1,Sil-Poxy silicone adhesive; optional silicone/acrylic transfer tape,Retain cast silicone to carrier,https://www.smooth-on.com/products/sil-poxy/,Test actual TPU PETG and polyimide bonds on coupons; full adhesive cure 24 h; record bond line
+R1-11,1,Small connector plus strain-relieved USB cable,Replaceable sensor harness,Generic electronics distributor,Keep connector and solder joints at root
+R1-12,6,100 kohm 1% 0603 SMD resistor,Parallel continuity resistor across each cell at its foil terminals,Generic reputable electronics distributor,Place at the cell outside the active patch; a resistor at the ADC board cannot check the leads
+R1-13,small strip,Non-foam acrylic transfer adhesive film 0.05-0.10 mm,Mount N0 insulating backing to PETG,Generic adhesives distributor,Record grade and measured thickness; follow bond preparation and dwell instructions
+TEST-01,shared,Calibrated force reference with at least 25 N capacity,Independent static labels through requested 20 N per finger,Lab instrument with calibration record,Uncertainty no worse than 0.05 N over tested range
+RANGE-01,optional,330 ohm and 1 kohm 1% resistors,Saturation screening at high loads,Generic reputable electronics distributor,Update Pico config.json to match installed values; new calibration required
+TEST-02,shared,2 mm and 6 mm rounded probes plus flat probe,Contact-area dependence tests,Standard rounded probe or measured printed tool,Record actual diameter and surface finish
+TEST-03,shared,Calipers; 0.01 g scale; mixing cups; compatible gloves; release agent,Fit and casting process,Lab supplies,Read the selected material bulletin and SDS
+CMP-01,shared,Dragon Skin 20,Material comparison,https://www.smooth-on.com/products/dragon-skin-20/,20 Shore A; 1A:1B; 4 hour demold
+CMP-02,shared,Ecoflex 00-30,Material comparison,https://www.smooth-on.com/products/ecoflex-00-30/,Shore 00 is a different scale; 1A:1B; 4 hour demold
+CMP-03,shared,VytaFlex 30,Material comparison,https://www.smooth-on.com/products/vytaflex-30/,Separate moisture-sensitive urethane process; 16 hour demold
+CMP-04,shared,Named TPU 95A filament,Printed comparison,Use recorded manufacturer grade,Do not change infill and cover simultaneously
+MAG-01,optional,Assembled ReSkin or AnySkin compatible five-magnetometer board,Magnetic benchmark,https://github.com/raunaqbhirangi/reskin_sensor/tree/main/circuits,Confirm board dimensions revision and I2C map before integration
+MAG-02,optional,4.7625 mm diameter x 1.5875 mm N52 magnet,Printed magnetic candidate,https://www.mcmaster.com/5862K139/,eFlesh fingertip reference; fit and retention need measurement

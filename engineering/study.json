@@ -1,0 +1,19 @@
+{
+  "revision": "R1.0",
+  "objective": "Reliable contact and grip-force feedback on thin ENPIRE/YAM fingers",
+  "requested_per_finger_force_n": 20,
+  "contact_detection_target_n": 0.2,
+  "physical_specimens_built": 0,
+  "physical_specimens_tested": 0,
+  "selected_sensor": null,
+  "selected_material": null,
+  "physical_results": [],
+  "next_experiment": "Build R1, validate actual geometry and bonding, check low loads, then qualify representative contacts through 20 N per finger.",
+  "candidates": [
+    {"id": "R1", "name": "Independent resistive cells", "status": "designed; unbuilt", "coverage": "two nail regions and four TPU regions", "next": "Fit, saturation, drift, edge coverage, and wear"},
+    {"id": "M1", "name": "Printed magnetic insert", "status": "primary hardware audited; integration design open", "coverage": "compliant region; hard nail requires separate sensing", "next": "Board mount, interference, magnet retention, 20 N range"},
+    {"id": "F1", "name": "Dense flexible matrix", "status": "research comparison", "coverage": "custom fork-shaped flex and curved pad", "next": "Routed fabrication files, crosstalk, fatigue, sealing"},
+    {"id": "O1", "name": "Optical compliant finger", "status": "research comparison", "coverage": "requires optical path and changed skeleton", "next": "Visibility under bending and preservation of nail access"},
+    {"id": "L1", "name": "Calibrated root force", "status": "sensor and structural adapter design open", "coverage": "aggregate load through the finger mount", "next": "Real force element, moment rejection, stiffness and overload"}
+  ]
+}

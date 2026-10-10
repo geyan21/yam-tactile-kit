@@ -1,0 +1,28 @@
+# Student starting packet
+
+**First deliverable: one instrumented finger and a reproducible bench record.** Keep a second, unmodified finger as the control. Start off the robot.
+
+R1 prioritizes detecting contact near the thin nail while preserving the existing hard frame. It is a cheap-to-iterate transducer candidate. Its drift, cover adhesion, wiring life, and force accuracy need measurement before it can be selected as the scalable design.
+
+## What to obtain
+
+Use the exact parts and quantities in `engineering/bom.csv`. The first electrical build needs a Raspberry Pi Pico, two ADS1115 breakout boards, ten 10 kΩ resistors, thin insulated wire, copper foil, polyimide tape, and 0.10 mm pressure-sensitive conductive film. Mechanical work needs the current ENPIRE finger, PETG mold tooling, silicone, and a calibrated force reference.
+
+The requested range is **20 N per finger**. Use a reference with at least 25 N capacity and **stated uncertainty no worse than 0.05 N** over the tested range. Display resolution alone does not establish that. A suitable calibrated force gauge is preferable. A scale can be used for static vertical tests if its calibration, tare, orientation, and force conversion are documented.
+
+The catalog listing for Adafruit 1361 conductive film was out of stock when checked on 2026-10-10. Treat it as the reference specification; obtain an equivalent uncreased 0.10 mm conductive film and record its manufacturer and lot. A substitution is a new material instance.
+
+## First session
+
+1. Download and print the cut sheet at 100%. Measure its 20 mm scale bar. Compare the nail silhouette and 21 mm mounting-pitch gauge with your finger.
+2. Record the actual hard/soft source files, caliper measurements, and printer settings in `engineering/templates/specimen.json`. Photograph the unmodified contact side with a ruler.
+3. Build the readout. Substitute a 10 kΩ resistor for each sensing cell. Each input should report about 100 µS. Both an open lead and a short must raise a fault. The completed cells each carry a 100 kΩ continuity resistor at their foil terminals.
+4. Assemble only the two N0 nail cells first: the sealed insulating laminate without the additional silicone cover. This check needs no casting. Check each center and leading edge and record the added thickness. Compare the N1 silicone-covered variant later.
+5. Cast and install the four saddle cells. Check all six individually, then move the finger through its passive compliance range while watching the signals.
+6. Check 0–5 N first, then complete the 0–20 N qualification protocol with an appropriate contact fixture. Preserve rejected trials as well as accepted ones. A 5 N pass is preliminary only.
+
+## Return these results
+
+Provide the completed specimen sheet, source CAD hashes, assembly photographs, `session.json`, `trials.jsonl`, all raw trial files, and the calibration report. Include failures: delamination, saturated channels, inaccessible contact regions, or a cut pattern that does not fit.
+
+The next revision depends on those measurements. If the nail cover defeats thin-edge tasks, reduce or replace the cover. If resistive drift fails the force criterion, retain it for contact location and evaluate a separate force transducer. Do not solve these failures by relabelling software output as calibrated force.
