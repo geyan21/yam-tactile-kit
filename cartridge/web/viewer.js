@@ -1,5 +1,6 @@
 /* Minimal WebGL viewer for the cartridge meshes in data.js. No dependencies.
-   Flat shading + feature edges (CAD look), translucent skin, explode, orbit, pinch/ctrl-wheel zoom. */
+   Flat shading + feature edges (CAD look), translucent skin, explode, orbit, pinch/ctrl-wheel zoom.
+   More than one model: addModel() takes a part list (data_enpire.js) and setModel() switches. */
 (function () {
   "use strict";
   const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
@@ -61,6 +62,7 @@
       this.parts = [];
       for (const [name, m] of Object.entries(data.meshes)) this.parts.push(this.build(name, m));
       this.parts.push(this.build("taxels", this.taxelMesh(data.layout)));
+      this.models = { flat: this.parts }; this.model = "flat";
       this.explode = 0; this.xray = true;
       this.hidden = new Set();
       this.reset(false);
@@ -97,10 +99,27 @@
       const buf = data => { const b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW); return b; };
       const col = hex(m.color);
       return {
-        name, label: m.label, color: m.color, group: m.group, explode: m.explode, lo, hi,
+        name, label: m.label, color: m.color, group: m.group, explode: m.explode, lo, hi, glass: !!m.glass || name === "skin",
         pos: buf(pos), nor: buf(nor), count: n * 3, lines: buf(lines), lineCount: E.length,
         col, edge: col.map(c => c * 0.42 + 0.06)
       };
+    }
+
+    // a model is a list of parts in draw/legend order; {name, shared: true, explode} reuses a flat-model part
+    addModel(key, data) {
+      const parts = [];
+      for (const m of data.parts) {
+        if (m.shared) {
+          const p = this.models.flat.find(q => q.name === m.name);
+          if (p) parts.push(Object.assign({}, p, { explode: m.explode }));
+        } else parts.push(this.build(m.name, m));
+      }
+      this.models[key] = parts;
+    }
+    setModel(key) {
+      if (!this.models[key]) return;
+      this.model = key; this.parts = this.models[key];
+      this.request();
     }
 
     visible(p) { return !this.hidden.has(p.group) && !(p.name === "taxels" && this.hidden.has("pad")); }
@@ -216,7 +235,7 @@
       gl.enableVertexAttribArray(this.loc.aPos);
       gl.enable(gl.DEPTH_TEST); gl.depthMask(true); gl.disable(gl.BLEND);
       const shown = this.parts.filter(p => this.visible(p));
-      const glass = shown.filter(p => p.name === "skin" && this.xray);
+      const glass = shown.filter(p => p.glass && this.xray);
       const solid = shown.filter(p => !glass.includes(p));
       gl.enable(gl.POLYGON_OFFSET_FILL); gl.polygonOffset(1, 1);
       for (const p of solid) this.faces(p, 1);

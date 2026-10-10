@@ -1,0 +1,445 @@
+{
+ "internal": {
+  "core x skin": 0.0,
+  "core x flex": 0.0,
+  "core x film": 0.0,
+  "skin x flex": 0.0001,
+  "skin x film": 0.0,
+  "flex x film": 0.0,
+  "core x ph_finger_pcb": 0.0,
+  "core x ph_finger_pcb_parts": 0.0,
+  "flex x ph_finger_pcb_parts": 0.0,
+  "core x socket": 0.0,
+  "skin x socket": 0.0,
+  "core x ph_thumbscrews": 0.0,
+  "core x ph_dowels": 0.0,
+  "core x ph_pogo_pins": 0.0,
+  "ph_finger_pcb x ph_pogo_pins": 6.1824,
+  "ph_finger_pcb_parts x socket": 0.0,
+  "ph_finger_pcb x socket": 0.0,
+  "flex x socket": 0.0
+ },
+ "contact": {
+  "q_touch_mm": 1.443,
+  "stock_q_touch_mm": 1.443,
+  "gap_by_pair_at_touch_mm": {
+   "core-core": 0.1,
+   "core-skin": 2.888,
+   "core-film": 0.39,
+   "core-flex": 0.648,
+   "core-socket": 3.0,
+   "core-ph_thumbscrews": 3.0,
+   "skin-skin": 2.297,
+   "skin-socket": 3.0,
+   "film-skin": 2.338,
+   "film-film": 0.39,
+   "film-flex": 0.648,
+   "film-socket": 3.0,
+   "film-ph_thumbscrews": 3.0,
+   "flex-skin": 2.588,
+   "flex-flex": 0.899,
+   "flex-socket": 3.0,
+   "flex-ph_thumbscrews": 3.0,
+   "socket-socket": 3.0,
+   "ph_thumbscrews-skin": 3.0,
+   "ph_thumbscrews-socket": 3.0,
+   "ph_thumbscrews-ph_thumbscrews": 3.0
+  },
+  "touch_z_range": [
+   -193.55,
+   -193.55
+  ]
+ },
+ "shape": {
+  "depth_map_cradle_mm": {
+   "n": 4340,
+   "p50": 0.0,
+   "p95": 0.0051,
+   "max": 0.3626
+  },
+  "depth_map_transition_mm": {
+   "n": 278,
+   "p50": 0.1904,
+   "p95": 10.9271,
+   "max": 13.8189
+  },
+  "depth_map_nail_mm": {
+   "n": 1466,
+   "p50": 0.0,
+   "p95": 0.0,
+   "max": 0.7209
+  },
+  "depth_map_sides_mm": {
+   "n": 2604,
+   "p50": 0.0,
+   "p95": 0.0063,
+   "max": 16.0818
+  },
+  "depth_map_coverage_change": 4,
+  "transition_notch_filled": {
+   "z_range_mm": [
+    -169.88,
+    -172.38
+   ],
+   "height_mm": 3.0,
+   "max_depth_mm": 2.01,
+   "slit_at_root": true
+  },
+  "core_vs_hard_frame_mm": {
+   "n": 5955,
+   "p50": 0.0,
+   "p99": 0.0,
+   "max": 0.0
+  },
+  "film_vs_nail_plane_mm": {
+   "max_abs": 0.0
+  }
+ },
+ "walls": {
+  "nail_behind_pocket_min_mm": {
+   "t": 3.272,
+   "at_uv": [
+    -5.43,
+    9.07
+   ]
+  },
+  "nail_lip_pocket_to_groove_mm": 0.85,
+  "nail_lip_pocket_to_face_edge_mm": 0.696,
+  "wall_thumbscrew_L_mm": 2.1,
+  "wall_thumbscrew_R_mm": 2.1,
+  "wall_dowel_L_mm": 1.94,
+  "wall_dowel_R_mm": 1.45,
+  "cavity_floor_min_mm": 4.09,
+  "tail_slot_front_wall_mm": 7.44,
+  "skin_over_flex_min_mm": {
+   "t": 1.317,
+   "at_s": 37.86
+  }
+ },
+ "clearance_sweep": [
+  {
+   "q_mm": 0.0,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 1.306,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 0.0,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 0.0,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 0.0,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 5.003,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 5.94,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 1.305,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 5.94,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 5.94,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 5.94,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 5.003,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 11.88,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 1.305,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 11.88,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 11.88,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 11.88,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 5.003,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 17.81,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 1.306,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 17.81,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 17.81,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 17.81,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 5.004,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 23.75,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 2.625,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 23.75,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 23.75,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 23.75,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 29.69,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 29.69,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 29.69,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 29.69,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 35.63,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 35.63,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 35.63,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 35.63,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 41.56,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 41.56,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 41.56,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 41.56,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 47.5,
+   "part": "socket",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 47.5,
+   "part": "core",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 47.5,
+   "part": "skin",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  },
+  {
+   "q_mm": 47.5,
+   "part": "ph_thumbscrews",
+   "vs_housing": 6.0,
+   "vs_opposite_carriage": 6.0,
+   "vs_own_carriage_overlap": 0.0,
+   "vol_x_housing": 0.0,
+   "vol_x_opposite": 0.0
+  }
+ ]
+}

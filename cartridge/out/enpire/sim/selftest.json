@@ -1,0 +1,57 @@
+{
+ "nail_pinch": {
+  "pin_d_mm": 3,
+  "pin_len_mm": 12,
+  "z_mm": -176.88,
+  "q_mm": 1.95,
+  "grip_N": 15.0,
+  "left_nail_N": 12.8,
+  "right_nail_N": 12.79,
+  "left_strip_N": 0.0,
+  "right_strip_N": 0.0,
+  "sensed_share": [
+   0.852,
+   0.852
+  ],
+  "sensors_match_contacts": true,
+  "active_nail": [
+   8,
+   8
+  ]
+ },
+ "cradle_grasp": {
+  "rod_d_mm": 32,
+  "z_mm": -121.5,
+  "q_mm": 2.46,
+  "grip_N": 15.0,
+  "left_strip_N": 30.64,
+  "right_strip_N": 38.47,
+  "sensed_share": [
+   0.731,
+   0.766
+  ],
+  "sensors_match_contacts": true,
+  "active_strip": [
+   24,
+   24
+  ]
+ },
+ "flat_tip_pinch": {
+  "plate_mm": [
+   2,
+   20,
+   15
+  ],
+  "bottom_above_tip_mm": 0.5,
+  "q_mm": 2.3,
+  "grip_N": 15.0,
+  "contact_N_both_fingers": 30.02,
+  "sensed_share": [
+   0.0,
+   0.0
+  ],
+  "left_nail_N": 0.0,
+  "right_nail_N": 0.0
+ },
+ "nsensor": 604
+}

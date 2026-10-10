@@ -1,0 +1,3 @@
+ENPIRE-T parts in this folder are a modified version of the ENPIRE gripper finger.
+Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified: rigid cradle with a sensor seat, filled nail slot, nail sensor pocket, plug-in dock flange, flex routing.
+Licence: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ . Changes are listed above and in docs/ENPIRE_T.md.

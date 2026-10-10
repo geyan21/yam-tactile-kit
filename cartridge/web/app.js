@@ -178,6 +178,10 @@
       note.className = "view-fallback";
       note.textContent = "This browser has WebGL turned off, so a rendered picture is shown instead of the 3D view.";
       img.after(note);
+      document.querySelectorAll("a[data-model]").forEach(a => a.addEventListener("click", () => {
+        const alt = canvas.dataset["fallback" + a.dataset.model[0].toUpperCase() + a.dataset.model.slice(1)];
+        if (alt) { img.src = alt; img.alt = "Rendered view of the YAM gripper with two " + D.models[a.dataset.model].label + " fingers"; }
+      }));
       return;
     }
     const $ = id => document.getElementById(id);
@@ -190,14 +194,64 @@
     $("zoom-out").addEventListener("click", () => v.zoom(1 / 0.85));
     $("reset-view").addEventListener("click", () => v.reset());
     onTheme(() => v.request());
-    const seen = new Set(), legend = $("legend");
-    for (const p of v.parts) {
-      if (seen.has(p.label)) continue;
-      seen.add(p.label);
-      const li = document.createElement("li"), sw = document.createElement("i");
-      sw.style.background = p.color; li.append(sw, document.createTextNode(p.label));
-      legend.append(li);
+    const legend = $("legend");
+    function drawLegend() {
+      const seen = new Set();
+      legend.textContent = "";
+      for (const p of v.parts) {
+        if (seen.has(p.label)) continue;
+        seen.add(p.label);
+        const li = document.createElement("li"), sw = document.createElement("i");
+        sw.style.background = p.color; li.append(sw, document.createTextNode(p.label));
+        legend.append(li);
+      }
     }
+    drawLegend();
+    models(v, drawLegend);
+  }
+
+  // ---------------------------------------------------------------- finger switch (flat cartridge / ENPIRE-T)
+  function models(v, drawLegend) {
+    const M = D.models, head = document.getElementById("view-head"), status = document.getElementById("view-status");
+    if (!M || !head) return;
+    const radios = [...head.querySelectorAll('input[name="model"]')];
+    const dataSrc = document.querySelector('script[src$="data.js"]').getAttribute("src");
+    let loading = null, wanted = v.model;
+    head.hidden = false;
+    function load(key) {                       // the extra model's meshes arrive only when someone asks for them
+      if (v.models[key]) return Promise.resolve();
+      if (!loading) {                          // one extra model on this page; a second would need a promise per key
+        loading = new Promise((resolve, reject) => {
+          const s = document.createElement("script");
+          s.src = dataSrc.replace(/data\.js$/, M[key].src);
+          s.onload = () => (window[M[key].var] ? resolve() : reject(new Error("empty")));
+          s.onerror = () => reject(new Error("load failed"));
+          document.head.append(s);
+        }).then(() => v.addModel(key, window[M[key].var]));
+        loading.catch(() => { loading = null; });
+      }
+      return loading;
+    }
+    async function show(key) {
+      wanted = key;
+      radios.forEach(r => { r.checked = r.value === key; });
+      if (!v.models[key]) {
+        status.textContent = "Loading " + M[key].label + "…";
+        try { await load(key); } catch (err) {
+          if (wanted !== key) return;
+          status.textContent = M[key].label + " didn't load. Check the connection and pick it again.";
+          radios.forEach(r => { r.checked = r.value === v.model; });
+          wanted = v.model;
+          return;
+        }
+        if (wanted !== key) return;            // picked something else while loading
+      }
+      v.setModel(key);
+      drawLegend();
+      status.textContent = M[key].caption;
+    }
+    radios.forEach(r => r.addEventListener("change", () => { if (r.checked) show(r.value); }));
+    document.querySelectorAll("a[data-model]").forEach(a => a.addEventListener("click", () => show(a.dataset.model)));
   }
 
   function start() {

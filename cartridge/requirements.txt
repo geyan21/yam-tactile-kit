@@ -12,5 +12,6 @@ matplotlib==3.11.2
 mujoco==3.15.0
 vtk==9.6.2
 pillow==12.3.0
+fast-simplification==0.2.0   # viewer meshes in web/data_enpire.js
 # optional: page check (tools/verify_web.py)
 playwright==1.56.0

@@ -6,7 +6,7 @@ How the v0.2 cartridge came about, and the choices behind it. The build-facing d
 
 The first attempt was a CAD-to-tactile pipeline: import the gripper finger STL, select the contact regions, and unfold them into 2D to design a custom FPC. It stalled on two things. The ENPIRE-style finger (the MakerWorld design used on the YAM) has an irregular, rounded tip that is hard to unfold, and its narrow fingertip leaves little room for an FPC.
 
-Both problems come from the finger's geometry, not from FlexiTac. Polyimide bends but does not stretch, so a flat circuit can only follow developable surfaces: planes, and cylinders or cones bent along straight fold lines. The rounded nose and blended fillets curve in two directions at once. No unfolding tool can flatten them without wrinkling or tearing the circuit.
+Both problems come from the finger's geometry, not from FlexiTac. Polyimide bends but does not stretch, so a flat circuit can only follow developable surfaces: planes, and cylinders or cones bent along straight fold lines. ENPIRE's two contact faces are in fact developable. The nail face is a plane, and the TPU cradle is a straight extrusion across the finger. But an unfolding tool that takes the mesh as it is meets everything on and around them: 1 mm serration teeth, far too tight a bend for polyimide; a lattice that flexes in use; and a narrow nail split by a groove.
 
 ## Turning the approach around
 
@@ -17,6 +17,10 @@ That also removes the narrow-tip routing problem. Every trace leaves the pad at 
 The cost is width. Eight columns at 2 mm pitch plus routing margins make the tip 26 mm wide, against about 18 mm for the stock tip 5 mm from the end. Six columns would bring it to about 22 mm. Thickness stays at stock level: 3.25 mm at the centre 1.7 mm from the end, against 3.83 mm for the stock tip.
 
 Using one standard pad for every finger also matters for a fleet. FlexiTac reports that swapping in a fresh pad does not noticeably change policy performance, so one design keeps every cartridge's data comparable.
+
+## Keeping ENPIRE's shape
+
+For tasks that need ENPIRE's thin nail and its cradle, the second finger, ENPIRE-T, keeps that shape and solves each problem in place instead. The teeth move into a molded skin over a smooth, rigid seat, so nothing flexes under the sensor, and the nail gets a flush 56-taxel pad around its groove. It docks on the same socket. [ENPIRE_T.md](ENPIRE_T.md) has the design and its checks.
 
 ## Sensor choice
 

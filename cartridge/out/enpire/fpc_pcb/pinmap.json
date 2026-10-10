@@ -1,0 +1,516 @@
+{
+ "rows_tail": [
+  {
+   "pin": 1,
+   "signal": "GND",
+   "u": -9.31
+  },
+  {
+   "pin": 2,
+   "signal": "SROW00",
+   "u": -9.01
+  },
+  {
+   "pin": 3,
+   "signal": "SROW01",
+   "u": -8.71
+  },
+  {
+   "pin": 4,
+   "signal": "SROW02",
+   "u": -8.41
+  },
+  {
+   "pin": 5,
+   "signal": "SROW03",
+   "u": -8.11
+  },
+  {
+   "pin": 6,
+   "signal": "SROW04",
+   "u": -7.81
+  },
+  {
+   "pin": 7,
+   "signal": "SROW05",
+   "u": -7.51
+  },
+  {
+   "pin": 8,
+   "signal": "SROW06",
+   "u": -7.21
+  },
+  {
+   "pin": 9,
+   "signal": "SROW07",
+   "u": -6.91
+  },
+  {
+   "pin": 10,
+   "signal": "SROW08",
+   "u": -6.61
+  },
+  {
+   "pin": 11,
+   "signal": "SROW09",
+   "u": -6.31
+  },
+  {
+   "pin": 12,
+   "signal": "SROW10",
+   "u": -6.01
+  },
+  {
+   "pin": 13,
+   "signal": "SROW11",
+   "u": -5.71
+  },
+  {
+   "pin": 14,
+   "signal": "SROW12",
+   "u": -5.41
+  },
+  {
+   "pin": 15,
+   "signal": "SROW13",
+   "u": -5.11
+  },
+  {
+   "pin": 16,
+   "signal": "SROW14",
+   "u": -4.81
+  },
+  {
+   "pin": 17,
+   "signal": "SROW15",
+   "u": -4.51
+  },
+  {
+   "pin": 18,
+   "signal": "SROW16",
+   "u": -4.21
+  },
+  {
+   "pin": 19,
+   "signal": "SROW17",
+   "u": -3.91
+  },
+  {
+   "pin": 20,
+   "signal": "SROW18",
+   "u": -3.61
+  },
+  {
+   "pin": 21,
+   "signal": "SROW19",
+   "u": -3.31
+  },
+  {
+   "pin": 22,
+   "signal": "SROW20",
+   "u": -3.01
+  },
+  {
+   "pin": 23,
+   "signal": "SROW21",
+   "u": -2.71
+  },
+  {
+   "pin": 24,
+   "signal": "SROW22",
+   "u": -2.41
+  },
+  {
+   "pin": 25,
+   "signal": "SROW23",
+   "u": -2.11
+  },
+  {
+   "pin": 26,
+   "signal": "SROW24",
+   "u": -1.81
+  },
+  {
+   "pin": 27,
+   "signal": "SROW25",
+   "u": -1.51
+  },
+  {
+   "pin": 28,
+   "signal": "SROW26",
+   "u": -1.21
+  },
+  {
+   "pin": 29,
+   "signal": "SROW27",
+   "u": -0.91
+  },
+  {
+   "pin": 30,
+   "signal": "SROW28",
+   "u": -0.61
+  },
+  {
+   "pin": 31,
+   "signal": "SROW29",
+   "u": -0.31
+  },
+  {
+   "pin": 32,
+   "signal": "SROW30",
+   "u": -0.01
+  },
+  {
+   "pin": 33,
+   "signal": "SROW31",
+   "u": 0.29
+  },
+  {
+   "pin": 34,
+   "signal": "SROW32",
+   "u": 0.59
+  },
+  {
+   "pin": 35,
+   "signal": "SROW33",
+   "u": 0.89
+  },
+  {
+   "pin": 36,
+   "signal": "SROW34",
+   "u": 1.19
+  },
+  {
+   "pin": 37,
+   "signal": "SROW35",
+   "u": 1.49
+  },
+  {
+   "pin": 38,
+   "signal": "SROW36",
+   "u": 1.79
+  },
+  {
+   "pin": 39,
+   "signal": "SROW37",
+   "u": 2.09
+  },
+  {
+   "pin": 40,
+   "signal": "SROW38",
+   "u": 2.39
+  },
+  {
+   "pin": 41,
+   "signal": "SROW39",
+   "u": 2.69
+  },
+  {
+   "pin": 42,
+   "signal": "SROW40",
+   "u": 2.99
+  },
+  {
+   "pin": 43,
+   "signal": "NROW03L",
+   "u": 3.29
+  },
+  {
+   "pin": 44,
+   "signal": "NROW05L",
+   "u": 3.59
+  },
+  {
+   "pin": 45,
+   "signal": "NROW06L",
+   "u": 3.89
+  },
+  {
+   "pin": 46,
+   "signal": "NROW04L",
+   "u": 4.19
+  },
+  {
+   "pin": 47,
+   "signal": "NROW00",
+   "u": 4.49
+  },
+  {
+   "pin": 48,
+   "signal": "NROW07L",
+   "u": 4.79
+  },
+  {
+   "pin": 49,
+   "signal": "NROW08L",
+   "u": 5.09
+  },
+  {
+   "pin": 50,
+   "signal": "NROW09L",
+   "u": 5.39
+  },
+  {
+   "pin": 51,
+   "signal": "NROW01",
+   "u": 5.69
+  },
+  {
+   "pin": 52,
+   "signal": "NROW02",
+   "u": 5.99
+  },
+  {
+   "pin": 53,
+   "signal": "NROW07R",
+   "u": 6.29
+  },
+  {
+   "pin": 54,
+   "signal": "NROW08R",
+   "u": 6.59
+  },
+  {
+   "pin": 55,
+   "signal": "NROW09R",
+   "u": 6.89
+  },
+  {
+   "pin": 56,
+   "signal": "NROW05R",
+   "u": 7.19
+  },
+  {
+   "pin": 57,
+   "signal": "NROW06R",
+   "u": 7.49
+  },
+  {
+   "pin": 58,
+   "signal": "NROW03R",
+   "u": 7.79
+  },
+  {
+   "pin": 59,
+   "signal": "NROW04R",
+   "u": 8.09
+  },
+  {
+   "pin": 60,
+   "signal": "GND",
+   "u": 8.39
+  }
+ ],
+ "cols_tail": [
+  {
+   "pin": 1,
+   "signal": "GND",
+   "u": -3.01
+  },
+  {
+   "pin": 2,
+   "signal": "SCOL0",
+   "u": -2.71
+  },
+  {
+   "pin": 3,
+   "signal": "SCOL1",
+   "u": -2.41
+  },
+  {
+   "pin": 4,
+   "signal": "SCOL2",
+   "u": -2.11
+  },
+  {
+   "pin": 5,
+   "signal": "NCOL00",
+   "u": -1.81
+  },
+  {
+   "pin": 6,
+   "signal": "NCOL01",
+   "u": -1.51
+  },
+  {
+   "pin": 7,
+   "signal": "NCOL02",
+   "u": -1.21
+  },
+  {
+   "pin": 8,
+   "signal": "NCOL03",
+   "u": -0.91
+  },
+  {
+   "pin": 9,
+   "signal": "NCOL04",
+   "u": -0.61
+  },
+  {
+   "pin": 10,
+   "signal": "NCOL05",
+   "u": -0.31
+  },
+  {
+   "pin": 11,
+   "signal": "NCOL06",
+   "u": -0.01
+  },
+  {
+   "pin": 12,
+   "signal": "NCOL07",
+   "u": 0.29
+  },
+  {
+   "pin": 13,
+   "signal": "NCOL08",
+   "u": 0.59
+  },
+  {
+   "pin": 14,
+   "signal": "NCOL09",
+   "u": 0.89
+  },
+  {
+   "pin": 15,
+   "signal": "SCOL3",
+   "u": 1.19
+  },
+  {
+   "pin": 16,
+   "signal": "SCOL4",
+   "u": 1.49
+  },
+  {
+   "pin": 17,
+   "signal": "SCOL5",
+   "u": 1.79
+  },
+  {
+   "pin": 18,
+   "signal": "GND",
+   "u": 2.09
+  }
+ ],
+ "rows_tail_pins": 60,
+ "cols_tail_pins": 18,
+ "pitch_mm": 0.3,
+ "fpc_width_mm": {
+  "rows": 18.3,
+  "cols": 5.7
+ },
+ "tail_length_mm": {
+  "slot": 4.1,
+  "cols": 14.07,
+  "rows": 23.1,
+  "slack": 1.0
+ },
+ "scan": {
+  "row_lines": [
+   "SROW00",
+   "SROW01",
+   "SROW02",
+   "SROW03",
+   "SROW04",
+   "SROW05",
+   "SROW06",
+   "SROW07",
+   "SROW08",
+   "SROW09",
+   "SROW10",
+   "SROW11",
+   "SROW12",
+   "SROW13",
+   "SROW14",
+   "SROW15",
+   "SROW16",
+   "SROW17",
+   "SROW18",
+   "SROW19",
+   "SROW20",
+   "SROW21",
+   "SROW22",
+   "SROW23",
+   "SROW24",
+   "SROW25",
+   "SROW26",
+   "SROW27",
+   "SROW28",
+   "SROW29",
+   "SROW30",
+   "SROW31",
+   "SROW32",
+   "SROW33",
+   "SROW34",
+   "SROW35",
+   "SROW36",
+   "SROW37",
+   "SROW38",
+   "SROW39",
+   "SROW40",
+   "NROW00",
+   "NROW01",
+   "NROW02",
+   "NROW03R",
+   "NROW03L",
+   "NROW04R",
+   "NROW04L",
+   "NROW05R",
+   "NROW05L",
+   "NROW06R",
+   "NROW06L",
+   "NROW07R",
+   "NROW07L",
+   "NROW08R",
+   "NROW08L",
+   "NROW09R",
+   "NROW09L"
+  ],
+  "col_lines": [
+   "SCOL0",
+   "SCOL1",
+   "SCOL2",
+   "SCOL3",
+   "SCOL4",
+   "SCOL5",
+   "NCOL00",
+   "NCOL01",
+   "NCOL02",
+   "NCOL03",
+   "NCOL04",
+   "NCOL05",
+   "NCOL06",
+   "NCOL07",
+   "NCOL08",
+   "NCOL09"
+  ]
+ },
+ "pogo": [
+  {
+   "pin": 1,
+   "signal": "GND"
+  },
+  {
+   "pin": 2,
+   "signal": "D-"
+  },
+  {
+   "pin": 3,
+   "signal": "D+"
+  },
+  {
+   "pin": 4,
+   "signal": "VBUS"
+  },
+  {
+   "pin": 5,
+   "signal": "GND"
+  }
+ ],
+ "notes": [
+  "rows tail -> connector B (far), runs along the cavity floor under connector A",
+  "cols tail -> connector A (near); both tails pass the flange slot stacked (cols sheet in front)",
+  "fingers on L2 of each sheet: pick top- or bottom-contact 0.3 mm FPC connectors to match the bend direction"
+ ]
+}

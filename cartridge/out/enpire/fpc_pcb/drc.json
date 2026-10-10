@@ -1,0 +1,28 @@
+{
+ "drc_issues": [],
+ "drc_stats": {
+  "rows/R1_min_gap_mm": ">0.2",
+  "rows/R2_min_gap_mm": 0.1,
+  "cols/C1_min_gap_mm": ">0.2",
+  "cols/C2_min_gap_mm": 0.1
+ },
+ "pcb_issues": [],
+ "pcb_free_mm2": 254.0,
+ "tail_room_mm": {
+  "cols_before_A": 0.42,
+  "rows_before_B": 0.4
+ },
+ "taxels": {
+  "strip": 246,
+  "nail": 56
+ },
+ "lines": {
+  "rows": 58,
+  "cols": 16
+ },
+ "min_seat_bend_radius_under_taxels_mm": 2.58,
+ "laminate_min_bend_radius": {
+  "mm": 1.78,
+  "at_s_mm": 0.3
+ }
+}

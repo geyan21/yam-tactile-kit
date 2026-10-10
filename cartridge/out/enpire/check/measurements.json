@@ -1,0 +1,117 @@
+{
+ "tip_profile": [
+  {
+   "from_tip_mm": 0.5,
+   "thickness_mm": 1.59,
+   "stock_thickness_mm": 1.59,
+   "width_mm": 10.933,
+   "stock_width_mm": 10.933
+  },
+  {
+   "from_tip_mm": 1.7,
+   "thickness_mm": 2.717,
+   "stock_thickness_mm": 2.717,
+   "width_mm": 11.89,
+   "stock_width_mm": 11.89
+  },
+  {
+   "from_tip_mm": 3.0,
+   "thickness_mm": 3.861,
+   "stock_thickness_mm": 3.861,
+   "width_mm": 12.927,
+   "stock_width_mm": 12.927
+  },
+  {
+   "from_tip_mm": 5.0,
+   "thickness_mm": 5.436,
+   "stock_thickness_mm": 5.436,
+   "width_mm": 14.522,
+   "stock_width_mm": 14.522
+  },
+  {
+   "from_tip_mm": 10.0,
+   "thickness_mm": 8.84,
+   "stock_thickness_mm": 8.84,
+   "width_mm": 18.51,
+   "stock_width_mm": 18.51
+  }
+ ],
+ "tip_below_carriage_mm": 123.38,
+ "stock_tip_below_carriage_mm": 114.88,
+ "stock_tip_below_carriage_if_rib_in_slot_mm": 109.88,
+ "finger_root_to_tip_mm": 112.88,
+ "strip_developed_mm": 82.859,
+ "laminate_length_mm": 118.843,
+ "core_volume_cm3": 44.55,
+ "core_mass_g_solid_petg": 56.6,
+ "core_mass_g_pa12_mjf": 45.0,
+ "skin_volume_cm3": 2.74,
+ "skin_mass_g_silicone": 3.0,
+ "stock_enpire_mass_g_solid_estimate": 42.9,
+ "seat_set_back_mm": 2.0,
+ "skin_rib_pass_margin_mm": 0.2,
+ "nail_pocket_depth_mm": 0.7,
+ "taxels": {
+  "strip": 246,
+  "nail": 56
+ },
+ "lines": {
+  "rows": 58,
+  "cols": 16
+ },
+ "min_seat_bend_radius_under_taxels_mm": 2.58,
+ "q_touch_mm": 1.443,
+ "walls": {
+  "nail_behind_pocket_min_mm": {
+   "t": 3.272,
+   "at_uv": [
+    -5.43,
+    9.07
+   ]
+  },
+  "nail_lip_pocket_to_groove_mm": 0.85,
+  "nail_lip_pocket_to_face_edge_mm": 0.696,
+  "wall_thumbscrew_L_mm": 2.1,
+  "wall_thumbscrew_R_mm": 2.1,
+  "wall_dowel_L_mm": 1.94,
+  "wall_dowel_R_mm": 1.45,
+  "cavity_floor_min_mm": 4.09,
+  "tail_slot_front_wall_mm": 7.44,
+  "skin_over_flex_min_mm": {
+   "t": 1.317,
+   "at_s": 37.86
+  }
+ },
+ "shape": {
+  "depth_map_cradle_mm": {
+   "n": 4340,
+   "p50": 0.0,
+   "p95": 0.0051,
+   "max": 0.3626
+  },
+  "depth_map_nail_mm": {
+   "n": 1466,
+   "p50": 0.0,
+   "p95": 0.0,
+   "max": 0.7209
+  },
+  "transition_notch_filled": {
+   "z_range_mm": [
+    -169.88,
+    -172.38
+   ],
+   "height_mm": 3.0,
+   "max_depth_mm": 2.01,
+   "slit_at_root": true
+  },
+  "core_vs_hard_frame_mm": {
+   "n": 5955,
+   "p50": 0.0,
+   "p99": 0.0,
+   "max": 0.0
+  },
+  "film_vs_nail_plane_mm": {
+   "max_abs": 0.0
+  }
+ }
+}

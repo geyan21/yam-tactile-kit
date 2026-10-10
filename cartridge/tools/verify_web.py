@@ -2,6 +2,7 @@
 Check the cartridge webpage in headless Chromium (Playwright):
   * no JavaScript errors and no missing local files
   * the 3D view draws something other than background and responds to a drag and to "separate parts"
+  * the finger switch loads and draws ENPIRE-T, then switches back
   * pressing the taxel pad updates the readout
   * no horizontal scrolling at phone width
 Runs at desktop and phone width in the light theme and at desktop width in the dark theme.
@@ -108,7 +109,31 @@ def check_page(browser, url, name, viewport, phone, scheme="light"):
     page.wait_for_timeout(200)
     page.locator(".viewer").screenshot(path=os.path.join(SHOTS, f"{name}-viewer.png"))
     page.locator("#explode").fill("0")
-    for sel in ("#top", "#why", "#inspect", "#assembly", "#sensor", "#checks", "#build", "#files", ".foot"):
+    page.wait_for_timeout(200)
+
+    # finger switch: ENPIRE-T loads on demand, draws, and brings its own legend; then back to the flat cartridge
+    flat = view.screenshot()
+    page.locator('#view-head label:has(input[value="enpire"])').click()
+    try:
+        page.wait_for_function("document.getElementById('legend').textContent.includes('Silicone skin')", timeout=20000)
+        page.wait_for_timeout(400)
+        shot = view.screenshot()
+        if shot == flat or busy(shot) < 3:
+            problems.append(f"[{name}] ENPIRE-T did not draw")
+        page.locator("#explode").fill("70")
+        page.wait_for_timeout(200)
+        page.locator(".viewer").screenshot(path=os.path.join(SHOTS, f"{name}-viewer-enpire.png"))
+        page.locator("#explode").fill("0")
+        status = page.locator("#view-status").inner_text()
+        if "ENPIRE-T" not in status:
+            problems.append(f"[{name}] viewer status not updated: {status!r}")
+    except Exception as e:                                     # noqa: BLE001 (report, don't crash)
+        problems.append(f"[{name}] ENPIRE-T model did not load: {e}")
+    page.locator('#view-head label:has(input[value="flat"])').click()
+    page.wait_for_timeout(300)
+    if "Flat cartridge" not in page.locator("#view-status").inner_text():
+        problems.append(f"[{name}] switching back to the flat cartridge failed")
+    for sel in ("#top", "#why", "#enpire", "#inspect", "#assembly", "#sensor", "#checks", "#build", "#files", ".foot"):
         page.locator(sel).screenshot(path=os.path.join(SHOTS, f"{name}-section-{sel.strip('#.')}.png"))
     ctx.close()
     return problems, notes

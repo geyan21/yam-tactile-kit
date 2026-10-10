@@ -14,6 +14,12 @@ Cartridge stream protocol v1 (little endian, one frame per scan, 200 Hz default)
   CRC = CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF, no reflection, xorout 0; check("123456789") = 0x29B1)
   -> 268 bytes / frame. USB iSerial = MCU 96-bit UID (hex), so a udev rule can name the port and the
   host can log which physical cartridge produced each episode.
+
+Stream protocol v2 (any layout; the ENPIRE-T cartridge uses it):
+  0xAA 0x55 | ver u8 = 2 | flags u8 | seq u16 | t_us u32 | layout u8 | reserved u8 | n u16 |
+  n x u16 (12-bit ADC, taxel order of that layout's taxel_map.json) | crc u16 (same CRC, same span)
+  layout 1 = v0.2 flat cartridge (n = 128), layout 2 = ENPIRE-T (n = 302) -> 620 bytes / frame.
+  The parser below accepts v1 and v2 frames on the same port.
 """
 import json
 import os
@@ -24,6 +30,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)                       # cartridge/
 TAXEL_MAP = os.path.join(ROOT, "out", "taxel_map.json")
 PINMAP = os.path.join(ROOT, "out", "fpc_pcb", "pinmap.json")
+LAYOUTS = {
+    1: dict(name="v0.2 flat cartridge", n=128, taxel_map=TAXEL_MAP, pinmap=PINMAP),
+    2: dict(name="ENPIRE-T", n=302, taxel_map=os.path.join(ROOT, "out", "enpire", "taxel_map.json"),
+            pinmap=os.path.join(ROOT, "out", "enpire", "fpc_pcb", "pinmap.json")),
+}
 NR, NC = 16, 8
 FRAME_LEN = 2 + 1 + 1 + 2 + 4 + 2 * NR * NC + 2
 
@@ -63,7 +74,8 @@ def crc16_ccitt(data, crc=0xFFFF):
 
 
 class FrameParser:
-    """Feed raw bytes; yields dicts with seq, t_us, frame (16x8 uint16)."""
+    """Feed raw bytes; yields dicts with ver, seq, t_us and either frame (v1: 16x8 uint16) or
+    layout + values (v2: n uint16 in taxel-map order)."""
 
     def __init__(self):
         self.buf = bytearray()
@@ -75,23 +87,85 @@ class FrameParser:
             if i < 0:
                 self.buf = self.buf[-1:]
                 return
-            if len(self.buf) - i < FRAME_LEN:
+            if len(self.buf) - i < 3:
                 self.buf = self.buf[i:]
                 return
-            pkt = bytes(self.buf[i:i + FRAME_LEN])
+            ver = self.buf[i + 2]
+            if ver == 1:
+                n_bytes = FRAME_LEN
+            elif ver == 2:
+                if len(self.buf) - i < 16:
+                    self.buf = self.buf[i:]
+                    return
+                n = struct.unpack("<H", bytes(self.buf[i + 12:i + 14]))[0]
+                if n == 0 or n > 4096:
+                    self.buf = self.buf[i + 2:]
+                    continue
+                n_bytes = 16 + 2 * n
+            else:
+                self.buf = self.buf[i + 2:]
+                continue
+            if len(self.buf) - i < n_bytes:
+                self.buf = self.buf[i:]
+                return
+            pkt = bytes(self.buf[i:i + n_bytes])
             body, crc = pkt[2:-2], struct.unpack("<H", pkt[-2:])[0]
             if crc16_ccitt(body) != crc:
                 self.buf = self.buf[i + 2:]
                 continue
+            self.buf = self.buf[i + n_bytes:]
             ver, flags, seq, t_us = struct.unpack("<BBHI", body[:8])
-            vals = np.frombuffer(body[8:], dtype="<u2").reshape(NR, NC)
-            self.buf = self.buf[i + FRAME_LEN:]
-            yield dict(ver=ver, flags=flags, seq=seq, t_us=t_us, frame=vals.copy())
+            if ver == 1:
+                vals = np.frombuffer(body[8:], dtype="<u2").reshape(NR, NC)
+                yield dict(ver=ver, flags=flags, seq=seq, t_us=t_us, frame=vals.copy())
+            else:
+                layout, _, n = struct.unpack("<BBH", body[8:12])
+                vals = np.frombuffer(body[12:], dtype="<u2")
+                yield dict(ver=ver, flags=flags, seq=seq, t_us=t_us, layout=layout, values=vals.copy())
 
 
 def encode_frame(seq, t_us, frame, ver=1, flags=0):
     body = struct.pack("<BBHI", ver, flags, seq, t_us) + np.asarray(frame, "<u2").tobytes()
     return b"\xAA\x55" + body + struct.pack("<H", crc16_ccitt(body))
+
+
+def encode_frame_v2(seq, t_us, values, layout=2, flags=0):
+    v = np.asarray(values, "<u2").ravel()
+    body = struct.pack("<BBHIBBH", 2, flags, seq, t_us, layout, 0, len(v)) + v.tobytes()
+    return b"\xAA\x55" + body + struct.pack("<H", crc16_ccitt(body))
+
+
+def layout_points(layout, q_left, q_right, surface=True, tmap=None):
+    """(2, n, 3) taxel points (m) in the gripper body frame for a v2 layout. ENPIRE-T maps carry
+    the sensing-layer point and the contact-surface point; `surface` picks the latter."""
+    tmap = tmap or json.load(open(LAYOUTS[layout]["taxel_map"]))
+    out = []
+    for side, q in (("left", q_left), ("right", q_right)):
+        f = tmap["fingers"][side]
+        key = "taxels_q0" if "taxels_q0" in f else ("surface_q0" if surface else "sensor_q0")
+        out.append(np.array(f[key]) + q * np.array(f["slide_dir"]))
+    return np.stack(out)
+
+
+def layout_lift(values, layout, q_left, q_right, threshold=0.0, tmap=None):
+    """values: dict side -> n readings (normalised). Returns (N, 4) [x, y, z, value] contact points."""
+    pts = layout_points(layout, q_left, q_right, True, tmap)
+    rows = []
+    for i, side in enumerate(("left", "right")):
+        v = np.asarray(values[side], float).reshape(-1)
+        keep = v > threshold
+        rows.append(np.column_stack([pts[i][keep], v[keep]]))
+    return np.vstack(rows)
+
+
+def scan_table(layout=2):
+    """Firmware table for a v2 layout: (row_line, col_line) per taxel, in taxel-map order. Row and
+    column lines are indices into the pin map's scan lists (i.e. the mux channel order)."""
+    tm = json.load(open(LAYOUTS[layout]["taxel_map"]))
+    pm = json.load(open(LAYOUTS[layout]["pinmap"]))
+    rl = {n: k for k, n in enumerate(pm["scan"]["row_lines"])}
+    cl = {n: k for k, n in enumerate(pm["scan"]["col_lines"])}
+    return [(rl[t["row_net"]], cl[t["col_net"]]) for t in tm["taxels"]]
 
 
 def rows_readout_order(path=PINMAP):
@@ -144,3 +218,16 @@ if __name__ == "__main__":
     print("parser ok; frame bytes", FRAME_LEN, "| right r0c0", np.round(pts[1][0] * 1000, 2),
           "mm | left r0c0", np.round(pts[0][0] * 1000, 2), "mm")
     print("lifted points:", lift({"left": np.ones((16, 8)), "right": np.zeros((16, 8))}, 0.01, 0.01, 0.5).shape)
+    if os.path.isfile(LAYOUTS[2]["taxel_map"]):
+        n = LAYOUTS[2]["n"]
+        v = np.arange(n) % 4096
+        f2 = encode_frame_v2(9, 1000, v)
+        mixed = encode_frame(10, 2000, fr)[:5] + f2 + encode_frame(11, 3000, fr) + f2[:40]      # junk, v2, v1, partial v2
+        got = list(FrameParser().feed(mixed))
+        assert [g["ver"] for g in got] == [2, 1] and np.array_equal(got[0]["values"], v) and len(f2) == 16 + 2 * n
+        tab = scan_table(2)
+        assert len(tab) == n and len(set(tab)) == n, "two taxels share a row/column crossing"
+        P = layout_points(2, 0.0, 0.0)
+        assert P.shape == (2, n, 3) and np.allclose(P[0] * [-1, -1, 1], P[1])
+        print(f"v2 ok: ENPIRE-T {n} taxels, {len(f2)} bytes/frame, {max(r for r, _ in tab) + 1} row x "
+              f"{max(c for _, c in tab) + 1} column lines; nail tip taxel at", np.round(P[1][-1] * 1000, 2), "mm")

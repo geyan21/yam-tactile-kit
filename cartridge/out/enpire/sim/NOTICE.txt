@@ -1,0 +1,7 @@
+gripper.stl and carriage_*.stl are copied/derived from i2rt-robotics/i2rt
+(i2rt/robot_models/gripper/linear_4310/assets, commit 120c3c8), MIT License, Copyright (c) I2RT Robotics.
+See I2RT_LICENSE.
+
+core_*.stl, skin_*.stl and film_*.stl are a modified version of the ENPIRE gripper finger.
+Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified: rigid cradle with a sensor seat, filled nail slot, nail sensor pocket, plug-in dock flange, flex routing.
+Licence: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/

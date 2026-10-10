@@ -8,6 +8,12 @@ Plug-in tactile fingers for the i2rt YAM Linear 4310 gripper. A socket stays bol
 
 The interface comes from the i2rt meshes (`i2rt/robot_models/gripper/linear_4310`, commit 120c3c8). Stock tips mount to the carriage face at z = -70.38 mm on two M3 points 21.0 mm apart, using knurled M3 heat-set inserts in the tip, screwed from above through the carriage. The socket copies that (same inserts, same screws). The tool point (`grasp_site`) stays at z = -144.65 mm, so existing configs and IK targets keep working.
 
+## ENPIRE-T: the ENPIRE finger, sensing
+
+For ENPIRE's shape, with its thin grooved nail for precise picks and its serrated cradle for handles, use ENPIRE-T. It is the ENPIRE finger rebuilt as a cartridge for the same socket, with 302 taxels: 246 in the cradle under a molded skin that keeps ENPIRE's teeth, and 56 flush in the nail under a 0.2 mm film. The tip and both contact faces keep the stock shape; only the small notch between them is filled. The finger is 8.5 mm longer, because of the shared dock. Like stock ENPIRE, the nail tips meet first, so a rigid flat part held at the very tips misses the nail taxels. Design, build steps, checks and limits are in [docs/ENPIRE_T.md](docs/ENPIRE_T.md).
+
+![stock ENPIRE and ENPIRE-T](out/enpire/renders/compare.png)
+
 ## Webpage
 
 `web/index.html` is a one-page overview: a pressable taxel pad that shows the data layout, a 3D viewer (WebGL, no dependencies), the sensor and electronics, the fit checks, the build steps and every file. It works offline. Serve this folder and open the page:
@@ -21,7 +27,7 @@ GitHub doesn't render HTML from a branch, so use the local server (or download t
 
 ## Why a flat bay
 
-The ENPIRE-style tip curves in two directions at once. Polyimide does not stretch, so no flat FPC can be folded onto it, which is why unfolding the gripper STL into a custom FPC kept failing. Here the sensing surface is one flat face, the pad is a plain rectangle, and every trace leaves through the base. The irregular shape lives in the printed core and the skin instead. See [docs/DESIGN_NOTES.md](docs/DESIGN_NOTES.md) for the reasoning and the sensor comparison.
+Unfolding the ENPIRE STL into a custom FPC kept failing, though its contact faces don't curve in two directions: the nail face is a plane and the cradle is a straight extrusion. What a flat circuit can't follow is the detail on them: 1 mm serration teeth, far too tight a bend for polyimide; a lattice that flexes in use; and a narrow nail split by a groove. v0.2 avoids all of that with one flat sensing face. The pad is a plain rectangle, every trace leaves through the base, and the irregular shape lives in the printed core and the skin. ENPIRE-T, above, deals with each problem in place instead. See [docs/DESIGN_NOTES.md](docs/DESIGN_NOTES.md) for the reasoning and the sensor comparison.
 
 The tip ends up about as thin as stock but wider (numbers from `cad/measure.py`):
 
@@ -41,13 +47,15 @@ A 6-column pad would narrow it to about 22 mm but needs a parameter pass on the 
 | `cad/check_fit.py`, `cad/measure.py` | interference and clearance sweep against the YAM meshes; every number quoted here |
 | `cad/make_sim_model.py` | MuJoCo gripper with the cartridges and 256 touch sensors, plus a self-test |
 | `cad/render_views.py`, `cad/render_vtk.py` | section views (`out/check/`) and renders (`out/renders/`) |
+| `cad/enpire_*.py` | ENPIRE-T: source fetch, CAD, laminate and DRC, checks, sim, renders (see [docs/ENPIRE_T.md](docs/ENPIRE_T.md#files)) |
 | `cad/export_web.py` | `web/data.js` and `web/index.html` from the outputs above |
-| `host/tactile_tools.py` | frame-stream parser, taxel → 3D points, FlexiTac bring-up adapter, auto-zero |
+| `host/tactile_tools.py` | frame-stream parser (protocol v1 and v2), taxel → 3D points, FlexiTac bring-up adapter, auto-zero |
 | `tools/verify_web.py` | checks the page in headless Chromium: light at desktop and phone width, dark at desktop |
 | `tools/build_standalone.py` | packages the page for hosting anywhere (`make standalone`) |
 | `tools/check_outputs.py` | stdlib-only consistency check of the committed outputs |
-| `out/` | generated design files: STEP, STL, DXF, JSON, sim model, renders, checks |
+| `out/` | generated design files: STEP, STL, DXF, JSON, sim model, renders, checks; ENPIRE-T's are in `out/enpire/` |
 | `docs/DESIGN_NOTES.md` | design reasoning, sensor choice, fleet considerations |
+| `docs/ENPIRE_T.md` | ENPIRE-T design, parts, assembly, electronics and checks |
 
 The parts are exported in the i2rt gripper body frame (right finger, gripper closed): x lateral, y the closing axis, z toward the wrist, millimetres.
 
@@ -57,9 +65,11 @@ The parts are exported in the i2rt gripper body frame (right finger, gripper clo
 cd cartridge
 pip install -r requirements.txt
 make i2rt     # clones i2rt at the commit the meshes were measured at (or set I2RT_ROOT)
-make all      # CAD, FPC, checks, sim, renders, webpage  (about a minute)
-make verify   # page check in headless Chromium + host-tool self-test
+make all      # CAD, FPC, checks, sim, renders, ENPIRE-T, webpage  (a few minutes)
+make verify   # output consistency, host-tool self-test, page check in headless Chromium
 ```
+
+`make enpire` rebuilds only ENPIRE-T. It downloads the original ENPIRE STLs first (`make enpire-src`; they are checked by SHA-256 and not redistributed).
 
 ## Verify on a real gripper before printing a batch
 
@@ -115,7 +125,7 @@ For the finger PCB, an MCU with crystal-less USB FS and at least 8 ADC channels 
 
 The tails are standard 0.5 mm FFC widths (8.50 / 4.50 mm). Pin maps and contact sides are in `out/fpc_pcb/pinmap.json`: the rows-tail copper faces the PCB; the columns tail faces away, or use dual-contact ZIFs. The proximal half of the rows tail arrives reversed (pins 9–16 carry ROW15…ROW08), so `rows_readout_order` is `[0..7, 15..8]`.
 
-Stream protocol v1, little endian, 268 bytes per frame: `AA 55 | ver u8 | flags u8 | seq u16 | t_us u32 | 128 × u16 (row-major, row 0 = distal) | crc u16`. The CRC is CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF; check("123456789") = 0x29B1). `host/tactile_tools.py` has the parser and a reference encoder for the firmware.
+Stream protocol v1, little endian, 268 bytes per frame: `AA 55 | ver u8 | flags u8 | seq u16 | t_us u32 | 128 × u16 (row-major, row 0 = distal) | crc u16`. The CRC is CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF; check("123456789") = 0x29B1). `host/tactile_tools.py` has the parser and a reference encoder for the firmware. ENPIRE-T uses protocol v2, which adds a layout byte and a taxel count (see [docs/ENPIRE_T.md](docs/ENPIRE_T.md#electronics)); the parser reads both versions from the same port.
 
 Before the finger PCB exists, you can bring a pad up on a FlexiTac 32 × 16 readout board: wire tail pin i to readout line i (rows on 16 lines, columns on 8, through FFC breakouts) and call `tactile_tools.flexitac_subblock()`, which applies the row order above.
 
@@ -140,7 +150,7 @@ Forces here are per jaw, the convention in i2rt's force map (τ = 0.0146 m × F,
 
 ## Licences
 
-The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware files are CC BY-NC 4.0; the FPC artwork here is new, but check that licence before any commercial or TRI-side use. Meshes derived from i2rt are MIT-licensed (`out/sim/NOTICE.txt`). The page's typeface, Archivo, is SIL OFL 1.1 (`web/fonts/OFL.txt`).
+The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware files are CC BY-NC 4.0; the FPC artwork here is new, but check that licence before any commercial or TRI-side use. Meshes derived from i2rt are MIT-licensed (`out/sim/NOTICE.txt`). ENPIRE-T's core, skin and film are a modified version of the ENPIRE gripper finger by Wenli Xiao (MakerWorld model 2984746), licensed CC BY 4.0 (`out/enpire/NOTICE.txt`). The page's typeface, Archivo, is SIL OFL 1.1 (`web/fonts/OFL.txt`).
 
 ## Next steps
 
@@ -148,3 +158,4 @@ The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware
 2. Firmware: scan plus USB-CDC per the protocol above.
 3. Gerbers from the FPC DXFs.
 4. A two-cartridge pilot (100+ demos) to check drift, skin wear and swap consistency.
+5. ENPIRE-T: print a core, cast a skin and dry-fit both tails with paper cut-outs before ordering flex (the list is in [docs/ENPIRE_T.md](docs/ENPIRE_T.md#check-before-a-batch)).

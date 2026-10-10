@@ -1,0 +1,169 @@
+{
+ "params": {
+  "DZ": -8.5,
+  "TPU_X": [
+   -15.0,
+   0.0
+  ],
+  "X_PROFILE": -7.5,
+  "OPEN_R": 0.8,
+  "SKIN_T": 1.5,
+  "FLEX_T": 0.45,
+  "FLEX_CLR": 0.05,
+  "FILM_T": 0.2,
+  "SKIN_END_T": 0.3,
+  "SKIN_END_Y": -95.0,
+  "RAMP_Y": [
+   -89.5,
+   -95.5
+  ],
+  "Z_SLOT": 6.0,
+  "TOP_JOIN_Y": -19.5,
+  "SMOOTH_SIGMA": 0.3,
+  "SEAT_R_MIN": 3.0,
+  "CLOSE_R": 1.5,
+  "STRIP_Y": [
+   -19.8,
+   -89.0
+  ],
+  "TONGUE_INSET": 0.5,
+  "SKIN_SIDE_CLR": 0.05,
+  "RELIEF_DEPTH": 2.6,
+  "RAIL_CUT": 0.4,
+  "HOOK": {
+   "depth": 0.3,
+   "d0": 1.0,
+   "d1": 1.9,
+   "clr": 0.05
+  },
+  "NAIL_O": [
+   -7.9068465,
+   -105.2297016,
+   -3.7000801
+  ],
+  "NAIL_N": [
+   0.0,
+   0.0501249,
+   -0.998743
+  ],
+  "SLOT_FILL": {
+   "y": [
+    -108.85,
+    -97.25
+   ],
+   "z": [
+    -2.33,
+    4.62
+   ]
+  },
+  "TIP_BARE": 3.0,
+  "PAD_EDGE": 1.0,
+  "GROOVE_CLR": 1.0,
+  "POCKET_CLR": 0.15,
+  "FLANGE_RECTS": [
+   [
+    -22.5,
+    22.5,
+    3.0,
+    25.5
+   ],
+   [
+    -15.3,
+    14.5,
+    0.72,
+    31.23
+   ]
+  ],
+  "FLANGE_R": 1.5,
+  "PCB": {
+   "rects": [
+    [
+     -14.5,
+     14.5,
+     3.4,
+     20.3
+    ],
+    [
+     -13.0,
+     13.0,
+     20.3,
+     25.1
+    ]
+   ],
+   "recess": 0.7,
+   "t": 0.8
+  },
+  "CAVITY": {
+   "inset": 0.6,
+   "depth": 3.4
+  },
+  "TAIL_SLOT_W": 0.9,
+  "THUMB_RELIEF": {
+   "d": 10.0,
+   "h": 5.0
+  },
+  "PITCH": 2.0,
+  "ELECTRODE_W": 1.4,
+  "STRIP_COLS": 6
+ },
+ "derived": {
+  "Zs": -80.88,
+  "Zf": -89.88,
+  "DZ": -8.5,
+  "SEAT_SET": 2.0,
+  "POCKET_D": 0.7,
+  "C_length": 118.843,
+  "s_strip": [
+   9.16,
+   92.019
+  ],
+  "strip_length": 82.859,
+  "s_ramp": [
+   92.519,
+   99.339
+  ],
+  "s_nail0": 99.339,
+  "v_nail0": -9.777,
+  "v_pad_max": 9.236,
+  "nail_plane_g": {
+   "origin": [
+    -0.0532,
+    -0.8301,
+    -181.3397
+   ],
+   "normal": [
+    0.0,
+    -0.998743,
+    0.050125
+   ],
+   "u": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "v": [
+    0.0,
+    -0.050125,
+    -0.998743
+   ]
+  },
+  "tip_g": [
+   -0.053,
+   -1.453,
+   -193.757
+  ],
+  "tip_below_carriage_mm": 123.38,
+  "strip_u": [
+   -7.46,
+   6.54
+  ]
+ },
+ "source": {
+  "commit": "72cc833bfe1521132318db6a2724e7e9bbb8cd6e",
+  "files": {
+   "hard": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+   "soft": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc"
+  },
+  "attribution": "Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified: rigid cradle with a sensor seat, filled nail slot, nail sensor pocket, plug-in dock flange, flex routing."
+ }
+}

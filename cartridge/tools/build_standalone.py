@@ -3,7 +3,7 @@ Package web/ as a standalone page that can be hosted anywhere (it is what the pu
 page is built from):
 
   <out>/index.html   page content without the html/head/body wrapper (hosts add their own)
-  <out>/assets/      style.css, viewer.js, app.js, data.js, fonts/
+  <out>/assets/      style.css, viewer.js, app.js, data.js, data_enpire.js, fonts/
   <out>/img/         the renders and section images the page shows
 
 Download links point at the files on GitHub (branch from export_web.py), because sandboxed hosts
@@ -42,6 +42,8 @@ def main(out):
     for name in ("style.css", "data.js", "viewer.js", "app.js"):
         html = html.replace(f'"{name}"', f'"assets/{name}"')
         shutil.copy(os.path.join(WEB, name), os.path.join(out, "assets", name))
+    # loaded by app.js on demand, from next to data.js
+    shutil.copy(os.path.join(WEB, "data_enpire.js"), os.path.join(out, "assets", "data_enpire.js"))
     html = html.replace('href="fonts/', 'href="assets/fonts/')
     for f in os.listdir(os.path.join(WEB, "fonts")):
         shutil.copy(os.path.join(WEB, "fonts", f), os.path.join(out, "assets", "fonts", f))
@@ -53,7 +55,7 @@ def main(out):
     def img(m):
         images.add(m.group(2))
         return f'{m.group(1)}="img/{m.group(2)}"'
-    html = re.sub(r'(src|data-fallback)="\.\./out/([^"]+)"', img, html)
+    html = re.sub(r'(src|data-fallback(?:-[a-z]+)?)="\.\./out/([^"]+)"', img, html)
     if "../out/" in html:
         raise SystemExit("unconverted ../out/ reference left in the page")
     for rel in sorted(images):

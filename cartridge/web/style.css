@@ -129,6 +129,7 @@ p { margin: 0 0 14px; max-width: 68ch; }
 .lede { font-size: clamp(18px, 1.6vw, 20px); color: var(--ink-2); margin-top: 22px; max-width: 46ch; }
 .status { display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: var(--ink-2); margin-top: 30px; max-width: 52ch; }
 .dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--kapton); transform: translateY(-1px); }
+.also { font-size: 15px; color: var(--ink-2); margin: 8px 0 0 19px; max-width: 52ch; }
 .pad-demo { margin: 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
 #pad { width: 100%; aspect-ratio: 36 / 52; touch-action: none; cursor: crosshair; border-radius: 8px; background: var(--well); }
 .pad-demo figcaption p { font-size: 15px; color: var(--ink-2); }
@@ -175,6 +176,14 @@ tbody th { font-weight: 600; }
 
 /* 3D viewer */
 .viewer { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px; }
+.viewer-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; padding: 0 0 12px; }
+.models { display: inline-flex; gap: 4px; padding: 4px; margin: 0; border: 1px solid var(--rule); border-radius: 9px; background: var(--ground); }
+.models label { position: relative; display: flex; align-items: center; min-height: 36px; padding: 4px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; color: var(--ink-2); cursor: pointer; white-space: nowrap; }
+.models label:hover { color: var(--ink); }
+.models input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.models label:has(input:checked) { background: var(--button-bg); color: var(--button-fg); }
+.models label:has(input:focus-visible) { outline: 2px solid var(--blue); outline-offset: 2px; }
+.view-status { margin: 0; font-size: 15px; color: var(--ink-2); }
 #view { display: block; width: 100%; height: clamp(360px, 62vh, 660px); border-radius: 8px; background: var(--view-bg); touch-action: none; cursor: grab; }
 #view.dragging { cursor: grabbing; }
 .viewer noscript img { border-radius: 8px; }
@@ -194,6 +203,8 @@ tbody th { font-weight: 600; }
 
 /* sensor */
 .sensor-cols { align-items: start; }
+.enpire-detail { align-items: start; margin-top: 44px; }
+.enpire-detail .checks { grid-template-columns: minmax(0, 1fr); margin-top: 28px; }
 .pogo { width: 100%; max-width: 330px; height: auto; }
 .pogo .pins rect { fill: var(--brass); }
 .pogo .pins rect.gnd { fill: var(--steel); }
@@ -212,6 +223,7 @@ tbody th { font-weight: 600; }
 .open { margin-top: 36px; padding: 20px 24px; border-left: 4px solid var(--kapton); background: var(--panel); border-radius: 0 10px 10px 0; }
 .open h3 { margin-top: 0; }
 .open p { margin: 0; color: var(--ink-2); }
+.open p + p { margin-top: 12px; }
 .sections { display: grid; grid-template-columns: 0.75fr 1fr 1fr; gap: 24px; margin-top: 44px; align-items: start; }
 
 /* build + files */
@@ -223,6 +235,10 @@ pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
 .foot { border-top: 1px solid var(--rule); padding-block: 36px 56px; font-size: 14px; color: var(--ink-2); }
 .foot p { max-width: 90ch; }
 
+@media (max-width: 1100px) {
+  .top-row { gap: 20px; }
+  .top nav { gap: 15px; font-size: 14px; }
+}
 @media (max-width: 920px) {
   .top nav { display: none; }
   .top-row .button { margin-left: auto; }
