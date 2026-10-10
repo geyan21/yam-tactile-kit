@@ -19,6 +19,8 @@
     fixed:["Fixed carrier / shoe","#31847c"],floating:["Floating carrier / spacer","#cb8542"],
     cell:["Purchased-cell reference","#8b7eb0"],hardware:["Reserved fastener space","#555f66"],
     fixture:["Test fixture","#b79864"],tool:["Selected CAD part","#d4aa72"],
+    b1tpu:["B1 magnetic TPU insert","#a8bd80"],spine:["B1 fixed sensor spine","#24897f"],
+    magnet:["B1 embedded magnets","#cc8047"],plug:["B1 flush retaining plugs","#e1bf67"],pcb:["B1 fixed sensor heads","#716b9b"],
   };
   function choose(){
     const model=data.models.find(m=>m.id===select.value);
@@ -44,7 +46,7 @@
     });
   }
   const partsBody=document.getElementById("parts-table");
-  for(const [design,prefix] of [[data.r1,""],[data.l1,"l1/"]]){
+  for(const [design,prefix] of [[data.r1,""],[data.l1,"l1/"],[data.b1,"b1/"]]){
     for(const part of design.parts){
       const row=element("tr",null),name=element("td",part.id.replaceAll("_"," "));
       const purpose=element("td",part.purpose);
@@ -53,8 +55,8 @@
       row.append(name,purpose,files);partsBody.append(row);
     }
   }
-  const partCount=data.r1.parts.length+data.l1.parts.length;
-  document.getElementById("part-count").textContent=`${partCount} digital solids, including one purchased-part reference`;
+  const partCount=data.r1.parts.length+data.l1.parts.length+data.b1.parts.length;
+  document.getElementById("part-count").textContent=`${partCount} digital solids, including three purchased/component references`;
   document.getElementById("digital-count").textContent=partCount;
   for(const candidate of data.study.candidates){
     const row=element("tr",null),name=element("td",candidate.name),coverage=element("td",candidate.coverage),next=element("td",candidate.next),state=element("td",null);

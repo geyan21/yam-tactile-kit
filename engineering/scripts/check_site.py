@@ -80,6 +80,13 @@ def main():
                 "source/engineering/software/contact_bench.py","source/engineering/software/contact_report.py",
                 "source/engineering/software/contact_core.py","source/engineering/software/contact_monitor.py",
                 "source/engineering/templates/contact_setup.json","source/engineering/templates/contact_cases.json",
+                "source/engineering/firmware/b1/main.py","source/engineering/firmware/b1/mlx90393.py",
+                "source/engineering/firmware/b1/config.json","source/engineering/software/b1_monitor.py",
+                "source/engineering/electronics/b1/b1_head.kicad_pcb",
+                "source/engineering/release/b1/cad/b1_magnetic_tpu_insert.step",
+                "source/engineering/release/b1/pcb/b1_head_fabrication.zip",
+                "source/engineering/release/r1_l1_snapshot_manifest.json",
+                "website/build-b1.html","website/b1-electronics.html","website/b1-testing.html",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

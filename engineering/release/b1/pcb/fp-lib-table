@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "B1") (type "KiCad") (uri "${KIPRJMOD}/B1.pretty") (options "") (descr "Embedded B1 head footprints")))

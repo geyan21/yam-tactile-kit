@@ -1,19 +1,22 @@
 # ENPIRE / YAM tactile engineering study
 
-[Visual website](https://geyan21.github.io/yam-tactile-kit/) · [Student starting packet](engineering/docs/START.md) · [Build R1](engineering/docs/BUILD_R1.md) · [Build L1](engineering/docs/BUILD_L1.md) · [Sensor comparison](engineering/docs/COMPARISON.md)
+[Visual website](https://geyan21.github.io/yam-tactile-kit/) · [Build B1](engineering/docs/BUILD_B1.md) · [Student starting packet](engineering/docs/START.md) · [Build R1](engineering/docs/BUILD_R1.md) · [Build L1](engineering/docs/BUILD_L1.md)
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.
 
-Two prototype packages are supplied:
+Three separate prototype packages are supplied:
 
 | Prototype | Design | First measurement |
 |---|---|---|
 | R1 local tactile skin | Two shaped nail cells and four cast saddles matched to the actual TPU profile | Thin-tip contact coverage, force drift and wear |
 | L1 root normal force | A purchased TAL220B cell between the original finger and two aluminum carriers | Held-out off-center loads, followed by an integrated-finger test using the same calibration slope |
+| B1 magnetic bending insert | Four magnets in the TPU, five fixed magnetic heads, new side spine and custom PCB; original hard frame and thin nail retained | Original-vs-B1 bending, magnet retention, interference, then physical force calibration |
 
-The package contains 23 checked STEP/STL solids, including one purchased-cell reference; full-size R1 electrode patterns; carrier/fixture drawings; separate BOMs and wiring; Pico firmware; raw recorders and calibration tools; material recipes; and staged tests through 20 N. The L1 carrier adds 20 mm of reach and a larger root envelope; printed fit checks precede machining.
+The package contains 28 checked STEP/STL solids, including three purchased/component references; R1 electrode patterns; carrier/fixture drawings; B1 editable PCB and checked fabrication files; separate BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. B1 adds no reach but adds side thickness. R1/L1 CAD and geometry sources remain hash-verified and unchanged.
 
 **Status: digital design and software checks completed; physical prototype assembly and validation pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
+
+For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md), [PCB/wiring/code](engineering/docs/B1_ELECTRONICS.md), and [bending and force tests](engineering/docs/B1_TESTING.md). B1 raw magnetic data are not calibrated force; optional R1 nail cells supply hard-tip contact coverage.
 
 ## Start here
 

@@ -1,0 +1,20 @@
+item,quantity_per_finger,specification,source_or_file,notes
+Original hard frame,1,Existing ENPIRE/YAM hard frame,Original user finger,Retain geometry; verify stiffness under actual tasks
+B1 TPU insert,1,Same TPU grade and print process as original control,engineering/release/b1/cad/b1_magnetic_tpu_insert.stl,Internal bosses and pockets change local stiffness
+Flush magnet plug,4,TPU 95A,engineering/release/b1/cad/b1_flush_magnet_plug.stl,Gauge fit and retention before loading
+Fixed sensor spine,1,PETG; inspect thin arms and mounting posts,engineering/release/b1/cad/b1_fixed_sensor_spine.stl,Only fixed components and wiring attach here
+Magnet,4,supermagnete S-03-01-N; N48; axial 3 mm x 1 mm,https://www.supermagnete.de/eng/data_sheet_S-03-01-N.pdf,All north poles toward sensor side; supplier tolerance +/-0.1 mm
+Sensor PCB,5,B1 head; 8 x 6.4 x 0.8 mm; 2 layers; 1 oz copper; ENIG,engineering/release/b1/pcb/b1_head_fabrication.zip,Panelize with breakaway rails outside board outline
+Magnetometer,5,MLX90393SLW-ABA-011 in QFN16 LW package,https://www.melexis.com/en/product/MLX90393/triaxis-micropower-magnetometer,Do not substitute LQ or another factory address variant without firmware review
+Decoupling capacitor,10,100 nF 16 V X7R 0402,Authorized electronics distributor,Two per PCB
+Pull-up resistor,10,10 kohm 1 percent 0402,Authorized electronics distributor,Two per PCB; measure I2C rise time
+I2C multiplexer,1,TCA9548A breakout operated at 3.3 V address 0x70,https://www.adafruit.com/product/2717,Keep at wrist; channels 0 through 4; ensure RESET is pulled high
+Microcontroller,1,Raspberry Pi Pico with MicroPython,https://www.raspberrypi.com/products/raspberry-pi-pico/,One independent reader per finger
+Fixed wiring,20 conductors,34 AWG fine stranded insulated copper; initial branch <=150 mm,Electronics supplier,Record diameter and lengths; anchor to spine with strain relief
+PCB adhesive,As needed,0.10 mm nonconductive transfer tape plus small room-temperature epoxy corner fillets,Common supplier,Bonds only on rigid board and spine; test actual adhesive on PETG
+Mount fasteners,2,Nonmagnetic M3 with actual head <=6 mm diameter and <=2.4 mm height,Hardware supplier,Measure original stack plus added carrier stack; preserve original clamping and bore fit
+Nail cells optional,2,Reuse R1 N0 cells with continuity resistor at each cell,engineering/docs/BUILD_R1.md,Required for sensing contact on the rigid nail
+Nail ADC optional,1,ADS1115 breakout at 3.3 V address 0x48,engineering/docs/B1_ELECTRONICS.md,One ADC for two cells and two reference dividers
+Nail resistors optional,8,Two chosen pull-downs plus two 100k continuity and four 10k 1 percent divider resistors,engineering/docs/B1_ELECTRONICS.md,Record actual pull-down values in config
+Bench reference,1 shared,Calibrated compression force sensor covering at least 20 N with suitable fixture,Lab equipment,Record uncertainty; motor current alone is insufficient ground truth
+Displacement gauge,1 shared,Dial gauge or camera with scale for contact and nail displacement,Lab equipment,Resolution suitable for intended precision task

@@ -6,6 +6,8 @@ R1 prioritizes detecting contact near the thin nail while preserving the existin
 
 L1 is the complementary force experiment: a purchased strain-gauge cell in the complete finger load path. Begin its independent cell/plate tests alongside the R1 nail test. Machine the L1 gripper carrier only after the printed housing fit and cell moment tests pass. Use [Build L1](BUILD_L1.md), [L1 wiring](L1_ELECTRONICS.md) and [L1 test instructions](L1_TESTING.md).
 
+B1 is the separate bending-aware design. It retains the thin hard nail and compliant TPU outside profile, adds four internal magnets, and uses fixed magnetic sensor heads. Start with [B1 assembly](BUILD_B1.md), [PCB and readout](B1_ELECTRONICS.md), and [an original-vs-B1 compliance comparison](B1_TESTING.md). Keep R1/L1 and an unmodified insert as controls. B1 does not include a force calibration or a B1 contact classifier without physical data.
+
 ## Choose the first bench deliverables
 
 | Build | First deliverable | What it resolves |
@@ -13,6 +15,7 @@ L1 is the complementary force experiment: a purchased strain-gauge cell in the c
 | R1 thin nail laminate | Two N0 nail cells with raw low-force and coverage records | Can a thin, replaceable surface detect the contacts that matter? |
 | L1 independent load cell | Cell/plate calibration with all displaced loads held out | Can this inexpensive force element tolerate the actual finger lever envelope? |
 | L1 integrated finger | Aluminum carriers and a separate finger test using the same cell sensitivity | Does installation preserve useful force feedback at nail and TPU contacts? |
+| B1 compliant insert | Modified TPU, retained magnets and fixed sensor heads with raw records | Does sensing preserve useful bending, return position and thin-tip access? |
 
 ## What to obtain
 

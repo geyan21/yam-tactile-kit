@@ -9,7 +9,7 @@ document.getElementById("page").addEventListener("load",async()=>{
     await pause(800);
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
-    check("all R1 and L1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===46);
+    check("all R1, L1 and B1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===56);
     check("all five sensor alternatives listed",d.querySelectorAll("#candidate-table tr").length===5);
     const before=w.EngineeringUI.viewer.yaw;
     d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
@@ -37,6 +37,9 @@ document.getElementById("page").addEventListener("load",async()=>{
     observations.l1_bench={canvasModel:d.getElementById("cad").dataset.model,faces:Number(d.getElementById("cad").dataset.faces),
       expectedFaces:w.EngineeringUI.viewer.model.components.reduce((total,part)=>total+part.faces.length,0)};
     check("L1 physical test fixture renders",benchRendered);
+    check("B1 actual compliant insert assembly renders",inspect("b1_assembly"));
+    check("B1 fixed and moving components are separate layers",d.querySelector('[data-layer="spine"]')&&d.querySelector('[data-layer="b1tpu"]')&&d.querySelector('[data-layer="magnet"]')&&d.querySelector('[data-layer="pcb"]'));
+    check("B1 fabrication and build guide reachable",d.querySelector('a[href="downloads/b1_head_fabrication.zip"]')&&d.querySelector('a[href="build-b1.html"]'));
     const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
     force.value="10";force.dispatchEvent(new w.Event("input"));
     check("load explorer responds to applied force",d.getElementById("load-moment-value").textContent!==moment&&d.getElementById("load-force-value").textContent==="10.0 N");

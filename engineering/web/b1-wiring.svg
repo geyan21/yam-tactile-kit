@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+<title id="title">B1 fixed magnetic heads and optional nail readout</title>
+<desc id="desc">Pico GPIO4 and GPIO5 feed a TCA9548A at 0x70. Five isolated branches each have one 3.3 volt MLX90393 head at 0x0C. An optional ADS1115 at 0x48 reads the two fixed nail cells, supply and a check divider. Magnets move in the TPU without wires.</desc>
+<rect width="1180" height="650" fill="#fff"/>
+<g font-family="sans-serif" fill="#203f46">
+<text x="35" y="40" font-size="24">B1 · fixed electronics, moving magnets</text>
+<text x="35" y="68" font-size="15">One reader per finger. All I/O and pull-ups at 3.3 V. Initial I²C clock: 100 kHz.</text>
+<g fill="#eef3ed" stroke="#577674" stroke-width="2">
+<rect x="40" y="140" width="200" height="160" rx="12"/><rect x="310" y="130" width="220" height="290" rx="12"/>
+<rect x="650" y="120" width="270" height="55" rx="8"/><rect x="650" y="190" width="270" height="55" rx="8"/>
+<rect x="650" y="260" width="270" height="55" rx="8"/><rect x="650" y="330" width="270" height="55" rx="8"/>
+<rect x="650" y="400" width="270" height="55" rx="8"/>
+<rect x="310" y="490" width="220" height="115" rx="10"/>
+</g>
+<g fill="none" stroke="#258b7d" stroke-width="3">
+<path d="M240 200H310M240 235H310"/>
+<path d="M530 150H650M530 220H650M530 290H650M530 360H650M530 415H610V425H650"/>
+<path d="M270 200V520H310M285 235V555H310" stroke-dasharray="6 5"/>
+</g>
+<text x="65" y="175" font-size="21">Raspberry Pi Pico</text>
+<text x="65" y="210" font-size="16">GP4 / SDA · pin 6</text><text x="65" y="243" font-size="16">GP5 / SCL · pin 7</text>
+<text x="65" y="277" font-size="15">3V3 pin 36 · GND</text>
+<text x="338" y="170" font-size="20">TCA9548A · 0x70</text>
+<text x="338" y="205" font-size="15">A0 = A1 = A2 = GND</text>
+<text x="338" y="238" font-size="15">RESET pulled to 3.3 V</text>
+<text x="338" y="273" font-size="15">Select one branch</text>
+<text x="338" y="303" font-size="15">Verify selection by readback</text>
+<text x="338" y="345" font-size="15">CH0 → S0 · CH1 → S1</text>
+<text x="338" y="373" font-size="15">CH2 → S2 · CH3 → S3</text>
+<text x="338" y="401" font-size="15">CH4 → S4 reference</text>
+<g font-size="17">
+<text x="674" y="153">S0 · 0x0C · observes M0</text><text x="674" y="223">S1 · 0x0C · observes M1</text>
+<text x="674" y="293">S2 · 0x0C · observes M2</text><text x="674" y="363">S3 · 0x0C · observes M3</text>
+<text x="674" y="433">S4 · 0x0C · common field</text></g>
+<g fill="#cb8542"><circle cx="1010" cy="147" r="17"/><circle cx="1010" cy="217" r="17"/><circle cx="1010" cy="287" r="17"/><circle cx="1010" cy="357" r="17"/></g>
+<g font-size="16"><text x="1040" y="153">M0</text><text x="1040" y="223">M1</text><text x="1040" y="293">M2</text><text x="1040" y="363">M3</text></g>
+<text x="947" y="103" font-size="15">Inside bending TPU</text>
+<text x="950" y="406" font-size="14">No moving wires</text>
+<text x="650" y="495" font-size="15">Each head: A0/A1 → GND; MS/CS → 3.3 V;</text>
+<text x="650" y="519" font-size="15">VDD/VDDIO each decoupled by 100 nF;</text>
+<text x="650" y="543" font-size="15">10 kΩ pull-ups on SDA and SCL.</text>
+<text x="333" y="520" font-size="18">Optional ADS1115 · 0x48</text>
+<text x="333" y="550" font-size="15">A0, A1: nail-cell dividers</text>
+<text x="333" y="574" font-size="15">A2: VDD/2 · A3: check/2</text>
+<text x="650" y="590" font-size="14">Every branch also carries shared 3.3 V and GND (omitted above).</text>
+<text x="35" y="633" font-size="14">S4 also senses embedded magnets. Firmware reports fields and health; no force estimate or automatic tare is supplied.</text>
+</g></svg>

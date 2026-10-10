@@ -1,0 +1,20 @@
+[
+  {
+    "title": "MLX90393 datasheet rev012",
+    "url": "https://media.melexis.com/-/media/files/documents/datasheets/mlx90393-datasheet-melexis.pdf",
+    "cached_sha256": "b622dfc463eeb13cee8397ad3f01a5df2d8c506197fdb37154845449845cbfa2"
+  },
+  {
+    "title": "S-03-01-N N48 magnet datasheet",
+    "url": "https://www.supermagnete.de/eng/data_sheet_S-03-01-N.pdf",
+    "cached_sha256": "977cdf8a241654492d8cd37196cba992cea7a54073fd342330709221a339f9e6"
+  },
+  {
+    "title": "Structured compliance for connector insertion",
+    "url": "https://arxiv.org/abs/2307.15589"
+  },
+  {
+    "title": "eFlesh concept precedent",
+    "url": "https://github.com/notvenky/eFlesh"
+  }
+]

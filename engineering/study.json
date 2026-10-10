@@ -1,5 +1,5 @@
 {
-  "revision": "R1.0 + L1.0",
+  "revision": "R1.0 + L1.0 + B1.0",
   "objective": "Reliable contact and grip-force feedback on thin ENPIRE/YAM fingers",
   "requested_per_finger_force_n": 20,
   "contact_detection_target_n": 0.2,
@@ -8,10 +8,10 @@
   "selected_sensor": null,
   "selected_material": null,
   "physical_results": [],
-  "next_experiment": "Build the thin R1 nail cells and the independent L1 cell/plate fixture. Use the shared frozen-threshold contact protocol on assembled fingers, and the separate held-out force tests through 20 N per finger.",
+  "next_experiment": "Retain the R1 nail and L1 force experiments. Build one B1 insert and fixed readout, compare its compliance with an unmodified insert, and record magnetic interference and calibrated reference-force trials through the 20 N per finger target.",
   "candidates": [
     {"id": "R1", "name": "Independent resistive cells", "status": "designed; unbuilt", "coverage": "two nail regions and four TPU regions", "next": "Fit, saturation, drift, edge coverage, and wear"},
-    {"id": "M1", "name": "Printed magnetic insert", "status": "primary hardware audited; integration design open", "coverage": "compliant region; hard nail requires separate sensing", "next": "Board mount, interference, magnet retention, 20 N range"},
+    {"id": "B1", "name": "B1 magnetic bending insert", "status": "separate CAD, PCB and raw readout designed; unbuilt", "coverage": "four compliant regions; optional R1 nail cells", "next": "Original-vs-B1 compliance, retention, interference, physical force calibration through 20 N"},
     {"id": "F1", "name": "Dense flexible matrix", "status": "research comparison", "coverage": "custom fork-shaped flex and curved pad", "next": "Routed fabrication files, crosstalk, fatigue, sealing"},
     {"id": "O1", "name": "Optical compliant finger", "status": "research comparison", "coverage": "requires optical path and changed skeleton", "next": "Visibility under bending and preservation of nail access"},
     {"id": "L1", "name": "Root normal-force cell", "status": "carrier, readout and fixtures designed; unbuilt", "coverage": "normal load through the complete finger mount", "next": "Housing fit, held-out moment loads, integrated-finger accuracy, stiffness and faults"}

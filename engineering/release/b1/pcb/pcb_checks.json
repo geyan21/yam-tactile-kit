@@ -1,0 +1,20 @@
+{
+  "tool": "10.0.7",
+  "source_pcb_sha256": "9203c7d401bb7a4132ffe9e69c9e38597950a67e0edf4121c5c419fa84d3b1f2",
+  "checked_pcb_sha256": "458018c22dfdfc6f1868e3245b1643618be2a7e51ad25b7190c32fbf5662193a",
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "physical_boards_tested": 0,
+  "limits": "Copper/connectivity checks only. Assembly, power, field axis and I2C have not been tested on hardware.",
+  "files": {
+    "b1_head-B_Cu.gbl": "0fba6c5f24b0a5869a7145c68e8d79eefe568f60d753a0afa3d0a18addfb4f04",
+    "b1_head-B_Mask.gbs": "d8827c7ac1dcd1e946e8b222cd02bbbca3b6a529a06b8fc207f1399604f2985b",
+    "b1_head-Edge_Cuts.gm1": "f9846d3fcda36e599920e0665e03952c73b11a0b8c31636b9e0d276471298ec4",
+    "b1_head-F_Cu.gtl": "1e23b58c808e865fb7b96fe7f75d02ea74af7b63f07a4ea682148aa3720c2ee2",
+    "b1_head-F_Mask.gts": "020786693f6e4825d28f7a6538dae6717bb03cdf507e9fad2b94c82edddb0db2",
+    "b1_head-F_Paste.gtp": "8180d0b36ec349e9cceef0709455b86a1ffc4e131a10faf01adce19519de9e2b",
+    "b1_head-f_silkscreen.gto": "91df64f519c494df5cc540cc430fccdda1b9c914cb77fdf2ccb9ee636afb1ba0",
+    "b1_head-job.gbrjob": "a27679326778c510dc9cb123a1312f2789c8a1caffcea661dcb8f4c6b500cb03",
+    "b1_head.drl": "e8104a2dc9498f38977066bb0f2a70a6258a78c9e046f6c216dafa95ba7d372a"
+  }
+}

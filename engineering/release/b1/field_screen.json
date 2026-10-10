@@ -1,0 +1,308 @@
+{
+  "evidence_kind": "calculated_geometry_only",
+  "force_calibrated": false,
+  "model": "Uniformly magnetized finite cylinders, air, pole-surface quadrature",
+  "magnet_nominal_remanence_t": 1.395,
+  "magnet_centers_native_mm": [
+    [
+      -1.65,
+      -83.54,
+      2.676062240041973
+    ],
+    [
+      -1.65,
+      -66.035,
+      0.12234623373161047
+    ],
+    [
+      -1.65,
+      -49.035,
+      14.73229324311701
+    ],
+    [
+      -1.65,
+      -30.635,
+      6.292160735280527
+    ]
+  ],
+  "sensor_die_allowance_native_mm": [
+    [
+      7.93918638229734,
+      -83.90365398486632,
+      5.137374915134451
+    ],
+    [
+      7.93918638229734,
+      -67.27793857439772,
+      6.690701396490805
+    ],
+    [
+      7.93918638229734,
+      -48.858843856938385,
+      15.906457451984078
+    ],
+    [
+      7.93918638229734,
+      -29.304081518588657,
+      9.072045153552866
+    ],
+    [
+      7.93918638229734,
+      -25.0,
+      22.0
+    ]
+  ],
+  "nominal_local_field_ut": [
+    [
+      102.26039241732228,
+      607.091570752624,
+      -1380.6776709729436
+    ],
+    [
+      -50.320167580299184,
+      671.4719730594336,
+      -432.89679331578543
+    ],
+    [
+      -133.28840467124976,
+      350.295703971497,
+      -1581.5981652759228
+    ],
+    [
+      -96.86393717746697,
+      663.8655418344097,
+      -1249.3478064378128
+    ],
+    [
+      -92.40987170619825,
+      149.0443990599039,
+      62.01970199698216
+    ]
+  ],
+  "individual_perturbation_peak_abs_field_ut": [
+    [
+      483.1908934017891,
+      1328.5871058867456,
+      2507.8346243180454
+    ],
+    [
+      215.75393196864374,
+      1106.4665558156141,
+      821.6413369587955
+    ],
+    [
+      554.492133139403,
+      739.0676493801313,
+      3123.4970402517188
+    ],
+    [
+      489.9023165604551,
+      1433.548702390524,
+      2156.382435088036
+    ],
+    [
+      116.00385690473318,
+      199.21400694386705,
+      95.9844758285876
+    ]
+  ],
+  "screened_motion": "Each magnet independently: -1..2 mm inward; +/-2 mm along side/tangent/inward; +/-10 degree Y/Z tilt. Other magnets fixed.",
+  "sensor_to_paired_magnet_distance_mm": [
+    9.906704789167627,
+    11.68934049971631,
+    9.662411088882502,
+    10.072318345721227
+  ],
+  "derivatives": [
+    {
+      "magnet": "M0",
+      "directions": [
+        "side_x",
+        "surface_tangent",
+        "surface_inward"
+      ],
+      "direction_unit_vectors_native": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9968064849099888,
+          -0.07985506647290593
+        ],
+        [
+          0.0,
+          0.07985506647290593,
+          0.9968064849099888
+        ]
+      ],
+      "own_sensor_derivative_ut_per_mm": [
+        439.7594779266225,
+        228.6178269430026,
+        263.22014488238347
+      ]
+    },
+    {
+      "magnet": "M1",
+      "directions": [
+        "side_x",
+        "surface_tangent",
+        "surface_inward"
+      ],
+      "direction_unit_vectors_native": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9108530310092368,
+          0.4127308516470346
+        ],
+        [
+          0.0,
+          -0.4127308516470346,
+          0.9108530310092368
+        ]
+      ],
+      "own_sensor_derivative_ut_per_mm": [
+        173.2988069838508,
+        107.6530398004466,
+        175.68295224509885
+      ]
+    },
+    {
+      "magnet": "M2",
+      "directions": [
+        "side_x",
+        "surface_tangent",
+        "surface_inward"
+      ],
+      "direction_unit_vectors_native": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9557934114891945,
+          0.2940390357654021
+        ],
+        [
+          0.0,
+          -0.2940390357654021,
+          0.9557934114891945
+        ]
+      ],
+      "own_sensor_derivative_ut_per_mm": [
+        506.42471568642986,
+        257.06084735411986,
+        263.865132122129
+      ]
+    },
+    {
+      "magnet": "M3",
+      "directions": [
+        "side_x",
+        "surface_tangent",
+        "surface_inward"
+      ],
+      "direction_unit_vectors_native": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.6991751147117405,
+          -0.7149504591003663
+        ],
+        [
+          0.0,
+          0.7149504591003663,
+          0.6991751147117405
+        ]
+      ],
+      "own_sensor_derivative_ut_per_mm": [
+        400.3660532819172,
+        216.00596040849317,
+        255.29260908153404
+      ]
+    }
+  ],
+  "cross_coupling": [
+    {
+      "magnet": "M0",
+      "field_magnitude_ut_at_each_sensor": [
+        1535.7601869104424,
+        144.45222930850233,
+        15.196935656266866,
+        4.808505966724639,
+        3.345728329935709
+      ],
+      "reference_to_own_ratio": 0.0021785486812667416
+    },
+    {
+      "magnet": "M1",
+      "field_magnitude_ut_at_each_sensor": [
+        110.31658489490107,
+        847.1807125503549,
+        58.71725015453853,
+        14.393583861224219,
+        7.773126834012829
+      ],
+      "reference_to_own_ratio": 0.009175287773741436
+    },
+    {
+      "magnet": "M2",
+      "field_magnitude_ut_at_each_sensor": [
+        16.415383458704735,
+        90.89896676154122,
+        1679.1336250394418,
+        83.91313686933626,
+        47.616815228372005
+      ],
+      "reference_to_own_ratio": 0.028357966583662162
+    },
+    {
+      "magnet": "M3",
+      "field_magnitude_ut_at_each_sensor": [
+        5.176670648846537,
+        15.786531239475307,
+        83.04486806734322,
+        1447.208035612132,
+        145.84624321864757
+      ],
+      "reference_to_own_ratio": 0.10077766266475872
+    }
+  ],
+  "jacobian_singular_values_ut_per_mm": [
+    512.1256572581609,
+    458.72801774001056,
+    425.64531804479583,
+    258.1633509390992,
+    257.08046698154044,
+    232.96570891522066,
+    231.01275147861074,
+    217.46768399438497,
+    216.6250502592719,
+    206.74329281480738,
+    117.39428766233576,
+    98.83645683246239
+  ],
+  "jacobian_condition_number": 5.181546098179791,
+  "quadrature_convergence_max_ut": 9.99855203384867e-12,
+  "analytic_axial_check_relative_error": 1.908646454133824e-14,
+  "limits": [
+    "No force-to-displacement model; no 20 N rating or contact threshold.",
+    "No steel, motor field, second jaw, manufacturing tolerance, creep or temperature simulation.",
+    "Perturbations do not establish mechanical travel or collision clearance.",
+    "Die position is an allowance, not a verified internal package location.",
+    "Reference sensor observes embedded magnets too; subtraction cannot isolate arbitrary external fields."
+  ]
+}

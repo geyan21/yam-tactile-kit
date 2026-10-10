@@ -61,17 +61,21 @@ def main():
         try:
             page=read(SITE).decode("utf-8")
             summary["page_title_matches"]="<title>ENPIRE tactile — Build, measure, compare</title>" in page
+            summary["b1_feature_visible"]='id="bending"' in page and "build-b1.html" in page
             remote_manifest=read(SITE+"downloads/release_manifest.json")
             local_manifest=(ROOT/"engineering/release/release_manifest.json").read_bytes()
             summary["release_manifest_matches"]=remote_manifest==local_manifest
             if summary["release_manifest_matches"]:
                 checks={}
                 for name in ("enpire-engineering-kit.zip","r1_cut_sheet.pdf","cad/nail_cover_mold.step",
-                             "l1/cad/l1_floating_finger_carrier.step","l1_review_drawings.pdf","l1_finger_plan.json"):
+                             "l1/cad/l1_floating_finger_carrier.step","l1_review_drawings.pdf","l1_finger_plan.json",
+                             "b1/cad/b1_magnetic_tpu_insert.step","b1_review_drawings.pdf","b1_head_fabrication.zip"):
                     remote=read(SITE+"downloads/"+name)
                     local=(ROOT/"build/site/downloads"/name).read_bytes()
                     checks[name]=content_hash(remote,name)==content_hash(local,name)
                 summary["download_hashes_match"]=checks
+                summary["b1_guide_pages_match"]={name:read(SITE+name)==(ROOT/"build/site"/name).read_bytes()
+                    for name in ("build-b1.html","b1-electronics.html","b1-testing.html")}
         except HTTPError as error:
             summary["site_http_error"]=error.code
         summary["published_verified"]=(
@@ -79,6 +83,9 @@ def main():
             and summary.get("release_manifest_matches",False)
             and bool(summary.get("download_hashes_match"))
             and all(summary.get("download_hashes_match",{}).values())
+            and summary.get("b1_feature_visible",False)
+            and bool(summary.get("b1_guide_pages_match"))
+            and all(summary.get("b1_guide_pages_match",{}).values())
             and any(run["conclusion"]=="success" for run in summary["runs"])
         )
         record["publication"]=summary
