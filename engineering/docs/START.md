@@ -2,6 +2,8 @@
 
 **First deliverable: one instrumented finger and a reproducible bench record.** Keep a second, unmodified finger as the control. Start off the robot.
 
+**First read [which sensors to use and exactly where to place them](SENSORS.md).** It gives the concrete B1 recommendation, labels every sensing location and explains how the retained R1 and L1 alternatives differ.
+
 R1 prioritizes detecting contact near the thin nail while preserving the existing hard frame. It is a cheap-to-iterate transducer candidate. Its drift, cover adhesion, wiring life, and force accuracy need measurement before it can be selected as the scalable design.
 
 L1 is the complementary force experiment: a purchased strain-gauge cell in the complete finger load path. Begin its independent cell/plate tests alongside the R1 nail test. Machine the L1 gripper carrier only after the printed housing fit and cell moment tests pass. Use [Build L1](BUILD_L1.md), [L1 wiring](L1_ELECTRONICS.md) and [L1 test instructions](L1_TESTING.md).

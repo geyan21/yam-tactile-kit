@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+<title id="title">N0 thin nail pressure sensor construction</title>
+<desc id="desc">The object presses an insulating cover over copper, pressure-sensitive film, another copper electrode, insulation and thin mounting adhesive on the hard nail. Both tip pads use this construction.</desc>
+<rect width="960" height="430" fill="white"/>
+<g font-family="sans-serif" fill="#203f46">
+<text x="28" y="37" font-size="25" font-weight="bold">T0 and T1 both use the N0 thin pressure-film stack</text>
+<text x="28" y="68" font-size="16">Make two separate shaped pads using the R1 CH0 / CH1 cut patterns.</text>
+<text x="226" y="115" text-anchor="middle" font-size="18">Object presses here</text>
+<path d="M225 128V178M215 166L225 178L235 166" fill="none" stroke="#344d58" stroke-width="3"/>
+<rect x="60" y="190" width="330" height="25" fill="#e5cd83"/>
+<rect x="60" y="215" width="330" height="13" fill="#cb804d"/>
+<rect x="60" y="228" width="330" height="30" fill="#4b565b"/>
+<rect x="60" y="258" width="330" height="13" fill="#cb804d"/>
+<rect x="60" y="271" width="330" height="25" fill="#e5cd83"/>
+<rect x="60" y="296" width="330" height="11" fill="#a8bec8"/>
+<rect x="60" y="307" width="330" height="45" fill="#819397"/>
+<g font-size="16">
+<text x="424" y="205">Insulating outer backing — contacts the object</text>
+<text x="424" y="224">Bare copper electrode</text>
+<text x="424" y="249" font-weight="bold">0.10 mm pressure-sensitive conductive film</text>
+<text x="424" y="269">Bare copper electrode</text>
+<text x="424" y="291">Insulating backing</text>
+<text x="424" y="313">Thin mounting adhesive, 0.05–0.10 mm</text>
+<text x="424" y="343">Original hard nail gripping face</text>
+</g>
+<text x="28" y="384" font-size="17" font-weight="bold">Nominal mounted addition: about 0.40 mm. Measure the actual pad.</text>
+<text x="28" y="412" font-size="15">Schematic, not to scale. N0 has no extra silicone cover. Put solder joints and the continuity resistor outside the contact patch.</text>
+</g></svg>

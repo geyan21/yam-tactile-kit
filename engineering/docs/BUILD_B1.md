@@ -2,6 +2,8 @@
 
 B1 is a **separate magnetic insert prototype**. Keep R1 and L1 as comparison builds. The design decision is to retain compliance in the TPU contact region and retain the original hard frame and thin nail. Do not deliberately soften the whole frame to make a sensor work.
 
+**Start with [the exact sensor choice and placement map](SENSORS.md).** For your precision-task prototype, use **five MLX90393SLW-ABA-011 heads**, **four 3 × 1 mm magnets in the TPU**, and **two N0 pressure-film pads on the object-facing nail prongs**. The labeled map shows S0–S4, M0–M3 and T0/T1, with distances from the nail tip and downloadable coordinates.
+
 This is a buildable digital design with checked CAD and PCB files. **No B1 has been assembled or tested. 20 N per finger is the requested test target, not an established rating.**
 
 ![Actual B1 assembly meshes](../release/b1/b1_assembly.png)

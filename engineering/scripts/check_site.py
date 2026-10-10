@@ -87,6 +87,8 @@ def main():
                 "source/engineering/release/b1/pcb/b1_head_fabrication.zip",
                 "source/engineering/release/r1_l1_snapshot_manifest.json",
                 "website/build-b1.html","website/b1-electronics.html","website/b1-testing.html",
+                "website/sensors.html","website/assets/sensor-placement.svg",
+                "website/assets/sensor-placement.csv","website/assets/n0-tip-stack.svg",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

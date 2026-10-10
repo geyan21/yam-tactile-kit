@@ -16,6 +16,8 @@ For L1, follow [assembly](docs/BUILD_L1.md), [electronics](docs/L1_ELECTRONICS.m
 
 For B1, follow [assembly](docs/BUILD_B1.md), [electronics](docs/B1_ELECTRONICS.md) and [bending/contact/force tests](docs/B1_TESTING.md). No B1 force coefficients are supplied without measured data.
 
+Start with [sensor choice and placement](docs/SENSORS.md) for the exact IC, magnets, two nail pads, and their labeled locations. Its SVG, coordinate files and page are generated from the unchanged release by `scripts/explain_sensor_placement.py`; edit `templates/sensor_guide.md` for the explanatory text, then regenerate with the CAD environment's Python.
+
 ## File map
 
 | Files | Role |

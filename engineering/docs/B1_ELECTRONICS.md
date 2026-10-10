@@ -2,6 +2,8 @@
 
 Build **five identical sensor heads per finger**. Each head is an 8 × 6.4 × 0.8 mm two-layer PCB carrying a QFN-16 MLX90393SLW-ABA-011, two 100 nF decoupling capacitors and two 10 kΩ pull-ups. A TCA9548A at the wrist selects one head at a time. Every head uses address 0x0C.
 
+See **[which sensor goes where](SENSORS.md)** before wiring. S0–S3 are fixed heads beside M0–M3 in the bending TPU; S4 is the fixed field reference toward the base. For the recommended precision-task build, also include T0/T1, the two N0 pressure-film nail pads, and enable the nail readout after its circuit is installed.
+
 ![Wiring and sensing layout](../web/b1-wiring.svg)
 
 ## Manufacturing and assembly

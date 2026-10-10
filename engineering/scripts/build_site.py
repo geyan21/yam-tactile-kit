@@ -21,6 +21,7 @@ SITE=ROOT/"build/site"
 RELEASE=ROOT/"engineering/release"
 WEB=ROOT/"engineering/web"
 DOCS=[
+    ("SENSORS","sensors","Sensor choice & placement"),
     ("START","start","Student starting packet"),("GEOMETRY","geometry","Measured geometry"),
     ("BUILD_R1","build-r1","Build R1"),("ELECTRONICS","electronics","Electronics & code"),
     ("BUILD_L1","build-l1","Build L1 root force"),("L1_ELECTRONICS","l1-electronics","L1 wiring & code"),
@@ -103,7 +104,8 @@ def main():
         SITE.mkdir(parents=True)
         assets=SITE/"assets";downloads=SITE/"downloads"
         assets.mkdir();downloads.mkdir()
-        for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg","b1-wiring.svg"):
+        for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg","b1-wiring.svg",
+                     "sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg"):
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
