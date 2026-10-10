@@ -2,6 +2,8 @@
 
 This guide reproduces the digital work delivered with YAM Tactile Kit: a design review, an editable visualization, envelope calculations, a synthetic calibration exercise, and a portable website. Physical replication follows the separate hardware guide and requires measurements and component selection that are not yet available.
 
+The public landing page contains all visualization panels and every guide chapter inline. Use **Download the complete kit** for the whole handoff, or choose an individual design, code, documentation, or offline-site package.
+
 ## 1. Obtain a standalone checkout
 
 Download the source ZIP from the website and extract it. The top directory is `yam-tactile-kit/`. A GitHub checkout, when published, has the same source layout. A local Git bundle is also produced by `scripts/export_git.py`.
@@ -33,11 +35,15 @@ For offline use, open `build/site/index.html` directly. The page uses local scri
 
 The build also writes `build/yam-tactile-site.zip`. Extract this complete prebuilt site to another machine and open its `index.html`; keep the included assets and downloads beside it. No Python installation is needed just to view that prebuilt copy.
 
+`build/yam-tactile-complete.zip` contains `website/`, `source/`, `design/`, and `documentation/`, plus a handoff manifest. Open `website/index.html` to start, or run the reproduction commands from `source/`. The complete/offline ZIP download buttons point to the public website because an archive cannot contain itself; their underlying contents are already included in the handoff. Other included visualizations, source, design, and documentation remain usable offline.
+
 On a managed host, view the local website through the approved remote-access workflow. No additional tunnels are part of these instructions.
 
 ## 4. Use the design lab
 
 The assembly view highlights the replaceable finger, proximal sensor module, and optional pressure strip. The explode control separates those conceptual parts for inspection; it does not represent a real assembly tolerance.
+
+The 3D envelope view updates with the same inputs. Drag or use arrow keys to rotate it, separate the components, or export its current assembly JSON. The published CAD/design ZIP uses the build's saved inputs; rebuild after exporting edited inputs to generate matching SCAD/STL/SVG files. These are conceptual packaging models, not the exact YAM finger or fabrication-ready components.
 
 Change the contact-face width, pad length, border, and cell pitch to see the whole-cell envelope. The drawing reserves one pitch-wide envelope per cell. It does not route copper or account for supplier-specific keepouts. An empty grid means no complete cell fits after the assumed border.
 
@@ -107,13 +113,19 @@ The source archive has deterministic file ordering and ZIP timestamps. Its SHA-2
 
 The source includes `.github/workflows/pages.yml`. It builds and tests the site, uploads `build/site`, and deploys from the `main` branch. Pull requests run the build/tests without publishing.
 
+The published project is [geyan21/yam-tactile-kit](https://github.com/geyan21/yam-tactile-kit), with the [design lab](https://geyan21.github.io/yam-tactile-kit/) and [online guide](https://geyan21.github.io/yam-tactile-kit/guide.html) on GitHub Pages.
+
+An existing GitHub SSH key is sufficient for Git pushes. Repository creation and the initial Pages setting can be performed once in GitHub's website; GitHub CLI authentication is optional for that workflow. Create an empty repository when uploading an existing checkout, so an automatically generated README does not introduce a separate history.
+
 For the intended GitHub repository, select **Settings → Pages → Build and deployment → Source: GitHub Actions**, then push the source to `main` or run the Pages workflow. GitHub provides the deployed URL in the workflow's `github-pages` environment. The workflow sets the repository link from the actual GitHub repository identity.
+
+The standard workflow token can deploy to an enabled Pages site but cannot enable Pages on a new repository. If the first deployment runs before Pages is enabled, save that setting and rerun the failed workflow in GitHub's Actions tab, or push the next intended source change. A successful SSH push does not change Pages settings.
 
 The workflow follows GitHub's documented custom Pages deployment structure. Account permissions and Pages availability depend on the repository/account configuration; a private source repository does not by itself establish that a Pages site is private.
 
-`scripts/github_status.py --owner YOUR-ACCOUNT` is an optional read-only publication check. It uses standard `GH_TOKEN` / `GITHUB_TOKEN` authentication or Git's existing `github.com` credential helper and reports only the account/repository state. It does not log credentials, create a repository, or modify GitHub. Use an authorized connection/login before publication; do not paste credentials into a chat or commit them.
+`scripts/github_status.py --owner YOUR-ACCOUNT` is an optional read-only **API/HTTPS** check. It uses standard `GH_TOKEN` / `GITHUB_TOKEN` authentication or Git's existing `github.com` credential helper. It does not test SSH authentication. A negative result therefore does not rule out a working SSH key. The script does not log credentials, create a repository, or modify GitHub; do not paste credentials into a chat or commit them.
 
-Sources: [GitHub custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [GitHub Pages visibility](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
+Sources: [GitHub custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Pages enablement token requirements](https://github.com/actions/configure-pages/blob/main/action.yml), [GitHub SSH authentication](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection), [GitHub Pages visibility](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
 
 ## Troubleshooting
 

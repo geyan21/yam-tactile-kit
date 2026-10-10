@@ -9,6 +9,7 @@ import re
 
 DOCS = [
     ("REPLICATE.md", "replicate", "Reproduce the kit"),
+    ("DESIGN_FILES.md", "design-files", "Get and edit the design files"),
     ("HARDWARE.md", "hardware", "Develop the hardware"),
     ("CALIBRATION.md", "calibration", "Calibrate recorded data"),
     ("VALIDATION.md", "validation", "Validate a physical build"),
@@ -123,6 +124,20 @@ def guide_content(root: Path) -> tuple[str, str]:
         content = markdown((root / "docs" / filename).read_text(encoding="utf-8"))
         sections.append(f'<section id="{slug}" class="guide-section">{content}</section>')
     return "\n".join(sections), "\n".join(nav)
+
+
+def embedded_guides(root: Path) -> str:
+    sections = []
+    for number, (filename, slug, title) in enumerate(DOCS, 1):
+        content = markdown((root / "docs" / filename).read_text(encoding="utf-8"))
+        content = content.replace('href="guide.html#', 'href="#guide-')
+        sections.append(
+            f'<details class="embedded-guide" id="guide-{slug}">'
+            f'<summary><span class="chapter-number">{number:02d}</span>'
+            f'<span>{html.escape(title)}</span><span class="chapter-open">Read +</span></summary>'
+            f'<article class="guide-section">{content}</article></details>'
+        )
+    return "\n".join(sections)
 
 
 def concept_svg(d: dict, result: dict) -> str:

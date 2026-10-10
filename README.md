@@ -2,11 +2,19 @@
 
 A reproducible design review and interactive lab for a thin, replaceable YAM finger with force sensing at its base and an optional surface pressure strip.
 
+[Interactive design lab](https://geyan21.github.io/yam-tactile-kit/) ·
+[Complete online guide](https://geyan21.github.io/yam-tactile-kit/guide.html) ·
+[Download everything](https://geyan21.github.io/yam-tactile-kit/downloads/yam-tactile-complete.zip)
+
+The landing page contains all visualizations, the full instructions, and separate downloads for design files, source code, documentation, and the offline website. The complete kit ZIP contains all of them together.
+
 **Release 0.1.0 reproduces a concept, calculations, visualizations, and a calibration exercise. No YAM hardware has been fabricated, fitted, or qualified by this project.** The example geometry is illustrative. The supplied calibration data is synthetic.
 
 ## Reproduce the release
 
 Requirements: Python 3.10 or newer; a modern web browser. There are no third-party Python packages, JavaScript packages, network downloads, or build-service accounts required.
+
+Obtain the source from this repository or the source ZIP linked above. The browser visualization and guide are also available online without installing anything.
 
 Run these commands from this repository's root. `/usr/bin/python3` is the interpreter used for the verified Linux build. On another system, substitute the explicit path to your Python 3 interpreter.
 
@@ -26,7 +34,11 @@ The build creates:
 | --- | --- |
 | `build/site/index.html` | Interactive assembly, pad-layout and force-path visualization |
 | `build/site/guide.html` | Complete replication and hardware-development guide |
+| `build/yam-tactile-complete.zip` | Complete handoff: source, website, documentation, design files, and file hashes |
 | `build/yam-tactile-site.zip` | Prebuilt offline website; extract and open `index.html` without running Python |
+| `build/site/downloads/yam-tactile-designs.zip` | Editable conceptual CAD envelopes, component STLs, JSON, SVG drawings, BOM, and templates |
+| `build/site/downloads/yam-tactile-docs.zip` | Standalone offline HTML guide and Markdown source documents |
+| `build/design/` | Generated concept geometry, including OpenSCAD source and closed component meshes |
 | `build/design-summary.json` | Auditable envelope and force-budget calculations |
 | `build/finger-concept.svg` | Parameterized, dimension-labeled concept drawing |
 | `build/calibration-report.json` | Fit and held-out evaluation of the synthetic calibration exercise |
@@ -39,6 +51,7 @@ The archive contains all source, documentation, templates, example data, and tes
 ## Start here
 
 - [Replication guide](docs/REPLICATE.md): commands, expected results, customization, offline use, and export.
+- [Design files](docs/DESIGN_FILES.md): what is included, how to edit the envelopes, and their limits.
 - [Hardware development guide](docs/HARDWARE.md): measurement, mechanics, components, electrical interface, assembly, and service.
 - [Calibration guide](docs/CALIBRATION.md): CSV format, fitting, holdout design, and interpreting the synthetic example.
 - [Validation plan](docs/VALIDATION.md): physical tests required before claiming a usable gripper.
@@ -54,6 +67,8 @@ Copy `examples/design.example.json`, edit the values, and rebuild:
 ```
 
 The website supports editing the same parameters and importing/exporting that JSON format. Website changes stay in the browser until exported. They do not rewrite files on disk.
+
+The 3D view and CAD exports are generic component envelopes. Mounting holes, a selected force element, calibrated spring geometry, and manufacturing tolerances are not modeled. See [design/README.md](design/README.md) before using any mesh or CAD file.
 
 Record your actual finger measurements separately in `hardware/measurements.template.json`. Its unknown fields are deliberately `null`; the builder never fills them from the illustrative design.
 

@@ -6,9 +6,10 @@ The initial design review was prepared on 2026-10-09. This portable software/doc
 
 - Research-backed design review and an original conceptual schematic.
 - Parameter validation, pad-envelope arithmetic, jaw-opening and stiffness budgets.
+- Editable 3D component envelopes, browser rotation, OpenSCAD source, and closed component STL exports.
 - Ideal static two-station moment visualization.
 - Synthetic calibration data, fitting, and held-out evaluation.
-- An offline interactive website, HTML guide, source archive, and source hashes.
+- A single landing page containing all visuals and instructions, with complete-kit, design, source, documentation, and offline-site downloads.
 - Reproduction scripts, software tests, optional browser verification, and a GitHub Pages workflow.
 
 ## Not implemented or verified
@@ -19,6 +20,8 @@ The initial design review was prepared on 2026-10-09. This portable software/doc
 - Robot driver/control integration.
 
 The component BOM contains explicit unresolved selections. The measurement template contains `null` fields. Neither should be treated as a complete manufacturing release.
+
+The new CAD/mesh files are generic envelopes. The mount and force-module blocks use labeled packaging assumptions; they do not define actual mounting holes, a calibrated spring, a selected sensor, or production tolerances. Their mesh closure and browser/Python agreement are software/geometry checks, not physical validation.
 
 ## Source provenance
 

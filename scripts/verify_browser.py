@@ -53,10 +53,16 @@ def main():
             # avoids compositor timing differences when CLI screenshots scroll.
             force_review = (webroot / "index.html").read_text(encoding="utf-8").replace(
                 "</head>",
-                "<style>.site-header,.hero,.scope-strip,#design{display:none!important}"
+                "<style>.site-header,.hero,.scope-strip,#get-kit,#design,#cad{display:none!important}"
                 "#force{padding-top:28px}</style></head>",
             )
             (webroot / "force-review.html").write_text(force_review, encoding="utf-8")
+            cad_review = (webroot / "index.html").read_text(encoding="utf-8").replace(
+                "</head>",
+                "<style>.site-header,.hero,.scope-strip,#get-kit,#design{display:none!important}"
+                "#cad{padding-top:28px}</style></head>",
+            )
+            (webroot / "cad-review.html").write_text(cad_review, encoding="utf-8")
             server = ThreadingHTTPServer(("127.0.0.1", 0), partial(Handler, directory=str(webroot)))
             thread = Thread(target=server.serve_forever, daemon=True)
             thread.start()
@@ -99,6 +105,7 @@ def main():
                     raise RuntimeError(f"Browser checks failed: {', '.join(failed)}")
                 for name, size, page in (
                     ("desktop", "1440,1180", "index.html"),
+                    ("cad", "1440,1180", "cad-review.html"),
                     ("force", "1440,1180", "force-review.html"),
                     ("mobile", "500,1550", "mobile-review.html"),
                     ("guide", "1280,1100", "guide.html"),

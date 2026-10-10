@@ -44,6 +44,7 @@
     sensor:["02","Calibrated force-sensing base","All normal finger loads pass through this element. Specify stiffness, off-center response, overload protection, and a repeatable mount."],
     pad:["03","Optional local pressure strip","Use a small defined seat when contact location helps. Route the tail and connector back toward the root."]
   };
+  const cadViewer = window.EnvelopeViewer && $("cad-view") ? new window.EnvelopeViewer($("cad-view")) : null;
 
   function setStatus(message,error=false) {
     $("input-status").textContent = message;
@@ -244,6 +245,7 @@
       const p=document.createElement("p");p.className="issue";p.textContent=issue;$("design-issues").append(p);
     }
     drawAssembly(r);drawPad(r);drawForce(r);
+    if(cadViewer)cadViewer.update(state);
   }
 
   function importDesign(value) {
@@ -256,6 +258,17 @@
     state=model.validate(data.design);render();setStatus("Example restored. Changes stay in this browser until exported.");
   }
   $("reset-design").addEventListener("click",reset);
+  if(cadViewer){
+    $("reset-cad").addEventListener("click",()=>cadViewer.reset());
+    $("cad-explode").addEventListener("input",event=>{cadViewer.explode=Number(event.target.value)/100;cadViewer.draw();});
+    $("export-cad").addEventListener("click",()=>{
+      const content=JSON.stringify(window.TactileGeometry.create(state),null,2)+"\n";
+      const url=URL.createObjectURL(new Blob([content],{type:"application/json"}));
+      const anchor=document.createElement("a");anchor.href=url;anchor.download="yam-tactile-concept-envelopes.json";
+      document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+      setStatus("Current conceptual 3D geometry exported. Hardware validation remains outstanding.");
+    });
+  }
   $("explode").addEventListener("input",event=>{exploded=Number(event.target.value);drawAssembly(model.evaluate(state));});
   document.querySelectorAll("[data-part]").forEach(button=>button.addEventListener("click",()=>{
     selected=button.dataset.part;
@@ -294,7 +307,18 @@
   document.querySelectorAll('a[href^="#source-"]').forEach(link=>link.addEventListener("click",()=>{
     document.querySelector(".source-details").open=true;
   }));
+  function openChapter(hash){
+    if(!hash.startsWith("#guide-"))return;
+    const chapter=document.getElementById(hash.slice(1));
+    if(chapter&&chapter.tagName==="DETAILS")chapter.open=true;
+  }
+  document.addEventListener("click",event=>{
+    const link=event.target.closest('a[href^="#guide-"]');
+    if(link)openChapter(link.getAttribute("href"));
+  });
+  window.addEventListener("hashchange",()=>openChapter(window.location.hash));
   window.TactileKit={getDesign:()=>({...state}),getSummary:()=>model.evaluate(state),importDesign,reset,lastExport:null};
   drawCalibration();render();
+  openChapter(window.location.hash);
   document.documentElement.dataset.kitReady="true";
 })();

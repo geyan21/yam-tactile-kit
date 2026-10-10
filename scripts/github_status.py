@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Read-only check of existing GitHub authentication and the intended repository."""
+"""Read-only check of GitHub API/HTTPS authentication; does not test SSH Git access."""
 
 import argparse
 import json
@@ -21,9 +21,13 @@ def main():
         parser.error("Use a GitHub owner and repository name, not a URL")
     with execution(ROOT / "build/records", "Read-only authentication and repository check for the requested GitHub publication") as record:
         token, source = existing_token(args.git, ROOT, args.owner, record)
-        result = {"owner": args.owner, "repository": args.repository, "credential_source": source, "authenticated": False}
+        result = {
+            "owner": args.owner, "repository": args.repository, "credential_source": source,
+            "authenticated": False, "authentication_checked": "API/HTTPS",
+            "ssh_authentication_checked": False,
+        }
         if token is None:
-            result["reason"] = "No existing GitHub HTTPS credential available. An authorized GitHub connection/login is needed."
+            result["reason"] = "No GitHub API/HTTPS credential found. SSH Git access may still be configured and is not tested here."
         else:
             client = GitHub(token)
             try:

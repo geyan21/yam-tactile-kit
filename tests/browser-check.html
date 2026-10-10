@@ -26,6 +26,10 @@
       assert(win.TactileKit.getSummary().taxels===16,"Default grid is wrong");
       assert(doc.getElementById("dataset-badge").textContent.includes("SYNTHETIC"),"Synthetic data not labeled");
       assert(win.TactileKit.getSummary().hardware_validated===false,"Hardware validation claim must remain false");
+      assert(doc.getElementById("cad-view").dataset.rendered==="true","3D envelope view did not render");
+      assert(doc.getElementById("complete-download"),"Complete-kit download missing");
+      assert(doc.querySelector('a[href="downloads/yam-tactile-designs.zip"]'),"Design package download missing");
+      assert(doc.querySelector('a[href="downloads/yam-tactile-docs.zip"]'),"Documentation download missing");
     });
     const change=(key,value)=>{
       const input=doc.getElementById("number-"+key);
@@ -55,6 +59,12 @@
       assert(doc.getElementById("part-title").textContent.includes("force-sensing"),"Inspector did not update");
       assert(doc.getElementById("assembly-view").innerHTML!==oldDrawing,"Exploded view did not change");
     });
+    const canvas=doc.getElementById("cad-view"),beforeRotation=canvas.toDataURL();
+    canvas.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
+    check("3D envelope view rotates with keyboard input",()=>assert(canvas.toDataURL()!==beforeRotation,"3D view did not redraw after rotation"));
+    const beforeSeparation=canvas.toDataURL(),cadExplode=doc.getElementById("cad-explode");
+    cadExplode.value=80;cadExplode.dispatchEvent(new win.Event("input",{bubbles:true}));
+    check("3D envelope components separate",()=>assert(canvas.toDataURL()!==beforeSeparation,"3D separation did not change the rendered view"));
     let exportedBlob;
     const originalURL=win.URL.createObjectURL;
     win.URL.createObjectURL=blob=>{exportedBlob=blob;return originalURL.call(win.URL,blob);};
@@ -85,6 +95,14 @@
       const top=doc.getElementById("force").getBoundingClientRect().top;
       assert(top>=0 && top<=120,"Force section is outside the expected viewport position: "+top);
     });
+    doc.querySelector('.build-steps a[href="#guide-replicate"]').click();await pause();
+    check("complete reproduction instructions open on the same page",()=>{
+      const chapter=doc.getElementById("guide-replicate");
+      assert(chapter.open,"Inline reproduction chapter did not open");
+      assert(chapter.textContent.includes("/usr/bin/python3 scripts/reproduce.py"),"Full reproduction command missing");
+      for(const id of ["replicate","design-files","hardware","calibration","validation","review","scope","yam-context"])assert(doc.getElementById("guide-"+id),"Missing inline chapter "+id);
+    });
+    doc.getElementById("guide-replicate").open=false;
     win.TactileKit.reset();
     check("desktop layout has no page-wide horizontal overflow",()=>assert(doc.documentElement.scrollWidth<=doc.documentElement.clientWidth+1,"Desktop overflow"));
     frame.style.width="375px";await pause();
@@ -93,7 +111,7 @@
     frame.src="guide.html";await new Promise(resolve=>frame.addEventListener("load",resolve,{once:true}));await pause();
     const guide=frame.contentDocument;
     check("all guide chapters and source download are present",()=>{
-      for(const id of ["replicate","hardware","calibration","validation","review","scope","yam-context"])assert(guide.getElementById(id),"Missing chapter "+id);
+      for(const id of ["replicate","design-files","hardware","calibration","validation","review","scope","yam-context"])assert(guide.getElementById(id),"Missing chapter "+id);
       assert(guide.querySelector('a[href="downloads/yam-tactile-kit.zip"]'),"Source download missing");
     });
     check("guide remains readable at mobile width",()=>assert(guide.documentElement.scrollWidth<=guide.documentElement.clientWidth+1,"Guide page overflow"));

@@ -8,6 +8,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from tactile_kit.model import evaluate
+from tactile_kit.geometry import scene
 
 
 class BrowserModelParityTests(unittest.TestCase):
@@ -39,6 +40,7 @@ class BrowserModelParityTests(unittest.TestCase):
                     self.assertFalse(browser["valid"])
                     continue
                 self.assertTrue(browser["valid"])
+                self.assertEqual(browser["geometry"], scene(design))
                 for key, expected in python.items():
                     if isinstance(expected, (int, float)) and not isinstance(expected, bool):
                         self.assertAlmostEqual(browser["result"][key], expected, delta=1e-8)

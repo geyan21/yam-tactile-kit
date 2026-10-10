@@ -6,15 +6,18 @@ import hashlib
 import html
 import json
 from pathlib import Path
+import re
 import shutil
 import zipfile
 
 from .calibration import fit_and_evaluate, read_samples
+from .geometry import write_design
 from .model import evaluate, validate
-from .render import concept_svg, guide_content
+from .packages import make_packages
+from .render import concept_svg, embedded_guides, guide_content
 
 
-SOURCE_DIRS = ("docs", "examples", "hardware", "scripts", "src", "tests", "web", ".github")
+SOURCE_DIRS = ("design", "docs", "examples", "hardware", "scripts", "src", "tests", "web", ".github")
 SOURCE_FILES = ("README.md", "VERSION", ".gitignore")
 
 
@@ -63,8 +66,10 @@ def archive_source(root: Path, downloads: Path, design: dict, calibration: bytes
 
 
 def build(root: Path, output: Path, design_path: Path, calibration_path: Path, repository_url: str = "") -> dict:
-    if repository_url and not repository_url.startswith("https://github.com/"):
-        raise ValueError("repository_url must be empty or an https://github.com/ URL")
+    match = re.fullmatch(r"https://github.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)/?", repository_url) if repository_url else None
+    if repository_url and not match:
+        raise ValueError("repository_url must be empty or an https://github.com/OWNER/REPOSITORY URL")
+    public_base = f"https://{match[1]}.github.io/{match[2]}/" if match else "https://geyan21.github.io/yam-tactile-kit/"
     design = validate(json.loads(design_path.read_text(encoding="utf-8")))
     summary = evaluate(design)
     calibration = fit_and_evaluate(read_samples(calibration_path))
@@ -75,12 +80,28 @@ def build(root: Path, output: Path, design_path: Path, calibration_path: Path, r
     downloads = site / "downloads"
     assets.mkdir(parents=True, exist_ok=True)
     downloads.mkdir(parents=True, exist_ok=True)
-    for name in ("style.css", "model.js", "app.js"):
+    for name in ("style.css", "model.js", "geometry.js", "viewer.js", "app.js"):
         shutil.copyfile(root / "web" / name, assets / name)
     for name, content in (("design-summary.json", summary), ("calibration-report.json", calibration)):
         (output / name).write_bytes(encoded_json(content))
         (downloads / name).write_bytes(encoded_json(content))
     svg = concept_svg(design, summary)
+    geometry = write_design(output / "design", design, summary, svg, root)
+    design_names = [
+        "README.md", "assembly-envelopes.json", "assembly-envelopes.scad",
+        "design-inputs.json", "design-summary.json", "finger-concept.svg",
+        "original-architecture.svg", "bom.csv", "measurements.template.json", "data-contract.example.json",
+        *[f"{part['id']}-envelope.stl" for part in geometry["components"]],
+    ]
+    design_files = {name: (output / "design" / name).read_bytes() for name in design_names}
+    design_downloads = downloads / "design"
+    design_downloads.mkdir(exist_ok=True)
+    for name, content in design_files.items():
+        (design_downloads / name).write_bytes(content)
+    if "pad-envelope.stl" not in design_files:
+        for stale in (output / "design/pad-envelope.stl", design_downloads / "pad-envelope.stl"):
+            if stale.is_file():
+                stale.unlink()
     (output / "finger-concept.svg").write_text(svg, encoding="utf-8")
     (downloads / "finger-concept.svg").write_text(svg, encoding="utf-8")
     shutil.copyfile(root / "docs/yam_force_finger_concept.svg", assets / "original-concept.svg")
@@ -98,6 +119,8 @@ def build(root: Path, output: Path, design_path: Path, calibration_path: Path, r
         "calibration": calibration,
         "references": references,
         "repository_url": repository_url,
+        "public_base_url": public_base,
+        "design_geometry": geometry,
         "archive": artifact,
     }
     javascript = "window.TACTILE_KIT_DATA = " + json.dumps(data, ensure_ascii=False, allow_nan=False).replace("<", "\\u003c") + ";\n"
@@ -107,27 +130,20 @@ def build(root: Path, output: Path, design_path: Path, calibration_path: Path, r
         if name == "guide.html":
             sections, navigation = guide_content(root)
             content = content.replace("<!-- GUIDE_CONTENT -->", sections).replace("<!-- GUIDE_NAV -->", navigation)
+        else:
+            content = content.replace("<!-- EMBEDDED_GUIDES -->", embedded_guides(root))
         content = content.replace("{{VERSION}}", html.escape(data["version"]))
+        content = content.replace("{{PUBLIC_BASE}}", html.escape(public_base, quote=True))
         (site / name).write_text(content, encoding="utf-8")
     (site / ".nojekyll").write_text("", encoding="utf-8")
-    site_archive = output / "yam-tactile-site.zip"
-    with zipfile.ZipFile(site_archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
-        for path in sorted(site.rglob("*")):
-            if path.is_file():
-                entry = zipfile.ZipInfo(
-                    "yam-tactile-site/" + path.relative_to(site).as_posix(),
-                    date_time=(2026, 10, 10, 0, 0, 0),
-                )
-                entry.compress_type = zipfile.ZIP_DEFLATED
-                entry.external_attr = 0o100644 << 16
-                bundle.writestr(entry, path.read_bytes())
+    packages = make_packages(root, output, site, design_files, public_base)
     receipt = {
         "schema_version": 1,
         "version": data["version"],
         "geometry_status": design["geometry_status"],
         "calibration_data_kind": calibration["dataset_kind"],
         "hardware_validated": False,
-        "site_archive_sha256": hashlib.sha256(site_archive.read_bytes()).hexdigest(),
+        **packages,
         **artifact,
     }
     (output / "build-receipt.json").write_bytes(encoded_json(receipt))

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/data.js" defer></script>
   <script src="assets/model.js" defer></script>
+  <script src="assets/geometry.js" defer></script>
+  <script src="assets/viewer.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
@@ -16,9 +18,9 @@
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="YAM Tactile Kit home"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>YAM <b>TACTILE KIT</b></span></a>
     <nav aria-label="Main navigation">
-      <a href="#design">Design lab</a><a href="#force">Force path</a><a href="guide.html">Build guide</a>
+      <a href="#design">Design lab</a><a href="#force">Force path</a><a href="#instructions">Instructions</a>
       <a class="repo-link" hidden>GitHub ↗</a>
-      <a class="nav-download" href="downloads/yam-tactile-kit.zip" download>Source ZIP <span aria-hidden="true">↓</span></a>
+      <a class="nav-download" href="{{PUBLIC_BASE}}downloads/yam-tactile-complete.zip" download>Get everything <span aria-hidden="true">↓</span></a>
     </nav>
   </header>
   <main>
@@ -27,6 +29,17 @@
       <div class="hero-note"><span class="small-label">THE STARTING POINT</span><p>Keep the geometry that makes the finger useful. Give sensing and service space at the root.</p><a href="guide.html#review">Read the engineering rationale <span aria-hidden="true">↗</span></a></div>
     </section>
     <div class="scope-strip"><span class="status-dot"></span><strong>Concept release</strong><span>Interactive calculations and synthetic calibration are included. Hardware fit and performance are unverified.</span></div>
+
+    <section id="get-kit" class="section handoff-section">
+      <div class="handoff-banner"><div><p class="eyebrow">ONE COMPLETE HANDOFF</p><h2>All designs. All docs. All code.</h2><p>Get the editable concept geometry, diagrams, full instructions, source and tests, sample data, and offline website together.</p></div><a id="complete-download" class="button dark" href="{{PUBLIC_BASE}}downloads/yam-tactile-complete.zip" download>Download the complete kit ↓</a></div>
+      <div class="handoff-downloads">
+        <a href="downloads/yam-tactile-designs.zip" download><span>01 / DESIGN FILES</span><strong>CAD envelopes + drawings ↓</strong><small>SCAD · STL · JSON · SVG · BOM</small></a>
+        <a href="downloads/yam-tactile-kit.zip" download><span>02 / SOURCE CODE</span><strong>Reproducible repository ↓</strong><small>Python · JavaScript · tests · examples</small></a>
+        <a href="downloads/yam-tactile-docs.zip" download><span>03 / DOCUMENTATION</span><strong>Complete offline guide ↓</strong><small>Readable HTML · Markdown · references</small></a>
+        <a href="{{PUBLIC_BASE}}downloads/yam-tactile-site.zip" download><span>04 / OFFLINE WEBSITE</span><strong>All visualizations, offline ↓</strong><small>Extract and open index.html</small></a>
+      </div>
+      <p class="handoff-note">The design files are conceptual component envelopes. They do not include a fabrication-ready mount, calibrated flexure, or routed FPC. Published downloads use the release's example inputs; export your edited JSON and rebuild to create a customized package.</p>
+    </section>
 
     <section id="design" class="section design-section">
       <div class="section-heading"><div><p class="eyebrow">01 / MECHANICAL CONCEPT</p><h2>A thin tip. A serviceable base.</h2></div><button id="reset-design" class="button subtle">Reset example <span aria-hidden="true">↺</span></button></div>
@@ -64,8 +77,17 @@
       </div>
     </section>
 
+    <section id="cad" class="section cad-section">
+      <div class="section-heading"><div><p class="eyebrow">DESIGN FILES / EXPLORE IN 3D</p><h2>Inspect the pieces. Take the files.</h2></div><a class="button subtle" href="downloads/yam-tactile-designs.zip" download>Download design package ↓</a></div>
+      <div class="cad-layout">
+        <div class="cad-card"><canvas id="cad-view" tabindex="0" role="img" aria-label="Rotatable conceptual finger assembly. Drag or use arrow keys to rotate; Home resets the view."></canvas><div class="cad-toolbar"><button id="reset-cad" class="button subtle">Reset view ↺</button><label>Separate components<input id="cad-explode" type="range" min="0" max="100" value="20"></label><button id="export-cad" class="button subtle">Export current 3D JSON ↓</button></div></div>
+        <div class="cad-notes"><span class="small-label">COMPONENT ENVELOPES / MM</span><h3>A packaging model you can inspect and edit.</h3><p>The finger, mount, force module, and laminate are shown as separate volumes. Change the lab's dimensions above to update the view.</p><div class="cad-legend"><span><i style="background:#8c9d91"></i>Fixed mount placeholder</span><span><i style="background:#609b83"></i>Force module placeholder</span><span><i style="background:#bdd5bf"></i>Thin finger envelope</span><span><i style="background:#c89453"></i>Laminate allowance</span></div><p class="small-copy">The root blocks use illustrative dimensions. No mounting holes, strain element, tolerances, or structural behavior are modeled. Laminate overlap represents a recess allowance.</p><a class="text-link" href="#guide-design-files">How to use the design files ↗</a></div>
+      </div>
+      <details class="architecture-sheet"><summary>View the complete force-path and service-interface drawing <span>Open +</span></summary><img src="assets/original-concept.svg" alt="Original schematic showing the force path, replaceable finger interface, protected wiring, and two-station force principle"><a href="assets/original-concept.svg" download>Download original vector drawing ↓</a></details>
+    </section>
+
     <section id="force" class="section force-section">
-      <div class="section-heading"><div><p class="eyebrow">02 / UNDERSTAND THE MEASUREMENT</p><h2>Contact moves. Force should still make sense.</h2></div><a class="text-link" href="guide.html#review">Mechanics &amp; assumptions ↗</a></div>
+      <div class="section-heading"><div><p class="eyebrow">02 / UNDERSTAND THE MEASUREMENT</p><h2>Contact moves. Force should still make sense.</h2></div><a class="text-link" href="#guide-review">Mechanics &amp; assumptions ↗</a></div>
       <div class="force-layout">
         <div class="force-experiment">
           <div class="plot-header"><h3>Move the contact along the finger</h3><span class="unit-tag">IDEAL STATIC MODEL</span></div>
@@ -93,12 +115,12 @@
     </section>
 
     <section id="build" class="section build-section">
-      <div class="section-heading"><div><p class="eyebrow">04 / FROM NOTEBOOK TO BENCH</p><h2>A route you can follow.</h2></div><a class="button dark" href="guide.html">Open the complete guide ↗</a></div>
+      <div class="section-heading"><div><p class="eyebrow">04 / FROM NOTEBOOK TO BENCH</p><h2>A route you can follow.</h2></div><a class="button dark" href="#instructions">Read the instructions below ↓</a></div>
       <div class="build-steps">
-        <a href="guide.html#replicate"><span>01</span><h3>Reproduce</h3><p>Build this site, run the tests, and inspect the calculations from a clean checkout.</p><small>READY IN THIS RELEASE ↗</small></a>
-        <a href="guide.html#hardware"><span>02</span><h3>Measure &amp; design</h3><p>Capture the actual finger geometry and loads. Select the force element and design the root interface.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
-        <a href="guide.html#calibration"><span>03</span><h3>Assemble &amp; calibrate</h3><p>Build the bench prototype. Measure force at multiple positions and characterize interference.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
-        <a href="guide.html#validation"><span>04</span><h3>Validate &amp; scale</h3><p>Compare dexterity, wear, replacement, control timing, and repeatability across units.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+        <a href="#guide-replicate"><span>01</span><h3>Reproduce</h3><p>Build this site, run the tests, and inspect the calculations from a clean checkout.</p><small>READY IN THIS RELEASE ↗</small></a>
+        <a href="#guide-hardware"><span>02</span><h3>Measure &amp; design</h3><p>Capture the actual finger geometry and loads. Select the force element and design the root interface.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+        <a href="#guide-calibration"><span>03</span><h3>Assemble &amp; calibrate</h3><p>Build the bench prototype. Measure force at multiple positions and characterize interference.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+        <a href="#guide-validation"><span>04</span><h3>Validate &amp; scale</h3><p>Compare dexterity, wear, replacement, control timing, and repeatability across units.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
       </div>
       <div class="quick-start"><div><span class="small-label">NO PACKAGE INSTALL REQUIRED</span><h3>Rebuild the whole release.</h3><p>Python 3.10+ and a browser. Source, examples, tests, and site are included.</p><a href="downloads/yam-tactile-kit.zip" download class="text-link">Download complete source ↘</a></div><div><pre><code>/usr/bin/python3 scripts/reproduce.py
 /usr/bin/python3 -m unittest discover -s tests -v
@@ -106,8 +128,14 @@
       <div class="download-grid"><a href="downloads/bom.csv" download><span>Component checklist</span><strong>BOM / CSV ↓</strong></a><a href="downloads/measurements.template.json" download><span>Record the actual assembly</span><strong>Measurements / JSON ↓</strong></a><a href="downloads/finger-concept.svg" download><span>Save the generated concept</span><strong>Drawing / SVG ↓</strong></a><a href="downloads/build-design.json" download><span>Reproduce this published build</span><strong>Build inputs / JSON ↓</strong></a></div>
     </section>
 
+    <section id="instructions" class="section instructions-section">
+      <div class="section-heading"><div><p class="eyebrow">COMPLETE INSTRUCTIONS / ON THIS PAGE</p><h2>Everything needed to reproduce the release.</h2></div><a class="text-link" href="guide.html">Reading / print view ↗</a></div>
+      <p class="instructions-intro">Open any chapter below. These are the full source documents, not summaries; the same documents are included in the downloads.</p>
+      <!-- EMBEDDED_GUIDES -->
+    </section>
+
     <section id="sources" class="section sources-section">
-      <div class="section-heading"><div><p class="eyebrow">05 / TRACE THE REASONING</p><h2>Choose the signal you need.</h2></div><a class="text-link" href="guide.html#review">Full comparison &amp; references ↗</a></div>
+      <div class="section-heading"><div><p class="eyebrow">05 / TRACE THE REASONING</p><h2>Choose the signal you need.</h2></div><a class="text-link" href="#guide-review">Full comparison &amp; references ↗</a></div>
       <div class="sensor-cards"><article><span class="small-label">BASE PRODUCT / PROPOSED</span><h3>Calibrated root force</h3><p>Preserve a thin distal finger and measure total normal load at its mount. Commercial sensor fingers provide an architectural precedent.</p><a href="#source-S4">WEISS reference [S4] ↗</a></article><article><span class="small-label">OPTIONAL SURFACE INFORMATION</span><h3>FlexiTac strip</h3><p>Evaluate a small local pressure pad when contact location helps. Check the cover, crosstalk, drift, and cable routing.</p><a href="#source-S2">FlexiTac / HiPi [S2, S9] ↗</a></article><article><span class="small-label">OTHER MEASUREMENT NEEDS</span><h3>Magnetic or optical</h3><p>Compare AnySkin, uSkin, or optical touch when slip, shear, or fine contact geometry justify different packaging.</p><a href="#source-S5">Alternative sensors [S5–S7] ↗</a></article></div>
       <details class="source-details"><summary>Primary source ledger <span class="mono">13 REFERENCES · REVIEWED 2026-10-09</span></summary><div id="reference-list" class="reference-list"></div></details>
     </section>
