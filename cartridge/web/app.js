@@ -4,6 +4,13 @@
   const D = window.CARTRIDGE;
   if (!D) return;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const rgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
+  // redraw canvases when the viewer's theme changes (system setting or an explicit data-theme)
+  function onTheme(cb) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", cb);
+    new MutationObserver(cb).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  }
 
   // ---------------------------------------------------------------- taxel pad
   function padDemo(canvas) {
@@ -27,14 +34,19 @@
       draw();
     }
 
-    const stops = [[0, [239, 227, 201]], [0.22, [242, 193, 78]], [0.5, [217, 150, 30]], [0.78, [162, 86, 15]], [1, [92, 42, 7]]];
+    let C = {}, stops = [];
+    function readColours() {
+      C = { skin: css("--pad-skin"), skinLine: css("--pad-skin-line"), fill: css("--pad-fill"), line: css("--pad-line"),
+            electrode: css("--pad-electrode"), taxel: css("--pad-taxel"), ink: css("--ink"), ink2: css("--ink-2") };
+      stops = [0, 0.22, 0.5, 0.78, 1].map((p, i) => [p, rgb(css("--heat-" + i))]);
+    }
     function heat(t) {
       t = Math.max(0, Math.min(1, t));
       for (let i = 1; i < stops.length; i++) if (t <= stops[i][0]) {
         const [a, ca] = stops[i - 1], [b, cb] = stops[i], u = (t - a) / (b - a);
         return "rgb(" + ca.map((v, k) => Math.round(v + (cb[k] - v) * u)).join(",") + ")";
       }
-      return "rgb(92,42,7)";
+      return "rgb(" + stops[stops.length - 1][1].join(",") + ")";
     }
 
     function rrect(xa, za, xb, zb2, r) {   // rounded rect in mm (za bottom, zb2 top)
@@ -50,31 +62,31 @@
       if (!W) return;
       ctx.clearRect(0, 0, W, H);
       // skin face (open at the top, where it meets the core)
-      const g = ctx.createLinearGradient(0, Y(L.skin_top_z), 0, Y(L.skin_top_z - 6));
-      g.addColorStop(0, "rgba(247,240,229,0)"); g.addColorStop(1, "rgba(247,240,229,1)");
+      const sk = rgb(C.skin).join(","), g = ctx.createLinearGradient(0, Y(L.skin_top_z), 0, Y(L.skin_top_z - 6));
+      g.addColorStop(0, "rgba(" + sk + ",0)"); g.addColorStop(1, "rgba(" + sk + ",1)");
       rrect(-half, L.tcp_z, half, L.skin_top_z + 2, 4.5); ctx.fillStyle = g; ctx.fill();
-      ctx.strokeStyle = "#c9b8a2"; ctx.lineWidth = 1; ctx.stroke();
+      ctx.strokeStyle = C.skinLine; ctx.lineWidth = 1; ctx.stroke();
       // pad laminate
       rrect(-L.pad_half_x, L.pad_z[0], L.pad_half_x, L.pad_z[1], 1.5);
-      ctx.fillStyle = "#f2dca6"; ctx.fill(); ctx.strokeStyle = "#c98f1e"; ctx.stroke();
+      ctx.fillStyle = C.fill; ctx.fill(); ctx.strokeStyle = C.line; ctx.stroke();
       // electrodes: rows on one layer, columns on the other
       const e = L.electrode, aw = L.act_w, al = L.rows * L.pitch;
-      ctx.fillStyle = "rgba(176,99,31,.20)";
+      ctx.fillStyle = C.electrode;
       for (let r = 0; r < L.rows; r++) { const z = L.act_z0 + L.pitch * (r + 0.5); ctx.fillRect(X(-aw / 2), Y(z + e / 2), aw * s, e * s); }
       for (let c = 0; c < L.cols; c++) { const x = -aw / 2 + L.pitch * (c + 0.5); ctx.fillRect(X(x - e / 2), Y(L.act_z0 + al), e * s, al * s); }
       // taxels
       for (let r = 0; r < L.rows; r++) for (let c = 0; c < L.cols; c++) {
         const [x, z] = cellCentre(r, c), v = val[r * L.cols + c];
-        ctx.fillStyle = v > 0.01 ? heat(v) : "rgba(176,99,31,.42)";
+        ctx.fillStyle = v > 0.01 ? heat(v) : C.taxel;
         ctx.fillRect(X(x - e / 2), Y(z + e / 2), e * s, e * s);
       }
       if (cursor) {
         const [x, z] = cellCentre(cursor[0], cursor[1]);
-        ctx.strokeStyle = "#1b2b34"; ctx.lineWidth = 2;
+        ctx.strokeStyle = C.ink; ctx.lineWidth = 2;
         ctx.strokeRect(X(x - e / 2) - 2, Y(z + e / 2) - 2, e * s + 4, e * s + 4);
       }
       // labels
-      ctx.fillStyle = "#4b5b64"; ctx.font = "12px Archivo, system-ui, sans-serif"; ctx.textBaseline = "middle";
+      ctx.fillStyle = C.ink2; ctx.font = "12px Archivo, system-ui, sans-serif"; ctx.textBaseline = "middle";
       ctx.textAlign = "right";
       ctx.fillText("row 0", X(-L.pad_half_x) - 4, Y(cellCentre(0, 0)[1]));
       ctx.fillText("row " + (L.rows - 1), X(-L.pad_half_x) - 4, Y(cellCentre(L.rows - 1, 0)[1]));
@@ -147,6 +159,8 @@
     });
     canvas.addEventListener("keyup", e => { if (e.key === " " || e.key === "Enter") { release(); kick(); } });
     canvas.addEventListener("focus", () => { if (!cursor) { cursor = [Math.floor(L.rows / 2), Math.floor(L.cols / 2)]; draw(); report(); } });
+    readColours();
+    onTheme(() => { readColours(); draw(); });
     new ResizeObserver(layout).observe(canvas);
     layout();
   }
@@ -158,7 +172,7 @@
     try { v = new window.CartridgeViewer(canvas, D); } catch (err) { v = null; }
     if (!v || !v.ok) {
       const img = document.createElement("img");
-      img.src = "../out/renders/hero.png"; img.alt = "Rendered view of the YAM gripper with two tactile cartridges";
+      img.src = canvas.dataset.fallback; img.alt = "Rendered view of the YAM gripper with two tactile cartridges";
       canvas.replaceWith(img);
       const note = document.createElement("p");
       note.className = "view-fallback";
@@ -175,6 +189,7 @@
     $("zoom-in").addEventListener("click", () => v.zoom(0.85));
     $("zoom-out").addEventListener("click", () => v.zoom(1 / 0.85));
     $("reset-view").addEventListener("click", () => v.reset());
+    onTheme(() => v.request());
     const seen = new Set(), legend = $("legend");
     for (const p of v.parts) {
       if (seen.has(p.label)) continue;

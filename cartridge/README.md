@@ -17,7 +17,7 @@ python3 -m http.server -d cartridge 8000     # from the repository root
 # then open http://127.0.0.1:8000/web/
 ```
 
-GitHub doesn't render HTML from a branch, so use the local server (or download the branch).
+GitHub doesn't render HTML from a branch, so use the local server (or download the branch). To host the page somewhere else without touching the repository's main site, run `make standalone`: it writes a self-contained copy to `build/standalone/` (page, assets and images, with downloads pointing at the files on GitHub) that any static host can serve. The page follows the viewer's light or dark theme.
 
 ## Why a flat bay
 
@@ -43,7 +43,9 @@ A 6-column pad would narrow it to about 22 mm but needs a parameter pass on the 
 | `cad/render_views.py`, `cad/render_vtk.py` | section views (`out/check/`) and renders (`out/renders/`) |
 | `cad/export_web.py` | `web/data.js` and `web/index.html` from the outputs above |
 | `host/tactile_tools.py` | frame-stream parser, taxel → 3D points, FlexiTac bring-up adapter, auto-zero |
-| `tools/verify_web.py` | checks the page in headless Chromium at desktop and phone width |
+| `tools/verify_web.py` | checks the page in headless Chromium: light at desktop and phone width, dark at desktop |
+| `tools/build_standalone.py` | packages the page for hosting anywhere (`make standalone`) |
+| `tools/check_outputs.py` | stdlib-only consistency check of the committed outputs |
 | `out/` | generated design files: STEP, STL, DXF, JSON, sim model, renders, checks |
 | `docs/DESIGN_NOTES.md` | design reasoning, sensor choice, fleet considerations |
 

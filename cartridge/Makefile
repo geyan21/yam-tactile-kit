@@ -4,7 +4,7 @@ I2RT_ROOT ?= $(CURDIR)/third_party/i2rt
 I2RT_COMMIT := 120c3c81400171174604e503943f8d1ebc891058
 export I2RT_ROOT
 
-.PHONY: all cad fpc checks sim renders web verify i2rt
+.PHONY: all cad fpc checks sim renders web verify standalone i2rt
 
 all: cad fpc checks sim renders web
 
@@ -27,6 +27,9 @@ renders: checks # section views and shaded renders
 	$(PY) cad/render_vtk.py
 web: checks sim # web/data.js + web/index.html from the outputs above
 	$(PY) cad/export_web.py
+
+standalone:     # self-contained copy of the current page for any static host -> build/standalone/
+	$(PY) tools/build_standalone.py
 
 verify:         # output consistency (stdlib), host-tool self-test, page check in headless Chromium
 	$(PY) tools/check_outputs.py

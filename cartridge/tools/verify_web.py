@@ -4,9 +4,12 @@ Check the cartridge webpage in headless Chromium (Playwright):
   * the 3D view draws something other than background and responds to a drag and to "separate parts"
   * pressing the taxel pad updates the readout
   * no horizontal scrolling at phone width
+Runs at desktop and phone width in the light theme and at desktop width in the dark theme.
 Screenshots go to build/web-review/. Exit code 1 on any failure.
 
-Usage (from cartridge/): python3 tools/verify_web.py
+Usage (from cartridge/): python3 tools/verify_web.py                     the repo page, web/index.html
+                         python3 tools/verify_web.py --standalone DIR    a tools/build_standalone.py output,
+                                                                         wrapped in a host-like skeleton
 """
 import functools
 import http.server
@@ -34,9 +37,16 @@ def busy(png_bytes):
     return st.stddev[0]
 
 
-def check_page(browser, url, name, viewport, phone):
+SKELETON = ('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, '
+            'initial-scale=1, viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);'
+            'padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui}img{max-width:100%}'
+            '[hidden]{display:none!important}</style></head><body>{}</body></html>')
+
+
+def check_page(browser, url, name, viewport, phone, scheme="light"):
     problems, notes = [], []
-    ctx = browser.new_context(viewport=viewport, device_scale_factor=2 if phone else 1, is_mobile=phone, has_touch=phone)
+    ctx = browser.new_context(viewport=viewport, device_scale_factor=2 if phone else 1, is_mobile=phone, has_touch=phone,
+                              color_scheme=scheme)
     page = ctx.new_page()
     errors, failed = [], []
     page.on("pageerror", lambda e: errors.append(f"pageerror: {e}"))
@@ -106,25 +116,35 @@ def check_page(browser, url, name, viewport, phone):
 
 def main():
     os.makedirs(SHOTS, exist_ok=True)
-    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=ROOT))
+    standalone = None
+    if len(sys.argv) > 2 and sys.argv[1] == "--standalone":
+        standalone = os.path.abspath(sys.argv[2])
+        page = open(os.path.join(standalone, "index.html")).read()
+        open(os.path.join(standalone, "_preview.html"), "w").write(SKELETON.replace("{}", page))
+    root = standalone or ROOT
+    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=root))
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
-    url = f"http://127.0.0.1:{httpd.server_port}/web/index.html"
+    url = f"http://127.0.0.1:{httpd.server_port}/" + ("_preview.html" if standalone else "web/index.html")
+    tag = "standalone-" if standalone else ""
     problems, notes = [], []
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"])
-        for name, vp, phone in (("desktop", {"width": 1280, "height": 900}, False),
-                                ("phone", {"width": 390, "height": 844}, True)):
-            pr, nt = check_page(browser, url, name, vp, phone)
+        for name, vp, phone, scheme in (("desktop", {"width": 1280, "height": 900}, False, "light"),
+                                        ("phone", {"width": 390, "height": 844}, True, "light"),
+                                        ("dark", {"width": 1280, "height": 900}, False, "dark")):
+            pr, nt = check_page(browser, url, tag + name, vp, phone, scheme)
             problems += pr
             notes += nt
         browser.close()
+    if standalone:
+        os.remove(os.path.join(standalone, "_preview.html"))
     httpd.shutdown()
     for n in sorted(set(notes)):
         print("note:", n)
     if problems:
         print("\n".join(problems))
         sys.exit(1)
-    print(f"page OK at desktop and phone width; screenshots in {os.path.relpath(SHOTS, ROOT)}/")
+    print(f"page OK in light (desktop, phone) and dark (desktop); screenshots in {os.path.relpath(SHOTS, ROOT)}/")
 
 
 if __name__ == "__main__":

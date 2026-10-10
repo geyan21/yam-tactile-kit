@@ -198,7 +198,9 @@
       const w = Math.max(1, Math.round(c.clientWidth * dpr)), h = Math.max(1, Math.round(c.clientHeight * dpr));
       if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
       gl.viewport(0, 0, w, h);
-      gl.clearColor(0.910, 0.929, 0.941, 1);
+      const bg = getComputedStyle(this.canvas).getPropertyValue("--view-bg").trim() || "#e8edf0";
+      const [r, g, b] = hex(bg.length === 4 ? "#" + [1, 2, 3].map(i => bg[i] + bg[i]).join("") : bg);
+      gl.clearColor(r, g, b, 1);
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
       const { center, radius } = this.bounds();
       // fit the assembly's bounding sphere to the narrower side of the canvas, times the zoom factor
