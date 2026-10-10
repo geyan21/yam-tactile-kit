@@ -1,5 +1,9 @@
 # ENPIRE tactile engineering study
 
+The website has [a separate page for each design](https://geyan21.github.io/yam-tactile-kit/designs.html). Edit `design_catalog.json` to update the shared page fields. `scripts/design_pages.py` generates the directory, individual pages and functional diagrams during the standard site build; the physics/CAD snapshots remain separate.
+
+The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
+
 The build study has three separate prototypes. **R1** places six replaceable resistive cells on the real ENPIRE contact profile. **L1** routes the complete finger's normal load through a purchased strain-gauge cell and aluminum carriers. **B1** adds embedded TPU magnets and a fixed sensor spine while preserving the thin nail. All require physical assembly and testing.
 
 **Available:** editable CAD generators; 28 checked STEP/STL solids including three purchased/component references; an electrode cut sheet; assembly drawings; three BOMs; B1 editable PCB and checked Gerbers/drills; separate firmware and raw recorders; R1/L1 force analysis; material recipes; and student test plans.

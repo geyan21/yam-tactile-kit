@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"src"))
 from tactile_kit.records import execution
+from design_pages import load_catalog
 
 API="https://api.github.com/repos/geyan21/yam-tactile-kit"
 SITE="https://geyan21.github.io/yam-tactile-kit/"
@@ -81,6 +82,11 @@ def main():
                 summary["architecture_artifacts_match"]={name:read(SITE+"assets/concepts/"+name)==(ROOT/"build/site/assets/concepts"/name).read_bytes()
                     for name in ("concept_snapshot.json","b2_board_concept.svg","c1_concept.svg","magnetic_scaling.svg","magnetic_gap.svg",
                                  "cad/b2_pcb_fit_witness.step","cad/c1_strain_beam_coupon.step")}
+                pages=["designs.html",*[item["slug"]+".html" for item in load_catalog()["designs"]]]
+                summary["separate_design_pages_match"]={name:read(SITE+name)==(ROOT/"build/site"/name).read_bytes() for name in pages}
+                summary["design_assets_match"]={name:read(SITE+"assets/"+name)==(ROOT/"build/site/assets"/name).read_bytes()
+                    for name in ["design-catalog.json","design-pages.css","design-viewer.js","r1-placement.svg",
+                                 *["design-schematics/"+item["slug"]+".svg" for item in load_catalog()["designs"]]]}
         except HTTPError as error:
             summary["site_http_error"]=error.code
         summary["published_verified"]=(
@@ -95,6 +101,10 @@ def main():
             and all(summary.get("sensor_placement_assets_match",{}).values())
             and bool(summary.get("architecture_artifacts_match"))
             and all(summary.get("architecture_artifacts_match",{}).values())
+            and bool(summary.get("separate_design_pages_match"))
+            and all(summary.get("separate_design_pages_match",{}).values())
+            and bool(summary.get("design_assets_match"))
+            and all(summary.get("design_assets_match",{}).values())
             and any(run["conclusion"]=="success" for run in summary["runs"])
         )
         record["publication"]=summary

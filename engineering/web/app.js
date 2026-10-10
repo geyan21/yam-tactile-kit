@@ -59,7 +59,9 @@
   document.getElementById("part-count").textContent=`${partCount} digital solids, including three purchased/component references`;
   document.getElementById("digital-count").textContent=partCount;
   for(const candidate of data.study.candidates){
-    const row=element("tr",null),name=element("td",candidate.name),coverage=element("td",candidate.coverage),next=element("td",candidate.next),state=element("td",null);
+    const row=element("tr",null),name=element("td",null),coverage=element("td",candidate.coverage),next=element("td",candidate.next),state=element("td",null);
+    const target=(data.designPages||{})[candidate.id];
+    name.append(target?link(candidate.name+" →",target):document.createTextNode(candidate.name));
     state.append(element("span",candidate.status,{class:"state"}));row.append(name,coverage,next,state);
     document.getElementById("candidate-table").append(row);
   }

@@ -1,5 +1,7 @@
 # Is magnetic touch the easiest scalable choice?
 
+**Each design now has its own page.** Start at [the design directory](https://geyan21.github.io/yam-tactile-kit/designs.html), or open [B2](https://geyan21.github.io/yam-tactile-kit/b2.html), [C1](https://geyan21.github.io/yam-tactile-kit/c1.html), [rigid-nail sensing](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html), or [the recessed magnetic frame](https://geyan21.github.io/yam-tactile-kit/recessed-magnetic.html). This page keeps the shared evidence and comparison.
+
 **Magnetic sensing is a good prototype direction for this compliant finger. B1's present packaging is not yet what we should copy into a production batch.** For repeated builds, the strongest immediate improvement is one rigid magnetic PCB with a located, replaceable skin. For dependable aggregate grip force around steel or motors, a separate strain-sensing load path is worth testing in parallel.
 
 The recommendation is based on primary literature, an audit of our actual B1 parts, and the new calculations below. **No B1, B2 or C1 hardware has been qualified.** “Better” here means a promising design change with a stated benefit and a test that could reject it.
@@ -46,6 +48,8 @@ Test the installed motor, both jaws, the complete opening range, steel parts app
 
 ## B2: the simpler magnetic packaging design
 
+[Open the separate B2 page: sensors, placement, files and remaining work](https://geyan21.github.io/yam-tactile-kit/b2.html).
+
 **B2 keeps the sensing principle and sensor positions, but consolidates the electronics.** Inspection confirms that all five B1 heads already share a common PCB plane, so a single rigid board is geometrically possible.
 
 ![B2 consolidated PCB outline and component allocation](../concepts/b2_board_concept.svg)
@@ -71,11 +75,15 @@ Do not equate fewer pieces with lower finished-unit cost: panel utilization, fou
 
 ### A further tip redesign: measure a rigid nail at its base
 
+[Open the separate rigid-nail concept page](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html).
+
 For a later complete finger redesign, a rigid forked nail could be supported on a small, controlled-deflection mechanism and sensed at its base. This could replace the handmade N0 surface laminates while keeping the leading gripping surfaces bare and thin. The force-sensitive-nail commercial example above makes this a relevant benchmark.
 
 The new mechanism would need a deliberate normal/shear/torque load path, overload protection, repeatable mounting and calibration. A magnetic version would retain magnetic-interference risks; a strain version would need bridge matching. This tip mechanism is **not present in the B2 outline witness** and has no released manufacturing design here. For the first B2 comparison, keep the two existing N0 pads so packaging can be evaluated separately.
 
 ### A further mechanical option: recess the board into a revised hard frame
+
+[Open the separate recessed-board study page](https://geyan21.github.io/yam-tactile-kit/recessed-magnetic.html).
 
 ![Calculated signal and output-range tradeoff when moving the board inward](../concepts/magnetic_gap.svg)
 
@@ -86,6 +94,8 @@ This is a larger redesign than B2's initial consolidation. The inward positions 
 Keep the original B1 plane for the first B2 packaging comparison. Investigate a recessed frame only if measured signal quality or bulk justifies it. No recessed-frame STL is supplied or claimed as verified.
 
 ## C1: a magnet-free way to measure whole-finger force
+
+[Open the separate C1 page: sensing principle, coupon files and limits](https://geyan21.github.io/yam-tactile-kit/c1.html).
 
 **C1 puts force sensing in a stiff metal root element, while leaving the thin nail and compliant contact surface passive.** All nail and TPU loads must pass through that element. It could avoid magnetic field artifacts and the need to place a pressure laminate on the nail for normal-force measurement.
 
@@ -116,6 +126,8 @@ This makes C1 worth investigating for force stability, but it is not automatical
 A root element also measures finger weight and inertial loads. Test unloaded poses and no-contact motions, use an explicit pose-aware reference/compensation model, and never silently zero away a loaded grasp. Static coupon results do not establish contact reliability on a moving robot.
 
 ## Other alternatives worth considering
+
+Each alternative also has a separate page: [flexible resistive matrix](https://geyan21.github.io/yam-tactile-kit/flexible-matrix.html), [capacitive skin](https://geyan21.github.io/yam-tactile-kit/capacitive.html), [pneumatic finger](https://geyan21.github.io/yam-tactile-kit/pneumatic.html), [optical finger](https://geyan21.github.io/yam-tactile-kit/optical.html), and [packaged force button](https://geyan21.github.io/yam-tactile-kit/force-button.html).
 
 | Approach | Why it could be better | What prevents an immediate switch here |
 |---|---|---|

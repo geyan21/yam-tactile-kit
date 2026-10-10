@@ -1,5 +1,7 @@
 # B1: keep controlled bending, keep a precise tip
 
+[B1 design page: exact sensors, placement, 3D view and files](https://geyan21.github.io/yam-tactile-kit/b1.html).
+
 B1 is a **separate magnetic insert prototype**. Keep R1 and L1 as comparison builds. The design decision is to retain compliance in the TPU contact region and retain the original hard frame and thin nail. Do not deliberately soften the whole frame to make a sensor work.
 
 **Start with [the exact sensor choice and placement map](SENSORS.md).** For your precision-task prototype, use **five MLX90393SLW-ABA-011 heads**, **four 3 × 1 mm magnets in the TPU**, and **two N0 pressure-film pads on the object-facing nail prongs**. The labeled map shows S0–S4, M0–M3 and T0/T1, with distances from the nail tip and downloadable coordinates.

@@ -1,5 +1,7 @@
 # Which sensors to use, and exactly where they go
 
+For one page per design, use [the design directory](https://geyan21.github.io/yam-tactile-kit/designs.html). The [B1 page](https://geyan21.github.io/yam-tactile-kit/b1.html) gathers its sensor list, diagrams, assembly links and files in one place.
+
 **For the new B1 prototype, build five MLX90393 magnetic heads, install four magnets in the soft TPU, and add two thin N0 pressure-film pads on the hard nail. All quantities below are per finger.**
 
 This is the concrete prototype recommendation for your thin-tip, dexterous gripper. B1 is still awaiting physical validation and force calibration through the requested 20 N per finger range.

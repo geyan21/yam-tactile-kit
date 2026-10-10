@@ -1,5 +1,7 @@
 # ENPIRE / YAM tactile engineering study
 
+[**Design directory — one clear page per design**](https://geyan21.github.io/yam-tactile-kit/designs.html): [R1](https://geyan21.github.io/yam-tactile-kit/r1.html), [L1](https://geyan21.github.io/yam-tactile-kit/l1.html), [B1](https://geyan21.github.io/yam-tactile-kit/b1.html), [B2](https://geyan21.github.io/yam-tactile-kit/b2.html), [C1](https://geyan21.github.io/yam-tactile-kit/c1.html), [rigid nail](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html), and the separately labeled alternatives. Every page includes sensor choice, placement, files, status and next steps.
+
 [Visual website](https://geyan21.github.io/yam-tactile-kit/) · [Which sensors go where](engineering/docs/SENSORS.md) · [Build B1](engineering/docs/BUILD_B1.md) · [Student starting packet](engineering/docs/START.md) · [Build R1](engineering/docs/BUILD_R1.md) · [Build L1](engineering/docs/BUILD_L1.md)
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.

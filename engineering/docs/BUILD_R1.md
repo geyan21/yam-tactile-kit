@@ -1,5 +1,7 @@
 # Build R1: two nail cells and four pad cells
 
+[R1 design page: purpose, sensors, placement, 3D view and files](https://geyan21.github.io/yam-tactile-kit/r1.html).
+
 **This is a hand-assembled prototype recipe.** The cut sheet is dimensioned tooling, not a routed production FPC. Build three identified specimens before judging repeatability.
 
 ## Parts and orientation

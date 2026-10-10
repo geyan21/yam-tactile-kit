@@ -1,5 +1,7 @@
 # Build L1: force through the complete finger mount
 
+[L1 design page: load path, sensor, 3D view and files](https://geyan21.github.io/yam-tactile-kit/l1.html).
+
 **L1 is the second physical prototype to build.** It adds a purchased strain-gauge load cell between the original ENPIRE finger and the YAM jaw. A normal contact on the nail or TPU should pass through that cell. The target is 0–20 N per finger. Actual force accuracy, moment sensitivity and durability are unmeasured.
 
 R1 and L1 answer different questions. [R1](BUILD_R1.md) tests local contact coverage with a thin, replaceable skin. L1 tests aggregate normal force while leaving the original contact surfaces intact. Neither has yet passed the physical comparison.

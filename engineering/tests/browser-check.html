@@ -12,6 +12,7 @@ document.getElementById("page").addEventListener("load",async()=>{
     check("all R1, L1 and B1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===56);
     check("current designs and two new concepts listed separately",d.querySelectorAll("#candidate-table tr").length===7);
     check("scalability study is reachable",d.querySelector('a[href="architecture.html"]')!==null);
+    check("design directory is prominent and candidates have their own pages",d.querySelector('.hero a[href="designs.html"]')&&d.querySelectorAll("#candidate-table a").length===7);
     const before=w.EngineeringUI.viewer.yaw;
     d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
     await pause(100);check("keyboard rotates actual mesh",w.EngineeringUI.viewer.yaw!==before);

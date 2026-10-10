@@ -23,7 +23,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
     parser.add_argument("--checks-only",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
@@ -36,7 +36,9 @@ def main():
             temporary=Path(temporary);site=temporary/"site"
             shutil.copytree(ROOT/"build/site",site)
             shutil.copyfile(ROOT/"engineering/tests/browser-check.html",site/"qa.html")
+            shutil.copyfile(ROOT/"engineering/tests/design-pages-check.html",site/"design-qa.html")
             (site/"mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="index.html" title="390px mobile website" style="width:390px;height:2400px;border:0"></iframe></body></html>')
+            (site/"design-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="b2.html" title="390px mobile design page" style="width:390px;height:2500px;border:0"></iframe></body></html>')
             index=(site/"index.html").read_text()
             for name,style in (
                 ("design",".hero,.brief{display:none} #design{padding-top:25px}"),
@@ -77,8 +79,15 @@ def main():
                 (output/"checks.json").write_text(json.dumps(result,indent=2)+"\n")
                 record["checks"]=result
                 if not result["passed"]:raise RuntimeError(f"Browser checks failed: {result}")
+                design_document=browser("design-checks",["--window-size=1440,1200","--virtual-time-budget=20000","--dump-dom",base+"design-qa.html"])
+                design_match=re.search(r'<pre id="qa-results"[^>]*>([\s\S]*?)</pre>',design_document)
+                if not design_match:raise RuntimeError("No design-page browser check output")
+                design_result=json.loads(html.unescape(design_match.group(1)))
+                (output/"design-checks.json").write_text(json.dumps(design_result,indent=2)+"\n")
+                record["design_checks"]=design_result
+                if not design_result["passed"]:raise RuntimeError(f"Design page checks failed: {design_result}")
                 if args.checks_only:
-                    print(json.dumps({"passed":True,"checks":len(result["checks"]),"observations":result.get("observations")},indent=2))
+                    print(json.dumps({"passed":True,"checks":len(result["checks"]),"design_checks":len(design_result["checks"]),"observations":design_result.get("observations")},indent=2))
                     return
                 for name,size,page in (
                     ("desktop","1440,1140","index.html"),("design","1440,1100","design-review.html"),
@@ -93,10 +102,15 @@ def main():
                     ("c1-concept","1400,700","assets/concepts/c1_concept.svg"),
                     ("magnetic-scaling","1400,650","assets/concepts/magnetic_scaling.svg"),
                     ("magnetic-gap","1400,650","assets/concepts/magnetic_gap.svg"),
+                    ("design-directory","1440,1600","designs.html"),
+                    ("r1-page","1440,1450","r1.html"),
+                    ("b1-page","1440,1450","b1.html"),("b2-page","1440,1450","b2.html"),
+                    ("c1-page","1440,1450","c1.html"),("nail-page","1440,1450","rigid-nail.html"),
+                    ("design-mobile","500,2600","design-mobile.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])
-                print(json.dumps({"passed":True,"checks":len(result["checks"]),"screenshots":str(output)},indent=2))
+                print(json.dumps({"passed":True,"checks":len(result["checks"]),"design_checks":len(design_result["checks"]),"screenshots":str(output)},indent=2))
             finally:
                 server.shutdown();server.server_close();thread.join(timeout=2)
                 record["intentional_stop_requests"].append("Closed this verifier's owned loopback HTTP server")

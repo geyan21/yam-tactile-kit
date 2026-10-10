@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Separate design pages verification</title>
+<body><iframe id="page" title="Design page under test" style="width:1200px;height:1100px;border:0"></iframe><pre id="qa-results">pending</pre>
+<script>
+(async()=>{
+  const checks=[],observations={};
+  const check=(name,value)=>checks.push({name,passed:Boolean(value)});
+  const frame=document.getElementById("page");
+  const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+  async function load(name){
+    return new Promise((resolve,reject)=>{
+      const timer=setTimeout(()=>reject(Error("Page load timed out: "+name)),5000);
+      frame.addEventListener("load",()=>{clearTimeout(timer);resolve();},{once:true});
+      frame.src=name;
+    });
+  }
+  try{
+    const catalog=await (await fetch("assets/design-catalog.json")).json();
+    await load("designs.html");
+    let d=frame.contentDocument;
+    const cards=[...d.querySelectorAll("[data-design-card]")];
+    check("directory contains every design once",cards.length===catalog.designs.length&&new Set(cards.map(c=>c.getAttribute("href"))).size===catalog.designs.length);
+    check("directory separates prototypes, concepts and alternatives",catalog.groups.every(group=>d.getElementById(group.id)));
+    frame.style.width="390px";await pause(60);
+    check("directory fits mobile width",d.documentElement.scrollWidth<=frame.contentWindow.innerWidth+1);
+    for(const item of catalog.designs){
+      frame.style.width="1200px";
+      await load(item.slug+".html");
+      d=frame.contentDocument;const w=frame.contentWindow;
+      const intro=d.querySelector("[data-design-id]");
+      check(item.id+": distinct title and readiness",intro?.dataset.designId===item.id&&intro.dataset.designStage===item.group&&d.querySelector("h1")?.textContent===item.title&&d.querySelector(".design-status")?.textContent===item.status);
+      check(item.id+": explicit sensor choices and placement",d.querySelectorAll(".design-sensor-table tbody tr").length===item.sensors.length);
+      check(item.id+": files, missing work and next steps",d.querySelectorAll(".design-resource-table tbody tr").length===item.resources.length&&d.querySelectorAll(".design-missing li").length===item.missing.length&&d.querySelectorAll(".design-next li").length===item.next_steps.length);
+      const image=d.querySelector(".design-main-figure img");
+      check(item.id+": diagram loads",image?.complete&&image.naturalWidth>0);
+      check(item.id+": current design is marked in navigation",d.querySelector('.design-page-nav a[aria-current="page"]')?.getAttribute("href")===item.slug+".html");
+      if(item.viewer_model){
+        const details=d.querySelector("[data-design-viewer]");
+        details.open=true;details.dispatchEvent(new w.Event("toggle"));
+        await pause(40);
+        w.DesignPageViewer?.draw();
+        check(item.id+": correct released 3D assembly renders",w.DesignPageViewer?.model.id===item.viewer_model&&Number(d.querySelector(".design-canvas").dataset.faces)>1000);
+        const checkbox=d.querySelector("[data-design-layer]");
+        const original=w.DesignPageViewer?.visible.size;
+        checkbox.click();w.DesignPageViewer.draw();
+        check(item.id+": layer controls work",w.DesignPageViewer.visible.size===original-1);
+      }
+      frame.style.width="390px";await pause(50);
+      check(item.id+": readable mobile layout without page overflow",d.documentElement.scrollWidth<=w.innerWidth+1);
+      check(item.id+": sensor placement is visible without horizontal scrolling",
+        [...d.querySelectorAll(".design-sensor-table td")].every(cell=>{
+          const bounds=cell.getBoundingClientRect();
+          return bounds.width>100&&bounds.height>0&&bounds.left>=0&&bounds.right<=w.innerWidth+1;
+        }));
+    }
+    observations.design_pages=catalog.designs.length;
+  }catch(error){checks.push({name:error.stack||error.message,passed:false});}
+  document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks,observations});
+})();
+</script></body></html>

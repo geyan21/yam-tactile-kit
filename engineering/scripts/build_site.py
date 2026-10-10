@@ -14,8 +14,10 @@ import zipfile
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"src"))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from tactile_kit.records import execution
 from tactile_kit.render import markdown
+from design_pages import load_catalog,build_design_pages,design_content
 
 SITE=ROOT/"build/site"
 RELEASE=ROOT/"engineering/release"
@@ -60,7 +62,7 @@ def verify_snapshot():
 def source_entries():
     roots=[ROOT/"README.md",ROOT/"LICENSE",ROOT/".gitignore",ROOT/".github/workflows",ROOT/"src/tactile_kit"]
     roots += [ROOT/"engineering"/name for name in (
-        "README.md","bom.csv","l1_bom.csv","b1_bom.csv","study.json","requirements.in","requirements.lock",
+        "README.md","bom.csv","l1_bom.csv","b1_bom.csv","study.json","design_catalog.json","requirements.in","requirements.lock",
         "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics","research","concepts",
     )]
     entries={}
@@ -87,6 +89,7 @@ def chapter(source):
     for name,slug,_ in DOCS:
         text=text.replace(f"]({name}.md)",f"]({slug}.html)")
     for old,new in (
+        ("https://geyan21.github.io/yam-tactile-kit/",""),
         ("../release/","assets/"),("../web/","assets/"),
         ("../concepts/","assets/concepts/"),("../research/","downloads/"),
         ("../templates/","downloads/"),("../l1_bom.csv","downloads/l1_bom.csv"),("../b1_bom.csv","downloads/b1_bom.csv"),
@@ -97,11 +100,12 @@ def chapter(source):
 
 
 def document_page(title,body,active=""):
-    nav="".join(f'<a class="{"active" if slug==active else ""}" href="{slug}.html">{html.escape(label)}</a>' for _,slug,label in DOCS)
+    nav='<a class="all-designs-link" href="designs.html">All designs · one page each →</a>'
+    nav+="".join(f'<a class="{"active" if slug==active else ""}" href="{slug}.html">{html.escape(label)}</a>' for _,slug,label in DOCS)
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)} · ENPIRE tactile</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<title>{html.escape(title)} · ENPIRE tactile</title><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/design-pages.css"></head><body>
 <a class="skip" href="#document">Skip to instructions</a>
-<header><a class="brand" href="index.html">ENPIRE <b>TACTILE</b></a><nav aria-label="Main"><a href="index.html#design">Design</a><a href="index.html#build">Files</a><a href="index.html#evidence">Results</a><a href="https://github.com/geyan21/yam-tactile-kit">GitHub ↗</a></nav></header>
+<header><a class="brand" href="index.html">ENPIRE <b>TACTILE</b></a><nav aria-label="Main"><a href="designs.html">Designs</a><a href="index.html#build">Files</a><a href="index.html#evidence">Results</a><a href="https://github.com/geyan21/yam-tactile-kit">GitHub ↗</a></nav></header>
 <main class="doc-layout"><aside class="doc-nav" aria-label="Chapters"><span class="label">BUILD PACKET / R1 + L1 + B1</span>{nav}<hr><a href="guide.html">Complete printable guide</a><a href="downloads/enpire-engineering-kit.zip" download>Download everything ↓</a></aside>
 <article class="doc-body" id="document"><p class="doc-source">Experimental design · 20 N per finger qualification target · physical measurements pending</p>{body}</article></main>
 <footer><a href="index.html">← Engineering notebook</a><a href="downloads/enpire-source.zip" download>Source, CAD and documentation ↓</a></footer></body></html>'''
@@ -110,6 +114,7 @@ def document_page(title,body,active=""):
 def main():
     with execution(ROOT/"build/records","Build a portable engineering website with verified CAD downloads and no synthetic performance claims") as record:
         manifest=verify_snapshot()
+        catalog=load_catalog()
         (ROOT/"build/engineering").mkdir(parents=True,exist_ok=True)
         if SITE.exists():
             shutil.rmtree(SITE)
@@ -117,7 +122,8 @@ def main():
         assets=SITE/"assets";downloads=SITE/"downloads"
         assets.mkdir();downloads.mkdir()
         for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg","b1-wiring.svg",
-                     "sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg"):
+                     "sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg",
+                     "design-pages.css","design-viewer.js","r1-placement.svg"):
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
@@ -154,15 +160,22 @@ def main():
             "b1":json.loads((RELEASE/"b1/b1_manifest.json").read_text()),
             "l1Contacts":json.loads((RELEASE/"l1/contact_sites.json").read_text())["sites"],
             "study":json.loads((ROOT/"engineering/study.json").read_text()),
+            "designPages":{item["id"]:item["slug"]+".html" for item in catalog["designs"]},
         }
         (assets/"data.js").write_text("window.ENGINEERING="+json.dumps(payload,separators=(",",":")).replace("</","<\\/")+";\n")
-        shutil.copyfile(WEB/"index.html",SITE/"index.html")
+        design_links='<nav class="design-switcher" aria-label="Separate design pages"><a href="designs.html">All designs →</a>'
+        design_links+="".join(f'<a href="{item["slug"]}.html">{html.escape(item["title"].split(" · ")[0])}</a>'
+                              for item in catalog["designs"] if item["group"]!="research")
+        design_links+="</nav>"
+        (SITE/"index.html").write_text((WEB/"index.html").read_text().replace("<!-- DESIGN_PAGE_LINKS -->",design_links))
+        build_design_pages(SITE,catalog)
         all_chapters=[]
         for source,slug,title in DOCS:
             content=chapter(source)
             (SITE/f"{slug}.html").write_text(document_page(title,content,slug))
             all_chapters.append(f'<section id="{slug}">{content}</section>')
-        (SITE/"guide.html").write_text(document_page("Complete build and test guide",'<div class="all-guide">'+"".join(all_chapters)+"</div>"))
+        overviews=[f'<section id="design-{item["slug"]}">{design_content(item,catalog,viewer=False)}</section>' for item in catalog["designs"]]
+        (SITE/"guide.html").write_text(document_page("Complete build and test guide",'<div class="all-guide">'+"".join(overviews+all_chapters)+"</div>"))
         source=source_entries()
         write_zip(downloads/"enpire-source.zip",source)
         designs={str(path.relative_to(RELEASE)):path.read_bytes() for path in RELEASE.rglob("*") if path.is_file() and path.name!="models.json"}
@@ -186,6 +199,7 @@ def main():
         complete["START_HERE.txt"]=(
             "ENPIRE tactile R1.0 + L1.0 + B1.0 engineering packet\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
+            "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
             "STEP/STL tooling and carriers: source/engineering/release/r1/cad and l1/cad.\n"
             "R1: six local tactile zones. L1: purchased load cell in the complete finger force path.\n"
@@ -207,7 +221,8 @@ def main():
             "site":"build/site","cad_parts":sum(len(payload[name]["parts"]) for name in ("r1","l1","b1")),
             "purchased_reference_solids":3,
             "separate_concept_solids":2,
-            "documents":len(DOCS),"requested_per_finger_force_n":20,
+            "documents":len(DOCS)+len(catalog["designs"]),"design_pages":len(catalog["designs"]),
+            "requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],
             "complete_packet_bytes":(downloads/"enpire-engineering-kit.zip").stat().st_size,
             "snapshot_files_verified":len(manifest["files"]),

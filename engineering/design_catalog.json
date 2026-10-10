@@ -1,0 +1,310 @@
+{
+  "schema": "yam-design-pages/1",
+  "groups": [
+    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1 and B1 have assembly files and readout code. All still require physical qualification."},
+    {"id": "concept", "title": "Our next design concepts", "description": "Separate ideas and engineering studies. Check each page for exactly which files exist and which work remains."},
+    {"id": "research", "title": "Alternative sensing approaches", "description": "Reference approaches considered in the study. These are not completed ENPIRE designs."}
+  ],
+  "designs": [
+    {
+      "id": "R1", "slug": "r1", "title": "R1 · Local pressure-film cells", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "Tooling, wiring and code are supplied. No physical R1 performance has been established.",
+      "summary": "Add six thin resistive contact cells to the existing finger: two on the hard nail and four on the compliant TPU.",
+      "signal": "Local electrical conductance; local force estimates require calibration.",
+      "best_for": "A first contact-coverage and material experiment with common materials.",
+      "tradeoff": "Handmade laminates, drift, hysteresis, wear and bending behavior need measurement.",
+      "sensors": [
+        ["CH0 / CH1", "Two N0 pressure-film laminates: 0.10 mm conductive film between copper electrodes and insulating backing", "One on the object-facing surface of each hard nail prong"],
+        ["CH2–CH5", "Four separate pressure-film cells on conformal silicone saddles", "Along the four TPU contact regions, ordered from tip to base"],
+        ["Readout", "Pico + two ADS1115 boards; six resistor dividers and reference checks", "At the wrist/base; sensing-cell leads run along the finger"]
+      ],
+      "placement": "Use the R1 CH0–CH5 cut patterns. The two nail pads use the thin N0 construction first; it adds about 0.40 mm nominal mounted thickness. Keep the central nail notch open.",
+      "visual": {"path": "assets/r1-placement.svg", "alt": "R1's two nail cells CH0/CH1 and four conformal TPU cells CH2–CH5", "caption": "Sensing locations from the released R1 geometry. Use the cut sheet for the actual fabrication patterns."},
+      "schematic": ["Object presses", "Six film cells", "Two ADS1115 ADCs", "Pico raw stream"],
+      "viewer_model": "assembly",
+      "resources": [
+        ["Assembly", "R1 build instructions", "build-r1.html"],
+        ["Electronics", "Wiring, firmware and raw acquisition", "electronics.html"],
+        ["Materials", "R1 bill of materials", "downloads/bom.csv"],
+        ["Patterns", "Actual-size electrode and carrier cut sheet", "downloads/r1_cut_sheet.pdf"],
+        ["Tests", "Force, contact and durability protocol", "testing.html"],
+        ["Code", "Complete runnable source; R1 code is in engineering/firmware/r1 and engineering/software", "downloads/enpire-source.zip"]
+      ],
+      "cad_group": "r1",
+      "missing": ["Assembled specimen evidence and calibrated force/contact results", "Repeatability, wear and robot-task qualification", "A production FPC replacing the handmade laminates"],
+      "next_steps": ["Build the two N0 nail pads first and verify open/short faults.", "Add the four TPU cells and test passive bending.", "Run the stated force and contact tests across independent specimens."],
+      "related": ["B1", "L1", "F1"]
+    },
+    {
+      "id": "L1", "slug": "l1", "title": "L1 · Whole-finger root force", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "Purchased-cell fixtures, aluminum-carrier CAD and readout code are supplied. Physical fit and force/moment behavior remain untested.",
+      "summary": "Place a purchased load cell in the complete finger load path while retaining the original contact surfaces.",
+      "signal": "Aggregate normal force after calibration; it does not provide a contact-location map.",
+      "best_for": "A separate force benchmark covering normal loads on both nail and TPU.",
+      "tradeoff": "Adds 20 mm reach and 18.46 mm root width in the CAD. Housing fit, moments, gravity and cable forces remain important.",
+      "sensors": [
+        ["Force cell", "One TAL220B 5 kg load cell; selected reference SparkFun SEN-14729", "Between the fixed jaw carrier and floating finger carrier"],
+        ["Readout", "NAU7802, INA219 supply/current monitoring, level shifter and Pico", "At the fixed side or wrist"]
+      ],
+      "placement": "The original finger attaches to the floating carrier. The cell's two solid ends connect separately to the fixed and floating sides. No cable, screw or housing contact may create a parallel load path.",
+      "visual": {"path": "assets/l1/l1_assembly.png", "alt": "L1 original finger with fixed and floating carriers and a purchased load-cell reference", "caption": "Actual CAD assembly. The purple cell is a purchased-part reference; fabrication and measurements are pending."},
+      "schematic": ["Nail or TPU load", "Floating carrier", "TAL220B cell", "Fixed jaw"],
+      "viewer_model": "l1_assembly",
+      "resources": [
+        ["Assembly", "L1 carrier and fixture instructions", "build-l1.html"],
+        ["Electronics", "L1 wiring and firmware", "l1-electronics.html"],
+        ["Materials", "L1 bill of materials", "downloads/l1_bom.csv"],
+        ["Drawings", "Carrier and bench-fixture PDF", "downloads/l1_review_drawings.pdf"],
+        ["Tests", "Cell, moment and installed-finger validation", "l1-testing.html"],
+        ["Code", "Complete runnable source; L1 code is in engineering/firmware/l1 and engineering/software", "downloads/enpire-source.zip"]
+      ],
+      "cad_group": "l1",
+      "missing": ["Actual drive-housing fit check", "Cell and finger force/moment validation", "A qualified moving-robot compensation/control system"],
+      "next_steps": ["Test the cell in its independent fixture.", "Use printed carrier witnesses to check the installed housing.", "Machine the aluminum load-path parts only after the preliminary checks, then validate the assembled finger."],
+      "related": ["R1", "B1", "C1"]
+    },
+    {
+      "id": "B1", "slug": "b1", "title": "B1 · Magnetic bending insert", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "Insert/spine CAD, checked sensor PCB files and raw readout code are supplied. No physical force calibration or 20 N qualification is supplied.",
+      "summary": "Keep the TPU compliant, put four magnets inside it, and read their motion using five fixed magnetic heads. Add two thin nail pads for precision-task contact coverage.",
+      "signal": "Magnetic-field/deformation observations plus optional nail conductance; calibrated force is not yet available.",
+      "best_for": "The current magnetic pilot on the existing thin ENPIRE finger.",
+      "tradeoff": "Adds 3.65 mm global width before screw heads, or 6.05 mm with reserved heads; wires excluded. Assembly, retention and magnetic interference need testing.",
+      "sensors": [
+        ["S0–S3", "Four MLX90393SLW-ABA-011 heads, each on the custom 8 × 6.4 mm B1 PCB", "On the fixed side spine beside the four TPU regions"],
+        ["S4", "One identical MLX90393 head", "Toward the base as a field reference; it also sees the embedded magnets"],
+        ["M0–M3", "Four S-03-01-N, N48, axially magnetized 3 × 1 mm discs", "Inside TPU pockets about 34.1, 51.6, 68.6 and 87.0 mm back from the nail tip"],
+        ["T0 / T1", "Two R1 N0 pressure-film laminates, recommended for the complete precision-task pilot", "On the object-facing surfaces of the two hard nail prongs"],
+        ["Readout", "TCA9548A + Pico; ADS1115 when nail pads are fitted", "At the wrist/base"]
+      ],
+      "placement": "Magnets move with the TPU; electronic heads stay fixed. The PCB component faces point toward the magnets. Use the released poses and spine, not a guessed board angle. Enable nail_cells only after installing the nail circuit.",
+      "visual": {"path": "assets/sensor-placement.svg", "alt": "B1 sensor heads S0–S4, TPU magnets M0–M3 and two pressure-film nail pads T0/T1", "caption": "Labeled placement map for B1 plus the two recommended N0 nail pads. Full coordinates are downloadable below."},
+      "schematic": ["TPU deforms", "Magnets move", "Fixed MLX90393 heads", "Pico field stream"],
+      "viewer_model": "b1_assembly",
+      "resources": [
+        ["Assembly", "B1 mechanical build instructions", "build-b1.html"],
+        ["Electronics", "B1 wiring, firmware and recorder", "b1-electronics.html"],
+        ["Placement", "Exact XYZ positions and sensor orientations", "assets/sensor-placement.json"],
+        ["Placement", "Placement CSV", "assets/sensor-placement.csv"],
+        ["PCB", "B1 sensor-head fabrication ZIP", "downloads/b1_head_fabrication.zip"],
+        ["Materials", "B1 bill of materials", "downloads/b1_bom.csv"],
+        ["Tests", "Bending, interference and force study", "b1-testing.html"],
+        ["Code", "Complete source; B1 firmware is in engineering/firmware/b1", "downloads/enpire-source.zip"]
+      ],
+      "cad_group": "b1",
+      "missing": ["Physical assembly, clearance, retention and bending evidence", "A measured B1 force calibration and contact classifier", "Across-unit and motor/steel-interference qualification"],
+      "next_steps": ["Build one matched original control and a B1 insert.", "Verify all magnetic heads and the two nail pads individually.", "Record actual motor/jaw/steel conditions before choosing a batch design."],
+      "related": ["B2", "R1", "L1", "RECESSED"]
+    },
+    {
+      "id": "B2", "slug": "b2", "title": "B2 · One magnetic PCB", "group": "concept",
+      "status": "Board layout concept", "status_detail": "A board envelope, component allocation and printable fit witness exist. Copper routing, electrical DRC and board retention are unfinished.",
+      "summary": "Consolidate B1's separate magnetic boards and readout into one rigid shaped PCB while keeping the initial magnet and sensor positions.",
+      "signal": "The same intended magnetic observations as B1; no working B2 electronics have been built.",
+      "best_for": "Reducing manual head placement and wiring before repeated builds.",
+      "tradeoff": "A larger irregular PCB may cost more to fabricate or replace. Fewer parts do not remove calibration or interference.",
+      "sensors": [
+        ["S0–S4", "Five MLX90393SLW-ABA-011 ICs; planned reuse of the B1 sensing choice", "On one rigid PCB at the released B1 head poses"],
+        ["M0–M3", "The same four 3 × 1 mm N48 magnets and TPU cartridge for the first comparison", "Inside the B1-style TPU pockets"],
+        ["T0 / T1", "Retain the two N0 nail pads in the initial comparison", "On the nail prongs; their leads are still required"],
+        ["Readout", "TCA9548A and nail ADC intended for the reserved controller bay", "Near the base of the single board; final component layout is pending"]
+      ],
+      "placement": "All five B1 heads share a common board plane. The proposed main connection to the external Pico uses four conductors instead of the specified twenty-conductor head harness; nail leads and USB are excluded from that count.",
+      "visual": {"path": "assets/concepts/b2_board_concept.svg", "alt": "B2 single-board outline with five preserved head positions and reserved controller bay", "caption": "Outline/allocation study only. This is not PCB routing or an orderable circuit board."},
+      "schematic": ["Same magnetic TPU", "One five-head PCB", "Four-wire bus target", "External Pico"],
+      "resources": [
+        ["Layout", "Board outline and existing head poses", "assets/concepts/b2_layout.json"],
+        ["Fit witness", "B2 outline STEP", "assets/concepts/cad/b2_pcb_fit_witness.step"],
+        ["Fit witness", "B2 outline STL — print for dimensions only", "assets/concepts/cad/b2_pcb_fit_witness.stl"],
+        ["Drawings", "B2/C1 concept review PDF", "assets/concepts/concept_review.pdf"],
+        ["Study", "Scalability evidence and assumptions", "architecture.html"],
+        ["Source", "Layout generator and parameters in the complete source", "downloads/enpire-source.zip"]
+      ],
+      "missing": ["Routed PCB, complete schematic/footprint placement and Gerbers", "Final board registration, clamp/backer and connector", "Installed drive clearance and physical batch tests", "B2-specific validated firmware or force calibration"],
+      "next_steps": ["Check the printed outline witness against the actual finger and drive.", "Finish component placement, retention and routing before ordering PCBs.", "Compare assembly time, repair cost and calibration transfer against B1."],
+      "related": ["B1", "RECESSED", "NAIL", "C1"]
+    },
+    {
+      "id": "C1", "slug": "c1", "title": "C1 · Differential-strain root force", "group": "concept",
+      "status": "Bench coupon concept", "status_detail": "An analytical model and metal coupon CAD exist. There is no complete YAM adapter, assembled bridge, firmware or qualified force sensor.",
+      "summary": "Measure aggregate normal force using two strain bridges on a metal load-path element, leaving the nail and soft contact region passive.",
+      "signal": "Normal force from the difference of calibrated bending measurements in the ideal model; no local contact map.",
+      "best_for": "Studying a force path that does not infer load from a magnetic field.",
+      "tradeoff": "Gauge bonding, gain matching, thermal drift, gravity, cross-axis loads and short-beam end effects need substantial work.",
+      "sensors": [
+        ["Station 1 / 2", "Two 350 Ω full strain bridges, eight foil gauges total; exact gauge/bonding selection pending", "On opposite faces of the active beam, at 5 and 13 mm from the assumed fixed boundary"],
+        ["Readout candidate", "Two ADS1232 converters, one per bridge", "On fixed electronics near the beam or wrist; no completed C1 readout is supplied"]
+      ],
+      "placement": "The coupon has an 18 mm active section, 25 mm width and 8 mm thickness, with clamp ends. All intended finger loads must enter beyond both sensing stations and avoid parallel load paths. The coupon itself does not establish gripper mounting or reach.",
+      "visual": {"path": "assets/concepts/c1_concept.svg", "alt": "C1 metal coupon with two strain stations and an analytical stiffness comparison", "caption": "Gauge rectangles mark locations, not finalized gauge footprints. The short beam still needs 3D FEA and measurements."},
+      "schematic": ["Nail + TPU load", "Two strain stations", "Two bridge readouts", "Calibrated normal force"],
+      "resources": [
+        ["Coupon CAD", "Metal bench coupon STEP", "assets/concepts/cad/c1_strain_beam_coupon.step"],
+        ["Coupon CAD", "Metal coupon STL — not a plastic force part", "assets/concepts/cad/c1_strain_beam_coupon.stl"],
+        ["Calculation", "Beam, gain-error and ADC-only-noise screen", "assets/concepts/c1_screen.json"],
+        ["Drawings", "Concept review PDF", "assets/concepts/concept_review.pdf"],
+        ["Source", "Analytical model and generator in the complete source", "downloads/enpire-source.zip"],
+        ["Baseline", "Existing L1 purchased-cell force experiment", "l1.html"]
+      ],
+      "missing": ["3D structural and gauge-area analysis", "Selected gauge footprint, bonding process and complete electronics", "A gripper adapter and controlled installed load path", "Force calibration, motion compensation and durability evidence"],
+      "next_steps": ["Use L1 as the existing purchased-cell force baseline.", "Evaluate the C1 coupon and matched bridges before designing an installed adapter.", "Test moment rejection, thermal drift, unloaded poses and no-contact motions."],
+      "related": ["L1", "B2", "NAIL", "FORCE_BUTTON"]
+    },
+    {
+      "id": "NAIL", "slug": "rigid-nail", "title": "Rigid nail · Sense at its base", "group": "concept",
+      "status": "Mechanical idea only", "status_detail": "This is a proposed sensing architecture. No ENPIRE nail mechanism, selected sensor BOM, manufacturing CAD or firmware has been completed.",
+      "summary": "Keep a bare, thin rigid nail and measure its loading through a controlled support at the nail's base instead of adding a pressure-film laminate to its surface.",
+      "signal": "Intended nail force and possibly torque; achievable axes and accuracy are not established.",
+      "best_for": "A future redesign when thin-tip access or surface-pad wear becomes the main problem.",
+      "tradeoff": "Needs a new support/load path, overload behavior, calibration and a way to preserve tip-position accuracy.",
+      "sensors": [
+        ["Base sensing", "Not selected: magnetic displacement sensing or bonded strain sensing are options", "At the controlled nail support behind the leading gripping surface"],
+        ["Commercial benchmark", "XELA uSCu ALHA-N is a reference architecture, not a selected ENPIRE component", "Allegro-specific fingertip; dimensions, range and custom integration must be checked"]
+      ],
+      "placement": "The nail surface contacts the object. Its support transmits load to sensing elements at the base. The sensing mechanism, flexures and readout locations are not finalized. This concept is not included in the B2 board witness.",
+      "schematic": ["Object loads rigid nail", "Controlled base support", "Sensor not yet selected", "Force / torque calibration"],
+      "resources": [
+        ["Context", "Architecture study and commercial precedent", "architecture.html"],
+        ["Existing option", "B1 with the current N0 nail pads", "b1.html"],
+        ["Reference", "XELA force-sensitive nail for Allegro", "https://xelarobotics.com/products/uscu-alha-n/"]
+      ],
+      "missing": ["An ENPIRE-specific mechanism and CAD", "Sensor selection, placement dimensions and electronics", "Normal/shear/torque load-path and overload design", "Any prototype measurements or manufacturing files"],
+      "next_steps": ["Define needed force axes and allowed nail motion for the actual tasks.", "Choose the support/sensing mechanism and produce an independent mechanical design.", "Validate a nail module before combining it with the soft-finger sensing system."],
+      "related": ["B1", "B2", "C1"]
+    },
+    {
+      "id": "RECESSED", "slug": "recessed-magnetic", "title": "Recessed magnetic board · Revise the frame", "group": "concept",
+      "status": "Field/clearance study", "status_detail": "Only translation-based field and clearance scenarios exist. No recessed hard-frame CAD or approved sensor travel is supplied.",
+      "summary": "Explore placing the magnetic board closer to the embedded magnets to increase signal and potentially reduce side bulk.",
+      "signal": "Magnetic deformation observations, as in B1; a new gain/range choice may be required.",
+      "best_for": "A later frame redesign if measured B1 signal quality or side thickness is unacceptable.",
+      "tradeoff": "Less space for TPU motion, failed stock-frame clearance screens, and possible readout-range overflow.",
+      "sensors": [
+        ["S0–S4", "The B1 MLX90393 heads used as the study basis", "Translated inward in the model while retaining their length/height positions"],
+        ["M0–M3", "The B1 magnets used as the study basis", "Held at their released positions for this comparison"]
+      ],
+      "placement": "The study compares PCB planes at the original native X≈8.44 mm and hypothetical 6.0, 4.0 and 2.8 mm planes. The inward cases fail the conservative existing-frame screen. They are not installation instructions.",
+      "visual": {"path": "assets/concepts/magnetic_gap.svg", "alt": "Calculated signal increase and configured range consumption as the board moves inward", "caption": "Field/clearance scenarios only. No modified frame, load deformation or safe travel was modeled."},
+      "schematic": ["Revise rigid frame", "Bring fixed heads inward", "More field / less space", "Recheck range and bending"],
+      "resources": [
+        ["Calculation", "Recessed-board scenarios in the magnetic study JSON", "assets/concepts/magnetic_scaling.json"],
+        ["Plot", "Signal and range tradeoff SVG", "assets/concepts/magnetic_gap.svg"],
+        ["Baseline", "Current B1 geometry and build", "b1.html"],
+        ["Source", "Scenario calculator in the complete source", "downloads/enpire-source.zip"]
+      ],
+      "missing": ["A redesigned frame with verified structural load paths", "Motion/clearance checks under load", "A selected readout configuration and saturation analysis over actual motion", "Manufacturing files for a recessed frame"],
+      "next_steps": ["Measure whether the existing B1 actually has a signal or bulk problem.", "Design the frame recess and mechanical protection if the change is justified.", "Recheck field range, contact sensitivity and clearance before loading the new part."],
+      "related": ["B1", "B2"]
+    },
+    {
+      "id": "F1", "slug": "flexible-matrix", "title": "Flexible matrix · Dense resistive contact array", "group": "research",
+      "status": "Reference approach only", "status_detail": "No routed ENPIRE flex circuit, complete material stack or firmware is supplied for this approach.",
+      "summary": "Replace separate hand-built resistive cells with a denser patterned contact array that could be manufactured as a flexible circuit or printed laminate.",
+      "signal": "Per-pixel electrical response; pressure/force and crosstalk behavior require calibration.",
+      "best_for": "Denser local contact coverage when custom flex manufacture is justified.",
+      "tradeoff": "Crosstalk, contact-area dependence, fatigue, sealing and custom fork-shaped artwork remain design work.",
+      "sensors": [
+        ["Array", "Not selected; FlexiTac/HiPi-style resistive matrices are references", "Across the nail and compliant contact regions using application-specific artwork"],
+        ["Readout", "Not finalized for this finger", "On the fixed electronics, connected through a flex tail"]
+      ],
+      "placement": "A generic rectangular array does not define the narrow fork geometry. The nail notch and flexing TPU require separate layout and fatigue decisions.",
+      "schematic": ["Object contact", "Patterned resistive matrix", "Multiplexed readout", "Calibrated contact map"],
+      "resources": [
+        ["Review", "Matrix-sensing comparison and source context", "comparison.html"],
+        ["Reference", "FlexiTac hardware repository", "https://github.com/FlexiTac/FlexiTac_Hardware_Repo"],
+        ["Reference", "HiPi paper", "https://arxiv.org/abs/2606.11372"],
+        ["Existing baseline", "R1 independent film cells", "r1.html"]
+      ],
+      "missing": ["Exact sensor and manufacturing stack", "ENPIRE-shaped routed FPC and readout", "Bending, crosstalk, sealing and force results"],
+      "next_steps": ["Choose the array architecture and fabrication process.", "Prototype one small coupon and compare crosstalk and bending artifacts with R1.", "Design the fork-shaped production artwork only after the material/readout tests."],
+      "related": ["R1", "CAPACITIVE"]
+    },
+    {
+      "id": "CAPACITIVE", "slug": "capacitive", "title": "Capacitive skin · Shielded contact cells", "group": "research",
+      "status": "Reference approach only", "status_detail": "A sensing approach and converter reference are identified. No ENPIRE capacitor stack, routed flex or calibrated sensor is supplied.",
+      "summary": "Use shaped capacitive compression cells to obtain thin local contact sensing without permanent magnets.",
+      "signal": "Capacitance changes; force depends on the mechanical dielectric structure and calibration.",
+      "best_for": "A possible alternative when magnetic interference is unacceptable.",
+      "tradeoff": "Dielectric creep, parasitics, moisture, shielding and interconnect strain need control.",
+      "sensors": [
+        ["Contact cells", "Not finalized: electrode/dielectric cells on local rigid islands", "Under the intended contact patches; dimensions and stack are not selected"],
+        ["Readout reference", "TI FDC1004", "On fixed electronics close to the sensing connections, with an appropriate shield layout"]
+      ],
+      "placement": "The sensor is the mechanical capacitor, not the converter IC alone. A flexing finger needs a layout that separates contact compression from unwanted bending/strain response.",
+      "schematic": ["Object compresses pad", "Capacitor gap changes", "Shielded converter", "Calibrated contact / force"],
+      "resources": [
+        ["Review", "Scalability comparison", "architecture.html"],
+        ["Reference", "TI FDC1004 documentation", "https://www.ti.com/lit/ds/symlink/fdc1004.pdf"]
+      ],
+      "missing": ["A selected dielectric and electrode stack", "Mechanical islands, flex routing, shielding and sealing", "ENPIRE CAD, PCB files, firmware and force data"],
+      "next_steps": ["Make and characterize a single compression coupon.", "Measure contact response separately from bending, moisture and nearby-object effects.", "Develop a shaped array if the coupon supports the required range and durability."],
+      "related": ["F1", "B1", "C1"]
+    },
+    {
+      "id": "PNEUMATIC", "slug": "pneumatic", "title": "Pneumatic finger · Internal air channels", "group": "research",
+      "status": "Reference approach only", "status_detail": "FORTE is a relevant published reference. No ENPIRE adaptation or 20 N version has been designed here.",
+      "summary": "Sense deformation of a compliant finger through changes in internal air pressure, with pressure transducers located away from the contact surface.",
+      "signal": "Pressure measurements interpreted as force/slip through a validated mechanical model.",
+      "best_for": "A passive soft interface with electronics at the wrist.",
+      "tradeoff": "Sealing, tubing, temperature/volume effects and the demonstrated force range require attention.",
+      "sensors": [
+        ["Soft interface", "FORTE-style internal air channels are the reference", "Within a redesigned compliant finger"],
+        ["Reference transducers", "FORTE's hardware guide lists ELVR-L01D-F1RD-C-NA3F transducers", "At the wrist/base, connected by tubes; this is not a selected ENPIRE BOM"]
+      ],
+      "placement": "The compliant chamber is the contact element. Tubes connect it to fixed pressure sensors. The published reference reports a 0–8 N experiment; a 20 N ENPIRE design still needs new range and mechanical work.",
+      "schematic": ["Finger deforms", "Air pressure changes", "Tubes to fixed sensors", "Force / slip model"],
+      "resources": [
+        ["Reference", "FORTE project and reported experiments", "https://merge-lab.github.io/FORTE/"],
+        ["Reference", "FORTE finger hardware manual", "https://merge-lab.github.io/FORTE-Finger/"],
+        ["Review", "Comparison with the current kit", "architecture.html"]
+      ],
+      "missing": ["ENPIRE-specific chambers and tubing route", "Verified sealing, range and overload behavior", "A 20 N calibration and hard-nail contact strategy"],
+      "next_steps": ["Reproduce a reference pressure chamber before modifying the finger.", "Measure leaks, drift and response over the intended force range.", "Design a separate hard-nail sensing path if nail-only contacts must be covered."],
+      "related": ["B1", "C1", "O1"]
+    },
+    {
+      "id": "O1", "slug": "optical", "title": "Optical finger · Observe contact deformation", "group": "research",
+      "status": "Reference approach only", "status_detail": "Optical compliant fingers were reviewed. No optical ENPIRE finger, camera layout or sensor software is supplied.",
+      "summary": "Use illumination and a camera to observe a deformable sensing surface and recover richer contact geometry.",
+      "signal": "Images of contact/deformation; geometry, force and slip estimates require calibration and processing.",
+      "best_for": "Tasks that need dense contact shape or texture information.",
+      "tradeoff": "Optical path, lighting, gel fabrication, processing and the thin-nail interface require a substantial redesign.",
+      "sensors": [
+        ["Sensing surface", "Not selected; Baby Fin Ray is a compliant optical reference", "At the object-contact interface"],
+        ["Camera and lighting", "Not selected for ENPIRE", "Inside or toward the base of a redesigned finger, with a clear view of the sensing surface"]
+      ],
+      "placement": "The camera observes the back of a deforming surface through an engineered optical path. A camera body attached to the current finger does not make the opaque TPU/nail tactile.",
+      "schematic": ["Object deforms surface", "Controlled optical path", "Camera + illumination", "Contact-image processing"],
+      "resources": [
+        ["Reference", "GelSight Baby Fin Ray paper", "https://arxiv.org/html/2303.14883v1"],
+        ["Review", "Optical comparison in the kit", "comparison.html"],
+        ["Study", "Architecture selection and tradeoffs", "architecture.html"]
+      ],
+      "missing": ["Camera/lens/illumination selection and optical layout", "Gel, reflector and protective surface process", "A nail-coverage solution and ENPIRE fabrication files", "Calibration and task data"],
+      "next_steps": ["Define whether dense contact imagery is actually required.", "Prototype the optical path and surface visibility during bending.", "Validate a redesigned finger rather than treating the system as an add-on film."],
+      "related": ["PNEUMATIC", "B1", "NAIL"]
+    },
+    {
+      "id": "FORCE_BUTTON", "slug": "force-button", "title": "MEMS force button · Controlled point loading", "group": "research",
+      "status": "Reference component only", "status_detail": "A commercial force-sensor family was reviewed. No controlled-load mechanism or ENPIRE integration has been designed.",
+      "summary": "Route a known compressive load through a packaged digital force sensor instead of inferring force from a magnetic skin.",
+      "signal": "Force applied to the sensor's mechanical contact element; gripper force requires a controlled load path.",
+      "best_for": "An integration study when a compact packaged force element is useful.",
+      "tradeoff": "Range alone does not establish low-force accuracy. Preload, side loading, moments and temperature remain important.",
+      "sensors": [
+        ["Reference device", "Honeywell FMA family, 25 N option; not a selected production part", "Under a designed load button/plunger on fixed electronics"],
+        ["Mechanical coupling", "Not designed", "Between the finger's force path and the sensor contact element"]
+      ],
+      "placement": "The intended force must reach the sensor through its specified contact interface. It is not a flexible pressure sheet to glue across the TPU or nail.",
+      "schematic": ["Finger load", "Controlled load button", "Packaged force sensor", "Force readout + checks"],
+      "resources": [
+        ["Reference", "Honeywell FMA data sheet", "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf"],
+        ["Review", "Accuracy/range conditions in the architecture study", "architecture.html"],
+        ["Existing baseline", "L1 purchased load-cell experiment", "l1.html"]
+      ],
+      "missing": ["A selected ordering code and mechanically valid coupling", "Gripper mounting, side-load/moment protection and overload design", "Low-force and 20 N installed measurements"],
+      "next_steps": ["Check the exact part's specified conditions against the task.", "Build and test its mechanical coupling with an independent force reference.", "Compare installed force behavior with L1 before choosing this route."],
+      "related": ["L1", "C1", "CAPACITIVE"]
+    }
+  ]
+}

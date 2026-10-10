@@ -1,5 +1,7 @@
 # Student starting packet
 
+Start with [the separate design pages](https://geyan21.github.io/yam-tactile-kit/designs.html). [R1](https://geyan21.github.io/yam-tactile-kit/r1.html), [L1](https://geyan21.github.io/yam-tactile-kit/l1.html) and [B1](https://geyan21.github.io/yam-tactile-kit/b1.html) have prototype build packages. The directory marks concepts and reference-only approaches separately.
+
 **First deliverable: one instrumented finger and a reproducible bench record.** Keep a second, unmodified finger as the control. Start off the robot.
 
 **First read [which sensors to use and exactly where to place them](SENSORS.md).** It gives the concrete B1 recommendation, labels every sensing location and explains how the retained R1 and L1 alternatives differ.

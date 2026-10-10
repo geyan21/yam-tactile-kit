@@ -1,5 +1,7 @@
 # Sensor and mechanical comparison
 
+[Open the design directory for a separate page on every design and alternative](https://geyan21.github.io/yam-tactile-kit/designs.html). Each page states the exact sensor choice, placement, available files and build status.
+
 The decision is driven by reliable contact and grip-force feedback with a thin, precise leading tip. R1, L1 and B1 have separate digital build packages; none has been selected as a physically validated winner.
 
 **Read [the newer architecture and scalability study](ARCHITECTURE.md)** for the assessment of magnetic sensing, the consolidated B2 board concept, the C1 strain-force coupon, quantitative limitations, and the batch-cost/validation plan. The review below preserves the modality-specific context.

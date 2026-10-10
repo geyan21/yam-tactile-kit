@@ -13,6 +13,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"src"))
 from tactile_kit.records import execution
+from design_pages import load_catalog
 
 
 class Links(HTMLParser):
@@ -52,6 +53,14 @@ def main():
         (ROOT/"build/engineering").mkdir(parents=True,exist_ok=True)
         entries={str(path.relative_to(site)):path.read_bytes() for path in site.rglob("*") if path.is_file()}
         local_links=verify_entries(entries)
+        catalog=load_catalog()
+        design_pages=["designs.html",*[item["slug"]+".html" for item in catalog["designs"]]]
+        for item in catalog["designs"]:
+            page=entries.get(item["slug"]+".html",b"").decode("utf-8")
+            if f'data-design-id="{item["id"]}"' not in page:
+                raise ValueError(f"Missing dedicated design page: {item['id']}")
+            if not all(marker in page for marker in ("design-sensor-table","design-resource-table","design-missing","design-next")):
+                raise ValueError(f"Incomplete design content: {item['id']}")
         archives={}
         for name in ("enpire-source.zip","enpire-designs.zip","enpire-site.zip","enpire-engineering-kit.zip"):
             with zipfile.ZipFile(site/"downloads"/name) as archive:
@@ -103,7 +112,11 @@ def main():
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")
-        result={"passed":True,"local_links":local_links,"archives":archives,"hardware_validation":False}
+            for name in design_pages:
+                if "website/"+name not in archive.namelist():raise ValueError(f"Complete packet missing design page: {name}")
+            if "source/engineering/design_catalog.json" not in archive.namelist():
+                raise ValueError("Portable source missing design catalog")
+        result={"passed":True,"local_links":local_links,"design_pages_verified":len(catalog["designs"]),"archives":archives,"hardware_validation":False}
         (ROOT/"build/engineering/site_checks.json").write_text(json.dumps(result,indent=2)+"\n")
         record["checks"]=result
         print(json.dumps(result,indent=2))

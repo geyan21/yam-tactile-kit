@@ -1,0 +1,82 @@
+/* Design directory and one complete overview per design. */
+.design-page-layout{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:225px minmax(0,1fr);gap:50px;padding:34px 24px 65px}
+.design-page-main{min-width:0}
+.design-page-nav{position:sticky;top:92px;align-self:start;max-height:calc(100vh - 120px);overflow:auto;padding-right:12px}
+.design-page-nav a,.design-mobile-nav a{display:block;font-size:12px;text-decoration:none;color:var(--muted);padding:5px 0}
+.design-page-nav a.active{color:var(--green);font-weight:750}
+.design-nav-group{margin:21px 0}
+.design-nav-group>p{font-size:10px;font-weight:750;text-transform:uppercase;letter-spacing:.07em;color:#415a60;margin:0 0 6px}
+.design-page-nav .all-designs-link{font-weight:700;color:var(--green)}
+.design-mobile-nav{display:none}
+.design-intro h1{font-size:clamp(31px,3.7vw,48px);line-height:1.12;letter-spacing:-.025em;margin:18px 0}
+.design-breadcrumb{font-size:12px;color:var(--muted);margin-bottom:18px}
+.design-summary{font-size:18px;line-height:1.65;max-width:860px}
+.design-stage-detail{border-left:3px solid var(--green);padding:12px 16px;background:var(--pale);font-size:14px;line-height:1.6;margin:20px 0 10px}
+.design-target{font-size:12px;color:var(--muted)}
+.design-status{display:inline-block;border-radius:5px;padding:6px 9px;font-size:11px;font-weight:750;line-height:1.25;letter-spacing:.025em;background:#e4eee7;color:#255c50}
+.design-status.concept{background:#f3e9d4;color:#795520}
+.design-status.research{background:#e9edf2;color:#4e6172}
+.design-section-nav{display:flex;gap:12px 25px;flex-wrap:wrap;margin:24px 0;font-size:12px;font-weight:650}
+.design-section-nav a{text-decoration:none;border-bottom:1px solid #cad8cf;padding:5px 0}
+.design-main-figure{margin:25px 0 28px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white}
+.design-main-figure img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain}
+.design-main-figure figcaption{font-size:12px;padding:12px 17px;background:#f1f5ee;color:var(--muted)}
+.design-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:28px 0}
+.design-facts>div{background:#f0f4ee;border-radius:8px;padding:18px}
+.design-facts h2{font-size:14px;line-height:1.3;margin:0 0 10px}
+.design-facts p{font-size:13px;color:#476066;line-height:1.6;margin:0}
+.design-section{margin:35px 0;scroll-margin-top:95px}
+.design-section h2,.design-related h2{font-size:23px;line-height:1.25;margin:28px 0 16px}
+.design-section p,.design-section li{font-size:15px;line-height:1.7;color:#344c55}
+.design-sensor-table{min-width:590px}
+.design-sensor-table th:first-child{width:18%}
+.design-sensor-table th:nth-child(2){width:44%}
+.design-resource-table th:first-child{width:20%}
+.design-resource-table{min-width:420px}
+.design-section td,.design-section th{overflow-wrap:anywhere}
+.design-flow{margin:22px 0}
+.design-flow img{display:block;width:100%;height:auto}
+.design-cad-list{padding:15px;border:1px solid var(--line);border-radius:7px}
+.design-cad-list table{min-width:650px}
+.design-cad-list td:first-child{font:11px ui-monospace,monospace;width:25%}
+.design-cad-list td:last-child{min-width:120px}
+.design-missing{background:#f6f0e6;border-left:3px solid #bc9154;border-radius:3px;padding:18px 25px 18px 37px}
+.design-missing li,.design-next li{margin:7px 0}
+.design-related{border-top:1px solid var(--line);padding-top:15px}
+.design-related .button{font-size:12px}
+.design-catalog-group{margin:42px 0;scroll-margin-top:95px}
+.design-catalog-group>h2{font-size:28px;margin:0 0 10px}
+.design-catalog-group>p{font-size:15px;color:var(--muted)}
+.design-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin-top:24px}
+.design-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white;color:var(--ink);text-decoration:none;transition:border-color .15s}
+.design-card:hover,.design-card:focus-visible{border-color:var(--green);outline-offset:3px}
+.design-card-image{height:175px;background:#f3f6ef;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.design-card-image img{width:100%;height:100%;object-fit:contain}
+.design-card-copy{padding:19px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.design-card h3{font-size:19px;margin:13px 0 10px;line-height:1.3}
+.design-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 18px}
+.design-card-action{font-size:12px;font-weight:750;color:var(--green);margin-top:auto}
+.design-viewer-details{margin:30px 0;border:1px solid var(--line);padding:16px;border-radius:8px}
+.design-viewer-details[open]>summary{margin-bottom:18px}
+.design-canvas{display:block;width:100%;height:410px;touch-action:none;outline-offset:-3px}
+.design-viewer-layers{display:flex;flex-wrap:wrap;gap:10px 18px;padding:12px 16px;font-size:12px}
+.design-viewer-layers label{display:flex;gap:7px;align-items:center}
+.design-viewer-note{padding:4px 16px 15px;font-size:12px;line-height:1.6;color:var(--muted)}
+.design-viewer-details .viewer-top strong{margin-right:auto}
+.design-switcher{max-width:1260px;margin:25px auto;display:flex;flex-wrap:wrap;gap:10px 22px;padding:0 24px;font-size:13px}
+.design-switcher a{font-weight:650}
+.doc-nav{max-height:calc(100vh - 120px);overflow:auto;padding-right:8px}
+@media(max-width:1050px){.design-page-layout{grid-template-columns:190px minmax(0,1fr);gap:25px}.design-facts{grid-template-columns:1fr}.design-facts>div{padding:15px}.design-facts h2{margin-bottom:5px}.design-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.design-card-copy{padding:15px}}
+@media(max-width:720px){.design-page-layout{display:block;padding:22px 18px 45px}.design-page-nav{display:none}.design-mobile-nav{display:block;margin-bottom:24px;border:1px solid var(--line);border-radius:7px;padding:13px}.design-mobile-nav summary{font-size:13px}.design-mobile-nav .design-nav-group{margin:15px 0}.design-intro h1{font-size:33px!important}.design-summary{font-size:16px}.design-stage-detail{font-size:13px;padding:11px 13px}.design-card-grid{grid-template-columns:1fr}.design-card-image{height:180px}.design-catalog-group>h2{font-size:24px}.design-facts{gap:9px}.design-main-figure{margin:20px 0}.design-main-figure figcaption{font-size:11px}.design-section h2,.design-related h2{font-size:22px}.design-section p,.design-section li{font-size:14px}.design-section th,.design-section td{padding:11px}.design-canvas{height:310px}.design-viewer-details{padding:12px}.design-viewer-details .viewer-bottom{display:block}.design-viewer-details .viewer-bottom>span{display:block;margin-top:8px}.doc-nav{max-height:none;overflow:visible}.design-switcher{margin:20px 0;padding:0 20px;font-size:12px;gap:12px 18px}}
+@media print{.design-page-layout{display:block;padding:0}.design-page-nav,.design-mobile-nav,.design-section-nav,.design-viewer-details,.design-related{display:none}.design-intro h1{font-size:26pt}.design-card-grid{grid-template-columns:1fr 1fr}.design-main-figure{break-inside:avoid}.design-section{break-inside:auto}.design-status{border:1px solid #999}.design-facts{display:block}.design-facts>div{padding:10px}.design-catalog-group{break-before:page}.design-main-figure img{max-height:350px}.design-flow{break-inside:avoid}}
+@media screen and (max-width:720px){
+  .design-section .design-sensor-table,.design-section .design-sensor-table tbody,
+  .design-cad-list table,.design-cad-list tbody{display:block;width:100%;min-width:0}
+  .design-sensor-table thead,.design-cad-list thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .design-sensor-table tr,.design-cad-list tr{display:block;border:1px solid var(--line);border-radius:7px;padding:7px 12px;margin:0 0 13px;background:#fff}
+  .design-sensor-table td,.design-cad-list td{display:block;width:100%;min-width:0;padding:8px 0!important;border:0}
+  .design-sensor-table td::before,.design-cad-list td::before{content:attr(data-label);display:block;margin-bottom:5px;font:700 10px/1.3 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .design-sensor-table td:first-child{font-weight:700;color:var(--green)}
+  .design-cad-list td:first-child{width:100%}
+  .design-section .design-resource-table{min-width:0;width:100%;font-size:12px}
+}
