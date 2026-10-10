@@ -1,0 +1,64 @@
+{
+  "status": "Exploration artifacts; separate from the released R1/L1/B1 build parts",
+  "parts": [
+    {
+      "id": "b2_pcb_fit_witness",
+      "kind": "Print-only dimensional witness. Not a functional PCB or a force-bearing part.",
+      "step": "cad/b2_pcb_fit_witness.step",
+      "stl": "cad/b2_pcb_fit_witness.stl",
+      "step_sha256": "6e006304ef5ff7265f652c65dc324813830d8ed632170d125aed480871ad1a66",
+      "stl_sha256": "2646c482f9a578488de0ed69733b9ce8f308eebdf65fe5e49b9e30338f796c39",
+      "volume_mm3": 718.0388764562242,
+      "bounds_mm": [
+        [
+          8.439186096191406,
+          -90.49959564208984,
+          -3.214798927307129
+        ],
+        [
+          9.23918628692627,
+          -9.0,
+          27.583200454711914
+        ]
+      ],
+      "physical_tested": false
+    },
+    {
+      "id": "c1_strain_beam_coupon",
+      "kind": "Machine from specified metal for bench exploration. No gripper adapter or qualified load cell is supplied.",
+      "step": "cad/c1_strain_beam_coupon.step",
+      "stl": "cad/c1_strain_beam_coupon.stl",
+      "step_sha256": "654b56db955f7632da6a5ded9580e37ec4846dcc4f4752ded127feb467269e89",
+      "stl_sha256": "a60846d001042144f1e4d1385e6fa8ac3b956b30de3bd8a048a03dfce20a664d",
+      "volume_mm3": 7091.061990118454,
+      "bounds_mm": [
+        [
+          -12.5,
+          -10.0,
+          -4.0
+        ],
+        [
+          12.5,
+          28.0,
+          4.0
+        ]
+      ],
+      "physical_tested": false
+    }
+  ],
+  "checks": {
+    "valid_solids": 2,
+    "step_roundtrips": 2,
+    "watertight_meshes": 2
+  },
+  "b2": {
+    "sensor_centers_changed_mm": 0,
+    "pcb_routed": false,
+    "board_retention_designed": false
+  },
+  "c1": {
+    "gripper_adapter_designed": false,
+    "gauge_bridge_assembled": false
+  },
+  "physical_specimens_tested": 0
+}

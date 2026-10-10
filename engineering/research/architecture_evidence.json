@@ -1,0 +1,97 @@
+{
+  "reviewed_date": "2026-10-10",
+  "evidence_scope": "Primary publications and manufacturer specifications; not tests of our finger",
+  "sources": [
+    {
+      "id": "anyskin",
+      "url": "https://arxiv.org/html/2409.08276v3",
+      "locator": "Sections IV, V-C, V-D and VI",
+      "supports": ["replaceable and self-aligning magnetic skin", "pulse magnetization after cure", "reported mean replacement time 12 seconds", "cross-instance policy transfer"],
+      "limits": ["magnetic and ferromagnetic interference remains", "policy transfer is not a calibrated-force accuracy guarantee", "results do not validate B1"]
+    },
+    {
+      "id": "eflesh",
+      "url": "https://arxiv.org/html/2506.09994v1",
+      "locator": "Sections 2.2, 2.3 and 4.1",
+      "supports": ["printed microstructures and embedded commodity magnets", "0-30 N normal-force experiment", "0.27 N validation RMSE in that experiment"],
+      "limits": ["standard characterization instance 40 x 40 mm", "normal-force test uses a plate", "does not establish 20 N point-load performance on our narrow finger"]
+    },
+    {
+      "id": "xela",
+      "url": "https://xelarobotics.com/technology/",
+      "locator": "Sensor structure, calibration, and temperature/magnetic compensation",
+      "supports": ["commercial magnetic tactile systems and integration services exist", "vendor provides calibration and reference-based compensation"],
+      "limits": ["vendor statements", "model-specific ranges and fit must be checked", "not evidence that B1's single reference rejects all interference"]
+    },
+    {
+      "id": "forte",
+      "url": "https://merge-lab.github.io/FORTE/",
+      "locator": "Overview",
+      "supports": ["compliant fingers with air-channel tactile sensing", "reported 0-8 N range and 0.2 N average error"],
+      "limits": ["20 N extension is unproven", "different finger geometry"]
+    },
+    {
+      "id": "xela_nail",
+      "url": "https://xelarobotics.com/products/uscu-alha-n/",
+      "locator": "Product description and model-specific specifications",
+      "supports": ["vendor-described six-axis force-sensitive nail", "30 three-axis pulp points and three nail points", "Allegro Hand-specific integration"],
+      "limits": ["not a drop-in ENPIRE part", "specific nail force/moment limits, dimensions and quotation still required", "not evidence for an unbuilt nail redesign"]
+    },
+    {
+      "id": "xela_robotiq",
+      "url": "https://xelarobotics.com/products/uspr-2f/",
+      "locator": "Product description",
+      "supports": ["model-specific fingertip thickness 17 mm", "Robotiq 2F-85/140 integration", "four-wire sensing-module connection"],
+      "limits": ["different gripper geometry", "do not substitute generic 4 mm or 6.6 mm uSkin marketing figures for this model"]
+    },
+    {
+      "id": "forte_hardware",
+      "url": "https://merge-lab.github.io/FORTE-Finger/",
+      "locator": "Bill of materials",
+      "supports": ["six ELVR-L01D-F1RD-C-NA3F pressure transducers per finger pair", "tubing and flexible 80A resin"],
+      "limits": ["published BOM lists 369.06 for the six pressure transducers", "historical author-listed cost, not a current supplier quote"]
+    },
+    {
+      "id": "fdc1004",
+      "url": "https://www.ti.com/lit/ds/symlink/fdc1004.pdf",
+      "locator": "Features and shielding/application guidance",
+      "supports": ["four capacitance channels", "active shielding", "nominal 0.5 fF measurement resolution"],
+      "limits": ["electrical resolution does not specify force accuracy", "needs a mechanical capacitor, shielding, sealing and strain-tolerant interconnects"]
+    },
+    {
+      "id": "fma",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf",
+      "locator": "Table 2 and footnote 8",
+      "supports": ["25 N mechanically coupled digital force sensor option", "typical accuracy +/-2 percent FSS", "maximum total error band +/-8 percent FSS under specified conditions"],
+      "limits": ["8 percent of 25 N is 2 N", "TEB conditions include 5 V and 20-80 percent of force range", "neither digital resolution nor that TEB establishes 0.2 N contact detection"]
+    },
+    {
+      "id": "baby_finray",
+      "url": "https://arxiv.org/html/2303.14883v1",
+      "locator": "Sensor design and fabrication",
+      "supports": ["optical tactile sensing with compliant fingers", "moving rigid electronics toward the base"],
+      "limits": ["optical paths, gel fabrication, lighting and geometry integration are required", "not a thin film to attach to the current hard nail"]
+    },
+    {
+      "id": "ads1232",
+      "url": "https://www.ti.com/lit/ds/symlink/ads1232.pdf",
+      "locator": "Revision H, Table 6-2 and digital filter settling specifications",
+      "supports": ["44 nV typical shorted-input RMS noise at gain 128, 5 V reference and 80 SPS", "four conversion periods for full filter settling"],
+      "limits": ["typical converter noise only", "no bridge, clamp, temperature, calibration or robot noise included", "channel hopping does not provide two independent 80 SPS channels"]
+    },
+    {
+      "id": "gage",
+      "url": "https://docs.micro-measurements.com/?id=2512",
+      "locator": "062UW/062UWA pattern data",
+      "supports": ["commercial 350 ohm foil gauge family"],
+      "limits": ["choose substrate temperature compensation, bonding process and exact gauge footprint before building C1"]
+    }
+  ],
+  "own_evidence": {
+    "b1_bom": "engineering/b1_bom.csv",
+    "magnetic_scenarios": "engineering/concepts/magnetic_scaling.json",
+    "b2_layout": "engineering/concepts/b2_layout.json",
+    "c1_analysis": "engineering/concepts/c1_screen.json",
+    "physical_specimens_tested": 0
+  }
+}

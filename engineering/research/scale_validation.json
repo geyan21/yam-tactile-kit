@@ -1,0 +1,37 @@
+{
+  "schema": "yam-tactile-scale-plan/1",
+  "evidence_kind": "planned_only",
+  "physical_results": [],
+  "pilot": {
+    "independent_builds_per_architecture": 3,
+    "record": ["material and magnet lots", "PCB revision", "assembly minutes", "calibration minutes", "rework and rejects", "unloaded drift", "sensor replacement time"],
+    "magnetic_conditions": ["motor off", "motor enabled without contact", "representative motor motions", "nearby steel without contact", "second jaw at multiple openings", "cable movement", "two measured temperatures"],
+    "mechanical_tests": ["0.2-5 N first", "progress to 10/15/20 N using qualified fixtures", "nail and TPU contact locations", "loading/unloading cycles", "2 N and 20 N holds", "tip deflection and recovery", "unloaded poses and no-contact motions to expose gravity and inertia", "explicit unloaded reference; no automatic tare during a grasp"]
+  },
+  "transfer_study": {
+    "later_independent_units": 10,
+    "training_units": 3,
+    "held_out_units": 7,
+    "requirements": ["hold out complete units and sessions", "separate material lots where available", "compare one fixed model, zero-only transfer, and full per-unit recalibration", "count calibration cost for whichever method is necessary"]
+  },
+  "proposed_existing_kit_targets": {
+    "contact_force_n": 0.2,
+    "observed_contact_detection_fraction": 0.99,
+    "observed_false_event_fraction_max": 0.01,
+    "confirmation_presentations_per_label_and_region": 300,
+    "normal_force_range_n": 20,
+    "held_out_force_rmse_n_max": 0.5,
+    "maximum_error_rule": "max(0.5 N, 10 percent of actual normal force)",
+    "note": "Per-condition error bounds and unavailable readings remain required. These targets are not measured specifications."
+  },
+  "readiness": {
+    "B1": "Existing digital build package; hardware untested",
+    "B2": "Finish PCB routing/DRC, retention and installed clearance before physical comparison",
+    "C1": "Validate bonded-gauge coupon, then design the gripper adapter and cross-axis calibration before integrated comparison"
+  },
+  "production_acceptance": {
+    "status": "To be derived from design qualification",
+    "candidate_checks": ["electronics identity and faults", "unloaded baseline and drift", "known normal loads at multiple locations", "replacement and polarity checks", "stored calibration identity"],
+    "note": "A short end-of-line check does not replace the design-level contact reliability and wear study."
+  }
+}

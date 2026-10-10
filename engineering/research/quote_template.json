@@ -1,0 +1,12 @@
+{
+  "schema": "yam-architecture-quotes/1",
+  "currency": "USD",
+  "requested_good_units": [1, 10, 100],
+  "notes": "Fill all numbers from actual quotes and timed builds. Include PCB panel utilization, assembly minimums, calibration and rejects. Separate quotes by quantity when prices differ.",
+  "options": [
+    {"design": "B1", "unit_parts": null, "yield_fraction": null, "labor_minutes": null, "calibration_minutes": null, "hourly_rate": null, "fixed_setup": null, "quote_date": null},
+    {"design": "B2", "unit_parts": null, "yield_fraction": null, "labor_minutes": null, "calibration_minutes": null, "hourly_rate": null, "fixed_setup": null, "quote_date": null},
+    {"design": "C1", "unit_parts": null, "yield_fraction": null, "labor_minutes": null, "calibration_minutes": null, "hourly_rate": null, "fixed_setup": null, "quote_date": null},
+    {"design": "Commercial or custom integration", "unit_parts": null, "yield_fraction": null, "labor_minutes": null, "calibration_minutes": null, "hourly_rate": null, "fixed_setup": null, "quote_date": null}
+  ]
+}

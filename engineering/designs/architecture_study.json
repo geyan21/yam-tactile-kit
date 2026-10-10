@@ -1,0 +1,73 @@
+{
+  "revision": "architecture-study-1",
+  "status": "engineering exploration; no new sensor has been physically qualified",
+  "requirements": {
+    "normal_force_target_n": 20,
+    "contact_target_n": 0.2,
+    "preserve_thin_nail": true,
+    "retain_controlled_contact_compliance": true,
+    "comparison_scales_fingers": [1, 10, 100]
+  },
+  "magnetic_screen": {
+    "seed": 20261010,
+    "realizations_per_case": 128,
+    "position_error_bounds_mm": [0.10, 0.25],
+    "axis_tilt_bound_deg": 2,
+    "magnet_remanence_relative_bound": 0.02,
+    "assumed_inward_motion_mm": 0.1,
+    "uniform_field_change_ut": [100, 50, -25],
+    "source_free_field_gradient_ut_per_mm": 5,
+    "alternative_pcb_plane_native_x_mm": [6.0, 4.0, 2.8],
+    "interpretation": "Deliberate tolerance and interference scenarios, not measured manufacturing capability or installed motor fields. No displacement-to-force mapping."
+  },
+  "b2": {
+    "name": "One rigid PCB for the magnetic insert",
+    "status": "board outline and component-allocation study; unrouted; no fabrication Gerbers",
+    "reuse_b1_magnet_and_sensor_centers": true,
+    "pcb_thickness_mm": 0.8,
+    "pcb_layers_proposed": 4,
+    "controller_bay_yz_bounds_mm": [-18, 15, -9, 27],
+    "keep_nail_pads_for_first_pilot": true,
+    "main_harness_conductors_target": 4,
+    "main_harness_conductors_b1_specified": 20,
+    "notes": [
+      "Integrate five MLX90393 heads, TCA9548A and optional nail ADC on one rigid board.",
+      "Preserve the existing sensor poses and TPU cartridge for the first packaging comparison.",
+      "Replace individual head bonding with a mechanically located board and a reviewed clamp.",
+      "The two nail pads, four magnet insertions, polarity checks, retention checks and calibration remain.",
+      "Controller bay, board retention, routing, full installed-drive clearance and connector selection remain design work."
+    ]
+  },
+  "c1": {
+    "name": "Magnet-free differential-strain root-force concept",
+    "status": "analytical screen and metal bench coupon; not a completed gripper adapter",
+    "beam_width_mm": 25,
+    "beam_thickness_mm": 8,
+    "active_length_mm": 18,
+    "end_clamp_length_mm": 10,
+    "gauge_station_mm_from_fixed_boundary": [5, 13],
+    "end_hole_diameter_mm": 4.5,
+    "end_hole_x_spacing_mm": 16,
+    "material_candidate": "6061-T6 aluminum with supplier certificate",
+    "youngs_modulus_mpa_assumed": 69000,
+    "gauge_factor_assumed": 2.0,
+    "gauge_resistance_ohm": 350,
+    "gauges_per_full_bridge": 4,
+    "full_bridges": 2,
+    "excitation_v": 5.0,
+    "adc_candidate": "two ADS1232, one per bridge; continuous acquisition rather than channel hopping",
+    "adc_gain": 128,
+    "adc_data_rate_sps": 80,
+    "adc_short_input_typical_rms_nv_at_5v": 44,
+    "contact_arm_from_free_boundary_mm": [10, 50, 110],
+    "screen_assumption_allowed_added_tip_deflection_mm": 0.1,
+    "residual_station_gain_error_cases": [0, 0.001, 0.005],
+    "notes": [
+      "All finger contact loads must enter beyond both sensing stations through one controlled load path.",
+      "Force derives from the difference of calibrated bending moments, not a single bending gauge.",
+      "Normal force only; no spatial contact map and no shear/torque qualification.",
+      "The 18 mm active element does not establish final added reach; end fixtures and drive interface are not designed.",
+      "Gauge bonding, bridge matching, thermal drift, clamp compliance and cross-axis response require measurements."
+    ]
+  }
+}

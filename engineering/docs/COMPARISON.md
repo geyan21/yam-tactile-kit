@@ -1,6 +1,8 @@
 # Sensor and mechanical comparison
 
-The decision is driven by reliable contact and grip-force feedback with a thin, precise leading tip. R1 is the first build because it can be shaped around the existing forked nail with common tools. It has not been selected as the final sensor.
+The decision is driven by reliable contact and grip-force feedback with a thin, precise leading tip. R1, L1 and B1 have separate digital build packages; none has been selected as a physically validated winner.
+
+**Read [the newer architecture and scalability study](ARCHITECTURE.md)** for the assessment of magnetic sensing, the consolidated B2 board concept, the C1 strain-force coupon, quantitative limitations, and the batch-cost/validation plan. The review below preserves the modality-specific context.
 
 | Candidate | Useful signal | Fit to this finger | Main experiment | Current state |
 |---|---|---|---|---|
@@ -10,6 +12,9 @@ The decision is driven by reliable contact and grip-force feedback with a thin, 
 | eFlesh-style printed magnetic structure | Deformation coupled to permanent magnets | Promising for an internal or redesigned compliant section; hard nail remains separate | TPU creep, magnet retention, field bias, contact coverage | Primary process and dimensions reviewed |
 | Baby Fin Ray optical | Dense contact shape and texture | Requires hollow optical path, illumination, and a changed compliant structure | Occlusion under bend, gel wear, camera timing, nail coverage | Primary fabrication method reviewed |
 | L1 root normal-force cell | Aggregate normal load including hard-frame contacts | Leaves contact surfaces intact; adds 20 mm reach and a larger root | Off-axis load, moments, stiffness, housing fit, cable route | Aluminum carriers, purchased-cell readout and test fixtures supplied; unbuilt |
+| B1 magnetic insert | Local deformation/field observations; optional nail pressure pads | Original contact envelope, added side spine | Magnetic interference, calibration transfer, TPU mechanics and retention | CAD, PCB and raw readout supplied; unbuilt |
+| B2 consolidated magnetic PCB | Same intended measurements as B1 | One rigid board at the same head poses | Fewer manual connections without sacrificing registration or serviceability | Outline and allocation study; no routed PCB |
+| C1 differential strain | Aggregate normal force inferred from two calibrated bending measurements | Requires a new controlled root load path | Gain matching, drift, stiffness, cross-axis response | Analytical screen and metal bench coupon; no adapter |
 
 ## Resistive: manufacturability versus force stability
 
@@ -39,6 +44,6 @@ The eFlesh paper's main normal-force characterization uses a 40 × 40 mm instanc
 
 Build the thin R1 nail experiment and [L1's independent force fixture](L1_TESTING.md) first. Keep all off-center L1 loads out of training; its cell's scalar capacity does not establish the required moment behavior. Fit the L1 carrier to the actual housing before machining it. A successful cell test still needs the separate integrated-finger validation.
 
-Then compare the best cover on a magnetic bench specimen. Advance a dense matrix only after the laminate and sealing process survive the material tests. Advance optical sensing when dense contact geometry justifies the redesign. Choose from physical contact coverage, held-out force error, tip access, replacement and wear results across multiple builds. R1 plus L1 is a candidate combination, not a selected winner.
+Use B1 as the current magnetic pilot and test the actual motor/jaw/steel conditions. Finish the B2 packaging design if that modality passes; evaluate the C1 coupon if aggregate force stability is the main problem. Advance a dense matrix only after the laminate and sealing process survive the material tests. Advance optical sensing when dense contact geometry justifies the redesign. Choose from physical contact coverage, held-out force error, tip access, replacement and wear results across multiple builds.
 
 Apply the same [contact criteria](CONTACT.md) to the two supplied readouts. Report both observed event rates and their uncertainty, and retain failures in leading-edge and gap cases. The supplied contact parser supports R1 and L1; magnetic, matrix and optical readouts need their own verified data adapters before they can enter this executable comparison.

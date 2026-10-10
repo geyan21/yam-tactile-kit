@@ -4,6 +4,8 @@
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.
 
+[Magnetic scalability and alternative designs](engineering/docs/ARCHITECTURE.md) compares the current pilot with a consolidated B2 board concept and a C1 differential-strain force coupon. It includes primary-source evidence, calculations, concept CAD, and a cost/validation plan. B2 has no routed PCB; C1 has no completed gripper adapter.
+
 **Concrete B1 prototype recommendation:** five MLX90393SLW-ABA-011 heads fixed beside four magnets embedded in the bending TPU, plus two thin N0 pressure-film pads on the object-facing nail prongs. The [sensor placement guide](engineering/docs/SENSORS.md) labels every head, magnet and pad and supplies exact coordinates. Physical qualification remains pending.
 
 Three separate prototype packages are supplied:

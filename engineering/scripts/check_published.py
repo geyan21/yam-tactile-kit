@@ -75,9 +75,12 @@ def main():
                     checks[name]=content_hash(remote,name)==content_hash(local,name)
                 summary["download_hashes_match"]=checks
                 summary["b1_guide_pages_match"]={name:read(SITE+name)==(ROOT/"build/site"/name).read_bytes()
-                    for name in ("build-b1.html","b1-electronics.html","b1-testing.html","sensors.html")}
+                    for name in ("build-b1.html","b1-electronics.html","b1-testing.html","sensors.html","architecture.html")}
                 summary["sensor_placement_assets_match"]={name:read(SITE+"assets/"+name)==(ROOT/"build/site/assets"/name).read_bytes()
                     for name in ("sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg")}
+                summary["architecture_artifacts_match"]={name:read(SITE+"assets/concepts/"+name)==(ROOT/"build/site/assets/concepts"/name).read_bytes()
+                    for name in ("concept_snapshot.json","b2_board_concept.svg","c1_concept.svg","magnetic_scaling.svg","magnetic_gap.svg",
+                                 "cad/b2_pcb_fit_witness.step","cad/c1_strain_beam_coupon.step")}
         except HTTPError as error:
             summary["site_http_error"]=error.code
         summary["published_verified"]=(
@@ -90,6 +93,8 @@ def main():
             and all(summary.get("b1_guide_pages_match",{}).values())
             and bool(summary.get("sensor_placement_assets_match"))
             and all(summary.get("sensor_placement_assets_match",{}).values())
+            and bool(summary.get("architecture_artifacts_match"))
+            and all(summary.get("architecture_artifacts_match",{}).values())
             and any(run["conclusion"]=="success" for run in summary["runs"])
         )
         record["publication"]=summary

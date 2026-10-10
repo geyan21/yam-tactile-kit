@@ -7,6 +7,7 @@
   "physical_specimens_tested": 0,
   "selected_sensor": null,
   "selected_material": null,
+  "architecture_review": "Magnetic sensing remains a reasonable pilot direction. B2 consolidates electronics as an unrouted layout concept; C1 explores magnet-free aggregate normal-force measurement with an analytical beam coupon.",
   "physical_results": [],
   "next_experiment": "Retain the R1 nail and L1 force experiments. Build one B1 insert and fixed readout, compare its compliance with an unmodified insert, and record magnetic interference and calibrated reference-force trials through the 20 N per finger target.",
   "candidates": [
@@ -14,6 +15,8 @@
     {"id": "B1", "name": "B1 magnetic bending insert", "status": "separate CAD, PCB and raw readout designed; unbuilt", "coverage": "four compliant regions; optional R1 nail cells", "next": "Original-vs-B1 compliance, retention, interference, physical force calibration through 20 N"},
     {"id": "F1", "name": "Dense flexible matrix", "status": "research comparison", "coverage": "custom fork-shaped flex and curved pad", "next": "Routed fabrication files, crosstalk, fatigue, sealing"},
     {"id": "O1", "name": "Optical compliant finger", "status": "research comparison", "coverage": "requires optical path and changed skeleton", "next": "Visibility under bending and preservation of nail access"},
-    {"id": "L1", "name": "Root normal-force cell", "status": "carrier, readout and fixtures designed; unbuilt", "coverage": "normal load through the complete finger mount", "next": "Housing fit, held-out moment loads, integrated-finger accuracy, stiffness and faults"}
+    {"id": "L1", "name": "Root normal-force cell", "status": "carrier, readout and fixtures designed; unbuilt", "coverage": "normal load through the complete finger mount", "next": "Housing fit, held-out moment loads, integrated-finger accuracy, stiffness and faults"},
+    {"id": "B2", "name": "Consolidated magnetic PCB", "status": "outline/placement concept; no routed PCB", "coverage": "same B1 magnet/head positions; nail pads retained in first pilot", "next": "Controller placement, routing/DRC, board registration, retention, assembly and calibration cost"},
+    {"id": "C1", "name": "Differential-strain force element", "status": "analytical screen and bench coupon; no gripper adapter", "coverage": "aggregate normal force in a controlled load path; no contact map", "next": "Gauge bonding/matching, drift, moment rejection, cross-axis response, adapter geometry"}
   ]
 }

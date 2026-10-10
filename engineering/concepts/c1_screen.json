@@ -1,0 +1,448 @@
+{
+  "evidence_kind": "analytical_screen_only",
+  "configuration": {
+    "name": "Magnet-free differential-strain root-force concept",
+    "status": "analytical screen and metal bench coupon; not a completed gripper adapter",
+    "beam_width_mm": 25,
+    "beam_thickness_mm": 8,
+    "active_length_mm": 18,
+    "end_clamp_length_mm": 10,
+    "gauge_station_mm_from_fixed_boundary": [
+      5,
+      13
+    ],
+    "end_hole_diameter_mm": 4.5,
+    "end_hole_x_spacing_mm": 16,
+    "material_candidate": "6061-T6 aluminum with supplier certificate",
+    "youngs_modulus_mpa_assumed": 69000,
+    "gauge_factor_assumed": 2.0,
+    "gauge_resistance_ohm": 350,
+    "gauges_per_full_bridge": 4,
+    "full_bridges": 2,
+    "excitation_v": 5.0,
+    "adc_candidate": "two ADS1232, one per bridge; continuous acquisition rather than channel hopping",
+    "adc_gain": 128,
+    "adc_data_rate_sps": 80,
+    "adc_short_input_typical_rms_nv_at_5v": 44,
+    "contact_arm_from_free_boundary_mm": [
+      10,
+      50,
+      110
+    ],
+    "screen_assumption_allowed_added_tip_deflection_mm": 0.1,
+    "residual_station_gain_error_cases": [
+      0,
+      0.001,
+      0.005
+    ],
+    "notes": [
+      "All finger contact loads must enter beyond both sensing stations through one controlled load path.",
+      "Force derives from the difference of calibrated bending moments, not a single bending gauge.",
+      "Normal force only; no spatial contact map and no shear/torque qualification.",
+      "The 18 mm active element does not establish final added reach; end fixtures and drive interface are not designed.",
+      "Gauge bonding, bridge matching, thermal drift, clamp compliance and cross-axis response require measurements."
+    ]
+  },
+  "screen_20n": {
+    "force_n": 20,
+    "contact_arm_mm": 110,
+    "applied_end_moment_nmm": 2200.0,
+    "station_moments_nmm": [
+      2460.0,
+      2300.0
+    ],
+    "station_strain": [
+      0.00013369565217391305,
+      0.000125
+    ],
+    "bridge_v_ideal": [
+      0.0013369565217391305,
+      0.00125
+    ],
+    "difference_strain": 8.695652173913043e-06,
+    "difference_v_ideal": 8.695652173913043e-05,
+    "sensitivity_v_per_n": 4.347826086956521e-06,
+    "recovered_force_ideal_n": 20.0,
+    "rotation_rad": 0.0005820652173913044,
+    "added_contact_displacement_mm": 0.06939782608695652,
+    "active_beam_max_bending_stress_mpa": 9.6,
+    "adc_only_force_equivalent_rms_n": 0.014311841251215724,
+    "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+  },
+  "screen_0_2n": {
+    "force_n": 0.2,
+    "contact_arm_mm": 110,
+    "applied_end_moment_nmm": 22.0,
+    "station_moments_nmm": [
+      24.6,
+      23.0
+    ],
+    "station_strain": [
+      1.3369565217391305e-06,
+      1.25e-06
+    ],
+    "bridge_v_ideal": [
+      1.3369565217391305e-05,
+      1.25e-05
+    ],
+    "difference_strain": 8.695652173913038e-08,
+    "difference_v_ideal": 8.695652173913043e-07,
+    "sensitivity_v_per_n": 4.347826086956521e-06,
+    "recovered_force_ideal_n": 0.2,
+    "rotation_rad": 5.820652173913043e-06,
+    "added_contact_displacement_mm": 0.0006939782608695653,
+    "active_beam_max_bending_stress_mpa": 0.096,
+    "adc_only_force_equivalent_rms_n": 0.014311841251215724,
+    "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+  },
+  "active_length_to_thickness_ratio": 2.25,
+  "thickness_sweep": [
+    {
+      "thickness_mm": 4,
+      "force_n": 20,
+      "contact_arm_mm": 10,
+      "applied_end_moment_nmm": 200.0,
+      "station_moments_nmm": [
+        460.0,
+        300.0
+      ],
+      "station_strain": [
+        0.0001,
+        6.521739130434782e-05
+      ],
+      "bridge_v_ideal": [
+        0.001,
+        0.0006521739130434782
+      ],
+      "difference_strain": 3.4782608695652184e-05,
+      "difference_v_ideal": 0.0003478260869565218,
+      "sensitivity_v_per_n": 1.7391304347826085e-05,
+      "recovered_force_ideal_n": 20.000000000000007,
+      "rotation_rad": 0.0007434782608695652,
+      "added_contact_displacement_mm": 0.015182608695652175,
+      "active_beam_max_bending_stress_mpa": 8.399999999999999,
+      "adc_only_force_equivalent_rms_n": 0.003577960312803931,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 4,
+      "force_n": 20,
+      "contact_arm_mm": 50,
+      "applied_end_moment_nmm": 1000.0,
+      "station_moments_nmm": [
+        1260.0,
+        1100.0
+      ],
+      "station_strain": [
+        0.00027391304347826085,
+        0.0002391304347826087
+      ],
+      "bridge_v_ideal": [
+        0.0027391304347826086,
+        0.002391304347826087
+      ],
+      "difference_strain": 3.4782608695652144e-05,
+      "difference_v_ideal": 0.0003478260869565217,
+      "sensitivity_v_per_n": 1.7391304347826085e-05,
+      "recovered_force_ideal_n": 20.0,
+      "rotation_rad": 0.002308695652173913,
+      "added_contact_displacement_mm": 0.1372695652173913,
+      "active_beam_max_bending_stress_mpa": 20.4,
+      "adc_only_force_equivalent_rms_n": 0.003577960312803931,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 4,
+      "force_n": 20,
+      "contact_arm_mm": 110,
+      "applied_end_moment_nmm": 2200.0,
+      "station_moments_nmm": [
+        2460.0,
+        2300.0
+      ],
+      "station_strain": [
+        0.0005347826086956522,
+        0.0005
+      ],
+      "bridge_v_ideal": [
+        0.005347826086956522,
+        0.005
+      ],
+      "difference_strain": 3.478260869565217e-05,
+      "difference_v_ideal": 0.0003478260869565217,
+      "sensitivity_v_per_n": 1.7391304347826085e-05,
+      "recovered_force_ideal_n": 20.0,
+      "rotation_rad": 0.004656521739130435,
+      "added_contact_displacement_mm": 0.5551826086956522,
+      "active_beam_max_bending_stress_mpa": 38.4,
+      "adc_only_force_equivalent_rms_n": 0.003577960312803931,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 6,
+      "force_n": 20,
+      "contact_arm_mm": 10,
+      "applied_end_moment_nmm": 200.0,
+      "station_moments_nmm": [
+        460.0,
+        300.0
+      ],
+      "station_strain": [
+        4.4444444444444447e-05,
+        2.898550724637681e-05
+      ],
+      "bridge_v_ideal": [
+        0.00044444444444444447,
+        0.0002898550724637681
+      ],
+      "difference_strain": 1.5458937198067636e-05,
+      "difference_v_ideal": 0.00015458937198067636,
+      "sensitivity_v_per_n": 7.729468599033817e-06,
+      "recovered_force_ideal_n": 20.000000000000004,
+      "rotation_rad": 0.00022028985507246377,
+      "added_contact_displacement_mm": 0.004498550724637681,
+      "active_beam_max_bending_stress_mpa": 3.7333333333333334,
+      "adc_only_force_equivalent_rms_n": 0.008050410703808844,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 6,
+      "force_n": 20,
+      "contact_arm_mm": 50,
+      "applied_end_moment_nmm": 1000.0,
+      "station_moments_nmm": [
+        1260.0,
+        1100.0
+      ],
+      "station_strain": [
+        0.00012173913043478261,
+        0.00010628019323671498
+      ],
+      "bridge_v_ideal": [
+        0.0012173913043478262,
+        0.0010628019323671498
+      ],
+      "difference_strain": 1.5458937198067633e-05,
+      "difference_v_ideal": 0.0001545893719806764,
+      "sensitivity_v_per_n": 7.729468599033817e-06,
+      "recovered_force_ideal_n": 20.00000000000001,
+      "rotation_rad": 0.0006840579710144927,
+      "added_contact_displacement_mm": 0.04067246376811594,
+      "active_beam_max_bending_stress_mpa": 9.066666666666666,
+      "adc_only_force_equivalent_rms_n": 0.008050410703808844,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 6,
+      "force_n": 20,
+      "contact_arm_mm": 110,
+      "applied_end_moment_nmm": 2200.0,
+      "station_moments_nmm": [
+        2460.0,
+        2300.0
+      ],
+      "station_strain": [
+        0.00023768115942028985,
+        0.00022222222222222223
+      ],
+      "bridge_v_ideal": [
+        0.0023768115942028986,
+        0.0022222222222222222
+      ],
+      "difference_strain": 1.545893719806762e-05,
+      "difference_v_ideal": 0.0001545893719806764,
+      "sensitivity_v_per_n": 7.729468599033817e-06,
+      "recovered_force_ideal_n": 20.00000000000001,
+      "rotation_rad": 0.0013797101449275363,
+      "added_contact_displacement_mm": 0.16449855072463768,
+      "active_beam_max_bending_stress_mpa": 17.066666666666666,
+      "adc_only_force_equivalent_rms_n": 0.008050410703808844,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 8,
+      "force_n": 20,
+      "contact_arm_mm": 10,
+      "applied_end_moment_nmm": 200.0,
+      "station_moments_nmm": [
+        460.0,
+        300.0
+      ],
+      "station_strain": [
+        2.5e-05,
+        1.6304347826086955e-05
+      ],
+      "bridge_v_ideal": [
+        0.00025,
+        0.00016304347826086955
+      ],
+      "difference_strain": 8.695652173913046e-06,
+      "difference_v_ideal": 8.695652173913045e-05,
+      "sensitivity_v_per_n": 4.347826086956521e-06,
+      "recovered_force_ideal_n": 20.000000000000007,
+      "rotation_rad": 9.293478260869565e-05,
+      "added_contact_displacement_mm": 0.0018978260869565219,
+      "active_beam_max_bending_stress_mpa": 2.0999999999999996,
+      "adc_only_force_equivalent_rms_n": 0.014311841251215724,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 8,
+      "force_n": 20,
+      "contact_arm_mm": 50,
+      "applied_end_moment_nmm": 1000.0,
+      "station_moments_nmm": [
+        1260.0,
+        1100.0
+      ],
+      "station_strain": [
+        6.847826086956521e-05,
+        5.9782608695652175e-05
+      ],
+      "bridge_v_ideal": [
+        0.0006847826086956521,
+        0.0005978260869565217
+      ],
+      "difference_strain": 8.695652173913036e-06,
+      "difference_v_ideal": 8.695652173913043e-05,
+      "sensitivity_v_per_n": 4.347826086956521e-06,
+      "recovered_force_ideal_n": 20.0,
+      "rotation_rad": 0.0002885869565217391,
+      "added_contact_displacement_mm": 0.017158695652173914,
+      "active_beam_max_bending_stress_mpa": 5.1,
+      "adc_only_force_equivalent_rms_n": 0.014311841251215724,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 8,
+      "force_n": 20,
+      "contact_arm_mm": 110,
+      "applied_end_moment_nmm": 2200.0,
+      "station_moments_nmm": [
+        2460.0,
+        2300.0
+      ],
+      "station_strain": [
+        0.00013369565217391305,
+        0.000125
+      ],
+      "bridge_v_ideal": [
+        0.0013369565217391305,
+        0.00125
+      ],
+      "difference_strain": 8.695652173913043e-06,
+      "difference_v_ideal": 8.695652173913043e-05,
+      "sensitivity_v_per_n": 4.347826086956521e-06,
+      "recovered_force_ideal_n": 20.0,
+      "rotation_rad": 0.0005820652173913044,
+      "added_contact_displacement_mm": 0.06939782608695652,
+      "active_beam_max_bending_stress_mpa": 9.6,
+      "adc_only_force_equivalent_rms_n": 0.014311841251215724,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 10,
+      "force_n": 20,
+      "contact_arm_mm": 10,
+      "applied_end_moment_nmm": 200.0,
+      "station_moments_nmm": [
+        460.0,
+        300.0
+      ],
+      "station_strain": [
+        1.6e-05,
+        1.0434782608695653e-05
+      ],
+      "bridge_v_ideal": [
+        0.00015999999999999999,
+        0.00010434782608695653
+      ],
+      "difference_strain": 5.565217391304346e-06,
+      "difference_v_ideal": 5.565217391304346e-05,
+      "sensitivity_v_per_n": 2.782608695652174e-06,
+      "recovered_force_ideal_n": 19.999999999999993,
+      "rotation_rad": 4.758260869565218e-05,
+      "added_contact_displacement_mm": 0.0009716869565217391,
+      "active_beam_max_bending_stress_mpa": 1.3439999999999999,
+      "adc_only_force_equivalent_rms_n": 0.022362251955024566,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 10,
+      "force_n": 20,
+      "contact_arm_mm": 50,
+      "applied_end_moment_nmm": 1000.0,
+      "station_moments_nmm": [
+        1260.0,
+        1100.0
+      ],
+      "station_strain": [
+        4.382608695652174e-05,
+        3.826086956521739e-05
+      ],
+      "bridge_v_ideal": [
+        0.0004382608695652174,
+        0.0003826086956521739
+      ],
+      "difference_strain": 5.565217391304351e-06,
+      "difference_v_ideal": 5.565217391304353e-05,
+      "sensitivity_v_per_n": 2.782608695652174e-06,
+      "recovered_force_ideal_n": 20.000000000000018,
+      "rotation_rad": 0.00014775652173913044,
+      "added_contact_displacement_mm": 0.008785252173913044,
+      "active_beam_max_bending_stress_mpa": 3.264,
+      "adc_only_force_equivalent_rms_n": 0.022362251955024566,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    },
+    {
+      "thickness_mm": 10,
+      "force_n": 20,
+      "contact_arm_mm": 110,
+      "applied_end_moment_nmm": 2200.0,
+      "station_moments_nmm": [
+        2460.0,
+        2300.0
+      ],
+      "station_strain": [
+        8.556521739130435e-05,
+        8e-05
+      ],
+      "bridge_v_ideal": [
+        0.0008556521739130435,
+        0.0008
+      ],
+      "difference_strain": 5.565217391304345e-06,
+      "difference_v_ideal": 5.565217391304347e-05,
+      "sensitivity_v_per_n": 2.782608695652174e-06,
+      "recovered_force_ideal_n": 19.999999999999996,
+      "rotation_rad": 0.00029801739130434784,
+      "added_contact_displacement_mm": 0.035531686956521744,
+      "active_beam_max_bending_stress_mpa": 6.143999999999999,
+      "adc_only_force_equivalent_rms_n": 0.022362251955024566,
+      "note": "Ideal small-deflection model. ADC-only RMS is not sensor resolution, accuracy or a contact threshold."
+    }
+  ],
+  "residual_gain_error_cases": [
+    {
+      "relative_station_gain_error": 0,
+      "force_error_n": 0.0
+    },
+    {
+      "relative_station_gain_error": 0.001,
+      "force_error_n": 0.30749999999996547
+    },
+    {
+      "relative_station_gain_error": 0.005,
+      "force_error_n": 1.5374999999999837
+    }
+  ],
+  "limits": [
+    "Constant cross section, rigid clamps/distal arm, linear elasticity and small deflection.",
+    "End clamp/tab deformation, mounting interface, shear, torsion, gravity and thermal drift omitted.",
+    "All applied loads must enter beyond both stations; no mechanical bypass is allowed.",
+    "ADC-only noise is a lower-bound calculation with manufacturer typical shorted-input noise.",
+    "The active section is short relative to its thickness. Clamp/end effects require 3D FEA and gauge-area measurements; beam theory is an initial screen only.",
+    "The coupon's 18 mm active length is not a final gripper reach or envelope prediction.",
+    "No safety, fatigue, force-accuracy or contact-threshold rating."
+  ]
+}

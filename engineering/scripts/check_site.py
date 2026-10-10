@@ -62,6 +62,9 @@ def main():
                 archives[name]={"files":len(names),"bytes":(site/"downloads"/name).stat().st_size}
                 if name=="enpire-site.zip":
                     archives[name]["local_links"]=verify_entries({n:archive.read(n) for n in names})
+                if name=="enpire-designs.zip":
+                    for required in ("concepts/cad/b2_pcb_fit_witness.step","concepts/cad/c1_strain_beam_coupon.step","concepts/NOTICE.md"):
+                        if required not in names:raise ValueError(f"CAD archive missing concept artifact: {required}")
         with zipfile.ZipFile(site/"downloads/enpire-engineering-kit.zip") as archive:
             required=[
                 "START_HERE.txt","source/engineering/firmware/r1/main.py",
@@ -89,6 +92,14 @@ def main():
                 "website/build-b1.html","website/b1-electronics.html","website/b1-testing.html",
                 "website/sensors.html","website/assets/sensor-placement.svg",
                 "website/assets/sensor-placement.csv","website/assets/n0-tip-stack.svg",
+                "website/architecture.html",
+                "website/assets/concepts/b2_board_concept.svg","website/assets/concepts/c1_concept.svg",
+                "website/assets/concepts/magnetic_scaling.svg",
+                "source/engineering/concepts/cad/b2_pcb_fit_witness.step",
+                "source/engineering/concepts/cad/c1_strain_beam_coupon.step",
+                "source/engineering/software/architecture_math.py",
+                "source/engineering/software/architecture_cost.py",
+                "source/engineering/research/quote_template.json",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

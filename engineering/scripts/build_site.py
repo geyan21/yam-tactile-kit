@@ -22,6 +22,7 @@ RELEASE=ROOT/"engineering/release"
 WEB=ROOT/"engineering/web"
 DOCS=[
     ("SENSORS","sensors","Sensor choice & placement"),
+    ("ARCHITECTURE","architecture","Scalability & better designs"),
     ("START","start","Student starting packet"),("GEOMETRY","geometry","Measured geometry"),
     ("BUILD_R1","build-r1","Build R1"),("ELECTRONICS","electronics","Electronics & code"),
     ("BUILD_L1","build-l1","Build L1 root force"),("L1_ELECTRONICS","l1-electronics","L1 wiring & code"),
@@ -43,6 +44,16 @@ def verify_snapshot():
     for name,expected in manifest["files"].items():
         if hashlib.sha256((RELEASE/name).read_bytes()).hexdigest()!=expected:
             raise ValueError(f"Geometry snapshot hash mismatch: {name}")
+    concepts=ROOT/"engineering/concepts"
+    concept_snapshot=json.loads((concepts/"concept_snapshot.json").read_text())
+    for name,expected in concept_snapshot["source_hashes"].items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            raise ValueError(f"Stale concept calculation: {name}")
+    for name,expected in concept_snapshot["files"].items():
+        if hashlib.sha256((concepts/name).read_bytes()).hexdigest()!=expected:
+            raise ValueError(f"Concept artifact changed: {name}")
+    if hashlib.sha256((RELEASE/"b1/b1_manifest.json").read_bytes()).hexdigest()!=concept_snapshot["basis_b1_release"]:
+        raise ValueError("Concept basis does not match released B1")
     return manifest
 
 
@@ -50,7 +61,7 @@ def source_entries():
     roots=[ROOT/"README.md",ROOT/"LICENSE",ROOT/".gitignore",ROOT/".github/workflows",ROOT/"src/tactile_kit"]
     roots += [ROOT/"engineering"/name for name in (
         "README.md","bom.csv","l1_bom.csv","b1_bom.csv","study.json","requirements.in","requirements.lock",
-        "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics",
+        "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics","research","concepts",
     )]
     entries={}
     for root in roots:
@@ -77,6 +88,7 @@ def chapter(source):
         text=text.replace(f"]({name}.md)",f"]({slug}.html)")
     for old,new in (
         ("../release/","assets/"),("../web/","assets/"),
+        ("../concepts/","assets/concepts/"),("../research/","downloads/"),
         ("../templates/","downloads/"),("../l1_bom.csv","downloads/l1_bom.csv"),("../b1_bom.csv","downloads/b1_bom.csv"),
     ):
         text=text.replace(f"]({old}",f"]({new}")
@@ -109,6 +121,9 @@ def main():
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
+        shutil.copytree(ROOT/"engineering/concepts",assets/"concepts")
+        for name in ("architecture_evidence.json","quote_template.json","scale_validation.json"):
+            shutil.copyfile(ROOT/"engineering/research"/name,downloads/name)
         shutil.copytree(RELEASE/"r1/cad",downloads/"cad")
         shutil.copytree(RELEASE/"l1/cad",downloads/"l1/cad")
         shutil.copytree(RELEASE/"b1/cad",downloads/"b1/cad")
@@ -151,6 +166,8 @@ def main():
         source=source_entries()
         write_zip(downloads/"enpire-source.zip",source)
         designs={str(path.relative_to(RELEASE)):path.read_bytes() for path in RELEASE.rglob("*") if path.is_file() and path.name!="models.json"}
+        designs.update({"concepts/"+str(path.relative_to(ROOT/"engineering/concepts")):path.read_bytes()
+                        for path in (ROOT/"engineering/concepts").rglob("*") if path.is_file()})
         write_zip(downloads/"enpire-designs.zip",designs)
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
@@ -189,6 +206,7 @@ def main():
         summary={
             "site":"build/site","cad_parts":sum(len(payload[name]["parts"]) for name in ("r1","l1","b1")),
             "purchased_reference_solids":3,
+            "separate_concept_solids":2,
             "documents":len(DOCS),"requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],
             "complete_packet_bytes":(downloads/"enpire-engineering-kit.zip").stat().st_size,

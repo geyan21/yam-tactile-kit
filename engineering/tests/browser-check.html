@@ -10,7 +10,8 @@ document.getElementById("page").addEventListener("load",async()=>{
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
     check("all R1, L1 and B1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===56);
-    check("all five sensor alternatives listed",d.querySelectorAll("#candidate-table tr").length===5);
+    check("current designs and two new concepts listed separately",d.querySelectorAll("#candidate-table tr").length===7);
+    check("scalability study is reachable",d.querySelector('a[href="architecture.html"]')!==null);
     const before=w.EngineeringUI.viewer.yaw;
     d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
     await pause(100);check("keyboard rotates actual mesh",w.EngineeringUI.viewer.yaw!==before);

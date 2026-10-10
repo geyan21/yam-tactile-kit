@@ -4,6 +4,8 @@
 
 This is the concrete prototype recommendation for your thin-tip, dexterous gripper. B1 is still awaiting physical validation and force calibration through the requested 20 N per finger range.
 
+**Before ordering a batch, read [the scalability and alternative-design study](ARCHITECTURE.md).** B1 is the current pilot build. B2 proposes one consolidated magnetic board; C1 explores a magnet-free force element. Those new concepts are not yet complete gripper build packages.
+
 ![Labeled positions of five magnetic sensor heads, four embedded magnets and two pressure-film nail pads](../web/sensor-placement.svg)
 
 [Open the full-size placement drawing](../web/sensor-placement.svg) · [Exact placement CSV](../web/sensor-placement.csv) · [Full positions and orientations JSON](../web/sensor-placement.json)

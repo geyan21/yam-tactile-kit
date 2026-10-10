@@ -18,6 +18,8 @@ For B1, follow [assembly](docs/BUILD_B1.md), [electronics](docs/B1_ELECTRONICS.m
 
 Start with [sensor choice and placement](docs/SENSORS.md) for the exact IC, magnets, two nail pads, and their labeled locations. Its SVG, coordinate files and page are generated from the unchanged release by `scripts/explain_sensor_placement.py`; edit `templates/sensor_guide.md` for the explanatory text, then regenerate with the CAD environment's Python.
 
+The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` contains separate B2/C1 exploration artifacts, not additional qualified build parts. Reproduce them with the CAD interpreter running `scripts/screen_magnetic_scaling.py` and then `scripts/build_design_concepts.py`. Their source/output hashes are checked independently of the preserved R1/L1/B1 release. `research/` contains the source index, quote template and scale-validation plan.
+
 ## File map
 
 | Files | Role |
