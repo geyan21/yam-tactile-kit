@@ -22,6 +22,9 @@ from tactile_kit.records import execution
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
+    parser.add_argument("--checks-only",action="store_true")
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench"),
+                        help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
     output=ROOT/"build/engineering/browser";output.mkdir(parents=True,exist_ok=True)
@@ -37,9 +40,18 @@ def main():
             index=(site/"index.html").read_text()
             for name,style in (
                 ("design",".hero,.brief{display:none} #design{padding-top:25px}"),
-                ("build",".hero,.brief,#design{display:none} #build{padding-top:25px}"),
+                ("build",".hero,.brief,#design,#root-force{display:none} #build{padding-top:25px}"),
+                ("root",".hero,.brief,#design{display:none} #root-force{padding-top:25px}"),
             ):
                 (site/f"{name}-review.html").write_text(index.replace("</head>",f"<style>{style}</style></head>"))
+            for name,model in (("l1-assembly","l1_assembly"),("l1-bench","l1_bench")):
+                prepared=index.replace("</head>","<style>.hero,.brief{display:none} #design{padding-top:25px}</style></head>")
+                script=(
+                    "<script>window.addEventListener('load',()=>{"
+                    "const s=document.getElementById('model-select');s.value="+json.dumps(model)+";"
+                    "s.dispatchEvent(new Event('change'));});</script>"
+                )
+                (site/f"{name}-review.html").write_text(prepared.replace("</body>",script+"</body>"))
             server=ThreadingHTTPServer(("127.0.0.1",0),partial(Handler,directory=str(site)))
             thread=Thread(target=server.serve_forever,daemon=True);thread.start()
             record["http_bind"]=f"127.0.0.1:{server.server_port}"
@@ -65,11 +77,16 @@ def main():
                 (output/"checks.json").write_text(json.dumps(result,indent=2)+"\n")
                 record["checks"]=result
                 if not result["passed"]:raise RuntimeError(f"Browser checks failed: {result}")
+                if args.checks_only:
+                    print(json.dumps({"passed":True,"checks":len(result["checks"]),"observations":result.get("observations")},indent=2))
+                    return
                 for name,size,page in (
                     ("desktop","1440,1140","index.html"),("design","1440,1100","design-review.html"),
                     ("build","1440,1100","build-review.html"),("mobile","500,1800","mobile.html"),
-                    ("guide","1280,1000","electronics.html"),
+                    ("root","1440,1200","root-review.html"),("guide","1280,1100","l1-electronics.html"),
+                    ("l1-assembly","1440,1100","l1-assembly-review.html"),("l1-bench","1440,1100","l1-bench-review.html"),
                 ):
+                    if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])
                 print(json.dumps({"passed":True,"checks":len(result["checks"]),"screenshots":str(output)},indent=2))
             finally:

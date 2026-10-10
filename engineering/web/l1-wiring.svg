@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+<title id="title">L1 wiring: two voltage domains and monitored bridge excitation</title>
+<desc id="desc">Pico GP4 and GP5 reach the five volt NAU7802 through a bidirectional I2C level shifter. An INA219 on the three point three volt bus monitors the red excitation lead only. The green and white signal leads connect directly to NAU channel A.</desc>
+<style>
+text{font-family:Arial,sans-serif;fill:#203f46;font-size:18px}.title{font-size:28px;font-weight:bold}.small{font-size:15px}.label{font-size:20px;font-weight:bold}
+.box{fill:#fff;stroke:#8da198;stroke-width:2}.bus{fill:none;stroke:#347d7a;stroke-width:3}.signal{fill:none;stroke:#bb833e;stroke-width:3}
+.power{fill:none;stroke:#b54d40;stroke-width:3}.gnd{fill:none;stroke:#46545a;stroke-width:3}
+</style>
+<rect width="1200" height="830" rx="12" fill="#f4f6f0"/>
+<text x="30" y="42" class="title">L1 · wire one force cell</text>
+<text x="30" y="73">Use a dedicated Pico. All grounds connect together. I²C addresses are seven-bit values.</text>
+<rect class="box" x="30" y="125" width="245" height="225" rx="10"/>
+<text x="50" y="158" class="label">Pico RP2040</text>
+<text x="50" y="195">GP4 · pin 6 · SDA</text>
+<text x="50" y="250">GP5 · pin 7 · SCL</text>
+<text x="50" y="290" class="small">3V3 OUT: pin 36</text>
+<text x="50" y="316" class="small">VBUS: pin 40 · GND: pin 38</text>
+<rect class="box" x="455" y="125" width="240" height="225" rx="10"/>
+<text x="475" y="158" class="label">BSS138 shifter</text>
+<text x="475" y="194" class="small">LV1</text><text x="640" y="194" class="small">HV1</text>
+<text x="475" y="249" class="small">LV2</text><text x="640" y="249" class="small">HV2</text>
+<text x="475" y="292">LV ← Pico 3.3 V</text>
+<text x="475" y="320">HV ← Pico VBUS / 5 V</text>
+<rect class="box" x="875" y="125" width="295" height="225" rx="10"/>
+<text x="895" y="158" class="label">NAU7802 · 0x2A</text>
+<text x="895" y="195">SDA</text><text x="895" y="250">SCL</text>
+<text x="895" y="290">VCC ← Pico VBUS / 5 V</text>
+<text x="895" y="319" class="small">GND ← common ground</text>
+<path class="bus" d="M275 200H455 M695 200H875"/>
+<path class="signal" d="M275 255H455 M695 255H875"/>
+<text x="314" y="183" class="small">3.3 V bus</text><text x="734" y="183" class="small">5 V bus</text>
+<text x="306" y="310" class="small">INA219 logic joins</text><text x="306" y="332" class="small">this 3.3 V side.</text>
+<text x="30" y="393" class="label">Bridge terminals on the same NAU board</text>
+<text x="30" y="420" class="small">Firmware sets its AVDD / excitation output to 4.2 V. Do not use the 5 V VCC terminal as E+.</text>
+<rect class="box" x="30" y="450" width="240" height="255" rx="10"/>
+<text x="50" y="479">AVDD / E+</text>
+<text x="50" y="549">A+ / S+</text>
+<text x="50" y="609">A− / S−</text>
+<text x="50" y="670">GND / E−</text>
+<rect class="box" x="450" y="445" width="310" height="102" rx="10"/>
+<text x="472" y="469" class="label">INA219 · 0x40</text>
+<text x="472" y="504" class="small">VIN+ → 0.1 Ω shunt → VIN−</text>
+<text x="472" y="533" class="small">VCC=3.3 V; SDA=GP4; SCL=GP5</text>
+<rect class="box" x="935" y="450" width="235" height="255" rx="10"/>
+<text x="955" y="479">Red · E+</text>
+<text x="955" y="549">Green · S+</text>
+<text x="955" y="609">White · S−</text>
+<text x="955" y="670">Black · E−</text>
+<path class="power" d="M270 486H450 M760 486H935"/>
+<path d="M270 556H935" fill="none" stroke="#4c835a" stroke-width="3"/>
+<path d="M270 616H935" fill="none" stroke="#89908b" stroke-width="3"/>
+<path class="gnd" d="M270 677H935"/>
+<text x="303" y="474" class="small">Excitation only</text>
+<text x="785" y="474" class="small">To cell red</text>
+<text x="400" y="587" class="small">Twist the two signal wires together; keep them off the force path.</text>
+<text x="940" y="731" class="label">TAL220B · 5 kg</text>
+<text x="30" y="759">Check wire colors and resistance on the purchased cell. Leave channel B and DRDY unconnected.</text>
+<text x="30" y="788" class="small">The 5 V Qwiic segment must not connect to a normal 3.3 V Qwiic/STEMMA chain. This schematic does not establish fault coverage.</text>
+</svg>

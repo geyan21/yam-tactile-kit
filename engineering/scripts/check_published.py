@@ -19,7 +19,7 @@ API="https://api.github.com/repos/geyan21/yam-tactile-kit"
 SITE="https://geyan21.github.io/yam-tactile-kit/"
 
 
-def read(url,limit=16*1024*1024):
+def read(url,limit=64*1024*1024):
     request=Request(url,headers={"User-Agent":"enpire-engineering-publication-check","Cache-Control":"no-cache"})
     with urlopen(request,timeout=25) as response:
         data=response.read(limit+1)
@@ -66,7 +66,8 @@ def main():
             summary["release_manifest_matches"]=remote_manifest==local_manifest
             if summary["release_manifest_matches"]:
                 checks={}
-                for name in ("enpire-engineering-kit.zip","r1_cut_sheet.pdf","cad/nail_cover_mold.step"):
+                for name in ("enpire-engineering-kit.zip","r1_cut_sheet.pdf","cad/nail_cover_mold.step",
+                             "l1/cad/l1_floating_finger_carrier.step","l1_review_drawings.pdf","l1_finger_plan.json"):
                     remote=read(SITE+"downloads/"+name)
                     local=(ROOT/"build/site/downloads"/name).read_bytes()
                     checks[name]=content_hash(remote,name)==content_hash(local,name)

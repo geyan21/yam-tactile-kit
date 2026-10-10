@@ -1,0 +1,143 @@
+{
+  "kind": "analytical_screen_not_hardware_validation",
+  "assumptions": {
+    "youngs_modulus_mpa": 69000,
+    "poisson_ratio": 0.33,
+    "root_plate_effective_width_mm": 22,
+    "force_n": 20,
+    "carrier_only_design_budget_mm": 0.25
+  },
+  "selected": {
+    "deck_mm": 10,
+    "root_plate_mm": 8,
+    "rail_span_mm": 48.730000000000004,
+    "rigid_finger_lever_mm": 113.87707183837891,
+    "rail_bending_tip_mm": 0.08697558597433562,
+    "rail_torsion_tip_mm": 0.020388809363603246,
+    "root_plate_rotation_tip_mm": 0.08035619350025527,
+    "screen_sum_mm": 0.18772058883819415,
+    "nominal_rail_bending_stress_mpa": 8.540780387878417
+  },
+  "variants": [
+    {
+      "deck_mm": 4,
+      "root_plate_mm": 5,
+      "rail_span_mm": 47.230000000000004,
+      "rigid_finger_lever_mm": 112.37707183837891,
+      "rail_bending_tip_mm": 1.2937867277780408,
+      "rail_torsion_tip_mm": 0.22400658469002194,
+      "root_plate_rotation_tip_mm": 0.2726063515465998,
+      "screen_sum_mm": 1.7903996640146624,
+      "nominal_rail_bending_stress_mpa": 52.676752424240114
+    },
+    {
+      "deck_mm": 6,
+      "root_plate_mm": 5,
+      "rail_span_mm": 47.230000000000004,
+      "rigid_finger_lever_mm": 112.37707183837891,
+      "rail_bending_tip_mm": 0.383344215637938,
+      "rail_torsion_tip_mm": 0.07318309842097231,
+      "root_plate_rotation_tip_mm": 0.2885792922896425,
+      "screen_sum_mm": 0.7451066063485529,
+      "nominal_rail_bending_stress_mpa": 23.41188996632894
+    },
+    {
+      "deck_mm": 8,
+      "root_plate_mm": 5,
+      "rail_span_mm": 47.230000000000004,
+      "rigid_finger_lever_mm": 112.37707183837891,
+      "rail_bending_tip_mm": 0.1617233409722551,
+      "rail_torsion_tip_mm": 0.03435877252273295,
+      "root_plate_rotation_tip_mm": 0.30455223303268525,
+      "screen_sum_mm": 0.5006343465276732,
+      "nominal_rail_bending_stress_mpa": 13.169188106060028
+    },
+    {
+      "deck_mm": 10,
+      "root_plate_mm": 5,
+      "rail_span_mm": 47.230000000000004,
+      "rigid_finger_lever_mm": 112.37707183837891,
+      "rail_bending_tip_mm": 0.08280235057779461,
+      "rail_torsion_tip_mm": 0.01976120390402178,
+      "root_plate_rotation_tip_mm": 0.320525173775728,
+      "screen_sum_mm": 0.4230887282575444,
+      "nominal_rail_bending_stress_mpa": 8.428280387878416
+    },
+    {
+      "deck_mm": 12,
+      "root_plate_mm": 5,
+      "rail_span_mm": 47.230000000000004,
+      "rigid_finger_lever_mm": 112.37707183837891,
+      "rail_bending_tip_mm": 0.04791802695474225,
+      "rail_torsion_tip_mm": 0.012945921782214308,
+      "root_plate_rotation_tip_mm": 0.33649811451877076,
+      "screen_sum_mm": 0.3973620632557273,
+      "nominal_rail_bending_stress_mpa": 5.852972491582235
+    },
+    {
+      "deck_mm": 4,
+      "root_plate_mm": 8,
+      "rail_span_mm": 48.730000000000004,
+      "rigid_finger_lever_mm": 113.87707183837891,
+      "rail_bending_tip_mm": 1.358993530848994,
+      "rail_torsion_tip_mm": 0.2311209161961628,
+      "root_plate_rotation_tip_mm": 0.06834286516791524,
+      "screen_sum_mm": 1.658457312213072,
+      "nominal_rail_bending_stress_mpa": 53.379877424240114
+    },
+    {
+      "deck_mm": 6,
+      "root_plate_mm": 8,
+      "rail_span_mm": 48.730000000000004,
+      "rigid_finger_lever_mm": 113.87707183837891,
+      "rail_bending_tip_mm": 0.40266474988118345,
+      "rail_torsion_tip_mm": 0.07550735519911034,
+      "root_plate_rotation_tip_mm": 0.07234730794536191,
+      "screen_sum_mm": 0.5505194130256557,
+      "nominal_rail_bending_stress_mpa": 23.72438996632894
+    },
+    {
+      "deck_mm": 8,
+      "root_plate_mm": 8,
+      "rail_span_mm": 48.730000000000004,
+      "rigid_finger_lever_mm": 113.87707183837891,
+      "rail_bending_tip_mm": 0.16987419135612425,
+      "rail_torsion_tip_mm": 0.0354499890966076,
+      "root_plate_rotation_tip_mm": 0.07635175072280859,
+      "screen_sum_mm": 0.28167593117554046,
+      "nominal_rail_bending_stress_mpa": 13.344969356060028
+    },
+    {
+      "deck_mm": 10,
+      "root_plate_mm": 8,
+      "rail_span_mm": 48.730000000000004,
+      "rigid_finger_lever_mm": 113.87707183837891,
+      "rail_bending_tip_mm": 0.08697558597433562,
+      "rail_torsion_tip_mm": 0.020388809363603246,
+      "root_plate_rotation_tip_mm": 0.08035619350025527,
+      "screen_sum_mm": 0.18772058883819415,
+      "nominal_rail_bending_stress_mpa": 8.540780387878417
+    },
+    {
+      "deck_mm": 12,
+      "root_plate_mm": 8,
+      "rail_span_mm": 48.730000000000004,
+      "rigid_finger_lever_mm": 113.87707183837891,
+      "rail_bending_tip_mm": 0.05033309373514793,
+      "rail_torsion_tip_mm": 0.013357077460243557,
+      "root_plate_rotation_tip_mm": 0.08436063627770195,
+      "screen_sum_mm": 0.14805080747309343,
+      "nominal_rail_bending_stress_mpa": 5.931097491582235
+    }
+  ],
+  "omitted": [
+    "load-cell translation and rotation",
+    "fastener and joint compliance",
+    "local notches and holes",
+    "fixed-carrier deformation",
+    "original finger compliance",
+    "dynamics",
+    "manufacturing variability"
+  ],
+  "interpretation": "Use this to reject an obviously flexible carrier. Validate complete added compliance with a force reference and displacement measurement."
+}

@@ -1,0 +1,23 @@
+id,quantity,unit,stage,part_or_specification,source,notes
+L1-CELL,1,each,one finger,"TAL220B 5 kg; SparkFun SEN-14729; 55 x 12.7 x 12.7 mm; two M5 mount axes 40 mm apart",https://www.sparkfun.com/load-cell-5kg-straight-bar-tal220b.html,"Record actual dimensions and thread depth; scalar capacity does not qualify finger moments"
+L1-ADC,1,each,one finger,"SparkFun Qwiic Scale NAU7802 SEN-15242",https://www.sparkfun.com/sparkfun-qwiic-scale-nau7802.html,"5 V isolated bus domain; firmware selects 4.2 V LDO and gain 128"
+L1-PICO,1,each,one finger,"Raspberry Pi Pico RP2040 with soldered headers",https://www.raspberrypi.com/products/raspberry-pi-pico/,"Dedicated L1 controller; do not overwrite an R1 controller"
+L1-SHIFT,1,each,one finger,"BSS138 bidirectional I2C level shifter; Adafruit 757 or same topology",https://www.adafruit.com/product/757,"LV=3.3 V; HV=5 V; use two channels for SDA and SCL"
+L1-CURRENT,1,each,one finger,"INA219 breakout with 0.1 ohm shunt; Adafruit 904",https://www.adafruit.com/product/904,"Logic at 3.3 V; VIN+/VIN- carry only load-cell E+ excitation"
+L1-USB,1,each,one finger,USB data cable for selected Pico,,Power and serial recording from the bench computer
+L1-WIRE,1,set,one finger,"Short flexible hookup wire; twisted signal pair; keyed 4-pin cell connector; strain relief",,"Label each cell lead and both voltage domains"
+L1-FIXED,1,each,one finger,"CNC 6061-T6 fixed carrier; select M3 clearance OR M3 tap-drill version",engineering/release/l1/cad,"Print fit witnesses first; choose threads after inspecting the actual jaw"
+L1-FLOAT,1,each,one finger,"CNC 6061-T6 floating carrier; 8 mm root plate and 10 mm return rail",engineering/release/l1/cad/l1_floating_finger_carrier.step,"PETG copy is a fit witness only"
+L1-M3,4,each,one finger,"M3 fasteners; lengths selected from measured jaw and finger stack",,"Two jaw attachments and two finger attachments; retain original compatible head geometry"
+L1-M3-NUT,2,each,one finger,"M3 nuts and washers for floating-carrier clearance bores",,"Combined rear washer/nut/bolt projection <=4.5 mm; retain at least 1.5 mm modeled gap to fixed plate"
+L1-M5,2,each,one finger,"M5 cell fasteners and flat washers; select lengths after measuring purchased cell",,"Fixed stack before cell=6 mm; live stack before cell=13 mm; head/washer envelope <=10 mm diameter x 6 mm"
+L1-SHOE,1,each,shared bench,CNC 6061-T6 fixed bench shoe,engineering/release/l1/cad/l1_bench_fixed_shoe.step,Supports only first 13 mm at wire end
+L1-SPACER,1,each,shared bench,6061-T6 live-end spacer,engineering/release/l1/cad/l1_bench_live_spacer.step,Supports only final 13 mm with 3 mm beam clearance
+L1-PLATE,1,each,shared bench,"6061-T6 combined load plate; 140 x 70 x 6.35 mm",engineering/release/l1/cad/l1_combined_load_plate.step,Required cell/plate calibration fixture
+L1-CAP,1,each,shared bench,PETG center load cap,engineering/release/l1/cad/l1_center_load_cap.stl,Provides an axial contact face over the live-end M5 screw
+L1-M6,2,each,shared bench,M6 bench-shoe fasteners with nuts or compatible stand threads,,Choose length to match the actual rigid stand
+L1-REFERENCE,1,each,shared bench,"Calibrated force reference >=25 N capacity; uncertainty <=0.05 N over tested range",,"Display resolution alone is insufficient; align force along W"
+L1-STAND,1,set,shared bench,"Rigid stand with translation stage or screw press; padded/rounded probes; unloading clearance",,"No robot actuation required; probe location must be recorded"
+L1-METROLOGY,1,set,shared bench,"Caliper; depth gauge; feeler gauges; dial indicator; torque tool; multimeter",,"Measure mounting stack and deformation rather than trusting nominal dimensions"
+L1-LONG,1,each,optional bench,"6061-T6 bar 280 x 25.4 x 6.35 mm",engineering/release/l1/cad/l1_long_test_arm.step,"Extra characterization; +/-130 mm ports exceed the required cell moment envelope"
+L1-CROSS,1,each,optional bench,"6061-T6 bar 110 x 25.4 x 6.35 mm",engineering/release/l1/cad/l1_cross_test_arm.step,Optional isolated transverse-moment experiment

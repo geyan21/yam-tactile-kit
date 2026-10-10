@@ -69,6 +69,13 @@ def main():
                 "source/engineering/software/calibrate.py","source/engineering/bom.csv",
                 "source/engineering/templates/specimen.json","source/engineering/release/r1/r1_cut_sheet.svg",
                 "website/index.html","website/guide.html",
+                "source/engineering/firmware/l1/main.py","source/engineering/firmware/l1/nau7802.py",
+                "source/engineering/firmware/l1/ina219.py","source/engineering/software/l1_bench.py",
+                "source/engineering/software/l1_calibrate.py","source/engineering/software/l1_validate_finger.py",
+                "source/engineering/software/l1_monitor.py","source/engineering/l1_bom.csv",
+                "source/engineering/release/l1/l1_bench_plan.json","source/engineering/release/l1/l1_finger_plan.json",
+                "source/engineering/release/l1/cad/l1_floating_finger_carrier.step",
+                "website/build-l1.html","website/l1-electronics.html","website/l1-testing.html",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

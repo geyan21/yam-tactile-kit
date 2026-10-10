@@ -9,7 +9,7 @@ The decision is driven by reliable contact and grip-force feedback with a thin, 
 | AnySkin / ReSkin magnetic skin | Magnetic changes from skin deformation | Stock board is wider than the 15 mm insert; requires another mount | Field interference, replacement variation, force calibration | Primary PCB and firmware audited |
 | eFlesh-style printed magnetic structure | Deformation coupled to permanent magnets | Promising for an internal or redesigned compliant section; hard nail remains separate | TPU creep, magnet retention, field bias, contact coverage | Primary process and dimensions reviewed |
 | Baby Fin Ray optical | Dense contact shape and texture | Requires hollow optical path, illumination, and a changed compliant structure | Occlusion under bend, gel wear, camera timing, nail coverage | Primary fabrication method reviewed |
-| Root force/torque transducer | Aggregate load including hard-frame contacts | Keeps distal tip free; adds a real sensor and adapter at the root | Off-axis load, moments, overload, stiffness, cable route | No fabricated root transducer in this release |
+| L1 root normal-force cell | Aggregate normal load including hard-frame contacts | Leaves contact surfaces intact; adds 20 mm reach and a larger root | Off-axis load, moments, stiffness, housing fit, cable route | Aluminum carriers, purchased-cell readout and test fixtures supplied; unbuilt |
 
 ## Resistive: manufacturability versus force stability
 
@@ -37,4 +37,6 @@ The eFlesh paper's main normal-force characterization uses a 40 × 40 mm instanc
 
 ## Selection rule
 
-First measure R1's nail coverage and drift, then compare the best cover on a magnetic bench specimen. Advance a dense matrix only after the laminate and sealing process survive the material tests. Advance optical sensing when dense contact geometry justifies the redesign. If aggregate grip force remains the priority and surface coverage is insufficient, design a real calibrated root force element rather than reusing the old illustrative two-moment block.
+Build the thin R1 nail experiment and [L1's independent force fixture](L1_TESTING.md) first. Keep all off-center L1 loads out of training; its cell's scalar capacity does not establish the required moment behavior. Fit the L1 carrier to the actual housing before machining it. A successful cell test still needs the separate integrated-finger validation.
+
+Then compare the best cover on a magnetic bench specimen. Advance a dense matrix only after the laminate and sealing process survive the material tests. Advance optical sensing when dense contact geometry justifies the redesign. Choose from physical contact coverage, held-out force error, tip access, replacement and wear results across multiple builds. R1 plus L1 is a candidate combination, not a selected winner.

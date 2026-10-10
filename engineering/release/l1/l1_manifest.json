@@ -1,0 +1,571 @@
+{
+  "revision": "L1.0",
+  "status": "digital prototype; fabrication and load tests pending",
+  "parts": [
+    {
+      "id": "l1_fixed_carrier_m3_clearance",
+      "purpose": "Fixed carrier; same rear datum/key as the ENPIRE finger. Use when mating jaw has M3 threads.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_fixed_carrier_m3_clearance.step",
+      "stl": "cad/l1_fixed_carrier_m3_clearance.stl",
+      "volume_mm3": 8423.567878506788,
+      "bounds_mm": [
+        [
+          -24.710813522338867,
+          -38.0,
+          -2.060746431350708
+        ],
+        [
+          25.350000381469727,
+          -2.7699999809265137,
+          28.283239364624023
+        ]
+      ],
+      "sha256_step": "042c28a5ffe5603645e016d505ea3a5b2b102f0260e4175c395ea2d21e55ceb4",
+      "sha256_stl": "7fccb0113294a35a073ce4ed242c3c083fee72684d527210ba8010c7cd701ef7",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_fixed_carrier_m3_tap_drill",
+      "purpose": "Fixed carrier with 2.5 mm pilot bores; tap M3\u00d70.5 if the mating jaw requires threads in this part.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_fixed_carrier_m3_tap_drill.step",
+      "stl": "cad/l1_fixed_carrier_m3_tap_drill.stl",
+      "volume_mm3": 8473.613449478476,
+      "bounds_mm": [
+        [
+          -24.710813522338867,
+          -38.0,
+          -2.060746431350708
+        ],
+        [
+          25.350000381469727,
+          -2.7699999809265137,
+          28.283239364624023
+        ]
+      ],
+      "sha256_step": "86d6a9ac5ac57a41f589f495fcdb09ce145799383ab7a7bbcfbe1d9fbc6a5b9d",
+      "sha256_stl": "da7e642e6e4a4ec162fbb76f928ade6c04f77a3e11031c6a2bfd68c88fcfcac2",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_floating_finger_carrier",
+      "purpose": "Carries the unmodified ENPIRE finger with a 20 mm reach extension; attaches only to the load-cell live end.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_floating_finger_carrier.step",
+      "stl": "cad/l1_floating_finger_carrier.stl",
+      "volume_mm3": 18826.096785677386,
+      "bounds_mm": [
+        [
+          -24.710813522338867,
+          -80.0,
+          -2.060746431350708
+        ],
+        [
+          25.350000381469727,
+          -19.770000457763672,
+          39.349998474121094
+        ]
+      ],
+      "sha256_step": "c3ff3bacaa01f6739500774a0bceed54a45733380652982f2b5679f680e77d76",
+      "sha256_stl": "95bd27f4fa9c3adc33eaa98f01fc87006a2ce6d558e960b21a6d50888c8a4bfb",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "tal220b_reference",
+      "purpose": "Purchased TAL220B outline and mounting axes only; internal strain element is not modeled.",
+      "kind": "reference_only",
+      "material": "Purchased component",
+      "step": "cad/tal220b_reference.step",
+      "stl": "cad/tal220b_reference.stl",
+      "volume_mm3": 8372.222166242622,
+      "bounds_mm": [
+        [
+          11.0,
+          -80.0,
+          13.649999618530273
+        ],
+        [
+          23.700000762939453,
+          -25.0,
+          26.350000381469727
+        ]
+      ],
+      "sha256_step": "3a5fbc5f15a4aceec651d91da2ed2293c78db826a509879b0119bcfffafc7857",
+      "sha256_stl": "c5198da5988b5ecd7f34f4b8acde42c07ccf7a02477b105ad308f67939120d59",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_bench_fixed_shoe",
+      "purpose": "Bench mount for the cell wire end. Two M6 stand attachments; one M5 sensor attachment.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_bench_fixed_shoe.step",
+      "stl": "cad/l1_bench_fixed_shoe.stl",
+      "volume_mm3": 10150.478481172537,
+      "bounds_mm": [
+        [
+          -12.5,
+          -21.0,
+          -9.0
+        ],
+        [
+          27.5,
+          21.0,
+          1.5
+        ]
+      ],
+      "sha256_step": "319d91a5521a3016c2db3e9a91a7d20269ec2edc9cfa90255d34bfed13b871ed",
+      "sha256_stl": "c9bfe4a4c8b92379c192549600e48f0c04f9776b3be00ec76d6e4ec6f716599c",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_bench_live_spacer",
+      "purpose": "13 mm end clamp and 3 mm gap above the active beam; shared by the two test arms.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_bench_live_spacer.step",
+      "stl": "cad/l1_bench_live_spacer.stl",
+      "volume_mm3": 611.2251166716816,
+      "bounds_mm": [
+        [
+          42.0,
+          -8.0,
+          11.199999809265137
+        ],
+        [
+          55.0,
+          8.0,
+          15.699999809265137
+        ]
+      ],
+      "sha256_step": "e38dbc132c8201cd410e3ea9d2a6e46a15c1fece3bcac2d5a8e8c051e8a16371",
+      "sha256_stl": "3d99b64d7e6769ba16deb2edb5ef9baafcdbfdf1ee324a54e7330de4c92caed7",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_long_test_arm",
+      "purpose": "20 N off-center response fixture. Use the load-cell live-end M5 attachment; ports are load locations, not a moment rating.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_long_test_arm.step",
+      "stl": "cad/l1_long_test_arm.stl",
+      "volume_mm3": 44433.80545446488,
+      "bounds_mm": [
+        [
+          -92.5,
+          -12.699999809265137,
+          15.699999809265137
+        ],
+        [
+          187.5,
+          12.699999809265137,
+          22.049999237060547
+        ]
+      ],
+      "sha256_step": "f7cdbf6b932d5aaa48384c5a7d08c5db242cd0b2d64ecb79b4fec81666efb0d7",
+      "sha256_stl": "d3d1bbf81840eaf16293067aa35ecfd7e15d7169249f981b44b3f0e66098f844",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_cross_test_arm",
+      "purpose": "20 N off-center response fixture. Use the load-cell live-end M5 attachment; ports are load locations, not a moment rating.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_cross_test_arm.step",
+      "stl": "cad/l1_cross_test_arm.stl",
+      "volume_mm3": 17245.117204794267,
+      "bounds_mm": [
+        [
+          34.79999923706055,
+          -55.0,
+          15.699999809265137
+        ],
+        [
+          60.20000076293945,
+          55.0,
+          22.049999237060547
+        ]
+      ],
+      "sha256_step": "363e6dde50f3e3b2c5f01ed6ee40e4fe9a7e63f4cf1796bfb9bff2c2aa66c239",
+      "sha256_stl": "693231d4d32850c918bf710c544454a905cb61d236118114cb82c31184b2b9e2",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_center_load_cap",
+      "purpose": "Flat center-loading face over the arm's M5 screw head; test accessory.",
+      "kind": "fabricate",
+      "material": "PETG test accessory",
+      "step": "cad/l1_center_load_cap.step",
+      "stl": "cad/l1_center_load_cap.stl",
+      "volume_mm3": 1628.8521037894686,
+      "bounds_mm": [
+        [
+          39.5,
+          -8.0,
+          22.049999237060547
+        ],
+        [
+          55.5,
+          8.0,
+          31.049999237060547
+        ]
+      ],
+      "sha256_step": "9da338101edda0e4378035812eb707dd62093f9f2b533899d12cf6944fae7278",
+      "sha256_stl": "882e8ea7961c1f2b0b85db792fc95746555d7cdb17163979ad701eb7ff30b82a",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    },
+    {
+      "id": "l1_combined_load_plate",
+      "purpose": "Combined longitudinal/transverse moment locations enclosing the side-mounted finger's contact envelope.",
+      "kind": "fabricate",
+      "material": "6061-T6 aluminum",
+      "step": "cad/l1_combined_load_plate.step",
+      "stl": "cad/l1_combined_load_plate.stl",
+      "volume_mm3": 61617.91132962962,
+      "bounds_mm": [
+        [
+          -12.5,
+          -55.0,
+          15.699999809265137
+        ],
+        [
+          127.5,
+          15.0,
+          22.049999237060547
+        ]
+      ],
+      "sha256_step": "df7cea24812a71dddccde0cfe9b7ce424717f0e7a28804afc19dea26eb331f74",
+      "sha256_stl": "2ad11e54ee8a570dc157d3c38b25d72adb6bad16b33c8d650dbbebd58f433774",
+      "digital_solid_valid": true,
+      "physical_fit_tested": false
+    }
+  ],
+  "source_interface": "root_interface.json",
+  "source_key_surface_match_mm": 7.867413105808593e-08,
+  "cell_mount_centers_native_xyz_mm": [
+    [
+      17.35,
+      -32.5,
+      13.65
+    ],
+    [
+      17.35,
+      -72.5,
+      26.35
+    ]
+  ],
+  "finger_translation_native_mm": [
+    0,
+    -20,
+    0
+  ],
+  "assembly_bounds_native_mm": [
+    [
+      -24.710813522338867,
+      -137.6470718383789,
+      -4.3130645751953125
+    ],
+    [
+      25.350000381469727,
+      -2.7699999809265137,
+      39.349998474121094
+    ]
+  ],
+  "added_width_mm": 18.460813999176025,
+  "added_back_height_mm": 11.06675910949707,
+  "added_back_height_including_reserved_m5_head_mm": 17.066760635375978,
+  "rear_hardware_to_fixed_plate_gap_mm": 1.5,
+  "hardware_envelopes": [
+    {
+      "id": "finger_m3_rear_1",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin_mm": [
+        -20.7108135565,
+        -19.77,
+        14.2832396625
+      ],
+      "diameter_mm": 7,
+      "height_mm": 4.5,
+      "note": "Maximum combined washer, nut and bolt projection; choose and measure actual hardware."
+    },
+    {
+      "id": "finger_m3_rear_2",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin_mm": [
+        0.2891864694,
+        -19.77,
+        14.2832396625
+      ],
+      "diameter_mm": 7,
+      "height_mm": 4.5,
+      "note": "Maximum combined washer, nut and bolt projection; choose and measure actual hardware."
+    },
+    {
+      "id": "fixed_m5",
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "origin_mm": [
+        17.35,
+        -32.5,
+        7.65
+      ],
+      "diameter_mm": 10,
+      "height_mm": 6,
+      "note": "Reserved head/washer space, not a supplier screw drawing."
+    },
+    {
+      "id": "live_m5",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin_mm": [
+        17.35,
+        -72.5,
+        39.35
+      ],
+      "diameter_mm": 10,
+      "height_mm": 6,
+      "note": "Reserved head/washer space, not a supplier screw drawing."
+    }
+  ],
+  "reach_extension_mm": 20,
+  "force_target_n": 20,
+  "max_normal_load_moment_at_cell_over_mesh_nm": 1.4388997148095894,
+  "moment_component_abs_max_nm": [
+    1.3029414367675782,
+    0.8412162704467774,
+    0.0
+  ],
+  "native_20n_moment_at_robot_mount_nm": 2.5975414367675786,
+  "intersections_mm3": {
+    "fixed_vs_floating": 0.0,
+    "fixed_vs_sensor_envelope": 0.0,
+    "floating_vs_sensor_envelope": 0.0,
+    "fixed_vs_active_keepout": 0.0,
+    "floating_vs_active_keepout": 0.0,
+    "fixed_vs_hard_frame_distal_bounds": 0.0,
+    "floating_vs_hard_frame_distal_bounds": 0.0,
+    "fixed_vs_soft_insert_distal_bounds": 0.0,
+    "floating_vs_soft_insert_distal_bounds": 0.0,
+    "fixed_vs_original_shifted_key": 0.0,
+    "floating_vs_original_shifted_key": 0.0,
+    "fixed_vs_finger_m3_hardware_1": 0.0,
+    "fixed_vs_finger_m3_hardware_2": 0.0
+  },
+  "original_mesh_clearance_method": "Distal mesh bounds are separated from carrier solids; original rear key is checked by CAD intersection. Shared mounting faces are intentional.",
+  "bench_arms": [
+    {
+      "id": "l1_long_test_arm",
+      "ports": [
+        {
+          "offset_mm": -130,
+          "x_mm": -82.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 2.6
+        },
+        {
+          "offset_mm": -100,
+          "x_mm": -52.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 2.0
+        },
+        {
+          "offset_mm": -75,
+          "x_mm": -27.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 1.5
+        },
+        {
+          "offset_mm": -50,
+          "x_mm": -2.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 1.0
+        },
+        {
+          "offset_mm": -25,
+          "x_mm": 22.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 0.5
+        },
+        {
+          "offset_mm": 0,
+          "x_mm": 47.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 0.0
+        },
+        {
+          "offset_mm": 25,
+          "x_mm": 72.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 0.5
+        },
+        {
+          "offset_mm": 50,
+          "x_mm": 97.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 1.0
+        },
+        {
+          "offset_mm": 75,
+          "x_mm": 122.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 1.5
+        },
+        {
+          "offset_mm": 100,
+          "x_mm": 147.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 2.0
+        },
+        {
+          "offset_mm": 130,
+          "x_mm": 177.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 2.6
+        }
+      ],
+      "orientation": "longitudinal"
+    },
+    {
+      "id": "l1_cross_test_arm",
+      "ports": [
+        {
+          "offset_mm": -45,
+          "x_mm": 47.5,
+          "y_mm": -45,
+          "moment_at_20n_nm": 0.9
+        },
+        {
+          "offset_mm": -30,
+          "x_mm": 47.5,
+          "y_mm": -30,
+          "moment_at_20n_nm": 0.6
+        },
+        {
+          "offset_mm": -15,
+          "x_mm": 47.5,
+          "y_mm": -15,
+          "moment_at_20n_nm": 0.3
+        },
+        {
+          "offset_mm": 0,
+          "x_mm": 47.5,
+          "y_mm": 0,
+          "moment_at_20n_nm": 0.0
+        },
+        {
+          "offset_mm": 15,
+          "x_mm": 47.5,
+          "y_mm": 15,
+          "moment_at_20n_nm": 0.3
+        },
+        {
+          "offset_mm": 30,
+          "x_mm": 47.5,
+          "y_mm": 30,
+          "moment_at_20n_nm": 0.6
+        },
+        {
+          "offset_mm": 45,
+          "x_mm": 47.5,
+          "y_mm": 45,
+          "moment_at_20n_nm": 0.9
+        }
+      ],
+      "orientation": "transverse"
+    }
+  ],
+  "combined_load_ports": [
+    {
+      "u_mm": -55,
+      "v_mm": -45,
+      "moment_at_20n_nm": 1.4212670403551895
+    },
+    {
+      "u_mm": -55,
+      "v_mm": -25,
+      "moment_at_20n_nm": 1.2083045973594573
+    },
+    {
+      "u_mm": -55,
+      "v_mm": 0,
+      "moment_at_20n_nm": 1.1
+    },
+    {
+      "u_mm": 0,
+      "v_mm": -45,
+      "moment_at_20n_nm": 0.9
+    },
+    {
+      "u_mm": 0,
+      "v_mm": -25,
+      "moment_at_20n_nm": 0.5
+    },
+    {
+      "u_mm": 0,
+      "v_mm": 0,
+      "moment_at_20n_nm": 0.0
+    },
+    {
+      "u_mm": 70,
+      "v_mm": -45,
+      "moment_at_20n_nm": 1.6643316977093239
+    },
+    {
+      "u_mm": 70,
+      "v_mm": -25,
+      "moment_at_20n_nm": 1.4866068747318506
+    },
+    {
+      "u_mm": 70,
+      "v_mm": 0,
+      "moment_at_20n_nm": 1.4000000000000001
+    }
+  ],
+  "contact_lever_u_range_mm": [
+    -49.730000019073486,
+    65.1470718383789
+  ],
+  "contact_lever_v_range_mm": [
+    -42.06081352233887,
+    -10.4608136177063
+  ],
+  "checks": {
+    "valid_solids": 10,
+    "step_roundtrips": 10,
+    "watertight_meshes": 10
+  },
+  "limitations": [
+    "The selected cell has no published long-finger moment rating; bench moment testing is a prerequisite.",
+    "CNC aluminum is specified for load-path parts. PETG STLs are dimensional witnesses, not strength-qualified replacements.",
+    "The maker finger mounting features are copied geometrically. Mating jaw fastening direction and housing clearance still need physical checks.",
+    "This is one normal-force axis. Gravity, dynamics, shear, and torsional coupling require separate characterization.",
+    "No measured force accuracy, durability, or robot-task result is included."
+  ]
+}

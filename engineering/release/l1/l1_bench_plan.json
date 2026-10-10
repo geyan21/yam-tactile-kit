@@ -1,0 +1,1522 @@
+{
+  "schema": "yam-l1-plan/1",
+  "kind": "plan_only",
+  "fixture": "combined_load_plate",
+  "force_axis": "positive W; align W with finger native +Z",
+  "coordinates": "U along cell length from wire end; V transverse; offsets measured from the live-end screw axis",
+  "target_force_n": 20,
+  "reference_max_uncertainty_n": 0.05,
+  "required_moment_ports_uv_mm": [
+    [
+      -55,
+      -45
+    ],
+    [
+      -55,
+      -25
+    ],
+    [
+      -55,
+      0
+    ],
+    [
+      0,
+      -45
+    ],
+    [
+      0,
+      -25
+    ],
+    [
+      70,
+      -45
+    ],
+    [
+      70,
+      -25
+    ],
+    [
+      70,
+      0
+    ]
+  ],
+  "instructions": [
+    "Verify the unmodified cell with central loads before applying long-lever loads.",
+    "Use actual reference readings. The target values are not ground truth.",
+    "Proceed from low force upward; stop on slip, contact with a fixed part, or nonrecovering zero shift.",
+    "Do not fit new force gains at each position. All displaced positions are held out.",
+    "These trials qualify a cell/fixture condition only; repeat integrated-finger, orientation, dynamic and task tests."
+  ],
+  "trials": [
+    {
+      "trial_id": "center_c1_p00",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p01",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p02",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p03",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p04",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p05",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p06",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p07",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p08",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c1_p09",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p10",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p11",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p12",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p13",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p14",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p15",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c1_p16",
+      "group": "center-cycle-1",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p00",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p01",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p02",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p03",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p04",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p05",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p06",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p07",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p08",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c2_p09",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p10",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p11",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p12",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p13",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p14",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p15",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c2_p16",
+      "group": "center-cycle-2",
+      "split": "train",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p00",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p01",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p02",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p03",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p04",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p05",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p06",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p07",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p08",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "center_c3_p09",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 15,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p10",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p11",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p12",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p13",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p14",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.5,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p15",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "center_c3_p16",
+      "group": "center-cycle-3",
+      "split": "test",
+      "contact_id": "center",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f0_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f0_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f1_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f1_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f2_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f2_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f3_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f3_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f4_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f4_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p0_load",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p0_release",
+      "group": "position-port-0",
+      "split": "test",
+      "contact_id": "u-55_v-45",
+      "u_mm": -55,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p1_load",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p1_release",
+      "group": "position-port-1",
+      "split": "test",
+      "contact_id": "u-55_v-25",
+      "u_mm": -55,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p2_load",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p2_release",
+      "group": "position-port-2",
+      "split": "test",
+      "contact_id": "u-55_v0",
+      "u_mm": -55,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p3_load",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p3_release",
+      "group": "position-port-3",
+      "split": "test",
+      "contact_id": "u0_v-45",
+      "u_mm": 0,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p4_load",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p4_release",
+      "group": "position-port-4",
+      "split": "test",
+      "contact_id": "u0_v-25",
+      "u_mm": 0,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p5_load",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p5_release",
+      "group": "position-port-5",
+      "split": "test",
+      "contact_id": "u70_v-45",
+      "u_mm": 70,
+      "v_mm": -45,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p6_load",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p6_release",
+      "group": "position-port-6",
+      "split": "test",
+      "contact_id": "u70_v-25",
+      "u_mm": 70,
+      "v_mm": -25,
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "position_f5_p7_load",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "position_f5_p7_release",
+      "group": "position-port-7",
+      "split": "test",
+      "contact_id": "u70_v0",
+      "u_mm": 70,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "unloading"
+    }
+  ]
+}

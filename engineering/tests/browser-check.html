@@ -4,12 +4,12 @@
 /* Local functional tests. No test fixture is published as hardware evidence. */
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 document.getElementById("page").addEventListener("load",async()=>{
-  const checks=[];const check=(name,value)=>checks.push({name,passed:Boolean(value)});
+  const checks=[],observations={};const check=(name,value)=>checks.push({name,passed:Boolean(value)});
   try{
     await pause(800);
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
-    check("individual STEP and STL links present",d.querySelectorAll("#parts-table a").length===26);
+    check("all R1 and L1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===46);
     check("all five sensor alternatives listed",d.querySelectorAll("#candidate-table tr").length===5);
     const before=w.EngineeringUI.viewer.yaw;
     d.getElementById("cad").dispatchEvent(new w.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
@@ -17,17 +17,49 @@ document.getElementById("page").addEventListener("load",async()=>{
     const layer=d.querySelector('[data-layer="frame"]'),count=Number(d.getElementById("cad").dataset.faces);
     layer.click();await pause(120);check("layer toggle removes frame geometry",Number(d.getElementById("cad").dataset.faces)<count);
     layer.click();
-    const select=d.getElementById("model-select");select.value="nail_cover_mold";select.dispatchEvent(new w.Event("change"));
-    await pause(120);check("actual mold CAD renders",d.getElementById("cad").dataset.model==="nail_cover_mold"&&Number(d.getElementById("cad").dataset.faces)>50);
+    const select=d.getElementById("model-select");
+    // Headless virtual time can coalesce animation frames while timers advance.
+    // Render the selected model synchronously for geometry checks, then inspect
+    // separate normal-load screenshots as well.
+    function inspect(id){
+      select.value=id;select.dispatchEvent(new w.Event("change"));w.EngineeringUI.viewer.draw();
+      const expected=w.EngineeringUI.viewer.model.components.reduce((total,part)=>total+part.faces.length,0);
+      return d.getElementById("cad").dataset.renderedModel===id&&Number(d.getElementById("cad").dataset.faces)===expected;
+    }
+    check("actual mold CAD renders",inspect("nail_cover_mold"));
+    const l1Rendered=inspect("l1_assembly");
+    observations.l1_assembly={canvasModel:d.getElementById("cad").dataset.model,faces:Number(d.getElementById("cad").dataset.faces),
+      expectedFaces:w.EngineeringUI.viewer.model.components.reduce((total,part)=>total+part.faces.length,0),
+      groups:[...w.EngineeringUI.viewer.visible]};
+    check("L1 assembled finger and cell render",l1Rendered);
+    check("L1-specific layer controls and explosion enabled",d.querySelector('[data-layer="fixed"]')&&d.querySelector('[data-layer="cell"]')&&!d.getElementById("explode").disabled);
+    const benchRendered=inspect("l1_bench");
+    observations.l1_bench={canvasModel:d.getElementById("cad").dataset.model,faces:Number(d.getElementById("cad").dataset.faces),
+      expectedFaces:w.EngineeringUI.viewer.model.components.reduce((total,part)=>total+part.faces.length,0)};
+    check("L1 physical test fixture renders",benchRendered);
+    const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
+    force.value="10";force.dispatchEvent(new w.Event("input"));
+    check("load explorer responds to applied force",d.getElementById("load-moment-value").textContent!==moment&&d.getElementById("load-force-value").textContent==="10.0 N");
     check("performance plot initially empty",d.querySelectorAll("#result-plot circle").length===0);
     let rejected=false;
     try{w.EngineeringUI.renderReport({schema:"yam-calibration/1",evidence_kind:"synthetic",channels:[]});}catch(_){rejected=true;}
     check("synthetic report is rejected",rejected);
+    let l1Rejected=false;
+    try{w.EngineeringUI.renderReport({schema:"yam-l1-finger-validation/1",evidence_kind:"synthetic",predictions:[]});}catch(_){l1Rejected=true;}
+    check("synthetic L1 report is rejected",l1Rejected);
     frame.style.width="390px";await pause(180);
     check("mobile page has no horizontal overflow",d.documentElement.scrollWidth<=w.innerWidth+1);
     check("20 N requirement visible",d.body.innerText.includes("20 N per finger"));
     check("PDF cut sheet reachable",d.querySelector('a[href="downloads/r1_cut_sheet.pdf"]')!==null);
+    check("L1 drawings and test plans reachable",d.querySelector('a[href="downloads/l1_review_drawings.pdf"]')&&d.querySelector('a[href="downloads/l1_finger_plan.json"]'));
+    // Invented inputs exercise the report renderer only. They are never
+    // stored as physical experiment files or loaded into the public homepage.
+    w.EngineeringUI.renderReport({schema:"yam-l1-finger-validation/1",evidence_kind:"physical",
+      predictions:[{contact_id:"SOFTWARE-ONLY",reference_n:0,predicted_n:-.1},
+                   {contact_id:"SOFTWARE-ONLY",reference_n:20,predicted_n:20.1}]},"software test fixture — no hardware evidence");
+    check("L1 measured-report format renders using software-only inputs",d.querySelectorAll("#result-plot circle").length===2);
+    check("negative zero error is visible within plot",Array.from(d.querySelectorAll("#result-plot circle")).every(dot=>Number(dot.getAttribute("cy"))<=305));
   }catch(error){checks.push({name:error.stack||error.message,passed:false});}
-  document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks});
+  document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks,observations});
 });
 </script></body></html>

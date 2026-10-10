@@ -1,0 +1,25 @@
+.wide-figure {
+  margin: 0 0 28px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+}
+.wide-figure img { display: block; width: 100%; }
+.wide-figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.root-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 38px; align-items: start; }
+.root-grid p { color: var(--muted); font-size: 14px; }
+.load-explorer { padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--pale); }
+.load-explorer label { display: block; margin: 15px 0 8px; font-size: 12px; font-weight: 650; }
+.load-explorer select, .load-explorer input[type=range] { width: 100%; }
+.load-explorer output { float: right; color: var(--green); }
+.load-explorer strong { display: block; font-size: 30px; font-weight: 550; color: var(--ink); }
+.load-explorer p { font-size: 12px; margin: 12px 0 0; }
+.design-aside > .button { margin: 0 5px 8px 0; }
+@media(max-width:720px) {
+  .brief div { display: block; }
+  .brief span { margin-top: 6px; }
+  .root-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .wide-figure { padding: 8px; }
+  .load-explorer { padding: 20px; }
+}

@@ -103,10 +103,10 @@
       }
       ctx.putImageData(image,0,0);
       ctx.fillStyle="#526770";ctx.font="10px system-ui";
-      ctx.fillText(native?"ENPIRE BASELINE + R1 INTERFACES":"FABRICATION TOOL / CAD EXPORT",16,23);
+      ctx.fillText(native?"ENPIRE FINGER + PROTOTYPE INTERFACES":"CAD / FIXTURE / REFERENCE",16,23);
       ctx.fillText("Digital geometry · physical fit untested",16,height-15);
       if(!components.length)ctx.fillText("Select a layer to inspect.",width/2-65,height/2);
-      canvas.dataset.rendered="true";canvas.dataset.faces=String(faces.length);
+      canvas.dataset.rendered="true";canvas.dataset.renderedModel=this.model.id;canvas.dataset.faces=String(faces.length);
     }
   }
   window.MeshViewer=MeshViewer;

@@ -1,0 +1,2108 @@
+{
+  "schema": "yam-l1-plan/1",
+  "kind": "plan_only",
+  "fixture": "integrated_enpire_l1",
+  "force_axis": "positive W; align reference force with finger native +Z",
+  "coordinates": "U=-native Y and V=+native X, relative to the live-end screw axis",
+  "target_force_n": 20,
+  "reference_max_uncertainty_n": 0.05,
+  "required_contacts": [
+    {
+      "id": "nail_1",
+      "surface": "hard_frame",
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "nail_2",
+      "surface": "hard_frame",
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "nail_3",
+      "surface": "hard_frame",
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "nail_4",
+      "surface": "hard_frame",
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "tpu_1",
+      "surface": "soft_insert",
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "tpu_2",
+      "surface": "soft_insert",
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "tpu_3",
+      "surface": "soft_insert",
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    },
+    {
+      "id": "tpu_4",
+      "surface": "soft_insert",
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "force_direction_native": [
+        0,
+        0,
+        1
+      ],
+      "note": "Mesh ray intersection; align force with +native Z. Record actual probe contact and alignment."
+    }
+  ],
+  "sensitivity_refit_permitted": false,
+  "instructions": [
+    "First complete the cell/plate calibration and preserve its report.",
+    "Install the original finger and carrier. Set a stationary pose and remove every external contact.",
+    "The first three trials explicitly record the unloaded zero in this pose. The slope remains fixed.",
+    "Keep the same pose and apply force along +native Z at the labeled contact sites.",
+    "All loaded finger trials are held out. No location-dependent or automatic zero correction is allowed.",
+    "Stop on interference, slipping hardware, permanent deformation or loss of zero return."
+  ],
+  "trials": [
+    {
+      "trial_id": "unloaded_zero_1",
+      "group": "explicit-unloaded-zero",
+      "split": "train",
+      "contact_id": "unloaded",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "explicit_unloaded_zero"
+    },
+    {
+      "trial_id": "unloaded_zero_2",
+      "group": "explicit-unloaded-zero",
+      "split": "train",
+      "contact_id": "unloaded",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "explicit_unloaded_zero"
+    },
+    {
+      "trial_id": "unloaded_zero_3",
+      "group": "explicit-unloaded-zero",
+      "split": "train",
+      "contact_id": "unloaded",
+      "u_mm": 0,
+      "v_mm": 0,
+      "target_n": 0,
+      "phase": "explicit_unloaded_zero"
+    },
+    {
+      "trial_id": "finger_f0_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0.2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f0_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0.5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f1_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 1,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f2_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 2,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f3_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 5,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f4_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 10,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f5_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 15,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f6_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_nail_1_load",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_nail_1_release",
+      "group": "finger-nail_1",
+      "split": "test",
+      "contact_id": "nail_1",
+      "u_mm": 62.21776,
+      "v_mm": -28.756846,
+      "native_xyz_mm": [
+        -11.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_nail_2_load",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_nail_2_release",
+      "group": "finger-nail_2",
+      "split": "test",
+      "contact_id": "nail_2",
+      "u_mm": 62.21776,
+      "v_mm": -21.756846,
+      "native_xyz_mm": [
+        -4.406846,
+        -134.71776,
+        -4.176267
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_nail_3_load",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_nail_3_release",
+      "group": "finger-nail_3",
+      "split": "test",
+      "contact_id": "nail_3",
+      "u_mm": 52.729702,
+      "v_mm": -32.256846,
+      "native_xyz_mm": [
+        -14.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_nail_4_load",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_nail_4_release",
+      "group": "finger-nail_4",
+      "split": "test",
+      "contact_id": "nail_4",
+      "u_mm": 52.729702,
+      "v_mm": -18.256846,
+      "native_xyz_mm": [
+        -0.906846,
+        -125.229702,
+        -3.70008
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_1_load",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_1_release",
+      "group": "finger-tpu_1",
+      "split": "test",
+      "contact_id": "tpu_1",
+      "u_mm": 30.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -103.035206,
+        -0.242408
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_2_load",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_2_release",
+      "group": "finger-tpu_2",
+      "split": "test",
+      "contact_id": "tpu_2",
+      "u_mm": 13.535206,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -86.035206,
+        -2.97775
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_3_load",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_3_release",
+      "group": "finger-tpu_3",
+      "split": "test",
+      "contact_id": "tpu_3",
+      "u_mm": -3.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -69.035206,
+        11.832347
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_4_load",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 20,
+      "phase": "loading"
+    },
+    {
+      "trial_id": "finger_f7_tpu_4_release",
+      "group": "finger-tpu_4",
+      "split": "test",
+      "contact_id": "tpu_4",
+      "u_mm": -21.464794,
+      "v_mm": -24.85,
+      "native_xyz_mm": [
+        -7.5,
+        -51.035206,
+        0.866781
+      ],
+      "target_n": 0,
+      "phase": "unloading"
+    }
+  ]
+}

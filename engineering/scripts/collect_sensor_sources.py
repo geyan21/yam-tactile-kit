@@ -17,6 +17,9 @@ sys.path.insert(0, str(ROOT / "src"))
 from tactile_kit.records import execution
 
 REPOSITORIES = (
+    "i2rt-robotics/i2rt",
+    "sparkfun/Qwiic_Scale",
+    "sparkfun/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library",
     "raunaqbhirangi/reskin_sensor",
     "raunaqbhirangi/anyskin",
     "notvenky/eFlesh",

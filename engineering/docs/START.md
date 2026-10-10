@@ -4,9 +4,19 @@
 
 R1 prioritizes detecting contact near the thin nail while preserving the existing hard frame. It is a cheap-to-iterate transducer candidate. Its drift, cover adhesion, wiring life, and force accuracy need measurement before it can be selected as the scalable design.
 
+L1 is the complementary force experiment: a purchased strain-gauge cell in the complete finger load path. Begin its independent cell/plate tests alongside the R1 nail test. Machine the L1 gripper carrier only after the printed housing fit and cell moment tests pass. Use [Build L1](BUILD_L1.md), [L1 wiring](L1_ELECTRONICS.md) and [L1 test instructions](L1_TESTING.md).
+
+## Choose the first bench deliverables
+
+| Build | First deliverable | What it resolves |
+|---|---|---|
+| R1 thin nail laminate | Two N0 nail cells with raw low-force and coverage records | Can a thin, replaceable surface detect the contacts that matter? |
+| L1 independent load cell | Cell/plate calibration with all displaced loads held out | Can this inexpensive force element tolerate the actual finger lever envelope? |
+| L1 integrated finger | Aluminum carriers and a separate finger test using the same cell sensitivity | Does installation preserve useful force feedback at nail and TPU contacts? |
+
 ## What to obtain
 
-Use the exact parts and quantities in `engineering/bom.csv`. The first electrical build needs a Raspberry Pi Pico, two ADS1115 breakout boards, ten 10 kΩ resistors, thin insulated wire, copper foil, polyimide tape, and 0.10 mm pressure-sensitive conductive film. Mechanical work needs the current ENPIRE finger, PETG mold tooling, silicone, and a calibrated force reference.
+Use the exact parts and quantities in `engineering/bom.csv` for R1 and [the L1 parts list](../l1_bom.csv) for the root-force build. R1 needs a Raspberry Pi Pico, two ADS1115 breakout boards, ten 10 kΩ resistors, thin insulated wire, copper foil, polyimide tape, and 0.10 mm pressure-sensitive conductive film. Mechanical work needs the current ENPIRE finger, PETG mold tooling, silicone, and a calibrated force reference.
 
 The requested range is **20 N per finger**. Use a reference with at least 25 N capacity and **stated uncertainty no worse than 0.05 N** over the tested range. Display resolution alone does not establish that. A suitable calibrated force gauge is preferable. A scale can be used for static vertical tests if its calibration, tare, orientation, and force conversion are documented.
 
@@ -25,4 +35,4 @@ The catalog listing for Adafruit 1361 conductive film was out of stock when chec
 
 Provide the completed specimen sheet, source CAD hashes, assembly photographs, `session.json`, `trials.jsonl`, all raw trial files, and the calibration report. Include failures: delamination, saturated channels, inaccessible contact regions, or a cut pattern that does not fit.
 
-The next revision depends on those measurements. If the nail cover defeats thin-edge tasks, reduce or replace the cover. If resistive drift fails the force criterion, retain it for contact location and evaluate a separate force transducer. Do not solve these failures by relabelling software output as calibrated force.
+The next revision depends on those measurements. If the nail cover defeats thin-edge tasks, reduce or replace the cover. If resistive drift fails the force criterion, evaluate it for contact location alongside L1's separately measured aggregate force. Do not solve either design's failures by relabelling software output as calibrated force.

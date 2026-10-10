@@ -23,6 +23,8 @@ WEB=ROOT/"engineering/web"
 DOCS=[
     ("START","start","Student starting packet"),("GEOMETRY","geometry","Measured geometry"),
     ("BUILD_R1","build-r1","Build R1"),("ELECTRONICS","electronics","Electronics & code"),
+    ("BUILD_L1","build-l1","Build L1 root force"),("L1_ELECTRONICS","l1-electronics","L1 wiring & code"),
+    ("L1_TESTING","l1-testing","L1 force & moment tests"),
     ("MATERIALS","materials","Material comparison"),("COMPARISON","comparison","Sensor comparison"),
     ("TESTING","testing","Test protocol"),
 ]
@@ -42,7 +44,7 @@ def verify_snapshot():
 def source_entries():
     roots=[ROOT/"README.md",ROOT/"LICENSE",ROOT/".gitignore",ROOT/".github/workflows",ROOT/"src/tactile_kit"]
     roots += [ROOT/"engineering"/name for name in (
-        "README.md","bom.csv","study.json","requirements.in","requirements.lock",
+        "README.md","bom.csv","l1_bom.csv","study.json","requirements.in","requirements.lock",
         "scripts","software","firmware","docs","templates","designs","tests","web","release",
     )]
     entries={}
@@ -68,6 +70,11 @@ def chapter(source):
     text=(ROOT/"engineering/docs"/f"{source}.md").read_text()
     for name,slug,_ in DOCS:
         text=text.replace(f"]({name}.md)",f"]({slug}.html)")
+    for old,new in (
+        ("../release/","assets/"),("../web/","assets/"),
+        ("../templates/","downloads/"),("../l1_bom.csv","downloads/l1_bom.csv"),
+    ):
+        text=text.replace(f"]({old}",f"]({new}")
     rendered=markdown(text)
     return rendered
 
@@ -78,7 +85,7 @@ def document_page(title,body,active=""):
 <title>{html.escape(title)} · ENPIRE tactile</title><link rel="stylesheet" href="assets/style.css"></head><body>
 <a class="skip" href="#document">Skip to instructions</a>
 <header><a class="brand" href="index.html">ENPIRE <b>TACTILE</b></a><nav aria-label="Main"><a href="index.html#design">Design</a><a href="index.html#build">Files</a><a href="index.html#evidence">Results</a><a href="https://github.com/geyan21/yam-tactile-kit">GitHub ↗</a></nav></header>
-<main class="doc-layout"><aside class="doc-nav" aria-label="Chapters"><span class="label">BUILD PACKET / R1.0</span>{nav}<hr><a href="guide.html">Complete printable guide</a><a href="downloads/enpire-engineering-kit.zip" download>Download everything ↓</a></aside>
+<main class="doc-layout"><aside class="doc-nav" aria-label="Chapters"><span class="label">BUILD PACKET / R1 + L1</span>{nav}<hr><a href="guide.html">Complete printable guide</a><a href="downloads/enpire-engineering-kit.zip" download>Download everything ↓</a></aside>
 <article class="doc-body" id="document"><p class="doc-source">Experimental design · 20 N per finger qualification target · physical measurements pending</p>{body}</article></main>
 <footer><a href="index.html">← Engineering notebook</a><a href="downloads/enpire-source.zip" download>Source, CAD and documentation ↓</a></footer></body></html>'''
 
@@ -92,20 +99,30 @@ def main():
         SITE.mkdir(parents=True)
         assets=SITE/"assets";downloads=SITE/"downloads"
         assets.mkdir();downloads.mkdir()
-        for name in ("style.css","viewer.js","app.js","stack.svg","wiring.svg"):
+        for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg"):
             shutil.copyfile(WEB/name,assets/name)
-        for name in ("baseline","contact_regions","interfaces","r1"):
+        for name in ("baseline","contact_regions","interfaces","r1","l1"):
             shutil.copytree(RELEASE/name,assets/name)
         shutil.copytree(RELEASE/"r1/cad",downloads/"cad")
+        shutil.copytree(RELEASE/"l1/cad",downloads/"l1/cad")
         for source,target in (
             (ROOT/"engineering/bom.csv","bom.csv"),(ROOT/"engineering/templates/specimen.json","specimen.json"),
             (RELEASE/"r1/r1_cut_sheet.svg","r1_cut_sheet.svg"),(RELEASE/"release_manifest.json","release_manifest.json"),
             (RELEASE/"r1/r1_cut_sheet.pdf","r1_cut_sheet.pdf"),
+            (ROOT/"engineering/l1_bom.csv","l1_bom.csv"),
+            (ROOT/"engineering/templates/l1_specimen.json","l1_specimen.json"),
+            (RELEASE/"l1/l1_review_drawings.pdf","l1_review_drawings.pdf"),
+            (RELEASE/"l1/l1_bench_plan.json","l1_bench_plan.json"),
+            (RELEASE/"l1/l1_finger_plan.json","l1_finger_plan.json"),
         ):
             shutil.copyfile(source,downloads/target)
+        r1_models=json.loads((RELEASE/"models.json").read_text())
+        l1_models=json.loads((RELEASE/"l1/models.json").read_text())
         payload={
-            "models":json.loads((RELEASE/"models.json").read_text()),
+            "models":[r1_models[0],*l1_models[:2],*r1_models[1:],*l1_models[2:]],
             "r1":json.loads((RELEASE/"r1/r1_manifest.json").read_text()),
+            "l1":json.loads((RELEASE/"l1/l1_manifest.json").read_text()),
+            "l1Contacts":json.loads((RELEASE/"l1/contact_sites.json").read_text())["sites"],
             "study":json.loads((ROOT/"engineering/study.json").read_text()),
         }
         (assets/"data.js").write_text("window.ENGINEERING="+json.dumps(payload,separators=(",",":")).replace("</","<\\/")+";\n")
@@ -135,10 +152,11 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile R1.0 engineering packet\n\n"
+            "ENPIRE tactile R1.0 + L1.0 engineering packet\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Editable code and documents: source/engineering.\n"
-            "STEP/STL tooling: source/engineering/release/r1/cad.\n"
+            "STEP/STL tooling and carriers: source/engineering/release/r1/cad and l1/cad.\n"
+            "R1: six local tactile zones. L1: purchased load cell in the complete finger force path.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()
@@ -152,7 +170,8 @@ def main():
         ):
             shutil.copyfile(downloads/new,downloads/old)
         summary={
-            "site":"build/site","cad_parts":len(payload["r1"]["parts"]),
+            "site":"build/site","cad_parts":len(payload["r1"]["parts"])+len(payload["l1"]["parts"]),
+            "purchased_reference_solids":1,
             "documents":len(DOCS),"requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],
             "complete_packet_bytes":(downloads/"enpire-engineering-kit.zip").stat().st_size,

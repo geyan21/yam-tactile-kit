@@ -1,0 +1,57 @@
+{
+  "schema": "yam-l1-specimen/1",
+  "evidence_kind": "template_not_measurement",
+  "specimen": "",
+  "operator": "",
+  "date_utc": "",
+  "cell": {
+    "manufacturer_part": "TAL220B 5 kg",
+    "supplier_sku": "SEN-14729",
+    "serial_or_lot": "",
+    "measured_size_mm": null,
+    "measured_hole_spacing_mm": null,
+    "measured_thread_depth_mm": null,
+    "excitation_resistance_ohm": null,
+    "signal_resistance_ohm": null,
+    "wire_colors_verified": false
+  },
+  "geometry": {
+    "original_hard_sha256": "",
+    "original_soft_sha256": "",
+    "gripper_drive_model_observed": "",
+    "fixed_carrier_variant": "",
+    "carrier_material_certificate": "",
+    "carrier_step_sha256": {},
+    "load_seat_flatness_mm": null,
+    "key_fit": "",
+    "both_jaw_clearance_checks": [],
+    "cable_route_photos": []
+  },
+  "fasteners": [],
+  "electronics": {
+    "pico_id": "",
+    "micropython_version": "",
+    "firmware_sha256": {},
+    "nau_board_revision": "",
+    "ina_shunt_ohm": null,
+    "measured_5v_rail_v": null,
+    "measured_3v3_rail_v": null,
+    "measured_excitation_v": null,
+    "measured_excitation_ma": null,
+    "startup_check": null,
+    "fault_injection_records": []
+  },
+  "reference": {
+    "id": "",
+    "calibration_record": "",
+    "uncertainty_n": null,
+    "force_axis_alignment": "",
+    "probe_shape_and_size_mm": "",
+    "pose_id": "",
+    "pose_photos": []
+  },
+  "measured_tip_displacement_mm": [],
+  "zero_return_observations": [],
+  "sessions": [],
+  "hardware_qualified": false
+}
