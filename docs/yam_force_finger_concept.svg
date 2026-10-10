@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Thin YAM finger with force sensing at the base</title>
+  <desc id="desc">A schematic, not dimensioned CAD. Object forces pass through a thin replaceable finger and an instrumented flexure into the jaw. Electronics and connectors stay at the wider base. A small pressure strip behind the leading edge is optional. Separate diagrams show the force path, the modular interface, and the limitation of a single bending gauge.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#245b78"/>
+    </marker>
+    <marker id="forcearrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bf5434"/>
+    </marker>
+    <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#b6c6ce" stroke-width="3"/>
+    </pattern>
+    <style>
+      text { font-family: sans-serif; fill: #173547; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 19px; fill: #526c7b; }
+      .paneltitle { font-size: 23px; font-weight: 700; }
+      .label { font-size: 20px; }
+      .small { font-size: 17px; }
+      .tiny { font-size: 15px; }
+      .bold { font-weight: 700; }
+      .line { fill: none; stroke: #245b78; stroke-width: 2.5; }
+      .leader { fill: none; stroke: #6d8593; stroke-width: 1.8; }
+      .panel { fill: white; stroke: #d6e2e7; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1440" height="1040" fill="#f2f6f8"/>
+  <text class="title" x="48" y="58">Keep the thin tip. Put calibrated force sensing at the base.</text>
+  <text class="subtitle" x="48" y="92">YAM concept proposal · 9 October 2026 · Schematic only; geometry, stiffness, and fit require verification</text>
+
+  <rect class="panel" x="36" y="120" width="1368" height="405" rx="16"/>
+  <text class="paneltitle" x="62" y="158">One jaw: every normal contact load passes through the sensor</text>
+  <text class="small" x="64" y="190">Exploded side-view abstraction; retain the existing finger's actual contour and compliance.</text>
+
+  <rect x="89" y="266" width="126" height="166" rx="8" fill="url(#hatch)" stroke="#819aa8" stroke-width="2"/>
+  <text class="label bold" x="105" y="322">YAM</text>
+  <text class="label" x="105" y="350">jaw</text>
+  <rect x="237" y="253" width="87" height="182" rx="8" fill="#bed0da" stroke="#547687" stroke-width="2"/>
+  <rect x="337" y="288" width="123" height="104" rx="8" fill="#edf2fa" stroke="#5977a0" stroke-width="3"/>
+  <rect x="352" y="309" width="91" height="18" rx="8" fill="#fff" stroke="#5977a0" stroke-width="2"/>
+  <rect x="352" y="351" width="91" height="18" rx="8" fill="#fff" stroke="#5977a0" stroke-width="2"/>
+  <rect x="358" y="292" width="23" height="10" rx="2" fill="#d8844e"/>
+  <rect x="415" y="379" width="23" height="10" rx="2" fill="#d8844e"/>
+  <rect x="472" y="270" width="50" height="152" rx="6" fill="#91b5be" stroke="#477684" stroke-width="2"/>
+  <path d="M522 290 L748 290 C880 296 1030 315 1226 349 L1226 362 L1102 378 L770 397 L522 398 Z" fill="#d2e5e6" stroke="#477684" stroke-width="3"/>
+  <path d="M588 382 L741 381 L941 369 L1136 355" fill="none" stroke="#91b8c0" stroke-width="3" stroke-dasharray="10 7"/>
+  <path d="M918 370 L1090 359 L1093 367 L921 378 Z" fill="#e9b666" stroke="#a37730" stroke-width="2"/>
+  <path d="M920 377 C788 429 643 452 494 446 C441 444 448 465 382 465" fill="none" stroke="#c08a31" stroke-width="3" stroke-dasharray="7 5"/>
+  <rect x="248" y="451" width="133" height="41" rx="7" fill="#334f63"/>
+  <text x="261" y="478" font-family="sans-serif" font-size="17" style="fill:white">ADC + ID</text>
+  <path d="M1181 448 L1181 378" stroke="#bf5434" stroke-width="4" marker-end="url(#forcearrow)"/>
+  <text class="label" x="1200" y="423" fill="#bf5434">F</text>
+  <text class="tiny" x="1204" y="438">normal</text>
+
+  <path class="leader" d="M290 253 L290 222 L386 222"/>
+  <text class="small" x="393" y="227">Mounting adapter</text>
+  <path class="leader" d="M400 288 L400 257 L681 257"/>
+  <text class="small" x="688" y="262">Metal sensing element + overload stops</text>
+  <path class="leader" d="M499 270 L499 205 L701 205"/>
+  <text class="small" x="708" y="211">Located, removable finger interface</text>
+  <path class="leader" d="M1155 337 L1175 237 L1213 237"/>
+  <text class="small" x="1217" y="230">Thin</text>
+  <text class="small" x="1217" y="251">nose</text>
+  <path class="leader" d="M1010 370 L1020 475 L1100 475"/>
+  <text class="small" x="1107" y="472">Optional small</text>
+  <text class="small" x="1107" y="493">pressure strip</text>
+  <text class="small" x="493" y="493">Protected tail with slack; no force bypass</text>
+
+  <rect class="panel" x="36" y="545" width="830" height="302" rx="16"/>
+  <text class="paneltitle" x="62" y="583">Service at the root; preserve the working edge</text>
+  <rect x="68" y="611" width="215" height="96" rx="10" fill="#edf2fa" stroke="#5977a0"/>
+  <text class="label bold" x="88" y="641">Calibrated adapter</text>
+  <text class="small" x="88" y="668">Gauges + ADC + temp.</text>
+  <text class="small" x="88" y="691">Serial + calibration</text>
+  <path class="line" d="M294 659 L327 659" marker-end="url(#arrow)"/>
+  <rect x="341" y="611" width="215" height="96" rx="10" fill="#e6f0f0" stroke="#477684"/>
+  <text class="label bold" x="361" y="641">Replaceable finger</text>
+  <text class="small" x="361" y="668">Repeatable seat; captive</text>
+  <text class="small" x="361" y="691">screws or positive latch</text>
+  <path class="line" d="M567 659 L600 659" marker-end="url(#arrow)"/>
+  <rect x="614" y="611" width="215" height="96" rx="10" fill="#fcf2df" stroke="#ae853f"/>
+  <text class="label bold" x="633" y="641">Optional surface pad</text>
+  <text class="small" x="633" y="668">Cover + pressure strip;</text>
+  <text class="small" x="633" y="691">its own calibration identity</text>
+  <text class="small" x="69" y="746">Power off → replace → identify → unloaded zero → seating/reference check</text>
+  <text class="small" x="69" y="777">Use a locking digital connector at the base. Keep electrical contacts unloaded.</text>
+  <text class="small" x="69" y="809">Root force includes nose contact even where no pressure array fits.</text>
+
+  <rect class="panel" x="887" y="545" width="517" height="302" rx="16"/>
+  <text class="paneltitle" x="912" y="583">Force must be independent of reach</text>
+  <line x1="928" y1="655" x2="1352" y2="655" stroke="#5977a0" stroke-width="11"/>
+  <rect x="971" y="642" width="27" height="10" fill="#d8844e"/>
+  <rect x="1080" y="642" width="27" height="10" fill="#d8844e"/>
+  <text class="small" x="971" y="627">M₁</text>
+  <text class="small" x="1079" y="627">M₂</text>
+  <path d="M1311 603 L1311 641" stroke="#bf5434" stroke-width="3" marker-end="url(#forcearrow)"/>
+  <text class="small" x="1325" y="619">F</text>
+  <path class="line" d="M985 683 L1093 683" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="small" x="1033" y="708">d</text>
+  <text class="label bold" x="922" y="749">Idealized: F = (M₁ − M₂) / d</text>
+  <text class="small" x="922" y="780">One bending reading alone depends on</text>
+  <text class="small" x="922" y="806">contact position. Calibrate off-center loads.</text>
+
+  <rect x="36" y="867" width="1368" height="135" rx="16" fill="#e4edf1"/>
+  <text class="paneltitle" x="62" y="903">Decision for the first build</text>
+  <text class="label" x="62" y="939">Base product: thin finger + calibrated normal force. Add FlexiTac when contact location helps the task.</text>
+  <text class="small" x="62" y="971">Before fabrication: obtain exact CAD and force range; verify stiffness, moment rejection, opening, cable motion, and replaceability.</text>
+</svg>

@@ -1,0 +1,15 @@
+[
+  {"id":"S1","title":"FlexiTac project","url":"https://flexitac.github.io/","note":"V2 hardware overview and resources","reviewed":"2026-10-09"},
+  {"id":"S2","title":"FlexiTac paper","url":"https://arxiv.org/abs/2604.28156","note":"Thin pads, smaller layouts, fin-shaped finger, scanner architecture","reviewed":"2026-10-09"},
+  {"id":"S3","title":"FlexiTac hardware repository","url":"https://github.com/FlexiTac/FlexiTac_Hardware_Repo","note":"Upstream firmware and hardware-guide links; stated CC BY-NC 4.0","reviewed":"2026-10-09"},
+  {"id":"S4","title":"WEISS sensor fingers","url":"https://weiss-robotics.com/sensor-fingers/","note":"Commercial precedent for force sensing with exchangeable contact inserts","reviewed":"2026-10-09"},
+  {"id":"S5","title":"AnySkin","url":"https://any-skin.github.io/","note":"Replaceable magnetic skin and slip/policy studies","reviewed":"2026-10-09"},
+  {"id":"S6","title":"XELA uSkin","url":"https://xelarobotics.com/products/","note":"Commercial three-axis tactile sensor family","reviewed":"2026-10-09"},
+  {"id":"S7","title":"DIGIT paper","url":"https://arxiv.org/abs/2005.14679","note":"Optical tactile sensing architecture","reviewed":"2026-10-09"},
+  {"id":"S8","title":"Honeywell MicroForce FMA","url":"https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/fr-ca/products/sensors/force-sensors/microforce-fma-series/documents/hon-ia-hss-force-fma-series-datasheet-32347833-ciid-181799.pdf","note":"Discrete normal-force component reference","reviewed":"2026-10-09"},
+  {"id":"S9","title":"HiPi paper","url":"https://arxiv.org/abs/2606.11372","note":"Reproducibility and reduced-crosstalk readout comparison","reviewed":"2026-10-09"},
+  {"id":"S10","title":"TF-Gripper revision 2","url":"https://arxiv.org/abs/2602.10013v2","note":"Tactile force regulation on a separately developed gripper","reviewed":"2026-10-09"},
+  {"id":"S11","title":"Flex PCB design guidelines","url":"https://protoexpress.com/blog/flex-pcb-design-guidelines","note":"Fabricator guidance on flex routing and bending","reviewed":"2026-10-09"},
+  {"id":"S12","title":"I2RT YAM documentation","url":"https://doc.i2rt.com/products/yam","note":"Robot and gripper integration context","reviewed":"2026-10-09"},
+  {"id":"S13","title":"Current finger specified by the user","url":"https://makerworld.com/en/models/2984746-gripper-finger-for-robot-arm#profileId-3349177","note":"Baseline identity only; exact CAD geometry unverified","reviewed":"2026-10-09"}
+]

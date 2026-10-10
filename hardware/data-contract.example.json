@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "sensor_serial": "EXAMPLE-LEFT",
+  "finger_revision": "unmeasured",
+  "calibration_id": "not-calibrated",
+  "jaw": "left",
+  "frame": {"normal_axis": "+x inward", "finger_axis": "+z distal"},
+  "timestamp_monotonic_ns": 0,
+  "sequence": 0,
+  "temperature_c": null,
+  "raw_channels": [null, null],
+  "normal_force_n": null,
+  "flags": {
+    "valid": false,
+    "stale": false,
+    "saturated": false,
+    "overload": false,
+    "calibration_valid": false
+  },
+  "pressure": null
+}

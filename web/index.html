@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproducible design lab for thin, replaceable YAM tactile fingers. Explore force sensing, pad layout, calibration, and the path to a hardware prototype.">
+  <meta name="theme-color" content="#173c3a">
+  <title>YAM Tactile Kit — Design lab</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/data.js" defer></script>
+  <script src="assets/model.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#design">Skip to design lab</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="YAM Tactile Kit home"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>YAM <b>TACTILE KIT</b></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#design">Design lab</a><a href="#force">Force path</a><a href="guide.html">Build guide</a>
+      <a class="repo-link" hidden>GitHub ↗</a>
+      <a class="nav-download" href="downloads/yam-tactile-kit.zip" download>Source ZIP <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">OPEN DESIGN NOTEBOOK · V{{VERSION}}</p><h1>Touch, built around<br>a thin fingertip.</h1><p class="hero-copy">A replaceable force-sensing base. A narrow contact strip when you need it. Explore the design, reproduce the calculations, and plan the hardware build.</p></div>
+      <div class="hero-note"><span class="small-label">THE STARTING POINT</span><p>Keep the geometry that makes the finger useful. Give sensing and service space at the root.</p><a href="guide.html#review">Read the engineering rationale <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <div class="scope-strip"><span class="status-dot"></span><strong>Concept release</strong><span>Interactive calculations and synthetic calibration are included. Hardware fit and performance are unverified.</span></div>
+
+    <section id="design" class="section design-section">
+      <div class="section-heading"><div><p class="eyebrow">01 / MECHANICAL CONCEPT</p><h2>A thin tip. A serviceable base.</h2></div><button id="reset-design" class="button subtle">Reset example <span aria-hidden="true">↺</span></button></div>
+      <div class="lab-layout">
+        <div class="visual-column">
+          <div class="assembly-card">
+            <div class="figure-toolbar"><span id="geometry-label" class="figure-label">ILLUSTRATIVE GEOMETRY</span><span class="mono">SIDE VIEW / EXPLODED SCHEMATIC</span></div>
+            <svg id="assembly-view" viewBox="0 0 1100 400" role="img" aria-label="Conceptual finger assembly with a force element at the root and a small pressure strip"></svg>
+            <div class="assembly-controls">
+              <div class="parts" role="group" aria-label="Highlight an assembly part"><button class="part active" data-part="finger">01 Finger</button><button class="part" data-part="sensor">02 Force base</button><button class="part" data-part="pad">03 Pressure strip</button></div>
+              <label class="explode-control">Separate parts<input id="explode" type="range" min="0" max="100" value="35"><span aria-hidden="true">↔</span></label>
+            </div>
+          </div>
+          <div class="inspector"><span id="part-number" class="inspector-number">01</span><div><h3 id="part-title">Replaceable thin finger</h3><p id="part-description">Retain the working leading edge and compliance. Place the service interface at the root.</p></div><span class="small-label">DESIGN INTENT</span></div>
+          <div class="metric-row">
+            <div><span>Proposed cells</span><strong id="taxel-count">—</strong><small id="grid-shape">—</small></div>
+            <div><span>Active envelope</span><strong id="active-envelope">—</strong><small>mm · cell allocation only</small></div>
+            <div><span>Electrode nets</span><strong id="net-count">—</strong><small>before shielding / extras</small></div>
+            <div><span>Opening loss</span><strong id="opening-loss">—</strong><small>mm · symmetric pads</small></div>
+          </div>
+        </div>
+        <aside class="control-card" aria-label="Design parameters">
+          <div class="control-heading"><h3>Size the local pad</h3><span class="unit-tag">mm</span></div>
+          <p class="small-copy">These are editable example inputs. Keep a separate record of actual measurements.</p>
+          <div id="geometry-controls" class="control-fields"></div>
+          <details class="advanced"><summary>Finger &amp; stack dimensions</summary><div id="advanced-controls" class="control-fields"></div></details>
+          <div class="control-actions"><button id="export-design" class="button dark">Export design JSON ↓</button><button id="import-design" class="button subtle">Import JSON</button><input id="design-file" type="file" accept=".json,application/json" hidden></div>
+          <p id="input-status" class="input-status" role="status" aria-live="polite">Changes stay in this browser until exported.</p>
+        </aside>
+      </div>
+      <div class="pad-detail">
+        <div><p class="eyebrow">LOCAL FACE / WHOLE-CELL ENVELOPES</p><h3 id="pad-title">A small seat, not a full wrap.</h3><p>Start from the useful contact region. Reserve a border, route the tail toward the base, and leave the leading edge thin.</p><p class="small-copy">The grid shows allocated cell footprints, not copper routing or sensor readings. Cover, mounting, fanout, and bending still need engineering review. <a href="#source-S2">[S2]</a></p></div>
+        <svg id="pad-view" viewBox="0 0 610 235" role="img" aria-label="Proposed pressure-pad grid with border allowance"></svg>
+        <div id="design-issues" class="design-issues" role="status"></div>
+      </div>
+    </section>
+
+    <section id="force" class="section force-section">
+      <div class="section-heading"><div><p class="eyebrow">02 / UNDERSTAND THE MEASUREMENT</p><h2>Contact moves. Force should still make sense.</h2></div><a class="text-link" href="guide.html#review">Mechanics &amp; assumptions ↗</a></div>
+      <div class="force-layout">
+        <div class="force-experiment">
+          <div class="plot-header"><h3>Move the contact along the finger</h3><span class="unit-tag">IDEAL STATIC MODEL</span></div>
+          <svg id="force-plot" viewBox="0 0 760 290" role="img" aria-label="Force estimates versus contact position for one moment station and two moment stations"></svg>
+          <div class="plot-legend"><span><i class="legend-line green"></i>Difference of two moments</span><span><i class="legend-line amber"></i>One moment / fixed lever</span></div>
+          <div id="force-controls" class="force-controls"></div>
+        </div>
+        <div class="equation-card">
+          <span class="small-label">THE PROPOSED PRINCIPLE</span><p class="equation">F = <span class="fraction"><span>M₁ − M₂</span><span>d</span></span></p>
+          <div class="force-values"><div><span>M₁</span><strong id="moment-1">—</strong><small>N·mm</small></div><div><span>M₂</span><strong id="moment-2">—</strong><small>N·mm</small></div></div>
+          <div class="recovered-force"><span>Recovered normal force</span><strong id="recovered-force">—</strong></div>
+          <p>Subtracting the moments cancels the changing distal lever arm in this model. A real design still needs matched sensing, calibration, moment rejection, and a stiffness budget.</p>
+          <p class="small-copy">Normal force does not detect every lateral contact. Noise, temperature, weight, and dynamic loads are not modeled here.</p>
+        </div>
+      </div>
+      <details class="budget-panel"><summary><span>Check the force and stiffness budget</span><span class="mono">F = mgS / 2μ &nbsp; · &nbsp; k ≥ F / δ</span></summary><div class="budget-layout"><div id="budget-controls" class="control-fields"></div><div class="budget-results"><div><span>Static support estimate / jaw</span><strong id="static-force">—</strong></div><div><span>Minimum adapter stiffness</span><strong id="stiffness">—</strong></div><p>Symmetric static contacts with entered friction and load factor. This calculation does not establish actuator capability, object safety, or dynamic grasp stability.</p></div></div></details>
+    </section>
+
+    <section id="calibration" class="section calibration-section">
+      <div class="section-heading"><div><p class="eyebrow">03 / REPRODUCE THE ANALYSIS</p><h2>Make the calibration inspectable.</h2></div><span id="dataset-badge" class="dataset-badge">SYNTHETIC DATA</span></div>
+      <div class="calibration-layout">
+        <div class="calibration-plot"><div class="plot-header"><h3>Held-out force predictions</h3><span class="small-label">REFERENCE → PREDICTED</span></div><svg id="calibration-plot" viewBox="0 0 680 350" role="img" aria-label="Held-out calibration predictions against reference force"></svg></div>
+        <div class="calibration-copy"><h3>Train on some load cases.<br>Check another.</h3><p>The included script fits a two-channel force model, then evaluates separate held-out samples. The example uses generated data so the complete analysis can be reproduced without hardware.</p><div class="calibration-metrics"><div><strong id="calibration-train">—</strong><span>training samples</span></div><div><strong id="calibration-test">—</strong><span>held-out samples</span></div><div><strong id="calibration-rmse">—</strong><span>example RMSE</span></div></div><p id="calibration-scope" class="small-copy"></p><a class="text-link" href="guide.html#calibration">Follow the calibration protocol ↗</a><div class="inline-downloads"><a href="downloads/calibration-report.json" download>Report JSON ↓</a><a href="downloads/calibration-input.csv" download>Input CSV ↓</a></div></div>
+      </div>
+    </section>
+
+    <section id="build" class="section build-section">
+      <div class="section-heading"><div><p class="eyebrow">04 / FROM NOTEBOOK TO BENCH</p><h2>A route you can follow.</h2></div><a class="button dark" href="guide.html">Open the complete guide ↗</a></div>
+      <div class="build-steps">
+        <a href="guide.html#replicate"><span>01</span><h3>Reproduce</h3><p>Build this site, run the tests, and inspect the calculations from a clean checkout.</p><small>READY IN THIS RELEASE ↗</small></a>
+        <a href="guide.html#hardware"><span>02</span><h3>Measure &amp; design</h3><p>Capture the actual finger geometry and loads. Select the force element and design the root interface.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+        <a href="guide.html#calibration"><span>03</span><h3>Assemble &amp; calibrate</h3><p>Build the bench prototype. Measure force at multiple positions and characterize interference.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+        <a href="guide.html#validation"><span>04</span><h3>Validate &amp; scale</h3><p>Compare dexterity, wear, replacement, control timing, and repeatability across units.</p><small>HARDWARE WORK OUTSTANDING ↗</small></a>
+      </div>
+      <div class="quick-start"><div><span class="small-label">NO PACKAGE INSTALL REQUIRED</span><h3>Rebuild the whole release.</h3><p>Python 3.10+ and a browser. Source, examples, tests, and site are included.</p><a href="downloads/yam-tactile-kit.zip" download class="text-link">Download complete source ↘</a></div><div><pre><code>/usr/bin/python3 scripts/reproduce.py
+/usr/bin/python3 -m unittest discover -s tests -v
+/usr/bin/python3 scripts/serve.py --port 8766</code></pre><p class="small-copy">Run inside the extracted repository. Use your explicit Python 3 interpreter path on other systems.</p></div></div>
+      <div class="download-grid"><a href="downloads/bom.csv" download><span>Component checklist</span><strong>BOM / CSV ↓</strong></a><a href="downloads/measurements.template.json" download><span>Record the actual assembly</span><strong>Measurements / JSON ↓</strong></a><a href="downloads/finger-concept.svg" download><span>Save the generated concept</span><strong>Drawing / SVG ↓</strong></a><a href="downloads/build-design.json" download><span>Reproduce this published build</span><strong>Build inputs / JSON ↓</strong></a></div>
+    </section>
+
+    <section id="sources" class="section sources-section">
+      <div class="section-heading"><div><p class="eyebrow">05 / TRACE THE REASONING</p><h2>Choose the signal you need.</h2></div><a class="text-link" href="guide.html#review">Full comparison &amp; references ↗</a></div>
+      <div class="sensor-cards"><article><span class="small-label">BASE PRODUCT / PROPOSED</span><h3>Calibrated root force</h3><p>Preserve a thin distal finger and measure total normal load at its mount. Commercial sensor fingers provide an architectural precedent.</p><a href="#source-S4">WEISS reference [S4] ↗</a></article><article><span class="small-label">OPTIONAL SURFACE INFORMATION</span><h3>FlexiTac strip</h3><p>Evaluate a small local pressure pad when contact location helps. Check the cover, crosstalk, drift, and cable routing.</p><a href="#source-S2">FlexiTac / HiPi [S2, S9] ↗</a></article><article><span class="small-label">OTHER MEASUREMENT NEEDS</span><h3>Magnetic or optical</h3><p>Compare AnySkin, uSkin, or optical touch when slip, shear, or fine contact geometry justify different packaging.</p><a href="#source-S5">Alternative sensors [S5–S7] ↗</a></article></div>
+      <details class="source-details"><summary>Primary source ledger <span class="mono">13 REFERENCES · REVIEWED 2026-10-09</span></summary><div id="reference-list" class="reference-list"></div></details>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>YAM <b>TACTILE KIT</b></span></a><p>Concept and software release {{VERSION}}. Hardware qualification remains outstanding.<br>Upstream designs retain their own licensing. <a href="guide.html#scope">Scope &amp; provenance</a></p><a href="downloads/source-manifest.json" download>Source hashes ↓</a></footer>
+  <noscript><p class="noscript">JavaScript is needed for the interactive lab. The <a href="guide.html">complete guide</a> and <a href="downloads/finger-concept.svg">concept drawing</a> remain available.</p></noscript>
+</body>
+</html>

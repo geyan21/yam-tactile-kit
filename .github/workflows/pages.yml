@@ -1,0 +1,49 @@
+name: Test and publish design lab
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        id: python
+        with:
+          python-version: '3.12'
+      - name: Verify calculations and clean reproduction
+        run: '"${{ steps.python.outputs.python-path }}" -m unittest discover -s tests -v'
+      - name: Build portable website
+        run: '"${{ steps.python.outputs.python-path }}" scripts/reproduce.py --repository-url "https://github.com/${{ github.repository }}"'
+      - name: Upload Pages website
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/site
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

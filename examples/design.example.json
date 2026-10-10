@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "label": "Illustrative narrow finger",
+  "geometry_status": "illustrative",
+  "finger_length_mm": 60,
+  "face_width_mm": 6,
+  "nose_thickness_mm": 0.8,
+  "body_thickness_mm": 5,
+  "pad_length_mm": 18,
+  "pad_border_mm": 1,
+  "cell_pitch_mm": 2,
+  "pad_stack_mm": 0.8,
+  "pad_recess_mm": 0.4,
+  "sensor_force_n": 20,
+  "allowed_adapter_deflection_mm": 0.05,
+  "station_spacing_mm": 12,
+  "contact_distance_mm": 55,
+  "applied_force_n": 5,
+  "end_moment_nmm": 0,
+  "mass_kg": 0.5,
+  "friction_coefficient": 0.3,
+  "static_load_factor": 1.5
+}

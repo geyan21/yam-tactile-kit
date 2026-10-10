@@ -1,0 +1,14 @@
+item,quantity_per_gripper,selection_status,component,required_specification,part_number,verification
+M01,2,retain_baseline,Existing thin finger,Record actual revision geometry mass and compliance,TBD,Measure and task-test current assembly
+M02,2,design_required,Located finger adapter,Repeatable datum and retention with verified opening and TCP,TBD,Dimensioned CAD and tolerance review
+M03,2,selection_required,Normal-force sensing element,Useful range resolution stiffness off-center response and overload appropriate to measured jaw loads,TBD,Bench characterization with reference loads
+M04,2,design_required,Overload stop and gauge enclosure,No contact in normal sensing travel and no parallel force path,TBD,Travel and overload testing
+M05,2,selection_required,Bridge ADC or sensor digital interface,Compatible with selected sensing element and required noise and sample rate,TBD,Input noise and end-to-end latency measurement
+E01,2,selection_required,Local temperature measurement,Representative sensor temperature and calibration support,TBD,Temperature characterization
+E02,2,selection_required,Calibration identity storage,Serial number calibration version and force-frame identity,TBD,Swap and integrity tests
+E03,1,selection_required,Gripper data hub,Timestamped two-jaw readout to host using a documented digital interface,TBD,Packet-loss timing and disconnect tests
+E04,2,selection_required,Locking connector and strain-relieved harness,Cycle life bend radius retention and current appropriate to actual assembly,TBD,Full-stroke and service-cycle tests
+P01,2,optional_experiment,Small pressure pad,Planar coupon before any custom narrow FPC,TBD,Reference-load and multi-contact tests
+P02,2,optional_experiment,Replaceable wear layer,Controlled thickness friction attachment and pressure spreading,TBD,Abrasion friction drift and replacement tests
+T01,1,bench_equipment,Reference force instrument,Calibrated uncertainty smaller than the proposed acceptance band,TBD,Calibration record
+T02,1,bench_equipment,Load fixture and contact indenters,Nose center edge shear and torsion loading at recorded positions,TBD,Repeatable position and load alignment

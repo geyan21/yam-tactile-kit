@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Local browser checks</title></head><body>
+<pre id="qa-results">RUNNING</pre><iframe id="site" title="Website under test" src="index.html" style="width:1280px;height:1000px;border:0"></iframe>
+<script>
+(async function(){
+  const results=[];
+  const frame=document.getElementById("site");
+  const pause=()=>new Promise(resolve=>setTimeout(resolve,90));
+  const check=(name,fn)=>{try{fn();results.push({name,passed:true});}catch(error){results.push({name,passed:false,error:String(error)});}};
+  const assert=(condition,message)=>{if(!condition)throw new Error(message);};
+  try{
+    if(!frame.contentWindow.TactileKit)await new Promise(resolve=>frame.addEventListener("load",resolve,{once:true}));
+    const win=frame.contentWindow,doc=frame.contentDocument;
+    const errors=[];win.addEventListener("error",event=>errors.push(event.message));
+    const waitFor=(predicate,message)=>new Promise((resolve,reject)=>{
+      if(predicate()){resolve();return;}
+      const observer=new win.MutationObserver(()=>{
+        if(predicate()){observer.disconnect();clearTimeout(timeout);resolve();}
+      });
+      observer.observe(doc.documentElement,{childList:true,subtree:true,attributes:true,characterData:true});
+      const timeout=setTimeout(()=>{observer.disconnect();reject(new Error(message));},5000);
+    });
+    await pause();
+    check("website initializes and labels the concept",()=>{
+      assert(doc.documentElement.dataset.kitReady==="true","Application did not initialize");
+      assert(win.TactileKit.getSummary().taxels===16,"Default grid is wrong");
+      assert(doc.getElementById("dataset-badge").textContent.includes("SYNTHETIC"),"Synthetic data not labeled");
+      assert(win.TactileKit.getSummary().hardware_validated===false,"Hardware validation claim must remain false");
+    });
+    const change=(key,value)=>{
+      const input=doc.getElementById("number-"+key);
+      input.value=String(value);input.dispatchEvent(new win.Event("change",{bubbles:true}));
+    };
+    change("face_width_mm",3);
+    check("narrow tip exposes an empty grid",()=>{
+      assert(doc.getElementById("taxel-count").textContent==="0","Zero-cell design not rendered");
+      assert(doc.getElementById("design-issues").textContent.includes("No full"),"No-fit explanation missing");
+    });
+    doc.getElementById("reset-design").click();
+    change("contact_distance_mm",30);change("end_moment_nmm",80);
+    check("moving contact and applied moment preserve ideal recovered force",()=>{
+      assert(Math.abs(win.TactileKit.getSummary().recovered_normal_force_n-5)<1e-9,"Ideal force changed");
+      assert(doc.getElementById("recovered-force").textContent==="5 N","Force display is wrong");
+    });
+    const before=JSON.stringify(win.TactileKit.getDesign());
+    change("cell_pitch_mm",0);
+    check("invalid numeric edit is rejected",()=>{
+      assert(JSON.stringify(win.TactileKit.getDesign())===before,"Invalid design replaced valid state");
+      assert(doc.getElementById("input-status").classList.contains("error"),"Validation error not shown");
+    });
+    doc.querySelector('[data-part="sensor"]').click();
+    const oldDrawing=doc.getElementById("assembly-view").innerHTML;
+    const explode=doc.getElementById("explode");explode.value=90;explode.dispatchEvent(new win.Event("input",{bubbles:true}));
+    check("part selection and exploded view respond",()=>{
+      assert(doc.getElementById("part-title").textContent.includes("force-sensing"),"Inspector did not update");
+      assert(doc.getElementById("assembly-view").innerHTML!==oldDrawing,"Exploded view did not change");
+    });
+    let exportedBlob;
+    const originalURL=win.URL.createObjectURL;
+    win.URL.createObjectURL=blob=>{exportedBlob=blob;return originalURL.call(win.URL,blob);};
+    const originalClick=win.HTMLAnchorElement.prototype.click;
+    win.HTMLAnchorElement.prototype.click=function(){if(!this.download)return originalClick.call(this);};
+    doc.getElementById("export-design").click();
+    const exported=JSON.parse(await exportedBlob.text());
+    check("export button creates the current JSON design",()=>{
+      assert(exported.contact_distance_mm===30,"Exported contact position incorrect");
+      assert(exported.schema_version===1,"Export schema missing");
+    });
+    const transfer=new win.DataTransfer();
+    transfer.items.add(new win.File([JSON.stringify({...exported,face_width_mm:10})],"design.json",{type:"application/json"}));
+    const file=doc.getElementById("design-file");file.files=transfer.files;file.dispatchEvent(new win.Event("change",{bubbles:true}));
+    await waitFor(()=>win.TactileKit.getSummary().columns===4,"File import did not complete");
+    check("file import restores changed geometry",()=>assert(win.TactileKit.getSummary().columns===4,"Imported grid not reflected"));
+    const bad=new win.DataTransfer();bad.items.add(new win.File(["{ broken"],"invalid.json",{type:"application/json"}));
+    file.files=bad.files;file.dispatchEvent(new win.Event("change",{bubbles:true}));
+    await waitFor(()=>doc.getElementById("input-status").textContent.includes("Import rejected"),"Malformed import did not complete");
+    check("malformed import preserves the last valid design",()=>{
+      assert(win.TactileKit.getSummary().columns===4,"Malformed import corrupted state");
+      assert(doc.getElementById("input-status").textContent.includes("rejected"),"Import rejection missing");
+    });
+    doc.querySelector('a[href="#source-S2"]').click();
+    check("source references open the ledger",()=>assert(doc.querySelector(".source-details").open,"Source ledger remained closed"));
+    doc.querySelector('nav a[href="#force"]').click();await pause();
+    check("force navigation positions the actual force section in view",()=>{
+      const top=doc.getElementById("force").getBoundingClientRect().top;
+      assert(top>=0 && top<=120,"Force section is outside the expected viewport position: "+top);
+    });
+    win.TactileKit.reset();
+    check("desktop layout has no page-wide horizontal overflow",()=>assert(doc.documentElement.scrollWidth<=doc.documentElement.clientWidth+1,"Desktop overflow"));
+    frame.style.width="375px";await pause();
+    check("mobile layout has no page-wide horizontal overflow",()=>assert(doc.documentElement.scrollWidth<=doc.documentElement.clientWidth+1,"Mobile overflow: "+doc.documentElement.scrollWidth+" / "+doc.documentElement.clientWidth));
+    check("browser has no uncaught runtime errors",()=>assert(errors.length===0,errors.join("; ")));
+    frame.src="guide.html";await new Promise(resolve=>frame.addEventListener("load",resolve,{once:true}));await pause();
+    const guide=frame.contentDocument;
+    check("all guide chapters and source download are present",()=>{
+      for(const id of ["replicate","hardware","calibration","validation","review","scope","yam-context"])assert(guide.getElementById(id),"Missing chapter "+id);
+      assert(guide.querySelector('a[href="downloads/yam-tactile-kit.zip"]'),"Source download missing");
+    });
+    check("guide remains readable at mobile width",()=>assert(guide.documentElement.scrollWidth<=guide.documentElement.clientWidth+1,"Guide page overflow"));
+  }catch(error){results.push({name:"browser harness",passed:false,error:String(error)});}
+  document.getElementById("qa-results").textContent=JSON.stringify({passed:results.every(result=>result.passed),checks:results});
+  document.documentElement.dataset.qaComplete="true";
+})();
+</script></body></html>
