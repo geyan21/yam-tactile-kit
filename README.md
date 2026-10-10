@@ -1,5 +1,7 @@
 # ENPIRE / YAM tactile engineering study
 
+This branch, `tactile-cartridge`, adds a second design track: the v0.2 plug-in tactile cartridge for the YAM Linear 4310 in [`cartridge/`](cartridge/README.md). It has CAD, FPC and PCB layouts, a MuJoCo model with touch sensors, host tools, [design notes](cartridge/docs/DESIGN_NOTES.md) and a one-page website (`cartridge/web/`). Everything else in the repository is unchanged on this branch.
+
 [Visual website](https://geyan21.github.io/yam-tactile-kit/) · [Student starting packet](engineering/docs/START.md) · [Build R1](engineering/docs/BUILD_R1.md) · [Sensor comparison](engineering/docs/COMPARISON.md)
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.

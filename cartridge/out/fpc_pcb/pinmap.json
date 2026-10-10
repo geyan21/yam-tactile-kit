@@ -1,0 +1,190 @@
+{
+ "rows_tail_16p": [
+  {
+   "signal": "ROW00",
+   "tail_pin": 1,
+   "u": -8.9
+  },
+  {
+   "signal": "ROW01",
+   "tail_pin": 2,
+   "u": -8.4
+  },
+  {
+   "signal": "ROW02",
+   "tail_pin": 3,
+   "u": -7.9
+  },
+  {
+   "signal": "ROW03",
+   "tail_pin": 4,
+   "u": -7.4
+  },
+  {
+   "signal": "ROW04",
+   "tail_pin": 5,
+   "u": -6.9
+  },
+  {
+   "signal": "ROW05",
+   "tail_pin": 6,
+   "u": -6.4
+  },
+  {
+   "signal": "ROW06",
+   "tail_pin": 7,
+   "u": -5.9
+  },
+  {
+   "signal": "ROW07",
+   "tail_pin": 8,
+   "u": -5.4
+  },
+  {
+   "signal": "ROW15",
+   "tail_pin": 9,
+   "u": -4.9
+  },
+  {
+   "signal": "ROW14",
+   "tail_pin": 10,
+   "u": -4.4
+  },
+  {
+   "signal": "ROW13",
+   "tail_pin": 11,
+   "u": -3.9
+  },
+  {
+   "signal": "ROW12",
+   "tail_pin": 12,
+   "u": -3.4
+  },
+  {
+   "signal": "ROW11",
+   "tail_pin": 13,
+   "u": -2.9
+  },
+  {
+   "signal": "ROW10",
+   "tail_pin": 14,
+   "u": -2.4
+  },
+  {
+   "signal": "ROW09",
+   "tail_pin": 15,
+   "u": -1.9
+  },
+  {
+   "signal": "ROW08",
+   "tail_pin": 16,
+   "u": -1.4
+  }
+ ],
+ "cols_tail_8p": [
+  {
+   "signal": "COL0",
+   "tail_pin": 1,
+   "u": 5.1
+  },
+  {
+   "signal": "COL1",
+   "tail_pin": 2,
+   "u": 5.6
+  },
+  {
+   "signal": "COL2",
+   "tail_pin": 3,
+   "u": 6.1
+  },
+  {
+   "signal": "COL3",
+   "tail_pin": 4,
+   "u": 6.6
+  },
+  {
+   "signal": "COL4",
+   "tail_pin": 5,
+   "u": 7.1
+  },
+  {
+   "signal": "COL5",
+   "tail_pin": 6,
+   "u": 7.6
+  },
+  {
+   "signal": "COL6",
+   "tail_pin": 7,
+   "u": 8.1
+  },
+  {
+   "signal": "COL7",
+   "tail_pin": 8,
+   "u": 8.6
+  }
+ ],
+ "pogo": [
+  {
+   "pin": 1,
+   "x_mm": -5.08,
+   "signal": "GND",
+   "length": "long (mates first)"
+  },
+  {
+   "pin": 2,
+   "x_mm": -2.54,
+   "signal": "D-",
+   "length": "standard"
+  },
+  {
+   "pin": 3,
+   "x_mm": 0.0,
+   "signal": "D+",
+   "length": "standard"
+  },
+  {
+   "pin": 4,
+   "x_mm": 2.54,
+   "signal": "VBUS",
+   "length": "standard"
+  },
+  {
+   "pin": 5,
+   "x_mm": 5.08,
+   "signal": "GND",
+   "length": "long (mates first)"
+  }
+ ],
+ "rows_readout_order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  15,
+  14,
+  13,
+  12,
+  11,
+  10,
+  9,
+  8
+ ],
+ "tail": {
+  "bay": 1.9500000000000028,
+  "incline": 14.268037706706558,
+  "flange": 5.200000000000003,
+  "bend": 1.7278759594743864,
+  "into_zif": 4.8999999999999995,
+  "total": 28.045913666180947,
+  "slack": 1.0,
+  "cut_length": 29.05
+ },
+ "notes": [
+  "rows tail copper faces the finger PCB at the ZIF (PCB-side contacts)",
+  "cols tail copper faces away from the finger PCB (far-side contacts) - or use dual-contact ZIFs"
+ ]
+}

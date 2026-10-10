@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAM tactile cartridge</title>
+<meta name="description" content="Plug-in tactile fingers for the i2rt YAM Linear 4310 gripper: a flat {{cols}} × {{rows}} taxel pad, in-finger readout and pogo-pin docking. CAD, FPC layout, MuJoCo model and build guide.">
+<meta name="theme-color" content="#1b2b34">
+<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script>
+<script src="viewer.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 20 28" aria-hidden="true"><rect x="1" y="1" width="18" height="26" rx="3"/><g><rect x="4" y="5" width="4" height="4"/><rect x="12" y="5" width="4" height="4"/><rect x="4" y="12" width="4" height="4"/><rect x="12" y="12" width="4" height="4"/><rect x="4" y="19" width="4" height="4"/><rect x="12" y="19" width="4" height="4"/></g></svg>
+      <span>YAM tactile cartridge</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#why">Design</a><a href="#inspect">3D view</a><a href="#assembly">Assembly</a><a href="#sensor">Sensor</a><a href="#checks">Checks</a><a href="#build">Build</a><a href="#files">Files</a>
+    </nav>
+    <a class="button small" href="{{zip_url}}">Download v{{version}}</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero wrap" id="top">
+  <div class="hero-text">
+    <h1>Touch sensing that plugs into the YAM gripper</h1>
+    <p class="lede">Each finger is a cartridge: a flat {{cols}} × {{rows}} taxel pad under a replaceable TPU skin, its own readout board, and five pogo pins to the robot. It docks with two thumbscrews and keeps the stock fingertip position.</p>
+    <div class="actions"><a class="button" href="#inspect">Inspect it in 3D</a><a class="button quiet" href="#files">Get the files</a></div>
+    <p class="status"><span class="dot" aria-hidden="true"></span>Design release v{{version}}. The geometry is checked against i2rt's YAM meshes. Nothing has been printed or run on a robot yet.</p>
+  </div>
+  <figure class="pad-demo">
+    <canvas id="pad" tabindex="0" role="application" aria-label="Interactive taxel pad. Press it, or move with the arrow keys and hold Space, to apply pressure." aria-describedby="pad-help"></canvas>
+    <figcaption>
+      <p id="pad-help">Press the pad to see what the finger reports. This is the contact face seen from the object, fingertip down; both fingers share this layout.</p>
+      <dl class="readout" aria-live="polite">
+        <div><dt>Taxel</dt><dd id="r-taxel">Point at the pad</dd></div>
+        <div><dt>Flat index</dt><dd id="r-index">–</dd></div>
+        <div><dt>Row line</dt><dd id="r-row">–</dd></div>
+        <div><dt>Column line</dt><dd id="r-col">–</dd></div>
+        <div><dt>Above the tip</dt><dd id="r-height">–</dd></div>
+        <div><dt>Total pressure</dt><dd id="r-total">0</dd></div>
+      </dl>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap">
+    <div class="cols">
+      <div class="prose">
+        <h2>A flat bay instead of a curved fingertip</h2>
+        <p>The ENPIRE-style tip curves in two directions at once. Polyimide does not stretch, so no flat circuit can be folded onto it, which is why unfolding the gripper STL into a custom FPC kept failing.</p>
+        <p>This design moves the irregular shape into the printed core and the skin, and gives the sensor one flat face. The pad is a plain rectangle, and every trace leaves through the base, away from the narrow tip.</p>
+        <p>The cartridge keeps the stock tool point at z = {{tcp_z}} mm, so existing configs and IK targets still work.</p>
+      </div>
+      <figure class="figure">
+        <img src="../out/renders/finger_inner_face.png" alt="The cartridge seen from the contact side, with the 8 by 16 taxel pad visible through the skin" width="1400" height="1100" loading="lazy">
+      </figure>
+    </div>
+    <div class="table-scroll">
+      <table class="compare">
+        <caption>Fingertip size compared with the stock i2rt tip, measured from the exported parts</caption>
+        <thead><tr><th scope="col">From the tip</th><th scope="col">Thickness at the centre</th><th scope="col">Thickness over the skin lips</th><th scope="col">Stock thickness</th><th scope="col">Width</th><th scope="col">Stock width</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1.7 mm</th><td>{{t17_ours}} mm</td><td>{{t17_max}} mm</td><td>{{t17_stock}} mm</td><td>{{w17_ours}} mm</td><td>{{w17_stock}} mm</td></tr>
+          <tr><th scope="row">5 mm</th><td>{{t5_ours}} mm</td><td>{{t5_max}} mm</td><td>{{t5_stock}} mm</td><td>{{w5_ours}} mm</td><td>{{w5_stock}} mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The tip is about as thin as stock but wider: that is the cost of eight columns. A six-column pad would bring the width to about 22 mm.</p>
+  </div>
+</section>
+
+<section class="band" id="inspect">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Inspect the assembly</h2>
+      <p>The right finger as it sits on the closed gripper. The left finger is the same part turned 180°.</p>
+    </div>
+    <div class="viewer">
+      <canvas id="view" tabindex="0" aria-label="3D view of the tactile cartridge assembly. Drag or use the arrow keys to rotate, plus and minus to zoom."></canvas>
+      <noscript><img src="../out/renders/hero.png" alt="Rendered view of the YAM gripper with two tactile cartridges" width="1400" height="1100"></noscript>
+      <div class="viewer-bar">
+        <label class="range">Separate the parts <input id="explode" type="range" min="0" max="100" value="0"></label>
+        <fieldset class="toggles">
+          <legend class="sr-only">Parts to show</legend>
+          <label><input type="checkbox" id="t-skin" checked> Skin</label>
+          <label><input type="checkbox" id="t-xray" checked> See through the skin</label>
+          <label><input type="checkbox" id="t-socket" checked> Socket</label>
+          <label><input type="checkbox" id="t-electronics" checked> Electronics</label>
+        </fieldset>
+        <div class="zoom">
+          <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" id="reset-view">Reset view</button>
+        </div>
+      </div>
+      <ul class="legend" id="legend" aria-label="Part colours"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="assembly">
+  <div class="wrap cols">
+    <figure class="figure">
+      <img src="../out/renders/exploded.png" alt="Exploded view: socket, pogo-pin board, finger PCB, cartridge, sensor pad and skin" width="1400" height="1100" loading="lazy">
+    </figure>
+    <div class="prose">
+      <h2>How it goes together</h2>
+      <ol class="steps">
+        <li>The socket replaces the stock tip on the carriage, using the same heat-set inserts and screws, and carries a small pogo-pin board. It stays on the robot.</li>
+        <li>The sensor pad, an FPC, Velostat and FPC laminate, sits flush in the cartridge's flat bay. Its two tails run up a groove and into the finger PCB.</li>
+        <li>The finger PCB digitises all {{taxels}} taxels inside the cartridge and talks USB to the host over five pogo pins.</li>
+        <li>The TPU skin presses onto the face. Ribs on its side walls snap into grooves, so payload shear can't walk it off the tip.</li>
+        <li>To dock, push the cartridge straight up onto two dowels and hand-tighten two thumbscrews. Swapping a finger needs no tools.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="sensor">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{taxels}} taxels, digitised inside the finger</h2>
+      <p>Rows and columns are copper electrodes on two FPCs with Velostat between them; each crossing is a taxel. The layout follows the FlexiTac V2 process.</p>
+    </div>
+    <div class="cols sensor-cols">
+      <figure class="figure">
+        <img src="../out/fpc_pcb/fpc_preview.png" alt="FPC artwork: 16 row electrodes on the bottom layer, 8 column electrodes on the top layer, and the stack view showing 128 crossings" width="1235" height="955" loading="lazy">
+        <figcaption>Bottom FPC with the row electrodes, top FPC with the column electrodes, and the two stacked. Both tails are standard 0.5 mm FFC widths.</figcaption>
+      </figure>
+      <div>
+        <div class="table-scroll">
+          <table class="specs">
+            <tbody>
+              <tr><th scope="row">Active area</th><td>{{act_w}} × {{act_l}} mm</td></tr>
+              <tr><th scope="row">Taxels</th><td>{{rows}} rows × {{cols}} columns at {{pitch}} mm pitch</td></tr>
+              <tr><th scope="row">Stack</th><td>FPC, Velostat, FPC: {{pad_t}} mm, under a {{skin_t}} mm TPU 85A skin</td></tr>
+              <tr><th scope="row">Tails</th><td>8.5 mm (16 rows) and 4.5 mm (8 columns), cut length {{tail_len}} mm</td></tr>
+              <tr><th scope="row">Readout</th><td>200 Hz or more over USB-CDC; each finger reports its MCU's unique ID</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Pogo pins</h3>
+        <svg class="pogo" viewBox="0 0 330 92" role="img" aria-label="Five pogo pins at 2.54 mm pitch: GND, D minus, D plus, VBUS, GND. The two ground pins are longer.">
+          <g class="pins">
+            <rect class="gnd" x="22" y="6" width="26" height="54" rx="4"/><rect x="82" y="16" width="26" height="44" rx="4"/><rect x="142" y="16" width="26" height="44" rx="4"/><rect x="202" y="16" width="26" height="44" rx="4"/><rect class="gnd" x="262" y="6" width="26" height="54" rx="4"/>
+          </g>
+          <g class="labels"><text x="35" y="82">GND</text><text x="95" y="82">D−</text><text x="155" y="82">D+</text><text x="215" y="82">VBUS</text><text x="275" y="82">GND</text></g>
+        </svg>
+        <p class="small">The ground pins are longer, so ground connects first when you dock a cartridge with the robot powered.</p>
+        <h3>Frame format</h3>
+        <div class="frame" role="img" aria-label="Frame layout: 2 header bytes, version, flags, 16-bit sequence, 32-bit timestamp, 128 16-bit pressure values, 16-bit CRC; 268 bytes in total.">
+          <span class="seg head">AA 55</span><span class="seg meta">ver</span><span class="seg meta">flags</span><span class="seg meta">seq</span><span class="seg meta">t_us</span><span class="seg data">{{taxels}} × u16 pressure</span><span class="seg crc">CRC</span>
+        </div>
+        <p class="small">268 bytes per frame, little endian, row-major with row 0 at the tip. The checksum is CRC-16/CCITT-FALSE. Tail pins 9–16 carry rows 15 down to 8, and <code>host/tactile_tools.py</code> puts them back in order.</p>
+      </div>
+    </div>
+    <figure class="figure wide">
+      <img src="../out/fpc_pcb/pcb_preview.png" alt="Finger PCB outline, 27.0 by 13.8 mm, with pogo targets on top and the ZIF connectors and MCU underneath; socket PCB outline with five pogo pins" width="1350" height="495" loading="lazy">
+      <figcaption>Finger PCB with the pogo targets on top and the ZIFs and MCU underneath; socket PCB on the right. Outlines only: the schematic and layout come next.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="checks">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Checked against the robot's own geometry</h2>
+      <p>Every number here is measured from the exported parts and i2rt's YAM meshes by <code>cad/check_fit.py</code> and <code>cad/measure.py</code>.</p>
+    </div>
+    <ul class="checks">
+      <li>At least {{clear_opp}} mm of clearance to the opposite carriage, and {{clear_housing}} mm to the housing, across the full 0–47.5 mm stroke.</li>
+      <li>Walls of at least {{wall_pad}} mm behind the pad, and {{wall_min_hole}}–{{wall_max_hole}} mm around every insert and screw hole.</li>
+      <li>The only overlaps are intended ones: the skins squeeze {{squeeze}} mm each at full close, the pogo pins compress 0.7 mm, and the dowels press-fit.</li>
+      <li>In MuJoCo, a 24 mm block held at a {{sim_grip}} N grip reads {{sim_left}} N on each finger across {{sim_taxels}} taxels.</li>
+      <li>An independent review of v0.1 found the socket scraping the opposite carriage below about 23 mm of opening. v{{version}} drops that wing by {{relief}} mm, as the stock tip does.</li>
+    </ul>
+    <div class="open">
+      <h3>Not verified yet</h3>
+      <p>Nothing has been printed, fitted to a real gripper, or loaded. Pad sensitivity, drift, skin wear and the finger PCB firmware are still open.</p>
+    </div>
+    <div class="sections">
+      <figure class="figure"><img src="../out/check/sec_x0.png" alt="Section through the centre of the finger: socket, pogo pins, finger PCB, cartridge, pad and skin" width="990" height="2272" loading="lazy"><figcaption>Centre section: pogo pins, finger PCB, tail path, pad and skin.</figcaption></figure>
+      <figure class="figure"><img src="../out/check/sec_relief.png" alt="Section at x = -17.5 mm showing the socket wing dropped below the opposite carriage, a dowel and a thumbscrew" width="1000" height="900" loading="lazy"><figcaption>The socket wing dropped clear of the opposite carriage, with a dowel and a thumbscrew.</figcaption></figure>
+      <figure class="figure"><img src="../out/check/sec_skin_rib.png" alt="Section through the skin retention ribs sitting in the side grooves of the core" width="1000" height="600" loading="lazy"><figcaption>Skin ribs seated in the core's side grooves.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="build">
+  <div class="wrap cols build-cols">
+    <div class="prose">
+      <h2>Before you print a batch</h2>
+      <ol class="steps">
+        <li>Confirm that the stock tip screws go in from above, through the carriage, into the tip's heat-set inserts. The socket copies that arrangement.</li>
+        <li>Measure a laminated pad. It should sit flush in the {{pad_t}} mm pocket, or at most 0.05 mm proud.</li>
+        <li>Check the ZIF keep-outs and the FPC entry height against the connectors you buy.</li>
+        <li>Print one socket and one cartridge. Check the dowel fit, the skin's snap, and the {{squeeze}} mm squeeze at full close.</li>
+      </ol>
+      <h3>Printing</h3>
+      <p>Print the cartridge with the docking face on the bed and the finger pointing up, with no supports: only the PCB seat bridges. Use 0.2 mm layers, four or five walls and at least 40% infill, in PETG or PA-CF. The socket prints on its carriage face, and the skin on its contact face in TPU 85A.</p>
+      <p>Keep the gripper force limit at about 80 N or below.</p>
+    </div>
+    <div>
+      <h3>Parts for one finger</h3>
+      <div class="table-scroll">
+        <table class="bom">
+          <thead><tr><th scope="col">Part</th><th scope="col">Qty</th></tr></thead>
+          <tbody>
+            <tr><td>Socket, PETG or PA-CF ({{vol_socket}} cm³)</td><td>1</td></tr>
+            <tr><td>Cartridge, PETG or PA-CF ({{vol_cart}} cm³)</td><td>1</td></tr>
+            <tr><td>Skin, TPU 85A ({{vol_skin}} cm³)</td><td>1</td></tr>
+            <tr><td>Knurled M3 heat-set insert, Ø4.0 hole</td><td>4</td></tr>
+            <tr><td>Stock M3 tip screws (reused)</td><td>2</td></tr>
+            <tr><td>Ø3 × 8 mm dowel pin</td><td>2</td></tr>
+            <tr><td>M3 × 14 knurled thumbscrew</td><td>2</td></tr>
+            <tr><td>FPC pair, 0.2 mm, ENIG, with stiffener</td><td>1</td></tr>
+            <tr><td>Velostat, laminating sheet, Kapton tape, thin PSA</td><td>–</td></tr>
+            <tr><td>Finger PCB, 27.0 × 13.8 mm</td><td>1</td></tr>
+            <tr><td>Socket PCB with 5 pogo pins</td><td>1</td></tr>
+            <tr><td>High-flex USB cable with a service loop</td><td>0.3 m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="files">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Files</h2>
+      <p>All of these are generated by the scripts in <code>cartridge/cad</code>. STEP opens in any CAD tool; STL and DXF are in millimetres. Frames are the i2rt gripper frame, right finger, gripper closed.</p>
+    </div>
+    <div class="cols files-cols">
+      <div class="table-scroll">
+        <table class="files">
+          <thead><tr><th scope="col">File</th><th scope="col">Size</th></tr></thead>
+          <tbody>
+{{files_rows}}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Rebuild everything</h3>
+        <pre><code>cd cartridge
+pip install -r requirements.txt
+make i2rt    # i2rt meshes at the measured commit
+make all     # CAD, FPC, checks, sim, renders, this page</code></pre>
+        <p class="small">The host tools in <code>host/tactile_tools.py</code> decode the frame stream, lift taxels to 3D points for visuo-tactile fusion, and handle bench bring-up on a FlexiTac readout board.</p>
+        <p class="actions"><a class="button" href="{{zip_url}}">Download v{{version}}</a><a class="button quiet" href="{{tree_url}}">Browse on GitHub</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware files are CC BY-NC 4.0; check that licence before any commercial use. Meshes derived from i2rt are MIT-licensed; see <code>out/sim/NOTICE.txt</code>.</p>
+    <p>YAM tactile cartridge v{{version}}, branch <code>{{branch}}</code> of <a href="https://github.com/{{repo}}">{{repo}}</a>. The repository's other design track, the ENPIRE engineering study, is on the <a href="https://geyan21.github.io/yam-tactile-kit/">project website</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

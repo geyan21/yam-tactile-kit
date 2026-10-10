@@ -1,0 +1,27 @@
+{
+ "nsensor": 256,
+ "q_open_per_finger_mm": 12.24,
+ "left_sum_N": 15.0,
+ "right_sum_N": 15.0,
+ "left_active": 88,
+ "right_active": 88,
+ "left_rows_active": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "block_mm": [
+  24,
+  30,
+  20
+ ],
+ "grip_N": 15.0
+}

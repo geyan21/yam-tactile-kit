@@ -1,0 +1,90 @@
+{
+ "volume_cm3": {
+  "socket": 12.13,
+  "cartridge": 20.09,
+  "skin": 2.3
+ },
+ "tip_profile": [
+  {
+   "from_tip_mm": 0.5,
+   "ours_thick_centre": 2.15,
+   "ours_thick_max": 2.15,
+   "stock_thick_centre": 3.24,
+   "ours_width": 21.12,
+   "stock_width": 13.42
+  },
+  {
+   "from_tip_mm": 1.7,
+   "ours_thick_centre": 3.25,
+   "ours_thick_max": 4.53,
+   "stock_thick_centre": 3.83,
+   "ours_width": 24.05,
+   "stock_width": 15.36
+  },
+  {
+   "from_tip_mm": 3.0,
+   "ours_thick_centre": 3.71,
+   "ours_thick_max": 4.92,
+   "stock_thick_centre": 4.06,
+   "ours_width": 25.49,
+   "stock_width": 16.39
+  },
+  {
+   "from_tip_mm": 5.0,
+   "ours_thick_centre": 4.34,
+   "ours_thick_max": 5.43,
+   "stock_thick_centre": 4.41,
+   "ours_width": 26.0,
+   "stock_width": 17.95
+  },
+  {
+   "from_tip_mm": 10.0,
+   "ours_thick_centre": 5.99,
+   "ours_thick_max": 6.99,
+   "stock_thick_centre": 5.29,
+   "ours_width": 26.0,
+   "stock_width": 21.84
+  },
+  {
+   "from_tip_mm": 15.0,
+   "ours_thick_centre": 7.7,
+   "ours_thick_max": 8.7,
+   "stock_thick_centre": 0.0,
+   "ours_width": 26.0,
+   "stock_width": 25.74
+  }
+ ],
+ "wall_behind_pad_min_mm": 1.81,
+ "socket_wall_around_dowel_mm": 2.02,
+ "cartridge_wall_around_dowel_mm": 1.39,
+ "socket_wall_around_thumb_insert_mm": 2.2,
+ "socket_wall_around_mount_insert_mm": 2.35,
+ "cartridge_wall_around_thumb_hole_mm": 2.5,
+ "min_clearance_vs_opposite_carriage_mm": 1.305,
+ "min_clearance_vs_housing_mm": 6.0,
+ "intended_overlaps_q0_mm3": {
+  "R.skin x L.skin": 541.1,
+  "R.ph_pogo_pins x R.ph_finger_pcb": 6.182,
+  "R.ph_dowels x R.socket": 2.803,
+  "R.skin x R.cartridge": 0.004
+ },
+ "tail_cut_length_mm": 29.05,
+ "rows_readout_order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  15,
+  14,
+  13,
+  12,
+  11,
+  10,
+  9,
+  8
+ ]
+}

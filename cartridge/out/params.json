@@ -1,0 +1,159 @@
+{
+ "params": {
+  "Z_CARRIAGE": -70.38,
+  "MOUNT_HOLES": [
+   [
+    -8.25,
+    17.15
+   ],
+   [
+    12.75,
+    17.15
+   ]
+  ],
+  "MOUNT_INSERT_D": 4.0,
+  "MOUNT_INSERT_DEPTH": 6.0,
+  "SCREW_TIP_CLEAR": 2.5,
+  "M3_CLEAR": 3.4,
+  "SOCKET_H": 10.5,
+  "CARRIAGE_X": [
+   -12.6,
+   33.9
+  ],
+  "OPP_RELIEF": 1.5,
+  "TCP_Z": -144.65,
+  "CONTACT_Y": -0.25,
+  "Y_IN": 3.0,
+  "Y_OUT": 25.5,
+  "DOCK_HALF_X": 22.5,
+  "THUMB_XY": [
+   [
+    -18.3,
+    14.0
+   ],
+   [
+    18.3,
+    14.0
+   ]
+  ],
+  "THUMB_HEAD_D": 8.0,
+  "THUMB_HEAD_H": 3.5,
+  "INSERT_D": 4.0,
+  "INSERT_DEPTH": 6.0,
+  "DOWEL_XY": [
+   [
+    -17.5,
+    22.0
+   ],
+   [
+    17.5,
+    22.0
+   ]
+  ],
+  "DOWEL_D": 3.0,
+  "DOWEL_PRESS": 2.95,
+  "DOWEL_LEN": 8.0,
+  "DOWEL_IN_SOCKET": 6.0,
+  "DOWEL_HOLE_DEPTH": 2.6,
+  "POGO_Y": 10.5,
+  "POGO_PITCH": 2.54,
+  "POGO_N": 5,
+  "POGO_PROTRUDE": 1.4,
+  "POGO_H": 3.5,
+  "SPCB_X": 9.0,
+  "SPCB_Y": [
+   8.0,
+   13.0
+  ],
+  "SPCB_T": 0.8,
+  "CABLE_X": [
+   1.0,
+   7.5
+  ],
+  "CABLE_Z": [
+   1.5,
+   4.3
+  ],
+  "FLANGE_T": 9.0,
+  "BEAM_ROOT_HALF_X": 12.8,
+  "BEAM_PAR_Z": -108.0,
+  "SENSE_HALF_X": 12.0,
+  "NOSE_R_XZ": 3.5,
+  "INCLINE_END_Z": -104.0,
+  "BACK_TOP_Y": 21.0,
+  "BACK_LOW": [
+   4.6,
+   -138.0
+  ],
+  "BACK_END_Y": 2.9,
+  "NOSE_R_IN": 1.0,
+  "NOSE_R_BACK": 0.8,
+  "PCB": {
+   "x": 13.6,
+   "y": [
+    5.4,
+    19.4
+   ],
+   "recess": 0.7,
+   "t": 0.8
+  },
+  "CAVITY": {
+   "x": 12.8,
+   "y": [
+    6.2,
+    18.6
+   ],
+   "depth": 3.2
+  },
+  "TAIL_HALF_X": 9.7,
+  "NOTCH_FLOOR": 2.8,
+  "BEND_R": 1.0,
+  "TAIL_ROWS_U": [
+   -9.4,
+   -0.9
+  ],
+  "TAIL_COLS_U": [
+   4.6,
+   9.1
+  ],
+  "TAIL_PITCH": 0.5,
+  "ZIF_DEPTH": 3.3,
+  "SKIN_RIB": {
+   "z": -112.0,
+   "w": 1.5,
+   "depth": 0.5,
+   "y0": 3.5,
+   "clear": 0.05,
+   "y1": 13.0
+  },
+  "N_COLS": 8,
+  "N_ROWS": 16,
+  "PITCH": 2.0,
+  "ELECTRODE_W": 1.4,
+  "PAD_T": 0.8,
+  "SKIN_T": 1.2,
+  "SKIN_SIDE_T": 1.0,
+  "SKIN_LIP": 0.8,
+  "MARGIN_SIDE": 2.85,
+  "MARGIN_DIST": 1.5,
+  "MARGIN_PROX": 2.2,
+  "PAD_R": 1.5,
+  "POCKET_CLEAR": 0.15,
+  "NOSE_GAP": 1.8,
+  "SKIN_TOP_Z": -101.5
+ },
+ "derived": {
+  "Zs": -80.88,
+  "Zf": -89.88,
+  "Z_END": -143.45000000000002,
+  "Y_FACE": 0.95,
+  "Y_POCKET": 1.75,
+  "ACT_Z0": -140.15,
+  "ACT_Z1": -108.15,
+  "PAD_DIST_Z": -141.65,
+  "PAD_PROX_Z": -105.95,
+  "PAD_HALF_X": 10.85,
+  "ACT_W": 16.0,
+  "ACT_L": 32.0
+ }
+}
