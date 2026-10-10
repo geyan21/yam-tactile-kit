@@ -8,7 +8,7 @@
   "selected_sensor": null,
   "selected_material": null,
   "physical_results": [],
-  "next_experiment": "Build the thin R1 nail cells and the independent L1 cell/plate fixture. Compare contact coverage and held-out force errors, then test the assembled L1 finger through 20 N per finger.",
+  "next_experiment": "Build the thin R1 nail cells and the independent L1 cell/plate fixture. Use the shared frozen-threshold contact protocol on assembled fingers, and the separate held-out force tests through 20 N per finger.",
   "candidates": [
     {"id": "R1", "name": "Independent resistive cells", "status": "designed; unbuilt", "coverage": "two nail regions and four TPU regions", "next": "Fit, saturation, drift, edge coverage, and wear"},
     {"id": "M1", "name": "Printed magnetic insert", "status": "primary hardware audited; integration design open", "coverage": "compliant region; hard nail requires separate sensing", "next": "Board mount, interference, magnet retention, 20 N range"},

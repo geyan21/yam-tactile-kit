@@ -68,6 +68,8 @@
     if(text!==undefined)node.textContent=text;plot.append(node);return node;
   }
   function axes(minimum=0,maximum=20){
+    plot.setAttribute("viewBox","0 0 650 360");
+    plot.setAttribute("aria-label","Held-out reference force versus predicted force");
     plot.replaceChildren();svg("rect",{width:650,height:360,fill:"#fff"});
     for(let i=0;i<=4;i++){
       const x=60+i*135,y=305-i*66;
@@ -82,7 +84,66 @@
   }
   axes();
   svg("text",{x:330,y:175,"text-anchor":"middle","font-size":15,fill:"#6b7f77"},"Awaiting measured data");
+  function renderContactReport(report,name){
+    if(report.evidence_kind!=="physical"||!Array.isArray(report.regions)||!report.regions.length||report.regions.length>100){
+      throw Error("Expected a physical contact-validation report with declared regions.");
+    }
+    const rows=[],ids=new Set();let total=0;
+    for(const region of report.regions){
+      if(typeof region.region_id!=="string"||ids.has(region.region_id))throw Error("Invalid contact region.");
+      ids.add(region.region_id);
+      for(const [outcome,label,color] of [["loaded","miss / unavailable","#b76a39"],["clear","false / unavailable","#347f77"]]){
+        const metric=region[outcome];if(!metric)throw Error("Missing contact class.");
+        for(const key of ["trials","observed_errors","unavailable_trials","conservative_errors"]){
+          if(!Number.isInteger(metric[key])||metric[key]<0)throw Error("Invalid contact event count.");
+        }
+        if(metric.conservative_errors!==metric.observed_errors+metric.unavailable_trials||metric.conservative_errors>metric.trials){
+          throw Error("Contact counts are inconsistent.");
+        }
+        if(metric.trials){
+          if(!Number.isFinite(metric.conservative_error_rate)||Math.abs(metric.conservative_error_rate-metric.conservative_errors/metric.trials)>1e-10||
+             !Number.isFinite(metric.upper_error_bound_95)||metric.upper_error_bound_95<metric.conservative_error_rate||metric.upper_error_bound_95>1){
+            throw Error("Invalid contact error rate or bound.");
+          }
+        }else if(metric.conservative_error_rate!==null||metric.upper_error_bound_95!==null){
+          throw Error("A missing class cannot have a measured rate.");
+        }
+        total+=metric.trials;rows.push({...metric,region:region.region_id,label,color});
+      }
+    }
+    if(total!==report.recorded_trials)throw Error("Reported trial total differs from region counts.");
+    const height=100+rows.length*26,maximum=Math.max(.02,...rows.map(row=>row.upper_error_bound_95||0))*1.05;
+    plot.replaceChildren();plot.setAttribute("viewBox",`0 0 650 ${height}`);
+    plot.setAttribute("aria-label","Per-region contact error rates and one-sided 95 percent upper bounds");
+    svg("rect",{width:650,height,fill:"#fff"});
+    svg("text",{x:20,y:22,"font-size":12,fill:"#344c55"},"Contact error rate · bound is per region and outcome");
+    const x=value=>190+370*value/maximum;
+    for(let i=0;i<=4;i++){
+      const value=maximum*i/4;
+      svg("line",{x1:x(value),x2:x(value),y1:48,y2:height-36,stroke:"#e4e9e3"});
+      svg("text",{x:x(value),y:43,"font-size":10,"text-anchor":"middle",fill:"#536870"},(100*value).toFixed(1)+"%");
+    }
+    svg("line",{x1:x(.01),x2:x(.01),y1:48,y2:height-36,stroke:"#ac5c38","stroke-dasharray":"4 3"});
+    rows.forEach((row,index)=>{
+      const y=65+index*26;
+      svg("text",{x:12,y:y+3,"font-size":10,fill:"#344c55"},row.region.replaceAll("_"," ").slice(0,24)+(row.label.startsWith("miss")?" · contact":" · clear"));
+      if(!row.trials){svg("text",{x:190,y:y+3,"font-size":10,fill:"#536870"},"No presentations recorded");return;}
+      svg("line",{x1:x(row.conservative_error_rate),x2:x(row.upper_error_bound_95),y1:y,y2:y,stroke:row.color,"stroke-width":3});
+      svg("circle",{cx:x(row.conservative_error_rate),cy:y,r:4,fill:row.color});
+      svg("line",{x1:x(row.upper_error_bound_95),x2:x(row.upper_error_bound_95),y1:y-5,y2:y+5,stroke:row.color,"stroke-width":2});
+      svg("text",{x:580,y:y+3,"font-size":10,fill:"#344c55"},`${row.conservative_errors}/${row.trials}`);
+    });
+    svg("text",{x:15,y:height-13,"font-size":10,fill:"#536870"},"Dot: observed conservative rate. Whisker: 95% upper bound. Dotted line: 1% target.");
+    document.getElementById("result-status").textContent=`Locally inspected: ${name}. Published specimen count remains unchanged.`;
+    document.getElementById("result-metrics").textContent=
+      `${report.recorded_trials}/${report.planned_trials} presentations · ${report.plan_complete?"complete":"incomplete"} plan. `+
+      `Observed-rate screen: ${report.observed_rate_screen_met?"met":"not met"}. `+
+      `Separate 95% bounds below 1%: ${report.per_metric_95_bound_below_1pct?"yes":"not established"}. `+
+      "No simultaneous or robot qualification claim. Review the raw records and hashed event-details file.";
+    plot.dataset.loaded="true";plot.dataset.reportKind="contact";
+  }
   function renderReport(report,name="imported report"){
+    if(report.schema==="yam-contact-validation/1"){renderContactReport(report,name);return;}
     const r1=report.schema==="yam-calibration/1",l1=["yam-l1-calibration/1","yam-l1-finger-validation/1"].includes(report.schema);
     if(report.evidence_kind!=="physical"||(!r1&&!l1))throw Error("Expected a physical R1 or L1 report from the bench analyzer.");
     const points=[];
@@ -112,7 +173,7 @@
     const rmse=errors.length?Math.sqrt(errors.reduce((s,e)=>s+e*e,0)/errors.length):null;
     document.getElementById("result-status").textContent=`Locally inspected: ${name}. Published specimen count remains unchanged.`;
     document.getElementById("result-metrics").textContent=`${points.length} held-out trials · ${out} out of range · RMSE of in-range trials: ${rmse===null?"unavailable":rmse.toFixed(3)+" N"}. Static report only; provenance and raw data require review.`;
-    plot.dataset.loaded="true";
+    plot.dataset.loaded="true";plot.dataset.reportKind="force";
   }
   document.getElementById("result-file").addEventListener("change",async e=>{
     const file=e.target.files[0];if(!file)return;

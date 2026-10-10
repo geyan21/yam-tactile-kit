@@ -59,6 +59,16 @@ document.getElementById("page").addEventListener("load",async()=>{
                    {contact_id:"SOFTWARE-ONLY",reference_n:20,predicted_n:20.1}]},"software test fixture — no hardware evidence");
     check("L1 measured-report format renders using software-only inputs",d.querySelectorAll("#result-plot circle").length===2);
     check("negative zero error is visible within plot",Array.from(d.querySelectorAll("#result-plot circle")).every(dot=>Number(dot.getAttribute("cy"))<=305));
+    let contactRejected=false;
+    try{w.EngineeringUI.renderReport({schema:"yam-contact-validation/1",evidence_kind:"synthetic",regions:[]});}catch(_){contactRejected=true;}
+    check("synthetic contact report is rejected",contactRejected);
+    const metric={trials:20,observed_errors:0,unavailable_trials:0,conservative_errors:0,conservative_error_rate:0,upper_error_bound_95:.139108433};
+    w.EngineeringUI.renderReport({schema:"yam-contact-validation/1",evidence_kind:"physical",
+      planned_trials:40,recorded_trials:40,plan_complete:true,observed_rate_screen_met:true,per_metric_95_bound_below_1pct:false,
+      regions:[{region_id:"SOFTWARE_ONLY",loaded:metric,clear:metric}]},"software test fixture — no hardware evidence");
+    check("contact report format renders rates and uncertainty",d.getElementById("result-plot").dataset.reportKind==="contact"&&d.querySelectorAll("#result-plot circle").length===2);
+    check("contact pilot does not display reliability as established",d.getElementById("result-metrics").textContent.includes("not established"));
+    check("contact guide is reachable",d.querySelector('a[href="contact.html"]')!==null);
   }catch(error){checks.push({name:error.stack||error.message,passed:false});}
   document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks,observations});
 });

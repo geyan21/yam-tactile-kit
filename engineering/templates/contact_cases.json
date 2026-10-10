@@ -1,0 +1,19 @@
+{
+  "schema": "yam-contact-cases/1",
+  "scope": "Closing-face normal contact; +native Z into the finger. Side, back, shear and dynamic contact require separate tests.",
+  "regions": [
+    {"id":"nail_0_center","train_channel":0,"instruction":"Center of the left nail cell; L1 contact-map site nail_3. Record probe position and shape."},
+    {"id":"nail_1_center","train_channel":1,"instruction":"Center of the right nail cell; L1 contact-map site nail_4. Record probe position and shape."},
+    {"id":"pad_2_center","train_channel":2,"instruction":"Center of the most distal TPU sensing zone; L1 site tpu_1."},
+    {"id":"pad_3_center","train_channel":3,"instruction":"Center of the next TPU sensing zone; L1 site tpu_2."},
+    {"id":"pad_4_center","train_channel":4,"instruction":"Center of the next TPU sensing zone; L1 site tpu_3."},
+    {"id":"pad_5_center","train_channel":5,"instruction":"Center of the most proximal TPU sensing zone; L1 site tpu_4."},
+    {"id":"nail_0_leading","train_channel":null,"instruction":"Left leading rim, including the laminate border. Use a documented thin contact edge and photograph its actual engagement."},
+    {"id":"nail_1_leading","train_channel":null,"instruction":"Right leading rim, including the laminate border. Use the same contact edge and photograph its actual engagement."},
+    {"id":"nail_bridge","train_channel":null,"instruction":"A documented flat object bridging the two tines across the notch; apply total normal force through the independent reference."},
+    {"id":"gap_2_3","train_channel":null,"instruction":"Contact the original TPU surface between zones 2 and 3, including cover borders; record actual contact location."},
+    {"id":"gap_3_4","train_channel":null,"instruction":"Contact the original TPU surface between zones 3 and 4, including cover borders; record actual contact location."},
+    {"id":"gap_4_5","train_channel":null,"instruction":"Contact the original TPU surface between zones 4 and 5, including cover borders; record actual contact location."}
+  ],
+  "note": "These are test landmarks, not measured results. Freeze actual probe dimensions, positions and photographs in the fixture record before evaluating a material or sensor."
+}

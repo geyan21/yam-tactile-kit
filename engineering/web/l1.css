@@ -16,7 +16,11 @@
 .load-explorer strong { display: block; font-size: 30px; font-weight: 550; color: var(--ink); }
 .load-explorer p { font-size: 12px; margin: 12px 0 0; }
 .design-aside > .button { margin: 0 5px 8px 0; }
+.contact-panel { display: grid; grid-template-columns: 1fr 1.25fr; align-items: center; gap: 30px; margin-top: 30px; }
+.contact-panel p { font-size: 14px; color: var(--muted); }
+.contact-panel img { display: block; width: 100%; }
 @media(max-width:720px) {
+  .contact-panel { grid-template-columns: minmax(0,1fr); }
   .brief div { display: block; }
   .brief span { margin-top: 6px; }
   .root-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }

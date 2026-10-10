@@ -24,10 +24,13 @@ For L1, follow [assembly](docs/BUILD_L1.md), [electronics](docs/L1_ELECTRONICS.m
 | `firmware/r1`, `firmware/l1` | Separate Pico programs; no actuator commands |
 | `software/bench.py`, `software/calibrate.py` | R1 raw capture and held-out channel calibration |
 | `software/l1_bench.py`, `l1_calibrate.py`, `l1_validate_finger.py`, `l1_monitor.py` | L1 cell/plate experiment, fixed-sensitivity finger validation and live recording |
+| `software/contact_bench.py`, `contact_report.py`, `contact_monitor.py` | Shared R1/L1 contact recording, frozen-threshold evaluation and live decisions |
 | `templates`, `docs` | Specimen records, assembly, material recipes and test instructions |
 | `scripts`, `tests`, `web` | Reproduction tools, software checks and portable website |
 
 Generated results belong under ignored `build/` and `results/`; never put invented benchmark results into the physical-evidence fields.
+
+Use [the shared contact workflow](docs/CONTACT.md) to compare contact presence across sensor/material variants. The rolling-window implementation is shared by training, evaluation and live monitoring. Statistical counts refer to independent physical presentations, not frames.
 
 ## Reproduce the engineering files
 

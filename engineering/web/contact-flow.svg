@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+<title id="title">Shared R1 and L1 contact test</title>
+<desc id="desc">Train thresholds on independent center-contact and clear presentations, freeze the model, then evaluate the planned center, edge and gap contacts. One physical presentation is one statistical trial, even though many rolling decisions are recorded.</desc>
+<style>
+text{font-family:Arial,sans-serif;fill:#203f46;font-size:16px}.title{font-size:27px;font-weight:bold}.heading{font-size:20px;font-weight:bold}.small{font-size:14px}
+.box{fill:#fff;stroke:#becfc5;stroke-width:2}.line{stroke:#357c70;stroke-width:3;fill:none}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#357c70"/></marker></defs>
+<rect width="1120" height="520" rx="12" fill="#f0f4ed"/>
+<text x="30" y="43" class="title">Contact reliability · use the same test for both prototypes</text>
+<rect class="box" x="30" y="80" width="235" height="157" rx="9"/>
+<text x="47" y="113" class="heading">1 · Train at centers</text>
+<text x="47" y="148">Known clear / light contact</text>
+<text x="47" y="177">Independent physical resets</text>
+<text x="47" y="207" class="small">R1: threshold per enabled cell</text>
+<rect class="box" x="305" y="80" width="235" height="157" rx="9"/>
+<text x="322" y="113" class="heading">2 · Freeze the model</text>
+<text x="322" y="148">Save model.json and its hash</text>
+<text x="322" y="177">Choose test size beforehand</text>
+<text x="322" y="207" class="small">No threshold adjustment in test</text>
+<rect class="box" x="580" y="80" width="235" height="157" rx="9"/>
+<text x="597" y="113" class="heading">3 · Test the full map</text>
+<text x="597" y="148">Centers, leading rims, gaps</text>
+<text x="597" y="177">Randomized fixed schedule</text>
+<text x="597" y="207" class="small">Location never enters prediction</text>
+<rect class="box" x="855" y="80" width="235" height="157" rx="9"/>
+<text x="872" y="113" class="heading">4 · Keep every result</text>
+<text x="872" y="148">Misses, false contacts, faults</text>
+<text x="872" y="177">Counts + confidence bounds</text>
+<text x="872" y="207" class="small">Small pilot ≠ reliability proof</text>
+<path class="line" d="M269 157H298 M544 157H573 M819 157H848" marker-end="url(#arrow)"/>
+<text x="30" y="285" class="heading">Inside one stationary presentation</text>
+<rect x="30" y="311" width="220" height="67" rx="5" fill="#dce7de"/>
+<text x="47" y="341">Settle 0.5 s; preserve raw data</text>
+<text x="47" y="364" class="small">Reference reading before capture</text>
+<rect x="270" y="311" width="230" height="67" rx="5" fill="#e6d8c0"/>
+<text x="287" y="341">Fill the 100 ms lookback</text>
+<text x="287" y="364" class="small">No automatic mechanical zero</text>
+<rect x="520" y="311" width="570" height="67" rx="5" fill="#cee0d7"/>
+<text x="537" y="341">Evaluate rolling decisions for 0.3 s; keep each window's result</text>
+<text x="537" y="364" class="small">Any wrong decision makes this presentation an error. Faults remain unavailable.</text>
+<text x="30" y="420">One physical presentation = one trial. Overlapping windows and ADC frames do not increase the trial count.</text>
+<text x="30" y="451">The reference reading plus its stated uncertainty must remain ≤0.2 N for the light-contact class.</text>
+<text x="30" y="489" class="small">This tests stationary contact presence. Dynamic latency, localization, 20 N force accuracy, wear and robot behavior remain separate tests.</text>
+</svg>

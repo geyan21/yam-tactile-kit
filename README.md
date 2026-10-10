@@ -25,6 +25,8 @@ The package contains 23 checked STEP/STL solids, including one purchased-cell re
 
 In parallel, [build L1's cell fixture and carrier](engineering/docs/BUILD_L1.md), [wire its dedicated readout](engineering/docs/L1_ELECTRONICS.md), and [run the cell/plate and integrated-finger tests](engineering/docs/L1_TESTING.md). Both prototypes remain unbuilt and unqualified.
 
+The [shared contact test](engineering/docs/CONTACT.md) supplies saved setup files, randomized physical trial plans, frozen thresholds, live R1/L1 monitoring and per-region error bounds. It keeps failures and unavailable readings in the evidence, and distinguishes a short pilot from a larger reliability test.
+
 The website provides individual STEP/STL downloads, an offline guide, all source code, and a complete portable ZIP. Geometry generators and editable design parameters are under [`engineering`](engineering/README.md).
 
 ## Rebuild the webpage

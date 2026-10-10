@@ -36,3 +36,5 @@ The catalog listing for Adafruit 1361 conductive film was out of stock when chec
 Provide the completed specimen sheet, source CAD hashes, assembly photographs, `session.json`, `trials.jsonl`, all raw trial files, and the calibration report. Include failures: delamination, saturated channels, inaccessible contact regions, or a cut pattern that does not fit.
 
 The next revision depends on those measurements. If the nail cover defeats thin-edge tasks, reduce or replace the cover. If resistive drift fails the force criterion, evaluate it for contact location alongside L1's separately measured aggregate force. Do not solve either design's failures by relabelling software output as calibrated force.
+
+Use [the shared contact protocol](CONTACT.md) after the finger is assembled. It supplies a setup template, randomized plans, a frozen-threshold workflow and live contact monitoring for both readouts. Keep the first short run labeled as a pilot; larger reliability claims require the corresponding evidence.

@@ -26,7 +26,7 @@ Repeat center and edge loads with 6 mm rounded and flat probes after the initial
 
 | Test | Measurement | Proposed decision target |
 |---|---|---|
-| Light contact | 20 independent 0.2 N touches per critical region, plus unloaded intervals | Detect at least 19/20; report false positives separately |
+| Light contact | Use the shared contact protocol: independent contact/clear presentations, frozen thresholds, leading rims and gaps held out of training | ≥99% observed detection, ≤1% false events, no unavailable trials; report uncertainty separately |
 | Sustained grasp | Hold 2 N and 20 N in separate tests for 60 s, release for 60 s | Drift ≤0.25 N at 2 N and ≤1 N at 20 N; recovery within 0.1 N |
 | Repeated loading | 1,000 cycles initially through the qualified task load, inspect every 100 | No short, torn cover, detached lead, or missed contact |
 | Extended wear | 10,000 cycles after pilot passes | Repeat force and light-contact criteria |
@@ -36,6 +36,8 @@ Repeat center and edge loads with 6 mm rounded and flat probes after the initial
 | Timing | Raw sequence, acquisition offsets, scan and receive times | Report achieved rate, scan span, and dropouts; no unsupported 50 Hz claim |
 
 Static start/end reference readings do not establish dynamic accuracy. Use synchronized reference data for response-time and slip-force claims. Do not estimate latency by comparing unsynchronized clocks.
+
+Use [the shared R1/L1 contact recorder and analyzer](CONTACT.md) for light-contact screening. A 20-per-label pilot can expose failures but cannot establish a 1% error bound with confidence. Preserve faults and incomplete runs; do not count overlapping decision windows or ADC frames as independent trials.
 
 For magnetic candidates, add motor-off/motor-on, nearby steel-tool, neighboring-finger, and gripper-opening sweeps without surface contact. The desired contact signal must remain distinguishable from these disturbances. For optical candidates, inspect image visibility at the full tested bend range and after gel replacement.
 

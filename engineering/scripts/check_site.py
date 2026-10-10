@@ -76,6 +76,10 @@ def main():
                 "source/engineering/release/l1/l1_bench_plan.json","source/engineering/release/l1/l1_finger_plan.json",
                 "source/engineering/release/l1/cad/l1_floating_finger_carrier.step",
                 "website/build-l1.html","website/l1-electronics.html","website/l1-testing.html",
+                "website/contact.html","website/assets/contact-flow.svg",
+                "source/engineering/software/contact_bench.py","source/engineering/software/contact_report.py",
+                "source/engineering/software/contact_core.py","source/engineering/software/contact_monitor.py",
+                "source/engineering/templates/contact_setup.json","source/engineering/templates/contact_cases.json",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

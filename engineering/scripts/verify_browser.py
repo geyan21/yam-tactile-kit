@@ -23,7 +23,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
     parser.add_argument("--checks-only",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
@@ -85,6 +85,7 @@ def main():
                     ("build","1440,1100","build-review.html"),("mobile","500,1800","mobile.html"),
                     ("root","1440,1200","root-review.html"),("guide","1280,1100","l1-electronics.html"),
                     ("l1-assembly","1440,1100","l1-assembly-review.html"),("l1-bench","1440,1100","l1-bench-review.html"),
+                    ("contact","1280,1250","contact.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])

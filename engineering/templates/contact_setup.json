@@ -1,0 +1,13 @@
+{
+  "schema": "yam-contact-setup/1",
+  "sensor": "L1",
+  "specimen": "",
+  "variant": "",
+  "pose_id": "",
+  "operator": "",
+  "reference_id": "",
+  "reference_uncertainty_n": null,
+  "fixture": "",
+  "port": "",
+  "channels": null
+}

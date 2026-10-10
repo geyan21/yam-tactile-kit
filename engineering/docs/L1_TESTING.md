@@ -77,7 +77,7 @@ Stage B uses the same error criteria plus ≤0.20 N maximum zero-return error an
 
 | Experiment | What to record | Proposed decision |
 |---|---|---|
-| 0.2 N contact / no-contact repetitions | At least 100 loaded and 100 unloaded events at each nail/TPU family; locked threshold and a separate evaluation set | ≥99% detection and ≤1% false events on evaluation data; report counts and uncertainty |
+| Light contact / no-contact repetitions | Shared R1/L1 protocol with a frozen model, independent presentations and the complete declared contact map | ≥99% observed detection, ≤1% false events, no unavailable trials; distinguish pilot rates from confidence bounds |
 | Pose sweep with no contact | Same fixed model at multiple gravity directions, then documented explicit unloaded zeros | Determine whether pose bias defeats the force criterion; no hidden re-tare |
 | Static creep | Hold 5 and 20 N for 60 s, unload, repeat after recovery | Record peak drift, reference drift and zero recovery; compare to the 0.5 N error budget |
 | Stiffness and clearance | Indicator readings and minimum gap at 0, 5, 10 and 20 N | No bypass contact; task-relevant tip deflection must be agreed from the actual precision task |
@@ -86,7 +86,7 @@ Stage B uses the same error criteria plus ≤0.20 N maximum zero-return error an
 | Reassembly and replication | At least three independent cells/builds and five removal/reinstallation cycles | Repeat the held-out force tests; compare manufacturing and mounting variation |
 | Wear and task trials | 10,000 representative load cycles, post-test calibration, thin-edge insertion and precision pickup against an unmodified control | Measure degradation and actual task success; this cycle count is a proposed test, not an attained lifetime |
 
-The supplied static scripts do not automate this later qualification matrix. Save these raw logs and observations with explicit experiment IDs. Dynamic latency needs a synchronized physical reference; USB arrival rate alone is not sensor response bandwidth.
+The [shared contact tools](CONTACT.md) record and analyze the light-contact experiment. The remaining qualification matrix still requires separate physical measurements. Save those raw logs and observations with explicit experiment IDs. Dynamic latency needs a synchronized physical reference; USB arrival rate alone is not sensor response bandwidth.
 
 ## Return the evidence
 

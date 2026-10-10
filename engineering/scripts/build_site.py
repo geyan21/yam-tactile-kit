@@ -27,6 +27,7 @@ DOCS=[
     ("L1_TESTING","l1-testing","L1 force & moment tests"),
     ("MATERIALS","materials","Material comparison"),("COMPARISON","comparison","Sensor comparison"),
     ("TESTING","testing","Test protocol"),
+    ("CONTACT","contact","Contact reliability"),
 ]
 
 
@@ -99,7 +100,7 @@ def main():
         SITE.mkdir(parents=True)
         assets=SITE/"assets";downloads=SITE/"downloads"
         assets.mkdir();downloads.mkdir()
-        for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg"):
+        for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg"):
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1"):
             shutil.copytree(RELEASE/name,assets/name)
@@ -114,6 +115,8 @@ def main():
             (RELEASE/"l1/l1_review_drawings.pdf","l1_review_drawings.pdf"),
             (RELEASE/"l1/l1_bench_plan.json","l1_bench_plan.json"),
             (RELEASE/"l1/l1_finger_plan.json","l1_finger_plan.json"),
+            (ROOT/"engineering/templates/contact_setup.json","contact_setup.json"),
+            (ROOT/"engineering/templates/contact_cases.json","contact_cases.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())

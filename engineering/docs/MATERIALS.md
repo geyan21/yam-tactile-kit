@@ -34,3 +34,5 @@ VytaFlex is moisture-sensitive and uses its own release-agent procedure. Keep it
 ## Decide with measurements
 
 Advance a material only when it gives acceptable contact sensitivity, force drift, friction on relevant objects, intact edges, and repeatable replacement. Softness alone is not a selection rule. Repeat the force calibration after changing cover material, cover thickness, saddle hardness, or adhesive.
+
+For contact comparison, use the same [recorded case map and frozen-threshold evaluation](CONTACT.md) for each material. Separately test replacement with the original thresholds retained using an explicit transfer experiment. This distinguishes performance after recalibration from performance after a simple replacement.
