@@ -24,7 +24,7 @@ jobs:
         id: python
         with:
           python-version: '3.12'
-      - name: Verify acquisition and calibration fault handling
+      - name: Verify software and clean reproduction
         run: '"${{ steps.python.outputs.python-path }}" -m unittest discover -s engineering/tests -v'
       - name: Verify geometry snapshot and build portable website
         run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/build_site.py'

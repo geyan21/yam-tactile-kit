@@ -86,6 +86,7 @@ def document_page(title,body,active=""):
 def main():
     with execution(ROOT/"build/records","Build a portable engineering website with verified CAD downloads and no synthetic performance claims") as record:
         manifest=verify_snapshot()
+        (ROOT/"build/engineering").mkdir(parents=True,exist_ok=True)
         if SITE.exists():
             shutil.rmtree(SITE)
         SITE.mkdir(parents=True)

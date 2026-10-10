@@ -49,6 +49,7 @@ def verify_entries(entries):
 def main():
     site=ROOT/"build/site"
     with execution(ROOT/"build/records","Verify engineering website links, archive integrity, and required build artifacts") as record:
+        (ROOT/"build/engineering").mkdir(parents=True,exist_ok=True)
         entries={str(path.relative_to(site)):path.read_bytes() for path in site.rglob("*") if path.is_file()}
         local_links=verify_entries(entries)
         archives={}
