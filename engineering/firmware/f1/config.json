@@ -1,7 +1,7 @@
 {
   "schema": "yam-f1-wrist-firmware/1",
   "status": "Fixed-gain experimental bench capture; no force or contact calibration",
-  "wrist_configuration_sha256": "353919eb9d08a537b8ec6a1a8fcf85545651c423a2350675c33e3ce2e3966f1a",
+  "wrist_configuration_sha256": "c7e8afca188bc500c87df7cb4773a5aa24ad34d9da1fa3915bd9def6404e44cf",
   "gpio": {
     "ROW0": 0,
     "ROW1": 1,

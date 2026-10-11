@@ -112,6 +112,27 @@ board. It emits raw counts and timestamps, with force/contact values unset.
 `docs/F1_WRIST_CAPTURE.md` explains exact component choices, pin mapping and
 the limits of the cable-test path.
 
+The first complete wrist route reached 2,607 segments and 396 vias. Its
+independent KiCad check at
+`build/engineering/prototypes/f1/wrist_checks/20261011T111907.129113Z`
+reported zero missing connections and no copper findings, but eight
+courtyard overlaps and two connector-label findings. It was not exported.
+
+The eight part positions and connector label have been revised. Native
+courtyard geometry is now included in the placement check, with line stroke
+excluded from the actual courtyard boundary. The revised placement at
+`build/engineering/prototypes/f1/wrist_runs/20261011T112432.874863Z`
+passes body, pad, courtyard, mount and bypass-distance checks. Its fresh
+routing run is
+`routing_runs/20261011T112505.865842Z`; independent DRC/export remains next.
+
+The wrist router can resume an unchanged saved placement, preserving the
+original partial run. A checked mask optimization returns identical track
+and via masks for the tested actual-board cases. Restricted inner-ground-layer
+crossings are used only after normal layers cannot route a connection; their
+lengths are recorded for ground-plane review. Keep the failed routes and
+the first DRC report. Do not count the wrist module as a finished F1 finger.
+
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.

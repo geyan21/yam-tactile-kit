@@ -114,7 +114,8 @@ def main():
              str(checked_pcb)], "drills")
         for label, layers, mirror in (
                 ("front_assembly", "F.Fab,F.SilkS,F.Cu,Edge.Cuts", []),
-                ("rear_assembly", "B.Fab,B.SilkS,B.Cu,Edge.Cuts", ["--mirror"])):
+                ("rear_assembly", "B.Fab,B.SilkS,B.Cu,Edge.Cuts", ["--mirror"]),
+                ("inner_ground", "In1.Cu,Edge.Cuts", [])):
             run(["pcb", "export", "svg", "--mode-single", "--output", str(output / (label+".svg")),
                  "--layers", layers, "--page-size-mode", "2", "--sketch-pads-on-fab-layers",
                  "--exclude-drawing-sheet", *mirror, str(checked_pcb)], label)

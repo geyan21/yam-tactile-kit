@@ -212,6 +212,12 @@ def specification(cfg, feedback, rows, adc, fanout):
     r("PD_MISO", "100k", [30.5, 54], ["SPI_MISO", "GND"], "B", 90)
     c("CBULK3", "10u X7R 10V", [31, 8], ["+3V3", "GND"])
     c("CBULK5", "4.7u X7R 10V", [26, 7], ["+5V", "GND"])
+    overrides = cfg.get("component_position_overrides_mm", {})
+    if set(overrides)-{part["reference"] for part in parts}:
+        raise ValueError("Position override names an unknown part")
+    for part in parts:
+        if part["reference"] in overrides:
+            part["center_mm"] = overrides[part["reference"]]
     width, height = cfg["board_size_mm"]
     bypass = [(f"UR{i}", "5", f"CDR{i}", "1") for i in range(4)]
     bypass += [
@@ -253,6 +259,13 @@ def check_placement(spec, actual):
         for b in spec["parts"][index+1:]:
             if a["side"] == b["side"] and bodies[a["reference"]].intersection(bodies[b["reference"]]).area > 1e-8:
                 failures.append({"kind": "body_overlap", "a": a["reference"], "b": b["reference"]})
+    courts = actual.get("courtyards", [])
+    if len(courts) != len(spec["parts"]):
+        failures.append({"kind": "missing_native_courtyard"})
+    for index, a in enumerate(courts):
+        for b in courts[index+1:]:
+            if a["side"] == b["side"] and box(*a["bounds_mm"]).intersection(box(*b["bounds_mm"])).area > 1e-8:
+                failures.append({"kind": "native_courtyard_overlap", "a": a["reference"], "b": b["reference"]})
     pads = actual["pads"]
     shapes = []
     for p in pads:

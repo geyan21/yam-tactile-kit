@@ -120,7 +120,7 @@ def place(board, part, nets, library, sources):
         footprint.Reference().SetPosition(vector([dx, -.7]))
         footprint.Reference().SetLayer(pcb.F_SilkS)
     elif part["reference"] == "JW":
-        footprint.Reference().SetPosition(vector([-16.7, 0]))
+        footprint.Reference().SetPosition(vector([17.5, 0]))
         footprint.Reference().SetLayer(pcb.F_SilkS)
     on_silk = footprint.Reference().GetLayer() == pcb.F_SilkS
     footprint.Reference().SetTextSize(vector([.8, .8] if on_silk else [.55, .55]))
@@ -310,11 +310,28 @@ def build(spec, destination, route):
     (destination / "fp-lib-table").write_text(
         '(fp_lib_table (lib (name "F1") (type "KiCad") (uri "${KIPRJMOD}/F1.pretty")'
         ' (options "") (descr "F1 embedded footprints; see source hashes and attribution")))\n')
+    courtyards = []
+    for part in restored.GetFootprints():
+        boxes = []
+        for item in part.GraphicalItems():
+            if item.GetLayer() not in (pcb.F_CrtYd, pcb.B_CrtYd):
+                continue
+            bounds = item.GetBoundingBox()
+            p, size = mm(bounds.GetPosition()), mm(bounds.GetSize())
+            half_stroke = pcb.ToMM(item.GetWidth())/2
+            boxes.append([p[0]+half_stroke, p[1]+half_stroke,
+                          p[0]+size[0]-half_stroke, p[1]+size[1]-half_stroke])
+        if boxes:
+            courtyards.append({"reference": part.GetReference(), "side": "B" if part.IsFlipped() else "F",
+                               "line_stroke_excluded": True,
+                               "bounds_mm": [min(b[0] for b in boxes), min(b[1] for b in boxes),
+                                             max(b[2] for b in boxes), max(b[3] for b in boxes)]})
     result = {
         "schema": "yam-f1-wrist-native-board/1", "name": name, "tool": pcb.GetBuildVersion(),
         "thickness_mm": spec["thickness_mm"], "clearance_mm": spec["clearance_mm"],
         "edge_mm": spec["edge_mm"], "outline_xy_mm": spec["outline_xy_mm"],
         "parts": spec["parts"], "holes": spec["holes"], "pads": pads,
+        "courtyards": courtyards,
         "component_keepouts": spec.get("component_keepouts", []),
         "library_source_hashes": sources,
         "library_attribution": "KiCad libraries, CC-BY-SA 4.0 with library exception; https://www.kicad.org/libraries/license/",

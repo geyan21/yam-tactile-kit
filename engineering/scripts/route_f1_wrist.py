@@ -12,11 +12,13 @@ import sys
 import time
 
 from shapely.geometry import Point
+from shapely.ops import unary_union
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 from tactile_kit.records import execution
 from f1_board_routes import NativeBoardGeometry, TwoFaceRouter
+from prototype_route import Router
 from screen_f1_feedback import digest
 
 KICAD_PYTHON = ROOT / "build/engineering/tools/b1-kicad/AppDir/bin/python3.11"
@@ -29,11 +31,17 @@ class WristRouter(TwoFaceRouter):
         self.layer_cost = (1, 1.5, 1)
 
     def obstacles(self, net):
-        free, via_free, inside, forbidden = super().obstacles(net)
+        # Same conservative drill spacing as TwoFaceRouter, rasterized once
+        # after combining the drill envelopes instead of once per hole.
+        free, via_free, inside, forbidden = Router.obstacles(self, net)
+        holes = [Point(via["center"]).buffer(via["drill"]/2+self.via_drill/2+.25+self.guard)
+                 for via in self.board.vias]
         for pad in self.board.pads:
             if pad.get("through_hole"):
                 radius = max(pad["drill_mm"])/2+self.via_drill/2+.25+self.guard
-                via_free &= ~self.mask(Point(pad["center"]).buffer(radius))
+                holes.append(Point(pad["center"]).buffer(radius))
+        if holes:
+            via_free &= ~self.mask(unary_union(holes))
         return free, via_free, inside, forbidden
 
     def escape(self, pad):
@@ -45,6 +53,8 @@ class WristRouter(TwoFaceRouter):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("placement_run", type=Path)
+    parser.add_argument("--resume-routing", type=Path,
+                        help="Preserved routing JSON for the identical placement")
     args = parser.parse_args()
     source = args.placement_run.resolve()
     if not source.is_relative_to(ROOT):
@@ -56,6 +66,9 @@ def main():
     data = json.loads((source / "placement/f1_wrist.json").read_text())
     if digest(source / "placement/f1_wrist.kicad_pcb") != data["pcb_sha256"]:
         raise ValueError("Placed board changed after native geometry extraction")
+    previous_run = args.resume_routing.resolve() if args.resume_routing else None
+    if previous_run and not previous_run.is_relative_to(ROOT):
+        parser.error("Resume only a repository-owned saved routing result")
     folder = source / "routing_runs" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     with execution(ROOT / "build/records", "Route F1 wrist analog nets first, reserve surface-pad exits and preserve the internal ground plane; retain any partial failure") as record:
         folder.mkdir(parents=True, exist_ok=False)
@@ -86,11 +99,62 @@ def main():
             parent[root(a)] = root(b)
         escapes = {}
         progress = []
+        if previous_run:
+            shutil.copyfile(previous_run, inputs / "resume_routing.json")
+            previous = json.loads(previous_run.read_text())
+            for path in (source / "specification.json", source / "placement/f1_wrist.json"):
+                if previous["input_hashes"].get(str(path.relative_to(ROOT))) != digest(path):
+                    raise ValueError("Saved routing used different placement geometry")
+            for track in previous["tracks"]:
+                board.trace(track["net"], [track["start"], track["end"]], track["layer"], track["width"])
+            for via in previous["vias"]:
+                board.via(via["net"], via["center"], via["diameter"], via["drill"])
+            progress = list(previous["progress"])
+            for item in progress:
+                if item["kind"] == "connection":
+                    union(tuple(item["a"]), tuple(item["b"]))
+            if previous.get("endpoints"):
+                for item in previous["endpoints"]:
+                    escapes[(item["reference"], item["pad"])] = item["point"]
+            else:
+                # Older checkpoints retain the actual pad-to-via traces.
+                # Recover only endpoints connected by those saved traces.
+                for key, pad in by_key.items():
+                    if pad.get("through_hole"):
+                        escapes[key] = pad["center"]
+                        continue
+                    for track in board.tracks:
+                        if track["net"] != pad["net"]:
+                            continue
+                        if math.dist(track["start"], pad["center"]) < 1e-6:
+                            end = track["end"]
+                        elif math.dist(track["end"], pad["center"]) < 1e-6:
+                            end = track["start"]
+                        else:
+                            continue
+                        if any(v["net"] == pad["net"] and math.dist(v["center"], end) < 1e-6 for v in board.vias):
+                            escapes[key] = end
+                            break
+                for key in by_key:
+                    if key not in escapes:
+                        other = next((k for k in escapes if root(k) == root(key)), None)
+                        if other is not None:
+                            escapes[key] = escapes[other]
+            record["resume"] = {"source": str(previous_run.relative_to(ROOT)), "sha256": digest(previous_run),
+                                "tracks": len(board.tracks), "vias": len(board.vias)}
         started = time.monotonic()
         def save(status, error=None):
             report = {"schema": "yam-f1-wrist-routing/1", "status": status, "input_hashes": hashes,
                       "elapsed_s": time.monotonic()-started, "progress": progress,
+                      "resumed_from": str(previous_run.relative_to(ROOT)) if previous_run else None,
+                      "resumed_from_sha256": digest(previous_run) if previous_run else None,
+                      "endpoints": [{"reference": key[0], "pad": key[1], "point": value}
+                                    for key, value in sorted(escapes.items())],
                       "physical_boards_tested": 0, **board.payload()}
+            report["inner_ground_layer_signal_length_mm"] = {
+                net: sum(math.dist(t["start"], t["end"]) for t in board.tracks if t["layer"] == "In1.Cu" and t["net"] == net)
+                for net in {t["net"] for t in board.tracks if t["layer"] == "In1.Cu"}
+            }
             if error:
                 report["error"] = type(error).__name__+": "+str(error)
             (folder / "routing.json").write_text(json.dumps(report, indent=2)+"\n")
@@ -126,7 +190,18 @@ def main():
                 if local and face:
                     router.signal_layers, router.layer_cost = (face,), (1,)
                 try:
-                    router.connect(first["net"], endpoint(a), endpoint(b), time_limit_s=30)
+                    try:
+                        router.connect(first["net"], endpoint(a), endpoint(b), time_limit_s=30)
+                    except ValueError as error:
+                        if local or "No route" not in str(error):
+                            raise
+                        # Permit an expensive, short ground-layer crossing
+                        # only when all three normal signal layers are blocked.
+                        router.signal_layers = ("F.Cu", "In1.Cu", "In2.Cu", "B.Cu")
+                        router.layer_cost = (1, 20, 1.5, 1)
+                        router.connect(first["net"], endpoint(a), endpoint(b), time_limit_s=30)
+                        note("inner_ground_layer_crossing", net=first["net"],
+                             a=list(a), b=list(b), review_required=True)
                 finally:
                     router.signal_layers, router.layer_cost = original_layers, original_costs
             router.width = before
@@ -195,21 +270,22 @@ def main():
                      connected_pads=len(keys), reused=chosen is None)
 
         try:
-            # Short supply-to-bypass connections get explicit surface routes.
-            for ref, pin, cap, cap_pin in spec["power_bypass_pairs"]:
-                connect((ref, pin), (cap, cap_pin), .25, True, "local supply bypass")
-            for ref in ("UBIAS", "UEXC", "UAB"):
-                connect((ref, "1"), (ref, "4"), .15, True, "local unity feedback")
-            reserve_exits()
-            for index in range(4):
-                for pin in ("1", "2"):
-                    connect((f"RTIA{index}", pin), (f"CTIA{index}", pin), .15, True, "parallel gain resistor/capacitor")
-            for net in sorted(local_nets):
-                complete_net(net, True)
-            # Reference sense pickup links connect to the ADC pads explicitly.
-            connect(("RREFS", "2"), ("UADC", "1"), .25, reason="ADC reference sense pickup")
-            connect(("RGNDS", "2"), ("UADC", "5"), .25, reason="ADC ground sense pickup")
-            reserve_exits()
+            if not previous_run:
+                # Short supply-to-bypass connections get explicit surface routes.
+                for ref, pin, cap, cap_pin in spec["power_bypass_pairs"]:
+                    connect((ref, pin), (cap, cap_pin), .25, True, "local supply bypass")
+                for ref in ("UBIAS", "UEXC", "UAB"):
+                    connect((ref, "1"), (ref, "4"), .15, True, "local unity feedback")
+                reserve_exits()
+                for index in range(4):
+                    for pin in ("1", "2"):
+                        connect((f"RTIA{index}", pin), (f"CTIA{index}", pin), .15, True, "parallel gain resistor/capacitor")
+                for net in sorted(local_nets):
+                    complete_net(net, True)
+                # Reference sense pickup links connect to the ADC pads explicitly.
+                connect(("RREFS", "2"), ("UADC", "1"), .25, reason="ADC reference sense pickup")
+                connect(("RGNDS", "2"), ("UADC", "5"), .25, reason="ADC ground sense pickup")
+                reserve_exits()
             analog_first = ("TIA_FB", "COMP_MID", "SENSE_D", "AMP_OUT", "OUTPUT_BUS", "CURRENT_D",
                             "VBIAS", "VEXCITE", "VREF_SENSE", "REF_GND_SENSE", "VREF33")
             order = [name for name in analog_first if name in nets]
