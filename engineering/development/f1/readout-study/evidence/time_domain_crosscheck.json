@@ -1,0 +1,1642 @@
+{
+  "schema": "yam-f1-time-reference-crosscheck/1",
+  "physical_evidence": false,
+  "reference_run": "build/engineering/prototypes/f1/feedback_runs/20261011T093148.657669Z",
+  "reference_screen_sha256": "c45b404c0db3ee83465ae4881d84a9cda302322b514291637afef7b2a9d42168",
+  "scope": "One time-domain probe at every declared unity crossing",
+  "results": [
+    {
+      "reference_case": "case_001",
+      "gain_id": 0,
+      "frequency_hz": 1201144.0780793177,
+      "expected": [
+        0.43470963144953584,
+        -0.9005843601254861
+      ],
+      "measured": [
+        0.4346960044987864,
+        -0.9005885140482882
+      ],
+      "relative_magnitude_error": 2.182655927329691e-06,
+      "phase_error_deg": 0.0008065900815898271,
+      "fit_residual_relative_to_amplitude": 3.1023540653568586e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_000",
+      "gain_id": 0,
+      "frequency_hz": 1451159.6927574796,
+      "expected": [
+        0.5054892759627874,
+        -0.8628440826682824
+      ],
+      "measured": [
+        0.5054770112089455,
+        -0.8628504570365393
+      ],
+      "relative_magnitude_error": 6.995068105863922e-07,
+      "phase_error_deg": 0.000790938902989269,
+      "fit_residual_relative_to_amplitude": 3.237418945999205e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_003",
+      "gain_id": 0,
+      "frequency_hz": 1096990.782599174,
+      "expected": [
+        0.45511799106659423,
+        -0.8904392661452898
+      ],
+      "measured": [
+        0.45510581405818673,
+        -0.8904378987307263
+      ],
+      "relative_magnitude_error": 6.759425168922917e-06,
+      "phase_error_deg": 0.0005855899463996567,
+      "fit_residual_relative_to_amplitude": 2.931995502970756e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_002",
+      "gain_id": 0,
+      "frequency_hz": 1309755.204359688,
+      "expected": [
+        0.5285779175365758,
+        -0.8488875774382553
+      ],
+      "measured": [
+        0.528563513848375,
+        -0.8488890667132224
+      ],
+      "relative_magnitude_error": 6.349129751725968e-06,
+      "phase_error_deg": 0.0007456662316878736,
+      "fit_residual_relative_to_amplitude": 2.9280745897188498e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_005",
+      "gain_id": 0,
+      "frequency_hz": 903300.5552880113,
+      "expected": [
+        0.4919309833432028,
+        -0.8706456658625411
+      ],
+      "measured": [
+        0.49192823938848845,
+        -0.8706299564322554
+      ],
+      "relative_magnitude_error": 1.5026869425893707e-05,
+      "phase_error_deg": 0.0003058974015867382,
+      "fit_residual_relative_to_amplitude": 2.5106610907794952e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_004",
+      "gain_id": 0,
+      "frequency_hz": 1053159.6290984163,
+      "expected": [
+        0.5712903729956501,
+        -0.8207575181664715
+      ],
+      "measured": [
+        0.5712869879359815,
+        -0.8207451773936137
+      ],
+      "relative_magnitude_error": 1.2062436878790272e-05,
+      "phase_error_deg": 0.0002447582005840162,
+      "fit_residual_relative_to_amplitude": 2.4096112112439183e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_007",
+      "gain_id": 0,
+      "frequency_hz": 1103521.0625153584,
+      "expected": [
+        0.02736008663217335,
+        -0.9996383261612416
+      ],
+      "measured": [
+        0.027385093989294083,
+        -0.9996024727493746
+      ],
+      "relative_magnitude_error": 3.5155012261922636e-05,
+      "phase_error_deg": 0.0014885168285832455,
+      "fit_residual_relative_to_amplitude": 2.238132732356072e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_006",
+      "gain_id": 0,
+      "frequency_hz": 1336359.3751667375,
+      "expected": [
+        0.1762599925247155,
+        -0.98435157064954
+      ],
+      "measured": [
+        0.176272205246903,
+        -0.9843280417167715
+      ],
+      "relative_magnitude_error": 2.1007669177564026e-05,
+      "phase_error_deg": 0.0009264102581856814,
+      "fit_residual_relative_to_amplitude": 2.317295058973073e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_009",
+      "gain_id": 0,
+      "frequency_hz": 931644.223273335,
+      "expected": [
+        0.013357583223234463,
+        -0.9999297587635714
+      ],
+      "measured": [
+        0.013421511791303159,
+        -0.9998573840223776
+      ],
+      "relative_magnitude_error": 7.151090719426101e-05,
+      "phase_error_deg": 0.003718095451292516,
+      "fit_residual_relative_to_amplitude": 1.8433267146048073e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_008",
+      "gain_id": 0,
+      "frequency_hz": 1090295.250159944,
+      "expected": [
+        0.1698082319849028,
+        -0.9854909432615787
+      ],
+      "measured": [
+        0.16986358187645495,
+        -0.9854233875165206
+      ],
+      "relative_magnitude_error": 5.717297131913046e-05,
+      "phase_error_deg": 0.0037826854193892317,
+      "fit_residual_relative_to_amplitude": 1.796955912935254e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_011",
+      "gain_id": 0,
+      "frequency_hz": 693932.3553143007,
+      "expected": [
+        -0.0645174614164461,
+        -0.9979191245260647
+      ],
+      "measured": [
+        -0.06447570887904674,
+        -0.9978857459131418
+      ],
+      "relative_magnitude_error": 3.6001960318055026e-05,
+      "phase_error_deg": 0.0022639495627710493,
+      "fit_residual_relative_to_amplitude": 1.4198920795466375e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_010",
+      "gain_id": 0,
+      "frequency_hz": 766578.8975857634,
+      "expected": [
+        0.08511390596372517,
+        -0.996370658314741
+      ],
+      "measured": [
+        0.08517389739739988,
+        -0.9963108314402918
+      ],
+      "relative_magnitude_error": 5.450159495135054e-05,
+      "phase_error_deg": 0.003716743546372043,
+      "fit_residual_relative_to_amplitude": 1.0765015463440045e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_013",
+      "gain_id": 0,
+      "frequency_hz": 963710.0145975152,
+      "expected": [
+        -0.35624612237167996,
+        -0.9343963117298894
+      ],
+      "measured": [
+        -0.35617313962369307,
+        -0.9343731784916225
+      ],
+      "relative_magnitude_error": 4.7613266375479135e-05,
+      "phase_error_deg": 0.0034352299498157904,
+      "fit_residual_relative_to_amplitude": 2.1858207672976317e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_012",
+      "gain_id": 0,
+      "frequency_hz": 1148338.2401920238,
+      "expected": [
+        -0.1509340993609955,
+        -0.9885451268960557
+      ],
+      "measured": [
+        -0.15083814599765694,
+        -0.9885057462532164
+      ],
+      "relative_magnitude_error": 5.3408087050343944e-05,
+      "phase_error_deg": 0.005094446686485527,
+      "fit_residual_relative_to_amplitude": 1.7690610637888156e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_014",
+      "gain_id": 0,
+      "frequency_hz": 905172.7047748928,
+      "expected": [
+        -0.2529575088531982,
+        -0.9674711647893643
+      ],
+      "measured": [
+        -0.2528272760495825,
+        -0.9674263304153674
+      ],
+      "relative_magnitude_error": 7.631367523142085e-05,
+      "phase_error_deg": 0.006569844757795548,
+      "fit_residual_relative_to_amplitude": 1.876438940582984e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_015",
+      "gain_id": 0,
+      "frequency_hz": 800349.5124412393,
+      "expected": [
+        -0.43323035516689884,
+        -0.9012976820776541
+      ],
+      "measured": [
+        -0.43301542108139024,
+        -0.9012352484614047
+      ],
+      "relative_magnitude_error": 0.00014936946098509374,
+      "phase_error_deg": 0.009550748807575902,
+      "fit_residual_relative_to_amplitude": 2.6007085628360608e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_016",
+      "gain_id": 0,
+      "frequency_hz": 649443.0321496694,
+      "expected": [
+        -0.43918703877002985,
+        -0.8983986447447471
+      ],
+      "measured": [
+        -0.43891794552346314,
+        -0.8983219223278663
+      ],
+      "relative_magnitude_error": 0.00018708692705116103,
+      "phase_error_deg": 0.011922984205128512,
+      "fit_residual_relative_to_amplitude": 3.320305245214766e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_018",
+      "gain_id": 0,
+      "frequency_hz": 1137756.6203325987,
+      "expected": [
+        -0.17230618483206042,
+        -0.985043500021707
+      ],
+      "measured": [
+        -0.17218277169008062,
+        -0.9849962878651446
+      ],
+      "relative_magnitude_error": 6.776443369604923e-05,
+      "phase_error_deg": 0.0064996355643509775,
+      "fit_residual_relative_to_amplitude": 1.9779428518228415e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_019",
+      "gain_id": 0,
+      "frequency_hz": 956425.5417077851,
+      "expected": [
+        -0.3788708795174625,
+        -0.9254628276221654
+      ],
+      "measured": [
+        -0.3786944153774457,
+        -0.9254108322216766
+      ],
+      "relative_magnitude_error": 0.00011496379442799132,
+      "phase_error_deg": 0.008229074238800527,
+      "fit_residual_relative_to_amplitude": 2.4446170962730314e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_020",
+      "gain_id": 0,
+      "frequency_hz": 896823.5258704781,
+      "expected": [
+        -0.27881457325109893,
+        -0.960334155634247
+      ],
+      "measured": [
+        -0.27862936048760306,
+        -0.960275843399262
+      ],
+      "relative_magnitude_error": 0.00010762842090317193,
+      "phase_error_deg": 0.009260636102023205,
+      "fit_residual_relative_to_amplitude": 1.987603266073216e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_021",
+      "gain_id": 0,
+      "frequency_hz": 794435.0134900379,
+      "expected": [
+        -0.45760131241298635,
+        -0.8891578653027554
+      ],
+      "measured": [
+        -0.45753162988582236,
+        -0.8891446284780822
+      ],
+      "relative_magnitude_error": 4.365485081903042e-05,
+      "phase_error_deg": 0.003203062214177118,
+      "fit_residual_relative_to_amplitude": 3.1475899568653747e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_022",
+      "gain_id": 0,
+      "frequency_hz": 645033.8717437822,
+      "expected": [
+        -0.46522704300772477,
+        -0.8851924289446074
+      ],
+      "measured": [
+        -0.46503592498265467,
+        -0.8851488725014219
+      ],
+      "relative_magnitude_error": 0.00012745778429235077,
+      "phase_error_deg": 0.008533135093101631,
+      "fit_residual_relative_to_amplitude": 4.354464885462955e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_023",
+      "gain_id": 0,
+      "frequency_hz": 602865.1232187458,
+      "expected": [
+        -0.5895714676316507,
+        -0.8077723238595989
+      ],
+      "measured": [
+        -0.589265179151524,
+        -0.8077088240697513
+      ],
+      "relative_magnitude_error": 0.0002318292603513683,
+      "phase_error_deg": 0.012032305563450864,
+      "fit_residual_relative_to_amplitude": 4.991394107665493e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_024",
+      "gain_id": 1,
+      "frequency_hz": 87283.8504808258,
+      "expected": [
+        0.6447646418526126,
+        -0.7643829348726332
+      ],
+      "measured": [
+        0.6447615985082502,
+        -0.764357114142133
+      ],
+      "relative_magnitude_error": 2.169900513404599e-05,
+      "phase_error_deg": 0.0008206065098671668,
+      "fit_residual_relative_to_amplitude": 1.0947909890785988e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_025",
+      "gain_id": 1,
+      "frequency_hz": 86785.24746410879,
+      "expected": [
+        0.6337495206793147,
+        -0.7735442371773281
+      ],
+      "measured": [
+        0.6337465176710357,
+        -0.7734961266356748
+      ],
+      "relative_magnitude_error": 3.911803298628502e-05,
+      "phase_error_deg": 0.0016139027815405146,
+      "fit_residual_relative_to_amplitude": 1.0576270537212367e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_026",
+      "gain_id": 1,
+      "frequency_hz": 86619.44580848409,
+      "expected": [
+        0.6353469045130037,
+        -0.7722329723105436
+      ],
+      "measured": [
+        0.6353441045611194,
+        -0.7721830742352942
+      ],
+      "relative_magnitude_error": 4.031106235025117e-05,
+      "phase_error_deg": 0.001692590900280002,
+      "fit_residual_relative_to_amplitude": 1.073341524481187e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_027",
+      "gain_id": 1,
+      "frequency_hz": 86120.90602541872,
+      "expected": [
+        0.6243105323939027,
+        -0.7811808297123183
+      ],
+      "measured": [
+        0.6243075306271407,
+        -0.7811425219455806
+      ],
+      "relative_magnitude_error": 3.179886823734268e-05,
+      "phase_error_deg": 0.0012359588733246553,
+      "fit_residual_relative_to_amplitude": 1.0696340399311253e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_028",
+      "gain_id": 1,
+      "frequency_hz": 85135.2719026928,
+      "expected": [
+        0.614337126066702,
+        -0.7890511612267403
+      ],
+      "measured": [
+        0.6143343886873608,
+        -0.7890022477623565
+      ],
+      "relative_magnitude_error": 4.027603386014267e-05,
+      "phase_error_deg": 0.0015979917757014833,
+      "fit_residual_relative_to_amplitude": 1.1140221419061002e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_029",
+      "gain_id": 1,
+      "frequency_hz": 84647.66206342557,
+      "expected": [
+        0.6032770322904852,
+        -0.7975390766961044
+      ],
+      "measured": [
+        0.603274273283484,
+        -0.797493271975796
+      ],
+      "relative_magnitude_error": 3.8194727445595156e-05,
+      "phase_error_deg": 0.0014572145759076563,
+      "fit_residual_relative_to_amplitude": 1.1001052235973597e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_030",
+      "gain_id": 1,
+      "frequency_hz": 487496.6651076405,
+      "expected": [
+        0.510501481942779,
+        -0.8598997994822571
+      ],
+      "measured": [
+        0.5104749038137342,
+        -0.859880157240129
+      ],
+      "relative_magnitude_error": 3.0457251190108003e-05,
+      "phase_error_deg": 0.0007349340562259719,
+      "fit_residual_relative_to_amplitude": 2.5738418871738872e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_031",
+      "gain_id": 1,
+      "frequency_hz": 439475.0584995348,
+      "expected": [
+        0.45913406837533893,
+        -0.8883795964041507
+      ],
+      "measured": [
+        0.45911227685180095,
+        -0.8883625097823512
+      ],
+      "relative_magnitude_error": 2.518400662587794e-05,
+      "phase_error_deg": 0.0006597108684523293,
+      "fit_residual_relative_to_amplitude": 2.611462597737898e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_032",
+      "gain_id": 1,
+      "frequency_hz": 409515.11195382016,
+      "expected": [
+        0.46190609219980044,
+        -0.8869540379633376
+      ],
+      "measured": [
+        0.46188426395989174,
+        -0.8869244595482798
+      ],
+      "relative_magnitude_error": 3.6315651997576026e-05,
+      "phase_error_deg": 0.0003264798102465123,
+      "fit_residual_relative_to_amplitude": 2.3149874287455533e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_033",
+      "gain_id": 1,
+      "frequency_hz": 376166.4335870211,
+      "expected": [
+        0.4129387760899995,
+        -0.9107634323584313
+      ],
+      "measured": [
+        0.4129228678607967,
+        -0.9107476355878404
+      ],
+      "relative_magnitude_error": 2.095603663410106e-05,
+      "phase_error_deg": 0.0004563972000543823,
+      "fit_residual_relative_to_amplitude": 2.3489229669090935e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_034",
+      "gain_id": 1,
+      "frequency_hz": 305907.2590493956,
+      "expected": [
+        0.3574196195115288,
+        -0.9339679499373214
+      ],
+      "measured": [
+        0.3574089005752809,
+        -0.9339238550942385
+      ],
+      "relative_magnitude_error": 4.501229001674378e-05,
+      "phase_error_deg": 0.0003294060237236399,
+      "fit_residual_relative_to_amplitude": 1.9837600071384757e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_042",
+      "gain_id": 1,
+      "frequency_hz": 521372.70514203806,
+      "expected": [
+        -0.0958012027423712,
+        -0.9954070032570234
+      ],
+      "measured": [
+        -0.0957617677631438,
+        -0.9953771230896363
+      ],
+      "relative_magnitude_error": 3.3519749300992e-05,
+      "phase_error_deg": 0.0020851106608246153,
+      "fit_residual_relative_to_amplitude": 2.4305064239717166e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_043",
+      "gain_id": 1,
+      "frequency_hz": 466645.9932421539,
+      "expected": [
+        -0.17108618035947093,
+        -0.985283747858621
+      ],
+      "measured": [
+        -0.17099754724382035,
+        -0.9852263586233313
+      ],
+      "relative_magnitude_error": 7.170166711056858e-05,
+      "phase_error_deg": 0.00444108717328436,
+      "fit_residual_relative_to_amplitude": 2.621679685917792e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_035",
+      "gain_id": 1,
+      "frequency_hz": 288672.1441195592,
+      "expected": [
+        0.31270938062867476,
+        -0.9498731149832711
+      ],
+      "measured": [
+        0.3127002007019965,
+        -0.9498265559284974
+      ],
+      "relative_magnitude_error": 4.7093655915597665e-05,
+      "phase_error_deg": 0.00033458979107909784,
+      "fit_residual_relative_to_amplitude": 6.28891113241583e-07,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_044",
+      "gain_id": 1,
+      "frequency_hz": 424518.22311719053,
+      "expected": [
+        -0.1798608215489473,
+        -0.9837223839184602
+      ],
+      "measured": [
+        -0.17975287138562623,
+        -0.9836589090526736
+      ],
+      "relative_magnitude_error": 8.18482782355412e-05,
+      "phase_error_deg": 0.005430405495446396,
+      "fit_residual_relative_to_amplitude": 2.988792479531834e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_045",
+      "gain_id": 1,
+      "frequency_hz": 389246.2600263223,
+      "expected": [
+        -0.2443257821999709,
+        -0.969715489430989
+      ],
+      "measured": [
+        -0.24423746849343553,
+        -0.9696683906326378
+      ],
+      "relative_magnitude_error": 6.724409572644863e-05,
+      "phase_error_deg": 0.004247536659587715,
+      "fit_residual_relative_to_amplitude": 3.144501127372571e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_046",
+      "gain_id": 1,
+      "frequency_hz": 308295.2114318033,
+      "expected": [
+        -0.3234732325420951,
+        -0.9462766270830115
+      ],
+      "measured": [
+        -0.32332611378212517,
+        -0.9462145824581888
+      ],
+      "relative_magnitude_error": 0.00010628535487400281,
+      "phase_error_deg": 0.006826738871347625,
+      "fit_residual_relative_to_amplitude": 4.006900575040409e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_048",
+      "gain_id": 2,
+      "frequency_hz": 15841.346901808833,
+      "expected": [
+        0.5545153971674572,
+        -0.8321749116800569
+      ],
+      "measured": [
+        0.5545139094806473,
+        -0.8321557623454653
+      ],
+      "relative_magnitude_error": 1.676045668497217e-05,
+      "phase_error_deg": 0.0005374756568476112,
+      "fit_residual_relative_to_amplitude": 1.6714025402722556e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_049",
+      "gain_id": 2,
+      "frequency_hz": 15828.704166589227,
+      "expected": [
+        0.552334955196024,
+        -0.8336260030010987
+      ],
+      "measured": [
+        0.5523334699245872,
+        -0.8336009654435742
+      ],
+      "relative_magnitude_error": 2.1692112239568573e-05,
+      "phase_error_deg": 0.0007214198797650841,
+      "fit_residual_relative_to_amplitude": 1.6821179158880584e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_050",
+      "gain_id": 2,
+      "frequency_hz": 15823.956718019308,
+      "expected": [
+        0.552652176738938,
+        -0.8334165298455688
+      ],
+      "measured": [
+        0.5526507435686807,
+        -0.8333894513253329
+      ],
+      "relative_magnitude_error": 2.335946006870593e-05,
+      "phase_error_deg": 0.000789008331411442,
+      "fit_residual_relative_to_amplitude": 1.6861933874571791e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_051",
+      "gain_id": 2,
+      "frequency_hz": 15811.298731721743,
+      "expected": [
+        0.5504706363172328,
+        -0.8348610888269572
+      ],
+      "measured": [
+        0.550469215931232,
+        -0.8348288881867656
+      ],
+      "relative_magnitude_error": 2.7664502356472553e-05,
+      "phase_error_deg": 0.0009476697985048747,
+      "fit_residual_relative_to_amplitude": 1.685982575636881e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_047",
+      "gain_id": 1,
+      "frequency_hz": 291381.6865806046,
+      "expected": [
+        -0.3724357817263564,
+        -0.9280982512441385
+      ],
+      "measured": [
+        -0.3722926555019594,
+        -0.9280419165352805
+      ],
+      "relative_magnitude_error": 0.00010557532173294248,
+      "phase_error_deg": 0.0064089674440144665,
+      "fit_residual_relative_to_amplitude": 4.148880323275036e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_052",
+      "gain_id": 2,
+      "frequency_hz": 15785.139514007718,
+      "expected": [
+        0.548507143986037,
+        -0.8361559946488402
+      ],
+      "measured": [
+        0.5485056983173546,
+        -0.8361149121573049
+      ],
+      "relative_magnitude_error": 3.5143508651414024e-05,
+      "phase_error_deg": 0.0012218682449470948,
+      "fit_residual_relative_to_amplitude": 1.6574080610853256e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_053",
+      "gain_id": 2,
+      "frequency_hz": 15772.450310623844,
+      "expected": [
+        0.5463233324052491,
+        -0.8375859588269986
+      ],
+      "measured": [
+        0.5463218718057782,
+        -0.8375414650255117
+      ],
+      "relative_magnitude_error": 3.806433721165181e-05,
+      "phase_error_deg": 0.0013226762024729848,
+      "fit_residual_relative_to_amplitude": 1.6549367294351447e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_054",
+      "gain_id": 2,
+      "frequency_hz": 156284.83106549995,
+      "expected": [
+        0.8370341251392089,
+        -0.5471537096268437
+      ],
+      "measured": [
+        0.8370355863441948,
+        -0.5471456348842281
+      ],
+      "relative_magnitude_error": 3.1950078042131125e-06,
+      "phase_error_deg": 0.000433060867023121,
+      "fit_residual_relative_to_amplitude": 1.9389662076703774e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_055",
+      "gain_id": 2,
+      "frequency_hz": 144078.03411078893,
+      "expected": [
+        0.814818830336034,
+        -0.5797162122056302
+      ],
+      "measured": [
+        0.8148137103083594,
+        -0.5797178473193034
+      ],
+      "relative_magnitude_error": 3.2239818327228775e-06,
+      "phase_error_deg": 0.00024640025280846494,
+      "fit_residual_relative_to_amplitude": 1.8965641763354405e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_056",
+      "gain_id": 2,
+      "frequency_hz": 136055.41396457487,
+      "expected": [
+        0.8065827428437917,
+        -0.5911219976475175
+      ],
+      "measured": [
+        0.8065781363743124,
+        -0.5911218763632614
+      ],
+      "relative_magnitude_error": 3.7871855841364876e-06,
+      "phase_error_deg": 0.00015041099732750115,
+      "fit_residual_relative_to_amplitude": 1.891836603647522e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_057",
+      "gain_id": 2,
+      "frequency_hz": 127482.39858776935,
+      "expected": [
+        0.7847270807615848,
+        -0.6198459584013938
+      ],
+      "measured": [
+        0.7847290365310101,
+        -0.6198319201468233
+      ],
+      "relative_magnitude_error": 7.1666952007332085e-06,
+      "phase_error_deg": 0.0007006410627181718,
+      "fit_residual_relative_to_amplitude": 1.914927051970816e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_058",
+      "gain_id": 2,
+      "frequency_hz": 108557.93010592199,
+      "expected": [
+        0.7403281672595674,
+        -0.6722508228165784
+      ],
+      "measured": [
+        0.7403284534093226,
+        -0.6722344116320748
+      ],
+      "relative_magnitude_error": 1.0820436045277937e-05,
+      "phase_error_deg": 0.0007071487593525132,
+      "fit_residual_relative_to_amplitude": 1.817974496041481e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_059",
+      "gain_id": 2,
+      "frequency_hz": 103888.88595030979,
+      "expected": [
+        0.7195816793395013,
+        -0.6944081386036296
+      ],
+      "measured": [
+        0.719575736425454,
+        -0.6944066866322002
+      ],
+      "relative_magnitude_error": 5.284665687721457e-06,
+      "phase_error_deg": 0.00017658620686211352,
+      "fit_residual_relative_to_amplitude": 1.8042106945064474e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_066",
+      "gain_id": 2,
+      "frequency_hz": 277258.8087919007,
+      "expected": [
+        0.08258899543927774,
+        -0.9965945369251714
+      ],
+      "measured": [
+        0.08263534236001045,
+        -0.9965467959177023
+      ],
+      "relative_magnitude_error": 4.374847942634208e-05,
+      "phase_error_deg": 0.002872413876903603,
+      "fit_residual_relative_to_amplitude": 2.0673469473885533e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_067",
+      "gain_id": 2,
+      "frequency_hz": 247337.62226349078,
+      "expected": [
+        0.028493205897058685,
+        -0.9996083937104587
+      ],
+      "measured": [
+        0.028552978256178432,
+        -0.9995549525096714
+      ],
+      "relative_magnitude_error": 5.171380004864723e-05,
+      "phase_error_deg": 0.0035106881332413378,
+      "fit_residual_relative_to_amplitude": 2.180255065419294e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_068",
+      "gain_id": 2,
+      "frequency_hz": 223393.07254464028,
+      "expected": [
+        0.010014182746701204,
+        -0.9999586697725142
+      ],
+      "measured": [
+        0.010067749299650272,
+        -0.9999152936458258
+      ],
+      "relative_magnitude_error": 4.283569574159429e-05,
+      "phase_error_deg": 0.003093976501549355,
+      "fit_residual_relative_to_amplitude": 2.4996140145404413e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_069",
+      "gain_id": 2,
+      "frequency_hz": 203919.33333015573,
+      "expected": [
+        -0.038536792497305135,
+        -0.9992679901313327
+      ],
+      "measured": [
+        -0.038473498952378775,
+        -0.9992218472672304
+      ],
+      "relative_magnitude_error": 4.854527940567621e-05,
+      "phase_error_deg": 0.003522010061754098,
+      "fit_residual_relative_to_amplitude": 2.6544954849915858e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_070",
+      "gain_id": 2,
+      "frequency_hz": 158125.42245198437,
+      "expected": [
+        -0.1287160708057065,
+        -0.9916917723771954
+      ],
+      "measured": [
+        -0.12863633365196767,
+        -0.9916473909232439
+      ],
+      "relative_magnitude_error": 5.427237770483373e-05,
+      "phase_error_deg": 0.004203479553637553,
+      "fit_residual_relative_to_amplitude": 3.3886579976760007e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_072",
+      "gain_id": 3,
+      "frequency_hz": 9927.628707368793,
+      "expected": [
+        0.5363192075140718,
+        -0.8440307418309039
+      ],
+      "measured": [
+        0.5363180597472992,
+        -0.8439784699840807
+      ],
+      "relative_magnitude_error": 4.473307737740129e-05,
+      "phase_error_deg": 0.0015507759947556686,
+      "fit_residual_relative_to_amplitude": 1.7707325055670173e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_073",
+      "gain_id": 3,
+      "frequency_hz": 9922.778076872393,
+      "expected": [
+        0.5349332604900084,
+        -0.8449102685419365
+      ],
+      "measured": [
+        0.5349321522412127,
+        -0.8448571201257103
+      ],
+      "relative_magnitude_error": 4.54968774162845e-05,
+      "phase_error_deg": 0.0015753471505117061,
+      "fit_residual_relative_to_amplitude": 1.7488325740254797e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_074",
+      "gain_id": 3,
+      "frequency_hz": 9920.93423505809,
+      "expected": [
+        0.5351352119223285,
+        -0.8447824849551869
+      ],
+      "measured": [
+        0.5351341946533932,
+        -0.8447290687757697
+      ],
+      "relative_magnitude_error": 4.566780534098758e-05,
+      "phase_error_deg": 0.0015885839974680751,
+      "fit_residual_relative_to_amplitude": 1.769900905444017e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_075",
+      "gain_id": 3,
+      "frequency_hz": 9916.079889422635,
+      "expected": [
+        0.5337488607353345,
+        -0.8456594303110485
+      ],
+      "measured": [
+        0.5337477472020165,
+        -0.8456054382810392
+      ],
+      "relative_magnitude_error": 4.6251545902431523e-05,
+      "phase_error_deg": 0.0015972362355831467,
+      "fit_residual_relative_to_amplitude": 1.7498742864838516e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_071",
+      "gain_id": 2,
+      "frequency_hz": 148765.36132158063,
+      "expected": [
+        -0.168683025256445,
+        -0.9856926749224734
+      ],
+      "measured": [
+        -0.16855885253623645,
+        -0.9856293051984304
+      ],
+      "relative_magnitude_error": 8.339899286569086e-05,
+      "phase_error_deg": 0.006400577106526682,
+      "fit_residual_relative_to_amplitude": 3.547423743014164e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_076",
+      "gain_id": 3,
+      "frequency_hz": 9906.015741780706,
+      "expected": [
+        0.5325024341681615,
+        -0.8464451875313338
+      ],
+      "measured": [
+        0.5325014597028807,
+        -0.8463906876323777
+      ],
+      "relative_magnitude_error": 4.6648364747547966e-05,
+      "phase_error_deg": 0.001615569947395162,
+      "fit_residual_relative_to_amplitude": 1.7555805964109574e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_077",
+      "gain_id": 3,
+      "frequency_hz": 9901.153541832937,
+      "expected": [
+        0.531115226621789,
+        -0.8473163779256407
+      ],
+      "measured": [
+        0.5311141511975986,
+        -0.8472617548157053
+      ],
+      "relative_magnitude_error": 4.685250307889799e-05,
+      "phase_error_deg": 0.001610037683225845,
+      "fit_residual_relative_to_amplitude": 1.735240212361929e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_078",
+      "gain_id": 3,
+      "frequency_hz": 84466.3032163757,
+      "expected": [
+        0.8588833873240463,
+        -0.5121704469452922
+      ],
+      "measured": [
+        0.8588837910700775,
+        -0.512155399513988
+      ],
+      "relative_magnitude_error": 7.359998243749999e-06,
+      "phase_error_deg": 0.000752344130237934,
+      "fit_residual_relative_to_amplitude": 1.2594493061244167e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_079",
+      "gain_id": 3,
+      "frequency_hz": 80913.44527010871,
+      "expected": [
+        0.8431385563860071,
+        -0.5376962652524796
+      ],
+      "measured": [
+        0.8431367427336202,
+        -0.5376918580818175
+      ],
+      "relative_magnitude_error": 3.89887609919537e-06,
+      "phase_error_deg": 0.00015702895910294024,
+      "fit_residual_relative_to_amplitude": 1.3353732958345085e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_080",
+      "gain_id": 3,
+      "frequency_hz": 78377.98319703956,
+      "expected": [
+        0.8356341168864205,
+        -0.549286127880622
+      ],
+      "measured": [
+        0.8356354701525245,
+        -0.5492653364077821
+      ],
+      "relative_magnitude_error": 1.0289471993774058e-05,
+      "phase_error_deg": 0.0010380612994074188,
+      "fit_residual_relative_to_amplitude": 1.316870653756965e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_081",
+      "gain_id": 3,
+      "frequency_hz": 75502.08807342846,
+      "expected": [
+        0.8201661524505239,
+        -0.5721256169615853
+      ],
+      "measured": [
+        0.8201679269425509,
+        -0.5721027893165227
+      ],
+      "relative_magnitude_error": 1.1604704650447495e-05,
+      "phase_error_deg": 0.0011308994263532163,
+      "fit_residual_relative_to_amplitude": 1.3355754796408588e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_082",
+      "gain_id": 3,
+      "frequency_hz": 68373.8115795578,
+      "expected": [
+        0.7856325716513818,
+        -0.6186942618677959
+      ],
+      "measured": [
+        0.7856326626316545,
+        -0.6186769075207796
+      ],
+      "relative_magnitude_error": 1.0665452113589602e-05,
+      "phase_error_deg": 0.0007844112975188205,
+      "fit_residual_relative_to_amplitude": 1.4311919731490617e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_083",
+      "gain_id": 3,
+      "frequency_hz": 66433.23645065966,
+      "expected": [
+        0.7708208031857282,
+        -0.6370538563191914
+      ],
+      "measured": [
+        0.7708222972794977,
+        -0.6370295158794849
+      ],
+      "relative_magnitude_error": 1.4354264703309028e-05,
+      "phase_error_deg": 0.0011295388866826104,
+      "fit_residual_relative_to_amplitude": 1.44321172760721e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_084",
+      "gain_id": 3,
+      "frequency_hz": 245360.21165088145,
+      "expected": [
+        0.20722072141482023,
+        -0.9783119171703639
+      ],
+      "measured": [
+        0.20725140549341345,
+        -0.9782565916719766
+      ],
+      "relative_magnitude_error": 4.776470274048261e-05,
+      "phase_error_deg": 0.0023768428885184794,
+      "fit_residual_relative_to_amplitude": 2.0207015854051533e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_085",
+      "gain_id": 3,
+      "frequency_hz": 218698.74877858366,
+      "expected": [
+        0.16228332597552028,
+        -0.9867621288165135
+      ],
+      "measured": [
+        0.16231955032595902,
+        -0.9867064242323984
+      ],
+      "relative_magnitude_error": 4.908582658802452e-05,
+      "phase_error_deg": 0.002566011905397992,
+      "fit_residual_relative_to_amplitude": 2.0502743439023436e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_086",
+      "gain_id": 3,
+      "frequency_hz": 197424.07666136025,
+      "expected": [
+        0.14805876517950964,
+        -0.9890033236033965
+      ],
+      "measured": [
+        0.14811271187122002,
+        -0.9889307704790999
+      ],
+      "relative_magnitude_error": 6.376282375886166e-05,
+      "phase_error_deg": 0.0036724607463405525,
+      "fit_residual_relative_to_amplitude": 2.23078003395994e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_087",
+      "gain_id": 3,
+      "frequency_hz": 179889.287105688,
+      "expected": [
+        0.1068403115351949,
+        -0.9943010427986894
+      ],
+      "measured": [
+        0.10690045687934537,
+        -0.9942288156695879
+      ],
+      "relative_magnitude_error": 6.538405199951747e-05,
+      "phase_error_deg": 0.003868635430988851,
+      "fit_residual_relative_to_amplitude": 2.289423590356491e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_089",
+      "gain_id": 3,
+      "frequency_hz": 129961.39929437544,
+      "expected": [
+        -0.007633575904838272,
+        -0.999994824205669
+      ],
+      "measured": [
+        -0.007545503357201823,
+        -0.9999210291984233
+      ],
+      "relative_magnitude_error": 7.445953668616667e-05,
+      "phase_error_deg": 0.00501401640044572,
+      "fit_residual_relative_to_amplitude": 2.8680019971411575e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_088",
+      "gain_id": 3,
+      "frequency_hz": 138508.98705523263,
+      "expected": [
+        0.028443537322182095,
+        -0.9995976699540713
+      ],
+      "measured": [
+        0.028475429048435422,
+        -0.9995690934170378
+      ],
+      "relative_magnitude_error": 2.7657266472025377e-05,
+      "phase_error_deg": 0.001873140491730079,
+      "fit_residual_relative_to_amplitude": 2.7809910563768237e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_090",
+      "gain_id": 3,
+      "frequency_hz": 240082.2372193691,
+      "expected": [
+        0.13315186089747622,
+        -0.9911156905327915
+      ],
+      "measured": [
+        0.13321037991962437,
+        -0.9910463346004497
+      ],
+      "relative_magnitude_error": 6.094315454929777e-05,
+      "phase_error_deg": 0.0038523057416129233,
+      "fit_residual_relative_to_amplitude": 1.7441481685991146e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_091",
+      "gain_id": 3,
+      "frequency_hz": 213963.9763064598,
+      "expected": [
+        0.0859794790722086,
+        -0.9963177080527822
+      ],
+      "measured": [
+        0.0860460046772305,
+        -0.9962484043865115
+      ],
+      "relative_magnitude_error": 6.332339924175479e-05,
+      "phase_error_deg": 0.004139099373062801,
+      "fit_residual_relative_to_amplitude": 1.8500729155665841e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_093",
+      "gain_id": 3,
+      "frequency_hz": 175882.95333221482,
+      "expected": [
+        0.026462189335009333,
+        -0.9996714069959861
+      ],
+      "measured": [
+        0.02654826688367868,
+        -0.9995993161325618
+      ],
+      "relative_magnitude_error": 6.978249369504752e-05,
+      "phase_error_deg": 0.005039695943349082,
+      "fit_residual_relative_to_amplitude": 2.280738199354527e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_092",
+      "gain_id": 3,
+      "frequency_hz": 192978.3490401446,
+      "expected": [
+        0.0693602768250651,
+        -0.9976080209161783
+      ],
+      "measured": [
+        0.06942694044463733,
+        -0.9975452718380341
+      ],
+      "relative_magnitude_error": 5.7970775663829244e-05,
+      "phase_error_deg": 0.0040598787909307795,
+      "fit_residual_relative_to_amplitude": 2.1539222677956344e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_095",
+      "gain_id": 3,
+      "frequency_hz": 127179.73786657667,
+      "expected": [
+        -0.09347534424871685,
+        -0.9956442169895827
+      ],
+      "measured": [
+        -0.09335271170677252,
+        -0.9955715467427502
+      ],
+      "relative_magnitude_error": 8.380640693184116e-05,
+      "phase_error_deg": 0.006606774898767411,
+      "fit_residual_relative_to_amplitude": 3.1255469347411803e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    },
+    {
+      "reference_case": "case_094",
+      "gain_id": 3,
+      "frequency_hz": 135464.91382278592,
+      "expected": [
+        -0.056809547948242854,
+        -0.9983977799271828
+      ],
+      "measured": [
+        -0.056725278509035984,
+        -0.998343428611746
+      ],
+      "relative_magnitude_error": 5.904675417722771e-05,
+      "phase_error_deg": 0.004643792587480575,
+      "fit_residual_relative_to_amplitude": 2.9995780137331725e-06,
+      "startup_and_release_verified": true,
+      "linear_headroom": true,
+      "passed": true
+    }
+  ],
+  "failures": [
+    {
+      "case": "case_017",
+      "error": "worker_timeout"
+    },
+    {
+      "case": "case_036",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_037",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_038",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_039",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_040",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_041",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_060",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_062",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_061",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_064",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_063",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    },
+    {
+      "case": "case_065",
+      "error": "Traceback (most recent call last):\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 165, in <module>\n    main()\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py\", line 102, in main\n    simulator.command(command)\n  File \"/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/f1_spice.py\", line 95, in command\n    raise RuntimeError(f\"ngspice command failed: {text}; result {result}; exits {self.exits}; {errors[:3]}\")\nRuntimeError: ngspice command failed: op; result 0; exits []; ['stderr Error: Transient op failed, timestep too small', 'stderr Error: The operating point could not be simulated successfully.']\n"
+    }
+  ],
+  "all_completed": false,
+  "all_passed": false
+}

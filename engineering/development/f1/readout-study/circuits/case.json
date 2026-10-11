@@ -1,0 +1,71 @@
+{
+  "netlist": "circuit.cir",
+  "pspice_compatibility": true,
+  "matrix_solver": "klu",
+  "bias_seed_mode": "none",
+  "vendor_model": {
+    "path": "build/engineering/prototypes/f1/model_sources/20261011T074010.976154Z/opa392_pspice/OPAx392.LIB",
+    "sha256": "eddf2b4031b0c86535fcacf636bee5d113afa2706f4e381ccd3f072b12eadce0"
+  },
+  "parameters": {
+    "gain_id": 3,
+    "load_ohm": 25,
+    "capacitance_nf": 3,
+    "capacitance_scale": 2,
+    "transient": true,
+    "voltage_datum_v": 0,
+    "dc_voltage_datum_v": 1.65
+  },
+  "analyses": [
+    {
+      "name": "park_release_dc",
+      "command": "dc vpark 3.3 0 -0.1",
+      "vectors": [
+        "output",
+        "amp_out",
+        "remote",
+        "feedback",
+        "park_ctl"
+      ]
+    },
+    {
+      "name": "dc",
+      "command": "dc iin 0 1.27476875695e-05 1.27476875695e-05",
+      "vectors": [
+        "output",
+        "amp_out",
+        "remote",
+        "feedback",
+        "park_ctl"
+      ]
+    },
+    {
+      "action": "load_netlist",
+      "netlist": "physical_transient.cir"
+    },
+    {
+      "name": "startup_op",
+      "command": "op",
+      "vectors": [
+        "output",
+        "amp_out",
+        "park_ctl"
+      ]
+    },
+    {
+      "name": "tran",
+      "command": "tran 5e-08 0.001 0 5e-08",
+      "vectors": [
+        "time",
+        "output",
+        "amp_out",
+        "remote",
+        "feedback",
+        "park_ctl"
+      ]
+    }
+  ],
+  "additional_netlist_hashes": {
+    "physical_transient.cir": "078db1caf7ad609a83dd3317cc698f7cc0bcf9d6ded056437ac7e94efe9e647c"
+  }
+}

@@ -50,10 +50,13 @@ current multiplexer resistance from the controlled column potential, while
 the FPC resistance remains. A parked feedback path, correct switching order,
 loop stability, leakage, amplifier offsets and ADC range must be checked.
 
-The OPA2320 was an early amplifier candidate. The OPAx392 family is also being
-reviewed because lower offset matters when several cells conduct together.
-Neither a component choice nor a complete analog circuit has been frozen.
-[OPAx392 manufacturer reference](https://www.ti.com/product/OPA2392)
+The selected-column candidate now uses the single OPA392DBVR and explicit
+gain/parking circuitry. The
+[readout study](../development/f1/readout-study/README.md) preserves its circuit
+diagram, component values and all declared simulation attempts. It is a
+development circuit; row loops, reference/ADC drive and the complete board
+remain unfinished.
+[OPA392 manufacturer reference](https://www.ti.com/product/OPA392)
 
 ## Flex construction direction
 
@@ -191,3 +194,30 @@ leakage and switching remain part of that review.
 Rechecking the distributed board writes only into `build/`; it does not
 alter the saved checkpoint. Follow the commands in its README. No physical
 F1 specimen or performance result has been reported.
+
+## Selected-column readout study
+
+The [separate readout checkpoint](../development/f1/readout-study/README.md)
+contains replayable cases, raw vectors/logs, a readable circuit drawing and
+plots. Its 96 nominal AC and eight current-step cases pass the declared
+selected-column screen. Minimum voltage-return margin is 53.89°, and the
+limiting current-step settles within 290.55 µs at the 25 µV work criterion.
+This is a typical model with explicit lumped parasitics and ideal bias sources.
+
+Of 96 independent physical-ground time-domain probes, 83 completed and passed;
+twelve solver failures and one timeout remain unresolved. Of twelve
+wire-break attempts, eight support provisional healthy/rejected decisions,
+two have no completed result and two are incomplete with nonphysical outputs.
+The archive retains every attempt. No failed or partial simulation counts
+as a successful hardware check.
+
+The simulation worker now rejects analysis-aborted messages and truncated
+time/frequency vectors. Replay of an actual successful case and an actual
+aborted case verifies the result-handling change. The archive verifier checks
+27 files and 1,485 compressed members. A separately extracted nominal case
+replays using the directly obtained TI model.
+
+The complete F1 design still requires the four row-driver loops, full-array
+interaction, reference and ADC drive, gain/channel transitions, firmware,
+routed readout board, fitted flex and mounting mechanics. No physical
+performance recommendation follows from this milestone.

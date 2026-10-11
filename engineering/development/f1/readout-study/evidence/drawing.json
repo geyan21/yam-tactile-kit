@@ -1,0 +1,7 @@
+{
+  "configuration": "engineering/designs/f1_feedback_screen.json",
+  "configuration_sha256": "598dd64208a6e73d613c520c80d26565d45374429f5deecedcaa1f3e242e30da",
+  "generator_sha256": "a7c785b4d22ab0ebb17c80b68778dc4b880849efc61b8d6d5c409b9f6503ad2e",
+  "physical_evidence": false,
+  "scope": "Selected-column signal topology, not a completed wrist board"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "yam-f1-feedback-summary/1",
+  "physical_specimens_tested": 0,
+  "ac_cases": 96,
+  "transient_cases": 8,
+  "all_declared_screens_passed": true,
+  "minimum_voltage_return_margin_deg": 53.888498933848226,
+  "maximum_settling_us": 290.55098844912845,
+  "settling_error_uv": 25.0,
+  "maximum_baseline_error_uv": 0.744490332937886,
+  "all_parking_controls_verified": true,
+  "all_linear_headroom_checks_passed": true,
+  "nominal_current_na_per_adc_code_at_highest_gain": 1.2845409159757653,
+  "by_gain": [
+    {
+      "gain_id": 0,
+      "resistance_ohm": 499,
+      "limiting_margin_case": "case_023",
+      "minimum_voltage_return_margin_deg": 53.888498933848226,
+      "limiting_settling_case": "case_097",
+      "maximum_settling_us": 10.564796657859272
+    },
+    {
+      "gain_id": 1,
+      "resistance_ohm": 4990,
+      "limiting_margin_case": "case_047",
+      "minimum_voltage_return_margin_deg": 68.13959206466014,
+      "limiting_settling_case": "case_098",
+      "maximum_settling_us": 40.364119728050156
+    },
+    {
+      "gain_id": 2,
+      "resistance_ohm": 24900,
+      "limiting_margin_case": "case_071",
+      "minimum_voltage_return_margin_deg": 80.2932324268209,
+      "limiting_settling_case": "case_100",
+      "maximum_settling_us": 186.70508266262215
+    },
+    {
+      "gain_id": 3,
+      "resistance_ohm": 39200,
+      "limiting_margin_case": "case_095",
+      "minimum_voltage_return_margin_deg": 84.64102205564569,
+      "limiting_settling_case": "case_102",
+      "maximum_settling_us": 290.55098844912845
+    }
+  ],
+  "input_hashes": {
+    "screen": "c45b404c0db3ee83465ae4881d84a9cda302322b514291637afef7b2a9d42168",
+    "configuration": "025e76315585902b2190878d046611b8e41e5daeedc83fc633fa84070661073f",
+    "summarizer": "4c14860cc57d5a19951ebcca73c15c5416a5848e389062a3ad482e8efd187989",
+    "vendor_model": "eddf2b4031b0c86535fcacf636bee5d113afa2706f4e381ccd3f072b12eadce0"
+  },
+  "limits": [
+    "One selected column with stiff ideal row/bias sources; the four row-driver loops and full array are not included.",
+    "Muxes and gain switches use explicit lumped resistance/capacitance approximations, not complete transistor models.",
+    "The voltage return-ratio measurement is a development stability screen, not a formal multi-loop guarantee.",
+    "The model is typical and older than the current amplifier datasheet. Component tolerances, temperature, leakage, charge injection, clipping and cable faults remain.",
+    "The ADC is a selected candidate and a nominal code-spacing calculation; acquisition, reference drive, ADC noise and INL are not simulated here.",
+    "No hardware, contact probability, force accuracy, bending life or 20 N rating follows from these plots."
+  ]
+}

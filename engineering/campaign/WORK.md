@@ -75,6 +75,22 @@ The next F1 work is the wrist analog/ADC board, complete resistance and
 stability checks, fitted flex unrolls/tails, and a manufacturable board/carrier
 contour. Actual-drive fit and the common physical experiments remain required.
 
+The selected-column readout study is preserved separately at
+`engineering/development/f1/readout-study/`. It includes a circuit drawing,
+explicit component values, all 104 nominal cases, all 96 independent
+time-domain attempts and all twelve wire-break attempts. The nominal grid
+passes its declared screen; only 83 of 96 independent probes completed.
+Eight wire-break decisions are supported provisionally; four cases lack
+valid complete results. Those limitations are retained in the checkpoint.
+The worker now rejects aborted/partial analyses, checked against an actual
+saved successful case and an actual saved abort.
+
+This is not a completed wrist board or an eighth integrated prototype.
+Four row-driver loops, the full coupled array, reference/ADC drive, switching
+protocol, PCB, fitted flex and mechanics remain. The active ordering code is
+OPA392DBVR; the extra `I` in the original saved simulation label is documented
+as an ordering-label correction, with no circuit/model change.
+
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.

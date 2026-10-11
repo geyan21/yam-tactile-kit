@@ -1,0 +1,7 @@
+function,candidate_part,quantity,connection_or_limit,manufacturer_source
+Amplifier,OPA392DBVR,1,Selected-column current/sense feedback,https://www.ti.com/product/OPA392/part-details/OPA392DBVR
+Current and sense muxes,ADG706BRUZ,2,Share A0-A3; separate enables,https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf
+Gain switches,TMUX1112PWR,1,Four active-high switches; select one gain,https://www.ti.com/lit/ds/symlink/tmux1112.pdf
+Low-gain compensation switch,TMUX1102DBVR,1,Active-low; SEL=GAIN0,https://www.ti.com/lit/ds/symlink/tmux1101.pdf
+Active parking switch,TMUX1101DBVR,1,Active-high; hardware pull-up,https://www.ti.com/lit/ds/symlink/tmux1101.pdf
+Main ADC candidate,ADS8866IDGSR,1,Not included in the selected-column simulation,https://www.ti.com/lit/ds/symlink/ads8866.pdf

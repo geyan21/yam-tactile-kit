@@ -1,0 +1,57 @@
+F1 selected-column feedback development
+.temp 25
+.options reltol=0.0001 abstol=1p vntol=10n
+VDD vcc 0 3.3
+VLOW low 0 0
+VBIAS bias 0 1.65
+VTEST inv feedback 0 ac 1
+XAMP bias inv vcc low amp_out OPAx392
+RISO amp_out output 0.1
+RPARK amp_out sense_d 100000000
+CPARK amp_out feedback 1.5e-11
+COUTLOAD output low 1e-11
+VPARK park_ctl low DC 3.3 PWL(0 3.3 1e-05 3.3 1.02e-05 0 0.001 0)
+SPARK amp_out park_link park_ctl low PARKSW
+.model PARKSW VSWITCH(RON=10 ROFF=1000000000000 VON=2.2 VOFF=1.1)
+RPLOCAL park_link feedback 1000
+CPARKD amp_out low 2e-11
+CPARKS park_link low 2e-11
+RGAIN0 output gain0 1e+12
+CGD0 output low 2e-11
+CGS0 gain0 low 1.4e-11
+RF0 gain0 current_d 499
+CF0 gain0 current_d 4.7e-10
+RGAIN1 output gain1 1e+12
+CGD1 output low 2e-11
+CGS1 gain1 low 1.4e-11
+RF1 gain1 current_d 4990
+CF1 gain1 current_d 1.5e-10
+RGAIN2 output gain2 1e+12
+CGD2 output low 2e-11
+CGS2 gain2 low 1.4e-11
+RF2 gain2 current_d 24900
+CF2 gain2 current_d 6.8e-11
+RGAIN3 output gain3 9.8
+CGD3 output low 2e-11
+CGS3 gain3 low 1.4e-11
+RF3 gain3 current_d 39200
+CF3 gain3 current_d 5.6e-11
+RCURRENT current_d current_s 12
+CCD current_d low 3.6e-10
+CCFIX current_d low 3.3e-09
+CCS current_s low 4e-11
+RCABLEI current_s remote 1
+CSENSOR remote low 3e-09
+RLOAD remote bias 25
+RCABLES remote sense_s 1
+CSENSES sense_s low 4e-11
+RSENSE sense_s sense_d 12
+CSENSED sense_d low 3.6e-10
+RBOOST sense_d comp_mid 680
+RBYPASS sense_d comp_mid 9.8
+CBOOSTD sense_d low 2e-11
+CBOOSTS comp_mid low 1.4e-11
+RINPUT comp_mid feedback 300
+IIN bias remote PWL(0 0 0.00036 0 0.0003602 1.27476875695e-05 0.001 1.27476875695e-05)
+.save output amp_out inv feedback remote current_d park_ctl
+.end

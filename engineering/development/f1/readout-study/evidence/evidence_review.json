@@ -1,0 +1,427 @@
+{
+  "schema": "yam-f1-readout-evidence-review/1",
+  "physical_specimens_tested": 0,
+  "integrated_f1_complete": false,
+  "nominal": {
+    "cases": 104,
+    "passed": 104,
+    "all_completed": true,
+    "all_passed": true
+  },
+  "time_domain_crosscheck": {
+    "declared": 96,
+    "completed": 83,
+    "passed": 83,
+    "failed_workers": 13,
+    "worker_failure_types": {
+      "timeout": 1,
+      "solver_failure": 12
+    },
+    "failed_cases": [
+      "case_017",
+      "case_036",
+      "case_037",
+      "case_038",
+      "case_039",
+      "case_040",
+      "case_041",
+      "case_060",
+      "case_062",
+      "case_061",
+      "case_064",
+      "case_063",
+      "case_065"
+    ],
+    "maximum_completed_phase_error_deg": 0.012032305563450864,
+    "maximum_completed_relative_magnitude_error": 0.0002318292603513683,
+    "all_completed": false,
+    "all_passed": false
+  },
+  "wire_break_study": {
+    "declared": 12,
+    "results": [
+      {
+        "load_ohm": 25,
+        "fault": "healthy",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_25_healthy",
+        "input_sha256": {
+          "case": "a657e7b66dfef716e5e67737b0a8ed4e400d27306bbb154f5c61eda9c97e037a",
+          "netlist": "da82a9cd168d013e9bfb573e325daa6b987fbc25af92f6062936cf3243395182"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "568a93f9365d8506d93b292d43f7555818bcc7edbf419bd9fec2ae7d83d48dca",
+        "result_sha256": "14b9095c205e1c57494c1ce9f900bbfd80160bf77a5c25ddfa623026b03fdb2c",
+        "last_time_s": 0.003,
+        "minimum_output_v": 0.8229661115418049,
+        "maximum_output_v": 1.6582640251896146,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 2.1489698909249455e-11,
+        "test_peak_to_peak_v": 8.551752639363031e-10,
+        "baseline_output_v": 1.6489820579108074,
+        "test_output_v": 0.8229661119695557,
+        "drop_v": 0.8260159459412517,
+        "classified_healthy": true,
+        "expected_healthy_drop_v": 0.8260575517090752,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 25,
+        "fault": "current_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_25_current_open",
+        "input_sha256": {
+          "case": "c1ed9bd1ebfaff0aa662a36816a7c2745eff26b16409342a64e0352993c68791",
+          "netlist": "51dc43b729515fcfc1807ee9559cdfc412fcd5ddd0de406cf4fe02ce48f0c21f"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "ddc2b67b79ba8e91aa1140bcd57c3c09be658a326f7ec17cef8517b9f6df7d47",
+        "result_sha256": "2004ad5c7ec4dc260c7795f4a441803b273909dfaf2026dbc82662bc4bae0ee9",
+        "last_time_s": 0.003,
+        "minimum_output_v": 0.013642254455226663,
+        "maximum_output_v": 1.6499805479808909,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": false,
+        "baseline_peak_to_peak_v": 0.0282784583212512,
+        "test_peak_to_peak_v": 1.7328499746227521e-13,
+        "baseline_output_v": 1.404825238747741,
+        "test_output_v": 0.013642254455391427,
+        "drop_v": 1.3911829842923495,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260575517090752,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 25,
+        "fault": "sense_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_25_sense_open",
+        "input_sha256": {
+          "case": "5e6d323bce04f2630f65dcc7451b46b4e33729d83c351303625db65e36bfc726",
+          "netlist": "feb13023ae94c3c751b7b45437337848f947960358b183ed8876367a1f70906f"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "4c53d0cb2d95b4b0a087e46efa0cd46b1e164081007b948256025a4db57cd2f1",
+        "result_sha256": "01466b42e6398bbd1e005ab5bf2c08d48064f24c0a064ad38065c69a3e9283fc",
+        "last_time_s": 0.003,
+        "minimum_output_v": 1.6469106206252357,
+        "maximum_output_v": 1.6633897986843176,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 3.91705243010243e-05,
+        "test_peak_to_peak_v": 2.8702084084564206e-05,
+        "baseline_output_v": 1.6494298766147462,
+        "test_output_v": 1.649730588279654,
+        "drop_v": -0.00030071166490786005,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260575517090752,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 25,
+        "fault": "both_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_25_both_open",
+        "input_sha256": {
+          "case": "cc1a0066f9c95a94a5b2f428aa20693801fbf96e661a8f10512ad60008fb2132",
+          "netlist": "d7add5f09cfe1ced8a6e06604b9a861ebb6c056168c367d346b2f684146d3029"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "1ea39e970f791b2d001334212493a3e0ba29efdb7b8253f07eab7a81f433dc65",
+        "result_sha256": "bbf543b5d186d2fef35d8ffe76c08fe114f13ffedacddb251654548e30c78ba4",
+        "last_time_s": 0.003,
+        "minimum_output_v": 1.648981197056919,
+        "maximum_output_v": 1.6499805479808909,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 3.9201974716851495e-05,
+        "test_peak_to_peak_v": 2.8708371335284255e-05,
+        "baseline_output_v": 1.6494295264401189,
+        "test_output_v": 1.6497303938317087,
+        "drop_v": -0.0003008673915898541,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260575517090752,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 2500,
+        "fault": "healthy",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_2500_healthy",
+        "input_sha256": {
+          "case": "a0d29a98c7ccd35ef344360bd2988f419d549ad92839539404a29a74305a613e",
+          "netlist": "4ced9da7a5db6417c780f79addca065e357ad1b5601e452a86d9d4f9269e5b8f"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "081bb5dec67c73a305da30f7a8112bf0bef29626db5b6f914231d5fdf135dac5",
+        "result_sha256": "4fbd83fbae585bd7e961b590193ba016d66525369ab69b49a5bc1265f02b034a",
+        "last_time_s": 0.003,
+        "minimum_output_v": 0.016994366438313698,
+        "maximum_output_v": 1.6600848654365992,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 8.560929742884582e-12,
+        "test_peak_to_peak_v": 7.669043178282209e-11,
+        "baseline_output_v": 1.649984499579019,
+        "test_output_v": 0.8239038293965729,
+        "drop_v": 0.826080670182446,
+        "classified_healthy": true,
+        "expected_healthy_drop_v": 0.8260788682099874,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 2500,
+        "fault": "current_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_2500_current_open",
+        "input_sha256": {
+          "case": "fcf39d43bfcdd3320cba3a8184628975fe1458ab557c439464c06617f18218e7",
+          "netlist": "392d84f03a675325d2e361c4a57a98fe38f651d50eca01d542017b4cecb3eafb"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "ecbf6cf7027e9323749b3823dba233508dc5f647685a48835159dabe33e5f027",
+        "result_sha256": "9e44424051eb27532422df369da76e656cb713a9292ab30b13fd4fb0356120f0",
+        "last_time_s": 0.003,
+        "minimum_output_v": 0.013401111246102021,
+        "maximum_output_v": 1.6499934834934216,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": false,
+        "baseline_peak_to_peak_v": 0.00638649847331596,
+        "test_peak_to_peak_v": 1.2930836956748237e-12,
+        "baseline_output_v": 1.5835880727048999,
+        "test_output_v": 0.013401111247384936,
+        "drop_v": 1.570186961457515,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260788682099874,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 2500,
+        "fault": "sense_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_2500_sense_open",
+        "input_sha256": {
+          "case": "4220d95ae967ee513af1d417974f040a010cecf867ababec1b86a1fd5bcc3e23",
+          "netlist": "366942121a49a2760f7d6cb46ff964294c450e41357532a21ed7935ae226ab2b"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "a0a20545994cbee84470ca20e5669074856cf58ba1eb7a20aac8099a607a7b8d",
+        "result_sha256": "e287908adbaa17748b83edbb6e03742841ab9d617bcdaac5609db163f7f59a87",
+        "last_time_s": 0.003,
+        "minimum_output_v": 1.6499762025448401,
+        "maximum_output_v": 1.6670207212668444,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 5.1162049100161866e-05,
+        "test_peak_to_peak_v": 3.6282636489692877e-05,
+        "baseline_output_v": 1.6505694212940325,
+        "test_output_v": 1.6509556635041744,
+        "drop_v": -0.0003862422101419405,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260788682099874,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 2500,
+        "fault": "both_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_2500_both_open",
+        "input_sha256": {
+          "case": "76a23cc02eae5adc245fb6280ad0d36e3d6eced3d7d886c1b42810c8cd94f4af",
+          "netlist": "8a6c93af6123666b08f42d7370e1c85331e6d1904fa8377d83ab766fa741d5eb"
+        },
+        "simulation_valid": true,
+        "fault_decision_supported": true,
+        "log_sha256": "258615b50926a1be6e8ca7314595d37c4a6253e228087be225cb753c2f94b643",
+        "result_sha256": "492ed169aae774f88ebb42d9e4fcbe1399ae2a10389dcc9ed19d7078a22b051f",
+        "last_time_s": 0.003,
+        "minimum_output_v": 1.6499762025448401,
+        "maximum_output_v": 1.6509647465929902,
+        "physically_plausible_outputs": true,
+        "status": "supported_provisional_decision",
+        "startup_verified": true,
+        "control_timing_verified": true,
+        "settled_measurement_windows": true,
+        "baseline_peak_to_peak_v": 5.1161921194475823e-05,
+        "test_peak_to_peak_v": 3.571321348116996e-05,
+        "baseline_output_v": 1.6505694172403969,
+        "test_output_v": 1.6509471949370735,
+        "drop_v": -0.00037777769667668437,
+        "classified_healthy": false,
+        "expected_healthy_drop_v": 0.8260788682099874,
+        "healthy_drop_window_v": [
+          0.7,
+          0.95
+        ]
+      },
+      {
+        "load_ohm": 250000,
+        "fault": "healthy",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_250000_healthy",
+        "input_sha256": {
+          "case": "9d41c0df5b369236561a98ad7aadd69191a64f8626b2dfd883926fddb44cd5ad",
+          "netlist": "70b1c0f4075e5e2a13d19e6ca324d0374a72c5392b7ce0efdd9463ddd023aa6c"
+        },
+        "simulation_valid": false,
+        "fault_decision_supported": false,
+        "log_sha256": "66fdfc303e6b13118666fa981872f5fbf43e13b0d1277c49e8b259df6d09631a",
+        "status": "missing_completed_result"
+      },
+      {
+        "load_ohm": 250000,
+        "fault": "current_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_250000_current_open",
+        "input_sha256": {
+          "case": "878eb72a7552392c8937ae26b2c44f3705ab17c703864a8c231b8ac324f0f862",
+          "netlist": "39ac63912d8e33742887e0fba62d2787b3c3a7a564b253bb93dee7d28af2f607"
+        },
+        "simulation_valid": false,
+        "fault_decision_supported": false,
+        "log_sha256": "51a4842310b3d00bd8c9391d0e13557a4f3048bd473c5814993fa3d2ebb4cefd",
+        "result_sha256": "4d0c0553fb61aeee2ef081d35328ad818912567d4ae5dd19602adf488cc4e5bb",
+        "last_time_s": 0.0016522326414851825,
+        "minimum_output_v": -54.382515205086044,
+        "maximum_output_v": -51.57602698367974,
+        "physically_plausible_outputs": false,
+        "status": "incomplete_nonphysical_transient"
+      },
+      {
+        "load_ohm": 250000,
+        "fault": "sense_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_250000_sense_open",
+        "input_sha256": {
+          "case": "9728d7274ea23272641f8d9922a3ba0bf51977c8c94cc059c54f40b10552e2da",
+          "netlist": "ee31e3aef4f4ebaafef2144caea564abc349a24cad6ab8f368a1ef28d307951e"
+        },
+        "simulation_valid": false,
+        "fault_decision_supported": false,
+        "log_sha256": "3df6042764b615b5c12c12415cf973d349265a5b4430e271c669618f68707592",
+        "status": "missing_completed_result"
+      },
+      {
+        "load_ohm": 250000,
+        "fault": "both_open",
+        "gain_id": 1,
+        "fault_time_s": 0.001,
+        "test_enable_time_s": 0.002,
+        "case": "load_250000_both_open",
+        "input_sha256": {
+          "case": "953a0b5d4fdc57164bf08bafd93646f8de1cce0141d2dc66162b46efcbb30589",
+          "netlist": "7f60b39adf2feb5e0810273eebe0b89074fab7b0cc47a0af013141110df9c6f6"
+        },
+        "simulation_valid": false,
+        "fault_decision_supported": false,
+        "log_sha256": "71206961f102c5973ccf408704d556dd527f8f525449ee51cc9247da3a0385a4",
+        "result_sha256": "7f8c4796c5336a6f28cc2325daf4e5dc31ecaefba2910b172443655f3f61867d",
+        "last_time_s": 0.0016520810064127919,
+        "minimum_output_v": -54.38251642984684,
+        "maximum_output_v": -51.57602698367974,
+        "physically_plausible_outputs": false,
+        "status": "incomplete_nonphysical_transient"
+      }
+    ],
+    "status_counts": {
+      "supported_provisional_decision": 8,
+      "missing_completed_result": 2,
+      "incomplete_nonphysical_transient": 2
+    },
+    "numerically_valid": 8,
+    "provisional_decisions_supported": 8,
+    "healthy_controls_supported": 2,
+    "all_supported": false
+  },
+  "source_locations": {
+    "nominal": "build/engineering/prototypes/f1/feedback_runs/20261011T093148.657669Z",
+    "crosscheck": "build/engineering/prototypes/f1/time_reference_checks/20261011T093335.603913Z",
+    "faults": "build/engineering/prototypes/f1/column_link_transients/20261011T093257.708539Z"
+  },
+  "source_sha256": {
+    "nominal_screen": "c45b404c0db3ee83465ae4881d84a9cda302322b514291637afef7b2a9d42168",
+    "crosscheck": "b8c2505b3595d12ca144611e7bf6e7f39afebfce636629a52069fc59275405f6",
+    "fault_configuration": "025e76315585902b2190878d046611b8e41e5daeedc83fc633fa84070661073f",
+    "fanout_configuration": "2c18cc60fd4438e41648b82eb867bf32241db108f85941a78ddfc287f36d0635",
+    "reviewer": "97a99f02adb0ba5de4a36f0d99a3e2a805a8984b07dc52f2184790b54a85b677"
+  },
+  "limits": [
+    "The nominal grid is one selected-column model with ideal bias sources, not the coupled array or finished electronics.",
+    "A failed solver does not establish a hardware failure or a pass. Retain it as unresolved evidence.",
+    "The first wire-break collector stopped on an empty measurement window. This review recovers every saved case without changing the original files.",
+    "A healthy decision requires a settled response in the declared window. Invalid, aborted or incomplete simulations never qualify a fault detector.",
+    "No simulation result establishes physical contact reliability, force accuracy, repeatability or a 20 N rating."
+  ]
+}

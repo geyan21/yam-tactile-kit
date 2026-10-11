@@ -1,0 +1,83 @@
+{
+  "schema": "yam-f1-readout-study-checkpoint/1",
+  "created_utc": "2026-10-11T09:45:01.787531+00:00",
+  "status": "Selected-column circuit study with unresolved cross-checks; no complete wrist PCB or integrated F1",
+  "physical_specimens_tested": 0,
+  "integrated_f1_complete": false,
+  "nominal": {
+    "cases": 104,
+    "passed": 104,
+    "all_completed": true,
+    "all_passed": true
+  },
+  "time_domain_crosscheck": {
+    "declared": 96,
+    "completed": 83,
+    "passed": 83,
+    "failed_workers": 13,
+    "worker_failure_types": {
+      "timeout": 1,
+      "solver_failure": 12
+    },
+    "failed_cases": [
+      "case_017",
+      "case_036",
+      "case_037",
+      "case_038",
+      "case_039",
+      "case_040",
+      "case_041",
+      "case_060",
+      "case_062",
+      "case_061",
+      "case_064",
+      "case_063",
+      "case_065"
+    ],
+    "maximum_completed_phase_error_deg": 0.012032305563450864,
+    "maximum_completed_relative_magnitude_error": 0.0002318292603513683,
+    "all_completed": false,
+    "all_passed": false
+  },
+  "wire_break_status_counts": {
+    "supported_provisional_decision": 8,
+    "missing_completed_result": 2,
+    "incomplete_nonphysical_transient": 2
+  },
+  "source_locations": {
+    "review": "build/engineering/prototypes/f1/readout_reviews/20261011T094249.077347Z",
+    "summary": "build/engineering/prototypes/f1/feedback_runs/20261011T093148.657669Z/reviews/20261011T094116.316605Z",
+    "drawing": "build/engineering/prototypes/f1/feedback_drawings/20261011T094249.075702Z",
+    "worker": "build/engineering/prototypes/f1/worker_checks/20261011T094248.759894Z"
+  },
+  "archiver_sha256": "df496a8f5c7098c590dd8e9fc74ae10e9f9a80d59e2c40817451fded78ac4f0b",
+  "files_sha256": {
+    "README.md": "635f78763ef50277f5d59581487330786e3a366b76c69a3226d10c5a24ee1c10",
+    "active_components.csv": "770219382cc7152b83781e9d6d50d51acd9878c815a7634047c558f208557751",
+    "candidate.json": "598dd64208a6e73d613c520c80d26565d45374429f5deecedcaa1f3e242e30da",
+    "circuits/case.json": "703a4491c9febe96f8225d2ea5c502ec74da0b99dc70cbebf4533d140f28f6ba",
+    "circuits/circuit.cir": "e8ccea59d675e3d446df63b8e86aac859ee78f3dcc7872766fa39ff9fc764055",
+    "circuits/physical_transient.cir": "078db1caf7ad609a83dd3317cc698f7cc0bcf9d6ded056437ac7e94efe9e647c",
+    "evidence/drawing.json": "0973e2eabe18fcf008ad1365634a54265e0f38956d4642af376bdbb2c4f92fb8",
+    "evidence/evidence_review.json": "b04d1f7e1116e574704de0cd0587bd1200dde1e6b80ccb754e6b4033a8279311",
+    "evidence/nominal_cases.csv": "073d400f9a81d6595b9adf46c6af1167a0a94afe4ac7f2f0f33985634e7bb5d4",
+    "evidence/nominal_summary.json": "525dca5a16990f8fc83ac6c4c7696b0af66a0c0e333741f8e692093bde9f5205",
+    "evidence/time_domain_crosscheck.json": "b8c2505b3595d12ca144611e7bf6e7f39afebfce636629a52069fc59275405f6",
+    "evidence/worker_failure_handling.json": "8d014c32b66bb7a8201d0883f526c37c1c3e7d922c9e69f5b5cc5916624fc2a8",
+    "runs/contents.json": "d248b193e97b722191d5cc26a8b9d148ffb0a4609b708d0fb7d1a20896ac348c",
+    "runs/crosscheck.tar.gz": "cad554eeb244e8a81382f5ae7a9eb2cc73bed6021838d9d4f102ebb74340e6d8",
+    "runs/faults.tar.gz": "337f65732ba735a5773a85b58d6a0a52afc9484a404938bcec4f1a3d35c3995f",
+    "runs/nominal.tar.gz": "74f6dc553b00d681d485db02636b304d8cca73d1bae34ba0458516ab31d8d892",
+    "runs/worker_check.tar.gz": "83db9a32e5e97e6337674cc79baf4d61b21af446017a39f9eef7a71ee33508b9",
+    "simulated_configuration.json": "025e76315585902b2190878d046611b8e41e5daeedc83fc633fa84070661073f",
+    "visuals/column_link_evidence.pdf": "5aeb2be130c0186b71318bd7a0df244650e28ea9d83a3e2038671a1deaeecadb",
+    "visuals/column_link_evidence.png": "459b31670a8e26bc07a02fe77d22a214dbf1ab6a1c4f2cdb336d8411cf0e4042",
+    "visuals/column_link_evidence.svg": "0dad35beb1108a9c881bd2ae6a900b4b639dcbb62b61348ef7202f2fc9a2e9d8",
+    "visuals/f1_feedback_topology.pdf": "fa7e22595fda3263f94d799ad02d723594f3bf80ce9e4a45b4182989ba756f2f",
+    "visuals/f1_feedback_topology.png": "480b6a7fcba6eec404ee43b8f347fd7ae502708b911ee6a9cbca2af10247359e",
+    "visuals/f1_feedback_topology.svg": "fd56555c8a036fdb83f6304ff6e584e88f015f1e4c8ea30ec702cd382aa517b8",
+    "visuals/feedback_results.pdf": "18d8dc34156d95df4050417a1629f39c89861df55edaac06b33d233d67fe0955",
+    "visuals/feedback_results.png": "57b0f81c723091f7147ed0d5cd51adfea93c782fad83e609123c9f2afb31842d",
+    "visuals/feedback_results.svg": "dd56b631eba0cfcf6e13d40e50af79248ef160b697fa13887ebcca85c0af27db"
+  }
+}

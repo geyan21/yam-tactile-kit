@@ -1,0 +1,49 @@
+{
+  "schema": "yam-f1-worker-failure-handling/1",
+  "physical_evidence": false,
+  "checks": [
+    {
+      "case": "build/engineering/prototypes/f1/feedback_runs/20261011T093148.657669Z/case_102/case.json",
+      "case_sha256": "703a4491c9febe96f8225d2ea5c502ec74da0b99dc70cbebf4533d140f28f6ba",
+      "command": [
+        "/usr/bin/python3",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/feedback_runs/20261011T093148.657669Z/case_102/case.json",
+        "--output",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/worker_checks/20261011T094248.759894Z/completed_control"
+      ],
+      "pid": 4,
+      "exit_code": 0,
+      "elapsed_s": 0.7651986019918695,
+      "intentional_stop": false,
+      "expected_completed_result": true,
+      "completed_result_exists": true,
+      "passed": true
+    },
+    {
+      "case": "build/engineering/prototypes/f1/column_link_transients/20261011T093257.708539Z/load_250000_current_open/case.json",
+      "case_sha256": "878eb72a7552392c8937ae26b2c44f3705ab17c703864a8c231b8ac324f0f862",
+      "command": [
+        "/usr/bin/python3",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/engineering/scripts/run_f1_spice_case.py",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/column_link_transients/20261011T093257.708539Z/load_250000_current_open/case.json",
+        "--output",
+        "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/worker_checks/20261011T094248.759894Z/aborted_control"
+      ],
+      "pid": 5,
+      "exit_code": 1,
+      "elapsed_s": 4.269503314979374,
+      "intentional_stop": false,
+      "expected_completed_result": false,
+      "completed_result_exists": false,
+      "passed": true,
+      "explicit_analysis_failure": true
+    }
+  ],
+  "passed": true,
+  "input_sha256": {
+    "f1_spice.py": "d4e50ae081e02321f84677bea4409fe2412961ccf32daa598d744fd64986be21",
+    "run_f1_spice_case.py": "1dd3709dc6effe95d82940e22d1f150b531839ef3583f83d0228d86cfa21437b",
+    "check_f1_spice_failure_handling.py": "ec9b8c3e486bd941ff0ddc463f6d4ab2a75edea17b47a3bc4ac38758b4b0f3c1"
+  }
+}
