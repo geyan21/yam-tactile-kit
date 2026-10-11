@@ -1,0 +1,147 @@
+{
+  "revision": "N1.1",
+  "status": "Digital prototype source; physical assembly and qualification pending",
+  "architecture": "Thin bare metal fork supported through two vertical shear webs at its base; fixed side carriers attach to the original finger's side axes",
+  "requested_per_finger_force_n": 20,
+  "force_axis_native": [
+    0,
+    0,
+    1
+  ],
+  "coordinate_system": "Nail-plane X across the fork, Y toward the root, Z into the finger; origin from the retained nail contact report",
+  "source_frame": {
+    "sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "distal_cut_native_y_mm": -96.0,
+    "maximum_disconnected_distal_fragment_mm3": 50.0,
+    "distal_fragment_depth_limit_mm": 0.6,
+    "preserved_attachment_region_radius_mm": 3.25,
+    "web_pocket_clearance_mm": 0.6,
+    "protected_middle_x_range_mm": [
+      -17.0,
+      2.0
+    ],
+    "protected_region_start_native_y_mm": -95.4,
+    "notes": [
+      "The original hard nail is removed only in this separate frame revision.",
+      "A small loose crescent left by this cut is discarded only if it remains within the declared distal strip; the three TPU attachment regions are checked separately.",
+      "Separate side pockets clear the sensing webs while preserving the central frame material and attachment regions.",
+      "The intended replacement preserves the source nail's leading footprint and contact plane.",
+      "The original TPU and its three attachment bores are retained until interference checks establish otherwise."
+    ]
+  },
+  "nail": {
+    "material_candidate": "Wrought 17-4PH stainless steel, H900 condition, supplier certificate required",
+    "elastic_modulus_mpa_assumed": 196000,
+    "poisson_ratio_assumed": 0.27,
+    "leading_thickness_mm": 1.35,
+    "thick_body_mm": 6.0,
+    "taper_starts_local_y_mm": -3.0,
+    "taper_ends_local_y_mm": -10.5,
+    "web_native_x_centers_mm": [
+      -18.5,
+      3.5
+    ],
+    "web_thickness_mm": 1.5,
+    "web_height_mm": 14.0,
+    "web_lower_local_z_mm": 10.0,
+    "web_free_end_local_y_mm": 8.5,
+    "web_fixed_boundary_local_y_mm": 22.5,
+    "clamp_end_length_mm": 10.0,
+    "clamp_block_thickness_mm": 5.0,
+    "front_crossbar_local_y_mm": [
+      4.5,
+      8.5
+    ],
+    "clamp_bolt_local_y_mm": 27.5,
+    "clamp_bolt_local_z_mm": [
+      13.0,
+      21.0
+    ],
+    "notes": [
+      "Dimensions are initial design variables. Static interference, stiffness, stress, gauge response and real mounting checks are still required.",
+      "The material modulus is taken as a nominal model input. It is not a certificate, fatigue allowable or hardware load rating.",
+      "Thin leading edges remain bare; diagonal foil grids read shear in vertical webs behind them."
+    ],
+    "material_source": "https://www.atimaterials.com/Products/Documents/datasheets/stainless-specialty-steel/precipitationhardening/ati_17-4_tds_en_v2.pdf"
+  },
+  "gauges": {
+    "candidate": "OMEGA SGT-2DD/350-SY41",
+    "quantity": 2,
+    "nominal_bridge_resistance_ohm": 350,
+    "carrier_length_mm": 7.6,
+    "carrier_height_mm": 8.9,
+    "grid_length_mm": 1.6,
+    "grid_width_mm": 1.7,
+    "center_local_y_mm": 15.5,
+    "center_local_z_mm": 17.0,
+    "measurement_axis": "Diagonal grids at +45 and -45 degrees to local Y on each web's outer YZ face",
+    "excitation_v_candidate": 5.0,
+    "selection_status": "Manufacturer carrier size, full-bridge shear pattern and steel compensation verified; bonding and complete integration still in development",
+    "source": "https://assets.dwyeromega.com/pdf/test-and-measurement-equipment/strain-gauges/SGT_Full-Bridge_Shear.pdf"
+  },
+  "mount": {
+    "material_candidate": "Wrought 17-4PH stainless steel, H900 condition",
+    "carrier_native_x_ranges_mm": [
+      [
+        -27.95,
+        -24.95
+      ],
+      [
+        7.75,
+        10.75
+      ]
+    ],
+    "carrier_front_native_y_mm": -85.0,
+    "carrier_rear_native_y_mm": -14.5,
+    "carrier_clamp_vertical_border_mm": 1.1,
+    "original_side_anchor_yz_mm": [
+      [
+        -75.26417028511005,
+        0.0
+      ],
+      [
+        -18.559447378460487,
+        1.771483509339382
+      ]
+    ],
+    "post_radius_mm": 4.0,
+    "source_contact_gap_mm": 0.05,
+    "m3_clearance_mm": 3.4,
+    "m3_tap_drill_mm": 2.5,
+    "countersink_diameter_mm": 6.3,
+    "clamp_screws": [
+      "Left: two M3 x 8, 90-degree flat head",
+      "Right: two M3 x 6, 90-degree flat head"
+    ],
+    "main_mount_screws_candidate": "Two M3 x 40, 90-degree flat head from the right; threaded left carrier. Confirm actual stack and engagement."
+  },
+  "complete_finger_candidate": {
+    "nail_readout": "Reuse C1.1 dual-bridge PCB with a distinct nail firmware and recording identity on one RP2040 Pico",
+    "soft_region": "Four retained R1 TPU contact cells, two ADS1115 breakouts and the explicit wiring in nail_electronics.json; integration software remains in development",
+    "notes": [
+      "Nail-base sensing alone does not measure TPU-only contact.",
+      "Both nail and soft-region channels must be present before this candidate enters the all-region comparison."
+    ]
+  },
+  "structural_screen": {
+    "evidence_kind": "linear_FEA_screen_only",
+    "nominal_global_mesh_mm": [
+      1.5,
+      1.35
+    ],
+    "web_mesh_mm": [
+      0.7,
+      0.5
+    ],
+    "mesh_optimizer": "elastic-direct",
+    "nominal_contact_patch_radius_mm": 1.0,
+    "provisional_tip_motion_target_mm_at_20n": 0.1,
+    "motion_convergence_relative_limit": 0.01,
+    "clamp_model": "Bonded metal nail-to-carrier interfaces; fixed faces at the original side-support contact pads",
+    "limits": [
+      "The original printed frame and attachment compliance are excluded from this first metal load-path screen.",
+      "Actual bolted joints, steel condition, gauge bonding, temperature, contact and dynamic force require measurements.",
+      "The internal grid positions of the purchased full-bridge pattern are not inferred from the catalog illustration."
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+category,quantity_per_finger_or_shared,item,specification,location,reference,notes
+C1 PCB electronics,2,0.1ohm 1% 1206,0.1ohm 1% 1206,RASH; RBSH,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,1,100k 0402,100k 0402,RPDWN,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,100k 1% 0402,100k 1% 0402,RASEL; RBSEL,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,4,100nF 16V X7R 0402,100nF 16V X7R 0402,CAMON; CASW; CBMON; CBSW,PCB source and pin/net CSV,Use at least 16 V rating. Assemble on the retained C1.1 PCB.
+C1 PCB electronics,8,100nF X7R 0402,100nF X7R 0402,CAPGA; CAREF; CAAV; CADV; CBPGA; CBREF; CBAV; CBDV,PCB source and pin/net CSV,Use at least 16 V rating. Assemble on the retained C1.1 PCB.
+C1 PCB electronics,4,100ohm 1% 0402,100ohm 1% 0402,RAP; RAN; RBP; RBN,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,4,10M 1% 0402,10M 1% 0402,RABP; RABN; RBBP; RBBN,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,10nF C0G 0402,10nF C0G 0402,CADIF; CBDIF,PCB source and pin/net CSV,Use C0G dielectric and at least 10 V rating for the differential input capacitors. Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,10ohm 0805,10ohm 0805,RASUP; RBSUP,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,3,10uF 10V X7R 0805,10uF 10V X7R 0805,CASUP; CBSUP; C5,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,1M 0.1% 0402,1M 0.1% 0402,RACAL; RBCAL,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,1,1uF 10V X7R 0402,1uF 10V X7R 0402,C3,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,1,2.54mm through-hole header; 16 pins,2.54mm through-hole header; 16 pins,J1,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,2.54mm through-hole header; 4 pins,2.54mm through-hole header; 4 pins,JA; JB,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,4,33ohm 0402,33ohm 0402,RAOUT; RBOUT; RCLK_A; RCLK_B,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,4.7k 0402,4.7k 0402,RSDA; RSCL,PCB source and pin/net CSV,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,ADS1232IPWR,ADS1232IPWR,UA; UB,https://www.ti.com/lit/ds/symlink/ads1232.pdf,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,INA219AIDR,INA219AIDR,UAMON; UBMON,https://www.ti.com/lit/ds/symlink/ina219.pdf,Assemble on the retained C1.1 PCB.
+C1 PCB electronics,2,TMUX1101DBVR,TMUX1101DBVR,UASW; UBSW,https://www.ti.com/lit/ds/symlink/tmux1101.pdf,Assemble on the retained C1.1 PCB.
+PCB,1,C1.1 bridge readout PCB,82 x 64 x 1.6 mm; checked four-layer C1 Gerbers/drills,Wrist/base,../c1/pcb/c1_readout_fabrication.zip,Use the C1 electronics rows above; C1's mechanical parts and axial gauges are not part of N1.
+Controller,1,Raspberry Pi Pico RP2040,One controller for both nail bridges and four TPU cells,Wrist/base,https://www.raspberrypi.com/products/raspberry-pi-pico/,Use the complete N1 firmware ZIP.
+Gauge,2,Full shear bridge,OMEGA SGT-2DD/350-SY41; steel compensation; 350 ohm,NL and NR outer web faces,https://assets.dwyeromega.com/pdf/test-and-measurement-equipment/strain-gauges/SGT_Full-Bridge_Shear.pdf,Sold in packs of five. Join like-labeled S+ and S- pads; record lot and supplied gauge data.
+Mechanical,1,nail_bare_sensing_fork,"Wrought 17-4PH stainless steel, H900 condition, supplier certificate required","Bare source-shaped leading fork, two vertical shear webs and thick inactive clamp ends.",cad/nail_bare_sensing_fork.step,Printed metal-part copies are fit witnesses only. Machine and inspect actual metal force parts.
+Mechanical,1,nail_left_fixed_carrier,"Wrought 17-4PH stainless steel, H900 condition, supplier certificate required","Fixed metal support, original side attachment axes, M3 threaded mount and extended front clamp shoe.",cad/nail_left_fixed_carrier.step,Printed metal-part copies are fit witnesses only. Machine and inspect actual metal force parts.
+Mechanical,1,nail_right_fixed_carrier,"Wrought 17-4PH stainless steel, H900 condition, supplier certificate required",Fixed metal support with flush M3 side-mount and front-clamp screws.,cad/nail_right_fixed_carrier.step,Printed metal-part copies are fit witnesses only. Machine and inspect actual metal force parts.
+Mechanical,1,nail_revised_hard_frame,PETG: match original frame process,Separate original-frame derivative with its hard nail removed; source root and TPU attachment geometry retained.,cad/nail_revised_hard_frame.step,Printed metal-part copies are fit witnesses only. Machine and inspect actual metal force parts.
+Retained insert,1,Original ENPIRE TPU insert,Same recorded print grade/process as the original control,Original three attachment bores,../../docs/GEOMETRY.md,Geometry retained; compare actual compliance after frame and carrier changes.
+Fastener,2,Left front-clamp screws,"M3 x 8; 90-degree flat head, head diameter <=6.0 mm",Left carrier into nail block,N1 drawings,Tap specified 2.5 mm bores M3. Verify actual engagement.
+Fastener,2,Right front-clamp screws,"M3 x 6; 90-degree flat head, head diameter <=6.0 mm",Right carrier into nail block,N1 drawings,
+Fastener,2,Side-mount screws,"M3 x 40; 90-degree flat head, head diameter <=6.0 mm",Right carrier through source side axes to threaded left carrier,N1 drawings,"Confirm real source stack, threads and free-end projection. Preserve original TPU retention."
+Bonding,shared,Gauge adhesive kit,M-Bond 200 for initial laboratory bonding,Prepared steel web faces,https://micro-measurements.com/node/418,Follow gauge and adhesive preparation/cure instructions; record bonding and cure.
+Protection,shared,Gauge coating,M-Coat A candidate; record actual coating and cure,Bonded gauges,Micro-Measurements coating instructions,Test the complete coated assembly; no sealing or life claim.
+Soft readout,2,ADS1115 breakout,Adafruit 1085; addresses 0x48 and 0x49; all power/pullups at 3V3,Wrist/base,https://www.adafruit.com/product/1085,Do not substitute ADS1015.
+Soft readout,8,Divider resistors,"10 kohm, 1% or better; four pull-downs and four reference-divider resistors",Wrist/base,Generic electronics supplier,Measure actual values. The four pull-down nominal values must match config.json.
+Soft readout,optional,Range resistors,"330 ohm and 1 kohm, 1% or better",TPU pull-down positions,Generic electronics supplier,"If required by measured saturation, replace the physical resistor, update config and recalibrate."
+Soft cells,4,Remote continuity resistors,"100 kohm, 1% 0603",At CH2-CH5 foil terminals,Generic electronics supplier,A resistor at the readout board would not check the sensor leads.
+Soft cells,shared strip,Conductive film,0.10 mm pressure-sensitive conductive sheet,Four R1 TPU laminates,https://www.adafruit.com/product/1361,"Record supplier, thickness and lot; cut separate cells."
+Soft cells,shared strip,Electrodes and backing,25-35 um bare copper foil and thin polyimide insulation,R1 CH2-CH5 cells,../../docs/BUILD_R1.md,Use the released CH2-CH5 patterns and keep adhesive out of active interfaces.
+Soft cells,shared,Cast saddles and covers,R1 Dragon Skin 10 Slow starting recipe and four supplied saddle molds,TPU contact regions,https://www.smooth-on.com/products/dragon-skin-10-slow/,"Record recipe, thickness, cure and surface treatment; use the complete R1 instructions."
+Soft cells,shared,Cell mounting adhesive,R1 documented Sil-Poxy/transfer-film route after adhesion coupons,"Saddle, laminate and TPU interfaces",../../docs/BUILD_R1.md,Qualification includes the complete bonded stack.
+Cable,8,Bridge conductors,Two four-wire bundles with twisted excitation and signal pairs,NL/NR to JA/JB,N1 wiring map,Keep slack; total excitation-loop resistance <=2 ohm per bridge; calibrate installed cables.
+Cable,8,TPU cell conductors,Fine stranded insulated 34-36 AWG leads,Four separate cell pairs,N1 wiring map,Keep flexing tails out of rigid clamp interfaces.
+Cable,1,Pico/readout harness,Short 16-pin J1 harness plus short 3V3 I2C branches,Wrist/base,N1 wiring map,Measure common clock and I2C waveforms.
+Test,shared,Bridge dummy resistors,Eight matched 348 or 350 ohm resistors,Electrical-only checks,C1 readout guide,Record dummy data as electrical_dummy.
+Test,shared,Force reference,At least 25 N capacity; documented uncertainty <=0.05 N,Bench,Campaign requirements,Independent reference; use actual readings.
+Test,shared,Displacement measurement,Suitable resolution for the provisional 0.1 mm motion screen,Leading nail and mount,Campaign requirements,Measure the whole installed assembly and the matched original control.

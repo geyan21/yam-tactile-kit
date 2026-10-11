@@ -14,6 +14,10 @@ This is the concrete prototype recommendation for your thin-tip, dexterous gripp
 
 ## Order and make these sensing elements
 
+The table below is the B1 magnetic build. **N1 has its own [bare-nail build and
+placement guide](BUILD_NAIL.md): two OMEGA full shear bridges on steel webs and
+four R1 cells on the TPU.** Use that separate page for its parts and wiring.
+
 | What | Exact choice | Quantity | Where to put it |
 |---|---|---|---|
 | Soft-region sensing electronics | **Melexis MLX90393SLW-ABA-011**, QFN-16, one on each custom B1 8 × 6.4 mm PCB | 5 heads | S0–S3 on the rigid side spine beside the soft contact regions; S4 toward the base |

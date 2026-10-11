@@ -1,0 +1,496 @@
+{
+  "schema": "yam-nail-structural-review/1",
+  "evidence_kind": "linear_FEA_screen_only",
+  "physical_specimens_tested": 0,
+  "force_accuracy_qualified": false,
+  "convergence": {
+    "normal_cases": [
+      {
+        "id": "left_tip_20n",
+        "normal_motion_change_mm": 2.4799999999998434e-05,
+        "relative_normal_motion_change": 0.0026482637961194005,
+        "patch_motion_change_mm": 2.6156574873792e-05,
+        "relative_patch_motion_change": 0.0025474190223897302
+      },
+      {
+        "id": "right_tip_20n",
+        "normal_motion_change_mm": 2.7815000000000478e-05,
+        "relative_normal_motion_change": 0.0030550400362365725,
+        "patch_motion_change_mm": 2.8968960287414597e-05,
+        "relative_patch_motion_change": 0.002901288849201186
+      },
+      {
+        "id": "left_shoulder_20n",
+        "normal_motion_change_mm": 1.4875000000000131e-05,
+        "relative_normal_motion_change": 0.002830152780684589,
+        "patch_motion_change_mm": 1.5800507161768126e-05,
+        "relative_patch_motion_change": 0.002701323116189042
+      },
+      {
+        "id": "right_shoulder_20n",
+        "normal_motion_change_mm": 1.6257999999999898e-05,
+        "relative_normal_motion_change": 0.003364804820417129,
+        "patch_motion_change_mm": 1.7874212872662686e-05,
+        "relative_patch_motion_change": 0.0033705695741337
+      },
+      {
+        "id": "rear_center_20n",
+        "normal_motion_change_mm": 7.869999999999665e-06,
+        "relative_normal_motion_change": 0.002768068240092344,
+        "patch_motion_change_mm": 8.120355994941777e-06,
+        "relative_patch_motion_change": 0.002682316356274545
+      }
+    ],
+    "maximum_relative_change": 0.003364804820417129,
+    "maximum_patch_relative_change": 0.0033705695741337,
+    "relative_limit": 0.01,
+    "passed": true
+  },
+  "max_leading_tip_motion_mm_at_20n": 0.009364626,
+  "provisional_target_mm": 0.1,
+  "motion_screen_met": true,
+  "scope": "Metal nail plus ideal bonded carriers, including the actual thin leading prongs. Printed frame and real clamp compliance are omitted.",
+  "limits": [
+    "The original printed frame and attachment compliance are excluded from this first metal load-path screen.",
+    "Actual bolted joints, steel condition, gauge bonding, temperature, contact and dynamic force require measurements.",
+    "The internal grid positions of the purchased full-bridge pattern are not inferred from the catalog illustration.",
+    "Contact loads use fixed physical disk quadrature and quadratic surface interpolation. Stress peaks do not establish strength or fatigue allowables.",
+    "No internal foil-grid coordinates or physical bridge calibration are supplied by this structural screen.",
+    "The off-axis 5 N and equal/opposite loading cases are additional modeling scenarios, not user-specified force ratings."
+  ],
+  "fine_mesh": {
+    "nodes": 124407,
+    "elements": 72168,
+    "element": "C3D10",
+    "nominal_size_mm": 1.35,
+    "local_refinement_regions": [
+      {
+        "XMin": -19.35,
+        "YMin": -98.99225314557911,
+        "ZMin": 5.664543635424521,
+        "XMax": -17.65,
+        "YMax": -82.21036670981292,
+        "ZMax": 22.446430071190722,
+        "VIn": 0.5,
+        "VOut": 1.35,
+        "Thickness": 1
+      },
+      {
+        "XMin": 2.6500000000000004,
+        "YMin": -98.99225314557911,
+        "ZMin": 5.664543635424521,
+        "XMax": 4.35,
+        "YMax": -82.21036670981292,
+        "ZMax": 22.446430071190722,
+        "VIn": 0.5,
+        "VOut": 1.35,
+        "Thickness": 1
+      },
+      {
+        "XMin": -14.406846466552532,
+        "YMin": -117.66461480444003,
+        "ZMin": -4.416491213141846,
+        "XMax": -1.4068464665525315,
+        "YMax": -112.71526128445609,
+        "ZMax": -1.079788305466221,
+        "VIn": 0.5,
+        "VOut": 1.35,
+        "Thickness": 1
+      }
+    ],
+    "optimizer": "elastic-direct",
+    "minimum_jacobian_determinant": 0.000712883524854113,
+    "minimum_sampled_scaled_jacobian": 0.10405478770192751,
+    "reported_element_volume_sum_mm3": 14503.029211786536,
+    "displacement_dof_limit": 400000,
+    "mesh_surface_elements_preserved": true
+  },
+  "cases": [
+    {
+      "id": "left_tip_20n",
+      "kind": "normal_20n",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        19.99999999999999
+      ],
+      "moment_about_reference_nmm": [
+        -809.0466471661791,
+        84.13692933105064,
+        0.0
+      ],
+      "reaction_force_residual_n": 5.490523507097256e-07,
+      "reaction_moment_residual_nmm": 8.552974820054024e-06,
+      "max_leading_tip_normal_motion_mm": 0.009364626,
+      "max_leading_tip_motion_magnitude_mm": 0.01026787295058139,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          -0.0009229724185600446,
+          -0.004054685565969606,
+          0.00847138718264322
+        ],
+        "right_tip": [
+          -0.0008620564669618803,
+          -0.0033788849106667304,
+          0.0065118063793491105
+        ],
+        "left_shoulder": [
+          -0.001015598138523896,
+          -0.0036004071444049202,
+          0.004854447796928474
+        ],
+        "right_shoulder": [
+          -0.0010201393665133685,
+          -0.003189492334500518,
+          0.003868419456303857
+        ],
+        "rear_center": [
+          -0.0010943113967990233,
+          -0.003274838725715471,
+          0.0027103835040170024
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 30.38132282080923,
+      "p99_integration_point_von_mises_mpa": 7.193294752469868
+    },
+    {
+      "id": "right_tip_20n",
+      "kind": "normal_20n",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        20.000000000000014
+      ],
+      "moment_about_reference_nmm": [
+        -809.0466471661787,
+        -67.86307066894938,
+        0.0
+      ],
+      "reaction_force_residual_n": 1.245607878552664e-06,
+      "reaction_moment_residual_nmm": 1.2889562469166873e-05,
+      "max_leading_tip_normal_motion_mm": 0.009104627,
+      "max_leading_tip_motion_magnitude_mm": 0.009984859072336297,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          6.354477298206185e-05,
+          -0.0033673896852899586,
+          0.006511806313461897
+        ],
+        "right_tip": [
+          0.00012397509714805974,
+          -0.004039283840720817,
+          0.008201624589778272
+        ],
+        "left_shoulder": [
+          0.00023390557512885144,
+          -0.003179850124308892,
+          0.003985759659382229
+        ],
+        "right_shoulder": [
+          0.0002292203561590529,
+          -0.003580906236573355,
+          0.004484672944989808
+        ],
+        "rear_center": [
+          0.00031706697425538054,
+          -0.0032603709113369407,
+          0.0025925856942480797
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 29.216332255175868,
+      "p99_integration_point_von_mises_mpa": 7.152356315042018
+    },
+    {
+      "id": "left_shoulder_20n",
+      "kind": "normal_20n",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        19.999999999999996
+      ],
+      "moment_about_reference_nmm": [
+        -619.2854857659996,
+        148.1369293310506,
+        0.0
+      ],
+      "reaction_force_residual_n": 2.0776335528530553e-06,
+      "reaction_moment_residual_nmm": 1.2763563081665944e-05,
+      "max_leading_tip_normal_motion_mm": 0.0052559,
+      "max_leading_tip_motion_magnitude_mm": 0.005849173342898379,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          -0.0015135320418018761,
+          -0.0020499842116131293,
+          0.0048544478169771955
+        ],
+        "right_tip": [
+          -0.001458841006007033,
+          -0.0018583483525699148,
+          0.003985759754428463
+        ],
+        "left_shoulder": [
+          -0.0015988269941070398,
+          -0.0020197503740340683,
+          0.003648724807559989
+        ],
+        "right_shoulder": [
+          -0.0015782247343063224,
+          -0.0017383908340965833,
+          0.002429459216231094
+        ],
+        "rear_center": [
+          -0.0016446762273305787,
+          -0.0018274140687664557,
+          0.002138330975327427
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 20.168982887994773,
+      "p99_integration_point_von_mises_mpa": 4.997731021912412
+    },
+    {
+      "id": "right_shoulder_20n",
+      "kind": "normal_20n",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        19.99999999999999
+      ],
+      "moment_about_reference_nmm": [
+        -619.2854857659995,
+        -131.86307066894938,
+        0.0
+      ],
+      "reaction_force_residual_n": 1.7333403959611555e-07,
+      "reaction_moment_residual_nmm": 2.655721293597354e-05,
+      "max_leading_tip_normal_motion_mm": 0.004831781,
+      "max_leading_tip_motion_magnitude_mm": 0.005303024453146526,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          0.0006717522166484406,
+          -0.0018409145887958733,
+          0.0038684193851186706
+        ],
+        "right_tip": [
+          0.0007275471292779821,
+          -0.0020324820208305707,
+          0.004484672741200615
+        ],
+        "left_shoulder": [
+          0.0008093873092722325,
+          -0.0017207548670343025,
+          0.002429459244553498
+        ],
+        "right_shoulder": [
+          0.0008297484861110476,
+          -0.0020036395496403447,
+          0.003195995135489357
+        ],
+        "rear_center": [
+          0.0008877259123646346,
+          -0.0018111698846866114,
+          0.001923348571466335
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 16.696657143140403,
+      "p99_integration_point_von_mises_mpa": 4.839030311469419
+    },
+    {
+      "id": "rear_center_20n",
+      "kind": "normal_20n",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        19.999999999999996
+      ],
+      "moment_about_reference_nmm": [
+        -499.4363311974653,
+        8.136929331050634,
+        0.0
+      ],
+      "reaction_force_residual_n": 7.551194466167615e-07,
+      "reaction_moment_residual_nmm": 2.115414631044877e-05,
+      "max_leading_tip_normal_motion_mm": 0.002843138,
+      "max_leading_tip_motion_magnitude_mm": 0.00302736699045451,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          -0.0003873460957402832,
+          -0.0009597116862451329,
+          0.0027103832833709303
+        ],
+        "right_tip": [
+          -0.00039004053167914876,
+          -0.0009618655343793261,
+          0.0025925857342224694
+        ],
+        "left_shoulder": [
+          -0.0003733997260283313,
+          -0.000926483421244039,
+          0.0021383306237881504
+        ],
+        "right_shoulder": [
+          -0.0003830146571415056,
+          -0.0009308102398536716,
+          0.001923348699950471
+        ],
+        "rear_center": [
+          -0.0003712988892358081,
+          -0.0009086237709493624,
+          0.001692307651302029
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 13.118823100226722,
+      "p99_integration_point_von_mises_mpa": 3.3054016462279585
+    },
+    {
+      "id": "Fx_5n",
+      "kind": "off_axis_scenario",
+      "applied_force_native_n": [
+        4.999999999999999,
+        0.0,
+        0.0
+      ],
+      "moment_about_reference_nmm": [
+        0.0,
+        -17.247276629819723,
+        124.85908279936632
+      ],
+      "reaction_force_residual_n": 2.4775343891710884e-07,
+      "reaction_moment_residual_nmm": 7.048164725973885e-07,
+      "max_leading_tip_normal_motion_mm": 0.0004204694,
+      "max_leading_tip_motion_magnitude_mm": 0.002385206114501816,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          0.002302246062591368,
+          8.698428543500162e-05,
+          -0.00027357783443197046
+        ],
+        "right_tip": [
+          0.00230149478012458,
+          -5.269763815947931e-05,
+          7.926674280021612e-05
+        ],
+        "left_shoulder": [
+          0.0024490750839722955,
+          0.0001435331577863604,
+          -0.0004111690463248478
+        ],
+        "right_shoulder": [
+          0.002448705699791294,
+          -0.00010962964090973571,
+          0.0002219314778723949
+        ],
+        "rear_center": [
+          0.0025528651581976404,
+          1.7040914875024076e-05,
+          -9.282472354451352e-05
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 11.35000309919911,
+      "p99_integration_point_von_mises_mpa": 3.142068587692922
+    },
+    {
+      "id": "Fy_5n",
+      "kind": "off_axis_scenario",
+      "applied_force_native_n": [
+        0.0,
+        4.999999999999999,
+        0.0
+      ],
+      "moment_about_reference_nmm": [
+        17.247276629819723,
+        0.0,
+        -2.0342323327626586
+      ],
+      "reaction_force_residual_n": 5.277092352700439e-08,
+      "reaction_moment_residual_nmm": 1.7767682298043075e-06,
+      "max_leading_tip_normal_motion_mm": 0.000884863,
+      "max_leading_tip_motion_magnitude_mm": 0.0011004900213629194,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          -6.679712029761242e-07,
+          0.0006496243143895772,
+          -0.0008187097496909331
+        ],
+        "right_tip": [
+          -4.972720082655645e-05,
+          0.0006284669153656699,
+          -0.0008150927638959057
+        ],
+        "left_shoulder": [
+          7.90404565702029e-06,
+          0.0006342582935430293,
+          -0.0004568535274900075
+        ],
+        "right_shoulder": [
+          -6.434325496260262e-06,
+          0.0005955613995438087,
+          -0.00045279244279150874
+        ],
+        "rear_center": [
+          1.7040914132165163e-05,
+          0.0006247734028970671,
+          -0.00022715592330659973
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 6.815737726226328,
+      "p99_integration_point_von_mises_mpa": 1.2843437667631818
+    },
+    {
+      "id": "opposed_tip_forces",
+      "kind": "zero_net_force_scenario",
+      "applied_force_native_n": [
+        0.0,
+        0.0,
+        5.030698080332741e-16
+      ],
+      "moment_about_reference_nmm": [
+        -1.0813572259849025e-13,
+        75.99999999999999,
+        0.0
+      ],
+      "reaction_force_residual_n": 1.975022366672985e-07,
+      "reaction_moment_residual_nmm": 2.0373098480195848e-06,
+      "max_leading_tip_normal_motion_mm": 0.00121618,
+      "max_leading_tip_motion_magnitude_mm": 0.0013555565444170303,
+      "patch_mean_displacement_native_mm": {
+        "left_tip": [
+          -0.0004932585866487618,
+          -0.0003436479213680052,
+          0.0009797904157348184
+        ],
+        "right_tip": [
+          -0.0004930157929717865,
+          0.00033019942250945563,
+          -0.0008449091046130149
+        ],
+        "left_shoulder": [
+          -0.0006247519584990292,
+          -0.00021027856592174357,
+          0.00043434402374371617
+        ],
+        "right_shoulder": [
+          -0.000624679852826621,
+          0.00019570685966545801,
+          -0.0003081266731916177
+        ],
+        "rear_center": [
+          -0.0007056891442905046,
+          -7.233979599006476e-06,
+          5.8898804902779835e-05
+        ]
+      },
+      "max_integration_point_von_mises_mpa": 7.4326704421783845,
+      "p99_integration_point_von_mises_mpa": 3.5544578548692027
+    }
+  ],
+  "inputs": [
+    {
+      "directory": "build/engineering/prototypes/nail/fea/mesh_1p5_web_0p7/20261011T021957.818219Z",
+      "screen_sha256": "5e89b72fa8437c69be63d5b228aa0fd4a48e0a76fb85fb178d3cb9a814032f31"
+    },
+    {
+      "directory": "build/engineering/prototypes/nail/fea/mesh_1p35_web_0p5/20261011T021957.816586Z",
+      "screen_sha256": "1aa1d9199f78399bbed5f5007190fc6cc1c1619f98d8527cd222ab7991645bc8"
+    }
+  ]
+}

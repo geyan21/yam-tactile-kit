@@ -1,0 +1,41 @@
+{
+  "schema": "yam-nail-firmware/1",
+  "protocol": "yam-nail/1",
+  "hardware_revision": "N1.1",
+  "physical_devices_tested": 0,
+  "files": {
+    "main.py": "eeac7a14200265b1cdfb16b1e64de4c1b972723aef51e9cc9d831011050527f4",
+    "ads1115.py": "65c2ae81dbd10369d7af09abe5bf4eab41aa4355a6e0b80d33a98f4157b4ae2b",
+    "pressure_scan.py": "d36815818a7f44023581ee6c6a053e6d1cfb728d2b136d0e03be08ed7289e54c",
+    "config.json": "b9737079fc22311ccde1dd4f6db5542617d23e15d37d59719f4d3e92e5fa2e18",
+    "ads1232.py": "270bc888705425b48e0a1f3e8c8fbff1c4287b9bfe532568dd40176e7bc7d9b8",
+    "ina219.py": "3b8fcc1507f802f358e5008695b3d3432c51380a092ecf29720c5ba93173df08"
+  },
+  "sources": {
+    "main.py": {
+      "path": "engineering/firmware/nail/main.py",
+      "sha256": "eeac7a14200265b1cdfb16b1e64de4c1b972723aef51e9cc9d831011050527f4"
+    },
+    "ads1115.py": {
+      "path": "engineering/firmware/nail/ads1115.py",
+      "sha256": "65c2ae81dbd10369d7af09abe5bf4eab41aa4355a6e0b80d33a98f4157b4ae2b"
+    },
+    "pressure_scan.py": {
+      "path": "engineering/firmware/nail/pressure_scan.py",
+      "sha256": "d36815818a7f44023581ee6c6a053e6d1cfb728d2b136d0e03be08ed7289e54c"
+    },
+    "config.json": {
+      "path": "engineering/firmware/nail/config.json",
+      "sha256": "b9737079fc22311ccde1dd4f6db5542617d23e15d37d59719f4d3e92e5fa2e18"
+    },
+    "ads1232.py": {
+      "path": "engineering/firmware/c1/ads1232.py",
+      "sha256": "270bc888705425b48e0a1f3e8c8fbff1c4287b9bfe532568dd40176e7bc7d9b8"
+    },
+    "ina219.py": {
+      "path": "engineering/firmware/c1/ina219.py",
+      "sha256": "3b8fcc1507f802f358e5008695b3d3432c51380a092ecf29720c5ba93173df08"
+    }
+  },
+  "note": "Copy all six files to a dedicated RP2040 Pico. Shared bridge drivers are retained C1 sources. No force calibration is embedded."
+}

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1370" viewBox="0 0 1280 1370" role="img" aria-labelledby="title desc">
+  <title id="title">N1 wiring: two shear bridges, four TPU cells, one Pico</title>
+  <desc id="desc">Complete like-labeled signal pads on each shear bridge, connect NL and NR to the retained C1 board, and add two 3.3 volt ADS1115 boards with four TPU cells and two reference dividers.</desc>
+  <rect width="1280" height="1370" fill="#f7f9f5"/>
+  <g font-family="sans-serif" fill="#233f48">
+    <text x="34" y="44" font-size="27" font-weight="bold">N1 · two nail bridges + four TPU cells · one RP2040 Pico</text>
+    <text x="34" y="77" font-size="17">Run the complete N1 firmware. The C1 PCB supplies the bridge readout; its mechanical parts are a separate design.</text>
+    <rect x="30" y="105" width="586" height="447" rx="13" fill="#f2e8d6" stroke="#b99858"/>
+    <text x="52" y="140" font-size="21" font-weight="bold">Complete each OMEGA shear bridge</text>
+    <text x="52" y="169" font-size="16">SGT-2DD/350-SY41 · repeat for NL and NR</text>
+    <rect x="205" y="231" width="205" height="198" fill="#deb85f" stroke="#9a773a"/>
+    <path d="M247 273L368 390M368 273L247 390" stroke="#8a6834" stroke-width="3"/>
+    <text x="307" y="455" text-anchor="middle" font-size="14">Purchased carrier · symbol only</text>
+    <g stroke="#775f39" stroke-width="2" fill="none">
+      <path d="M308 231V204"/>
+      <path d="M308 429V486"/>
+      <path d="M205 280H156V375H205M156 327H110"/>
+      <path d="M410 280H460V375H410M460 327H504"/>
+    </g>
+    <g font-size="17" font-weight="bold">
+      <text x="308" y="198" text-anchor="middle">+Exc → E+</text>
+      <text x="308" y="510" text-anchor="middle">−Exc → E−</text>
+      <text x="73" y="333">S−</text>
+      <text x="508" y="333">S+</text>
+    </g>
+    <g font-size="13">
+      <text x="164" y="270">−Sig</text><text x="164" y="397">−Sig</text>
+      <text x="420" y="270">+Sig</text><text x="420" y="397">+Sig</text>
+      <text x="55" y="534">Join both +Sig pads together and both −Sig pads together. Follow actual pad labels.</text>
+    </g>
+    <rect x="640" y="105" width="610" height="447" rx="13" fill="#dfede5" stroke="#659a86"/>
+    <text x="665" y="140" font-size="22" font-weight="bold">Retained C1.1 PCB at wrist / base</text>
+    <text x="665" y="180" font-size="18">NL → JA · NR → JB</text>
+    <text x="665" y="214" font-size="18">Each connector: 1 E+ · 2 E− · 3 S+ · 4 S−</text>
+    <text x="665" y="261" font-size="17">Two ADS1232 converters, one per bridge</text>
+    <text x="665" y="292" font-size="17">Gain 128 · common configured 6.25 MHz clock</text>
+    <text x="665" y="332" font-size="17">INA219 monitors at 0x40 / 0x41 check excitation.</text>
+    <text x="665" y="363" font-size="17">TMUX1101 switches apply the electrical shunt test.</text>
+    <text x="665" y="410" font-size="17">Nominal 5 V analog power · 3.3 V digital logic</text>
+    <text x="665" y="444" font-size="16">Two separate four-wire bridge bundles; retain slack.</text>
+    <text x="665" y="475" font-size="16">Calibrate the complete installed cables and sensor.</text>
+    <text x="665" y="520" font-size="14">Electrical tests do not verify bonding or supply a force calibration.</text>
+    <rect x="30" y="575" width="1220" height="231" rx="13" fill="#e7edef" stroke="#9aadba"/>
+    <text x="53" y="613" font-size="22" font-weight="bold">C1 J1 → Pico · keep the clock harness short and verify pin 1</text>
+    <g font-size="17">
+      <text x="53" y="656">J1.2 → GP16 · ADC clock</text>
+      <text x="53" y="692">J1.4 → GP17 · serial clock</text>
+      <text x="53" y="728">J1.6 → GP18 · bridge A data</text>
+      <text x="53" y="764">J1.8 → GP19 · bridge B data</text>
+      <text x="444" y="656">J1.10 → GP20 · PDWN</text>
+      <text x="444" y="692">J1.11 → GP21 · shunt A</text>
+      <text x="444" y="728">J1.12 → GP22 · shunt B</text>
+      <text x="444" y="764">J1.15 / 16 → GP4 / GP5 · I²C</text>
+      <text x="876" y="656">J1.13 → Pico 3V3</text>
+      <text x="876" y="692">J1.14 → nominal 5 V feed</text>
+      <text x="876" y="728">J1.1 / 3 / 5 / 7 / 9 → GND</text>
+      <text x="876" y="764">One power source at a time</text>
+    </g>
+    <rect x="30" y="829" width="1220" height="472" rx="13" fill="#f1eee2" stroke="#b5a781"/>
+    <text x="53" y="868" font-size="23" font-weight="bold">Four TPU cells · two ADS1115 breakouts · 3.3 V only</text>
+    <text x="53" y="902" font-size="17">Both SDA → GP4 · both SCL → GP5 · both power and pullups → 3V3 · common GND</text>
+    <text x="53" y="937" font-size="17">First ADDR → GND (0x48) · second ADDR → 3V3 (0x49)</text>
+    <path d="M644 960V1246" stroke="#b5a781"/>
+    <g font-size="17">
+      <text x="53" y="982" font-weight="bold">ADC 0x48</text>
+      <text x="53" y="1018">A0 and A1 → GND checks</text>
+      <text x="53" y="1054">A2 → CH2 distal TPU node</text>
+      <text x="53" y="1090">A3 → CH3 mid-distal TPU node</text>
+      <text x="682" y="982" font-weight="bold">ADC 0x49</text>
+      <text x="682" y="1018">A0 → CH4 mid-proximal TPU node</text>
+      <text x="682" y="1054">A1 → CH5 proximal TPU node</text>
+      <text x="682" y="1090">A2 → first 10k / 10k 3V3 divider midpoint</text>
+      <text x="682" y="1126">A3 → second independent divider midpoint</text>
+    </g>
+    <text x="53" y="1150" font-size="18" font-weight="bold">Each cell: 3V3 → cell → ADC node → 10k → GND</text>
+    <text x="53" y="1183" font-size="16">A 100k resistor goes across the cell at its foil terminals.</text>
+    <text x="53" y="1214" font-size="16">Keep it outside the active patch; it checks both leads.</text>
+    <text x="53" y="1245" font-size="16">Four physical pull-down values must match N1 config.json.</text>
+    <text x="53" y="1279" font-size="15">Four scan phases form one pressure scan. Cached values retain their own start/ready times; they are not fresh on every bridge frame.</text>
+    <text x="34" y="1343" font-size="16">Physical fit, calibration, latency, contact reliability, durability and 20 N qualification remain bench tasks.</text>
+  </g>
+</svg>

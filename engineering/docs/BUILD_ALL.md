@@ -4,9 +4,9 @@ The goal is a measured comparison of all twelve designs for reliable contact
 and grip-force feedback through **20 N per finger**, while retaining thin-tip
 access for precision manipulation.
 
-**Current evidence:** five digital prototype packages are available. Physical
+**Current evidence:** six digital prototype packages are available. Physical
 specimens tested: **0**. No measured winner has been selected. The remaining
-seven designs still need the development listed below.
+six designs still need the development listed below.
 
 ## Status of every design
 
@@ -17,7 +17,7 @@ seven designs still need the development listed below.
 | [B1](https://geyan21.github.io/yam-tactile-kit/b1.html) | Magnetic insert, five heads, side support and raw readout | Assemble, check interference, calibrate force and compare compliance |
 | [B2](https://geyan21.github.io/yam-tactile-kit/b2.html) | One routed magnetic PCB, locating spacers, backer and firmware | Fit witnesses, first-board electrical checks, then matched B1/B2 tests |
 | [C1](https://geyan21.github.io/yam-tactile-kit/c1.html) | Metal root beam and carriers, eight selected gauges, checked dual-bridge PCB, firmware and static calibration tools | Verify drive fit, machine and bond specimens, measure real joint motion and force response |
-| [Rigid nail](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html) | A sensing architecture | Design the supported nail, force path, sensor and readout |
+| [N1 rigid nail](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html) | Steel sensing fork, carriers, revised frame, two shear bridges, four TPU cells and combined readout software | Fit and assemble; verify whole-finger motion, physical force calibration, mixed contacts, wear and task access |
 | [Recessed magnetic](https://geyan21.github.io/yam-tactile-kit/recessed-magnetic.html) | Field/clearance scenarios | Design the revised frame, board retention, motion clearance and range setting |
 | [Flexible matrix](https://geyan21.github.io/yam-tactile-kit/flexible-matrix.html) | Reference approaches | Design the array stack, artwork, acquisition and fork-shaped integration |
 | [Capacitive](https://geyan21.github.io/yam-tactile-kit/capacitive.html) | A converter/reference approach | Design shielded compression cells, readout, sealing and integration |
@@ -42,7 +42,7 @@ until its installed finger has been designed and evaluated.
 R1/L1 already have their dedicated force/contact workflows. B1/B2 have raw
 magnetic acquisition and bench conditions; force/contact models for those
 designs still require measured training and held-out validation data.
-C1 has a separate stationary-hold fitter and evaluator; dynamic force and
+C1 and N1 have separate stationary-hold fitters and evaluators; dynamic force and
 contact reliability still need their own measured evidence.
 
 ## Proposed comparison targets

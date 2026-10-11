@@ -1,0 +1,25 @@
+{
+  "schema": "yam-nail-force-trials/1",
+  "evidence_kind": "unmeasured_template",
+  "phase": "train",
+  "specimen": "N1-REPLACE-ME",
+  "geometry_sha256": null,
+  "reference_id": null,
+  "reference_uncertainty_n": null,
+  "transfer_experiment": false,
+  "required_force_levels_n": [0, 0.2, 0.5, 1, 2, 5, 10, 15, 20],
+  "minimum_holds_per_level": 3,
+  "required_condition_ids": [],
+  "instructions": "Use actual stationary holds and recording receipts. Training loads one region at a time: nail, CH2, CH3, CH4 or CH5. Vary nail lever positions. Freeze calibration before new validation runs; include every region and mixed contacts. This row is not a measurement.",
+  "trials": [
+    {
+      "id": "REPLACE",
+      "condition_id": "REPLACE",
+      "active_regions": ["nail"],
+      "recording": "recordings/REPLACE.jsonl",
+      "recording_sha256": null,
+      "reference_before_n": null,
+      "reference_after_n": null
+    }
+  ]
+}

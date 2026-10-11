@@ -6,7 +6,7 @@
 
 The recommendation is based on primary literature, an audit of our actual B1 parts, and the new calculations below. **No B1, B2 or C1 hardware has been qualified.** “Better” here means a promising design change with a stated benefit and a test that could reject it.
 
-**Build status:** [B2.1 has a separate prototype package](BUILD_B2.md) with a routed PCB, clean independent DRC, checked mounting CAD and raw acquisition. [C1.1 now has its own metal adapter, selected gauges, checked readout and software](BUILD_C1.md). Both need physical assembly and tests. The earlier B2/C1 figures below are retained concept studies. The [all-twelve-design campaign](BUILD_ALL.md) tracks the current work and common evaluation targets.
+**Build status:** [B2.1 has a separate prototype package](BUILD_B2.md) with a routed PCB, clean independent DRC, checked mounting CAD and raw acquisition. [C1.1 supplies a metal root adapter and readout](BUILD_C1.md), while [N1.1 supplies a bare sensing nail and four TPU cells](BUILD_NAIL.md). All need physical assembly and tests. The earlier B2/C1 figures below are retained concept studies. The [all-twelve-design campaign](BUILD_ALL.md) tracks the current work and common evaluation targets.
 
 ## What the magnetic evidence actually supports
 
@@ -75,13 +75,13 @@ The preserved [early B2 layout JSON](../concepts/b2_layout.json) and [STEP](../c
 
 Do not equate fewer pieces with lower finished-unit cost: panel utilization, four-layer fabrication, board replacement, calibration and rejected builds can offset the labor saving. Obtain actual assembled-board quotes at 1, 10 and 100 fingers.
 
-### A further tip redesign: measure a rigid nail at its base
+### N1: measure a bare nail at its base
 
-[Open the separate rigid-nail concept page](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html).
+[Open N1's separate page: sensors, placement, parts and code](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html).
 
-For a later complete finger redesign, a rigid forked nail could be supported on a small, controlled-deflection mechanism and sensed at its base. This could replace the handmade N0 surface laminates while keeping the leading gripping surfaces bare and thin. The force-sensitive-nail commercial example above makes this a relevant benchmark.
+N1 now supplies a steel fork with two vertical shear webs, a revised PETG frame and two fixed carriers. Two OMEGA SGT-2DD/350-SY41 bridges sit on the outer web faces. Four retained R1 cells cover the TPU. The leading nail is bare, with a 1.35 mm leading thickness in the design.
 
-The new mechanism would need a deliberate normal/shear/torque load path, overload protection, repeatable mounting and calibration. A magnetic version would retain magnetic-interference risks; a strain version would need bridge matching. This tip mechanism is **not present in the B2 outline witness** and has no released manufacturing design here. For the first B2 comparison, keep the two existing N0 pads so packaging can be evaluated separately.
+The [N1 engineering review](NAIL_ANALYSIS.md) reports the checked geometry and metal-model motion near 0.0094 mm at 20 N, with real joints and printed-frame compliance excluded. Its supplied calibration baseline covers normal force; pose effects, contact reliability, wear and precision tasks still need physical tests. N1 adds machining, bonding and wiring work. Keep the original B2 configuration with its two N0 pads as a separate comparison.
 
 ### A further mechanical option: recess the board into a revised hard frame
 
@@ -159,8 +159,8 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 ## Build and compare the full set
 
 The active request is to build all twelve designs and find which are good for
-the actual tasks. Follow [the common campaign](BUILD_ALL.md). R1, L1, B1 and
-B2.1 and C1.1 have prototype files; the remaining seven approaches need the listed
+the actual tasks. Follow [the common campaign](BUILD_ALL.md). R1, L1, B1,
+B2.1, C1.1 and N1.1 have prototype files; the remaining six approaches need the listed
 development work. Each will keep its own design page, build package and
 physical evidence.
 

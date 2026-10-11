@@ -1,0 +1,67 @@
+{
+  "revision": "N1.1-development",
+  "status": "Prototype firmware and wiring supplied; physical bench checks pending",
+  "architecture": "One RP2040 Pico, the retained C1.1 dual-bridge PCB and two ADS1115 breakouts for four TPU cells",
+  "nail_bridges": {
+    "gauge_part": "OMEGA SGT-2DD/350-SY41",
+    "quantity": 2,
+    "nominal_bridge_resistance_ohm": 350,
+    "readout": "C1.1 checked dual ADS1232 PCB",
+    "readout_source": "engineering/prototypes/c1/pcb/c1_readout.kicad_pcb",
+    "connector_mapping": {"JA": "NL, left web bridge", "JB": "NR, right web bridge"},
+    "bridge_pins": ["1 E+", "2 E-", "3 S+", "4 S-"],
+    "wiring_note": "Join the two S+ pads to each other and the two S- pads to each other on each full shear bridge, following the manufacturer's labeled pattern. Do not leave either half bridge disconnected.",
+    "excitation": "C1 board-side ratiometric reference; nominal 5 V through the checked filters and shunts",
+    "source": "https://assets.dwyeromega.com/pdf/test-and-measurement-equipment/strain-gauges/SGT_Full-Bridge_Shear.pdf"
+  },
+  "soft_cells": {
+    "quantity": 4,
+    "construction": "Retained R1 CH2-CH5 pressure-film cells and conformal TPU saddles",
+    "excitation_v": 3.3,
+    "pull_down_ohm": [10000, 10000, 10000, 10000],
+    "allowed_pull_down_ohm": [330, 1000, 10000, 100000],
+    "remote_continuity_ohm": 100000,
+    "circuit": "3V3 -> film in parallel with the remote 100k resistor -> ADC node -> specified pull-down -> GND",
+    "calibration_note": "The reported conductance includes the continuity resistor. A physical resistor change requires new calibration.",
+    "adc_part": "Adafruit 1085 ADS1115 breakout, two boards",
+    "adc_addresses": [72, 73],
+    "adc_supply_v": 3.3,
+    "adc_mode": "Single-shot, single-ended, +/-4.096 V, 860 SPS",
+    "raw_order": ["48:A0", "48:A1", "48:A2", "48:A3", "49:A0", "49:A1", "49:A2", "49:A3"],
+    "raw_assignment": ["GND check", "GND check", "R1 CH2 distal TPU", "R1 CH3 mid-distal TPU", "R1 CH4 mid-proximal TPU", "R1 CH5 proximal TPU", "10k/10k 3V3 divider", "independent 10k/10k 3V3 divider"],
+    "reference_divider_resistors": "Four measured 10k resistors, 1% or better, two separate dividers",
+    "acquisition": "Both ADCs convert one input index concurrently. One index is serviced per bridge frame; every raw value carries its acquisition time.",
+    "nominal_full_pressure_scan_bridge_frames": 4,
+    "source": "https://www.adafruit.com/product/1085"
+  },
+  "controller": {
+    "part": "Raspberry Pi Pico RP2040",
+    "i2c_hz": 400000,
+    "i2c_pins": {"SDA": "GP4", "SCL": "GP5"},
+    "nail_interface": "Retained C1 J1 pin map: clock GP16, serial clock GP17, data GP18/GP19, PDWN GP20, shunts GP21/GP22",
+    "i2c_devices": ["INA219 at 0x40", "INA219 at 0x41", "ADS1115 at 0x48", "ADS1115 at 0x49"],
+    "power": "One Pico/USB source. All breakout power and I2C pullups use 3V3; C1 analog power alone uses the nominal 5 V feed.",
+    "protocol": "yam-nail/1",
+    "hardware_revision": "N1.1",
+    "settings": {
+      "gain": 128,
+      "clock_hz": 6250000,
+      "conversion_cycles": 61440,
+      "input_channel": 1,
+      "bridge_count": 2,
+      "system_clock_hz": 125000000
+    }
+  },
+  "required_checks": [
+    "Both bridge excitation currents, startup electrical shunts and all bridge lead faults",
+    "All four TPU cells with resistor dummies, contact, release, open and short faults",
+    "Both grounded ADC inputs and both independent excitation dividers",
+    "Actual bus rise time, clock waveform, sample age, paired ADC timing and USB back-pressure",
+    "Physical force calibration, held-out contact locations, drift and moving-arm behavior"
+  ],
+  "notes": [
+    "This reuses completed readout hardware to isolate the new nail mechanics. It is not a claim of a fully consolidated production readout.",
+    "Pressure channels update more slowly than the two nail bridges; retained timestamps must be used when comparing latency or dynamic data.",
+    "No physical readout, force calibration or completed N1 prototype is represented by this file."
+  ]
+}

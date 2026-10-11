@@ -4,9 +4,9 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Five have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, and **C1.1** a custom strain-sensing root. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Six have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, and **N1.1** a bare sensing nail. All require physical assembly and testing.
 
-**Available:** editable CAD generators; 41 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; five BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1 force-analysis tools; material recipes; and student test plans.
+**Available:** editable CAD generators; 45 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; six BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1/N1 force-analysis tools; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -23,6 +23,11 @@ For B1, follow [assembly](docs/BUILD_B1.md), [electronics](docs/B1_ELECTRONICS.m
 Start with [sensor choice and placement](docs/SENSORS.md) for the exact IC, magnets, two nail pads, and their labeled locations. Its SVG, coordinate files and page are generated from the unchanged release by `scripts/explain_sensor_placement.py`; edit `templates/sensor_guide.md` for the explanatory text, then regenerate with the CAD environment's Python.
 
 The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` retains the earlier B2/C1 explorations; `prototypes/b2/` and `prototypes/c1/` contain their later build packages. These are checked independently of the preserved R1/L1/B1 release. `research/` contains sources and scale-validation plans; `campaign/` preserves the full twelve-design objective and comparison requirements.
+
+`prototypes/nail/` contains N1.1: a separate bare sensing nail, revised frame
+and combined readout package. It reuses the C1 bridge PCB and R1 CH2–CH5
+interfaces. [BUILD_NAIL.md](docs/BUILD_NAIL.md) gathers the exact sensor
+locations, wiring and assembly steps.
 
 ## File map
 
@@ -179,3 +184,56 @@ verification, structural convergence and the declared motion screen. It does
 not manufacture a specimen or qualify force accuracy. Full solver input decks
 are included in `prototypes/c1/c1_structural_inputs.zip`; large raw solver
 outputs remain preserved locally and can be regenerated.
+
+## Reproduce N1.1 separately
+
+Prepare the existing CAD environment, collect the source meshes, and prepare
+the same Gmsh/CalculiX tools used for C1. Keep all retained snapshots intact.
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/prepare_source_brep.py \
+  --part hard_frame
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_nail_parts.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/check_nail_fasteners.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/run_nail_fea.py \
+  --mesh-mm 1.5 --web-mm 0.7 --mesh-optimizer elastic-direct --solve-timeout 600
+build/engineering/tools/cad-venv/bin/python engineering/scripts/run_nail_fea.py \
+  --mesh-mm 1.35 --web-mm 0.5 --mesh-optimizer elastic-direct --solve-timeout 600
+```
+
+Each structural run preserves its inputs in a timestamped directory under
+`build/engineering/prototypes/nail/fea/`. Select the completed coarse/fine
+directories from their `latest.json` files and substitute them below.
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/summarize_nail_analysis.py \
+  --coarse COARSE_RUN --fine FINE_RUN
+/usr/bin/python3 engineering/scripts/finalize_nail_metadata.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/check_nail_fasteners.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/draw_nail.py
+/usr/bin/python3 engineering/scripts/make_nail_packet.py
+```
+
+The metadata finalizer changes release labels only after checking that the
+physical parameters and geometry files match the reviewed runs. Original run
+configurations remain preserved. Use the last passing eight-check report in
+`build/engineering/prototypes/nail/fastener_checks/` as `FASTENER_REPORT`:
+
+```sh
+/usr/bin/python3 engineering/scripts/freeze_nail_prototype.py \
+  --fastener-checks FASTENER_REPORT
+/usr/bin/python3 -m unittest discover -s engineering/tests -p test_nail.py -v
+/usr/bin/python3 engineering/scripts/build_site.py
+/usr/bin/python3 engineering/scripts/check_site.py
+```
+
+The isolated mesh worker saves stages and pre-optimization geometry. It and
+the solver use one CPU each, with explicit time/mesh limits and execution
+records. The published structural ZIP contains the complete solver decks and
+frozen inputs; visualization meshes and raw solver outputs are regenerated
+when needed.
+
+N1's static force baseline uses only preserved physical holds. It does not
+turn a structural calculation or dummy-resistor recording into a measured
+sensor result. Follow [NAIL_TESTING.md](docs/NAIL_TESTING.md) for the actual
+training, validation and remaining qualification work.

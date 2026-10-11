@@ -40,6 +40,9 @@ DOCS=[
     ("BUILD_C1","build-c1","Build C1 strain root"),
     ("C1_TESTING","c1-testing","C1 calibration & tests"),
     ("C1_ANALYSIS","c1-analysis","C1 digital results"),
+    ("BUILD_NAIL","build-nail","Build N1 bare sensing nail"),
+    ("NAIL_TESTING","nail-testing","N1 calibration & tests"),
+    ("NAIL_ANALYSIS","nail-analysis","N1 digital results"),
 ]
 
 
@@ -182,6 +185,11 @@ def main():
             (ROOT/"engineering/prototypes/c1/pcb/c1_readout_fabrication.zip","c1_readout_fabrication.zip"),
             (ROOT/"engineering/templates/c1_specimen.json","c1_specimen.json"),
             (ROOT/"engineering/templates/c1_force_trials.json","c1_force_trials.json"),
+            (ROOT/"engineering/prototypes/nail/nail_bom.csv","nail_bom.csv"),
+            (ROOT/"engineering/prototypes/nail/nail_review_drawings.pdf","nail_review_drawings.pdf"),
+            (ROOT/"engineering/prototypes/nail/nail_firmware.zip","nail_firmware.zip"),
+            (ROOT/"engineering/templates/nail_specimen.json","nail_specimen.json"),
+            (ROOT/"engineering/templates/nail_force_trials.json","nail_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())

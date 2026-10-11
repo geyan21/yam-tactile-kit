@@ -10,7 +10,7 @@ The goal is **reliable contact and grip-force feedback through 20 N per finger**
 
 **Concrete B1 prototype recommendation:** five MLX90393SLW-ABA-011 heads fixed beside four magnets embedded in the bending TPU, plus two thin N0 pressure-film pads on the object-facing nail prongs. The [sensor placement guide](engineering/docs/SENSORS.md) labels every head, magnet and pad and supplies exact coordinates. Physical qualification remains pending.
 
-Five separate prototype packages are supplied:
+Six separate prototype packages are supplied:
 
 | Prototype | Design | First measurement |
 |---|---|---|
@@ -19,14 +19,15 @@ Five separate prototype packages are supplied:
 | B1 magnetic bending insert | Four magnets in the TPU, five fixed magnetic heads, new side spine and custom PCB; original hard frame and thin nail retained | Original-vs-B1 bending, magnet retention, interference, then physical force calibration |
 | B2 consolidated magnetic PCB | Same sensor/magnet poses on one checked PCB with two locating spacers, a removable backer and two N0 nail pads | Installed fit, first-board operation, then matched B1/B2 contact, force and assembly-time tests |
 | C1 differential-strain root | Transverse aluminum beam, eight CEA-13-062UWA-350 gauges, fixed/floating carriers and dual-ADS1232 readout | Actual drive fit, bonded-gauge operation, real joint compliance, then independent force/lever calibration and validation |
+| N1 bare sensing nail | Steel fork with two full shear bridges, revised frame and side carriers, plus four retained R1 TPU cells | Fit, bonding, whole-finger motion, then separate and mixed-contact force tests |
 
-The package contains 41 checked STEP/STL solids, including four component references; R1 electrode patterns; carrier/fixture drawings; B1/B2/C1 editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. R1/L1/B1 and the earlier concept snapshots remain preserved. The later packages are separate under `engineering/prototypes/`.
+The package contains 45 checked STEP/STL solids, including four component references; R1 electrode patterns; carrier/fixture drawings; B1/B2/C1 editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. N1 reuses the C1 bridge board with its own combined firmware. R1/L1/B1 and the earlier concept snapshots remain preserved. The later packages are separate under `engineering/prototypes/`.
 
 **Status: digital design and software checks completed; physical prototype assembly and validation pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
 
 For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md), [PCB/wiring/code](engineering/docs/B1_ELECTRONICS.md), and [bending and force tests](engineering/docs/B1_TESTING.md). B1 raw magnetic data are not calibrated force; optional R1 nail cells supply hard-tip contact coverage.
 
-For the consolidated version, use [the complete B2 build guide](engineering/docs/BUILD_B2.md). Its two nail cells are enabled in the supplied firmware. For the strain-root alternative, use [C1 assembly](engineering/docs/BUILD_C1.md), [physical tests](engineering/docs/C1_TESTING.md) and [the numerical review](engineering/docs/C1_ANALYSIS.md). The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the seven remaining designs and the physical evidence still required.
+Use [B2's build guide](engineering/docs/BUILD_B2.md) for consolidated magnetic sensing, [C1 assembly](engineering/docs/BUILD_C1.md) for the strain-root alternative, and [N1 assembly](engineering/docs/BUILD_NAIL.md) for the bare sensing nail. Each has its own test instructions and evidence limits. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the six remaining designs and the physical evidence still required.
 
 ## Start here
 

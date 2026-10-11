@@ -126,6 +126,21 @@ def main():
                 "website/assets/prototypes/c1/c1_gauge_placement.svg",
                 "website/assets/prototypes/c1/c1-wiring.svg",
                 "website/downloads/c1_bom.csv",
+                "source/engineering/firmware/nail/main.py",
+                "source/engineering/firmware/nail/pressure_scan.py",
+                "source/engineering/software/nail_protocol.py",
+                "source/engineering/software/nail_record.py",
+                "source/engineering/software/nail_force.py",
+                "source/engineering/software/raw_capture.py",
+                "source/engineering/prototypes/nail/prototype_snapshot.json",
+                "source/engineering/prototypes/nail/cad/nail_bare_sensing_fork.step",
+                "source/engineering/prototypes/nail/cad/nail_revised_hard_frame.stl",
+                "source/engineering/prototypes/nail/nail_firmware.zip",
+                "source/engineering/prototypes/nail/nail_structural_inputs.zip",
+                "source/engineering/prototypes/nail/fastener_checks.json",
+                "website/build-nail.html","website/nail-testing.html","website/nail-analysis.html",
+                "website/assets/prototypes/nail/nail-wiring.svg",
+                "website/assets/prototypes/nail/nail_placement.svg",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

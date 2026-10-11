@@ -26,6 +26,8 @@
     c1fixed:["C1 fixed carrier","#31847c"],c1floating:["C1 floating carrier","#cb8542"],
     c1beam:["C1 transverse strain beam","#788b9b"],c1clamp:["C1 end clamps","#997c57"],
     c1gauge:["C1 active strain-grid locations","#dfad3f"],
+    nailbody:["N1 bare fork and sensing webs","#8c9ca4"],nailleft:["N1 left fixed carrier","#397d76"],
+    nailright:["N1 right fixed carrier","#65a294"],nailgauges:["NL / NR foil-carrier locations","#d7aa47"],
   };
   function choose(){
     const model=data.models.find(m=>m.id===select.value);
@@ -34,7 +36,8 @@
     document.getElementById("model-note").textContent=model.note;
     const controls=document.getElementById("layer-controls");controls.replaceChildren();
     for(const group of viewer.visible){
-      const definition=group==="pcb"&&model.id.startsWith("b2")?["B2 single PCB","#48967e"]:layerDefinitions[group];
+      const definition=group==="frame"&&model.id==="nail_assembly"?["N1 revised PETG frame","#657c89"]:
+        group==="pcb"&&model.id.startsWith("b2")?["B2 single PCB","#48967e"]:layerDefinitions[group];
       const [label,color]=definition||[group,"#71979c"],row=element("label",null);
       const input=element("input",null,{type:"checkbox","data-layer":group,"aria-label":label});
       input.checked=true;input.addEventListener("change",()=>{input.checked?viewer.visible.add(group):viewer.visible.delete(group);viewer.draw();});
@@ -159,11 +162,12 @@
     if(report.schema==="yam-contact-validation/1"){renderContactReport(report,name);return;}
     const r1=report.schema==="yam-calibration/1",l1=["yam-l1-calibration/1","yam-l1-finger-validation/1"].includes(report.schema);
     const c1=report.schema==="yam-c1-static-validation/1";
-    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!c1))throw Error("Expected a physical R1, L1 or C1 force report from the bench analyzer.");
+    const n1=report.schema==="yam-nail-static-validation/1",holds=c1||n1;
+    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!holds))throw Error("Expected a physical R1, L1, C1 or N1 force report from the bench analyzer.");
     const points=[];
     let predictions=report.predictions;
-    if(c1){
-      if(!Array.isArray(report.trials)||report.trials.some(row=>typeof row.available!=="boolean"))throw Error("C1 report is missing explicit hold availability.");
+    if(holds){
+      if(!Array.isArray(report.trials)||report.trials.some(row=>typeof row.available!=="boolean"))throw Error("Static report is missing explicit hold availability.");
       predictions=report.trials.map(row=>({...row,predicted_n:row.available?row.predicted_n:null,
         contact_id:row.condition_id||row.id}));
     }
@@ -175,7 +179,7 @@
       for(const point of channel.predictions){
         if(!Number.isFinite(point.reference_n)||point.reference_n<0||point.reference_n>100)throw Error("Invalid reference force.");
         if(point.predicted_n!==null&&(!Number.isFinite(point.predicted_n)||Math.abs(point.predicted_n)>100))throw Error("Invalid predicted force.");
-        points.push({...point,channel:channel.channel,label:r1?`CH${channel.channel}`:String(point.contact_id||(c1?"C1":"L1"))});
+        points.push({...point,channel:channel.channel,label:r1?`CH${channel.channel}`:String(point.contact_id||(n1?"N1":c1?"C1":"L1"))});
       }
     }
     if(!points.length)throw Error("No held-out predictions in this report.");
@@ -193,10 +197,10 @@
     const rmse=errors.length?Math.sqrt(errors.reduce((s,e)=>s+e*e,0)/errors.length):null;
     document.getElementById("result-status").textContent=`Locally inspected: ${name}. Published specimen count remains unchanged.`;
     document.getElementById("result-metrics").textContent=
-      `${points.length} held-out ${c1?"stationary holds":"trials"} · ${out} unavailable · RMSE of available ${c1?"hold means":"trials"}: ${rmse===null?"unavailable":rmse.toFixed(3)+" N"}. `+
-      (c1?"C1 static means only; dynamic force and contact reliability remain unqualified. ":"Static report only. ")+
+      `${points.length} held-out ${holds?"stationary holds":"trials"} · ${out} unavailable · RMSE of available ${holds?"hold means":"trials"}: ${rmse===null?"unavailable":rmse.toFixed(3)+" N"}. `+
+      (holds?`${n1?"N1":"C1"} static means only; dynamic force and contact reliability remain unqualified. `:"Static report only. ")+
       "Provenance and raw data require review.";
-    plot.dataset.loaded="true";plot.dataset.reportKind=c1?"c1-static":"force";
+    plot.dataset.loaded="true";plot.dataset.reportKind=n1?"nail-static":c1?"c1-static":"force";
   }
   document.getElementById("result-file").addEventListener("change",async e=>{
     const file=e.target.files[0];if(!file)return;

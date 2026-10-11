@@ -1,0 +1,397 @@
+{
+  "schema": "yam-nail-development/1",
+  "revision": "N1.1",
+  "status": "digital prototype; physical qualification pending",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "nail_bare_sensing_fork",
+      "purpose": "Bare source-shaped leading fork, two vertical shear webs and thick inactive clamp ends.",
+      "material": "Wrought 17-4PH stainless steel, H900 condition, supplier certificate required",
+      "kind": "fabricate",
+      "step": "cad/nail_bare_sensing_fork.step",
+      "stl": "cad/nail_bare_sensing_fork.stl",
+      "sha256_step": "05e4d24f420025c349f37f73844fc60c2a90cd4a56c3d0d75f33f679631b076f",
+      "sha256_stl": "c8889c66c03c5ffaac96959f8190467a5c014b37beb67ea2aad29a8cbf5b2391",
+      "volume_mm3": 5306.411795131754,
+      "bounds_mm": [
+        [
+          -22.75,
+          -117.51112365722656,
+          -4.3130645751953125
+        ],
+        [
+          7.75,
+          -73.27180480957031,
+          21.89881134033203
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "nail_left_fixed_carrier",
+      "purpose": "Fixed metal support, original side attachment axes, M3 threaded mount and extended front clamp shoe.",
+      "material": "Wrought 17-4PH stainless steel, H900 condition, supplier certificate required",
+      "kind": "fabricate",
+      "step": "cad/nail_left_fixed_carrier.step",
+      "stl": "cad/nail_left_fixed_carrier.stl",
+      "sha256_step": "8d41f91003ca4dfcbc5b5f064d5f87ea5c71523a2ed11a8de7196eb2fe993625",
+      "sha256_stl": "9f27472e21fee990321fcedce92fb4074d9e0076c85d1f3ad92746e95b42ad6e",
+      "volume_mm3": 4859.523310595589,
+      "bounds_mm": [
+        [
+          -27.950000762939453,
+          -85.0,
+          -4.0
+        ],
+        [
+          -19.049999237060547,
+          -14.5,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "nail_right_fixed_carrier",
+      "purpose": "Fixed metal support with flush M3 side-mount and front-clamp screws.",
+      "material": "Wrought 17-4PH stainless steel, H900 condition, supplier certificate required",
+      "kind": "fabricate",
+      "step": "cad/nail_right_fixed_carrier.step",
+      "stl": "cad/nail_right_fixed_carrier.stl",
+      "sha256_step": "fcf93e439096f4f05c3033b8092c7ce1f1197fbb6a024b5b81b99362690d8dba",
+      "sha256_stl": "90956d7673272dac09e602035f271d0c18742d4f85745e98f20dd3dc35f58fda",
+      "volume_mm3": 4312.55068696145,
+      "bounds_mm": [
+        [
+          4.050000190734863,
+          -85.0,
+          -4.0
+        ],
+        [
+          10.75,
+          -14.5,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "nail_revised_hard_frame",
+      "purpose": "Separate original-frame derivative with its hard nail removed; source root and TPU attachment geometry retained.",
+      "material": "PETG: match original frame process",
+      "kind": "fabricate",
+      "step": "cad/nail_revised_hard_frame.step",
+      "stl": "cad/nail_revised_hard_frame.stl",
+      "sha256_step": "6f81dddde5ca6942a2570b15e9a2958d270cee54167aff7e43f54f062ba2a619",
+      "sha256_stl": "32e0f33dc6d49960b9bf526e8801bb8c090b2f3a37e982ac1919a44ec4125e12",
+      "volume_mm3": 19810.22470292054,
+      "bounds_mm": [
+        [
+          -24.710813522338867,
+          -96.0,
+          -2.5167601108551025
+        ],
+        [
+          6.889186382293701,
+          -2.7699999809265137,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "gauges": [
+    {
+      "id": "NL",
+      "part": "OMEGA SGT-2DD/350-SY41",
+      "bridge": 0,
+      "outer_face_native_x_mm": -19.25,
+      "center_native_xyz_mm": [
+        -19.25,
+        -90.60130992769602,
+        14.05548685330762
+      ],
+      "center_nail_yz_mm": [
+        15.5,
+        17.0
+      ],
+      "carrier_size_yz_mm": [
+        7.6,
+        8.9
+      ],
+      "note": "Full bridge carrier center and envelope. Internal grid locations are not inferred from a rendered illustration."
+    },
+    {
+      "id": "NR",
+      "part": "OMEGA SGT-2DD/350-SY41",
+      "bridge": 1,
+      "outer_face_native_x_mm": 4.25,
+      "center_native_xyz_mm": [
+        4.25,
+        -90.60130992769602,
+        14.05548685330762
+      ],
+      "center_nail_yz_mm": [
+        15.5,
+        17.0
+      ],
+      "carrier_size_yz_mm": [
+        7.6,
+        8.9
+      ],
+      "note": "Full bridge carrier center and envelope. Internal grid locations are not inferred from a rendered illustration."
+    }
+  ],
+  "source_frame_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "source_contact_report_sha256": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5",
+  "source_hashes": {
+    "engineering/designs/nail.json": "1df4172169faea09d9dd2b100831de171395444c2fc38ddd74ace21bdce19004",
+    "engineering/scripts/build_nail_parts.py": "5435797524b96eec722759ce99f32970a803a9dcd01fc55cbe09c726a813a1d1",
+    "engineering/scripts/nail_geometry.py": "8b15b80f415724d4089e00b77a1fc2e980e46cfecd81c82eda17936f138ca277",
+    "engineering/scripts/source_brep.py": "228fba41ef66f374a887c02452489991500467780584e18865b127057d2010be",
+    "engineering/scripts/finalize_nail_metadata.py": "e759c7a1326694cebc42714395abf5d11db7eda69b54b15228a3702d3b423877"
+  },
+  "mounts": [
+    {
+      "carrier": 0,
+      "center_native_yz_mm": [
+        -75.26417028511005,
+        0.0
+      ],
+      "contact_plane_x_mm": -19.05,
+      "outer_x_mm": -27.95,
+      "inner_x_mm": -24.95
+    },
+    {
+      "carrier": 0,
+      "center_native_yz_mm": [
+        -18.559447378460487,
+        1.771483509339382
+      ],
+      "contact_plane_x_mm": -22.050000000000004,
+      "outer_x_mm": -27.95,
+      "inner_x_mm": -24.95
+    },
+    {
+      "carrier": 1,
+      "center_native_yz_mm": [
+        -75.26417028511005,
+        0.0
+      ],
+      "contact_plane_x_mm": 4.05,
+      "outer_x_mm": 10.75,
+      "inner_x_mm": 7.75
+    },
+    {
+      "carrier": 1,
+      "center_native_yz_mm": [
+        -18.559447378460487,
+        1.771483509339382
+      ],
+      "contact_plane_x_mm": 6.939186382308253,
+      "outer_x_mm": 10.75,
+      "inner_x_mm": 7.75
+    }
+  ],
+  "clamp_holes": [
+    {
+      "carrier": 0,
+      "center_native_yz_mm": [
+        -78.41589468085218,
+        10.6620144043277
+      ],
+      "outer_x_mm": -27.95,
+      "nail_outer_x_mm": -22.75,
+      "screw": "Left: two M3 x 8, 90-degree flat head"
+    },
+    {
+      "carrier": 0,
+      "center_native_yz_mm": [
+        -78.816894260833,
+        18.651958042229985
+      ],
+      "outer_x_mm": -27.95,
+      "nail_outer_x_mm": -22.75,
+      "screw": "Left: two M3 x 8, 90-degree flat head"
+    },
+    {
+      "carrier": 1,
+      "center_native_yz_mm": [
+        -78.41589468085218,
+        10.6620144043277
+      ],
+      "outer_x_mm": 10.75,
+      "nail_outer_x_mm": 7.75,
+      "screw": "Right: two M3 x 6, 90-degree flat head"
+    },
+    {
+      "carrier": 1,
+      "center_native_yz_mm": [
+        -78.816894260833,
+        18.651958042229985
+      ],
+      "outer_x_mm": 10.75,
+      "nail_outer_x_mm": 7.75,
+      "screw": "Right: two M3 x 6, 90-degree flat head"
+    }
+  ],
+  "rigid_overlap_checks_mm3": {
+    "nail_bare_sensing_fork_vs_frame_mm3": 0.0,
+    "nail_bare_sensing_fork_vs_tpu_mm3": 0.0,
+    "nail_left_fixed_carrier_vs_frame_mm3": 0.0,
+    "nail_left_fixed_carrier_vs_tpu_mm3": 0.0,
+    "nail_right_fixed_carrier_vs_frame_mm3": 0.0,
+    "nail_right_fixed_carrier_vs_tpu_mm3": 0.0,
+    "nail_vs_left_carrier_mm3": 0.0,
+    "nail_vs_right_carrier_mm3": 0.0,
+    "left_vs_right_carrier_mm3": 0.0
+  },
+  "discarded_distal_fragments": [
+    {
+      "volume_mm3": 28.085664275665003,
+      "bounds_mm": [
+        [
+          -17.129425444439683,
+          -96.0,
+          -1.9429660969018514
+        ],
+        [
+          1.354610932498071,
+          -95.52082824706801,
+          3.1739199213708953
+        ]
+      ]
+    }
+  ],
+  "preserved_attachment_checks": [
+    {
+      "center_native_yz_mm": [
+        -75.26417028511005,
+        0.0
+      ],
+      "removed_source_material_mm3": 0.0
+    },
+    {
+      "center_native_yz_mm": [
+        -18.559447378460487,
+        1.771483509339382
+      ],
+      "removed_source_material_mm3": 0.0
+    },
+    {
+      "center_native_yz_mm": [
+        -91.75948846732965,
+        1.7055330250605425
+      ],
+      "removed_source_material_mm3": 0.0
+    }
+  ],
+  "web_pocket_removed_material_mm3": 641.4143352228639,
+  "protected_central_frame_removed_mm3": 0.0,
+  "assembly_bounds_mm": [
+    [
+      -27.950000762939453,
+      -117.51112365722656,
+      -4.3130645751953125
+    ],
+    [
+      10.75,
+      -2.7699999809265137,
+      28.283239364624023
+    ]
+  ],
+  "nail_plane_origin_native_mm": [
+    -7.9068464665525315,
+    -105.22970161867246,
+    -3.7000800634475643
+  ],
+  "nail_plane_axes_native": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.0,
+      0.9987429547377857,
+      0.05012494749760185
+    ],
+    [
+      0.0,
+      -0.05012494749760185,
+      0.9987429547377857
+    ]
+  ],
+  "force_axis_native": [
+    0,
+    0,
+    1
+  ],
+  "minimum_rigid_distance_mm": {
+    "nail_to_frame": 0.5999999999999929,
+    "nail_to_tpu": 2.11305864608169
+  },
+  "notes": [
+    "Development geometry only. Gauge wiring, readout, structural screen, protection, physical fit and force tests remain.",
+    "The source contact-plane X-axis noise below 1e-8 is snapped to native X for planar side machining; the original plane origin and YZ angle are retained.",
+    "No existing prototype or original source component was overwritten.",
+    "The revised frame is a faceted derivative of the pinned STL; it is not the original author's analytic CAD."
+  ],
+  "analysis_step": "analysis/nail_bonded_assembly.step",
+  "analysis_step_sha256": "adcc2f1b3814bf061576da54a22fd6770a0ec12a53626fbf7b5706445335284e",
+  "release_label_finalization": {
+    "prior_configuration_sha256": "9304fb19f3e5eb1eebe7c3f994a4c5dd1ce1788aac18a76d00802474cd592f15",
+    "physical_configuration_sha256": "11cfd48105f1f926c1f27fa0916b930b9597360743379a0a67a5ea3660560266",
+    "geometry_exports_unchanged": true,
+    "note": "Only revision/status labels changed. The original structural-run configurations and results remain preserved."
+  }
+}

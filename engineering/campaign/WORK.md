@@ -19,14 +19,19 @@ recorder and actual-mesh visuals. Its build and physical tests remain pending.
 C1.1 now adds nine checked CAD parts, a dual-bridge readout PCB, raw acquisition
 and physical static-calibration tools. Its linear bonded-joint model passed
 the declared numerical checks and calculated 0.094 mm added tip motion at
-20 N; the actual assembly remains unbuilt. The next mechanical work is the
-rigid nail and recessed frame; the full list below remains in scope.
+20 N; the actual assembly remains unbuilt.
+
+N1.1 adds a bare steel nail with two shear bridges, two carriers, a revised
+frame and four retained R1 TPU cells. Its readout, static calibration tools
+and checked digital package are separate. No physical N1 measurements exist.
+The next mechanical work is the recessed frame; the full list below remains
+in scope.
 
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.
 2. C1 digital package completed; verify drive fit, machine, bond, assemble and measure it.
-3. Develop the rigid-nail and recessed-frame mechanisms as separate designs.
+3. N1 digital package completed; develop the recessed-frame design next and physically test both.
 4. Develop the resistive matrix, capacitive, pneumatic, optical and packaged
    force-button prototypes, including their contact and mounting interfaces.
 5. Supply the common fixtures, raw-data contracts and held-out comparison tools.

@@ -1,7 +1,7 @@
 {
   "schema": "yam-design-pages/1",
   "groups": [
-    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1, B2 and C1 have assembly files and readout code. All still require physical qualification."},
+    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1, B2, C1 and N1 have assembly files and readout code. All still require physical qualification."},
     {"id": "concept", "title": "Our next design concepts", "description": "Separate ideas and engineering studies. Check each page for exactly which files exist and which work remains."},
     {"id": "research", "title": "Alternative sensing approaches", "description": "Reference approaches considered in the study. These are not completed ENPIRE designs."}
   ],
@@ -179,25 +179,46 @@
       "related": ["L1", "B2", "NAIL", "FORCE_BUTTON"]
     },
     {
-      "id": "NAIL", "slug": "rigid-nail", "title": "Rigid nail · Sense at its base", "group": "concept",
-      "status": "Mechanical idea only", "status_detail": "This is a proposed sensing architecture. No ENPIRE nail mechanism, selected sensor BOM, manufacturing CAD or firmware has been completed.",
-      "summary": "Keep a bare, thin rigid nail and measure its loading through a controlled support at the nail's base instead of adding a pressure-film laminate to its surface.",
-      "signal": "Intended nail force and possibly torque; achievable axes and accuracy are not established.",
-      "best_for": "A future redesign when thin-tip access or surface-pad wear becomes the main problem.",
-      "tradeoff": "Needs a new support/load path, overload behavior, calibration and a way to preserve tip-position accuracy.",
+      "id": "NAIL", "slug": "rigid-nail", "title": "N1 · Bare nail with strain sensing", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "N1.1 supplies four checked CAD parts, complete material around its fasteners, a converged metal structural screen, combined Pico firmware and physical static-calibration tools. The C1 bridge PCB and R1 TPU interfaces are reused. No physical N1 specimen has been tested.",
+      "summary": "Use a bare steel fork with two shear-sensing webs behind the nail. Four retained R1 cells cover the compliant TPU, and one Pico records all six sensing signals.",
+      "signal": "Nail normal force after two-bridge calibration, plus four calibrated TPU force proxies. Contact on fixed structure can bypass these paths; no six-axis or dense contact-map claim.",
+      "best_for": "Testing thin leading-nail access and normal-force feedback when surface-pad thickness or wear matters.",
+      "tradeoff": "Three machined steel parts, gauge bonding and a larger side envelope. Body width is about 38.7 mm, or 40 mm with the proposed screw ends. Complete force, pose, contact and durability tests remain.",
       "sensors": [
-        ["Base sensing", "Not selected: magnetic displacement sensing or bonded strain sensing are options", "At the controlled nail support behind the leading gripping surface"],
-        ["Commercial benchmark", "XELA uSCu ALHA-N is a reference architecture, not a selected ENPIRE component", "Allegro-specific fingertip; dimensions, range and custom integration must be checked"]
+        ["NL", "OMEGA SGT-2DD/350-SY41, 350 Ω full shear bridge", "Outer face of the left steel web, native X = −19.25 mm"],
+        ["NR", "A second SGT-2DD/350-SY41 full bridge", "Outer face of the right web, native X = +4.25 mm"],
+        ["Both foil carriers", "7.6 × 8.9 mm carrier, with +Exc toward the back of the finger", "Center at nail-plane Y = 15.5 mm and Z = 17 mm; 7 mm forward of the fixed clamp boundary"],
+        ["CH2–CH5", "Four retained R1 pressure-film cells and conformal saddles", "Distal through proximal TPU contact regions, on the object-facing surfaces"],
+        ["Bridge readout", "Retained C1.1 PCB with two ADS1232 converters and electrical checks", "At the wrist/base; NL connects to JA and NR to JB"],
+        ["TPU readout / controller", "Two Adafruit 1085 ADS1115 boards and one RP2040 Pico running N1 firmware", "At the wrist/base; 0x48 and 0x49 share the 3.3 V I²C bus"]
       ],
-      "placement": "The nail surface contacts the object. Its support transmits load to sensing elements at the base. The sensing mechanism, flexures and readout locations are not finalized. This concept is not included in the B2 board witness.",
-      "schematic": ["Object loads rigid nail", "Controlled base support", "Sensor not yet selected", "Force / torque calibration"],
+      "placement": "The leading steel nail is 1.35 mm thick. Its two 1.5 mm-thick vertical webs carry the foil sensors; the electronics remain on the fixed wrist readout. A separate revised PETG frame clears the webs while retaining the central frame and three TPU attachment regions. Build CH2–CH5 on the original TPU and keep the metal nail bare.",
+      "visual": {"path": "assets/prototypes/nail/nail_assembly.png", "alt": "N1 steel fork and two side strain webs on a revised ENPIRE frame, with four R1 TPU cells", "caption": "Actual checked CAD with foil location markers and reserved hardware. Coatings and wiring are omitted. This is not a photograph of a built specimen."},
+      "placement_visual": {"path": "assets/prototypes/nail/nail_placement.svg", "alt": "N1 side and top views locating NL and NR foil sensors and CH2 through CH5 on the TPU", "caption": "Two nail bridges and four TPU cells. Use the separate gauge drawing and wiring map for the carrier centers and six-pad bridge connections."},
+      "schematic": ["Bare nail + TPU cells", "Two shear bridges", "Shared wrist readout", "Physical force calibration"],
+      "viewer_model": "nail_assembly",
+      "prototype_cad_group": "nail",
       "resources": [
-        ["Context", "Architecture study and commercial precedent", "architecture.html"],
-        ["Existing option", "B1 with the current N0 nail pads", "b1.html"],
-        ["Reference", "XELA force-sensitive nail for Allegro", "https://xelarobotics.com/products/uscu-alha-n/"]
+        ["Assembly", "Complete N1 build, wiring and recording instructions", "build-nail.html"],
+        ["Testing", "Physical calibration, validation and qualification limits", "nail-testing.html"],
+        ["Materials", "Complete N1 bill of materials", "downloads/nail_bom.csv"],
+        ["Placement", "NL / NR full-bridge carrier locations", "assets/prototypes/nail/nail_gauge_placement.svg"],
+        ["Wiring", "Bridge pads, C1 J1, Pico and four TPU cells", "assets/prototypes/nail/nail-wiring.svg"],
+        ["Drawings", "N1 assembly and dimensional review PDF", "downloads/nail_review_drawings.pdf"],
+        ["Firmware", "Complete six-file N1 Pico package", "downloads/nail_firmware.zip"],
+        ["Bridge PCB", "Retained C1 checked fabrication ZIP", "downloads/c1_readout_fabrication.zip"],
+        ["Bridge PCB source", "Editable retained C1 board", "assets/prototypes/c1/pcb/c1_readout.kicad_pcb"],
+        ["TPU cells", "Retained R1 materials, molds and cut patterns", "build-r1.html"],
+        ["Recording", "N1 specimen and process record", "downloads/nail_specimen.json"],
+        ["Calibration", "Physical hold-manifest template", "downloads/nail_force_trials.json"],
+        ["Engineering review", "Geometry, fastener and structural results", "nail-analysis.html"],
+        ["Structural inputs", "Solver decks and frozen configurations", "assets/prototypes/nail/nail_structural_inputs.zip"],
+        ["Source", "Editable CAD, firmware and analysis code", "downloads/enpire-source.zip"],
+        ["Commercial benchmark", "XELA's Allegro-specific force-sensitive nail", "https://xelarobotics.com/products/uscu-alha-n/"]
       ],
-      "missing": ["An ENPIRE-specific mechanism and CAD", "Sensor selection, placement dimensions and electronics", "Normal/shear/torque load-path and overload design", "Any prototype measurements or manufacturing files"],
-      "next_steps": ["Define needed force axes and allowed nail motion for the actual tasks.", "Choose the support/sensing mechanism and produce an independent mechanical design.", "Validate a nail module before combining it with the soft-finger sensing system."],
+      "missing": ["Actual drive fit, machining and assembled sensor specimens", "Measured whole-finger motion, bolted-joint behavior and gauge bonding", "Physical force calibration, contact confidence, temperature and moving-arm compensation", "Environmental protection, wear and representative precision-task evidence"],
+      "next_steps": ["Print the fit witnesses and revised frame, then machine and inspect the steel parts.", "Bond both full bridges, build the four TPU cells and verify all readout channels and faults.", "Collect independent training and validation holds, including mixed contacts, then compare complete specimens under the common campaign."],
       "related": ["B1", "B2", "C1"]
     },
     {

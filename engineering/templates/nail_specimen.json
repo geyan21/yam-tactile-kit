@@ -1,0 +1,61 @@
+{
+  "schema": "yam-nail-specimen/1",
+  "evidence_kind": "unmeasured_template",
+  "specimen": "N1-REPLACE-ME",
+  "operator": null,
+  "geometry_sha256": null,
+  "requested_force_n_per_finger": 20,
+  "metal_parts": {
+    "material": "17-4PH H900 candidate",
+    "supplier_and_certificate": null,
+    "measured_web_thickness_mm": [null, null],
+    "measured_leading_thickness_mm": null,
+    "machining_and_inspection_record": null
+  },
+  "frame": {
+    "revision_file_hash": null,
+    "filament_grade_and_lot": null,
+    "slicer_and_print_settings": null,
+    "three_attachment_regions_checked": false,
+    "installed_drive_fit_checked": false,
+    "unloaded_and_loaded_clearance_records": null
+  },
+  "gauges": {
+    "part": "OMEGA SGT-2DD/350-SY41",
+    "lot_and_supplied_gauge_data": null,
+    "measured_placement_record": null,
+    "adhesive_preparation_and_cure": null,
+    "coating_and_cure": null,
+    "photograph_paths": []
+  },
+  "soft_cells": {
+    "channels": ["CH2", "CH3", "CH4", "CH5"],
+    "r1_material_and_assembly_records": null,
+    "pull_down_ohm": [10000, 10000, 10000, 10000],
+    "measured_continuity_resistors_ohm": [null, null, null, null]
+  },
+  "electronics": {
+    "c1_pcb_revision_and_hash": null,
+    "pico_and_micropython_version": null,
+    "n1_firmware_hashes": null,
+    "bridge_loop_resistance_ohm": [null, null],
+    "clock_and_i2c_waveform_record": null,
+    "electrical_dummy_recordings": [],
+    "fault_injection_recordings": []
+  },
+  "fasteners": {
+    "actual_screw_lengths_and_engagement": null,
+    "tightening_and_reassembly_record": null
+  },
+  "test_records": {
+    "force_reference_id_and_calibration": null,
+    "original_control_id": null,
+    "training_manifest": null,
+    "validation_manifest": null,
+    "tip_motion": null,
+    "temperature_motion_wear_and_task_tests": null
+  },
+  "assembly_minutes": null,
+  "rework_minutes": null,
+  "physical_qualification": false
+}
