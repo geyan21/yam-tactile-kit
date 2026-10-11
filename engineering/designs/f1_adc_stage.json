@@ -1,0 +1,76 @@
+{
+  "schema": "yam-f1-adc-stage-candidate/1",
+  "status": "Wrist ADC/driver candidate; switched-capacitor approximation and hardware verification required",
+  "physical_specimens_tested": 0,
+  "supply_v": 3.3,
+  "temperature_c": 25,
+  "buffer": {
+    "part": "OPA320AQDBVRQ1",
+    "source": "https://www.ti.com/lit/ds/symlink/opa320-q1.pdf",
+    "ordering_source": "https://www.ti.com/product/OPA320-Q1/part-details/OPA320AQDBVRQ1",
+    "model_source": "https://www.ti.com/lit/zip/SBOM437",
+    "model_subcircuit": "OPAx320-Q1",
+    "model_note": "The current official OPA320 product page links a Q1 model. This study selects the matching Q1 part rather than treating its model as a verified catalog-part model.",
+    "feedback": "Local unity feedback from amplifier output pin; ADC filter is outside the loop"
+  },
+  "adc": {
+    "part": "ADS8866IDGSR",
+    "source": "https://www.ti.com/lit/ds/symlink/ads8866.pdf",
+    "reference_v": 3.3,
+    "resolution_bits": 16,
+    "input_sample_capacitance_pf_typical_per_terminal": 59,
+    "maximum_conversion_s": 0.0000088,
+    "minimum_acquisition_s": 0.0000012,
+    "interface": "3-wire CS mode; DIN tied to DVDD, CONVST is conversion/CS, rising-edge SPI reads",
+    "limits": "Reference, sampling switch behavior, capacitor reset state and quantizer are not a complete manufacturer ADC model. ADC INL/noise/offset and system accuracy require measurement."
+  },
+  "filter": {
+    "positive_series_ohm": 22,
+    "negative_series_ohm": 22,
+    "differential_capacitance_pf": 2200,
+    "common_mode_capacitance_pf_per_terminal": 2200,
+    "resistor_tolerance_fraction": 0.001,
+    "capacitor_tolerance_fraction": 0.05,
+    "dielectric": "C0G/NP0",
+    "negative_connection": "AINN connects through its series resistor to local ADC ground, not the 1.65 V tactile bias",
+    "source_note": "ADS8866 figure 51 shows balanced series resistors and a differential capacitor. The text gives both a 20-times rule and >590 pF; 2.2 nF exceeds both interpretations of the 59 pF input capacitance.",
+    "revision_note": "The first simulation with only the differential capacitor produced negative-input excursions outside the declared absolute-input range in two completed cases. Add 2.2 nF from each ADC input to local ADC ground to absorb common-mode charge steps. Preserve the earlier failed/incomplete run."
+  },
+  "reference": {
+    "part": "REF6033IDGKR",
+    "source": "https://www.ti.com/lit/ds/symlink/ref60.pdf",
+    "input_supply_v": 5,
+    "output_v": 3.3,
+    "filter_capacitance_uf_minimum_effective": 1,
+    "output_capacitance_uf_nominal": 22,
+    "output_capacitance_uf_minimum_effective": 10,
+    "series_capacitor_resistance_ohm_nominal": 0.047,
+    "total_output_capacitor_esr_ohm_target": [0.020, 0.100],
+    "connection": "OUT_F and OUT_S meet at the ADC REF land; GND_S returns separately to the ADC ground land. The 47 milliohm resistor is in series with the output capacitor, not the ADC reference feed.",
+    "note": "Verify capacitance after voltage/temperature derating and include capacitor/trace ESR. The datasheet requires 10-47 uF with a capacitance-dependent ESR stability region. This is a selected implementation target, not a verified reference circuit."
+  },
+  "screen": {
+    "input_voltage_v_cases": [0.1, 1.65, 3.2],
+    "sample_reset_voltage_v_cases": [0, 3.3],
+    "sampling_switch_resistance_ohm_assumed_cases": [10, 1000],
+    "sample_capacitance_scales": [1, 2],
+    "cycle_s": 0.00002,
+    "acquisition_start_s": 0.00001005,
+    "acquisition_duration_s": 0.0000099,
+    "sample_switch_transition_s": 0.000000002,
+    "settling_window_before_sample_s": 0.000001,
+    "settling_error_v_max": 0.000025,
+    "transient_stop_s": 0.00008,
+    "transient_maximum_step_s": 0.00000002,
+    "integration_method": "gear",
+    "integration_note": "Second-order Gear is a separate numerical follow-up to saved trapezoidal runs that aborted. It can add numerical damping, so retain independent AC results and compare completed trapezoidal traces plus a smaller time-step replay before interpreting transient settling.",
+    "minimum_voltage_return_margin_deg": 45,
+    "limits": [
+      "The sample switch uses the declared resistance values, not a TI guarantee of the internal switch resistance.",
+      "Resetting the capacitors to both rails probes charge steps; it is an explicit stimulus assumption, not a claim about the ADC's internal reset sequence.",
+      "Only the ADC sampling capacitance is doubled. External filter capacitors retain nominal values. This is a sensitivity study, not a probabilistic manufacturing bound.",
+      "The reference source is ideal in this driver-only simulation. REF6033 stability, supply coupling, layout and ADC digital timing are separate checks.",
+      "No force, contact probability or effective ADC resolution is inferred."
+    ]
+  }
+}

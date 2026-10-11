@@ -1,0 +1,64 @@
+{
+  "schema": "yam-f1-support-studies/1",
+  "physical_specimens_tested": 0,
+  "integrated_f1_complete": false,
+  "adc": {
+    "declared": 32,
+    "all_passed": true,
+    "minimum_voltage_return_margin_deg": 66.93651266554379,
+    "maximum_sample_window_error_uv": 0.004040093010138079,
+    "peak_buffer_current_a": 0.006817958591364986,
+    "smaller_time_step_cases": 4,
+    "completed_trapezoidal_comparisons": 10,
+    "unresolved_trapezoidal_workers": 14
+  },
+  "rows": {
+    "declared": 26,
+    "all_passed": true,
+    "minimum_voltage_return_margin_deg": 55.601074490316265,
+    "maximum_settling_us": 36.160355942699596,
+    "maximum_incremental_output_resistance_ohm": 0.002386927165115571
+  },
+  "earlier_runs": [
+    {
+      "source": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095342.269541Z",
+      "sha256": "a3135c66bfd783b00a6d5d299d221054a8c4d8a381bf349912909d540c252497",
+      "declared": 32,
+      "completed": 18,
+      "passed": 16,
+      "worker_failures": 14
+    },
+    {
+      "source": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095537.241055Z",
+      "sha256": "cb0cbcce5ac31c5baf294d9dde4542cbc6061664ee21f12004255d301f183402",
+      "declared": 32,
+      "completed": 18,
+      "passed": 18,
+      "worker_failures": 14
+    },
+    {
+      "source": "build/engineering/prototypes/f1/row_driver_runs/20261011T100308.120377Z",
+      "sha256": "c7a2fb4ca3b45e945997402c262a8c5c656094cde908911f9fc7a4d106ddd8ce",
+      "declared": 26,
+      "completed": 26,
+      "passed": 13,
+      "worker_failures": 0
+    },
+    {
+      "source": "build/engineering/prototypes/f1/row_driver_runs/20261011T100533.306664Z",
+      "sha256": "63fa73544a7a871cb58ed35da12b42af5c31fa0b6ed1504c0127135cccb6d715",
+      "declared": 26,
+      "completed": 26,
+      "passed": 20,
+      "worker_failures": 0
+    }
+  ],
+  "limits": [
+    "Typical amplifier models and explicit lumped circuit assumptions. Neither study is a measured board qualification.",
+    "The ADC sampling network is an assumed charge-step model. Input noise, INL, quantizer behavior, reference dynamics and actual waveforms remain.",
+    "Gear integration adds numerical damping. The saved AC responses, smaller-step cases and completed trapezoidal cases constrain only the stated model checks.",
+    "Row sources are ideal. The four-row/sixteen-column coupled network and layout parasitics are not included.",
+    "The row study uses centered DC/AC coordinates and released external-node initial guesses; actual-ground transients are separate saved netlists.",
+    "No force, contact probability, bending lifetime or 20 N rating is established."
+  ]
+}

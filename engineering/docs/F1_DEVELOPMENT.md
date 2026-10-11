@@ -221,3 +221,28 @@ The complete F1 design still requires the four row-driver loops, full-array
 interaction, reference and ADC drive, gain/channel transitions, firmware,
 routed readout board, fitted flex and mounting mechanics. No physical
 performance recommendation follows from this milestone.
+
+## ADC, row drivers and wrist integration
+
+The [support-study archive](../development/f1/support-studies/README.md)
+contains 32 ADC-driver cases and 26 row-driver cases, their exact inputs and
+the unsuccessful earlier attempts. Current declared model screens pass.
+Four ADC replays with smaller maximum time steps and ten completed
+trapezoidal runs constrain the reported settled-window result. Fourteen
+trapezoidal workers still did not complete; they remain in the archive.
+
+The ADC driver adds a 2.2 nF capacitor from each input to ground after the
+first model's differential-only filter produced out-of-range negative-input
+excursions. OPA320AQDBVRQ1 matches the current supplied Q1 macromodel.
+The row drivers use 47 Ω output isolation and 4.7 kΩ sense resistance.
+Their one-row model meets the stated 45° return-margin screen and settles
+within 36.17 µs in the selected command/load cases. These are typical
+isolated-stage models, not full-array or physical measurements.
+
+The wrist layout and [capture guide](F1_WRIST_CAPTURE.md) now define the
+complete candidate component/pin map. The board contains 135 components and
+498 pads; its placement screens pass. Routing/DRC, reference implementation,
+complete array dynamics, installed flex geometry and physical tests remain.
+The code provides a declared fixed-gain bench scan, separate electrical
+column tests, raw per-sample times and a recorder that retains partial frames.
+No physical Pico or sensor was accessed during the software checks.

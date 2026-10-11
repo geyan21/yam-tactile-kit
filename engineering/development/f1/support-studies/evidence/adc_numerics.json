@@ -1,0 +1,328 @@
+{
+  "schema": "yam-f1-adc-numerics/1",
+  "physical_evidence": false,
+  "reference": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095633.769939Z",
+  "reference_sha256": "804ff392cdd35e4cbec079b0691fd30dba6d085bd50dee239a2e37e1cf154ea8",
+  "trapezoidal": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095537.241055Z",
+  "trapezoidal_sha256": "cb0cbcce5ac31c5baf294d9dde4542cbc6061664ee21f12004255d301f183402",
+  "refined_cases": [
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 1.6500259810221594,
+      "dc_offset_v": 2.5981022159449196e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 2.970665935464467e-10,
+          "maximum_pin_error_v": 2.640658802732787e-10,
+          "maximum_ainn_magnitude_v": 5.074131088501842e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 2.971896062575752e-10,
+          "maximum_pin_error_v": 2.641891150290121e-10,
+          "maximum_ainn_magnitude_v": 4.848614151235094e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 2.972386781152636e-10,
+          "maximum_pin_error_v": 2.642379648420956e-10,
+          "maximum_ainn_magnitude_v": 5.299648025768591e-15,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 2.972386781152636e-10,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0014877261302126239,
+      "passed": true,
+      "case": "case_009",
+      "settled_trace_differences_v": {
+        "output": 2.049072023169174e-11,
+        "ainp": 2.0493162722345915e-11,
+        "ainn": 5.486968334408232e-15,
+        "samplep": 2.0493162722345915e-11,
+        "samplen": 5.488908967507213e-15
+      }
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.840882709105209e-09,
+          "maximum_pin_error_v": 3.838882170481561e-09,
+          "maximum_ainn_magnitude_v": 7.260087198900876e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.840478102201672e-09,
+          "maximum_pin_error_v": 3.8384775913336e-09,
+          "maximum_ainn_magnitude_v": 7.26009072260302e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.83994520902764e-09,
+          "maximum_pin_error_v": 3.837944670403992e-09,
+          "maximum_ainn_magnitude_v": 7.26009142734345e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.840882709105209e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817900582002238,
+      "passed": true,
+      "case": "case_005",
+      "settled_trace_differences_v": {
+        "output": 1.2521095271722515e-12,
+        "ainp": 1.2520678938088281e-12,
+        "ainn": 4.771979295192803e-16,
+        "samplep": 1.2520678938088281e-12,
+        "samplen": 4.799650019681022e-16
+      }
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931161,
+      "dc_offset_v": 2.733693116097058e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.247250468518814e-09,
+          "maximum_pin_error_v": 3.311244167747418e-09,
+          "maximum_ainn_magnitude_v": 5.626647584805376e-13,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.24607807300481e-09,
+          "maximum_pin_error_v": 3.3100793217499813e-09,
+          "maximum_ainn_magnitude_v": 3.405305752727903e-14,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.24551496788672e-09,
+          "maximum_pin_error_v": 3.309514884364262e-09,
+          "maximum_ainn_magnitude_v": 1.5109634796872152e-14,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.247250468518814e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817900582051977,
+      "passed": true,
+      "case": "case_017",
+      "settled_trace_differences_v": {
+        "output": 1.4591394759122522e-10,
+        "ainp": 4.851052892718144e-11,
+        "ainn": 2.6446199095203903e-11,
+        "samplep": 4.850297941061399e-11,
+        "samplen": 2.6262582599044393e-11
+      }
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931194,
+      "dc_offset_v": 2.733693119383318e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.089521527499528e-09,
+          "maximum_pin_error_v": 3.310551388580052e-09,
+          "maximum_ainn_magnitude_v": 7.258262688688798e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.0903057890441232e-09,
+          "maximum_pin_error_v": 3.3097680152138764e-09,
+          "maximum_ainn_magnitude_v": 7.258418120431202e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.090457223464682e-09,
+          "maximum_pin_error_v": 3.3096707596769193e-09,
+          "maximum_ainn_magnitude_v": 7.260261096805433e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.090457223464682e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0068179005786037725,
+      "passed": true,
+      "case": "case_023",
+      "settled_trace_differences_v": {
+        "output": 3.966071915328939e-11,
+        "ainp": 3.9744652013951054e-11,
+        "ainn": 1.8670164799165934e-14,
+        "samplep": 3.972866480239645e-11,
+        "samplen": 1.7408728733421225e-14
+      }
+    }
+  ],
+  "completed_trapezoidal_comparisons": [
+    {
+      "case": "case_003",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 8.257089456620292e-12,
+        "ainp": 8.228903669582621e-12,
+        "ainn": 9.784111053971083e-15,
+        "samplep": 8.218009606153487e-12,
+        "samplen": 4.778357977598289e-15
+      },
+      "passed": true
+    },
+    {
+      "case": "case_002",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 8.31520963195942e-12,
+        "ainp": 8.292741493498568e-12,
+        "ainn": 1.4267357190522472e-14,
+        "samplep": 8.286746289165592e-12,
+        "samplen": 1.0707324701166626e-14
+      },
+      "passed": true
+    },
+    {
+      "case": "case_008",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.306712515969366e-10,
+        "ainp": 1.3065948323287557e-10,
+        "ainn": 1.5184380750062588e-14,
+        "samplep": 1.3065948323287557e-10,
+        "samplen": 1.518442648852757e-14
+      },
+      "passed": true
+    },
+    {
+      "case": "case_009",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.3064771486881455e-10,
+        "ainp": 1.3061751680254474e-10,
+        "ainn": 1.6277131834834646e-14,
+        "samplep": 1.3061773884714967e-10,
+        "samplen": 1.623899738408146e-14
+      },
+      "passed": true
+    },
+    {
+      "case": "case_010",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.3071899118699548e-10,
+        "ainp": 1.3069900717255223e-10,
+        "ainn": 1.3085071461500224e-14,
+        "samplep": 1.3069212378979955e-10,
+        "samplen": 1.0209875706210528e-14
+      },
+      "passed": true
+    },
+    {
+      "case": "case_011",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.3066814297246765e-10,
+        "ainp": 1.3064505033355545e-10,
+        "ainn": 1.3754616237433384e-14,
+        "samplep": 1.306303953896304e-10,
+        "samplen": 7.804839912950363e-15
+      },
+      "passed": true
+    },
+    {
+      "case": "case_012",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.306668107048381e-10,
+        "ainp": 1.306277308543713e-10,
+        "ainn": 1.390350355026219e-14,
+        "samplep": 1.3062795289897622e-10,
+        "samplen": 1.3924666757151535e-14
+      },
+      "passed": true
+    },
+    {
+      "case": "case_013",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.306508234932835e-10,
+        "ainp": 1.3062884107739592e-10,
+        "ainn": 9.964420653563133e-15,
+        "samplep": 1.30628619032791e-10,
+        "samplen": 9.985899516891077e-15
+      },
+      "passed": true
+    },
+    {
+      "case": "case_015",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.3074785698563574e-10,
+        "ainp": 1.3072432025751368e-10,
+        "ainn": 1.3113723085893017e-14,
+        "samplep": 1.3071588256252653e-10,
+        "samplen": 5.671605479222597e-15
+      },
+      "passed": true
+    },
+    {
+      "case": "case_014",
+      "trapezoidal_screen_passed": true,
+      "settled_trace_differences_v": {
+        "output": 1.307280950157974e-10,
+        "ainp": 1.3070455828767535e-10,
+        "ainn": 1.6310110369099562e-14,
+        "samplep": 1.306961205926882e-10,
+        "samplen": 1.1748789376529025e-14
+      },
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "unresolved_trapezoidal_workers": 14,
+  "passed": true,
+  "limits": [
+    "Compares settled acquisition windows; it does not establish matching impulse peaks at a two-nanosecond switch edge.",
+    "Gear integration adds numerical damping. The separate AC screen and retained failed trapezoidal cases remain part of the evidence.",
+    "The ADC model is an explicit switched-capacitor approximation. No hardware resolution, force accuracy or contact behavior is measured."
+  ]
+}

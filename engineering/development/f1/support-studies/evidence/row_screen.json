@@ -1,0 +1,490 @@
+{
+  "schema": "yam-f1-row-driver-screen/1",
+  "physical_specimens_tested": 0,
+  "configuration_sha256": "b6185a0cbf89e1436880ae2900bb6ec430726f9cd9db9c649ae2e33387ebe86c",
+  "vendor_model_sha256": "eddf2b4031b0c86535fcacf636bee5d113afa2706f4e381ccd3f072b12eadce0",
+  "declared_cases": 26,
+  "results": [
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4113039.379895025,
+          "phase_margin_deg": 95.0330719250894
+        }
+      ],
+      "minimum_margin_deg": 95.0330719250894,
+      "bias_remote_v": 1.6499949494277724,
+      "passed": true,
+      "directory": "case_000"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4159889.608959029,
+          "phase_margin_deg": 94.96432419795121
+        }
+      ],
+      "minimum_margin_deg": 94.96432419795121,
+      "bias_remote_v": 1.6499949494621204,
+      "passed": true,
+      "directory": "case_001"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 3,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4032032.2262626616,
+          "phase_margin_deg": 93.52622872698225
+        }
+      ],
+      "minimum_margin_deg": 93.52622872698225,
+      "bias_remote_v": 1.6499949494277724,
+      "passed": true,
+      "directory": "case_002"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 3,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4078494.032095972,
+          "phase_margin_deg": 93.48226203952649
+        }
+      ],
+      "minimum_margin_deg": 93.48226203952649,
+      "bias_remote_v": 1.6499949494621204,
+      "passed": true,
+      "directory": "case_003"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 12,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3831370.902452343,
+          "phase_margin_deg": 93.8988901769506
+        }
+      ],
+      "minimum_margin_deg": 93.8988901769506,
+      "bias_remote_v": 1.6499949494277724,
+      "passed": true,
+      "directory": "case_004"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 6.25,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3879921.8714570533,
+          "phase_margin_deg": 93.87573443987064
+        }
+      ],
+      "minimum_margin_deg": 93.87573443987064,
+      "bias_remote_v": 1.6499949494621204,
+      "passed": true,
+      "directory": "case_005"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4967188.441520948,
+          "phase_margin_deg": 91.09559727608716
+        }
+      ],
+      "minimum_margin_deg": 91.09559727608716,
+      "bias_remote_v": 1.6499949480070348,
+      "passed": true,
+      "directory": "case_006"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 5004721.507436634,
+          "phase_margin_deg": 91.0837776983292
+        }
+      ],
+      "minimum_margin_deg": 91.0837776983292,
+      "bias_remote_v": 1.6499949480156266,
+      "passed": true,
+      "directory": "case_007"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 3,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4035174.7661195085,
+          "phase_margin_deg": 87.67044391039195
+        }
+      ],
+      "minimum_margin_deg": 87.67044391039195,
+      "bias_remote_v": 1.6499949480070348,
+      "passed": true,
+      "directory": "case_008"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 3,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4077371.323091441,
+          "phase_margin_deg": 87.81162915234628
+        }
+      ],
+      "minimum_margin_deg": 87.81162915234628,
+      "bias_remote_v": 1.6499949480156266,
+      "passed": true,
+      "directory": "case_009"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 12,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3771189.5110344714,
+          "phase_margin_deg": 93.377656724667
+        }
+      ],
+      "minimum_margin_deg": 93.377656724667,
+      "bias_remote_v": 1.6499949480070348,
+      "passed": true,
+      "directory": "case_010"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 25,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3821392.3975890777,
+          "phase_margin_deg": 93.38606023311047
+        }
+      ],
+      "minimum_margin_deg": 93.38606023311047,
+      "bias_remote_v": 1.6499949480156266,
+      "passed": true,
+      "directory": "case_011"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 7470256.2443125555,
+          "phase_margin_deg": 55.601074490316265
+        }
+      ],
+      "minimum_margin_deg": 55.601074490316265,
+      "bias_remote_v": 1.6499949475334674,
+      "passed": true,
+      "directory": "case_012"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 7466425.3420839645,
+          "phase_margin_deg": 55.882083376171224
+        }
+      ],
+      "minimum_margin_deg": 55.882083376171224,
+      "bias_remote_v": 1.649994947533471,
+      "passed": true,
+      "directory": "case_013"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 3,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3775000.9144875756,
+          "phase_margin_deg": 84.51227161932667
+        }
+      ],
+      "minimum_margin_deg": 84.51227161932667,
+      "bias_remote_v": 1.6499949475334674,
+      "passed": true,
+      "directory": "case_014"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 3,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3822266.548300644,
+          "phase_margin_deg": 84.83797536343116
+        }
+      ],
+      "minimum_margin_deg": 84.83797536343116,
+      "bias_remote_v": 1.649994947533471,
+      "passed": true,
+      "directory": "case_015"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 12,
+      "wire_ohm": 0.1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3743025.146197059,
+          "phase_margin_deg": 93.36514495404327
+        }
+      ],
+      "minimum_margin_deg": 93.36514495404327,
+      "bias_remote_v": 1.6499949475334674,
+      "passed": true,
+      "directory": "case_016"
+    },
+    {
+      "kind": "ac",
+      "load_ohm": 62500,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "crossings": [
+        {
+          "unity_frequency_hz": 3794263.6834523347,
+          "phase_margin_deg": 93.37628305083715
+        }
+      ],
+      "minimum_margin_deg": 93.37628305083715,
+      "bias_remote_v": 1.649994947533471,
+      "passed": true,
+      "directory": "case_017"
+    },
+    {
+      "kind": "command_step",
+      "load_ohm": 6.25,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.6499949494621204,
+      "active_remote_v": 1.6999758600371044,
+      "rising_settling_s": 3.61253524711263e-05,
+      "return_settling_s": 3.6160355942699597e-05,
+      "physical_headroom": true,
+      "minimum_output_v": 1.6499494586112422,
+      "maximum_output_v": 2.0837964563399454,
+      "command_gain": 0.9996182114996799,
+      "passed": true,
+      "directory": "case_018"
+    },
+    {
+      "kind": "command_step",
+      "load_ohm": 6.25,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.6499949494621204,
+      "active_remote_v": 1.6999758600371044,
+      "rising_settling_s": 3.563572010350656e-05,
+      "return_settling_s": 3.565725607208255e-05,
+      "physical_headroom": true,
+      "minimum_output_v": 1.6499493554147078,
+      "maximum_output_v": 2.0837965896959316,
+      "command_gain": 0.9996182114996799,
+      "passed": true,
+      "directory": "case_019"
+    },
+    {
+      "kind": "command_step",
+      "load_ohm": 62500,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533471,
+      "active_remote_v": 1.6999949443258233,
+      "rising_settling_s": 2.573319713658702e-06,
+      "return_settling_s": 2.583676776566306e-06,
+      "physical_headroom": true,
+      "minimum_output_v": 1.6459894826534411,
+      "maximum_output_v": 1.704038622396688,
+      "command_gain": 0.9999999358470468,
+      "passed": true,
+      "directory": "case_020"
+    },
+    {
+      "kind": "command_step",
+      "load_ohm": 62500,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533471,
+      "active_remote_v": 1.6999949443258233,
+      "rising_settling_s": 1.0925290182022252e-05,
+      "return_settling_s": 1.0902631367049487e-05,
+      "physical_headroom": true,
+      "minimum_output_v": 1.6154573534891319,
+      "maximum_output_v": 1.7345709329255463,
+      "command_gain": 0.9999999358470468,
+      "passed": true,
+      "directory": "case_021"
+    },
+    {
+      "kind": "load_step",
+      "load_ohm": 1000000000.0,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "current_a": -0.008,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533278,
+      "active_remote_v": 1.650014042950599,
+      "rising_settling_s": 4.735388166631306e-06,
+      "return_settling_s": 4.758464491768247e-06,
+      "physical_headroom": true,
+      "minimum_output_v": 1.0433143937463087,
+      "maximum_output_v": 1.7354728700402178,
+      "incremental_output_resistance_ohm": 0.002386927165115571,
+      "passed": true,
+      "directory": "case_022"
+    },
+    {
+      "kind": "load_step",
+      "load_ohm": 1000000000.0,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "current_a": -0.008,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533278,
+      "active_remote_v": 1.650014042950599,
+      "rising_settling_s": 1.3756953323543616e-05,
+      "return_settling_s": 1.3650266764391697e-05,
+      "physical_headroom": true,
+      "minimum_output_v": 1.171242181793263,
+      "maximum_output_v": 1.7447479643872585,
+      "incremental_output_resistance_ohm": 0.002386927165115571,
+      "passed": true,
+      "directory": "case_023"
+    },
+    {
+      "kind": "load_step",
+      "load_ohm": 1000000000.0,
+      "capacitance_nf": 12,
+      "wire_ohm": 1,
+      "current_a": 0.008,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533278,
+      "active_remote_v": 1.649975852115957,
+      "rising_settling_s": 1.3723079747724121e-05,
+      "return_settling_s": 1.3688392430065774e-05,
+      "physical_headroom": true,
+      "minimum_output_v": 1.5552450604928536,
+      "maximum_output_v": 2.128733846867426,
+      "incremental_output_resistance_ohm": 0.002386927165115571,
+      "passed": true,
+      "directory": "case_025"
+    },
+    {
+      "kind": "load_step",
+      "load_ohm": 1000000000.0,
+      "capacitance_nf": 0.1,
+      "wire_ohm": 1,
+      "current_a": 0.008,
+      "dc_voltage_datum_v": 1.65,
+      "transient_voltage_datum_v": 0,
+      "initial_remote_v": 1.649994947533278,
+      "active_remote_v": 1.649975852115957,
+      "rising_settling_s": 4.745265354428571e-06,
+      "return_settling_s": 4.763951033003456e-06,
+      "physical_headroom": true,
+      "minimum_output_v": 1.4273188977951734,
+      "maximum_output_v": 2.11947339090841,
+      "incremental_output_resistance_ohm": 0.002386927165115571,
+      "passed": true,
+      "directory": "case_024"
+    }
+  ],
+  "failures": [],
+  "all_completed": true,
+  "all_passed": true,
+  "limits": [
+    "One row at a time with ideal bias/reference sources. The complete four-row, sixteen-column network remains a separate check.",
+    "A 6.25 ohm load represents sixteen 100 ohm cells in parallel to stiff bias; actual inactive columns do not all have that termination.",
+    "Eight milliampere source/sink steps are electrical stresses, not a mapping from 20 N.",
+    "Typical amplifier model and lumped switches; charge injection, tolerances, temperature and layout remain to be qualified."
+  ]
+}

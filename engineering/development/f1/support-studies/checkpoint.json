@@ -1,0 +1,100 @@
+{
+  "schema": "yam-f1-support-study-checkpoint/1",
+  "created_utc": "2026-10-11T11:01:53.089320+00:00",
+  "physical_specimens_tested": 0,
+  "integrated_f1_complete": false,
+  "summary": {
+    "schema": "yam-f1-support-studies/1",
+    "physical_specimens_tested": 0,
+    "integrated_f1_complete": false,
+    "adc": {
+      "declared": 32,
+      "all_passed": true,
+      "minimum_voltage_return_margin_deg": 66.93651266554379,
+      "maximum_sample_window_error_uv": 0.004040093010138079,
+      "peak_buffer_current_a": 0.006817958591364986,
+      "smaller_time_step_cases": 4,
+      "completed_trapezoidal_comparisons": 10,
+      "unresolved_trapezoidal_workers": 14
+    },
+    "rows": {
+      "declared": 26,
+      "all_passed": true,
+      "minimum_voltage_return_margin_deg": 55.601074490316265,
+      "maximum_settling_us": 36.160355942699596,
+      "maximum_incremental_output_resistance_ohm": 0.002386927165115571
+    },
+    "earlier_runs": [
+      {
+        "source": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095342.269541Z",
+        "sha256": "a3135c66bfd783b00a6d5d299d221054a8c4d8a381bf349912909d540c252497",
+        "declared": 32,
+        "completed": 18,
+        "passed": 16,
+        "worker_failures": 14
+      },
+      {
+        "source": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095537.241055Z",
+        "sha256": "cb0cbcce5ac31c5baf294d9dde4542cbc6061664ee21f12004255d301f183402",
+        "declared": 32,
+        "completed": 18,
+        "passed": 18,
+        "worker_failures": 14
+      },
+      {
+        "source": "build/engineering/prototypes/f1/row_driver_runs/20261011T100308.120377Z",
+        "sha256": "c7a2fb4ca3b45e945997402c262a8c5c656094cde908911f9fc7a4d106ddd8ce",
+        "declared": 26,
+        "completed": 26,
+        "passed": 13,
+        "worker_failures": 0
+      },
+      {
+        "source": "build/engineering/prototypes/f1/row_driver_runs/20261011T100533.306664Z",
+        "sha256": "63fa73544a7a871cb58ed35da12b42af5c31fa0b6ed1504c0127135cccb6d715",
+        "declared": 26,
+        "completed": 26,
+        "passed": 20,
+        "worker_failures": 0
+      }
+    ],
+    "limits": [
+      "Typical amplifier models and explicit lumped circuit assumptions. Neither study is a measured board qualification.",
+      "The ADC sampling network is an assumed charge-step model. Input noise, INL, quantizer behavior, reference dynamics and actual waveforms remain.",
+      "Gear integration adds numerical damping. The saved AC responses, smaller-step cases and completed trapezoidal cases constrain only the stated model checks.",
+      "Row sources are ideal. The four-row/sixteen-column coupled network and layout parasitics are not included.",
+      "The row study uses centered DC/AC coordinates and released external-node initial guesses; actual-ground transients are separate saved netlists.",
+      "No force, contact probability, bending lifetime or 20 N rating is established."
+    ]
+  },
+  "source_locations": {
+    "adc_current": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095633.769939Z",
+    "row_current": "build/engineering/prototypes/f1/row_driver_runs/20261011T100836.545125Z",
+    "adc_numerics": "build/engineering/prototypes/f1/adc_numerics/20261011T100308.120477Z",
+    "earlier_1": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095342.269541Z",
+    "earlier_2": "build/engineering/prototypes/f1/adc_driver_runs/20261011T095537.241055Z",
+    "earlier_3": "build/engineering/prototypes/f1/row_driver_runs/20261011T100308.120377Z",
+    "earlier_4": "build/engineering/prototypes/f1/row_driver_runs/20261011T100533.306664Z"
+  },
+  "files_sha256": {
+    "README.md": "24765ad4768ff13c43f58b65e4616ad83f13e8f7f2a1433cd07cd272ab7e6378",
+    "evidence/adc_configuration.json": "a047a0af99d0655e0fc57a314c476bef7a7978352caaadb9e193e62190e0d983",
+    "evidence/adc_numerics.json": "6b84a4d59c508e5268a7b7e9276fbebb763fc559505d4aae653f3cff8fb111e8",
+    "evidence/adc_screen.json": "804ff392cdd35e4cbec079b0691fd30dba6d085bd50dee239a2e37e1cf154ea8",
+    "evidence/row_configuration.json": "b6185a0cbf89e1436880ae2900bb6ec430726f9cd9db9c649ae2e33387ebe86c",
+    "evidence/row_screen.json": "0afae4962691740dd65af5ae9374c73d1a87a9b01db5820250becb9d8c732a8b",
+    "evidence/summary.json": "e5a08eef7dd4fa72677cbea08fe8202e6c5854e195ab7e932502035ff1da165d",
+    "runs/adc_current.tar.gz": "0c6b94e615928e9e9c032f6dcef558cb35a191011b20483a39ab305b3f10f308",
+    "runs/adc_numerics.tar.gz": "8e3c2c76aba49b4391d7c4cc0547dc18ee592853b3b2d204aa074c80aa33103d",
+    "runs/contents.json": "086c553d8297eaf109833966dce954cad45c6faa773dc014e6c8229e9f7e023d",
+    "runs/earlier_1.tar.gz": "508ebba9a5106ad51ef2c671a3138802f3bc3458ee3804ffd7cf1dbf533ac983",
+    "runs/earlier_2.tar.gz": "fe675b6191baf7b1eb9baebbeee5b894d18772cd8496a40908996f0cce504b93",
+    "runs/earlier_3.tar.gz": "ffda4499313653cf0e5ba03de5f060d9749178f314df27dafa21d86e2040d6bc",
+    "runs/earlier_4.tar.gz": "310a3650c3f4635fa4285b48b1fc1e420aaba06a0e6874c1e7554b047751e484",
+    "runs/row_current.tar.gz": "9287a5c7e38fec0e99175f18d21d19d1dad4cc879486a2605e0e30e102be1c9b",
+    "visuals/support_results.pdf": "8d20b59dd70741aad730c010a1b3d35bb2f37c2861768e3c6c21eb375becf7dc",
+    "visuals/support_results.png": "e0d1dcfc42537ea03c3a7c68ce0b955823a5f40cfb59b72e36bf73ad4fe2bc05",
+    "visuals/support_results.svg": "88406ebe96f08ea11989bd67c6814a90f576531ae2d0a029ee78296ace69f385"
+  },
+  "archiver_sha256": "778d39dd5e0f57255ca52df1317be92325e5f7870e1c418987a8032f02348868"
+}

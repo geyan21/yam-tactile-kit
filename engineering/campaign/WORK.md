@@ -91,6 +91,27 @@ protocol, PCB, fitted flex and mechanics remain. The active ordering code is
 OPA392DBVR; the extra `I` in the original saved simulation label is documented
 as an ordering-label correction, with no circuit/model change.
 
+The ADC and row stages now have a separate checked archive at
+`engineering/development/f1/support-studies/`: 32 ADC cases and 26 one-row
+cases, four smaller-step ADC replays, ten comparisons with completed
+trapezoidal transients, and four unsuccessful predecessor runs. The archive
+verifier checks 18 files and 1,097 members. These model results do not
+qualify the complete coupled array, reference circuit or physical board.
+
+The wrist placement has 135 components and 498 pads. Its nominal component,
+pad, mounting and bypass-distance screens pass; copper routing and independent
+DRC are still in progress. The native connector correspondence checks all
+50 conductors for the stated mating pose. Physical cable continuity and
+installed routing have not been measured.
+
+Four-file Pico firmware and a raw host recorder now exist under
+`engineering/firmware/f1/` and `engineering/software/f1_*`. Nine checks with
+synthetic I/O cover sequencing, bus timing, interrupted acquisition and
+complete matrix membership. The code has not been programmed onto a physical
+board. It emits raw counts and timestamps, with force/contact values unset.
+`docs/F1_WRIST_CAPTURE.md` explains exact component choices, pin mapping and
+the limits of the cable-test path.
+
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.

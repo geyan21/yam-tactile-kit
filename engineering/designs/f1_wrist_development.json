@@ -1,0 +1,83 @@
+{
+  "schema": "yam-f1-wrist-development/1",
+  "name": "f1_wrist",
+  "status": "Complete circuit/layout development; installed F1 and physical tests pending",
+  "physical_specimens_tested": 0,
+  "board_size_mm": [90, 75],
+  "thickness_mm": 1.6,
+  "copper_layers": 4,
+  "clearance_mm": 0.15,
+  "copper_to_edge_mm": 0.3,
+  "routing_grid_mm": 0.2,
+  "signal_trace_mm": 0.15,
+  "via_diameter_mm": 0.45,
+  "via_drill_mm": 0.2,
+  "label_position_mm": [47, 71],
+  "feedback_candidate": "engineering/designs/f1_feedback_screen.json",
+  "row_candidate": "engineering/designs/f1_row_stage.json",
+  "adc_candidate": "engineering/designs/f1_adc_stage.json",
+  "fanout_candidate": "engineering/designs/f1_fanout_development.json",
+  "controller": {
+    "part": "Raspberry Pi Pico, RP2040, non-W",
+    "source": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+    "mount": "Two 1x20 2.54 mm female sockets accept a Pico with male headers; the assembly is on the wrist, not on the finger.",
+    "left_header_datum_mm": [8, 12],
+    "right_header_datum_mm": [25.78, 12],
+    "module_component_keepout_xy_mm": [6.39, 10.63, 27.39, 61.63],
+    "left_header_physical_pico_pins": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    "right_header_physical_pico_pins": [40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21],
+    "gpio": {
+      "ROW0": 0, "ROW1": 1, "ROW2": 2, "ROW3": 3,
+      "A0": 4, "A1": 5, "A2": 6, "A3": 7,
+      "CUR_EN": 8, "SNS_EN": 9, "TEST_EN": 10,
+      "GAIN0": 11, "GAIN1": 12, "GAIN2": 13, "GAIN3": 14,
+      "PARK": 15, "SPI_MISO": 16, "ADC_CONV": 17,
+      "SPI_SCK": 18, "SPI_MOSI": 19, "MON_CS": 20
+    },
+    "power": "USB powers the Pico. VBUS supplies the reference; Pico 3V3_OUT supplies analog/digital circuitry. Do not connect another powered 3.3 V source."
+  },
+  "connector": {
+    "reference": "JW",
+    "center_mm": [85, 36],
+    "rotation_deg": 90,
+    "side": "F",
+    "mapping": "Wrist connector pin n corresponds to fanout connector pin 51-n.",
+    "mating_contract": "Identical Hirose bottom-contact connectors with the selected Type-A same-side-contact FFC. In the straight inspection pose, board faces are parallel and connector mouths oppose each other. Confirm all conductors with power disconnected.",
+    "installed_cable_geometry_verified": false
+  },
+  "bias": {
+    "reference_part": "REF6033IDGKR",
+    "bias_top_ohm": 10000,
+    "bias_bottom_ohm": 10000,
+    "excite_top_ohm": 16000,
+    "excite_bottom_ohm": 17000,
+    "divider_resistor_tolerance_fraction": 0.0001,
+    "divider_resistor_tempco_ppm_per_k_target": 10,
+    "divider_filter_capacitance_nf": 100,
+    "buffer_part": "OPA392DBVR",
+    "buffer_output_isolation_ohm": 47,
+    "buffer_output_capacitance_nf": 100,
+    "limits": "Source ratios, buffer stability, reference output ESR/derating and complete-array load changes still require checking."
+  },
+  "monitor": {
+    "part": "MCP3208-B/SL",
+    "source": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/21298e.pdf",
+    "channels": ["ROW0_MON", "ROW1_MON", "ROW2_MON", "ROW3_MON", "BIAS_MON", "EXCITE_MON", "+5V_DIV2", "+3V3_DIV2"],
+    "spi_frequency_hz": 1000000,
+    "limits": "Coarse electrical monitoring; this does not measure remote row voltages or establish wire-fault coverage."
+  },
+  "adc_timing": {
+    "spi_frequency_hz": 8000000,
+    "conversion_wait_us": 10,
+    "post_read_acquisition_wait_us": 10,
+    "word_bits": 16,
+    "mode": "DIN tied high; CONVST provides 3-wire CS mode",
+    "note": "Leave CONVST low after a 16-clock read. Before monitor traffic, raise it, discard that extra conversion and keep it high for high-impedance DOUT. Before the next main sample, provide a low interval and a new rising edge."
+  },
+  "mount_holes": [
+    {"center_mm": [4, 4], "diameter_mm": 3.2, "copper_keepout_diameter_mm": 7},
+    {"center_mm": [86, 4], "diameter_mm": 3.2, "copper_keepout_diameter_mm": 7},
+    {"center_mm": [4, 71], "diameter_mm": 3.2, "copper_keepout_diameter_mm": 7},
+    {"center_mm": [86, 71], "diameter_mm": 3.2, "copper_keepout_diameter_mm": 7}
+  ]
+}

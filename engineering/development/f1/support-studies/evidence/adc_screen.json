@@ -1,0 +1,1123 @@
+{
+  "schema": "yam-f1-adc-driver-screen/1",
+  "physical_specimens_tested": 0,
+  "configuration_sha256": "a047a0af99d0655e0fc57a314c476bef7a7978352caaadb9e193e62190e0d983",
+  "vendor_model_sha256": "a272838427e8988bdc662887238d2698d23feb0d39400a2c4c4a929f10c29460",
+  "declared_cases": 32,
+  "results": [
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.84209057624485e-09,
+          "maximum_pin_error_v": 3.840090065376778e-09,
+          "maximum_ainn_magnitude_v": 9.470965624203562e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.841710588536884e-09,
+          "maximum_pin_error_v": 3.8397100915466e-09,
+          "maximum_ainn_magnitude_v": 9.557855217086164e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.841283777172855e-09,
+          "maximum_pin_error_v": 3.8392832801825705e-09,
+          "maximum_ainn_magnitude_v": 9.644744809968765e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.84209057624485e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958591364986,
+      "passed": true,
+      "directory": "case_000"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.842004270282473e-09,
+          "maximum_pin_error_v": 3.840003745536613e-09,
+          "maximum_ainn_magnitude_v": 9.37484579245759e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.841648041347234e-09,
+          "maximum_pin_error_v": 3.8396475027235866e-09,
+          "maximum_ainn_magnitude_v": 9.37484579245759e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.841305065699352e-09,
+          "maximum_pin_error_v": 3.839304540953492e-09,
+          "maximum_ainn_magnitude_v": 9.460853552021423e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.842004270282473e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958591364986,
+      "passed": true,
+      "directory": "case_001"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 4.040055484599847e-09,
+          "maximum_pin_error_v": 3.840003898192279e-09,
+          "maximum_ainn_magnitude_v": 9.64766432343038e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 4.039755308049564e-09,
+          "maximum_pin_error_v": 3.839703749397572e-09,
+          "maximum_ainn_magnitude_v": 9.578256666427283e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 4.039378304065977e-09,
+          "maximum_pin_error_v": 3.839326689902833e-09,
+          "maximum_ainn_magnitude_v": 9.99470260844586e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 4.040055484599847e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958591364986,
+      "passed": true,
+      "directory": "case_003"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 4.040053749876371e-09,
+          "maximum_pin_error_v": 3.840003315325191e-09,
+          "maximum_ainn_magnitude_v": 9.92747929468514e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 4.039751894113763e-09,
+          "maximum_pin_error_v": 3.839701459562583e-09,
+          "maximum_ainn_magnitude_v": 9.64978756616248e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 4.039442585979103e-09,
+          "maximum_pin_error_v": 3.839392109794559e-09,
+          "maximum_ainn_magnitude_v": 9.580364634031814e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 4.040053749876371e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958591364986,
+      "passed": true,
+      "directory": "case_002"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.8420647496817395e-09,
+          "maximum_pin_error_v": 3.8400642388136674e-09,
+          "maximum_ainn_magnitude_v": 7.260098164726635e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.841639326096491e-09,
+          "maximum_pin_error_v": 3.839638815228419e-09,
+          "maximum_ainn_magnitude_v": 7.260096426934778e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.8412699271406225e-09,
+          "maximum_pin_error_v": 3.8392694162725505e-09,
+          "maximum_ainn_magnitude_v": 7.260099033622564e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.8420647496817395e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958307288624,
+      "passed": true,
+      "directory": "case_004"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.842009488330689e-09,
+          "maximum_pin_error_v": 3.840008949707041e-09,
+          "maximum_ainn_magnitude_v": 7.260095601078068e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.841596235565348e-09,
+          "maximum_pin_error_v": 3.8395956969417e-09,
+          "maximum_ainn_magnitude_v": 7.26009732123326e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.841196832832239e-09,
+          "maximum_pin_error_v": 3.839196308086379e-09,
+          "maximum_ainn_magnitude_v": 7.260099901466046e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.842009488330689e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958307288624,
+      "passed": true,
+      "directory": "case_005"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 4.0400930101380794e-09,
+          "maximum_pin_error_v": 3.840042603342475e-09,
+          "maximum_ainn_magnitude_v": 7.260098900232935e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 4.039715117976073e-09,
+          "maximum_pin_error_v": 3.8396646973026805e-09,
+          "maximum_ainn_magnitude_v": 7.260099594462255e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 4.0393173944552885e-09,
+          "maximum_pin_error_v": 3.839266876637382e-09,
+          "maximum_ainn_magnitude_v": 7.260103065608862e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 4.0400930101380794e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958307288624,
+      "passed": true,
+      "directory": "case_006"
+    },
+    {
+      "kind": "transient",
+      "input_v": 0.1,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 0.10002462511320802,
+      "dc_offset_v": 2.462511320801275e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 4.040046908126982e-09,
+          "maximum_pin_error_v": 3.839995335597202e-09,
+          "maximum_ainn_magnitude_v": 7.26009714272604e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 4.0396567757561286e-09,
+          "maximum_pin_error_v": 3.839605161592985e-09,
+          "maximum_ainn_magnitude_v": 7.26009436641976e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 4.039260370625186e-09,
+          "maximum_pin_error_v": 3.8392086870731035e-09,
+          "maximum_ainn_magnitude_v": 7.26009436641976e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 4.040046908126982e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958307288624,
+      "passed": true,
+      "directory": "case_007"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 1.6500259810221594,
+      "dc_offset_v": 2.5981022159449196e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.1760616359122196e-10,
+          "maximum_pin_error_v": 2.846056723626589e-10,
+          "maximum_ainn_magnitude_v": 5.560933944486495e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1755909013497785e-10,
+          "maximum_pin_error_v": 2.8455859890641477e-10,
+          "maximum_ainn_magnitude_v": 0.0,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.1761215879555493e-10,
+          "maximum_pin_error_v": 2.8461166756699185e-10,
+          "maximum_ainn_magnitude_v": 2.7804669722432477e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.1761215879555493e-10,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0007543100110123235,
+      "passed": true,
+      "directory": "case_008"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 1.6500259810221594,
+      "dc_offset_v": 2.5981022159449196e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.175544271982744e-10,
+          "maximum_pin_error_v": 2.845537139251064e-10,
+          "maximum_ainn_magnitude_v": 4.128372459063893e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1758395913072945e-10,
+          "maximum_pin_error_v": 2.8458324585756145e-10,
+          "maximum_ainn_magnitude_v": 4.128372459063893e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.1755731377813845e-10,
+          "maximum_pin_error_v": 2.8455660050497045e-10,
+          "maximum_ainn_magnitude_v": 1.3761241530212977e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.1758395913072945e-10,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0014877231871592877,
+      "passed": true,
+      "directory": "case_009"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 1.6500259810221594,
+      "dc_offset_v": 2.5981022159449196e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.5846352552937333e-09,
+          "maximum_pin_error_v": 2.845812474561171e-10,
+          "maximum_ainn_magnitude_v": 7.775368398634516e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.5846372536951776e-09,
+          "maximum_pin_error_v": 2.845836899467713e-10,
+          "maximum_ainn_magnitude_v": 1.110766914090645e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.5847058654780994e-09,
+          "maximum_pin_error_v": 2.846520796850882e-10,
+          "maximum_ainn_magnitude_v": 3.3323007422719353e-16,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.5847058654780994e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0005208339365312121,
+      "passed": true,
+      "directory": "case_010"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 1.6500259810221594,
+      "dc_offset_v": 2.5981022159449196e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.5846141610562654e-09,
+          "maximum_pin_error_v": 2.845605973078591e-10,
+          "maximum_ainn_magnitude_v": 5.5526125602477e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.5845668655554164e-09,
+          "maximum_pin_error_v": 2.8451330180701007e-10,
+          "maximum_ainn_magnitude_v": 5.5526125602477e-16,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.5846645651815834e-09,
+          "maximum_pin_error_v": 2.846103352993623e-10,
+          "maximum_ainn_magnitude_v": 0.0,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.5846645651815834e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0007522922789462586,
+      "passed": true,
+      "directory": "case_011"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 1.6500259810221924,
+      "dc_offset_v": 2.5981022192533842e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.1754865403854637e-10,
+          "maximum_pin_error_v": 2.845481628099833e-10,
+          "maximum_ainn_magnitude_v": 7.260021701884899e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1756242080405173e-10,
+          "maximum_pin_error_v": 2.8456192957548865e-10,
+          "maximum_ainn_magnitude_v": 7.260077311224343e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.1754043838816415e-10,
+          "maximum_pin_error_v": 2.8453994715960107e-10,
+          "maximum_ainn_magnitude_v": 7.260091213559205e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.1756242080405173e-10,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0012914607760507618,
+      "passed": true,
+      "directory": "case_012"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 1.6500259810221924,
+      "dc_offset_v": 2.5981022192533842e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.1754332496802817e-10,
+          "maximum_pin_error_v": 2.8454261169486017e-10,
+          "maximum_ainn_magnitude_v": 7.26001819409446e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1754043838816415e-10,
+          "maximum_pin_error_v": 2.8453972511499614e-10,
+          "maximum_ainn_magnitude_v": 7.25997691036987e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.175479879047316e-10,
+          "maximum_pin_error_v": 2.845472746315636e-10,
+          "maximum_ainn_magnitude_v": 7.26001819409446e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.175479879047316e-10,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0025187487064250104,
+      "passed": true,
+      "directory": "case_013"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 1.6500259810221924,
+      "dc_offset_v": 2.5981022192533842e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.58470364503205e-09,
+          "maximum_pin_error_v": 2.8465052537285374e-10,
+          "maximum_ainn_magnitude_v": 7.259983658165598e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.5846199342159935e-09,
+          "maximum_pin_error_v": 2.8456659251219207e-10,
+          "maximum_ainn_magnitude_v": 7.260116950195289e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.584683216928397e-09,
+          "maximum_pin_error_v": 2.8462920909078093e-10,
+          "maximum_ainn_magnitude_v": 7.260028088842161e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.58470364503205e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0008260769480243912,
+      "passed": true,
+      "directory": "case_014"
+    },
+    {
+      "kind": "transient",
+      "input_v": 1.65,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 1.6500259810221924,
+      "dc_offset_v": 2.5981022192533842e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.584716079529926e-09,
+          "maximum_pin_error_v": 2.846609614692852e-10,
+          "maximum_ainn_magnitude_v": 7.260029817298747e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.5846012824691798e-09,
+          "maximum_pin_error_v": 2.845463864531439e-10,
+          "maximum_ainn_magnitude_v": 7.260007606848507e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.5846048351828586e-09,
+          "maximum_pin_error_v": 2.8454949507761285e-10,
+          "maximum_ainn_magnitude_v": 7.26008534342435e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.584716079529926e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.0011484002066956367,
+      "passed": true,
+      "directory": "case_015"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 3.200027336931161,
+      "dc_offset_v": 2.733693116097058e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.2661962023894375e-09,
+          "maximum_pin_error_v": 3.330182796190684e-09,
+          "maximum_ainn_magnitude_v": 2.7029753577268284e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.206498622176923e-09,
+          "maximum_pin_error_v": 3.2704989827436748e-09,
+          "maximum_ainn_magnitude_v": 3.336560366691897e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.2060833987657134e-09,
+          "maximum_pin_error_v": 3.270083759332465e-09,
+          "maximum_ainn_magnitude_v": 4.170700458364872e-15,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.2661962023894375e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958001170991,
+      "passed": true,
+      "directory": "case_016"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931161,
+      "dc_offset_v": 2.733693116097058e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.265632653182138e-09,
+          "maximum_pin_error_v": 3.3296205792510136e-09,
+          "maximum_ainn_magnitude_v": 2.6415528791735624e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.206442666936482e-09,
+          "maximum_pin_error_v": 3.2704434715924435e-09,
+          "maximum_ainn_magnitude_v": 4.1283724590638935e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.2060083476892487e-09,
+          "maximum_pin_error_v": 3.27000915234521e-09,
+          "maximum_ainn_magnitude_v": 3.027473136646855e-15,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.265632653182138e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958001170991,
+      "passed": true,
+      "directory": "case_017"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 3.200027336931161,
+      "dc_offset_v": 2.733693116097058e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.1291405022670915e-09,
+          "maximum_pin_error_v": 3.2709293051880195e-09,
+          "maximum_ainn_magnitude_v": 4.220914273544452e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.129615677721631e-09,
+          "maximum_pin_error_v": 3.2704607910716277e-09,
+          "maximum_ainn_magnitude_v": 3.7766075079081934e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.130068648715678e-09,
+          "maximum_pin_error_v": 3.2700118168804693e-09,
+          "maximum_ainn_magnitude_v": 3.3323007422719356e-15,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.130068648715678e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958001170991,
+      "passed": true,
+      "directory": "case_018"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931161,
+      "dc_offset_v": 2.733693116097058e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.1292404223393078e-09,
+          "maximum_pin_error_v": 3.2708289410265934e-09,
+          "maximum_ainn_magnitude_v": 2.8873585313288038e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1296463198771107e-09,
+          "maximum_pin_error_v": 3.2704283725593086e-09,
+          "maximum_ainn_magnitude_v": 3.775776540968436e-15,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.1301059522093055e-09,
+          "maximum_pin_error_v": 3.269968296137904e-09,
+          "maximum_ainn_magnitude_v": 4.44209004819816e-15,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.1301059522093055e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817958001170991,
+      "passed": true,
+      "directory": "case_019"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 3.200027336931194,
+      "dc_offset_v": 2.733693119383318e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.2069622513120066e-09,
+          "maximum_pin_error_v": 3.270963055967968e-09,
+          "maximum_ainn_magnitude_v": 7.259854873866565e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.206480858608529e-09,
+          "maximum_pin_error_v": 3.2704812191752808e-09,
+          "maximum_ainn_magnitude_v": 7.259854873866565e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.2060625265728504e-09,
+          "maximum_pin_error_v": 3.270062887139602e-09,
+          "maximum_ainn_magnitude_v": 7.259827069196843e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.2069622513120066e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817957890256382,
+      "passed": true,
+      "directory": "case_020"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931194,
+      "dc_offset_v": 2.733693119383318e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.2068148136943364e-09,
+          "maximum_pin_error_v": 3.270815618350298e-09,
+          "maximum_ainn_magnitude_v": 7.259798014229977e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.206413357048632e-09,
+          "maximum_pin_error_v": 3.2704146057938033e-09,
+          "maximum_ainn_magnitude_v": 7.259853059196098e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.2060594179483815e-09,
+          "maximum_pin_error_v": 3.2700606666935528e-09,
+          "maximum_ainn_magnitude_v": 7.259798014229977e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.2068148136943364e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817957890256382,
+      "passed": true,
+      "directory": "case_021"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "dc_buffer_output_v": 3.200027336931194,
+      "dc_offset_v": 2.733693119383318e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.129184023009657e-09,
+          "maximum_pin_error_v": 3.2708964425864906e-09,
+          "maximum_ainn_magnitude_v": 7.259972550496457e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.1296254476842478e-09,
+          "maximum_pin_error_v": 3.2704523533766405e-09,
+          "maximum_ainn_magnitude_v": 7.259905904481611e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.1299869363010657e-09,
+          "maximum_pin_error_v": 3.270086867956934e-09,
+          "maximum_ainn_magnitude_v": 7.259861473805048e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.1299869363010657e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817957890256382,
+      "passed": true,
+      "directory": "case_022"
+    },
+    {
+      "kind": "transient",
+      "input_v": 3.2,
+      "reset_v": 3.3,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "dc_buffer_output_v": 3.200027336931194,
+      "dc_offset_v": 2.733693119383318e-05,
+      "windows": [
+        {
+          "cycle_index": 1,
+          "window_end_s": 3.995e-05,
+          "maximum_sample_error_v": 3.129266623602689e-09,
+          "maximum_pin_error_v": 3.2708080688337304e-09,
+          "maximum_ainn_magnitude_v": 7.259996501623386e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 2,
+          "window_end_s": 5.995000000000001e-05,
+          "maximum_sample_error_v": 3.129653869393678e-09,
+          "maximum_pin_error_v": 3.270418602596692e-09,
+          "maximum_ainn_magnitude_v": 7.259996501623386e-11,
+          "acquisition_control_verified": true
+        },
+        {
+          "cycle_index": 3,
+          "window_end_s": 7.995e-05,
+          "maximum_sample_error_v": 3.130036230203359e-09,
+          "maximum_pin_error_v": 3.270033133162542e-09,
+          "maximum_ainn_magnitude_v": 7.259952080722904e-11,
+          "acquisition_control_verified": true
+        }
+      ],
+      "maximum_sample_error_v": 3.130036230203359e-09,
+      "physically_plausible_output_and_input_limits": true,
+      "peak_buffer_current_a": 0.006817957890256382,
+      "passed": true,
+      "directory": "case_023"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "acquiring": false,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4547614.264895051,
+          "phase_margin_deg": 67.07064686957722
+        }
+      ],
+      "minimum_margin_deg": 67.07064686957722,
+      "dc_output_v": 1.6500259810221594,
+      "passed": true,
+      "directory": "case_024"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 1,
+      "acquiring": true,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4529455.159033044,
+          "phase_margin_deg": 67.27936474386779
+        }
+      ],
+      "minimum_margin_deg": 67.27936474386779,
+      "dc_output_v": 1.650025981022143,
+      "passed": true,
+      "directory": "case_025"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "acquiring": false,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4547614.264895051,
+          "phase_margin_deg": 67.07064686957722
+        }
+      ],
+      "minimum_margin_deg": 67.07064686957722,
+      "dc_output_v": 1.6500259810221594,
+      "passed": true,
+      "directory": "case_026"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 10,
+      "capacitance_scale": 2,
+      "acquiring": true,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4511654.252838833,
+          "phase_margin_deg": 67.47647011887125
+        }
+      ],
+      "minimum_margin_deg": 67.47647011887125,
+      "dc_output_v": 1.650025981022143,
+      "passed": true,
+      "directory": "case_027"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "acquiring": false,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4547614.264895051,
+          "phase_margin_deg": 67.07064686957722
+        }
+      ],
+      "minimum_margin_deg": 67.07064686957722,
+      "dc_output_v": 1.6500259810221594,
+      "passed": true,
+      "directory": "case_028"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 1,
+      "acquiring": true,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4535498.042349434,
+          "phase_margin_deg": 66.99144813520596
+        }
+      ],
+      "minimum_margin_deg": 66.99144813520596,
+      "dc_output_v": 1.650025981022143,
+      "passed": true,
+      "directory": "case_029"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "acquiring": false,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4547614.264895051,
+          "phase_margin_deg": 67.07064686957722
+        }
+      ],
+      "minimum_margin_deg": 67.07064686957722,
+      "dc_output_v": 1.6500259810221594,
+      "passed": true,
+      "directory": "case_030"
+    },
+    {
+      "kind": "ac",
+      "input_v": 1.65,
+      "reset_v": 0,
+      "switch_resistance_ohm": 1000,
+      "capacitance_scale": 2,
+      "acquiring": true,
+      "crossings": [
+        {
+          "unity_frequency_hz": 4535457.706001059,
+          "phase_margin_deg": 66.93651266554379
+        }
+      ],
+      "minimum_margin_deg": 66.93651266554379,
+      "dc_output_v": 1.650025981022143,
+      "passed": true,
+      "directory": "case_031"
+    }
+  ],
+  "failures": [],
+  "all_completed": true,
+  "all_passed": true,
+  "limits": [
+    "The sample switch uses the declared resistance values, not a TI guarantee of the internal switch resistance.",
+    "Resetting the capacitors to both rails probes charge steps; it is an explicit stimulus assumption, not a claim about the ADC's internal reset sequence.",
+    "Only the ADC sampling capacitance is doubled. External filter capacitors retain nominal values. This is a sensitivity study, not a probabilistic manufacturing bound.",
+    "The reference source is ideal in this driver-only simulation. REF6033 stability, supply coupling, layout and ADC digital timing are separate checks.",
+    "No force, contact probability or effective ADC resolution is inferred."
+  ]
+}

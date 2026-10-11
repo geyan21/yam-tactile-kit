@@ -20,6 +20,7 @@ from tactile_kit.records import execution
 MODELS = {
     "opa392_pspice": "https://www.ti.com/lit/zip/SBOMBK2",
     "opa392_tina": "https://www.ti.com/lit/zip/SBOMBK3",
+    "opa320_pspice": "https://www.ti.com/lit/zip/SBOM437",
 }
 
 
@@ -67,7 +68,7 @@ def main():
     parser.add_argument("models", nargs="+", choices=sorted(MODELS))
     args = parser.parse_args()
     folder = ROOT / "build/engineering/prototypes/f1/model_sources" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
-    with execution(ROOT / "build/records", "Fetch the two selected official TI amplifier model archives and extract only bounded text for review") as record:
+    with execution(ROOT / "build/records", "Fetch explicitly selected official TI amplifier model archives and extract only bounded text for review") as record:
         folder.mkdir(parents=True, exist_ok=False)
         results = []; failures = {}
         with ThreadPoolExecutor(max_workers=2) as pool:

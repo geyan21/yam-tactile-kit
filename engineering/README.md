@@ -34,11 +34,15 @@ spacers, the retained B2 PCB and B1 TPU/magnets, and two N0 nail cells.
 [BUILD_RECESSED.md](docs/BUILD_RECESSED.md) gives exact sensor locations,
 gain-5 wiring/readout, fabrication and the paired B2/B3 experiment.
 
-F1 has two separate development modules: the
+F1 development modules include the
 [checked connector board](development/f1/fanout/README.md) and the
 [selected-column readout study](development/f1/readout-study/README.md).
 The latter includes its exact circuit, plots, replayable cases and unresolved
-simulation failures. Neither is a complete F1 finger or physical result.
+simulation failures. The [ADC and row support studies](development/f1/support-studies/README.md)
+now preserve their current model checks and unsuccessful earlier runs.
+The [wrist capture guide](docs/F1_WRIST_CAPTURE.md) gives exact components,
+Pico connections, firmware and raw recording. None is a complete F1 finger
+or a physical performance result.
 The remaining integration work is recorded in [F1 development](docs/F1_DEVELOPMENT.md).
 
 ## File map
