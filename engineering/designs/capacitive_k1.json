@@ -1,6 +1,6 @@
 {
   "schema": "yam-capacitive-k1/1",
-  "revision": "K1.1 development",
+  "revision": "K1.2 electrode integration development",
   "physical_specimens_tested": 0,
   "normal_force_target_n": 20,
   "basis": {
@@ -47,17 +47,26 @@
   "flex": {
     "copper_layers": 2,
     "copper_each_mm": 0.018,
-    "polyimide_core_mm": 0.05,
+    "polyimide_core_mm": 0.10,
+    "polyimide_core_min_mm_screen": 0.085,
     "coverlay_each_mm": 0.025,
     "coverlay_relative_permittivity_assumed": 3.4,
     "polyimide_relative_permittivity_assumed": 3.4,
+    "polyimide_relative_permittivity_max_screen": 3.6,
     "front": "One CIN pressure electrode surrounded by its driven shield; coverlay over sensing copper",
     "back": "Driven shield plane; never substitute ground",
     "trace_mm": 0.2,
     "clearance_mm": 0.2,
     "edge_clearance_mm": 0.3,
     "shield_plane_edge_inset_mm": 0.3,
-    "stack_status": "Requested manufacturing targets; a fabricator must confirm the supplied flex stack"
+    "stack_status": "Requested manufacturing targets; nominal total 0.186 mm. The minimum-core/permittivity case is a planning scenario, not a fabricator guarantee. Confirm the supplied stack."
+  },
+  "electrode_design": {
+    "minimum_active_inset_developed_mm": 0.8,
+    "reason": "Reserve 0.30 mm board edge, 0.20 mm driven guard, 0.20 mm isolation and 0.10 mm planning margin on the flat flex artwork.",
+    "coordinate_rule": "Apply this inset at the flex neutral plane in developed coordinates, then map the active footprint back to the common source surface for matching post tooling.",
+    "previous_module": "engineering/development/capacitive/k1/provenance/capacitive_k1.json",
+    "status": "Integration development; existing post masters and capacitance estimates must be regenerated for the revised active area and thicker flex core."
   },
   "readout": {
     "converter": "FDC1004DGSR",
@@ -83,10 +92,14 @@
     "ground_return_pullup_ohm": 100000,
     "sensor_cable_signals": ["CIN", "driven SHLD1", "GND drive to upper plate", "independent GND return from upper plate"],
     "maximum_candidate_sensor_cable_m": 0.15,
+    "sensor_foil_tail_area_allowance_mm2": 20,
+    "reference_foil_tail_area_allowance_mm2": 10,
     "cable_capacitance_pf_per_m_assumed": 100,
     "board_shield_load_allowance_pf_assumed": 20,
     "fdc_full_scale_pf": 15,
     "fdc_maximum_shield_load_pf": 400,
+    "joined_shield_planning_limit_pf": 400,
+    "joined_shield_scope": "Conservative total-load planning limit when SHLD1 and SHLD2 are internally joined for the CAPDAC-disabled reference reading; no doubled drive capability is assumed.",
     "note": "Differential inputs have CHA < CHB. SHLD1 guards sensing leads; SHLD2 guards CIN4 in differential mode. Both guards are internally joined during the CAPDAC-disabled reference reading."
   },
   "sources": [

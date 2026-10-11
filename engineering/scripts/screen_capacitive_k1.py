@@ -122,11 +122,33 @@ def main():
                              .buffer(-cfg["flex"]["shield_plane_edge_inset_mm"]).area for site in bank["sites"])
             foil = EPSILON_PF_PER_MM*cfg["flex"]["polyimide_relative_permittivity_assumed"]*guard_area/cfg["flex"]["polyimide_core_mm"]
             cable = 3*cfg["readout"]["maximum_candidate_sensor_cable_m"]*cfg["readout"]["cable_capacitance_pf_per_m_assumed"]
-            total = foil+cable+cfg["readout"]["board_shield_load_allowance_pf_assumed"]
+            reference_body, _ = reference_footprints(cfg)
+            reference_guard_area = reference_body.buffer(-cfg["flex"]["shield_plane_edge_inset_mm"]).area
+            reference_foil = EPSILON_PF_PER_MM*cfg["flex"]["polyimide_relative_permittivity_assumed"]*reference_guard_area/cfg["flex"]["polyimide_core_mm"]
+            tails = 3*cfg["readout"].get("sensor_foil_tail_area_allowance_mm2", 0)
+            reference_tail = cfg["readout"].get("reference_foil_tail_area_allowance_mm2", 0)
+            tail_cap = EPSILON_PF_PER_MM*cfg["flex"]["polyimide_relative_permittivity_assumed"]*tails/cfg["flex"]["polyimide_core_mm"]
+            reference_tail_cap = EPSILON_PF_PER_MM*cfg["flex"]["polyimide_relative_permittivity_assumed"]*reference_tail/cfg["flex"]["polyimide_core_mm"]
+            shld1 = foil+tail_cap+cable+cfg["readout"]["board_shield_load_allowance_pf_assumed"]
+            shld2 = reference_foil+reference_tail_cap
+            total = shld1+shld2
+            core_ratio = cfg["flex"]["polyimide_core_mm"]/cfg["flex"].get("polyimide_core_min_mm_screen", cfg["flex"]["polyimide_core_mm"])
+            dielectric_ratio = cfg["flex"].get("polyimide_relative_permittivity_max_screen", cfg["flex"]["polyimide_relative_permittivity_assumed"])/cfg["flex"]["polyimide_relative_permittivity_assumed"]
+            tolerance_total = (foil+reference_foil+tail_cap+reference_tail_cap)*core_ratio*dielectric_ratio
+            tolerance_total += cable+cfg["readout"]["board_shield_load_allowance_pf_assumed"]
             shield.append({"bank": bank["bank"], "guard_copper_area_mm2": guard_area,
                            "grounded_CIN_foil_capacitance_pf_screen": foil,
+                           "reference_guard_area_mm2": reference_guard_area,
+                           "reference_foil_capacitance_pf_screen": reference_foil,
+                           "sensor_tail_area_allowance_mm2": tails,
+                           "reference_tail_area_allowance_mm2": reference_tail,
+                           "tail_capacitance_pf_screen": tail_cap+reference_tail_cap,
+                           "SHLD1_pf_screen": shld1, "SHLD2_pf_screen": shld2,
                            "cable_pf_assumed": cable, "total_pf_screen": total,
-                           "below_400pf_screen": total < cfg["readout"]["fdc_maximum_shield_load_pf"]})
+                           "minimum_core_max_permittivity_pf_screen": tolerance_total,
+                           "tolerance_case_below_400pf_screen": tolerance_total < cfg["readout"].get("joined_shield_planning_limit_pf", 400),
+                           "below_400pf_screen": total < cfg["readout"].get("joined_shield_planning_limit_pf", 400),
+                           "scope": "Pessimistic grounded-CIN foil estimate including the reference and tails. The total uses a conservative 400 pF plan for joined-shield mode; it is not a solved parasitic network."})
         flex_height = 2*cfg["flex"]["copper_each_mm"]+cfg["flex"]["polyimide_core_mm"]+2*cfg["flex"]["coverlay_each_mm"]
         height_common = flex_height+material["base_mm"]+material["post_height_mm"]+cfg["body"]["spreader_thickness_mm"]
         report = {"schema": "yam-k1-electromechanical-screen/1", "physical_specimens_tested": 0,

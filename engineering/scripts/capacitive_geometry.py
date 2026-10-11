@@ -12,13 +12,25 @@ ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "engineering/designs/capacitive_k1.json"
 
 
-def load():
-    cfg = json.loads(CONFIG.read_text())
+def load(config_path=CONFIG):
+    cfg = json.loads(Path(config_path).read_text())
     r1 = json.loads((ROOT / cfg["basis"]["r1_manifest"]).read_text())
     nail = json.loads((ROOT / cfg["basis"]["nail_coordinates"]).read_text())
     surfaces = [Surface(site, r1, nail, cfg) for site in range(6)]
     for surface in surfaces[2:]:
         surface.active = surface.body.buffer(-cfg["body"]["tpu_active_inset_mm"], join_style="mitre")
+    if "electrode_design" in cfg:
+        f = cfg["flex"]
+        inset = cfg["electrode_design"]["minimum_active_inset_developed_mm"]
+        if inset < f["edge_clearance_mm"]+f["clearance_mm"]+f["trace_mm"]:
+            raise ValueError("The electrode inset cannot fit the declared guard and clearances")
+        for surface in surfaces:
+            neutral = offsets(surface.site, cfg)["flex_bottom"]+f["coverlay_each_mm"]+f["copper_each_mm"]+f["polyimide_core_mm"]/2
+            body = unrolled(surface.body, surface, neutral)
+            active = unrolled(surface.active, surface, neutral).intersection(body.buffer(-inset, join_style="mitre"))
+            if active.is_empty or active.geom_type != "Polygon" or not active.is_valid:
+                raise ValueError("The guarded active region must remain one valid polygon")
+            surface.active = inverse_unrolled(active, surface, neutral)
     return cfg, surfaces
 
 
@@ -48,6 +60,21 @@ def unrolled(polygon, surface, offset):
     arc = surface.offset_arc(offset)
     def ring(coordinates):
         return [(x, float(np.interp(y, surface.s, arc))) for x, y in coordinates]
+    return Polygon(ring(polygon.exterior.coords), [ring(r.coords) for r in polygon.interiors])
+
+
+def inverse_unrolled(polygon, surface, offset):
+    """Recover source arc coordinates from the developed neutral-plane artwork."""
+    arc = surface.offset_arc(offset)
+    if np.any(np.diff(arc) <= 0):
+        raise ValueError("The developed surface arc must be invertible")
+    def ring(coordinates):
+        result = []
+        for x, y in coordinates:
+            if y < arc[0]-1e-6 or y > arc[-1]+1e-6:
+                raise ValueError("Developed footprint leaves the source surface")
+            result.append((x, float(np.interp(y, arc, surface.s))))
+        return result
     return Polygon(ring(polygon.exterior.coords), [ring(r.coords) for r in polygon.interiors])
 
 

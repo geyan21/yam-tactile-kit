@@ -13,6 +13,50 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+The corrected FB1 publication is commit
+`ed0d76dbeacf3a810aa3729a2b6bdbf1afc43726`, release
+`kit-ed0d76dbeacf`. Workflow 38172826768 completed successfully; the four
+Release archive checksums match the local prepared package. Live FB1,
+F1 and K1 pages all contain that release. The public FB1 ZIP is 13,742,609
+bytes, and its live prototype manifest matches SHA-256
+`9342dd7f05d06108eb423efc129c7d5f5c3090a8c0256a158261963853c0ae2a`.
+The hosted payload is 884,992,657 bytes. This verifies delivery, not hardware.
+
+Current K1.2 integration changes are on `design/k1-integration` and are not
+yet a new public K1 package. A 0.80 mm minimum active inset is now applied
+in developed flex-neutral-plane coordinates and mapped back to the source
+surface, so the post tooling and electrode can share a footprint. The check
+in `electrode_windows/20261011T203915.094059Z` passes all six guard windows.
+The old K1 module and its exact configuration remain preserved.
+
+The shield screen now includes the reference foil and declared tail-area
+allowances (20 mm² per sensor foil, 10 mm² for the reference). The previous
+336/373 pF figures described only the three finger foils plus cable/board
+allowances. With the reference and tails included, the 50 µm core study
+`screens/20261011T204619.316859Z` gives 470.12/507.58 pF under its deliberately
+pessimistic grounded-CIN assumption. A conservative 400 pF total is used for
+the CAPDAC-disabled reference mode, where TI documents that the shields join;
+no doubled drive capability is assumed.
+
+The current proposal uses a 100 µm core, for a requested 0.186 mm flex
+stack. `screens/20261011T204815.513859Z` gives 267.56/286.29 pF nominal and
+317.32/340.66 pF in the declared 85 µm-core / relative-permittivity-3.6 case.
+These are planning assumptions, not fabricator guarantees or a solved
+parasitic network. The initial capacitance estimates are 4.674–15.479 pF;
+the unloaded reference is 8.157 pF. All declared uniform-post range cases
+pass. Nominal nail addition is now 0.836 mm; the TPU stack is 1.786 mm above
+the R1 smoothed datum, with the fitting base below it. Actual copper,
+tail paths, manufacturing targets and measured parasitics must still be
+checked against the allowance.
+
+Current post counts are CH0=68, CH1=64, CH2=132, CH3=176, CH4=132,
+CH5=242 and REF=130. New casting/tooling must be generated for this
+configuration. The latest guard check is
+`electrode_windows/20261011T204815.525099Z`. Complete flex artwork, native
+checks, stop/retention/vent details, plate bonds, cables, enclosure, physical
+acquisition and comparison remain. No K1 physical result or integrated
+prototype completion is claimed.
+
 FB1.1 was published in commit `1a7a2a4115413f9534924990d2b3cbc1e68f5a2d`.
 Workflow 38171635196 completed successfully; all four public Release archive
 checksums matched the prepared files. The separate live FB1, F1 and K1 pages
