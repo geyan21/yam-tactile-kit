@@ -30,14 +30,17 @@
   ],
   "candidate_component_sources": [
     {"part": "OPA2320", "url": "https://www.ti.com/product/OPA2320", "status": "candidate; package and circuit not selected"},
-    {"part": "ADG706", "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG706_707.pdf", "status": "candidate; finite resistance and leakage need circuit analysis"},
+    {"part": "ADG706", "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG706_707.pdf", "status": "ADG706BRUZ selected for the development fanout test path; the full readout's finite resistance, leakage and stability still need analysis"},
     {"part": "MCP3208", "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/21298e.pdf", "status": "candidate; resolution and settling need evaluation"},
     {"part": "OPAx392", "url": "https://www.ti.com/product/OPA2392", "status": "lower-offset candidate family; complete electrical limits and implementation still need review"},
     {"part": "FH12-6S-1SH(1)(98)", "url": "https://www.hirose.com/en/product/p/CL0528-0030-8-98", "status": "six-position, 1 mm pitch, bottom-contact, 0.3 mm FPC candidate; read specification and land pattern before release"},
     {"part": "Flex fabrication reference", "url": "https://jlcpcb.com/capabilities/flex-pcb-capabilities/", "status": "reviewed source for stack, trace, coverlay and outline targets; no supplier approval or order"},
-    {"part": "Bend-design reference", "url": "https://www.allflexinc.com/wp-content/uploads/2024/03/Minimum-Bend-Radius-Considerations-in-Flexible-Circuits.pdf", "status": "guideline reference; complete tactile-stack bending and life require physical tests"}
+    {"part": "Bend-design reference", "url": "https://www.allflexinc.com/wp-content/uploads/2024/03/Minimum-Bend-Radius-Considerations-in-Flexible-Circuits.pdf", "status": "guideline reference; complete tactile-stack bending and life require physical tests"},
+    {"part": "FH12-50S-0.5SH(55)", "url": "https://www.hirose.com/en/product/p/CL0586-0529-2-55", "status": "selected development wrist connector; installed cable mapping and mating geometry pending"},
+    {"part": "Molex 0151660545", "url": "https://www.molex.com/en-us/products/part-detail/0151660545", "status": "candidate 50-position, 152 mm same-side FFC; detailed review in f1_wrist_link_review.json"},
+    {"part": "KiCad footprint libraries", "url": "https://www.kicad.org/libraries/license/", "status": "imported fanout footprints retain CC BY-SA 4.0 with the KiCad Libraries Exception, attribution and original source hashes"}
   ],
-  "copying_policy": "References inform a separately authored design. Retain source licenses if any upstream files are later reused; no claim of reproduced experimental results.",
+  "copying_policy": "The sensor research informs a separately authored design; no reproduced experimental results are claimed. The fanout uses KiCad footprint-library files with their attribution, license and source hashes retained. Research-project hardware/code has not been copied.",
   "unresolved": [
     "Exact flex stack, artwork and conductor routing at each narrow nail prong",
     "Realistic tail routes, connectors, strain relief and moving-finger integration",

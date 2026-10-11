@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "ba534db44965142eca62f36504df2ddd2dc5e5085d2dc30cbbf990aa1e71fbc1",
+  "independent_check_sha256": "292b0284f71be360553726c878cc880d38d255409d01d179e10e876200ac15ea",
+  "renderer_sha256": "a84eb8c7a16bfabf369afa2aa282babeee85b21d83868d007477871bd928cd1e",
+  "physical_evidence": false,
+  "files": {
+    "fanout_faces.pdf": "1decd3996dffef7e5b589540529d9b9e3f3098fe20f4a5726c7d16c35a06378c",
+    "fanout_faces.png": "f2b35d75528bf14341b22b41ab0d09194c9fb22f698ed2119b38366616cb1b67",
+    "fanout_faces.svg": "3c0c11e9af8078924f5f0b8fe46e79da17c47ca290f1a371014e64ab9e6354e7"
+  }
+}

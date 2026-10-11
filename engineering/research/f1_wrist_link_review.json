@@ -1,0 +1,56 @@
+{
+  "schema": "yam-f1-wrist-link-review/1",
+  "reviewed_utc_date": "2026-10-11",
+  "status": "Manufacturer dimensional/electrical review; installed mating and physical measurements pending",
+  "connector": {
+    "part": "FH12-50S-0.5SH(55)",
+    "source": "https://www.hirose.com/en/product/p/CL0586-0529-2-55",
+    "positions": 50,
+    "pitch_mm": 0.5,
+    "ffc_thickness_mm": 0.3,
+    "contact_side": "bottom"
+  },
+  "cable": {
+    "part": "0151660545",
+    "product_source": "https://www.molex.com/en-us/products/part-detail/0151660545",
+    "specification": "PS-15166-001, revision D, 2022-12-08",
+    "specification_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/151/15166/PS-15166-001-001.pdf?inline=",
+    "sales_drawing": "SD-15166-001, revision F, May 2025, 50-circuit Type A table",
+    "sales_drawing_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/151/15166/151660160_sd.pdf",
+    "positions": 50,
+    "pitch_mm": 0.5,
+    "length_mm": 152,
+    "length_tolerance_mm": 4,
+    "end_thickness_mm": 0.3,
+    "end_thickness_tolerance_mm": 0.05,
+    "insulated_thickness_mm": 0.12,
+    "insulated_thickness_tolerance_mm": 0.05,
+    "strip_length_mm": 4,
+    "strip_length_tolerance_mm": 0.8,
+    "stiffener_length_mm": 8,
+    "stiffener_length_tolerance_mm": 2,
+    "conductor_resistance_limit_ohm_per_m_at_23c": 2.2,
+    "balanced_conductor_capacitance_pf_per_m": 50,
+    "capacitance_limit_type": "Listed value; not explicitly specified as a maximum",
+    "insulation_resistance_minimum_ohm_m_at_200vdc": 10000000,
+    "contact_layout": "Same side, Type A",
+    "finish": "Tin"
+  },
+  "derived_scenarios": {
+    "maximum_length_m": 0.156,
+    "maximum_one_conductor_resistance_ohm_at_23c_excluding_connectors": 0.3432,
+    "balanced_pair_capacitance_pf_at_maximum_length_using_listed_value": 7.8,
+    "notes": [
+      "These calculations apply the cited length to the cited per-meter values. They are not a measured cable or complete loop model.",
+      "The nominal connector/cable pitch and end thickness agree. Detailed contact registration, insertion depth and finished assembly still need checking.",
+      "Same-side cable contacts do not establish a pin-1-to-pin-1 net mapping. Derive the wrist connector pinout from the actual connector poses and confirm every conductor with an unpowered continuity test.",
+      "The eventual circuit analysis must include contact resistance, all coupled conductors, board copper, switching capacitance, leakage and amplifier feedback."
+    ]
+  },
+  "retrieval": {
+    "web_document_review_completed": true,
+    "local_pdf_download_completed": false,
+    "reason": "Bounded local downloads timed out; the manufacturer documents were readable through web document review.",
+    "no_physical_test_evidence": true
+  }
+}

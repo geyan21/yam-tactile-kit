@@ -34,9 +34,9 @@ and contact/force performance still need physical tests.
 Seven digital packages are available. The five remaining designs below and
 the common measured comparison remain in scope.
 
-F1 development now has an actual-geometry 4 × 16 contact allocation: eight
+The initial F1 development established an actual-geometry 4 × 16 contact allocation: eight
 pixels on each tapered nail prong and twelve on each of four R1 saddle
-surfaces. It is not routed flex artwork. Its lumped electrical study
+surfaces. That first allocation was not routed artwork. Its lumped electrical study
 demonstrates why inactive rows need a controlled bias. With the first assumed
 paths, 100 Ω and 1 kΩ cases fail the provisional 1% interaction screen.
 The next circuit work is post-switch row buffering, separate selected-column
@@ -60,6 +60,20 @@ acquisition software remain. The selected integration direction is recorded
 in `designs/f1_integration_development.json`; it uses a removable fixed-finger
 connector board and a separate wrist/base readout. Its placement candidates
 and mating geometry still require verification.
+
+F1 now also has a checked connector-board development module at
+`engineering/development/f1/fanout/`. Its four-layer layout has 42 components,
+232 pads, 2,221 track segments and 274 vias. Independent KiCad checking
+reports zero violations and zero missing connections. The module includes
+both populated faces' artwork, native source, pin tables, component values
+and visuals. Twenty sense links and a switched electrical-test path are
+implemented in the layout. This remains part of F1 development; it does
+not increase the seven completed digital prototype packages or the zero
+physical specimens.
+
+The next F1 work is the wrist analog/ADC board, complete resistance and
+stability checks, fitted flex unrolls/tails, and a manufacturable board/carrier
+contour. Actual-drive fit and the common physical experiments remain required.
 
 ## Work sequence
 

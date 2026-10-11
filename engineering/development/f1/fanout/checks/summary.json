@@ -1,0 +1,31 @@
+{
+  "schema": "yam-f1-fanout-check/1",
+  "tool": "10.0.7",
+  "violations": 0,
+  "unconnected": 0,
+  "source_pcb_sha256": "5c3ced1e2e3414d28f74382fb62e60508ac479b191e88dafa7a492b81ca584ae",
+  "source_manifest_sha256": "ba534db44965142eca62f36504df2ddd2dc5e5085d2dc30cbbf990aa1e71fbc1",
+  "rules_sha256": "585610cdfb3fd116a21aa6314fb324dc8bfd8cfae5cf7be5964917744cc086f4",
+  "targets_sha256": "cae449dc4e5f5d32e2b2635e2b6032309df8c30cf41fa266158c55bbb83f6976",
+  "library_license_sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef",
+  "checked_pcb_sha256": "6112112388f2ba19fba69ca5e0af3ade1082cc2b1711af273bd27a4873033f39",
+  "physical_boards_tested": 0,
+  "passed": true,
+  "scope": "Native copper/outline/drill/silkscreen rules and PCB connectivity. Circuit operation, cable mating, carrier/tail fit, sensor behavior and force performance are outside this result.",
+  "development_exports_sha256": {
+    "DEVELOPMENT_ONLY.txt": "fe47ca3c75fbda1ac19a68b064a539476b4e251ec0bc604701e8c1de17e4a9e6",
+    "f1_fanout-B_Cu.gbl": "8814ea2926c786e631527cd2d8e6a354ea9cd1296e32fe433c2c41ebc9b0ca0c",
+    "f1_fanout-B_Mask.gbs": "083f7c7341d426f09dad4781dd6584aafb311846841de9eeb27255e70d75bd07",
+    "f1_fanout-B_Paste.gbp": "32d11d2980196dfa41ca098c222b1ead5199d57bf49ac95f8cc590cc8aad8958",
+    "f1_fanout-B_Silkscreen.gbo": "5f0841904cade08ad64fd85bb7b8d2e2179c600af9c00d59d8acb63d399e77d0",
+    "f1_fanout-Edge_Cuts.gm1": "5f0fb1864158d3eb2a250b805180a3009ebb953d8dfd8ea8b1c43460aa35ca59",
+    "f1_fanout-F_Cu.gtl": "a41dc39ef3d060557c63f38bb7120bf6dc240ca49cb06c1f01f5d00408215c97",
+    "f1_fanout-F_Mask.gts": "128217f0a3f3e273d4e086045de1f06307f33c486792274112cb00c470f8b0d7",
+    "f1_fanout-F_Paste.gtp": "c9f6f76aac69ffd189c50e4fd56e5546036286d17fbdf19fad4d1207c5849b09",
+    "f1_fanout-F_Silkscreen.gto": "ff5555d80c91c16425e0361f7413b040ba0e63dc27ac150f5bf2bbbe38b2a33a",
+    "f1_fanout-In1_Cu.g1": "003556211a67c96f69b8dd841c6ec8ab218224d5397baeb08e9f76e3844ae634",
+    "f1_fanout-In2_Cu.g2": "3d7460f1c8ebc78fd1685dc8dac58de6afd35ff7ed3a4d4a7f35cf4aeaed31e4",
+    "f1_fanout.drl": "2bbe2f5181e6f52cd3e8d0d74144ab95530a01a7a3de0802905d80b4f3c7d689",
+    "f1_fanout_manufacturing_targets.json": "cae449dc4e5f5d32e2b2635e2b6032309df8c30cf41fa266158c55bbb83f6976"
+  }
+}

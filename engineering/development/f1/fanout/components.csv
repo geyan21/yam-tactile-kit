@@ -1,0 +1,43 @@
+reference,value_or_part,pcb_face,source,selection_status
+J0R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J0C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC1,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC0,0 ohm sense pickoff,B,,value/package; passive MPN pending
+J1R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J1C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC3,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC2,0 ohm sense pickoff,B,,value/package; passive MPN pending
+J2R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J2C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC6,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC5,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC4,0 ohm sense pickoff,B,,value/package; passive MPN pending
+J3R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J3C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC9,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC8,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC7,0 ohm sense pickoff,B,,value/package; passive MPN pending
+J4R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J4C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC12,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC11,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC10,0 ohm sense pickoff,B,,value/package; passive MPN pending
+J5R,FH12-6S-1SH(1)(98),F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+J5C,FH12-6S-1SH(1)(98),B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development connector/IC
+RKC15,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC14,0 ohm sense pickoff,B,,value/package; passive MPN pending
+RKC13,0 ohm sense pickoff,B,,value/package; passive MPN pending
+JW,FH12-50S-0.5SH(55),F,https://www.hirose.com/en/product/p/CL0586-0529-2-55,selected development connector/IC
+UT,ADG706BRUZ,F,https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf,selected development connector/IC
+RKR0,0 ohm sense pickoff,F,,value/package; passive MPN pending
+RKR1,0 ohm sense pickoff,F,,value/package; passive MPN pending
+RKR2,0 ohm sense pickoff,F,,value/package; passive MPN pending
+RKR3,0 ohm sense pickoff,F,,value/package; passive MPN pending
+CT1,100 nF X7R 10 V,F,,value/package; passive MPN pending
+CT2,1 uF X7R 10 V,F,,value/package; passive MPN pending
+RT,10.0k 0.1% 25ppm/K,F,,value/package; passive MPN pending
+RP0,100k,F,,value/package; passive MPN pending
+RP1,100k,F,,value/package; passive MPN pending
+RP2,100k,F,,value/package; passive MPN pending
+RP3,100k,F,,value/package; passive MPN pending
+RP4,100k,F,,value/package; passive MPN pending
