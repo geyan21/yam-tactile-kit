@@ -34,6 +34,19 @@ and contact/force performance still need physical tests.
 Seven digital packages are available. The five remaining designs below and
 the common measured comparison remain in scope.
 
+F1 development now has an actual-geometry 4 × 16 contact allocation: eight
+pixels on each tapered nail prong and twelve on each of four R1 saddle
+surfaces. It is not routed flex artwork. Its lumped electrical study
+demonstrates why inactive rows need a controlled bias. With the first assumed
+paths, 100 Ω and 1 kΩ cases fail the provisional 1% interaction screen.
+The next circuit work is post-switch row buffering, separate selected-column
+current/sense feedback, and feasible FPC resistance budgets. Offset, leakage,
+stability, material spreading and actual force remain unqualified.
+The revised target-path model reaches a worst interaction of 0.741% over
+the stated 100 Ω / 1 kΩ / 10 kΩ cases. This is a target-resistance calculation,
+not evidence that a fabricated circuit meets the budget. Detailed development
+decisions and unresolved work are recorded in `docs/F1_DEVELOPMENT.md`.
+
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.

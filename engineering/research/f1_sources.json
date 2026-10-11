@@ -1,0 +1,47 @@
+{
+  "schema": "yam-f1-development-sources/1",
+  "reviewed_utc_date": "2026-10-11",
+  "status": "Primary-source review for a new ENPIRE matrix; design and physical qualification pending",
+  "references": [
+    {
+      "title": "HiPi: Reproducible High-Fidelity Piezoresistive Sensors for Robotic Manipulation",
+      "url": "https://arxiv.org/html/2606.11372v1",
+      "use": "FPCB electrode fabrication and an example of comparing spatial crosstalk with the same sensing layers.",
+      "limit": "The published gripper and array are different. Its reported geometry fidelity and rate are not F1 force/contact results."
+    },
+    {
+      "title": "Scaling Fabric-Based Piezoresistive Sensor Arrays for Whole-Body Tactile Sensing",
+      "url": "https://arxiv.org/html/2508.20959v1",
+      "use": "Grounded inactive rows, selected-column virtual potential, and the limits caused by finite switch resistance.",
+      "limit": "A reference circuit principle, not an ENPIRE adaptation or a 20 N sensor rating."
+    },
+    {
+      "title": "BYU tactile-sensor repository",
+      "url": "https://github.com/byu-rad-lab/tactile-sensor",
+      "use": "Reference implementation and reproducibility context.",
+      "limit": "The repository says its original piezoresistive fabric is no longer made. F1 needs a separately specified purchasable material."
+    },
+    {
+      "title": "FlexiTac hardware repository",
+      "url": "https://github.com/FlexiTac/FlexiTac_Hardware_Repo",
+      "use": "Reference for accessible array assembly and acquisition.",
+      "limit": "Upstream code is labeled CC BY-NC 4.0. No upstream code or hardware file has been copied into F1."
+    }
+  ],
+  "candidate_component_sources": [
+    {"part": "OPA2320", "url": "https://www.ti.com/product/OPA2320", "status": "candidate; package and circuit not selected"},
+    {"part": "ADG706", "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG706_707.pdf", "status": "candidate; finite resistance and leakage need circuit analysis"},
+    {"part": "MCP3208", "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/21298e.pdf", "status": "candidate; resolution and settling need evaluation"},
+    {"part": "OPAx392", "url": "https://www.ti.com/product/OPA2392", "status": "lower-offset candidate family; complete electrical limits and implementation still need review"},
+    {"part": "FH12-6S-1SH(1)(98)", "url": "https://www.hirose.com/en/product/p/CL0528-0030-8-98", "status": "six-position, 1 mm pitch, bottom-contact, 0.3 mm FPC candidate; read specification and land pattern before release"},
+    {"part": "Flex fabrication reference", "url": "https://jlcpcb.com/capabilities/flex-pcb-capabilities/", "status": "reviewed source for stack, trace, coverlay and outline targets; no supplier approval or order"},
+    {"part": "Bend-design reference", "url": "https://www.allflexinc.com/wp-content/uploads/2024/03/Minimum-Bend-Radius-Considerations-in-Flexible-Circuits.pdf", "status": "guideline reference; complete tactile-stack bending and life require physical tests"}
+  ],
+  "copying_policy": "References inform a separately authored design. Retain source licenses if any upstream files are later reused; no claim of reproduced experimental results.",
+  "unresolved": [
+    "Exact flex stack, artwork and conductor routing at each narrow nail prong",
+    "Realistic tail routes, connectors, strain relief and moving-finger integration",
+    "Circuit configuration, electrical range, fault behavior and checked PCB",
+    "Physical material response, crosstalk, contact reliability and force calibration"
+  ]
+}

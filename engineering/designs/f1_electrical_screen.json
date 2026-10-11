@@ -1,0 +1,23 @@
+{
+  "schema": "yam-f1-electrical-assumptions/1",
+  "status": "Exploratory lumped-resistance model; not a PCB or force qualification",
+  "excitation_above_bias_v": 0.05,
+  "unloaded_taxel_resistance_ohm_assumed": 1000000.0,
+  "pressed_taxel_resistance_ohm_cases": [100.0, 1000.0, 10000.0],
+  "row_driver_resistance_ohm_assumed": 0.8,
+  "row_branch_trace_resistance_ohm_assumed": 1.5,
+  "selected_column_path_resistance_ohm_assumed": 5.5,
+  "patch_columns": [[0, 1], [2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]],
+  "rows": 4,
+  "model_interaction_screen_fraction": 0.01,
+  "notes": [
+    "The resistance cases have no assigned force; there is no R-versus-newtons measurement.",
+    "A local row branch runs to each of six patches; global row drivers are shared.",
+    "Nonselected columns float. The selected column is held near bias through a finite path resistance.",
+    "Compare floating inactive rows with inactive rows driven to the same ideal bias.",
+    "The active/readout bias is shifted to zero for the linear calculation; a physical single-supply implementation would use a positive common-mode voltage.",
+    "This model omits in-plane film spreading, contact mechanics, amplifier offset/leakage, capacitance, ADC behavior and temperature.",
+    "Path resistances are exploratory assumptions. Component and tail limits must be verified before selecting a build circuit.",
+    "The 1% electrical-interaction screen is an engineering work criterion, not the 1% physical contact-error requirement."
+  ]
+}

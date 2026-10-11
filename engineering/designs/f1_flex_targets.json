@@ -1,0 +1,69 @@
+{
+  "schema": "yam-f1-flex-targets/1",
+  "status": "Manufacturing and routing targets for development; no fabrication artwork is released",
+  "contact_layout": "engineering/designs/f1.json",
+  "nail_row_copper_layers": 2,
+  "tpu_row_copper_layers": 1,
+  "column_copper_layers": 1,
+  "reason_for_nail_row_second_layer": "Route the four feeds behind the narrow nail electrodes instead of consuming the leading contact width with a side bus.",
+  "materials": {
+    "polyimide_base_nominal_mm": 0.025,
+    "copper_nominal_mm_per_layer": 0.035,
+    "copper_type": "Rolled annealed; verify supplied foil and minimum thickness",
+    "copper_minimum_mm_required_for_resistance_budget": 0.0315,
+    "coverlay_nominal_mm": 0.05,
+    "coverlay_color": "yellow",
+    "piezoresistive_film_nominal_mm": 0.1,
+    "mounting_allowance_mm": 0.1,
+    "tpu_cover_nominal_mm": 0.4,
+    "tpu_cover_basis": "Retain the R1 silicone-cover recipe as the initial comparison",
+    "notes": [
+      "The 31.5 um minimum copper is a procurement/measurement requirement, not a published guaranteed JLCPCB tolerance.",
+      "One-layer covered regions are nominally 0.11 mm; two-layer regions with both coverlays are nominally 0.20 mm.",
+      "Active conductor faces need large coverlay openings; bare active sections have different thickness from covered tails.",
+      "The complete perimeter seal and layer offsets still require an assembly-stack design."
+    ]
+  },
+  "routing": {
+    "minimum_general_trace_mm": 0.125,
+    "minimum_general_clearance_mm": 0.15,
+    "nominal_long_current_trace_mm": 1.5,
+    "maximum_tail_current_path_mm": 200,
+    "nominal_short_row_feed_trace_mm": 0.225,
+    "maximum_short_row_feed_path_mm": 25,
+    "trace_width_relative_tolerance_from_fabricator": 0.2,
+    "minimum_copper_to_outline_mm": 0.3,
+    "minimum_copper_to_npth_mm": 0.2,
+    "coverlay_opening_expansion_mm": 0.1,
+    "coverlay_opening_to_trace_clearance_mm": 0.15,
+    "minimum_retained_coverlay_web_mm": 0.5,
+    "nail_static_via_drill_mm": 0.3,
+    "nail_static_via_pad_mm": 0.8,
+    "notes": [
+      "Use the published trace-width tolerance when computing path resistance; nominal width alone is insufficient.",
+      "No vias are planned in the dynamically bending TPU patches or free tail bends.",
+      "The narrow connector fan-out and short electrode feeds must be included in the path integral.",
+      "Keep unintended feed traces insulated from the conductive film."
+    ]
+  },
+  "connector_candidate": {
+    "part": "Hirose FH12-6S-1SH(1)(98)",
+    "positions": 6,
+    "pitch_mm": 1,
+    "contact_orientation": "bottom",
+    "finished_fpc_contact_thickness_mm": 0.3,
+    "body_envelope_mm": [10.6, 6.4, 2],
+    "quantity_per_finger": 12,
+    "notes": [
+      "Use separate row and column tails for each of six patches.",
+      "Select stiffeners from the actual exposed-finger stack and verify finished thickness against the connector drawing.",
+      "Read the complete specification and recommended land pattern before selecting this connector for release."
+    ]
+  },
+  "sources": [
+    "https://jlcpcb.com/capabilities/flex-pcb-capabilities/",
+    "https://www.hirose.com/en/product/p/CL0528-0030-8-98",
+    "https://www.allflexinc.com/wp-content/uploads/2024/03/Minimum-Bend-Radius-Considerations-in-Flexible-Circuits.pdf"
+  ],
+  "physical_qualification": false
+}
