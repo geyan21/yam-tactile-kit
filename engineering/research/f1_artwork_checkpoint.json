@@ -1,0 +1,39 @@
+{
+  "schema": "yam-f1-development-checkpoint/1",
+  "status": "Verified flat routing study; not a completed F1 prototype",
+  "recorded_utc_date": "2026-10-11",
+  "artwork_directory": "build/engineering/prototypes/f1/artwork_runs/20261011T054454.665740Z",
+  "evidence": [
+    {
+      "path": "build/engineering/prototypes/f1/artwork_runs/20261011T054454.665740Z/artwork.json",
+      "sha256": "371da03c03f1f57940ff4322df2c27ff214765d6e578ec0bb54097e85fdf000f",
+      "proves": "Twelve generated electrode foils with source hashes and geometric clearances"
+    },
+    {
+      "path": "build/engineering/prototypes/f1/artwork_runs/20261011T054454.665740Z/independent_checks/20261011T055338.105349Z/summary.json",
+      "sha256": "ac5daf5d2a5d78a68277b20abcdbb659244d0966e038111126371da2f23955be",
+      "proves": "All twelve pass copper, outline and connectivity checks with an explicit unsoldered-coverlay allowance; raw reports are preserved"
+    },
+    {
+      "path": "build/engineering/prototypes/f1/artwork_runs/20261011T054454.665740Z/contact_reviews/20261011T060350.073698Z/routed_contacts.json",
+      "sha256": "0e906d7fff7f0a796b42b868d52785a5e4572a6d537accc6c350afd11b1976ea",
+      "proves": "64 distinct routed contact regions; minimum flat copper overlap 5.1199 mm2; reference-surface coordinates only"
+    },
+    {
+      "path": "build/engineering/prototypes/f1/artwork_runs/20261011T054454.665740Z/f1_ch2_columns/rule_probes/20261011T060349.736278Z/probe.json",
+      "sha256": "8a1b188ec8611718a3bd91f26c8d712ec80b5476104583d9687ef0f1073fdb77",
+      "proves": "Custom rules load with or without a project file; a forced clearance violation and injected copper short are detected"
+    }
+  ],
+  "tool": "KiCad 10.0.7",
+  "physical_specimens_tested": 0,
+  "complete_f1_package": false,
+  "remaining": [
+    "Layer-specific curved unroll and complete mounted stack",
+    "Installed flex routes, strain relief, carrier and drive fit",
+    "Connector and analog/readout boards",
+    "Analog range, stability, leakage, settling and fault checks",
+    "Firmware, raw capture and physical calibration",
+    "Physical assembly and the common contact/20 N/precision comparison"
+  ]
+}

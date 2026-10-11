@@ -1,0 +1,72 @@
+{
+  "schema": "yam-f1-integration-development/1",
+  "status": "Selected direction for geometry/circuit development; no installed assembly has been validated",
+  "design_id": "F1",
+  "physical_specimens_tested": 0,
+  "retain": [
+    "Original ENPIRE hard frame and thin leading nail",
+    "Original TPU and six separately identified sensing patches",
+    "64 row/column contact locations",
+    "Existing R1/L1/B1/B2/C1/N1/B3 packages"
+  ],
+  "architecture": {
+    "sensor_interconnect": "Twelve custom flex electrode foils terminate at a removable connector board on the fixed finger.",
+    "readout": "The low-offset row buffers, column current/sense multiplexers and ADC remain on a separate board at the wrist/base.",
+    "board_to_board_candidate": "50-conductor 0.5 mm-pitch FFC with separately routed current and high-impedance sense conductors",
+    "signal_allocation": {
+      "row_current_and_sense": 8,
+      "column_current_and_sense": 32,
+      "remaining_for_power_ground_and_test_control": 10
+    },
+    "reason": "Short local flex routes avoid carrying broad tails over subsequent contact patches; remote feedback can exclude the longer inter-board current-path resistance.",
+    "limits": [
+      "The added current/sense cable requires a full stability, leakage, settling and fault review.",
+      "The 50-pin connector, cable and pin allocation are not yet selected for release.",
+      "No component, routing or assembly claim follows solely from this architecture."
+    ]
+  },
+  "connector_board_pose_candidate": {
+    "native_x_center_mm": 11.8,
+    "pcb_thickness_mm": 1.0,
+    "native_y_bounds_mm": [-74, -15],
+    "native_z_bounds_mm": [8, 44],
+    "row_connectors": "Six FH12-6S-1SH(1)(98) candidates on the outer PCB face",
+    "column_connectors": "Six identical candidates on the inner PCB face",
+    "paired_connector_library_datums_native_yz_mm": [
+      [-67, 18], [-49, 18], [-31, 18], [-67, 32], [-49, 32], [-31, 32]
+    ],
+    "front_local_axes_native": {"x": [0, -1, 0], "y": [0, 0, -1], "normal": [1, 0, 0]},
+    "back_local_axes_native": {"x": [0, 1, 0], "y": [0, 0, -1], "normal": [-1, 0, 0]},
+    "source_mounts": "Use a separate rigid carrier on the retained middle/proximal side-fastener axes.",
+    "notes": [
+      "These are placement candidates, not checked PCB or carrier CAD.",
+      "Outer row contacts accept the inward-facing row copper; inner column contacts accept the outward-facing column copper.",
+      "Confirm the mated FPC contact plane and insertion endpoint from manufacturer geometry before building the tail CAD.",
+      "The board is removable for access to inner-face latches; closed-latch and installed-drive clearances remain to be checked.",
+      "Keep the board behind the leading thin-nail region."
+    ]
+  },
+  "tail_development": {
+    "required": [
+      "Replace the straight routing witnesses with routes fitted to the actual finger.",
+      "Use narrow local exit regions or formed side routes through the spaces between patches; do not lay tails over active sensing faces.",
+      "Apply separate conductor-plane developed lengths for upper and lower foils on the curved TPU.",
+      "Keep plated connections within static nail areas or stiffened terminations.",
+      "Model and inspect bend radii, layer separation, carrier clearance, connector entry and strain relief.",
+      "Recalculate complete current-path resistance with manufacturing tolerances after routing."
+    ],
+    "unverified_candidates": [
+      "Proximal narrow necks followed by a lateral turn and a formed fold outside the hard frame",
+      "Different fold radii for outer row and inner column connector faces",
+      "Precut planar turns after the fold, with explicit connector contact orientation"
+    ]
+  },
+  "release_gates": [
+    "Complete checked flex geometry and manufacturing files matched to the mounted layer stack",
+    "Actual rigid connector/readout PCB layouts with independent checks",
+    "Stable, bounded analog readout and current/sense fault behavior",
+    "Full finger/carrier/tail assembly CAD and fit witnesses",
+    "Firmware, raw capture, BOM, assembly instructions and one clear F1 webpage",
+    "Physical fabrication, assembly, contact/force calibration and common 20 N tests"
+  ]
+}

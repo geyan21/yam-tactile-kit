@@ -47,6 +47,20 @@ the stated 100 Ω / 1 kΩ / 10 kΩ cases. This is a target-resistance calculatio
 not evidence that a fabricated circuit meets the budget. Detailed development
 decisions and unresolved work are recorded in `docs/F1_DEVELOPMENT.md`.
 
+F1 now also has twelve routed flat flex witnesses with complete row/column
+connections, explicit coverlay openings and development Gerbers. All twelve
+pass independent copper, outline and connectivity checks. Both unsuppressed
+and scoped unsoldered-coverlay reports are retained; a synthetic copper-short
+probe confirms that the allowance does not hide copper shorts. The actual
+routed contact map has 64 regions, minimum area 5.1199 mm².
+
+These are not the complete F1 package. Installed flex routes, separate
+neutral-plane unrolls, carrier, connector/readout boards, analog checks and
+acquisition software remain. The selected integration direction is recorded
+in `designs/f1_integration_development.json`; it uses a removable fixed-finger
+connector board and a separate wrist/base readout. Its placement candidates
+and mating geometry still require verification.
+
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.

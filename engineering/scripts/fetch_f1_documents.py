@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from tactile_kit.records import execution
 
 DOCUMENTS = {
+    "hirose_catalog_public_copy": "https://datasheet.lcsc.com/datasheet/pdf/b87be22e0cecc59ab77d96f3dce601d5.pdf?productCode=C597994",
     "hirose_drawing": "https://www.hirose.com/en/product/p/CL0528-0030-8-98/documents?path=%2Fapi%2Fv1%2Fproducts%2FCL0528-0030-8-98%2Fdocuments%2Fdrawing_2d%2Fcontent%3Flang%3DEN",
     "hirose_specification": "https://www.hirose.com/en/product/p/CL0528-0030-8-98/documents?path=%2Fapi%2Fv1%2Fproducts%2FCL0528-0030-8-98%2Fdocuments%2Fspec_sheet%2Fcontent%3Flang%3DEN",
     "opa392": "https://www.ti.com/lit/ds/symlink/opa2392.pdf",

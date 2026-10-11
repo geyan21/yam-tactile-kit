@@ -93,3 +93,56 @@ response and fatigue on the complete specimen.
 3. Design finished FPC contact thickness, mounting/sealing tools, tail routes and strain relief.
 4. Supply checked PCB/CAD files, firmware, raw acquisition, BOM, assembly instructions and actual-geometry visuals.
 5. Build and test the complete finger against R1 and the common campaign. Electrical resistance cases cannot establish a 20 N force rating.
+
+## Checked flat-artwork milestone
+
+Twelve flat routing witnesses now exist: one row and one column foil for each
+of six patches. Both nail row foils use backside feeds; the other ten foils
+currently have one copper layer. The routed overlap map contains 64 distinct
+regions. Its smallest copper overlap is 5.1199 mm² after removing the plated
+drill holes.
+
+All twelve pass the independent copper, outline and connectivity checks in
+KiCad 10.0.7. The narrowest modeled copper clearance is 0.1889 mm, against
+the 0.15 mm rule. The source-derived nail outline contained submicron edges;
+the new flex outline simplifies these within a measured 0.003 mm bound.
+The original source finger is unchanged.
+
+The sensing and cable contacts intentionally share coverlay openings, with
+no solder paste on the flex. `check_f1_flex.py` retains both unsuppressed
+reports and reports with the scoped `bridged_mask` allowance for the
+unsoldered `FOIL` footprint. It permits no other ignored rule in that block
+and requires zero copper/connectivity findings. A separate probe confirms
+that a 5 mm clearance sentinel and an injected copper short are still
+detected with the coverlay allowance enabled.
+
+The development exports omit KiCad's generic even-layer/FR4 Gerber job file.
+Raw exports remain preserved; the selected files carry the actual proposed
+polyimide stack and a development-only notice. These exports are **not the
+completed F1 finger package**.
+
+Reproduce this stage with the prepared CAD/KiCad tools:
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_artwork.py
+/usr/bin/python3 engineering/scripts/check_f1_flex.py ACTUAL_ARTWORK_RUN --export
+build/engineering/tools/cad-venv/bin/python engineering/scripts/summarize_f1_artwork.py ACTUAL_ARTWORK_RUN
+```
+
+Use the actual timestamped directory printed by the first command. Generated
+results and failed attempts remain under
+`build/engineering/prototypes/f1/artwork_runs/`.
+
+## Installed routing direction
+
+The flat tails demonstrate electrical routing. They have not been fitted to
+the gripper and must not be laid across the following contact patches.
+`designs/f1_integration_development.json` records the current integration
+direction: a removable connector board on the fixed finger and a separate
+analog/ADC board at the wrist/base, with separate current/sense paths.
+
+The connector-board position, folded tail paths, mating planes, mechanical
+carrier and analog implementation are candidates awaiting checks. This
+keeps the full installed-finger requirement open. Neither the successful
+flat-artwork checks nor the contact-area map qualifies bending, contact
+reliability, 20 N force performance or production yield.

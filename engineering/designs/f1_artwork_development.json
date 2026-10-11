@@ -1,0 +1,31 @@
+{
+  "status": "Flat routing study; installed tail routing and assembly qualification remain",
+  "body_to_tail_transition_mm": 14,
+  "parallel_tail_widening_mm": 6,
+  "straight_tail_length_mm": 145,
+  "tail_width_mm": 8,
+  "tab_width_mm": 7,
+  "tab_outline_tolerance_mm_required": 0.05,
+  "gold_pitch_mm": 1,
+  "gold_width_mm": 0.65,
+  "gold_width_tolerance_mm_required": 0.075,
+  "gold_length_mm": 4,
+  "gold_tip_setback_mm": 0.3,
+  "gold_opening_depth_mm": 4.5,
+  "stiffener_length_mm": 14,
+  "stiffener_pi_nominal_mm": 0.225,
+  "stiffener_minimum_mm": 0.188,
+  "finished_contact_thickness_mm": 0.3,
+  "finished_contact_thickness_tolerance_mm_required": 0.03,
+  "rear_copper_free_tip_length_mm": 8,
+  "termination_via_distance_from_tip_mm": 10,
+  "tpu_feed_clearance_mm": 0.225,
+  "notes": [
+    "The manufacturer catalog specifies a 7 mm standard six-position tail, 0.65 mm fingers, at least 3.5 mm exposed length, 0.30 +/- 0.05 mm finished thickness and a stiffener at least 0.188 mm thick.",
+    "The narrower required outline/pad tolerances are assembly requirements to verify with the fabricator; the general trace-width tolerance is not a guarantee for the mating contacts.",
+    "Exposed contact sections omit opposite-side copper/coverlay so the 0.225 mm stiffener can produce the required finished thickness.",
+    "Straight tails here exercise routed artwork and independent DRC. They are not the final installed routing and must not be ordered as a completed finger package."
+  ],
+  "source_catalog_url": "https://datasheet.lcsc.com/datasheet/pdf/b87be22e0cecc59ab77d96f3dce601d5.pdf?productCode=C597994",
+  "source_catalog_sha256": "ed14d17173fac1340292e511e9ad725c3e0240441751d8031f894178b1c65f99"
+}
