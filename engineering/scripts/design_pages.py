@@ -135,8 +135,9 @@ def design_content(item,catalog,viewer=True):
     related="".join(link(by_id[value]["title"],by_id[value]["slug"]+".html",**{"class":"button"}) for value in item["related"])
     viewer_html=""
     if viewer and item.get("viewer_model"):
+        viewer_label=item.get("viewer_label",f'Inspect the actual {item["id"]} assembly in 3D')
         viewer_html=f'''<details class="design-viewer-details" data-design-viewer>
-<summary>Inspect the actual {esc(item["id"])} assembly in 3D</summary>
+<summary>{esc(viewer_label)}</summary>
 <div class="viewer-card"><div class="viewer-top"><strong>{esc(item["id"])} assembly</strong><button type="button" data-reset-design-view>Reset view</button></div>
 <canvas class="design-canvas" tabindex="0" role="img" data-model-id="{esc(item["viewer_model"])}" aria-label="Interactive {esc(item["id"])} assembly; drag or use arrow keys"></canvas>
 <div class="viewer-bottom"><label>Separate parts <input type="range" data-design-explode min="0" max="100" value="0"></label><span>Drag / arrow keys to rotate · scroll to zoom</span></div>

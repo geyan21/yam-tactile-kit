@@ -1,0 +1,1526 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-11T07:03:48",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.7",
+    "schematic_parity": [],
+    "source": "f1_fanout_r2.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets R3_I and GND)",
+            "items": [
+                {
+                    "description": "Track [R3_I] on In1.Cu, length 6.3998 mm",
+                    "pos": {
+                        "x": 20.2804,
+                        "y": 5.9801
+                    },
+                    "uuid": "41265d03-bdd7-49b0-8794-36af66be3a1e"
+                },
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.8146,
+                        "y": 6.005
+                    },
+                    "uuid": "b0d14726-b871-4393-adfa-b1d9091402ef"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [R3_I] on In1.Cu, length 6.3998 mm",
+                    "pos": {
+                        "x": 20.2804,
+                        "y": 5.9801
+                    },
+                    "uuid": "41265d03-bdd7-49b0-8794-36af66be3a1e"
+                },
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.8146,
+                        "y": 6.005
+                    },
+                    "uuid": "b0d14726-b871-4393-adfa-b1d9091402ef"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J3R",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 12.0
+                    },
+                    "uuid": "892b0cb5-4289-4690-aa6c-69473d176ef4"
+                },
+                {
+                    "description": "Footprint UT",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 18.0
+                    },
+                    "uuid": "fbfc4171-5bf3-4bb7-84d5-b5d48e10c20c"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J5R",
+                    "pos": {
+                        "x": 31.0,
+                        "y": 12.0
+                    },
+                    "uuid": "d9a171f5-7b88-45bc-b7f2-bd23e10617aa"
+                },
+                {
+                    "description": "Footprint UT",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 18.0
+                    },
+                    "uuid": "fbfc4171-5bf3-4bb7-84d5-b5d48e10c20c"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J2R",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 23.870615
+                    },
+                    "uuid": "e222eb6f-04a7-4eec-be19-038727d7993b"
+                },
+                {
+                    "description": "Footprint UT",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 18.0
+                    },
+                    "uuid": "fbfc4171-5bf3-4bb7-84d5-b5d48e10c20c"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Board has malformed outline (segment has null or very small length: 717 nm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 15.04,
+                        "y": 0.79
+                    },
+                    "uuid": "09b89684-40a4-41d4-89fe-2b7b3800c324"
+                },
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 15.04,
+                        "y": 35.21
+                    },
+                    "uuid": "4f54bc35-97fe-4d17-bf28-2ec1fc746002"
+                }
+            ],
+            "severity": "error",
+            "type": "invalid_outline"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R2_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 13.25
+                    },
+                    "uuid": "4a8b7ae5-ff46-4152-a300-473ae2cfc7a4"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R2_S] on F.Cu, length 0.0326 mm",
+                    "pos": {
+                        "x": 22.7676,
+                        "y": 13.4097
+                    },
+                    "uuid": "62dbefab-f060-4f5d-bc7e-afeea049262d"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R2_S] on F.Cu, length 0.2258 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 13.25
+                    },
+                    "uuid": "93f44490-db48-4bd2-be83-1527a907f358"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.0721 mm",
+                    "pos": {
+                        "x": 22.5358,
+                        "y": 6.75
+                    },
+                    "uuid": "19a2210f-80d5-4d23-ade7-8c6f9a864002"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 22.7327,
+                        "y": 6.6252
+                    },
+                    "uuid": "468996d0-a740-4bdc-b5a4-36632d935ba3"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.7858 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 6.75
+                    },
+                    "uuid": "c0a5cbe3-319a-41f2-876a-04380a502e13"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 6.25
+                    },
+                    "uuid": "5f86abad-096a-4712-8963-1c9843369fb2"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 20.7673,
+                        "y": 6.1252
+                    },
+                    "uuid": "e245a259-9712-4101-9f82-0bef035b9005"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A0] on F.Cu, length 0.2029 mm",
+                    "pos": {
+                        "x": 20.8921,
+                        "y": 7.25
+                    },
+                    "uuid": "043182fd-8b3b-46c9-8da3-c5831a307e0b"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A0] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 7.25
+                    },
+                    "uuid": "15bdaf26-d462-4a00-8002-5f4bc6313c2d"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A0] on F.Cu, length 0.0409 mm",
+                    "pos": {
+                        "x": 20.7486,
+                        "y": 7.3935
+                    },
+                    "uuid": "c13946b7-88dc-4b2c-8d6e-5d8666f7fdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A1] on F.Cu, length 0.0480 mm",
+                    "pos": {
+                        "x": 20.7489,
+                        "y": 8.1068
+                    },
+                    "uuid": "639bb1e6-3caa-426f-8b06-ba72caa7dd63"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A1] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 8.25
+                    },
+                    "uuid": "c09d585d-1b42-4b0b-b58f-7346e500fdc8"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A1] on F.Cu, length 0.2025 mm",
+                    "pos": {
+                        "x": 20.8921,
+                        "y": 8.25
+                    },
+                    "uuid": "d2996c9a-83d3-4cdb-b711-a6952241fcac"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A2] on F.Cu, length 0.0561 mm",
+                    "pos": {
+                        "x": 22.7565,
+                        "y": 9.3986
+                    },
+                    "uuid": "b3f94092-ddf9-478e-81bc-d828a99f625f"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A2] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 9.25
+                    },
+                    "uuid": "ea216162-8770-4d4c-9551-294ab80a90f6"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A2] on F.Cu, length 0.2102 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 9.25
+                    },
+                    "uuid": "fa594f50-5ec0-4314-a85b-dc0abc69234b"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A3] on B.Cu, length 0.8111 mm",
+                    "pos": {
+                        "x": 39.4543,
+                        "y": 11.3598
+                    },
+                    "uuid": "d89be9f2-8ec1-4ecb-940f-e35eedb9e35f"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [A3] on B.Cu, length 0.6259 mm",
+                    "pos": {
+                        "x": 39.4543,
+                        "y": 10.5487
+                    },
+                    "uuid": "fed33404-8543-4c06-a987-edb35db5acb9"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R0_S] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 22.7327,
+                        "y": 11.3748
+                    },
+                    "uuid": "07a9c674-248c-46b3-ac91-851502307849"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R0_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 11.25
+                    },
+                    "uuid": "2f97a3e4-dfb7-48ad-ac91-37aa21b0dbd9"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [R0_S] on F.Cu, length 0.0573 mm",
+                    "pos": {
+                        "x": 22.79,
+                        "y": 11.3748
+                    },
+                    "uuid": "7e1f15c2-c173-416f-8c55-ccc1d56aa140"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on F.Cu, length 0.6996 mm",
+                    "pos": {
+                        "x": 22.5744,
+                        "y": 14.8748
+                    },
+                    "uuid": "bd0c69df-69ae-4c04-94ce-4b1106159c69"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 21.8748,
+                        "y": 14.8748
+                    },
+                    "uuid": "fb6c88cc-cff2-4a25-b1c5-73dcafe9772f"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on In2.Cu, length 0.1447 mm",
+                    "pos": {
+                        "x": 53.3893,
+                        "y": 19.5815
+                    },
+                    "uuid": "10c2c5bb-a20b-4d4d-bcc9-1ce2dd48d260"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on In2.Cu, length 0.0851 mm",
+                    "pos": {
+                        "x": 53.1239,
+                        "y": 19.6488
+                    },
+                    "uuid": "424c7d67-7ec2-4c59-b960-3bb201038092"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on In2.Cu, length 1.4081 mm",
+                    "pos": {
+                        "x": 51.7158,
+                        "y": 19.6488
+                    },
+                    "uuid": "60f3d259-b362-4f06-bc73-021f0b2b9b87"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_I] on In2.Cu, length 0.0932 mm",
+                    "pos": {
+                        "x": 53.4916,
+                        "y": 19.6838
+                    },
+                    "uuid": "89cfb97f-6268-4df5-ac78-b15f76241234"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_S] on F.Cu, length 0.1788 mm",
+                    "pos": {
+                        "x": 20.8921,
+                        "y": 15.25
+                    },
+                    "uuid": "5b774f0e-b970-4530-abd1-27fe164287aa"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_S] on F.Cu, length 0.0549 mm",
+                    "pos": {
+                        "x": 20.7657,
+                        "y": 15.3764
+                    },
+                    "uuid": "bd68c78e-74a5-4bd1-9c34-71774e5210db"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C0_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 15.25
+                    },
+                    "uuid": "c6ea0af1-7adc-4312-a8f4-7b3d4514d5ea"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C1_I] on In1.Cu, length 0.0773 mm",
+                    "pos": {
+                        "x": 32.9745,
+                        "y": 15.3276
+                    },
+                    "uuid": "4b00d22d-3815-4cb6-9ef7-aa041140e473"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C1_I] on In1.Cu, length 0.1223 mm",
+                    "pos": {
+                        "x": 33.061,
+                        "y": 15.4141
+                    },
+                    "uuid": "ce2f274b-28b7-4925-89cd-84cbf2f00f4d"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C1_S] on F.Cu, length 2.2767 mm",
+                    "pos": {
+                        "x": 28.2394,
+                        "y": 16.106
+                    },
+                    "uuid": "aeafae5e-4818-4c9c-b326-3b161b6e0cd8"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C2_I] on In2.Cu, length 1.2533 mm",
+                    "pos": {
+                        "x": 28.3506,
+                        "y": 16.106
+                    },
+                    "uuid": "85d061f4-edb8-4c46-862c-06a9f1874fc4"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C2_I] on In2.Cu, length 0.2571 mm",
+                    "pos": {
+                        "x": 29.6039,
+                        "y": 16.106
+                    },
+                    "uuid": "b9924dae-65e3-440e-9c0f-8ab6d06da56e"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C3_I] on F.Cu, length 0.1788 mm",
+                    "pos": {
+                        "x": 20.8921,
+                        "y": 17.75
+                    },
+                    "uuid": "026b9c94-cecb-4f5b-9ac4-1b0821d16b13"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C3_I] on F.Cu, length 0.0580 mm",
+                    "pos": {
+                        "x": 20.7657,
+                        "y": 17.8764
+                    },
+                    "uuid": "f2c49197-a46a-420b-a6d0-da8c6fddc275"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C3_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 17.75
+                    },
+                    "uuid": "ff497167-7253-42ea-83bc-0ae03d636866"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C3_S] on In2.Cu, length 0.1039 mm",
+                    "pos": {
+                        "x": 41.3419,
+                        "y": 18.936
+                    },
+                    "uuid": "abc75d42-93e4-4760-9bcb-17e333aa7b5c"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C3_S] on In2.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 41.4154,
+                        "y": 19.0095
+                    },
+                    "uuid": "c9b467b5-bd0a-4ab2-be52-adf0ec2513fc"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C4_I] on F.Cu, length 0.4961 mm",
+                    "pos": {
+                        "x": 21.1485,
+                        "y": 18.75
+                    },
+                    "uuid": "0d8a5047-2657-43df-b1fe-061eafdeb846"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C5_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 19.75
+                    },
+                    "uuid": "7cb499f1-6312-41e8-aafb-df4d90fa8c0e"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C5_I] on F.Cu, length 0.2745 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 19.75
+                    },
+                    "uuid": "7eb61023-e2b4-4327-be39-423d0700b381"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C6_I] on F.Cu, length 0.0524 mm",
+                    "pos": {
+                        "x": 20.7149,
+                        "y": 20.6252
+                    },
+                    "uuid": "1eda1da5-5b87-44df-a8a1-cb97c6c2e443"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C6_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 20.7673,
+                        "y": 20.6252
+                    },
+                    "uuid": "3ded9340-daf8-4bbe-9d74-9a161ec63bfd"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C6_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 20.75
+                    },
+                    "uuid": "4c799dce-cd51-495c-acdd-5876463486ae"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.0900 mm)",
+            "items": [
+                {
+                    "description": "Track [C6_I] on In1.Cu, length 2.1005 mm",
+                    "pos": {
+                        "x": 28.7812,
+                        "y": 16.6231
+                    },
+                    "uuid": "24603939-f6bf-44fb-80e1-dc40e529de0c"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C7_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 22.25
+                    },
+                    "uuid": "b28cdb41-8c91-4a27-94cf-31a0540742af"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C7_S] on F.Cu, length 0.1733 mm",
+                    "pos": {
+                        "x": 22.7305,
+                        "y": 22.3725
+                    },
+                    "uuid": "f48bb0c2-843d-4723-9f71-2720dbb9ec65"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 20.7673,
+                        "y": 22.6252
+                    },
+                    "uuid": "9f6f8d2d-01f0-4dbf-887b-3e4f7e7db302"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 22.75
+                    },
+                    "uuid": "aa139106-e210-4f9a-bf0b-2b361dabb879"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on F.Cu, length 0.0558 mm",
+                    "pos": {
+                        "x": 20.7115,
+                        "y": 22.6252
+                    },
+                    "uuid": "b7c59410-3bd1-4749-b46f-6d83cdfeadf0"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on B.Cu, length 0.4613 mm",
+                    "pos": {
+                        "x": 42.5493,
+                        "y": 19.026
+                    },
+                    "uuid": "17a62b66-39f0-439f-8ad5-3b1f7108ecbd"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on B.Cu, length 0.1078 mm",
+                    "pos": {
+                        "x": 45.9578,
+                        "y": 15.8645
+                    },
+                    "uuid": "bd3b9c42-d552-494b-b4fe-c612c58b08d6"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on B.Cu, length 0.3193 mm",
+                    "pos": {
+                        "x": 42.2231,
+                        "y": 19.3522
+                    },
+                    "uuid": "c0da5b98-a09b-473a-9d98-38b765fa2512"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on B.Cu, length 4.3186 mm",
+                    "pos": {
+                        "x": 45.9578,
+                        "y": 15.9723
+                    },
+                    "uuid": "d9842413-097d-49df-ae22-f59599ad3822"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C8_I] on B.Cu, length 0.3548 mm",
+                    "pos": {
+                        "x": 42.9041,
+                        "y": 19.026
+                    },
+                    "uuid": "eac71c6a-6022-4492-80ce-8fc5d2f73c8c"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C9_I] on F.Cu, length 0.0556 mm",
+                    "pos": {
+                        "x": 22.7315,
+                        "y": 23.6264
+                    },
+                    "uuid": "3e929eab-d841-4ee8-b209-b33d35dc0828"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C9_I] on F.Cu, length 0.1748 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 23.75
+                    },
+                    "uuid": "4475c63c-d0d0-4cd1-b1cc-cf85789812cf"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C9_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 23.75
+                    },
+                    "uuid": "87974854-fc28-47d0-a7cd-a6672975a26f"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C10_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 20.7673,
+                        "y": 24.8748
+                    },
+                    "uuid": "1257d764-0866-40cd-831c-6bacf219f441"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C10_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 24.75
+                    },
+                    "uuid": "6a72c334-e40d-4724-996f-ab819a912dff"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C10_I] on F.Cu, length 0.0565 mm",
+                    "pos": {
+                        "x": 20.7108,
+                        "y": 24.8748
+                    },
+                    "uuid": "ad35bc15-f2b8-4360-a37e-07cf91c05d3c"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C10_I] on B.Cu, length 1.0680 mm",
+                    "pos": {
+                        "x": 24.9748,
+                        "y": 25.6256
+                    },
+                    "uuid": "6955b69b-bb46-41a4-8aab-95d4d10e764d"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C10_I] on B.Cu, length 0.4865 mm",
+                    "pos": {
+                        "x": 24.9748,
+                        "y": 26.6936
+                    },
+                    "uuid": "c1323678-adef-4a4e-a0dd-be24bd96b2b8"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C11_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 25.75
+                    },
+                    "uuid": "43717d78-c196-4331-91c2-b027939b7a91"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C11_I] on F.Cu, length 0.0614 mm",
+                    "pos": {
+                        "x": 22.7327,
+                        "y": 25.6252
+                    },
+                    "uuid": "a50445d4-6d5f-4d47-a44d-3df5fc4e124b"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C11_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 25.75
+                    },
+                    "uuid": "a5b370aa-0ae5-4d73-9b2f-b150ba46be40"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_I] on F.Cu, length 0.2001 mm",
+                    "pos": {
+                        "x": 20.8921,
+                        "y": 26.75
+                    },
+                    "uuid": "0b841203-8763-49e0-9ffd-65187a44b968"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_I] on F.Cu, length 0.0298 mm",
+                    "pos": {
+                        "x": 20.7506,
+                        "y": 26.6085
+                    },
+                    "uuid": "9f739de2-b998-4a5d-aae1-71d2973220bd"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 26.75
+                    },
+                    "uuid": "f96f538c-1e89-434f-b09e-d11c35ac9109"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_S] on F.Cu, length 0.0616 mm",
+                    "pos": {
+                        "x": 22.7343,
+                        "y": 27.1236
+                    },
+                    "uuid": "2dee4e91-8790-41ec-99ba-e7a57533957a"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_S] on F.Cu, length 0.1788 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 27.25
+                    },
+                    "uuid": "383373b3-1fbc-48cd-a006-24dc42e10354"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C12_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 27.25
+                    },
+                    "uuid": "7d2d6309-432c-422d-b98b-a654a925438d"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 20.7673,
+                        "y": 28.1252
+                    },
+                    "uuid": "7131c9d1-c3c3-4996-966c-cdbd01ff5636"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on F.Cu, length 0.0524 mm",
+                    "pos": {
+                        "x": 20.7149,
+                        "y": 28.1252
+                    },
+                    "uuid": "bd968bcd-bedc-4915-af14-0b2f58e66656"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 28.25
+                    },
+                    "uuid": "c9332688-dd01-4d15-8a7b-82e83013bf92"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.0750 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on In2.Cu, length 0.0546 mm",
+                    "pos": {
+                        "x": 29.7148,
+                        "y": 16.594999
+                    },
+                    "uuid": "4faca9b6-efd9-4c20-8850-822e5acdb324"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on In2.Cu, length 0.1650 mm",
+                    "pos": {
+                        "x": 29.6357,
+                        "y": 16.5564
+                    },
+                    "uuid": "ba56d95b-7e62-4645-943c-a1ed8708cbf6"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.0750 mm)",
+            "items": [
+                {
+                    "description": "Track [C13_S] on In2.Cu, length 0.0405 mm",
+                    "pos": {
+                        "x": 29.6762,
+                        "y": 16.5564
+                    },
+                    "uuid": "f1fc1481-3487-4303-ba62-82646e65c788"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C14_S] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 22.6079,
+                        "y": 29.25
+                    },
+                    "uuid": "51adb961-8f37-49c1-b6c6-1c37ec1876a4"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C14_S] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 29.25
+                    },
+                    "uuid": "9e84c799-d6d1-40ad-bb46-ad801ebe13ca"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C14_S] on F.Cu, length 0.0511 mm",
+                    "pos": {
+                        "x": 22.7327,
+                        "y": 29.1252
+                    },
+                    "uuid": "b9832ce6-5c83-474c-b493-c015a2eb21e0"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C15_I] on F.Cu, length 0.8658 mm",
+                    "pos": {
+                        "x": 23.5985,
+                        "y": 29.6252
+                    },
+                    "uuid": "4ab38fbb-e7c2-4c46-bfa2-eb3327beb693"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C15_I] on F.Cu, length 0.8579 mm",
+                    "pos": {
+                        "x": 21.75,
+                        "y": 29.75
+                    },
+                    "uuid": "55d34535-2d8f-464b-8a27-2c4cb5d83b07"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Track width (rule 'track' min width 0.1500 mm; actual 0.1124 mm)",
+            "items": [
+                {
+                    "description": "Track [C15_I] on F.Cu, length 0.1765 mm",
+                    "pos": {
+                        "x": 22.7327,
+                        "y": 29.6252
+                    },
+                    "uuid": "e1f4cfc9-268a-432f-a8ff-40707f55e34c"
+                }
+            ],
+            "severity": "error",
+            "type": "track_width"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 73.96,
+                        "y": 35.21
+                    },
+                    "uuid": "cac7c307-9c8d-427a-a462-e0ca04447f36"
+                },
+                {
+                    "description": "Reference field of J1R",
+                    "pos": {
+                        "x": 74.0,
+                        "y": 12.7
+                    },
+                    "uuid": "fc05ddbd-1a92-45c4-a576-7d4f6f804d06"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 73.96,
+                        "y": 35.21
+                    },
+                    "uuid": "cac7c307-9c8d-427a-a462-e0ca04447f36"
+                },
+                {
+                    "description": "Reference field of J1C",
+                    "pos": {
+                        "x": 74.0,
+                        "y": 12.7
+                    },
+                    "uuid": "81ce92f5-dc02-485d-9e95-7ea025560f8f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        }
+    ]
+}

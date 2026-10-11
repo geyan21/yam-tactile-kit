@@ -30,22 +30,51 @@ jobs:
         run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/build_site.py'
       - name: Verify packaged files and links
         run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/check_site.py'
+      - name: Stage the hosted site and versioned downloads
+        env:
+          KIT_COMMIT: ${{ github.sha }}
+        run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/prepare_pages_distribution.py --commit "$KIT_COMMIT"'
+      - name: Upload immutable download packet inputs
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: engineering-downloads
+          path: build/download-distribution
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
       - name: Upload Pages website
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: build/site
+          path: build/pages-site
   deploy:
     if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        id: python
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v8
+        with:
+          name: engineering-downloads
+          path: build/download-distribution
+      - name: Publish and verify this commit's download assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: '"${{ steps.python.outputs.python-path }}" engineering/scripts/publish_download_distribution.py build/download-distribution'
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

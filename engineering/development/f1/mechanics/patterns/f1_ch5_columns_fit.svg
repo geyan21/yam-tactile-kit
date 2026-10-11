@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="15" y="12" font-family="sans-serif" font-size="5">f1_ch5_columns_fit</text>
+<text x="15" y="20" font-family="sans-serif" font-size="3.4">FIT PATTERN ONLY · NO COPPER ARTWORK · PRINT AT 100%</text>
+<text x="15" y="26" font-family="sans-serif" font-size="3.3">CH5 columns → J4C · view from F.Cu side</text>
+<path d="M36.18823,34.11806 L36.18656,34.41806 L38.92591,34.43337 L38.85491,47.13318 L38.82491,47.13301 L38.77906,55.33288 L39.07262,56.48454 L39.05067,60.41147 L39.05067,60.41147 L39.04899,60.71146 L39.04197,60.84498 L39.02247,60.97726 L38.99065,61.10712 L38.94681,61.23344 L38.89132,61.35508 L38.82467,61.47099 L38.74745,61.58015 L38.66034,61.68158 L38.56411,61.77440 L30.18879,69.12667 L32.13967,72.84039 L32.13967,80.84039 L25.13967,80.84039 L25.13967,72.84039 L27.21467,68.89039 L27.21467,68.59039 L27.22102,68.45596 L27.24003,68.32272 L27.27153,68.19186 L27.31523,68.06457 L27.37075,67.94196 L27.43758,67.82514 L27.51514,67.71514 L27.60273,67.61295 L27.69957,67.51949 L36.20262,60.05510 L36.22267,56.46860 L36.52909,55.32030 L36.57494,47.12043 L36.11555,47.11786 L36.08555,47.11769 L15.00000,46.99980 L15.07269,34.00000 L36.18823,34.11806 Z M36.35313,60.39639 L37.70190,60.40393 L36.35313,60.39639 L36.35313,60.39639 Z" fill="#eef3e9" fill-rule="evenodd" stroke="#29464d" stroke-width=".15"/>
+<path d="M15.00000,46.99980 L36.11555,47.11786 L36.18823,34.11806 L15.07269,34.00000 L15.00000,46.99980 Z" fill="#d6e5bd" fill-rule="evenodd" stroke="#5c7754" stroke-width=".15"/>
+<polyline points="36.22267,56.46860 39.07262,56.48454" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<polyline points="36.20071,60.39553 39.05067,60.41147" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<rect x="25.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="26.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">1</text>
+<rect x="26.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="27.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">2</text>
+<rect x="27.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="28.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">3</text>
+<rect x="28.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="29.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">4</text>
+<rect x="29.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="30.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">5</text>
+<rect x="30.81467" y="74.54039" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="31.13967" y="83.04039" text-anchor="middle" font-family="sans-serif" font-size="1.7">6</text>
+<path d="M15 271v-2M15 270h50M65 271v-2" fill="none" stroke="#223b43" stroke-width=".25"/>
+<text x="15" y="277" font-family="sans-serif" font-size="3.2">50 mm scale bar · verify with a ruler</text>
+<text x="15" y="284" font-family="sans-serif" font-size="3.1">Dashed lines bound the 90° bend. Form around the radius; do not crease.</text>
+<text x="15" y="290" font-family="sans-serif" font-size="3.1">Connector datum, source join, bending slack and physical fit remain unverified.</text>
+</svg>

@@ -13,6 +13,47 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+The current F1 mechanical checkpoint is `engineering/development/f1/mechanics/`:
+44 checked CAD solids, twelve printable fit patterns, individual surface
+unrolls, a clear sensor-placement drawing and a viewer model. Its 654 declared
+static comparisons pass; twelve connector cavities/mating interfaces, fitted
+copper, stiffeners, sealing, own-layer joins, slack and loaded/physical
+behavior remain. The previous CH2-column/CH3-row crossing is preserved with
+its two exact involved CAD solids. Checkpoint SHA-256:
+`47a164c4664b48dc48f02ac3d5ac7f7860df3298c113753b49983396e1105113`.
+
+The R2 placement reverses the three upper connector pairs and uses two back
+mounting holes. Carrier and nominal tail fit use that placement. Several
+custom routing orders remain unsuccessful; their complete partial results
+are retained. The bundled-Java Freerouting study completed all connections.
+Its independent KiCad check at
+`build/engineering/prototypes/f1/fanout_r2_checks/20261011T140347.358728Z`
+rejects the board with 95 findings: 87 undersized tracks, one short, one
+hole-clearance finding, three courtyard overlaps, one malformed outline
+segment and two silkscreen-edge findings. No R2 artwork was exported.
+The rejected PCB and complete evidence are preserved separately at
+`engineering/development/f1/r2-routing-study/`.
+
+The two native CLI attempts are also retained under `build/`: the release's
+native serialization failed on ComponentOutline, then on required
+ObstacleArea geometry. The JVM bundle preserves both drawings and keepouts.
+The SES importer restores an empty mounting-package string token and records
+the 0.1 µm session-grid tolerance; the source pad nets remain unchanged.
+
+F1's dedicated webpage and `docs/BUILD_F1.md` now describe the available
+modules and actual fit procedure. The source/website packager includes
+development modules and licenses. Hosted Pages staging moves the four large
+download archives to immutable commit-specific GitHub Release assets while
+the offline packet keeps local download links. Publication and browser checks
+must be completed before calling this web update deployed. Local verification
+has passed 151 software/clean-source checks, 43 main browser checks and 105
+separate-page browser checks. The earlier 45-second clean-build timeout is
+retained; nested compressed files now use ZIP storage, and the bounded clean
+reproduction test passes.
+
+The paragraphs below retain earlier milestones and their then-current work.
+The completed digital package count remains seven; F1 is not yet the eighth.
+
 B2.1 now has a completed digital prototype package: routed four-layer PCB,
 zero KiCad DRC/connectivity findings, four checked CAD parts, firmware, a raw
 recorder and actual-mesh visuals. Its build and physical tests remain pending.

@@ -1,0 +1,15 @@
+{
+  "schema": "yam-f1-fanout-r2-check/1",
+  "tool": "10.0.7",
+  "violations": 95,
+  "unconnected": 0,
+  "source_pcb_sha256": "09050492669590d79a316c83837c692f1d332a3a4712c1a20753ec1e221afb0a",
+  "source_manifest_sha256": "a66618974e0587c1b7d6c4b66f256f9b34d4332612c62901bb246503910a135a",
+  "rules_sha256": "585610cdfb3fd116a21aa6314fb324dc8bfd8cfae5cf7be5964917744cc086f4",
+  "targets_sha256": "cae449dc4e5f5d32e2b2635e2b6032309df8c30cf41fa266158c55bbb83f6976",
+  "library_license_sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef",
+  "checked_pcb_sha256": "09050492669590d79a316c83837c692f1d332a3a4712c1a20753ec1e221afb0a",
+  "physical_boards_tested": 0,
+  "passed": false,
+  "scope": "Native copper/outline/drill/silkscreen rules and PCB connectivity. Circuit operation, cable mating, carrier/tail fit, sensor behavior and force performance are outside this result."
+}

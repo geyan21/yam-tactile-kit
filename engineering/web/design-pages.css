@@ -15,6 +15,7 @@
 .design-target{font-size:12px;color:var(--muted)}
 .design-status{display:inline-block;border-radius:5px;padding:6px 9px;font-size:11px;font-weight:750;line-height:1.25;letter-spacing:.025em;background:#e4eee7;color:#255c50}
 .design-status.concept{background:#f3e9d4;color:#795520}
+.design-status.development{background:#e5ecf7;color:#344e80}
 .design-status.research{background:#e9edf2;color:#4e6172}
 .design-section-nav{display:flex;gap:12px 25px;flex-wrap:wrap;margin:24px 0;font-size:12px;font-weight:650}
 .design-section-nav a{text-decoration:none;border-bottom:1px solid #cad8cf;padding:5px 0}

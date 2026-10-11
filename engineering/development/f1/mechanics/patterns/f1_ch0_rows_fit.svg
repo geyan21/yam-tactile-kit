@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="15" y="12" font-family="sans-serif" font-size="5">f1_ch0_rows_fit</text>
+<text x="15" y="20" font-family="sans-serif" font-size="3.4">FIT PATTERN ONLY · NO COPPER ARTWORK · PRINT AT 100%</text>
+<text x="15" y="26" font-family="sans-serif" font-size="3.3">CH0 rows → J0R · view from F.Cu side</text>
+<path d="M55.73074,43.25770 L55.73071,43.24312 L55.73210,43.22862 L55.73490,43.21432 L55.73906,43.20035 L55.74457,43.18686 L55.75135,43.17396 L55.75936,43.16179 L55.76850,43.15045 L55.77871,43.14004 L55.78988,43.13068 L55.80190,43.12245 L55.81466,43.11542 L55.82805,43.10966 L55.84193,43.10523 L55.85618,43.10217 L55.87065,43.10050 L56.42732,43.06371 L56.42781,43.06368 L60.38843,42.81490 L60.38926,42.81485 L64.44225,42.58270 L64.44298,42.58266 L67.65673,42.41433 L67.49733,39.23823 L52.59511,34.15229 L52.32120,34.07366 L52.04453,34.02308 L51.76420,34.00000 L51.48297,34.00466 L51.20354,34.03701 L51.13764,34.05132 L51.15243,34.34599 L44.77556,34.66604 L45.29464,45.00872 L45.32460,45.00722 L46.11191,60.69432 L45.86993,61.85791 L46.00526,64.55452 L46.18065,68.04904 L44.63795,69.28700 L18.24071,74.17172 L18.10331,74.20426 L17.96980,74.25024 L17.84150,74.30921 L17.71967,74.38058 L17.60549,74.46366 L17.50010,74.55764 L17.40453,74.66158 L17.31971,74.77447 L17.24648,74.89520 L17.18556,75.02259 L17.13755,75.15537 L17.10291,75.29226 L17.08200,75.43191 L17.07500,75.57294 L17.07500,75.87294 L15.00000,79.82294 L15.00000,87.82294 L22.00000,87.82294 L22.00000,79.82294 L20.34896,76.67998 L45.50929,72.02415 L45.64604,71.99180 L45.77894,71.94613 L45.90669,71.88760 L46.02806,71.81677 L46.14186,71.73434 L48.53221,69.81617 L48.63307,69.72709 L48.72508,69.62889 L48.80741,69.52244 L48.87934,69.40871 L48.94022,69.28870 L48.98950,69.16348 L49.02676,69.03417 L49.05165,68.90192 L49.06395,68.76791 L49.06356,68.63334 L49.04852,68.33372 L47.44306,68.41429 L49.04852,68.33372 L48.85168,64.41166 L48.71634,61.71506 L48.35908,60.58154 L47.57177,44.89444 L51.67151,44.68868 L51.70147,44.68718 L55.79217,44.48187 L55.73074,43.25770 Z" fill="#eef3e9" fill-rule="evenodd" stroke="#29464d" stroke-width=".15"/>
+<path d="M51.48297,34.00466 L51.76420,34.00000 L52.04453,34.02308 L52.32120,34.07366 L52.59511,34.15229 L67.49733,39.23823 L67.65673,42.41433 L64.44298,42.58266 L64.44225,42.58270 L60.38926,42.81485 L60.38843,42.81490 L56.42781,43.06368 L56.42732,43.06371 L55.87065,43.10050 L55.85618,43.10217 L55.84193,43.10523 L55.82805,43.10966 L55.81466,43.11542 L55.80190,43.12245 L55.78988,43.13068 L55.77871,43.14004 L55.76850,43.15045 L55.75936,43.16179 L55.75135,43.17396 L55.74457,43.18686 L55.73906,43.20035 L55.73490,43.21432 L55.73210,43.22862 L55.73071,43.24312 L55.73074,43.25770 L55.79217,44.48187 L51.67151,44.68868 L51.13764,34.05132 L51.20354,34.03701 L51.48297,34.00466 Z" fill="#d6e5bd" fill-rule="evenodd" stroke="#5c7754" stroke-width=".15"/>
+<polyline points="48.85168,64.41166 46.00526,64.55452" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<polyline points="49.04852,68.33372 46.20210,68.47658" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<rect x="15.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="16.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">1</text>
+<rect x="16.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="17.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">2</text>
+<rect x="17.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="18.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">3</text>
+<rect x="18.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="19.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">4</text>
+<rect x="19.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="20.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">5</text>
+<rect x="20.67500" y="81.52294" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="21.00000" y="90.02294" text-anchor="middle" font-family="sans-serif" font-size="1.7">6</text>
+<path d="M15 271v-2M15 270h50M65 271v-2" fill="none" stroke="#223b43" stroke-width=".25"/>
+<text x="15" y="277" font-family="sans-serif" font-size="3.2">50 mm scale bar · verify with a ruler</text>
+<text x="15" y="284" font-family="sans-serif" font-size="3.1">Dashed lines bound the 90° bend. Form around the radius; do not crease.</text>
+<text x="15" y="290" font-family="sans-serif" font-size="3.1">Connector datum, source join, bending slack and physical fit remain unverified.</text>
+</svg>

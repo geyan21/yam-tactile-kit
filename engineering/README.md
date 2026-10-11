@@ -6,7 +6,7 @@ The R1 placement drawing is generated from the frozen R1 assembly by `scripts/dr
 
 The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Seven have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, and **B3.1** a recessed magnetic board. All require physical assembly and testing.
 
-**Available:** editable CAD generators; 50 checked STEP/STL solids including five component references; an electrode cut sheet; assembly drawings; seven BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1/N1 force-analysis tools; material recipes; and student test plans.
+**Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans. F1 adds a separately labeled development and mechanical-fit packet.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -46,7 +46,22 @@ or a physical performance result.
 The [checked wrist-board module](development/f1/wrist/README.md) now includes
 its native PCB, fabrication files, drawings, cable checklist and firmware.
 Its 135-component board passes independent copper/connectivity DRC.
-The remaining integration work is recorded in [F1 development](docs/F1_DEVELOPMENT.md).
+The [F1 fit module](development/f1/mechanics/README.md) contains 44 checked
+CAD solids, twelve printable tail patterns, a sensor-placement drawing,
+an interactive-viewer model, and 654 passing declared static pair checks.
+Its connector cavities, stiffeners, fitted copper, tail slack and physical
+performance remain unqualified. The earlier crossing is retained with its
+two exact involved solids.
+
+Use [the current F1 build and fit guide](docs/BUILD_F1.md) for the student
+procedure. [F1 development](docs/F1_DEVELOPMENT.md) retains the historical
+circuit and layout checkpoints.
+
+The full offline packet retains local downloads. The hosted Pages build
+uses versioned GitHub Release assets for its four large archives so the
+visual site remains within the Pages size limit. `prepare_pages_distribution.py`
+stages the two distributions; the Actions publication step verifies asset
+checksums before deploying the page links.
 
 ## File map
 

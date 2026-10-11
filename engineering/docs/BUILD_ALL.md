@@ -4,9 +4,9 @@ The goal is a measured comparison of all twelve designs for reliable contact
 and grip-force feedback through **20 N per finger**, while retaining thin-tip
 access for precision manipulation.
 
-**Current evidence:** six digital prototype packages are available. Physical
+**Current evidence:** seven digital prototype packages are available. Physical
 specimens tested: **0**. No measured winner has been selected. The remaining
-six designs still need the development listed below.
+five designs still need the development listed below.
 
 ## Status of every design
 
@@ -19,7 +19,7 @@ six designs still need the development listed below.
 | [C1](https://geyan21.github.io/yam-tactile-kit/c1.html) | Metal root beam and carriers, eight selected gauges, checked dual-bridge PCB, firmware and static calibration tools | Verify drive fit, machine and bond specimens, measure real joint motion and force response |
 | [N1 rigid nail](https://geyan21.github.io/yam-tactile-kit/rigid-nail.html) | Steel sensing fork, carriers, revised frame, two shear bridges, four TPU cells and combined readout software | Fit and assemble; verify whole-finger motion, physical force calibration, mixed contacts, wear and task access |
 | [B3 recessed magnetic](https://geyan21.github.io/yam-tactile-kit/recessed-magnetic.html) | Revised frame, tapered spacers, retained B2 board, gain-5 firmware and sampled field/clearance checks | Print and fit; measure frame stiffness, actual motion/headroom, then paired B2/B3 force/contact and task performance |
-| [Flexible matrix](https://geyan21.github.io/yam-tactile-kit/flexible-matrix.html) | Reference approaches | Design the array stack, artwork, acquisition and fork-shaped integration |
+| [F1 flexible matrix](https://geyan21.github.io/yam-tactile-kit/flexible-matrix.html) | Separate PCB modules, raw acquisition, 44 mechanical fit/tooling solids and twelve paper/polyester tail patterns | Complete fitted copper, R2 routing, mating/stiffeners, sealing, slack and full-array checks; then build and measure complete specimens |
 | [Capacitive](https://geyan21.github.io/yam-tactile-kit/capacitive.html) | A converter/reference approach | Design shielded compression cells, readout, sealing and integration |
 | [Pneumatic](https://geyan21.github.io/yam-tactile-kit/pneumatic.html) | Published reference hardware | Develop ENPIRE chambers, sealing, range and nail-contact coverage |
 | [Optical](https://geyan21.github.io/yam-tactile-kit/optical.html) | Published optical approaches | Design the optical path, camera, surface, image processing and nail coverage |

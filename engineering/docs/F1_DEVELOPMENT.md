@@ -1,5 +1,9 @@
 # F1 development checkpoint
 
+This page preserves historical development decisions and their earlier
+completion states. Use [the current F1 build and fit guide](BUILD_F1.md) for
+today's available files, sensor placement and remaining integration work.
+
 F1 is not a fabrication release. Its flat electrode witnesses have 64 routed
 contact regions: eight per nail prong and twelve per TPU patch. The contact
 locations use the retained R1 nail and saddle surfaces. A separately checked

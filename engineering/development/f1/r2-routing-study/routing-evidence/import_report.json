@@ -1,0 +1,14 @@
+{
+  "schema": "yam-f1-specctra-import/1",
+  "source_pcb_sha256": "d971598a498ce90b09c626dc121ef872e355aaae1c8f1848de4a3ddb0fa02168",
+  "session_sha256": "00ded39f61af5b7aff2fec51ced4f14475bd1f7346c21018603e6eee246717aa",
+  "tracks": 986,
+  "vias": 143,
+  "original_session_sha256": "9dfa53b5555cd3b088ace60fa3de0179ab4c3b3a68c69ebff5923d6cf82c804e",
+  "normalized_empty_mounting_package_token": true,
+  "native_pad_nets_preserved": true,
+  "maximum_import_pad_position_delta_mm": 1.5000000001208491e-05,
+  "placement_quantization_bound_mm": 0.0001,
+  "final_board_uses_original_placement": true,
+  "independent_drc_pending": true
+}

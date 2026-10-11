@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import time
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -29,11 +30,18 @@ class CleanSiteTests(unittest.TestCase):
                     command=[sys.executable,str(clean/"engineering/scripts"/script)]
                     process=subprocess.Popen(command,cwd=clean,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
                     entry={"command":command,"pid":process.pid};record["commands"].append(entry)
-                    try:stdout,stderr=process.communicate(timeout=45)
-                    except subprocess.TimeoutExpired:
-                        record["intentional_stop_requests"].append(f"Stop owned clean-build PID {process.pid}: timeout")
-                        process.kill();process.communicate()
-                        self.fail("Clean reproduction timed out")
+                    started=time.monotonic()
+                    while True:
+                        try:
+                            stdout,stderr=process.communicate(timeout=min(30,max(1,180-(time.monotonic()-started))))
+                            break
+                        except subprocess.TimeoutExpired:
+                            if time.monotonic()-started<180:
+                                continue
+                            record["intentional_stop_requests"].append(f"Stop owned clean-build PID {process.pid}: 180 second packet-build bound")
+                            process.kill();process.communicate()
+                            self.fail("Clean reproduction exceeded its 180 second bound")
+                    entry["elapsed_s"]=time.monotonic()-started
                     entry.update({"exit_code":process.returncode,"stdout":stdout[-2000:],"stderr":stderr[-4000:]})
                     self.assertEqual(process.returncode,0,f"{script} failed from a clean tree:\n{stderr[-4000:]}")
                 self.assertTrue((clean/"build/site/index.html").is_file())

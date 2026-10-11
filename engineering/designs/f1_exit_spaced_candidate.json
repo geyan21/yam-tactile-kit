@@ -1,0 +1,13 @@
+{
+  "schema": "yam-f1-exit-development/1",
+  "status": "Spaced lateral exits for an installed-tail routing trial",
+  "exit_native_y_mm_by_site": [-96.0, -99.6, -91.2, -57.5, -40.5, -22.0],
+  "edge_by_site": ["proximal", "proximal", "distal", "proximal", "proximal", "proximal"],
+  "site_to_connector_id": ["J0", "J1", "J2", "J3", "J5", "J4"],
+  "global_columns_by_site": [[0, 1], [2, 3], [4, 5, 6], [7, 8, 9], [13, 14, 15], [10, 11, 12]],
+  "notes": [
+    "The three distal necks separate before their tails widen.",
+    "The proximal CH5 exit moves away from the original M3 screw-head envelope.",
+    "Source sections and full assembled bends require fresh checks. Prior exit configurations and runs are preserved."
+  ]
+}

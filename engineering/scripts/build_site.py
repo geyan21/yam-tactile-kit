@@ -7,6 +7,7 @@ import hashlib
 import html
 import json
 from pathlib import Path
+import posixpath
 import re
 import shutil
 import sys
@@ -46,6 +47,8 @@ DOCS=[
     ("BUILD_RECESSED","build-recessed","Build B3 recessed board"),
     ("RECESSED_TESTING","recessed-testing","B3 paired physical tests"),
     ("RECESSED_ANALYSIS","recessed-analysis","B3 digital results"),
+    ("BUILD_F1","build-f1","F1 development & fit packet"),
+    ("F1_WRIST_CAPTURE","f1-capture","F1 wiring & raw capture"),
 ]
 
 
@@ -77,6 +80,13 @@ def verify_snapshot():
         for name,expected in snapshot["files"].items():
             if hashlib.sha256((path.parent/name).read_bytes()).hexdigest()!=expected:
                 raise ValueError(f"Prototype artifact changed: {path.parent.name}/{name}")
+    for path in sorted((ROOT/"engineering/development").rglob("checkpoint.json")):
+        checkpoint=json.loads(path.read_text())
+        expected=checkpoint["files_sha256"]
+        actual={str(p.relative_to(path.parent)):hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in path.parent.rglob("*") if p.is_file() and p!=path}
+        if actual!=expected:
+            raise ValueError(f"Development checkpoint changed: {path.parent}")
     return manifest
 
 
@@ -85,6 +95,7 @@ def source_entries():
     roots += [ROOT/"engineering"/name for name in (
         "README.md","bom.csv","l1_bom.csv","b1_bom.csv","b2_bom.csv","study.json","design_catalog.json","requirements.in","requirements.lock",
         "scripts","software","firmware","docs","templates","designs","tests","web","release","electronics","research","concepts","prototypes","campaign",
+        "development","third_party",
     )]
     entries={}
     for root in roots:
@@ -100,10 +111,42 @@ def write_zip(path,entries):
     with zipfile.ZipFile(path,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=7) as archive:
         for name,data in sorted(entries.items()):
             info=zipfile.ZipInfo(name,date_time=(2026,10,10,0,0,0))
-            info.compress_type=zipfile.ZIP_DEFLATED
+            # The complete packet contains other checked archives and
+            # compressed figures. Re-deflating them adds substantial build
+            # time with little size reduction.
+            compressed=Path(name).suffix.lower() in {".zip",".gz",".png",".jpg",".jpeg",".webp",".pdf"}
+            info.compress_type=zipfile.ZIP_STORED if compressed else zipfile.ZIP_DEFLATED
             info.external_attr=0o100644<<16
             archive.writestr(info,data)
 
+
+def development_indexes(assets):
+    """Readable file access without adding files to immutable source snapshots."""
+    for checkpoint_path in sorted((assets/"development").rglob("checkpoint.json")):
+        folder=checkpoint_path.parent
+        checkpoint=json.loads(checkpoint_path.read_text())
+        prefix=posixpath.relpath(".",str(folder.relative_to(SITE)))
+        groups={}
+        for name in checkpoint["files_sha256"]:
+            groups.setdefault(name.split("/")[0] if "/" in name else "Overview",[]).append(name)
+        blocks=[]
+        for group,names in groups.items():
+            rows="".join(
+                f'<tr><td><a href="{html.escape(name,quote=True)}">{html.escape(name)}</a></td>'
+                f'<td>{(folder/name).stat().st_size:,} bytes</td></tr>'
+                for name in sorted(names))
+            blocks.append(f'<details open><summary>{html.escape(group)}</summary><table><tbody>{rows}</tbody></table></details>')
+        title="F1 "+folder.name.replace("-"," ")+" files"
+        body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{html.escape(title)}</title><link rel="stylesheet" href="{prefix}/assets/style.css"></head><body>
+<main class="doc-body" style="max-width:1100px;margin:2rem auto;padding:1rem">
+<p><a href="{prefix}/flexible-matrix.html">← F1 sensor, placement and build guide</a></p>
+<h1>{html.escape(title)}</h1><p><strong>{html.escape(str(checkpoint.get("status","Development checkpoint")))}</strong></p>
+<p>The complete tactile finger and physical qualification remain unfinished.</p>
+<p>Use <a href="README.md">README.md</a> for this module's scope and <a href="checkpoint.json">checkpoint.json</a>
+for source-file checksums. The generated index is separate from that immutable source snapshot.</p>
+{"".join(blocks)}</main></body></html>'''
+        (folder/"file-index.html").write_text(body)
 
 def chapter(source):
     text=(ROOT/"engineering/docs"/f"{source}.md").read_text()
@@ -115,6 +158,7 @@ def chapter(source):
         ("../concepts/","assets/concepts/"),("../research/","downloads/"),
         ("../campaign/requirements.json","downloads/campaign_requirements.json"),
         ("../prototypes/","assets/prototypes/"),
+        ("../development/","assets/development/"),
         ("../b2_bom.csv","downloads/b2_bom.csv"),
         ("../templates/","downloads/"),("../l1_bom.csv","downloads/l1_bom.csv"),("../b1_bom.csv","downloads/b1_bom.csv"),
     ):
@@ -153,6 +197,8 @@ def main():
             shutil.copytree(RELEASE/name,assets/name)
         shutil.copytree(ROOT/"engineering/concepts",assets/"concepts")
         shutil.copytree(ROOT/"engineering/prototypes",assets/"prototypes")
+        shutil.copytree(ROOT/"engineering/development",assets/"development")
+        development_indexes(assets)
         shutil.copyfile(ROOT/"engineering/campaign/requirements.json",downloads/"campaign_requirements.json")
         for folder in sorted((ROOT/"engineering/prototypes").iterdir()):
             if folder.is_dir() and (folder/"cad").exists():
@@ -206,8 +252,9 @@ def main():
         for path in sorted((ROOT/"engineering/prototypes").glob("*/models.json")):
             prototype_models.extend(json.loads(path.read_text()))
             prototype_plans[path.parent.name]=json.loads((path.parent/f"{path.parent.name}_manifest.json").read_text())
+        development_models=json.loads((ROOT/"engineering/development/f1/mechanics/models.json").read_text())
         payload={
-            "models":[r1_models[0],b1_models[0],*prototype_models,*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
+            "models":[r1_models[0],b1_models[0],*prototype_models,*development_models,*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
             "r1":json.loads((RELEASE/"r1/r1_manifest.json").read_text()),
             "l1":json.loads((RELEASE/"l1/l1_manifest.json").read_text()),
             "b1":json.loads((RELEASE/"b1/b1_manifest.json").read_text()),
@@ -237,6 +284,9 @@ def main():
                         for path in (ROOT/"engineering/concepts").rglob("*") if path.is_file()})
         designs.update({"prototypes/"+str(path.relative_to(ROOT/"engineering/prototypes")):path.read_bytes()
                         for path in (ROOT/"engineering/prototypes").rglob("*") if path.is_file() and path.name!="models.json"})
+        designs.update({"development/"+str(path.relative_to(ROOT/"engineering/development")):path.read_bytes()
+                        for path in (ROOT/"engineering/development").rglob("*") if path.is_file()
+                        and path.name not in ("models.json","assembly_models.json")})
         write_zip(downloads/"enpire-designs.zip",designs)
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
@@ -263,6 +313,7 @@ def main():
             "B1 files: source/engineering/release/b1; electronics source: source/engineering/electronics/b1.\n"
             "B2.1 files: source/engineering/prototypes/b2; instructions: website/build-b2.html.\n"
             "All twelve designs and planned comparisons: website/build-all.html.\n"
+            "F1 development modules and fit patterns: website/flexible-matrix.html and source/engineering/development/f1.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()
@@ -280,6 +331,7 @@ def main():
             "purchased_reference_solids":3,
             "additional_prototype_reference_solids":sum(p.get("kind")=="reference_only" for plan in prototype_plans.values() for p in plan["parts"]),
             "separate_concept_solids":2,
+            "f1_development_fit_solids":json.loads((ROOT/"engineering/development/f1/mechanics/checkpoint.json").read_text())["cad_solids"],
             "documents":len(DOCS)+len(catalog["designs"]),"design_pages":len(catalog["designs"]),
             "requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],

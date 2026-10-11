@@ -1,0 +1,849 @@
+{
+  "schema": "yam-f1-exit-sections/1",
+  "physical_evidence": false,
+  "source_sha256": {
+    "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/i2rt_UCG_Hard.stl": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/I2RT_UCG_Soft.stl": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc",
+    "engineering/designs/f1_exit_spaced_candidate.json": "32a8f4553f9c4f683b6b60f3b76fe493f6cd2908ad8954f0a6eeb9bbfc264ff3"
+  },
+  "results": [
+    {
+      "site": "CH0",
+      "edge": "proximal",
+      "exit_y_mm": -96.0,
+      "center_native_mm": [
+        -13.835111933224706,
+        -96.0,
+        -3.439614368160404
+      ],
+      "tangent": [
+        -0.0,
+        0.9987429547377857,
+        0.05012494749760185
+      ],
+      "normal": [
+        5.218315149545941e-09,
+        0.05012494749760185,
+        -0.9987429547377857
+      ],
+      "tangent_extension_mm": 5.231155295282252,
+      "x_span_mm": [
+        -8.706846465495822,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.30500000000000005,
+      "sampled_sections": 23,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -97.13121987857339,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -97.028381707794,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.92554353701459,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.8227053662352,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.71986719545579,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.6170290246764,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.51419085389699,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.4113526831176,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.30851451233819,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.2056763415588,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.10283817077939,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -96.0,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.89716182922061,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.7943236584412,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.69148548766181,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.5886473168824,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.48580914610301,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.3829709753236,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.28013280454421,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.1772946337648,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -95.07445646298541,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -94.971618292206,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -94.86878012142661,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    },
+    {
+      "site": "CH1",
+      "edge": "proximal",
+      "exit_y_mm": -99.6,
+      "center_native_mm": [
+        -1.967953548832886,
+        -99.6,
+        -3.6202912362261923
+      ],
+      "tangent": [
+        -0.0,
+        0.9987429547377857,
+        0.05012494749760185
+      ],
+      "normal": [
+        5.218315149545941e-09,
+        0.05012494749760185,
+        -0.9987429547377857
+      ],
+      "tangent_extension_mm": 1.6266242397003978,
+      "x_span_mm": [
+        3.170613390126699,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.30500000000000005,
+      "sampled_sections": 23,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -100.73121987857338,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.62838170779399,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.52554353701458,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.42270536623519,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.31986719545579,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.21702902467639,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.11419085389699,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -100.0113526831176,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.90851451233819,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.8056763415588,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.70283817077939,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.6,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.4971618292206,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.3943236584412,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.2914854876618,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.1886473168824,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -99.085809146103,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.9829709753236,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.8801328045442,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.7772946337648,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.6744564629854,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.571618292206,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -98.4687801214266,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    },
+    {
+      "site": "CH2",
+      "edge": "distal",
+      "exit_y_mm": -91.2,
+      "center_native_mm": [
+        -7.5,
+        -91.2,
+        -4.447108357539787
+      ],
+      "tangent": [
+        0.0,
+        0.8785116681711159,
+        0.4777208901515645
+      ],
+      "normal": [
+        0.0,
+        0.4777208901515645,
+        -0.8785116681711159
+      ],
+      "tangent_extension_mm": -2.0034003775274445,
+      "x_span_mm": [
+        -1.0,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.22000000000000006,
+      "sampled_sections": 21,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -92.24086492460917,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -92.13677843214825,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -92.03269193968734,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.92860544722642,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.82451895476551,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.72043246230459,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.61634596984366,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.51225947738276,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.40817298492183,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.30408649246093,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.2,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -91.09591350753908,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.99182701507817,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.88774052261725,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.78365403015634,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.67956753769542,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.5754810452345,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.47139455277359,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.36730806031267,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.26322156785176,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -90.15913507539084,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    },
+    {
+      "site": "CH3",
+      "edge": "proximal",
+      "exit_y_mm": -57.5,
+      "center_native_mm": [
+        -7.5,
+        -57.5,
+        4.360670366967716
+      ],
+      "tangent": [
+        0.0,
+        0.6022633681867009,
+        0.7982974604371545
+      ],
+      "normal": [
+        0.0,
+        0.7982974604371545,
+        -0.6022633681867009
+      ],
+      "tangent_extension_mm": 2.8530153121637434,
+      "x_span_mm": [
+        -1.0,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.22000000000000006,
+      "sampled_sections": 16,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -58.26534900985813,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -58.16330247521038,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -58.061255940562624,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.959209405914876,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.85716287126713,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.75511633661937,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.653069801971625,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.55102326732388,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.44897673267612,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.346930198028375,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.24488366338063,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.14283712873287,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -57.040790594085124,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -56.938744059437376,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -56.83669752478962,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -56.73465099014187,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    },
+    {
+      "site": "CH4",
+      "edge": "proximal",
+      "exit_y_mm": -40.5,
+      "center_native_mm": [
+        -7.5,
+        -40.5,
+        10.585313881171855
+      ],
+      "tangent": [
+        0.0,
+        0.9795349941175456,
+        -0.20127393099738425
+      ],
+      "normal": [
+        0.0,
+        -0.20127393099738425,
+        -0.9795349941175456
+      ],
+      "tangent_extension_mm": 2.158536469364586,
+      "x_span_mm": [
+        -1.0,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.22000000000000006,
+      "sampled_sections": 23,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -41.624107000791945,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.52191545526541,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.41972390973886,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.317532364212326,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.21534081868578,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.113149273159245,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -41.0109577276327,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.90876618210616,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.80657463657962,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.70438309105308,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.60219154552654,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.5,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.39780845447346,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.29561690894692,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.19342536342038,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -40.09123381789384,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.9890422723673,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.886850726840755,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.78465918131422,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.682467635787674,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.58027609026114,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.47808454473459,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -39.375892999208055,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    },
+    {
+      "site": "CH5",
+      "edge": "proximal",
+      "exit_y_mm": -22.0,
+      "center_native_mm": [
+        -7.5,
+        -22.0,
+        -4.5543554046999315
+      ],
+      "tangent": [
+        0.0,
+        0.9999843693127025,
+        0.005591165377325478
+      ],
+      "normal": [
+        0.0,
+        0.005591165377325478,
+        -0.9999843693127025
+      ],
+      "tangent_extension_mm": 1.5840230541394378,
+      "x_span_mm": [
+        -1.0,
+        11.1
+      ],
+      "neck_width_mm": 2.25,
+      "combined_envelope_thickness_mm": 0.22000000000000006,
+      "sampled_sections": 23,
+      "maximum_hard_overlap_mm2": 0.0,
+      "maximum_soft_overlap_mm2": 0.0,
+      "samples": [
+        {
+          "y_mm": -23.125587443668294,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -23.02326131242572,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.92093518118315,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.818609049940576,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.716282918698006,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.613956787455432,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.511630656212862,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.40930452497029,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.306978393727718,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.204652262485144,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.10232613124257,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -22.0,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.897673868757426,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.795347737514856,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.693021606272282,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.59069547502971,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.488369343787138,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.386043212544568,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.283717081301994,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.181390950059424,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -21.07906481881685,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -20.976738687574276,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        },
+        {
+          "y_mm": -20.874412556331706,
+          "hard_overlap_mm2": 0.0,
+          "soft_overlap_mm2": 0.0
+        }
+      ]
+    }
+  ],
+  "limits": "Combined neck envelope and sampled native-Y sections only. Elbows, folds, full mesh clearance bounds, assembled tails and dynamic motion remain."
+}

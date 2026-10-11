@@ -1,0 +1,13 @@
+specimen_id,operator,date,site,role,connector,scale_bar_measured_mm,seated_tip_local_y_mm,contact_plane_height_mm,rubbing_or_pinch,passive_motion_mm,photo_path,notes
+,,,CH0,columns,J0C,,,,,,,
+,,,CH0,rows,J0R,,,,,,,
+,,,CH1,columns,J1C,,,,,,,
+,,,CH1,rows,J1R,,,,,,,
+,,,CH2,columns,J2C,,,,,,,
+,,,CH2,rows,J2R,,,,,,,
+,,,CH3,columns,J3C,,,,,,,
+,,,CH3,rows,J3R,,,,,,,
+,,,CH4,columns,J5C,,,,,,,
+,,,CH4,rows,J5R,,,,,,,
+,,,CH5,columns,J4C,,,,,,,
+,,,CH5,rows,J4R,,,,,,,

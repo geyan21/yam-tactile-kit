@@ -21,7 +21,10 @@
       c1fixed:"Fixed root carrier",c1floating:"Floating finger carrier",c1beam:"Transverse strain beam",
       c1clamp:"Beam end clamps",c1gauge:"Eight active strain-grid locations",
       nailbody:"N1 bare fork and sensing webs",nailleft:"Left fixed carrier",nailright:"Right fixed carrier",
-      nailgauges:"NL / NR foil-carrier locations"};
+      nailgauges:"NL / NR foil-carrier locations",
+      f1_stacks:"Film and electrode reference bodies",f1_tails:"Tail fit references",
+      f1_board:"R2 PCB fit reference",f1_carrier:"Removable carrier",
+      f1_components:"Component body envelopes",f1_fastener_envelopes:"Reserved fasteners"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){
       const label=document.createElement("label"),input=document.createElement("input");

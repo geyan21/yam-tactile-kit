@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 from html.parser import HTMLParser
 from pathlib import Path, PurePosixPath
+import posixpath
 import sys
 from urllib.parse import unquote, urlsplit
 import zipfile
@@ -38,7 +39,9 @@ def verify_entries(entries):
         for reference in parser.references:
             url=urlsplit(reference)
             if url.scheme or url.netloc:continue
-            target=str(PurePosixPath(name).parent/unquote(url.path)) if url.path else name
+            target=posixpath.normpath(str(PurePosixPath(name).parent/unquote(url.path))) if url.path else name
+            if target==".." or target.startswith("../") or target.startswith("/"):
+                raise ValueError(f"Local target escapes the packet: {name} -> {reference}")
             if target not in entries:
                 raise ValueError(f"Missing local target: {name} -> {reference}")
             if url.fragment and target in documents and unquote(url.fragment) not in documents[target].ids:
@@ -155,6 +158,15 @@ def main():
                 "website/assets/prototypes/recessed/recessed_placement.svg",
                 "website/assets/prototypes/recessed/recessed-wiring.svg",
                 "website/downloads/recessed_bom.csv","website/downloads/recessed_specimen.json",
+                "source/engineering/development/f1/mechanics/checkpoint.json",
+                "source/engineering/development/f1/mechanics/cad/f1_r2_carrier.step",
+                "source/engineering/development/f1/mechanics/patterns/f1_ch0_rows_fit.pdf",
+                "source/engineering/development/f1/wrist/pcb/f1_wrist.kicad_pcb",
+                "source/engineering/firmware/f1/main.py",
+                "source/engineering/software/f1_record.py",
+                "source/engineering/docs/BUILD_F1.md",
+                "website/flexible-matrix.html","website/build-f1.html","website/f1-capture.html",
+                "website/assets/development/f1/mechanics/file-index.html",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

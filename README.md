@@ -30,6 +30,12 @@ For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md
 
 Use [B2's build guide](engineering/docs/BUILD_B2.md) for consolidated magnetic sensing, [C1 assembly](engineering/docs/BUILD_C1.md) for the strain-root alternative, [N1 assembly](engineering/docs/BUILD_NAIL.md) for the bare sensing nail, and [B3 assembly](engineering/docs/BUILD_RECESSED.md) for the narrower recessed board. Each has its own test instructions and evidence limits. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the five remaining designs and the physical evidence still required.
 
+The [F1 development and fit guide](engineering/docs/BUILD_F1.md) now identifies
+the exact pressure-film stack, six sensing sites, PCB/code modules and twelve
+printable tail-fit patterns. Its separate mechanical packet has 44 checked
+CAD solids. Fitted copper, connector/motion details and physical performance
+remain unfinished; F1 is not yet an eighth integrated prototype.
+
 ## Start here
 
 1. [Measure and identify the actual finger](engineering/docs/GEOMETRY.md).

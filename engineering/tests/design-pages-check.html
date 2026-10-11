@@ -39,7 +39,14 @@
         details.open=true;details.dispatchEvent(new w.Event("toggle"));
         await pause(40);
         w.DesignPageViewer?.draw();
-        check(item.id+": correct released 3D assembly renders",w.DesignPageViewer?.model.id===item.viewer_model&&Number(d.querySelector(".design-canvas").dataset.faces)>1000);
+        check(item.id+": matching 3D model renders",w.DesignPageViewer?.model.id===item.viewer_model&&Number(d.querySelector(".design-canvas").dataset.faces)>1000);
+        if(item.id==="F1"){
+          const model=w.DesignPageViewer?.model;
+          check("F1: partial fit geometry is explicitly labeled",
+            item.group==="development"&&model.note.includes("Partial integration")&&
+            model.components.filter(part=>part.group==="f1_stacks").length===24&&
+            model.components.filter(part=>part.group==="f1_tails").length===12);
+        }
         const checkbox=d.querySelector("[data-design-layer]");
         const original=w.DesignPageViewer?.visible.size;
         checkbox.click();w.DesignPageViewer.draw();

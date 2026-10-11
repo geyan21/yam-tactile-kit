@@ -1,0 +1,79 @@
+{
+  "schema": "yam-f1-fanout-r2-placement/1",
+  "passed": true,
+  "failures": [],
+  "parts": 42,
+  "pads": 232,
+  "tabs": [
+    {
+      "connector": "J0R",
+      "minimum_projected_other_body_gap_mm": 9.443438980678524
+    },
+    {
+      "connector": "J0C",
+      "minimum_projected_other_body_gap_mm": 7.600999999999998
+    },
+    {
+      "connector": "J1R",
+      "minimum_projected_other_body_gap_mm": 9.200000054347829
+    },
+    {
+      "connector": "J1C",
+      "minimum_projected_other_body_gap_mm": 7.601
+    },
+    {
+      "connector": "J2R",
+      "minimum_projected_other_body_gap_mm": 8.044023182741158
+    },
+    {
+      "connector": "J2C",
+      "minimum_projected_other_body_gap_mm": 7.600999999999998
+    },
+    {
+      "connector": "J3R",
+      "minimum_projected_other_body_gap_mm": 8.173053346210338
+    },
+    {
+      "connector": "J3C",
+      "minimum_projected_other_body_gap_mm": 5.25
+    },
+    {
+      "connector": "J4R",
+      "minimum_projected_other_body_gap_mm": 5.600000000000001
+    },
+    {
+      "connector": "J4C",
+      "minimum_projected_other_body_gap_mm": 7.600999999999998
+    },
+    {
+      "connector": "J5R",
+      "minimum_projected_other_body_gap_mm": 1.5
+    },
+    {
+      "connector": "J5C",
+      "minimum_projected_other_body_gap_mm": 5.25
+    }
+  ],
+  "mounts": [
+    {
+      "center_mm": [
+        58,
+        2.5
+      ],
+      "keepout_diameter_mm": 4.8,
+      "contained_in_board": true,
+      "edge_distance_mm": 2.46
+    },
+    {
+      "center_mm": [
+        40,
+        2.5
+      ],
+      "keepout_diameter_mm": 4.8,
+      "contained_in_board": true,
+      "edge_distance_mm": 2.46
+    }
+  ],
+  "physical_evidence": false,
+  "limits": "Closed component bodies and conservative external tab projections. Actual contact plane, latch opening, flexible tails, carrier and robot fit remain."
+}

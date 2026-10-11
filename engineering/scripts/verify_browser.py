@@ -2,6 +2,7 @@
 """Check the engineering site and save desktop/mobile screenshots in an owned browser."""
 
 import argparse
+from datetime import datetime, timezone
 from functools import partial
 import html
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -23,11 +24,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
     parser.add_argument("--checks-only",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis","f1-page","f1-mobile","f1-placement","f1-guide","f1-files"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
-    output=ROOT/"build/engineering/browser";output.mkdir(parents=True,exist_ok=True)
+    output=ROOT/"build/engineering/browser"/datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+    output.mkdir(parents=True,exist_ok=False)
     with execution(ROOT/"build/records","Verify actual-mesh controls, downloads, report handling, and mobile layout using only a temporary loopback website") as record:
         record["browser_runs"]=[]
         class Handler(SimpleHTTPRequestHandler):
@@ -41,6 +43,7 @@ def main():
             (site/"design-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="b2.html" title="390px mobile design page" style="width:390px;height:2500px;border:0"></iframe></body></html>')
             (site/"nail-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="rigid-nail.html" title="390px N1 design page" style="width:390px;height:2700px;border:0"></iframe></body></html>')
             (site/"recessed-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="recessed-magnetic.html" title="390px B3 design page" style="width:390px;height:2700px;border:0"></iframe></body></html>')
+            (site/"f1-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="flexible-matrix.html" title="390px F1 design page" style="width:390px;height:3100px;border:0"></iframe></body></html>')
             index=(site/"index.html").read_text()
             for name,style in (
                 ("design",".hero,.brief{display:none} #design{padding-top:25px}"),
@@ -131,6 +134,11 @@ def main():
                     ("recessed-placement","1400,760","assets/prototypes/recessed/recessed_placement.svg"),
                     ("recessed-guide","1440,1800","build-recessed.html"),
                     ("recessed-analysis","1440,1800","recessed-analysis.html"),
+                    ("f1-page","1440,1700","flexible-matrix.html"),
+                    ("f1-mobile","500,3200","f1-mobile.html"),
+                    ("f1-placement","1440,1100","assets/development/f1/mechanics/visuals/sensor_placement.png"),
+                    ("f1-guide","1440,1800","build-f1.html"),
+                    ("f1-files","1440,1600","assets/development/f1/mechanics/file-index.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])

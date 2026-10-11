@@ -1,0 +1,63 @@
+{
+  "schema": "yam-f1-freerouting-attempt/1",
+  "source_export": {
+    "schema": "yam-f1-specctra-export/1",
+    "source_pcb_sha256": "d971598a498ce90b09c626dc121ef872e355aaae1c8f1848de4a3ddb0fa02168",
+    "dsn_sha256": "8761ecf0806c5553f44a415e2d5957b08d5542e4b01239c0defe46eda486b21b",
+    "kicad": "10.0.7",
+    "source_manifest_sha256": "9d6238888bc1ec1bc98cfc3e71cc3c4d975f3af7561817e47e85e80b3c22c62e",
+    "note": "Default 0.15 mm signal width/clearance, 0.45 mm via/0.20 mm drill. Per-row widths and fabrication acceptance require the recorded routing rules and independent checks."
+  },
+  "router": {
+    "command": [
+      "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/tools/freerouting/2.5.0/jvm-bundle/freerouting-2.5.0-linux-x64/bin/freerouting",
+      "-de",
+      "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/freerouting_runs/20261011T135313.850418Z/f1_r2_input.dsn",
+      "-do",
+      "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/freerouting_runs/20261011T135313.850418Z/f1_r2_output.ses",
+      "--gui.enabled=false",
+      "--api_server.enabled=false",
+      "-da",
+      "--user_data_path=/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/freerouting_runs/20261011T135313.850418Z/tool-data",
+      "--logging.file.location=/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/repo/build/engineering/prototypes/f1/freerouting_runs/20261011T135313.850418Z/tool-logs",
+      "--router.autorouter.max_passes=30",
+      "-mt",
+      "1",
+      "-l",
+      "en"
+    ],
+    "pid": 4,
+    "tool_identity": {
+      "kind": "official_bundled_jvm",
+      "manifest_sha256": "d1bf0c3d572b591fed435de62ecc5575ec6d301f310010b6fe42c5af34ba4dbf",
+      "launcher_sha256": "584ea6b015840d87fb3ba9a8e97ea6c1c6061fdda2ca7339a7e04244453ad07c",
+      "jar_sha256": "8d1519cfd69753ddb8b2e129c6cf7b4c0515e7f6ef81fb11325ea228ad310679",
+      "java_options": "-Xmx1024m -XX:ActiveProcessorCount=2 -Djava.awt.headless=true"
+    },
+    "exit_code": 0
+  },
+  "rules": {
+    "nets_preserved": 48,
+    "row_current_width_mm": 0.5,
+    "signal_width_mm": 0.15,
+    "clearance_mm": 0.15,
+    "row_nets": [
+      "R0_I",
+      "R1_I",
+      "R2_I",
+      "R3_I"
+    ],
+    "no_ignored_net_classes": true,
+    "nonrouting_component_drawings_omitted": 0,
+    "board_boundary_and_keepouts_unchanged": true,
+    "drawing_workaround_basis": "Freerouting v2.5.0 ComponentOutline.isObstacle returns false; only library/image/outline drawings are omitted from the local exchange to avoid its native serialization error. Native PCB geometry remains unchanged.",
+    "drawing_source": "https://raw.githubusercontent.com/freerouting/freerouting/v2.5.0/src/main/java/app/freerouting/board/model/items/ComponentOutline.java"
+  },
+  "elapsed_s": 204.8814381250413,
+  "input_dsn_sha256": "147076165cf55258f5e0d856b77b011478e5bdfdf98d2a551229c706e72a725a",
+  "physical_specimens_tested": 0,
+  "worker_exception_detected": false,
+  "session_exists": true,
+  "session_sha256": "9dfa53b5555cd3b088ace60fa3de0179ab4c3b3a68c69ebff5923d6cf82c804e",
+  "native_import_and_independent_drc_pending": true
+}

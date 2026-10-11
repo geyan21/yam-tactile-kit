@@ -19,6 +19,8 @@ DOCUMENTS = {
     "hirose_catalog_public_copy": "https://datasheet.lcsc.com/datasheet/pdf/b87be22e0cecc59ab77d96f3dce601d5.pdf?productCode=C597994",
     "hirose_drawing": "https://www.hirose.com/en/product/p/CL0528-0030-8-98/documents?path=%2Fapi%2Fv1%2Fproducts%2FCL0528-0030-8-98%2Fdocuments%2Fdrawing_2d%2Fcontent%3Flang%3DEN",
     "hirose_specification": "https://www.hirose.com/en/product/p/CL0528-0030-8-98/documents?path=%2Fapi%2Fv1%2Fproducts%2FCL0528-0030-8-98%2Fdocuments%2Fspec_sheet%2Fcontent%3Flang%3DEN",
+    "hirose_catalog": "https://www.hirose.com/en/product/series/FH12/documents?path=%2Fapi%2Fv1%2Fseries%2FFH12%2Fdocuments%2Fproduct_series_catalog%2Fcontent%3Flang%3DEN",
+    "all_flex_bend": "https://www.allflexinc.com/wp-content/uploads/2024/03/Minimum-Bend-Radius-Considerations-in-Flexible-Circuits.pdf",
     "opa392": "https://www.ti.com/lit/ds/symlink/opa2392.pdf",
     "adg706": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf",
     "mcp3208": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/21298e.pdf",

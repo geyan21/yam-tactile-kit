@@ -1,0 +1,17 @@
+{
+  "nets_preserved": 48,
+  "row_current_width_mm": 0.5,
+  "signal_width_mm": 0.15,
+  "clearance_mm": 0.15,
+  "row_nets": [
+    "R0_I",
+    "R1_I",
+    "R2_I",
+    "R3_I"
+  ],
+  "no_ignored_net_classes": true,
+  "nonrouting_component_drawings_omitted": 0,
+  "board_boundary_and_keepouts_unchanged": true,
+  "drawing_workaround_basis": "Freerouting v2.5.0 ComponentOutline.isObstacle returns false; only library/image/outline drawings are omitted from the local exchange to avoid its native serialization error. Native PCB geometry remains unchanged.",
+  "drawing_source": "https://raw.githubusercontent.com/freerouting/freerouting/v2.5.0/src/main/java/app/freerouting/board/model/items/ComponentOutline.java"
+}
