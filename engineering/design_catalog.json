@@ -1,7 +1,7 @@
 {
   "schema": "yam-design-pages/1",
   "groups": [
-    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1 and B2 have assembly files and readout code. All still require physical qualification."},
+    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1, B2 and C1 have assembly files and readout code. All still require physical qualification."},
     {"id": "concept", "title": "Our next design concepts", "description": "Separate ideas and engineering studies. Check each page for exactly which files exist and which work remains."},
     {"id": "research", "title": "Alternative sensing approaches", "description": "Reference approaches considered in the study. These are not completed ENPIRE designs."}
   ],
@@ -135,29 +135,47 @@
       "related": ["B1", "RECESSED", "NAIL", "C1"]
     },
     {
-      "id": "C1", "slug": "c1", "title": "C1 · Differential-strain root force", "group": "concept",
-      "status": "Bench coupon concept", "status_detail": "An analytical model and metal coupon CAD exist. There is no complete YAM adapter, assembled bridge, firmware or qualified force sensor.",
-      "summary": "Measure aggregate normal force using two strain bridges on a metal load-path element, leaving the nail and soft contact region passive.",
-      "signal": "Normal force from the difference of calibrated bending measurements in the ideal model; no local contact map.",
-      "best_for": "Studying a force path that does not infer load from a magnetic field.",
-      "tradeoff": "Gauge bonding, gain matching, thermal drift, gravity, cross-axis loads and short-beam end effects need substantial work.",
+      "id": "C1", "slug": "c1", "title": "C1 · Differential-strain root force", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "C1.1 supplies nine checked CAD parts, a routed readout PCB with clean independent KiCad DRC, firmware, raw capture and static calibration tools. The bonded-joint structural model passed its numerical checks. No physical C1 has been assembled or tested.",
+      "summary": "Put eight foil gauges on a transverse metal beam at the finger root. Two bridges measure its bending while the original thin nail and soft TPU keep their contact geometry.",
+      "signal": "Aggregate normal force after specimen-specific calibration of the two bridges. Raw readings alone are not newtons, and this design has no local contact map.",
+      "best_for": "Comparing whole-finger force feedback without permanent magnets or sensing film on the leading nail.",
+      "tradeoff": "Adds 18 mm reach and 21.4 mm to the overall width, making the root 53 mm wide. Reserved hardware extends the back by 24.2 mm. Gauge bonding, clamp slip, thermal drift and moving-arm loads need physical tests.",
       "sensors": [
-        ["Station 1 / 2", "Two 350 Ω full strain bridges, eight foil gauges total; exact gauge/bonding selection pending", "On opposite faces of the active beam, at 5 and 13 mm from the assumed fixed boundary"],
-        ["Readout candidate", "Two ADS1232 converters, one per bridge", "On fixed electronics near the beam or wrist; no completed C1 readout is supplied"]
+        ["A_R1–A_R4", "Four Micro-Measurements CEA-13-062UWA-350 foil gauges", "Station A: grid centers 8.5 mm from the active beam's fixed boundary; two on top and two underneath"],
+        ["B_R1–B_R4", "Four more CEA-13-062UWA-350 gauges", "Station B: grid centers 24.5 mm from the same boundary; two on each face"],
+        ["Both stations", "350 Ω full bridges; M-Bond 200 initial laboratory bonding process", "Grid axes along the transverse beam; positions ±6.29 mm across its width. Align active grids, not asymmetric backing centers"],
+        ["Readout", "Two ADS1232IPWR bridge converters", "On the fixed 82 × 64 mm C1 readout PCB near the wrist/base; one four-wire harness per bridge"],
+        ["Health / electrical test", "Two INA219AIDR monitors and two TMUX1101DBVR shunt switches", "On the readout PCB; excitation checks and startup electrical tests do not verify gauge bonding"],
+        ["Controller", "Raspberry Pi Pico RP2040 running yam-c1/1", "At the wrist/base; J1 carries clock, data, control and power"]
       ],
-      "placement": "The coupon has an 18 mm active section, 25 mm width and 8 mm thickness, with clamp ends. All intended finger loads must enter beyond both sensing stations and avoid parallel load paths. The coupon itself does not establish gripper mounting or reach.",
-      "visual": {"path": "assets/concepts/c1_concept.svg", "alt": "C1 metal coupon with two strain stations and an analytical stiffness comparison", "caption": "Gauge rectangles mark locations, not finalized gauge footprints. The short beam still needs 3D FEA and measurements."},
-      "schematic": ["Nail + TPU load", "Two strain stations", "Two bridge readouts", "Calibrated normal force"],
+      "placement": "Machine the 33 × 22 × 14 mm active beam and its carriers from 6061-T6 aluminum. The floating carrier holds the complete original finger; the fixed carrier attaches to the jaw. All finger loads pass through the beam. The 1.57 × 3.05 mm active grids sit on its top and bottom faces. The original nail and TPU receive no added sensor layers.",
+      "visual": {"path": "assets/prototypes/c1/c1_assembly.png", "alt": "C1 original ENPIRE finger mounted through separate fixed and floating metal carriers and the transverse strain beam", "caption": "Actual C1.1 CAD assembly. The bulky root is visible; the thin nail and TPU remain unchanged. This is a rendering, not a built specimen."},
+      "placement_visual": {"path": "assets/prototypes/c1/c1_gauge_placement.svg", "alt": "Both faces of the C1 beam with eight labeled gauge grids, two longitudinal stations and width offsets", "caption": "Exact active-grid locations in native XY coordinates. The bottom panel projects through the beam without mirroring. Match the arm labels to the wiring guide; no gauge pockets are machined."},
+      "schematic": ["Original nail + TPU", "Floating carrier + beam", "Two strain bridges", "Measured calibration"],
+      "viewer_model": "c1_assembly",
+      "prototype_cad_group": "c1",
       "resources": [
-        ["Coupon CAD", "Metal bench coupon STEP", "assets/concepts/cad/c1_strain_beam_coupon.step"],
-        ["Coupon CAD", "Metal coupon STL — not a plastic force part", "assets/concepts/cad/c1_strain_beam_coupon.stl"],
-        ["Calculation", "Beam, gain-error and ADC-only-noise screen", "assets/concepts/c1_screen.json"],
-        ["Drawings", "Concept review PDF", "assets/concepts/concept_review.pdf"],
-        ["Source", "Analytical model and generator in the complete source", "downloads/enpire-source.zip"],
-        ["Baseline", "Existing L1 purchased-cell force experiment", "l1.html"]
+        ["Assembly", "Complete C1.1 build and wiring instructions", "build-c1.html"],
+        ["Testing", "Physical calibration, held-out tests and limitations", "c1-testing.html"],
+        ["Materials", "C1 gauges, electronics, metal parts and lab BOM", "downloads/c1_bom.csv"],
+        ["Placement", "Top and bottom gauge-grid placement drawing", "assets/prototypes/c1/c1_gauge_placement.svg"],
+        ["Wiring", "Bridge arms, JA/JB and Pico J1 pin map", "assets/prototypes/c1/c1-wiring.svg"],
+        ["Drawings", "Assembly, exploded view and dimensional review PDF", "downloads/c1_review_drawings.pdf"],
+        ["PCB", "Checked Gerbers and drill files", "downloads/c1_readout_fabrication.zip"],
+        ["PCB source", "Editable checked KiCad readout board", "assets/prototypes/c1/pcb/c1_readout.kicad_pcb"],
+        ["PCB check", "Independent DRC and fabrication receipt", "assets/prototypes/c1/pcb/pcb_checks.json"],
+        ["PCB assembly", "Component placement and actual copper", "assets/prototypes/c1/pcb/c1_readout_assembly.svg"],
+        ["Firmware", "Three-file Pico firmware ZIP", "downloads/c1_firmware.zip"],
+        ["Recording", "Specimen and assembly record", "downloads/c1_specimen.json"],
+        ["Calibration", "Physical hold-manifest template", "downloads/c1_force_trials.json"],
+        ["Structural review", "Convergence, compliance and gauge-placement scenarios", "c1-analysis.html"],
+        ["Structural inputs", "Preserved mesh, solver decks and configurations", "assets/prototypes/c1/c1_structural_inputs.zip"],
+        ["Source", "Editable CAD, PCB, firmware and host software", "downloads/enpire-source.zip"],
+        ["Earlier study", "Preserved longitudinal coupon concept", "assets/concepts/c1_concept.svg"]
       ],
-      "missing": ["3D structural and gauge-area analysis", "Selected gauge footprint, bonding process and complete electronics", "A gripper adapter and controlled installed load path", "Force calibration, motion compensation and durability evidence"],
-      "next_steps": ["Use L1 as the existing purchased-cell force baseline.", "Evaluate the C1 coupon and matched bridges before designing an installed adapter.", "Test moment rejection, thermal drift, unloaded poses and no-contact motions."],
+      "missing": ["Actual drive fit and hardware-clearance verification", "Machined, bonded and wired specimens and first-board measurements", "Measured clamp behavior, low-force noise, force calibration and contact reliability", "Moving-arm compensation, temperature, durability and precision-task evidence"],
+      "next_steps": ["Print fit witnesses, check the installed drive, then machine the force-path parts and bond the eight gauges.", "Populate and electrically test the C1 readout before gradually loading an instrumented bench assembly.", "Calibrate with independent force and lever positions, then test new holds, real nail/TPU contacts and multiple specimens."],
       "related": ["L1", "B2", "NAIL", "FORCE_BUTTON"]
     },
     {

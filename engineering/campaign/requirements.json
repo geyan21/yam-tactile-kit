@@ -47,7 +47,7 @@
     {"id": "L1", "slug": "l1", "development": "existing integrated prototype package", "physical_evidence": "missing"},
     {"id": "B1", "slug": "b1", "development": "existing integrated prototype package", "physical_evidence": "missing"},
     {"id": "B2", "slug": "b2", "development": "B2.1 digital prototype package completed; fabrication, assembly and measurements pending", "physical_evidence": "missing"},
-    {"id": "C1", "slug": "c1", "development": "finish strain bridges, structural checks, fixtures, adapter and acquisition", "physical_evidence": "missing"},
+    {"id": "C1", "slug": "c1", "development": "C1.1 digital prototype package completed; fit, machining, gauge bonding, assembly and measurements pending", "physical_evidence": "missing"},
     {"id": "NAIL", "slug": "rigid-nail", "development": "design a bare-tip base-sensing mechanism, readout and frame interface", "physical_evidence": "missing"},
     {"id": "RECESSED", "slug": "recessed-magnetic", "development": "design revised frame, board protection and full-motion clearance study", "physical_evidence": "missing"},
     {"id": "F1", "slug": "flexible-matrix", "development": "design array stack, artwork, readout and shaped finger integration", "physical_evidence": "missing"},

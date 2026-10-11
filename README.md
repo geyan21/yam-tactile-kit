@@ -6,11 +6,11 @@
 
 The goal is **reliable contact and grip-force feedback through 20 N per finger**, while retaining the thin ENPIRE nail for precise manipulation.
 
-[Build and compare all twelve designs](engineering/docs/BUILD_ALL.md) tracks the full campaign and common test targets. [B2.1](engineering/docs/BUILD_B2.md) now has a routed PCB, checked mounting parts and raw acquisition package. The [architecture study](engineering/docs/ARCHITECTURE.md) retains the earlier B2/C1 concepts and research evidence. C1 still has no completed gripper adapter.
+[Build and compare all twelve designs](engineering/docs/BUILD_ALL.md) tracks the full campaign and common test targets. [B2.1](engineering/docs/BUILD_B2.md) has a routed PCB, checked mounting parts and raw acquisition package. [C1.1](engineering/docs/BUILD_C1.md) adds a metal strain root, eight selected gauges, readout PCB and physical calibration tools. The [architecture study](engineering/docs/ARCHITECTURE.md) retains the earlier B2/C1 concepts and research evidence.
 
 **Concrete B1 prototype recommendation:** five MLX90393SLW-ABA-011 heads fixed beside four magnets embedded in the bending TPU, plus two thin N0 pressure-film pads on the object-facing nail prongs. The [sensor placement guide](engineering/docs/SENSORS.md) labels every head, magnet and pad and supplies exact coordinates. Physical qualification remains pending.
 
-Four separate prototype packages are supplied:
+Five separate prototype packages are supplied:
 
 | Prototype | Design | First measurement |
 |---|---|---|
@@ -18,14 +18,15 @@ Four separate prototype packages are supplied:
 | L1 root normal force | A purchased TAL220B cell between the original finger and two aluminum carriers | Held-out off-center loads, followed by an integrated-finger test using the same calibration slope |
 | B1 magnetic bending insert | Four magnets in the TPU, five fixed magnetic heads, new side spine and custom PCB; original hard frame and thin nail retained | Original-vs-B1 bending, magnet retention, interference, then physical force calibration |
 | B2 consolidated magnetic PCB | Same sensor/magnet poses on one checked PCB with two locating spacers, a removable backer and two N0 nail pads | Installed fit, first-board operation, then matched B1/B2 contact, force and assembly-time tests |
+| C1 differential-strain root | Transverse aluminum beam, eight CEA-13-062UWA-350 gauges, fixed/floating carriers and dual-ADS1232 readout | Actual drive fit, bonded-gauge operation, real joint compliance, then independent force/lever calibration and validation |
 
-The package contains 32 checked STEP/STL solids, including four component references; R1 electrode patterns; carrier/fixture drawings; B1 and B2 editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. R1/L1/B1 and the earlier concept snapshots remain preserved. B2's new package is separate under `engineering/prototypes/b2`.
+The package contains 41 checked STEP/STL solids, including four component references; R1 electrode patterns; carrier/fixture drawings; B1/B2/C1 editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. R1/L1/B1 and the earlier concept snapshots remain preserved. The later packages are separate under `engineering/prototypes/`.
 
 **Status: digital design and software checks completed; physical prototype assembly and validation pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
 
 For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md), [PCB/wiring/code](engineering/docs/B1_ELECTRONICS.md), and [bending and force tests](engineering/docs/B1_TESTING.md). B1 raw magnetic data are not calibrated force; optional R1 nail cells supply hard-tip contact coverage.
 
-For the consolidated version, use [the complete B2 build guide](engineering/docs/BUILD_B2.md). Its two nail cells are enabled in the supplied firmware. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the eight remaining designs and the physical evidence still required.
+For the consolidated version, use [the complete B2 build guide](engineering/docs/BUILD_B2.md). Its two nail cells are enabled in the supplied firmware. For the strain-root alternative, use [C1 assembly](engineering/docs/BUILD_C1.md), [physical tests](engineering/docs/C1_TESTING.md) and [the numerical review](engineering/docs/C1_ANALYSIS.md). The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the seven remaining designs and the physical evidence still required.
 
 ## Start here
 

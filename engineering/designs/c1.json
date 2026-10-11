@@ -1,0 +1,132 @@
+{
+  "revision": "C1.1",
+  "status": "development; no physical specimen or force qualification",
+  "architecture": "Transverse constant-section root beam with two full axial-strain bridges; all finger loads enter through its floating end",
+  "requested_per_finger_force_n": 20,
+  "force_axis_native": [0, 0, 1],
+  "beam": {
+    "material": "6061-T6 aluminum with supplier certificate",
+    "youngs_modulus_mpa_assumed": 69000,
+    "poisson_ratio_assumed": 0.33,
+    "active_length_mm": 33,
+    "width_mm": 22,
+    "thickness_mm": 14,
+    "end_clamp_length_mm": 10,
+    "axis_native": [1, 0, 0],
+    "fixed_boundary_native_x_mm": -25.3,
+    "center_native_y_mm": -21.5,
+    "bottom_native_z_mm": 30.5,
+    "end_hole_diameter_mm": 4.5,
+    "end_hole_y_offsets_mm": [-6, 6],
+    "gauge_stations_mm_from_fixed_boundary": [8.5, 24.5],
+    "gauge_y_offsets_mm": [-6.29, 6.29],
+    "notes": [
+      "The transverse orientation converts the long-finger normal-load moment mainly into beam torsion; two symmetric gauges on each face aim to cancel torsional warping in each bridge.",
+      "Normal force is recovered from the difference of calibrated bending measurements, with all loads entering beyond both stations through the floating carrier.",
+      "Three-dimensional strain, torsion, fixture compliance, cross-axis response and physical moment rejection require verification.",
+      "Gauge width positions approximate two-point cross-section averaging, accounting for the finite 3.05 mm grid width; robustness still requires the three-dimensional screen and measurement.",
+      "The earlier 18 mm active longitudinal coupon is retained in engineering/concepts; it is not this revision."
+    ]
+  },
+  "gauges": {
+    "selected_part": "CEA-13-062UWA-350",
+    "manufacturer": "Micro-Measurements",
+    "quantity": 8,
+    "bridges": 2,
+    "resistance_ohm": 350,
+    "gauge_factor_assumed": 2.0,
+    "grid_length_mm": 1.57,
+    "grid_width_mm": 3.05,
+    "backing_length_mm": 7.9,
+    "backing_width_mm": 4.8,
+    "conservative_backing_extent_each_side_of_grid_center_mm": 7.9,
+    "excitation_v": 5.0,
+    "adhesive_for_initial_bench_build": "Micro-Measurements M-Bond 200; follow current manufacturer preparation and cure instructions",
+    "surface_protection_candidate": "Micro-Measurements M-Coat A; characterize its effect and follow manufacturer instructions",
+    "bridge_wiring": {
+      "R1": "top face, negative local width position; E+ to S+",
+      "R2": "bottom face, same negative local width position; S+ to E-",
+      "R3": "bottom face, positive local width position; E+ to S-",
+      "R4": "top face, same positive local width position; S- to E-"
+    },
+    "alignment": "Grid long axes parallel to the beam axis. Align the active grid center, not the center of the asymmetric backing. Point station-1 tabs toward the fixed end and station-2 tabs toward the floating end.",
+    "notes": [
+      "S-T-C 13 is selected for aluminum; actual gauge factor and thermal-output data come from the purchased lot.",
+      "The conservative envelope permits the complete 7.9 mm backing on either side of the grid center, without assuming an undocumented grid-to-backing offset.",
+      "The gauge backing is 7.9 by 4.8 mm; the larger CAD keepout is an assembly allowance, not the physical sensor size.",
+      "No bonded-gauge sensitivity, drift, creep or fatigue performance has been measured."
+    ],
+    "sources": [
+      "https://docs.micro-measurements.com/?id=2512",
+      "https://strainblog.micro-measurements.com/node/152",
+      "https://micro-measurements.com/node/418"
+    ]
+  },
+  "mount": {
+    "material": "6061-T6 aluminum for force-path parts",
+    "printed_material": "PETG fit witnesses only",
+    "finger_translation_native_mm": [0, -18, 0],
+    "fixed_root_plate_thickness_mm": 6,
+    "floating_root_plate_thickness_mm": 6,
+    "root_key_clearance_mm": 0.2,
+    "m3_clearance_mm": 3.4,
+    "m3_tap_drill_mm": 2.5,
+    "m3_rear_hardware_projection_mm": 4.5,
+    "m3_rear_hardware_diameter_mm": 7,
+    "fixed_m3_head": "90-degree flat head with measured head diameter at most 6.0 mm, seated flush",
+    "fixed_m3_countersink_diameter_mm": 6.3,
+    "fixed_bridge_depth_mm": 11.5,
+    "floating_bridge_depth_mm": 10,
+    "floating_bridge_x_min_mm": 4.5,
+    "root_bridge_floor_z_mm": 0,
+    "floating_m3_relief_diameter_mm": 8,
+    "floating_m3_relief_end_clearance_mm": 0.5,
+    "shoe_thickness_mm": 12,
+    "root_bridge_top_z_mm": 27.8,
+    "clamp_cap_thickness_mm": 3,
+    "m4_tap_drill_mm": 3.3,
+    "m4_clearance_mm": 4.5,
+    "m4_screw": "M4 x 25, fully threaded, with measured 1.0 mm washer thickness",
+    "m4_washer_thickness_mm": 1,
+    "m4_head_height_mm": 4,
+    "m4_head_washer_diameter_mm": 8,
+    "notes": [
+      "The fixed and floating carriers must never touch across the active load path.",
+      "The printed pieces are for fit review; machine the beam, carriers and clamp caps from the specified metal before force tests.",
+      "Check actual drive housing and fastener engagement. No drive-specific fit or joint torque qualification is established.",
+      "The fixed clearance version uses flush flat-head M3 screws; ordinary protruding socket heads would collide with the floating-side rear hardware at this reach extension.",
+      "All cable routing must retain slack and avoid a parallel force path."
+    ]
+  },
+  "readout": {
+    "converters": 2,
+    "part": "ADS1232IPWR",
+    "avdd_v": 5.0,
+    "dvdd_v": 3.3,
+    "gain": 128,
+    "nominal_data_rate_sps": 80,
+    "clock": "Common 6.25 MHz RP2040 PIO clock and shared power-down control; calculated conversion rate 101.725 Hz",
+    "reference": "Each bridge excitation is also its ADC reference",
+    "configuration_file": "c1_electronics.json",
+    "status": "prototype electronics; physical validation pending",
+    "source": "https://www.ti.com/lit/ds/symlink/ads1232.pdf"
+  },
+  "structural_screen": {
+    "evidence_kind": "calculation_only",
+    "global_mesh_sizes_mm": [2.0, 1.5],
+    "gauge_patch_mesh_sizes_mm": [0.7, 0.5],
+    "force_equivalent_convergence_limit_n": 0.05,
+    "gauge_strain_convergence_limit": 0.0000001,
+    "unit_loads": ["Fx", "Fy", "Fz", "Mx", "My", "Mz"],
+    "clamp_model": "Bonded beam/carrier/cap interfaces, fixed original-jaw contact face and rigid floating finger interface; actual fastener preload, friction and slip must be measured",
+    "provisional_added_tip_motion_limit_mm": 0.1,
+    "required_checks": [
+      "force and moment reaction equilibrium",
+      "mesh convergence of displacement and gauge-area averages",
+      "normal-force recovery and independent end-moment rejection",
+      "torsion and other cross-axis contamination",
+      "gauge position and gain mismatch sensitivity",
+      "installed carrier geometry and load-path separation"
+    ]
+  }
+}

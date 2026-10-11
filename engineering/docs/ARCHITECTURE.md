@@ -6,7 +6,7 @@
 
 The recommendation is based on primary literature, an audit of our actual B1 parts, and the new calculations below. **No B1, B2 or C1 hardware has been qualified.** “Better” here means a promising design change with a stated benefit and a test that could reject it.
 
-**Build status:** [B2.1 now has a separate prototype package](BUILD_B2.md) with a routed PCB, clean independent DRC, checked mounting CAD and raw acquisition. Its physical tests remain pending. The earlier B2 figures below are retained concept studies. The [all-twelve-design campaign](BUILD_ALL.md) tracks the current work and common evaluation targets.
+**Build status:** [B2.1 has a separate prototype package](BUILD_B2.md) with a routed PCB, clean independent DRC, checked mounting CAD and raw acquisition. [C1.1 now has its own metal adapter, selected gauges, checked readout and software](BUILD_C1.md). Both need physical assembly and tests. The earlier B2/C1 figures below are retained concept studies. The [all-twelve-design campaign](BUILD_ALL.md) tracks the current work and common evaluation targets.
 
 ## What the magnetic evidence actually supports
 
@@ -97,9 +97,18 @@ Keep the original B1 plane for the first B2 packaging comparison. Investigate a 
 
 ## C1: a magnet-free way to measure whole-finger force
 
-[Open the separate C1 page: sensing principle, coupon files and limits](https://geyan21.github.io/yam-tactile-kit/c1.html).
+[Open the separate C1 page: selected gauges, installed adapter, readout and build files](https://geyan21.github.io/yam-tactile-kit/c1.html).
 
 **C1 puts force sensing in a stiff metal root element, while leaving the thin nail and compliant contact surface passive.** All nail and TPU loads must pass through that element. It could avoid magnetic field artifacts and the need to place a pressure laminate on the nail for normal-force measurement.
+
+**Current C1.1:** eight CEA-13-062UWA-350 gauges sit at two stations on a
+33 × 22 × 14 mm active transverse beam. Machined fixed/floating carriers attach
+it to the source-matched root. A dual-ADS1232 readout supplies raw measurements
+for physical calibration. The [digital engineering review](C1_ANALYSIS.md)
+reports the bonded-joint model's 0.094 mm added tip motion at 20 N and its
+limits. Use [BUILD_C1.md](BUILD_C1.md) and [C1_TESTING.md](C1_TESTING.md) for the
+current build. **The longitudinal coupon discussion below is historical; its
+dimensions and calculated signals are not C1.1's manufacturing specification.**
 
 ![C1 differential strain coupon and stiffness calculation](../concepts/c1_concept.svg)
 
@@ -151,7 +160,7 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 
 The active request is to build all twelve designs and find which are good for
 the actual tasks. Follow [the common campaign](BUILD_ALL.md). R1, L1, B1 and
-B2.1 have prototype files; the remaining eight approaches need the listed
+B2.1 and C1.1 have prototype files; the remaining seven approaches need the listed
 development work. Each will keep its own design page, build package and
 physical evidence.
 

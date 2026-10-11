@@ -1,0 +1,24 @@
+{
+  "schema": "yam-c1-force-trials/1",
+  "evidence_kind": "unmeasured_template",
+  "phase": "train",
+  "specimen": "C1-REPLACE-ME",
+  "geometry_sha256": null,
+  "reference_id": null,
+  "reference_uncertainty_n": null,
+  "transfer_experiment": false,
+  "required_condition_ids": [],
+  "required_force_levels_n": [0, 0.2, 0.5, 1, 2, 5, 10, 15, 20],
+  "minimum_holds_per_level": 3,
+  "instructions": "Fill from physical stationary holds and their recording receipts. Use a separate test manifest and new recordings after freezing calibration. Example row is not a measurement.",
+  "trials": [
+    {
+      "id": "REPLACE",
+      "condition_id": "REPLACE",
+      "recording": "recordings/REPLACE.jsonl",
+      "recording_sha256": null,
+      "reference_before_n": null,
+      "reference_after_n": null
+    }
+  ]
+}

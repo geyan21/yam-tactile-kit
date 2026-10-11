@@ -37,6 +37,9 @@ DOCS=[
     ("B1_ELECTRONICS","b1-electronics","B1 wiring & code"),
     ("B1_TESTING","b1-testing","B1 bending & force tests"),
     ("BUILD_B2","build-b2","Build B2 consolidated PCB"),
+    ("BUILD_C1","build-c1","Build C1 strain root"),
+    ("C1_TESTING","c1-testing","C1 calibration & tests"),
+    ("C1_ANALYSIS","c1-analysis","C1 digital results"),
 ]
 
 
@@ -173,6 +176,12 @@ def main():
             (ROOT/"engineering/prototypes/b2/b2_review_drawings.pdf","b2_review_drawings.pdf"),
             (ROOT/"engineering/prototypes/b2/b2_firmware.zip","b2_firmware.zip"),
             (ROOT/"engineering/prototypes/b2/pcb/b2_main_fabrication.zip","b2_main_fabrication.zip"),
+            (ROOT/"engineering/prototypes/c1/c1_bom.csv","c1_bom.csv"),
+            (ROOT/"engineering/prototypes/c1/c1_review_drawings.pdf","c1_review_drawings.pdf"),
+            (ROOT/"engineering/prototypes/c1/c1_firmware.zip","c1_firmware.zip"),
+            (ROOT/"engineering/prototypes/c1/pcb/c1_readout_fabrication.zip","c1_readout_fabrication.zip"),
+            (ROOT/"engineering/templates/c1_specimen.json","c1_specimen.json"),
+            (ROOT/"engineering/templates/c1_force_trials.json","c1_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())

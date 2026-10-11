@@ -9,7 +9,7 @@ document.getElementById("page").addEventListener("load",async()=>{
     await pause(800);
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
-    check("all R1, L1, B1 and B2 STEP/STL links present",d.querySelectorAll("#parts-table a").length===64);
+    check("all R1, L1, B1, B2 and C1 STEP/STL links present",d.querySelectorAll("#parts-table a").length===82);
     check("all twelve designs are listed separately",d.querySelectorAll("#candidate-table tr").length===12);
     check("scalability study is reachable",d.querySelector('a[href="architecture.html"]')!==null);
     check("design directory is prominent and candidates have their own pages",d.querySelector('.hero a[href="designs.html"]')&&d.querySelectorAll("#candidate-table a").length===12);
@@ -44,6 +44,8 @@ document.getElementById("page").addEventListener("load",async()=>{
     check("B1 fabrication and build guide reachable",d.querySelector('a[href="downloads/b1_head_fabrication.zip"]')&&d.querySelector('a[href="build-b1.html"]'));
     check("B2 consolidated assembly renders",inspect("b2_assembly"));
     check("B2 distinct board, backer, spacer, IC and nail layers exist",["pcb","backer","spacer","electronics","nail"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
+    check("C1 mounted strain assembly renders",inspect("c1_assembly"));
+    check("C1 fixed/floating load path and gauge locations have separate controls",["c1fixed","c1floating","c1beam","c1clamp","c1gauge"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
     check("all-design campaign is reachable",d.querySelector('.hero a[href="build-all.html"]')!==null);
     const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
     force.value="10";force.dispatchEvent(new w.Event("input"));
@@ -67,6 +69,15 @@ document.getElementById("page").addEventListener("load",async()=>{
                    {contact_id:"SOFTWARE-ONLY",reference_n:20,predicted_n:20.1}]},"software test fixture — no hardware evidence");
     check("L1 measured-report format renders using software-only inputs",d.querySelectorAll("#result-plot circle").length===2);
     check("negative zero error is visible within plot",Array.from(d.querySelectorAll("#result-plot circle")).every(dot=>Number(dot.getAttribute("cy"))<=305));
+    let c1Rejected=false;
+    try{w.EngineeringUI.renderReport({schema:"yam-c1-static-validation/1",evidence_kind:"simulation_scenarios",trials:[]});}catch(_){c1Rejected=true;}
+    check("simulated C1 force report is rejected",c1Rejected);
+    w.EngineeringUI.renderReport({schema:"yam-c1-static-validation/1",evidence_kind:"physical",
+      trials:[{id:"SOFTWARE_ONLY_1",condition_id:"fixture",available:true,reference_n:20,predicted_n:19.9},
+              {id:"SOFTWARE_ONLY_2",condition_id:"fixture",available:false,reference_n:.2}]},
+      "software test fixture — no hardware evidence");
+    check("C1 hold means render with unavailable holds preserved",d.querySelectorAll("#result-plot circle").length===1&&d.getElementById("result-metrics").textContent.includes("1 unavailable"));
+    check("C1 preview names its static-only scope",d.getElementById("result-plot").dataset.reportKind==="c1-static"&&d.getElementById("result-metrics").textContent.includes("dynamic force and contact reliability remain unqualified"));
     let contactRejected=false;
     try{w.EngineeringUI.renderReport({schema:"yam-contact-validation/1",evidence_kind:"synthetic",regions:[]});}catch(_){contactRejected=true;}
     check("synthetic contact report is rejected",contactRejected);

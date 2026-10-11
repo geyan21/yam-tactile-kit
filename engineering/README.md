@@ -4,9 +4,9 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Four have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, and **B2.1** consolidated magnetic electronics with a removable support. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Five have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, and **C1.1** a custom strain-sensing root. All require physical assembly and testing.
 
-**Available:** editable CAD generators; 32 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; four BOMs; B1/B2 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1 force analysis; material recipes; and student test plans.
+**Available:** editable CAD generators; 41 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; five BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1 force-analysis tools; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -22,7 +22,7 @@ For B1, follow [assembly](docs/BUILD_B1.md), [electronics](docs/B1_ELECTRONICS.m
 
 Start with [sensor choice and placement](docs/SENSORS.md) for the exact IC, magnets, two nail pads, and their labeled locations. Its SVG, coordinate files and page are generated from the unchanged release by `scripts/explain_sensor_placement.py`; edit `templates/sensor_guide.md` for the explanatory text, then regenerate with the CAD environment's Python.
 
-The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` retains the earlier B2/C1 explorations; `prototypes/b2/` contains the later B2.1 build package. Both are checked independently of the preserved R1/L1/B1 release. `research/` contains sources and scale-validation plans; `campaign/` preserves the full twelve-design objective and comparison requirements.
+The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternatives. `concepts/` retains the earlier B2/C1 explorations; `prototypes/b2/` and `prototypes/c1/` contain their later build packages. These are checked independently of the preserved R1/L1/B1 release. `research/` contains sources and scale-validation plans; `campaign/` preserves the full twelve-design objective and comparison requirements.
 
 ## File map
 
@@ -126,3 +126,56 @@ check keeps its own timestamped directory, including failed attempts.
 result. `prototype_cad.py` verifies solids and exports. The separate B2 snapshot
 contains fabrication files, firmware, visualizations and their input hashes.
 These are digital checks; the physical comparison remains open.
+
+## Reproduce C1.1 separately
+
+Follow [BUILD_C1.md](docs/BUILD_C1.md) for the physical assembly and
+[C1_TESTING.md](docs/C1_TESTING.md) for stationary-hold calibration. Read
+[C1_ANALYSIS.md](docs/C1_ANALYSIS.md) for the structural model's limits.
+
+After collecting the geometry and preparing the CAD and KiCad tools:
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_c1_parts.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_c1_pcb.py
+/usr/bin/python3 engineering/scripts/check_prototype_pcb.py \
+  build/engineering/prototypes/c1/pcb --name c1_readout --export
+/usr/bin/python3 engineering/scripts/prepare_c1_fea.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/verify_structural_numerics.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/run_c1_fea.py \
+  --mesh-mm 1.5 --gauge-mesh-mm 0.7 --solve-timeout 600
+build/engineering/tools/cad-venv/bin/python engineering/scripts/run_c1_fea.py \
+  --mesh-mm 1.5 --gauge-mesh-mm 0.5 --solve-timeout 600
+```
+
+The structural tool helper downloads official Gmsh and CalculiX builds and a
+required runtime into the project cache. It records their hashes and uses the
+runtime only in its solver subprocess. The models use one CPU and enforce a
+400,000-displacement-degree-of-freedom mesh limit. Runs and input files are
+preserved in separate timestamped directories.
+
+Select the two completed run directories from their `latest.json` files under
+`build/engineering/prototypes/c1/fea/mesh_1p5_gauge_0p7/` and
+`mesh_1p5_gauge_0p5/`. Replace `COARSE_RUN` and `FINE_RUN` below with those
+actual paths:
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/summarize_c1_analysis.py \
+  --coarse COARSE_RUN --fine FINE_RUN
+build/engineering/tools/cad-venv/bin/python engineering/scripts/assess_c1_tolerances.py \
+  FINE_RUN --realizations 16
+/usr/bin/python3 engineering/scripts/make_c1_packet.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/draw_c1.py
+/usr/bin/python3 engineering/scripts/freeze_c1_prototype.py \
+  --tolerance-report FINE_RUN/tolerance_scenarios.json
+/usr/bin/python3 -m unittest discover -s engineering/tests -p test_c1.py -v
+/usr/bin/python3 engineering/scripts/build_site.py
+/usr/bin/python3 engineering/scripts/check_site.py
+```
+
+Use an explicit interpreter path appropriate to the checkout. The freezer
+requires current CAD and PCB hashes, clean independent DRC, numerical
+verification, structural convergence and the declared motion screen. It does
+not manufacture a specimen or qualify force accuracy. Full solver input decks
+are included in `prototypes/c1/c1_structural_inputs.zip`; large raw solver
+outputs remain preserved locally and can be regenerated.

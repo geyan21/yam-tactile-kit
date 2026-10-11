@@ -121,6 +121,10 @@ def design_content(item,catalog,viewer=True):
         visual_html=f'<figure class="design-main-figure"><a href="{esc(visual["path"])}"><img src="{esc(visual["path"])}" alt="{esc(visual["alt"])}"></a><figcaption>{esc(visual["caption"])} {link("Open full size ↗",visual["path"])}</figcaption></figure>'
     else:
         visual_html=f'<figure class="design-main-figure"><a href="assets/design-schematics/{key}.svg"><img src="assets/design-schematics/{key}.svg" alt="{esc(item["title"])} functional diagram"></a><figcaption>Conceptual sensing path. No ENPIRE placement dimensions are finalized for this approach. {link("Open full size ↗","assets/design-schematics/"+key+".svg")}</figcaption></figure>'
+    placement_html=""
+    placement=item.get("placement_visual")
+    if placement:
+        placement_html=f'<figure class="design-main-figure"><a href="{esc(placement["path"])}"><img src="{esc(placement["path"])}" alt="{esc(placement["alt"])}" loading="lazy"></a><figcaption>{esc(placement["caption"])} {link("Open full size ↗",placement["path"])}</figcaption></figure>'
     sensors="".join("<tr>"+"".join(f'<td data-label="{label}">{esc(cell)}</td>' for label,cell in zip(("Part / quantity","Sensor choice","Placement"),row))+"</tr>" for row in item["sensors"])
     resources="".join(f'<tr><td>{esc(kind)}</td><td>{link(label,href)}</td></tr>' for kind,label,href in item["resources"])
     missing="".join(f"<li>{esc(value)}</li>" for value in item["missing"])
@@ -149,7 +153,7 @@ def design_content(item,catalog,viewer=True):
 <div><h2>Main tradeoff</h2><p>{esc(item["tradeoff"])}</p></div></div>
 <section id="{key}-sensors" class="design-section"><h2>{sensor_heading}</h2>
 <p>{esc(item["placement"])}</p><div class="table-scroll"><table class="design-sensor-table">
-<thead><tr><th>Part / quantity</th><th>Sensor choice</th><th>Placement</th></tr></thead><tbody>{sensors}</tbody></table></div>
+<thead><tr><th>Part / quantity</th><th>Sensor choice</th><th>Placement</th></tr></thead><tbody>{sensors}</tbody></table></div>{placement_html}
 {"<figure class='design-flow'><a href='assets/design-schematics/"+key+".svg'><img src='assets/design-schematics/"+key+".svg' alt='"+esc(item["title"])+" sensing principle'></a></figure>" if visual else ""}</section>
 {viewer_html}
 <section id="{key}-files" class="design-section"><h2>Available files and instructions</h2>

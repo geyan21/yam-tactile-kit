@@ -1,0 +1,42 @@
+category,quantity_per_finger_or_shared,item,specification,location,reference,notes
+Electronics,2,0.1ohm 1% 1206,0.1ohm 1% 1206,RASH; RBSH,PCB source and pin/net CSV,
+Electronics,1,100k 0402,100k 0402,RPDWN,PCB source and pin/net CSV,
+Electronics,2,100k 1% 0402,100k 1% 0402,RASEL; RBSEL,PCB source and pin/net CSV,
+Electronics,4,100nF 16V X7R 0402,100nF 16V X7R 0402,CAMON; CASW; CBMON; CBSW,PCB source and pin/net CSV,Use at least 16 V rating.
+Electronics,8,100nF X7R 0402,100nF X7R 0402,CAPGA; CAREF; CAAV; CADV; CBPGA; CBREF; CBAV; CBDV,PCB source and pin/net CSV,Use at least 16 V rating.
+Electronics,4,100ohm 1% 0402,100ohm 1% 0402,RAP; RAN; RBP; RBN,PCB source and pin/net CSV,
+Electronics,4,10M 1% 0402,10M 1% 0402,RABP; RABN; RBBP; RBBN,PCB source and pin/net CSV,
+Electronics,2,10nF C0G 0402,10nF C0G 0402,CADIF; CBDIF,PCB source and pin/net CSV,Use C0G dielectric and at least 10 V rating for the differential input capacitors.
+Electronics,2,10ohm 0805,10ohm 0805,RASUP; RBSUP,PCB source and pin/net CSV,
+Electronics,3,10uF 10V X7R 0805,10uF 10V X7R 0805,CASUP; CBSUP; C5,PCB source and pin/net CSV,
+Electronics,2,1M 0.1% 0402,1M 0.1% 0402,RACAL; RBCAL,PCB source and pin/net CSV,
+Electronics,1,1uF 10V X7R 0402,1uF 10V X7R 0402,C3,PCB source and pin/net CSV,
+Electronics,1,2.54mm through-hole header; 16 pins,2.54mm through-hole header; 16 pins,J1,PCB source and pin/net CSV,
+Electronics,2,2.54mm through-hole header; 4 pins,2.54mm through-hole header; 4 pins,JA; JB,PCB source and pin/net CSV,
+Electronics,4,33ohm 0402,33ohm 0402,RAOUT; RBOUT; RCLK_A; RCLK_B,PCB source and pin/net CSV,
+Electronics,2,4.7k 0402,4.7k 0402,RSDA; RSCL,PCB source and pin/net CSV,
+Electronics,2,ADS1232IPWR,ADS1232IPWR,UA; UB,https://www.ti.com/lit/ds/symlink/ads1232.pdf,
+Electronics,2,INA219AIDR,INA219AIDR,UAMON; UBMON,https://www.ti.com/lit/ds/symlink/ina219.pdf,
+Electronics,2,TMUX1101DBVR,TMUX1101DBVR,UASW; UBSW,https://www.ti.com/lit/ds/symlink/tmux1101.pdf,
+PCB,1,C1 readout board,82 x 64 x 1.6 mm; four layers; checked C1 Gerbers/drills,Wrist/base,c1_readout_fabrication.zip,
+Controller,1,Raspberry Pi Pico,RP2040; dedicated to the sensor readout,Wrist/base,c1_firmware.zip,
+Gauge,8,Axial foil gauges,CEA-13-062UWA-350; retain lot gauge factor and thermal data,Four on each beam face,https://docs.micro-measurements.com/?id=2512,Grid centers and orientation are in the C1 placement file.
+Bonding,1 shared,Gauge adhesive kit,M-Bond 200 for initial laboratory specimens,Prepared beam faces,https://micro-measurements.com/node/418,Use manufacturer preparation/cure instructions; long-term performance must be characterized.
+Protection,1 shared,Gauge coating,M-Coat A candidate; record coating and cure,Bonded gauges,Micro-Measurements instructions,Test the complete protected assembly.
+Mechanical,choose 1,Fixed carrier,C1 clearance/countersink OR M3 tap-drill variant,Original jaw interface,C1 STEP files,The choice depends on the actual mating jaw.
+Mechanical,1,c1_strain_beam,6061-T6 aluminum for force-path parts,Transverse constant-section beam. Bond eight foil gauges at the specified grid centers.,cad/c1_strain_beam.step,Metal force-path parts; printed copies are fit witnesses only.
+Mechanical,1,c1_floating_finger_carrier,6061-T6 aluminum for force-path parts,Carries the original finger with 18 mm reach extension; connects only to the beam floating end.,cad/c1_floating_finger_carrier.step,Metal force-path parts; printed copies are fit witnesses only.
+Mechanical,1,c1_fixed_end_clamp,6061-T6 aluminum for force-path parts,Metal clamp cap for the fixed beam end.,cad/c1_fixed_end_clamp.step,Metal force-path parts; printed copies are fit witnesses only.
+Mechanical,1,c1_floating_end_clamp,6061-T6 aluminum for force-path parts,Metal clamp cap for the floating beam end.,cad/c1_floating_end_clamp.step,Metal force-path parts; printed copies are fit witnesses only.
+Fixture,1 shared,c1_grid_alignment_stencil,PETG marking jig,Removable marking jig. Align active grid centers; use on both beam faces and remove before bonding.,cad/c1_grid_alignment_stencil.step,
+Fixture,1 shared,c1_bench_receiver,6061-T6 aluminum for force-path parts,"Independent bench receiver for the fixed carrier; M6 stand holes on a 50 mm square, M3 finger interface tapped.",cad/c1_bench_receiver.step,Metal force-path parts; printed copies are fit witnesses only.
+Fixture,1 shared,c1_bench_calibration_arm,6061-T6 aluminum for force-path parts,Metal arm for independent normal-force and off-center calibration. Not part of the production finger.,cad/c1_bench_calibration_arm.step,Metal force-path parts; printed copies are fit witnesses only.
+Fastener,4,Beam clamp screws,M4 x 25 fully threaded socket screws,Two at each beam end,C1 assembly drawing,Verify actual engagement and no bottoming.
+Fastener,8,Small-OD flat washers,M4 DIN 433: approximately 4.3 ID x 8 OD x 0.5 mm,Two stacked per M4 clamp screw,https://www.accu.co.uk/metric-flat-washers/404898-HRDW-M4-A2,Measure the combined 1.0 mm stack; this matches the reserved envelope.
+Fastener,2,Fixed mount screws,"M3 90-degree flat heads, head diameter at most 6.0 mm; length from actual mating thread",Fixed clearance/countersink carrier,C1 build guide,Tap-drill variant instead uses the appropriate mating-jaw fasteners.
+Fastener,2 sets,Floating finger fasteners,M3 hardware within 7 mm diameter and 4.5 mm rear projection,Original finger to floating carrier,C1 build guide,Select actual lengths from stack; preserve source finger retention.
+Cable,8 conductors,Bridge cabling,Two four-wire shielded cables; twisted excitation and signal pairs,Beam to readout,C1 wiring map,Measure excitation-loop resistance; maximum 2 ohms. Keep slack out of the force path.
+Cable,1,Pico harness,Short 16-way 2.54 mm connection with documented pin mapping,Pico to readout J1,C1 wiring map,Keep clock wiring short and verify waveforms.
+Fixture,1 shared,Force reference,At least 25 N capacity; documented uncertainty at most 0.05 N,Bench,Campaign requirements,L1 is not an independent reference until separately qualified.
+Fixture,1 shared,Displacement measurement,Resolution suitable for a 0.1 mm added-motion screen,Nail and adapter,Campaign requirements,Measure the actual installed assembly.
+Electrical fixture,8 shared,Dummy-bridge resistors,Matched 348 or 350 ohm resistors; four per bridge,JA/JB during board-only checks,C1 build guide,Record as electrical_dummy; never use dummy bridges as physical force-calibration data.

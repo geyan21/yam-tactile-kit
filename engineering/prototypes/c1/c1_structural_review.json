@@ -1,0 +1,244 @@
+{
+  "schema": "yam-c1-structural-review/1",
+  "evidence_kind": "linear_FEA_screen_only",
+  "physical_specimens_tested": 0,
+  "revision": "C1.1",
+  "convergence": {
+    "maximum_gauge_strain_change": 2.2263153618135123e-08,
+    "maximum_equivalent_force_change_n": 0.01750386060232096,
+    "maximum_normal_motion_change_mm": 3.1152491195091114e-05,
+    "relative_motion_change": 0.00033139994805495,
+    "gauge_limit": 1e-07,
+    "force_limit_n": 0.05,
+    "motion_relative_limit": 0.01,
+    "passed": true
+  },
+  "max_added_normal_displacement_mm_at_20n": 0.09400270391691692,
+  "provisional_motion_target_mm": 0.1,
+  "motion_screen_met": true,
+  "max_force_error_using_ideal_beam_weights_n": 0.4405353603094504,
+  "max_force_error_after_simulated_fz_my_identification_n": 0.1438450458332099,
+  "max_integration_point_von_mises_mpa": 28.31281514042185,
+  "cases_20n": [
+    {
+      "id": "nail_1",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -2138.9552,
+        23.920649129000005,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        2.1389185407873802e-05,
+        -4.211088073195602e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.680257998386757,
+      "force_from_simulation_fz_my_weights_n": 20.14384504583321,
+      "added_tip_displacement_mm": [
+        0.0013174946169074659,
+        -0.027247481683827686,
+        0.09292915975115422
+      ],
+      "added_normal_displacement_mm": 0.09292915975115422,
+      "max_integration_point_von_mises_mpa": 28.31281514042185,
+      "p99_integration_point_von_mises_mpa": 5.505486794889516
+    },
+    {
+      "id": "nail_2",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -2138.9552,
+        -116.079350871,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        4.931902063217192e-05,
+        -1.4117768001571007e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.660646717312776,
+      "force_from_simulation_fz_my_weights_n": 20.14384504583321,
+      "added_tip_displacement_mm": [
+        0.0033837172869395317,
+        -0.027324197144523103,
+        0.09400270391691692
+      ],
+      "added_normal_displacement_mm": 0.09400270391691692,
+      "max_integration_point_von_mises_mpa": 28.251560905864814,
+      "p99_integration_point_von_mises_mpa": 5.55077530455565
+    },
+    {
+      "id": "nail_3",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1949.19404,
+        93.920649129,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        7.392131499723896e-06,
+        -5.6099387138827736e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.677608914053113,
+      "force_from_simulation_fz_my_weights_n": 20.131083580442272,
+      "added_tip_displacement_mm": [
+        -2.0574770260731157e-05,
+        -0.024574039254242612,
+        0.07837024583688289
+      ],
+      "added_normal_displacement_mm": 0.07837024583688289,
+      "max_integration_point_von_mises_mpa": 25.914702373446097,
+      "p99_integration_point_von_mises_mpa": 5.061285200643676
+    },
+    {
+      "id": "nail_4",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1949.19404,
+        -186.079350871,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        6.325180194832014e-05,
+        -1.1316167805771214e-07
+      ],
+      "force_from_ideal_beam_screen_n": 19.638386351905154,
+      "force_from_simulation_fz_my_weights_n": 20.13108358044228,
+      "added_tip_displacement_mm": [
+        0.004054790031766103,
+        -0.024743251976293054,
+        0.08037358478398625
+      ],
+      "added_normal_displacement_mm": 0.08037358478398625,
+      "max_integration_point_von_mises_mpa": 25.78109523517863,
+      "p99_integration_point_von_mises_mpa": 5.1536925821280155
+    },
+    {
+      "id": "tpu_1",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1505.3041200000002,
+        -54.21627087099999,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        3.687009935944069e-05,
+        -2.6460460213882903e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.627723675762315,
+      "force_from_simulation_fz_my_weights_n": 20.1012319192727,
+      "added_tip_displacement_mm": [
+        0.0013252790938586912,
+        -0.017422050547972398,
+        0.05016136413193827
+      ],
+      "added_normal_displacement_mm": 0.05016136413193827,
+      "max_integration_point_von_mises_mpa": 20.108032648591358,
+      "p99_integration_point_von_mises_mpa": 4.095198406093713
+    },
+    {
+      "id": "tpu_2",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1165.3041200000002,
+        -54.21627087099999,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        3.681251992305714e-05,
+        -2.6446036894437186e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.60540822166193,
+      "force_from_simulation_fz_my_weights_n": 20.078366870213564,
+      "added_tip_displacement_mm": [
+        0.0011485110315143617,
+        -0.015042286793311675,
+        0.03272150550715759
+      ],
+      "added_normal_displacement_mm": 0.03272150550715759,
+      "max_integration_point_von_mises_mpa": 15.73573567541774,
+      "p99_integration_point_von_mises_mpa": 3.3469575544303685
+    },
+    {
+      "id": "tpu_3",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -825.3041200000001,
+        -54.21627087099999,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        3.6754940486673594e-05,
+        -2.643161357499147e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.583092767561546,
+      "force_from_simulation_fz_my_weights_n": 20.05550182115443,
+      "added_tip_displacement_mm": [
+        0.00022068291156646563,
+        -0.006134670359604506,
+        0.019312973774376897
+      ],
+      "added_normal_displacement_mm": 0.019312973774376897,
+      "max_integration_point_von_mises_mpa": 11.380510461292241,
+      "p99_integration_point_von_mises_mpa": 2.6067928955682445
+    },
+    {
+      "id": "tpu_4",
+      "wrench_about_root_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -465.30412000000007,
+        -54.21627087099999,
+        0.0
+      ],
+      "bridge_voltage_v": [
+        3.669397402462042e-05,
+        -2.6416341824990123e-05
+      ],
+      "force_from_ideal_beam_screen_n": 19.55946463969055,
+      "force_from_simulation_fz_my_weights_n": 20.031291769209464,
+      "added_tip_displacement_mm": [
+        0.0005600461278544194,
+        -0.006114671742509252,
+        0.009509711700844404
+      ],
+      "added_normal_displacement_mm": 0.009509711700844404,
+      "max_integration_point_von_mises_mpa": 6.859770838966296,
+      "p99_integration_point_von_mises_mpa": 1.8899117087741235
+    }
+  ],
+  "inputs": [
+    {
+      "directory": "build/engineering/prototypes/c1/fea/mesh_1p5_gauge_0p7/20261011T001634.777523Z",
+      "screen_sha256": "e0261ab3fd10f6564a73ac1187a09200c4acf9a0d79e96df85a80273cccfb0dd"
+    },
+    {
+      "directory": "build/engineering/prototypes/c1/fea/mesh_1p5_gauge_0p5/20261011T002317.716060Z",
+      "screen_sha256": "44f835318aaa0a13ec5359e1f7d525be85a5d221e8430dc66caa129bdcafb8f7"
+    }
+  ],
+  "limits": [
+    "Linear isotropic aluminum; bonded clamp interfaces and rigid jaw/finger root faces.",
+    "No bolt preload, friction/slip, gauge/adhesive reinforcement, plasticity, fatigue or thermal drift.",
+    "Original finger is represented as a rigid lever for added adapter motion.",
+    "Simulation-derived weights are never a substitute for measured force calibration.",
+    "Mesh convergence and independent numerical verification are required before using the screen.",
+    "Convergence compares these discretizations and declared load cases; it is not a bound for every possible numerical error.",
+    "Simulated identification weights are not supplied as physical calibration coefficients.",
+    "The real clamp/fastener/gauge/cable system must be assembled and measured through the intended load range."
+  ]
+}

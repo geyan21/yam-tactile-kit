@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 940" role="img" aria-labelledby="title desc">
+<title id="title">C1 strain bridges and wrist readout</title>
+<desc id="desc">Eight axial gauges form two full bridges on the root beam. Each bridge has four wires to an ADS1232 readout, with excitation monitoring and a switched shunt test. Both converters share the Pico clock and serial clock.</desc>
+<rect width="1280" height="940" fill="#f7f9f5"/>
+<g font-family="sans-serif" fill="#203f46">
+<text x="28" y="38" font-size="27" font-weight="bold">C1 · eight foil gauges, two bridges, one wrist readout</text>
+<text x="28" y="70" font-size="17">All active grid axes run along the transverse metal beam. The original nail and TPU remain passive.</text>
+<rect x="24" y="98" width="570" height="505" rx="12" fill="#f1e8d7" stroke="#bca174"/>
+<text x="48" y="133" font-size="21" font-weight="bold">Repeat this bridge at stations A and B</text>
+<text x="48" y="162" font-size="16">CEA-13-062UWA-350 · four gauges per station</text>
+<g fill="none" stroke="#8c703e" stroke-width="2">
+<path d="M311 190V215H145V455H477V215H311M311 455V489"/>
+<path d="M145 335H75M477 335H545"/>
+</g>
+<rect x="111" y="244" width="68" height="61" fill="white" stroke="#8c703e"/>
+<rect x="111" y="364" width="68" height="61" fill="white" stroke="#8c703e"/>
+<rect x="443" y="244" width="68" height="61" fill="white" stroke="#8c703e"/>
+<rect x="443" y="364" width="68" height="61" fill="white" stroke="#8c703e"/>
+<g font-size="17" font-weight="bold" text-anchor="middle">
+<text x="145" y="280">R1</text><text x="145" y="400">R2</text>
+<text x="477" y="280">R3</text><text x="477" y="400">R4</text>
+<text x="311" y="187">E+</text><text x="311" y="516">E−</text>
+<text x="71" y="330">S+</text><text x="550" y="330">S−</text>
+</g>
+<g font-size="15">
+<text x="193" y="268">Top, −Y</text>
+<text x="193" y="291">E+ → S+</text>
+<text x="193" y="388">Bottom, −Y</text>
+<text x="193" y="411">S+ → E−</text>
+<text x="429" y="268" text-anchor="end">Bottom, +Y</text>
+<text x="429" y="291" text-anchor="end">E+ → S−</text>
+<text x="429" y="388" text-anchor="end">Top, +Y</text>
+<text x="429" y="411" text-anchor="end">S− → E−</text>
+</g>
+<text x="48" y="548" font-size="16">R1 / R2 share one width position; R3 / R4 share the other.</text>
+<text x="48" y="578" font-size="15">Align the active grid centers using the separate placement drawing.</text>
+<rect x="620" y="98" width="634" height="505" rx="12" fill="#dcece2" stroke="#6b9784"/>
+<text x="645" y="133" font-size="22" font-weight="bold">C1 PCB at wrist / base</text>
+<text x="645" y="169" font-size="18">JA = bridge A · JB = bridge B</text>
+<text x="645" y="204" font-size="17">Each connector: 1 E+ · 2 E− · 3 S+ · 4 S−</text>
+<rect x="646" y="227" width="579" height="130" rx="8" fill="white" stroke="#9cafaa"/>
+<text x="666" y="258" font-size="19" font-weight="bold">One ADS1232IPWR per bridge</text>
+<text x="666" y="290" font-size="16">S+ / S− → differential inputs, through matched 100 Ω paths</text>
+<text x="666" y="321" font-size="16">Reference → that bridge’s board-side E+ and E−</text>
+<text x="666" y="347" font-size="15">Gain 128 · input channel 1 · 6.25 MHz shared clock</text>
+<text x="645" y="395" font-size="17">INA219 monitors each bridge’s excitation.</text>
+<text x="645" y="428" font-size="17">TMUX1101 switches a 1 MΩ resistor across E+ / S+.</text>
+<text x="645" y="460" font-size="16">The shunt test checks electronics; it does not check gauge bonding.</text>
+<text x="645" y="504" font-size="17">Nominal 5 V analog power · 3.3 V digital logic</text>
+<text x="645" y="537" font-size="16">Calibrate the complete four-wire bridge and installed cable.</text>
+<text x="645" y="577" font-size="15">Raw output: yam-c1/1. No force coefficients are assumed.</text>
+<rect x="24" y="630" width="1230" height="250" rx="12" fill="#e7edf0" stroke="#9cabb1"/>
+<text x="48" y="666" font-size="22" font-weight="bold">Pico connection · J1, 2 × 8 pins</text>
+<g font-size="17">
+<text x="48" y="711">J1.2 → GP16 · common ADC clock</text>
+<text x="48" y="750">J1.4 → GP17 · common data clock</text>
+<text x="48" y="789">J1.6 → GP18 · bridge A data/ready</text>
+<text x="48" y="828">J1.8 → GP19 · bridge B data/ready</text>
+<text x="494" y="711">J1.10 → GP20 · shared PDWN</text>
+<text x="494" y="750">J1.11 → GP21 · shunt A</text>
+<text x="494" y="789">J1.12 → GP22 · shunt B</text>
+<text x="494" y="828">J1.15 / 16 → GP4 / GP5 · I²C</text>
+<text x="882" y="711">J1.13 → Pico 3V3</text>
+<text x="882" y="750">J1.14 → nominal 5 V</text>
+<text x="882" y="789">J1.1 / 3 / 5 / 7 / 9 → GND</text>
+<text x="882" y="828">Keep the clock harness short.</text>
+</g>
+<text x="28" y="918" font-size="16">Physical force calibration, noise, drift, installed fit, dynamic response and 20 N qualification remain required.</text>
+</g></svg>

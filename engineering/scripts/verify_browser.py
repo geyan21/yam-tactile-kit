@@ -23,7 +23,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
     parser.add_argument("--checks-only",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
@@ -46,7 +46,7 @@ def main():
                 ("root",".hero,.brief,#design,#bending{display:none} #root-force{padding-top:25px}"),
             ):
                 (site/f"{name}-review.html").write_text(index.replace("</head>",f"<style>{style}</style></head>"))
-            for name,model in (("l1-assembly","l1_assembly"),("l1-bench","l1_bench"),("b1-assembly","b1_assembly"),("b2-assembly","b2_assembly")):
+            for name,model in (("l1-assembly","l1_assembly"),("l1-bench","l1_bench"),("b1-assembly","b1_assembly"),("b2-assembly","b2_assembly"),("c1-assembly","c1_assembly")):
                 prepared=index.replace("</head>","<style>.hero,.brief{display:none} #design{padding-top:25px}</style></head>")
                 script=(
                     "<script>window.addEventListener('load',()=>{"
@@ -111,6 +111,11 @@ def main():
                     ("b2-guide","1280,1500","build-b2.html"),
                     ("b2-wiring","1280,850","assets/prototypes/b2/b2-wiring.svg"),
                     ("build-all","1440,1700","build-all.html"),
+                    ("c1-assembly","1440,1150","c1-assembly-review.html"),
+                    ("c1-wiring","1280,1000","assets/prototypes/c1/c1-wiring.svg"),
+                    ("c1-gauges","1320,850","assets/prototypes/c1/c1_gauge_placement.svg"),
+                    ("c1-guide","1440,1800","build-c1.html"),
+                    ("c1-analysis","1440,1700","c1-analysis.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])

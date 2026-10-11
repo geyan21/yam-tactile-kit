@@ -109,6 +109,23 @@ def main():
                 "source/engineering/software/architecture_math.py",
                 "source/engineering/software/architecture_cost.py",
                 "source/engineering/research/quote_template.json",
+                "source/engineering/firmware/c1/main.py",
+                "source/engineering/firmware/c1/ads1232.py",
+                "source/engineering/firmware/c1/ina219.py",
+                "source/engineering/software/c1_protocol.py",
+                "source/engineering/software/c1_record.py",
+                "source/engineering/software/c1_force.py",
+                "source/engineering/templates/c1_force_trials.json",
+                "source/engineering/prototypes/c1/prototype_snapshot.json",
+                "source/engineering/prototypes/c1/cad/c1_strain_beam.step",
+                "source/engineering/prototypes/c1/pcb/c1_readout.kicad_pcb",
+                "source/engineering/prototypes/c1/pcb/c1_readout_fabrication.zip",
+                "source/engineering/prototypes/c1/c1_structural_inputs.zip",
+                "source/engineering/prototypes/c1/c1_structural_review.json",
+                "website/build-c1.html","website/c1-testing.html","website/c1-analysis.html",
+                "website/assets/prototypes/c1/c1_gauge_placement.svg",
+                "website/assets/prototypes/c1/c1-wiring.svg",
+                "website/downloads/c1_bom.csv",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

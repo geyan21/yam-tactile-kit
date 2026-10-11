@@ -17,7 +17,9 @@
       fixed:"Fixed carrier",floating:"Floating carrier",cell:"Cell reference",hardware:"Reserved fasteners",
       b1tpu:"Magnetic TPU",spine:"Fixed spine",magnet:"Magnets",plug:"Retaining plugs",
       pcb:model.id==="b2_assembly"?"One B2 PCB":"Sensor heads",
-      backer:"Removable backer",spacer:"Locating spacers",electronics:"IC / component envelopes",nail:"T0 / T1 nail pads"};
+      backer:"Removable backer",spacer:"Locating spacers",electronics:"IC / component envelopes",nail:"T0 / T1 nail pads",
+      c1fixed:"Fixed root carrier",c1floating:"Floating finger carrier",c1beam:"Transverse strain beam",
+      c1clamp:"Beam end clamps",c1gauge:"Eight active strain-grid locations"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){
       const label=document.createElement("label"),input=document.createElement("input");

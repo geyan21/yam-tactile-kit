@@ -6,7 +6,7 @@ For one page per design, use [the design directory](https://geyan21.github.io/ya
 
 This is the concrete prototype recommendation for your thin-tip, dexterous gripper. B1 is still awaiting physical validation and force calibration through the requested 20 N per finger range.
 
-**For the consolidated version, use [B2.1's complete build guide](BUILD_B2.md).** It places these same five magnetic sensors on one checked PCB, with the mux and nail ADC on that board. The tables below describe the five-board B1 pilot. C1 remains a force-element study. Follow [the all-design campaign](BUILD_ALL.md) and [the architecture comparison](ARCHITECTURE.md) for the current status and planned measurements.
+**For the consolidated version, use [B2.1's complete build guide](BUILD_B2.md).** It places these same five magnetic sensors on one checked PCB, with the mux and nail ADC on that board. The tables below describe the five-board B1 pilot. **C1 uses eight CEA-13-062UWA-350 gauges on a metal root beam, with no added nail layer:** see [its separate build and placement guide](BUILD_C1.md). Follow [the all-design campaign](BUILD_ALL.md) and [the architecture comparison](ARCHITECTURE.md) for the current status and planned measurements.
 
 ![Labeled positions of five magnetic sensor heads, four embedded magnets and two pressure-film nail pads](../web/sensor-placement.svg)
 

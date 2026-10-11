@@ -1,5 +1,5 @@
 {
-  "revision": "R1.0 + L1.0 + B1.0 + B2.1",
+  "revision": "R1.0 + L1.0 + B1.0 + B2.1 + C1.1",
   "objective": "Reliable contact and grip-force feedback on thin ENPIRE/YAM fingers",
   "requested_per_finger_force_n": 20,
   "contact_detection_target_n": 0.2,
@@ -7,9 +7,9 @@
   "physical_specimens_tested": 0,
   "selected_sensor": null,
   "selected_material": null,
-  "architecture_review": "Four digital build packages exist: R1, L1, B1 and B2.1. B2 now includes a checked consolidated PCB and removable support. All twelve designs remain in the build-and-compare campaign; no physical winner has been established.",
+  "architecture_review": "Five digital build packages exist: R1, L1, B1, B2.1 and C1.1. C1 adds a metal strain root, checked readout and numerical structural screen. All twelve designs remain in the build-and-compare campaign; no physical winner has been established.",
   "physical_results": [],
-  "next_experiment": "Build the available R1/L1/B1/B2 packages while completing the remaining eight designs. Use common contact, force, precision, interference and repeatability tests through 20 N per finger; retain raw evidence and failed builds.",
+  "next_experiment": "Build the available R1/L1/B1/B2/C1 packages while completing the remaining seven designs. Use common contact, force, precision, interference and repeatability tests through 20 N per finger; retain raw evidence and failed builds.",
   "candidates": [
     {"id": "R1", "name": "Independent resistive cells", "status": "designed; unbuilt", "coverage": "two nail regions and four TPU regions", "next": "Fit, saturation, drift, edge coverage, and wear"},
     {"id": "B1", "name": "B1 magnetic bending insert", "status": "separate CAD, PCB and raw readout designed; unbuilt", "coverage": "four compliant regions; optional R1 nail cells", "next": "Original-vs-B1 compliance, retention, interference, physical force calibration through 20 N"},
@@ -17,7 +17,7 @@
     {"id": "O1", "name": "Optical compliant finger", "status": "research comparison", "coverage": "requires optical path and changed skeleton", "next": "Visibility under bending and preservation of nail access"},
     {"id": "L1", "name": "Root normal-force cell", "status": "carrier, readout and fixtures designed; unbuilt", "coverage": "normal load through the complete finger mount", "next": "Housing fit, held-out moment loads, integrated-finger accuracy, stiffness and faults"},
     {"id": "B2", "name": "Consolidated magnetic PCB", "status": "B2.1 checked PCB, support CAD and readout; unbuilt", "coverage": "same B1 magnet/head positions, with two N0 nail pads", "next": "Physical fit and power, calibrated contact/force tests, assembly and repair comparison"},
-    {"id": "C1", "name": "Differential-strain force element", "status": "analytical screen and bench coupon; no gripper adapter", "coverage": "aggregate normal force in a controlled load path; no contact map", "next": "Gauge bonding/matching, drift, moment rejection, cross-axis response, adapter geometry"},
+    {"id": "C1", "name": "Differential-strain root force", "status": "C1.1 checked adapter, readout and numerical model; unbuilt", "coverage": "aggregate normal force through the original finger mount; bare nail retained", "next": "Drive fit, metal assembly, gauge bonding, real clamp motion, calibration and moving-arm tests"},
     {"id": "NAIL", "name": "Rigid nail with base sensing", "status": "mechanism to be designed", "coverage": "intended nail loads through a controlled support", "next": "Mechanism, sensor, readout and force/precision tests"},
     {"id": "RECESSED", "name": "Recessed magnetic frame", "status": "field/clearance study; no revised frame", "coverage": "magnetic soft region with separate nail pads", "next": "Frame design, motion clearance, range selection and physical checks"},
     {"id": "CAPACITIVE", "name": "Shielded capacitive skin", "status": "reference approach; integration unfinished", "coverage": "proposed local compression cells", "next": "Dielectric stack, shielding, readout, sealing and calibration"},

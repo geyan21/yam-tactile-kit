@@ -1,0 +1,8 @@
+(footprint "JB" (layer "F.Cu") (at 0 0) (attr through_hole)
+(property "Reference" "JB" (at 0 0) (layer "F.Fab") (effects (font (size 0.6 0.6) (thickness 0.1))))
+(property "Value" "2.54mm through-hole header" (at 0 1) (layer "F.Fab") hide (effects (font (size 0.5 0.5) (thickness 0.1))))
+(pad "1" thru_hole rect (at 0 -3.81 0) (size 1.8 1.8) (drill 1) (layers "*.Cu" "*.Mask"))
+(pad "2" thru_hole rect (at 0 -1.27 0) (size 1.8 1.8) (drill 1) (layers "*.Cu" "*.Mask"))
+(pad "3" thru_hole rect (at 0 1.27 0) (size 1.8 1.8) (drill 1) (layers "*.Cu" "*.Mask"))
+(pad "4" thru_hole rect (at 0 3.81 0) (size 1.8 1.8) (drill 1) (layers "*.Cu" "*.Mask"))
+)

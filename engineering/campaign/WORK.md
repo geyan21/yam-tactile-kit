@@ -16,12 +16,16 @@ have been reported or tested in this workspace.
 B2.1 now has a completed digital prototype package: routed four-layer PCB,
 zero KiCad DRC/connectivity findings, four checked CAD parts, firmware, a raw
 recorder and actual-mesh visuals. Its build and physical tests remain pending.
-The next development task is C1; the full list below remains in scope.
+C1.1 now adds nine checked CAD parts, a dual-bridge readout PCB, raw acquisition
+and physical static-calibration tools. Its linear bonded-joint model passed
+the declared numerical checks and calculated 0.094 mm added tip motion at
+20 N; the actual assembly remains unbuilt. The next mechanical work is the
+rigid nail and recessed frame; the full list below remains in scope.
 
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.
-2. Complete C1 structural/gauge/readout development and the mounted load path.
+2. C1 digital package completed; verify drive fit, machine, bond, assemble and measure it.
 3. Develop the rigid-nail and recessed-frame mechanisms as separate designs.
 4. Develop the resistive matrix, capacitive, pneumatic, optical and packaged
    force-button prototypes, including their contact and mounting interfaces.

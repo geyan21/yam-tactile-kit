@@ -1,0 +1,32 @@
+{
+  "protocol": "yam-c1/1",
+  "revision": "C1.1",
+  "files": {
+    "main.py": "6b6ab707b8c3956dda1b6ea24dfde0fd5ae5335a3eb9d6d95d94115d547cc2c5",
+    "ads1232.py": "270bc888705425b48e0a1f3e8c8fbff1c4287b9bfe532568dd40176e7bc7d9b8",
+    "ina219.py": "3b8fcc1507f802f358e5008695b3d3432c51380a092ecf29720c5ba93173df08"
+  },
+  "settings": {
+    "gain": 128,
+    "clock_hz": 6250000,
+    "conversion_cycles": 61440,
+    "input_channel": 1,
+    "bridge_count": 2,
+    "system_clock_hz": 125000000
+  },
+  "gpio": {
+    "sda": 4,
+    "scl": 5,
+    "adc_clock": 16,
+    "serial_clock": 17,
+    "data_ready_a": 18,
+    "data_ready_b": 19,
+    "power_down": 20,
+    "shunt_a": 21,
+    "shunt_b": 22
+  },
+  "physical_boards_tested": 0,
+  "actuator_control": false,
+  "force_calibrated": false,
+  "note": "Copy all three files to a dedicated RP2040 Pico running MicroPython; verify hardware before force tests."
+}

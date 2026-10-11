@@ -1,0 +1,102 @@
+{
+  "revision": "C1.1",
+  "status": "electronic prototype development; no populated board tested",
+  "controller": "Raspberry Pi Pico RP2040",
+  "protocol": "yam-c1/1",
+  "bridges": 2,
+  "gauge_resistance_ohm": 350,
+  "adc": {
+    "part": "ADS1232IPWR",
+    "quantity": 2,
+    "gain": 128,
+    "input_channel": 1,
+    "avdd": "Nominal 5 V analog supply, filtered per bridge",
+    "dvdd_v": 3.3,
+    "reference": "ADC reference connected to the corresponding E+ feed after the current shunt and to E- at the board; calibrate the complete four-wire bridge and cable",
+    "clock_hz": 6250000,
+    "pico_system_clock_hz": 125000000,
+    "pio_instruction_clock_hz": 12500000,
+    "conversion_clock_cycles": 61440,
+    "calculated_data_rate_sps": 101.72526041666667,
+    "calculated_conversion_period_us": 9830.4,
+    "clock_note": "A two-instruction RP2040 PIO loop at an integer clock divider drives both ADCs from one clock. Actual clock integrity, rate and synchronization require scope checks.",
+    "settling_samples_after_input_step": 5,
+    "source": "https://www.ti.com/lit/ds/symlink/ads1232.pdf"
+  },
+  "current_monitors": {
+    "part": "INA219AIDR",
+    "package": "D, SOIC-8",
+    "quantity": 2,
+    "addresses": [64, 65],
+    "logic_supply_v": 3.3,
+    "shunt_ohm": 0.1,
+    "shunt_tolerance_percent": 1,
+    "location": "One shunt in each E+ feed; the same board-side excitation feeds the ADC reference",
+    "source": "https://www.ti.com/lit/ds/symlink/ina219.pdf"
+  },
+  "electrical_self_test": {
+    "switch": "TMUX1101DBVR",
+    "quantity": 2,
+    "shunt_resistor_ohm": 1000000,
+    "shunt_tolerance_percent": 0.1,
+    "connection": "Switch the resistor between E+ and S+ to shunt bridge R1",
+    "control": "3.3 V GPIO, active high; each SEL has a 100 kohm pull-down",
+    "mode": "Explicit startup diagnostic; no taring of measured force",
+    "source": "https://www.ti.com/lit/ds/symlink/tmux1101.pdf",
+    "limits": [
+      "An electrical shunt response does not prove gauge bonding or force sensitivity.",
+      "Lead-fault coverage and response thresholds must be checked on physical boards.",
+      "A signal-pair short may be indistinguishable from a real zero between self-tests."
+    ]
+  },
+  "analog_input": {
+    "series_resistors_ohm": 100,
+    "differential_capacitor_f": 1e-8,
+    "open_lead_bias_ohm": 10000000,
+    "bias": "AINP weakly biased to analog supply; AINN weakly biased to GND. Connected-bridge offset is removed only by physical calibration.",
+    "reference_capacitor_f": 1e-7,
+    "pga_bypass_capacitor_f": 1e-7,
+    "analog_supply_filter_ohm": 10,
+    "analog_supply_capacitor_f": 1e-5
+  },
+  "gpio": {
+    "sda": 4,
+    "scl": 5,
+    "adc_clock": 16,
+    "serial_clock": 17,
+    "data_ready_a": 18,
+    "data_ready_b": 19,
+    "power_down": 20,
+    "shunt_a": 21,
+    "shunt_b": 22
+  },
+  "digital_connector": [
+    "GND", "ADC_CLK", "GND", "SER_CLK",
+    "GND", "A_DOUT", "GND", "B_DOUT",
+    "GND", "PDWN", "A_SHUNT", "B_SHUNT",
+    "3V3", "5V", "SDA", "SCL"
+  ],
+  "bridge_connectors": ["E+", "E-", "S+", "S-"],
+  "bridge_cable": {
+    "excitation_loop_resistance_ohm_max": 2,
+    "requirement": "Measure cable resistance and calibrate with the complete installed cable. Keep E+/E- and S+/S- as twisted pairs.",
+    "note": "Cable resistance contributes to gain and temperature sensitivity. Verify it in the physical comparison; the force calibration is specific to the installed assembly."
+  },
+  "pcb": {
+    "width_mm": 82,
+    "height_mm": 64,
+    "thickness_mm": 1.6,
+    "layers": 4,
+    "minimum_clearance_mm": 0.2,
+    "edge_clearance_mm": 0.3,
+    "minimum_signal_width_mm": 0.2,
+    "via_diameter_mm": 0.5,
+    "via_drill_mm": 0.25,
+    "analog_notes": [
+      "Keep the ground plane continuous; put analog bridge connections near their ADCs.",
+      "Route the clock away from high-gain inputs and use source series termination.",
+      "Keep the Pico and digital connector close; verify clock waveforms on the actual assembly.",
+      "Use twisted excitation and signal pairs, with shield termination at the fixed electronics. Keep bridge cables and their strain relief out of the mechanical load path."
+    ]
+  }
+}

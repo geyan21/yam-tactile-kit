@@ -1,0 +1,849 @@
+{
+  "revision": "C1.1",
+  "status": "digital development; assembly and structural/force qualification pending",
+  "parts": [
+    {
+      "id": "c1_strain_beam",
+      "purpose": "Transverse constant-section beam. Bond eight foil gauges at the specified grid centers.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_strain_beam.step",
+      "stl": "cad/c1_strain_beam.stl",
+      "sha256_step": "abc6bd0db76ecb7c71a709dc2f5fc8bb11f01db23df103ddc263bc86e9104893",
+      "sha256_stl": "c8af90b88529c353fcb160631fa586d27f5208aa594190ec484494fa9504f49e",
+      "volume_mm3": 15433.358482707295,
+      "bounds_mm": [
+        [
+          -35.29999923706055,
+          -32.5,
+          30.5
+        ],
+        [
+          17.700000762939453,
+          -10.5,
+          44.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_fixed_carrier_m3_clearance",
+      "purpose": "Fixed carrier with M3 clearance and 90-degree countersinks. Use flush flat-head screws when the mating jaw is threaded.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_fixed_carrier_m3_clearance.step",
+      "stl": "cad/c1_fixed_carrier_m3_clearance.stl",
+      "sha256_step": "83a442ba537f65c180d35b69bad9a56fcc013c38d0811b85c60c5b5b9cb410c4",
+      "sha256_stl": "71dfaee3113eb5bc424365085b5c3b188d42d87c87aff63c97ce4b48b58df403",
+      "volume_mm3": 11945.78346506731,
+      "bounds_mm": [
+        [
+          -35.29999923706055,
+          -32.5,
+          -2.060746431350708
+        ],
+        [
+          6.889186382293701,
+          -2.7699999809265137,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_fixed_carrier_m3_tap_drill",
+      "purpose": "Alternative fixed carrier; tap the 2.5 mm bores M3 when the mating jaw requires threads here.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_fixed_carrier_m3_tap_drill.step",
+      "stl": "cad/c1_fixed_carrier_m3_tap_drill.stl",
+      "sha256_step": "ff3e11cd4002a5986354d48a2ed8756bb53f673cde236acfc1208d1f80939df5",
+      "sha256_stl": "72f6a94d9ffb7ef887c9fd2b40ef1ef04db5d6caa3a4768f879cb9af01968103",
+      "volume_mm3": 12024.671736392216,
+      "bounds_mm": [
+        [
+          -35.29999923706055,
+          -32.5,
+          -2.060746431350708
+        ],
+        [
+          6.889186382293701,
+          -2.7699999809265137,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_floating_finger_carrier",
+      "purpose": "Carries the original finger with 18 mm reach extension; connects only to the beam floating end.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_floating_finger_carrier.step",
+      "stl": "cad/c1_floating_finger_carrier.stl",
+      "sha256_step": "16ef121763f4266b75cf745be9b64636a56161834d504f8a3488d46f2a310300",
+      "sha256_stl": "387fc35a53dfaf1431f556c5f2bdbe02e67ded643849c761e3c0f61b7d305bf1",
+      "volume_mm3": 9584.456168298106,
+      "bounds_mm": [
+        [
+          -24.710813522338867,
+          -32.5,
+          -2.060746431350708
+        ],
+        [
+          17.700000762939453,
+          -10.5,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_fixed_end_clamp",
+      "purpose": "Metal clamp cap for the fixed beam end.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_fixed_end_clamp.step",
+      "stl": "cad/c1_fixed_end_clamp.stl",
+      "sha256_step": "2689b62148f20f5a6238cd5246c2fefb8efb39895c41cc8c4d12d08086dccab2",
+      "sha256_stl": "e49de422f8bf658601f9147216d6143c92183627e1663e8f41dbc92e8fe937dd",
+      "volume_mm3": 564.5741231472098,
+      "bounds_mm": [
+        [
+          -35.29999923706055,
+          -32.5,
+          44.5
+        ],
+        [
+          -25.299999237060547,
+          -10.5,
+          47.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_floating_end_clamp",
+      "purpose": "Metal clamp cap for the floating beam end.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_floating_end_clamp.step",
+      "stl": "cad/c1_floating_end_clamp.stl",
+      "sha256_step": "c8e16b67c550c5f4dd027921ddd971017235f45c238b5f75f47cc363ddf83685",
+      "sha256_stl": "ec6cc0996ebfa3c034e4125612042d144f161ed78432c4f882e05177c459386e",
+      "volume_mm3": 564.5741231472099,
+      "bounds_mm": [
+        [
+          7.699999809265137,
+          -32.5,
+          44.5
+        ],
+        [
+          17.700000762939453,
+          -10.5,
+          47.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_grid_alignment_stencil",
+      "purpose": "Removable marking jig. Align active grid centers; use on both beam faces and remove before bonding.",
+      "material": "PETG marking jig",
+      "kind": "fabricate",
+      "step": "cad/c1_grid_alignment_stencil.step",
+      "stl": "cad/c1_grid_alignment_stencil.stl",
+      "sha256_step": "5be648eb54ef96e7c336046882398ec9c31c170e72623e55aa9be90e4fd3fcd6",
+      "sha256_stl": "19b3d7965b1acbb840f5a1fa664c39aba968299423333333b9d266ddf540241d",
+      "volume_mm3": 857.697774625758,
+      "bounds_mm": [
+        [
+          -35.29999923706055,
+          -32.5,
+          44.599998474121094
+        ],
+        [
+          17.700000762939453,
+          -10.5,
+          45.400001525878906
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_bench_receiver",
+      "purpose": "Independent bench receiver for the fixed carrier; M6 stand holes on a 50 mm square, M3 finger interface tapped.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_bench_receiver.step",
+      "stl": "cad/c1_bench_receiver.stl",
+      "sha256_step": "c5490be9e95ea3943da5c511337f57e0c28aedffd06b645231295b34d1c80927",
+      "sha256_stl": "c152e8cf0957c38b0db5dfa4e24782da2d8facaec13f974436ed68dc66ceb06f",
+      "volume_mm3": 54882.26785938895,
+      "bounds_mm": [
+        [
+          -45.2108154296875,
+          -7.769999980926514,
+          -20.716760635375977
+        ],
+        [
+          24.789186477661133,
+          4.230000019073486,
+          49.283241271972656
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "c1_bench_calibration_arm",
+      "purpose": "Metal arm for independent normal-force and off-center calibration. Not part of the production finger.",
+      "material": "6061-T6 aluminum for force-path parts",
+      "kind": "fabricate",
+      "step": "cad/c1_bench_calibration_arm.step",
+      "stl": "cad/c1_bench_calibration_arm.stl",
+      "sha256_step": "9cf7976659474337e02cb15b39ac3fd80e71ff035bb884597767dd6795037fd7",
+      "sha256_stl": "cf42b18e61d15ba4c2f9767571594b407ea172e1b0982b6733920a861f0b9916",
+      "volume_mm3": 41793.409391515364,
+      "bounds_mm": [
+        [
+          -50.2108154296875,
+          -145.77000427246094,
+          -2.060746431350708
+        ],
+        [
+          29.789186477661133,
+          -20.770000457763672,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "assembly_part_ids": [
+    "c1_strain_beam",
+    "c1_fixed_carrier_m3_clearance",
+    "c1_floating_finger_carrier",
+    "c1_fixed_end_clamp",
+    "c1_floating_end_clamp"
+  ],
+  "gauges": [
+    {
+      "id": "A_R1",
+      "bridge": 0,
+      "resistor": "R1",
+      "face": "top",
+      "center_native_mm": [
+        -16.8,
+        -27.79,
+        44.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": -1,
+      "grid_bounds_xy_mm": [
+        -17.585,
+        -29.314999999999998,
+        -16.015,
+        -26.265
+      ],
+      "backing_keepout_xy_mm": [
+        -24.700000000000003,
+        -30.189999999999998,
+        -8.9,
+        -25.39
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "A_R2",
+      "bridge": 0,
+      "resistor": "R2",
+      "face": "bottom",
+      "center_native_mm": [
+        -16.8,
+        -27.79,
+        30.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": -1,
+      "grid_bounds_xy_mm": [
+        -17.585,
+        -29.314999999999998,
+        -16.015,
+        -26.265
+      ],
+      "backing_keepout_xy_mm": [
+        -24.700000000000003,
+        -30.189999999999998,
+        -8.9,
+        -25.39
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "A_R3",
+      "bridge": 0,
+      "resistor": "R3",
+      "face": "bottom",
+      "center_native_mm": [
+        -16.8,
+        -15.21,
+        30.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": -1,
+      "grid_bounds_xy_mm": [
+        -17.585,
+        -16.735,
+        -16.015,
+        -13.685
+      ],
+      "backing_keepout_xy_mm": [
+        -24.700000000000003,
+        -17.61,
+        -8.9,
+        -12.81
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "A_R4",
+      "bridge": 0,
+      "resistor": "R4",
+      "face": "top",
+      "center_native_mm": [
+        -16.8,
+        -15.21,
+        44.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": -1,
+      "grid_bounds_xy_mm": [
+        -17.585,
+        -16.735,
+        -16.015,
+        -13.685
+      ],
+      "backing_keepout_xy_mm": [
+        -24.700000000000003,
+        -17.61,
+        -8.9,
+        -12.81
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "B_R1",
+      "bridge": 1,
+      "resistor": "R1",
+      "face": "top",
+      "center_native_mm": [
+        -0.8000000000000007,
+        -27.79,
+        44.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": 1,
+      "grid_bounds_xy_mm": [
+        -1.5850000000000009,
+        -29.314999999999998,
+        -0.01500000000000068,
+        -26.265
+      ],
+      "backing_keepout_xy_mm": [
+        -8.700000000000001,
+        -30.189999999999998,
+        7.1,
+        -25.39
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "B_R2",
+      "bridge": 1,
+      "resistor": "R2",
+      "face": "bottom",
+      "center_native_mm": [
+        -0.8000000000000007,
+        -27.79,
+        30.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": 1,
+      "grid_bounds_xy_mm": [
+        -1.5850000000000009,
+        -29.314999999999998,
+        -0.01500000000000068,
+        -26.265
+      ],
+      "backing_keepout_xy_mm": [
+        -8.700000000000001,
+        -30.189999999999998,
+        7.1,
+        -25.39
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "B_R3",
+      "bridge": 1,
+      "resistor": "R3",
+      "face": "bottom",
+      "center_native_mm": [
+        -0.8000000000000007,
+        -15.21,
+        30.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": 1,
+      "grid_bounds_xy_mm": [
+        -1.5850000000000009,
+        -16.735,
+        -0.01500000000000068,
+        -13.685
+      ],
+      "backing_keepout_xy_mm": [
+        -8.700000000000001,
+        -17.61,
+        7.1,
+        -12.81
+      ],
+      "part": "CEA-13-062UWA-350"
+    },
+    {
+      "id": "B_R4",
+      "bridge": 1,
+      "resistor": "R4",
+      "face": "top",
+      "center_native_mm": [
+        -0.8000000000000007,
+        -15.21,
+        44.5
+      ],
+      "grid_axis_native": [
+        1,
+        0,
+        0
+      ],
+      "tabs_toward_native_x": 1,
+      "grid_bounds_xy_mm": [
+        -1.5850000000000009,
+        -16.735,
+        -0.01500000000000068,
+        -13.685
+      ],
+      "backing_keepout_xy_mm": [
+        -8.700000000000001,
+        -17.61,
+        7.1,
+        -12.81
+      ],
+      "part": "CEA-13-062UWA-350"
+    }
+  ],
+  "clamp_holes_native_xy_mm": [
+    [
+      -30.299999999999997,
+      -27.5
+    ],
+    [
+      -30.299999999999997,
+      -15.5
+    ],
+    [
+      12.7,
+      -27.5
+    ],
+    [
+      12.7,
+      -15.5
+    ]
+  ],
+  "finger_translation_native_mm": [
+    0,
+    -18,
+    0
+  ],
+  "root_reference_native_mm": [
+    -10.21081354355,
+    -25.77,
+    14.2832396625
+  ],
+  "fixed_mount_plane_y_mm": -7.77,
+  "floating_mount_plane_y_mm": -25.77,
+  "beam_active_native_x_mm": [
+    -25.3,
+    7.699999999999999
+  ],
+  "beam_y_bounds_mm": [
+    -32.5,
+    -10.5
+  ],
+  "beam_z_bounds_mm": [
+    30.5,
+    44.5
+  ],
+  "assembly_bounds_mm": [
+    [
+      -35.29999923706055,
+      -135.6470718383789,
+      -4.3130645751953125
+    ],
+    [
+      17.700000762939453,
+      -2.7699999809265137,
+      47.5
+    ]
+  ],
+  "added_reach_mm": 18,
+  "added_global_width_mm": 21.40000009536743,
+  "added_back_height_excluding_hardware_mm": 19.216760635375977,
+  "added_back_height_with_reserved_hardware_mm": 24.216760635375977,
+  "floating_m3_hardware_to_fixed_plate_gap_mm": 1.5,
+  "rigid_overlap_checks_mm3": {
+    "fixed_floating_mm3": 0.0,
+    "fixed_beam_mm3": 0.0,
+    "floating_beam_mm3": 0.0,
+    "fixed_active_keepout_mm3": 0.0,
+    "floating_active_keepout_mm3": 0.0,
+    "fixed_vs_floating_mm3": 0.0,
+    "fixed_vs_beam_mm3": 0.0,
+    "fixed_vs_fixed_cap_mm3": 0.0,
+    "fixed_vs_floating_cap_mm3": 0.0,
+    "floating_vs_beam_mm3": 0.0,
+    "floating_vs_fixed_cap_mm3": 0.0,
+    "floating_vs_floating_cap_mm3": 0.0,
+    "beam_vs_fixed_cap_mm3": 0.0,
+    "beam_vs_floating_cap_mm3": 0.0,
+    "fixed_cap_vs_floating_cap_mm3": 0.0,
+    "fixed_vs_hard_distal_bounds_mm3": 0.0,
+    "floating_vs_hard_distal_bounds_mm3": 0.0,
+    "beam_vs_hard_distal_bounds_mm3": 0.0,
+    "fixed_vs_soft_distal_bounds_mm3": 0.0,
+    "floating_vs_soft_distal_bounds_mm3": 0.0,
+    "beam_vs_soft_distal_bounds_mm3": 0.0,
+    "fixed_vs_finger_key_mm3": 0.0,
+    "floating_vs_finger_key_mm3": 0.0,
+    "beam_vs_finger_key_mm3": 0.0,
+    "fixed_vs_floating_m3_hardware_0_mm3": 0.0,
+    "fixed_vs_floating_m3_hardware_1_mm3": 0.0
+  },
+  "bench_ports": [
+    {
+      "id": "Y10_X+0",
+      "native_xyz_mm": [
+        -10.21081354355,
+        -35.769999999999996,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y50_X-8",
+      "native_xyz_mm": [
+        -18.21081354355,
+        -75.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y50_X+0",
+      "native_xyz_mm": [
+        -10.21081354355,
+        -75.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y50_X+8",
+      "native_xyz_mm": [
+        -2.2108135435499996,
+        -75.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y110_X-30",
+      "native_xyz_mm": [
+        -40.21081354355,
+        -135.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y110_X-8",
+      "native_xyz_mm": [
+        -18.21081354355,
+        -135.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y110_X+0",
+      "native_xyz_mm": [
+        -10.21081354355,
+        -135.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y110_X+8",
+      "native_xyz_mm": [
+        -2.2108135435499996,
+        -135.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "Y110_X+30",
+      "native_xyz_mm": [
+        19.78918645645,
+        -135.77,
+        8
+      ],
+      "force_axis_native": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "contact_sites": [
+    {
+      "id": "nail_1",
+      "native_xyz_mm": [
+        -11.406846,
+        -132.71776,
+        -4.176267
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -2138.9552,
+        23.920649129000005,
+        0.0
+      ]
+    },
+    {
+      "id": "nail_2",
+      "native_xyz_mm": [
+        -4.406846,
+        -132.71776,
+        -4.176267
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -2138.9552,
+        -116.079350871,
+        0.0
+      ]
+    },
+    {
+      "id": "nail_3",
+      "native_xyz_mm": [
+        -14.906846,
+        -123.229702,
+        -3.70008
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -1949.19404,
+        93.920649129,
+        0.0
+      ]
+    },
+    {
+      "id": "nail_4",
+      "native_xyz_mm": [
+        -0.906846,
+        -123.229702,
+        -3.70008
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -1949.19404,
+        -186.079350871,
+        0.0
+      ]
+    },
+    {
+      "id": "tpu_1",
+      "native_xyz_mm": [
+        -7.5,
+        -101.035206,
+        -0.242408
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -1505.3041200000002,
+        -54.21627087099999,
+        0.0
+      ]
+    },
+    {
+      "id": "tpu_2",
+      "native_xyz_mm": [
+        -7.5,
+        -84.035206,
+        -2.97775
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -1165.3041200000002,
+        -54.21627087099999,
+        0.0
+      ]
+    },
+    {
+      "id": "tpu_3",
+      "native_xyz_mm": [
+        -7.5,
+        -67.035206,
+        11.832347
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -825.3041200000001,
+        -54.21627087099999,
+        0.0
+      ]
+    },
+    {
+      "id": "tpu_4",
+      "native_xyz_mm": [
+        -7.5,
+        -49.035206,
+        0.866781
+      ],
+      "moment_about_root_at_20n_nmm": [
+        -465.30412000000007,
+        -54.21627087099999,
+        0.0
+      ]
+    }
+  ],
+  "analysis_geometry": {
+    "file": "analysis/c1_bonded_assembly.step",
+    "sha256": "bb4641a3019f3f92d7e5d67e5185678c9830f1addea18a7f720d029644da58fe",
+    "volume_mm3": 38092.74636236715,
+    "assumption": "Same-metal parts bonded at intended clamp interfaces; bolt preload, friction and slip omitted"
+  },
+  "physical_specimens_tested": 0,
+  "limits": [
+    "CAD fit only; drive housing and actual source-finger identity remain to be checked.",
+    "Metal load-path parts required. Printed witnesses do not establish 20 N capacity.",
+    "Beam stiffness, clamped joints, gauge-area response, torsion, thermal drift and force accuracy require structural checks and measurements.",
+    "Original finger contact surfaces are retained; no local contact map or six-axis force claim."
+  ],
+  "source_hashes": {
+    "engineering/designs/c1.json": "551c90a8dd268f9e38705d51d1d2fa405342060db6c3475c71601f37e78e1004",
+    "engineering/scripts/build_c1_parts.py": "5388a604aad731fc97e544041ff369a93daaa4b045b4cbdb6d4b8eb008fe7ccd",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/release/l1/root_interface.json": "a89fa0a30d767fc9837256d3274107343212f5495830c644ef652adf8eb09d39",
+    "engineering/release/l1/contact_sites.json": "119ac2383fca7711deac3451243ede121805b773ee1b461b6da8ddcc24f3eaa5",
+    "engineering/release/b1/b1_manifest.json": "0bc9b4de6c93834f6af51bb7172adbc305301d509ae022f7262282ae2ba9e3a6"
+  }
+}

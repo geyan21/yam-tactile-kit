@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Prototype") (type "KiCad") (uri "${KIPRJMOD}/Prototype.pretty") (options "") (descr "Embedded generated prototype footprints")))
