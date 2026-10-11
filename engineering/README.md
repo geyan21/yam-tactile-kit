@@ -58,6 +58,13 @@ checks, a 64-location contact map and forty trace-resistance estimates.
 Mating/lamination details, the complete resistance budget, object/motion
 clearance and physical qualification remain unfinished.
 
+The separate [K1 capacitive development module](development/capacitive/k1/README.md)
+contains 49 current CAD parts, post-sheet tooling, corrected conforming supports,
+a checked 23-component readout board and raw firmware/recording code. Its
+eighteen declared support-fit comparisons pass. Electrode fabrication,
+retention, vents, cables, enclosure and physical force/contact testing remain.
+Use [the K1 guide](docs/BUILD_CAPACITIVE.md) for exact scope and next steps.
+
 The earlier [R2 fit module](development/f1/mechanics/README.md) contains 44 checked
 CAD solids, twelve printable tail patterns, a sensor-placement drawing,
 an interactive-viewer model, and 654 passing declared static pair checks.

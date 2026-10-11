@@ -1,0 +1,7852 @@
+{
+  "schema": "yam-k1-electromechanical-screen/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "cdfeeae99aecc6a3dd6cffd810ad4b1c0f3afc30b73146f582b5457175d0055e",
+    "engineering/scripts/screen_capacitive_k1.py": "e94d7ef13381a8e4a913b3143c350112355d06844b8c539f1b705c0789af4ecb",
+    "engineering/scripts/capacitive_geometry.py": "fa6a93b3471f40c0d36a3a31ddc0e155e0940bcb568685dbd7e8750c619d9fa7",
+    "engineering/scripts/f1_surfaces.py": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9",
+    "engineering/release/r1/r1_manifest.json": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14",
+    "engineering/release/contact_regions/contact_report.json": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5"
+  },
+  "cells": [
+    {
+      "site": "CH0",
+      "body_area_mm2": 108.8935216929948,
+      "active_area_mm2": 91.49216667509357,
+      "posts": [
+        [
+          -4.5,
+          15.3
+        ],
+        [
+          -3.6,
+          13.5
+        ],
+        [
+          -3.6,
+          14.4
+        ],
+        [
+          -3.6,
+          15.3
+        ],
+        [
+          -2.7,
+          10.8
+        ],
+        [
+          -2.7,
+          11.700000000000001
+        ],
+        [
+          -2.7,
+          12.600000000000001
+        ],
+        [
+          -2.7,
+          13.5
+        ],
+        [
+          -2.7,
+          14.4
+        ],
+        [
+          -2.7,
+          15.3
+        ],
+        [
+          -1.8000000000000003,
+          9.0
+        ],
+        [
+          -1.8000000000000003,
+          9.9
+        ],
+        [
+          -1.8000000000000003,
+          10.8
+        ],
+        [
+          -1.8000000000000003,
+          11.700000000000001
+        ],
+        [
+          -1.8000000000000003,
+          12.600000000000001
+        ],
+        [
+          -1.8000000000000003,
+          13.5
+        ],
+        [
+          -1.8000000000000003,
+          14.4
+        ],
+        [
+          -1.8000000000000003,
+          15.3
+        ],
+        [
+          -0.9000000000000004,
+          6.300000000000001
+        ],
+        [
+          -0.9000000000000004,
+          7.2
+        ],
+        [
+          -0.9000000000000004,
+          8.1
+        ],
+        [
+          -0.9000000000000004,
+          9.0
+        ],
+        [
+          -0.9000000000000004,
+          9.9
+        ],
+        [
+          -0.9000000000000004,
+          10.8
+        ],
+        [
+          -0.9000000000000004,
+          11.700000000000001
+        ],
+        [
+          -0.9000000000000004,
+          12.600000000000001
+        ],
+        [
+          -0.9000000000000004,
+          13.5
+        ],
+        [
+          -0.9000000000000004,
+          14.4
+        ],
+        [
+          -0.9000000000000004,
+          15.3
+        ],
+        [
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          6.300000000000001
+        ],
+        [
+          0.0,
+          7.2
+        ],
+        [
+          0.0,
+          8.1
+        ],
+        [
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          9.9
+        ],
+        [
+          0.0,
+          10.8
+        ],
+        [
+          0.0,
+          11.700000000000001
+        ],
+        [
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          13.5
+        ],
+        [
+          0.0,
+          14.4
+        ],
+        [
+          0.0,
+          15.3
+        ],
+        [
+          0.8999999999999995,
+          1.8
+        ],
+        [
+          0.8999999999999995,
+          2.7
+        ],
+        [
+          0.8999999999999995,
+          3.6
+        ],
+        [
+          0.8999999999999995,
+          4.5
+        ],
+        [
+          0.8999999999999995,
+          5.4
+        ],
+        [
+          0.8999999999999995,
+          6.300000000000001
+        ],
+        [
+          0.8999999999999995,
+          7.2
+        ],
+        [
+          0.8999999999999995,
+          8.1
+        ],
+        [
+          0.8999999999999995,
+          9.0
+        ],
+        [
+          0.8999999999999995,
+          9.9
+        ],
+        [
+          0.8999999999999995,
+          10.8
+        ],
+        [
+          0.8999999999999995,
+          11.700000000000001
+        ],
+        [
+          0.8999999999999995,
+          12.600000000000001
+        ],
+        [
+          0.8999999999999995,
+          13.5
+        ],
+        [
+          0.8999999999999995,
+          14.4
+        ],
+        [
+          0.8999999999999995,
+          15.3
+        ],
+        [
+          1.799999999999999,
+          0.9
+        ],
+        [
+          1.799999999999999,
+          1.8
+        ],
+        [
+          1.799999999999999,
+          2.7
+        ],
+        [
+          1.799999999999999,
+          3.6
+        ],
+        [
+          1.799999999999999,
+          4.5
+        ],
+        [
+          1.799999999999999,
+          5.4
+        ],
+        [
+          1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          1.799999999999999,
+          7.2
+        ],
+        [
+          1.799999999999999,
+          8.1
+        ],
+        [
+          1.799999999999999,
+          9.0
+        ],
+        [
+          1.799999999999999,
+          9.9
+        ],
+        [
+          1.799999999999999,
+          10.8
+        ],
+        [
+          1.799999999999999,
+          11.700000000000001
+        ],
+        [
+          1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          1.799999999999999,
+          13.5
+        ],
+        [
+          1.799999999999999,
+          14.4
+        ],
+        [
+          1.799999999999999,
+          15.3
+        ],
+        [
+          2.6999999999999993,
+          0.9
+        ],
+        [
+          2.6999999999999993,
+          1.8
+        ],
+        [
+          2.6999999999999993,
+          2.7
+        ],
+        [
+          2.6999999999999993,
+          3.6
+        ],
+        [
+          2.6999999999999993,
+          4.5
+        ],
+        [
+          2.6999999999999993,
+          5.4
+        ],
+        [
+          2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          2.6999999999999993,
+          7.2
+        ],
+        [
+          2.6999999999999993,
+          8.1
+        ],
+        [
+          2.6999999999999993,
+          9.0
+        ],
+        [
+          2.6999999999999993,
+          9.9
+        ],
+        [
+          2.6999999999999993,
+          10.8
+        ],
+        [
+          2.6999999999999993,
+          11.700000000000001
+        ],
+        [
+          2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          2.6999999999999993,
+          13.5
+        ],
+        [
+          2.6999999999999993,
+          14.4
+        ],
+        [
+          2.6999999999999993,
+          15.3
+        ],
+        [
+          3.5999999999999996,
+          13.5
+        ],
+        [
+          3.5999999999999996,
+          14.4
+        ],
+        [
+          3.5999999999999996,
+          15.3
+        ],
+        [
+          4.5,
+          13.5
+        ],
+        [
+          4.5,
+          14.4
+        ],
+        [
+          4.5,
+          15.3
+        ]
+      ],
+      "post_count": 98,
+      "initial_post_area_mm2": 27.70884720466197,
+      "initial_post_area_fraction": 0.3028548586357285,
+      "nominal_unloaded_capacitance_pf": 6.201307962086567,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0008157484954137428,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.236168873813417,
+              "delta_pf_if_unstopped": 0.034860911726850574
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.003991002146845368,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.375450225107836,
+              "delta_pf_if_unstopped": 0.17414226302126945
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0179537134374182,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.064155034951003,
+              "delta_pf_if_unstopped": 0.8628470728644366
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.03173408774061307,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.894595637995193,
+              "delta_pf_if_unstopped": 1.6932876759086266
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.04249986175374217,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.680856781288789,
+              "delta_pf_if_unstopped": 2.479548819202222
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.051089446903945894,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.420032537718193,
+              "delta_pf_if_unstopped": 3.218724575631626
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0005262846679026323,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.22375648188134,
+              "delta_pf_if_unstopped": 0.022448519794773247
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.002594756067125431,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.313489711471217,
+              "delta_pf_if_unstopped": 0.11218174938464998
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.01210900739378864,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.75960751237613,
+              "delta_pf_if_unstopped": 0.5582995502895631
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.022290173164426323,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.307226293752785,
+              "delta_pf_if_unstopped": 1.105918331666218
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.030900178299522907,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.839216158151934,
+              "delta_pf_if_unstopped": 1.637908196065367
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.038238666711581416,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.352896318922964,
+              "delta_pf_if_unstopped": 2.151588356836397
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00021622504891383732,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.210512480702889,
+              "delta_pf_if_unstopped": 0.009204518616321877
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0010749095533818531,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.247321506739895,
+              "delta_pf_if_unstopped": 0.046013544653328076
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.005222759669110522,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.43106907281257,
+              "delta_pf_if_unstopped": 0.22976111072600336
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.010082817748388423,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.659714748473319,
+              "delta_pf_if_unstopped": 0.45840678638675225
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.014607595528599186,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.88672842670384,
+              "delta_pf_if_unstopped": 0.6854204646172732
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.01882343005440698,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.111681790223241,
+              "delta_pf_if_unstopped": 0.9103738281366747
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 2.1650608160267427e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.202228451598869,
+              "delta_pf_if_unstopped": 0.0009204895123025025
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0001081905590097465,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.205910326680072,
+              "delta_pf_if_unstopped": 0.004602364593504937
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0005393943602469087,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.224317627024152,
+              "delta_pf_if_unstopped": 0.02300966493758505
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0010749095533818531,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.247321506739895,
+              "delta_pf_if_unstopped": 0.046013544653328076
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.001606573773571468,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.270318957747123,
+              "delta_pf_if_unstopped": 0.06901099566055624
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0021344152004592887,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.293309346162421,
+              "delta_pf_if_unstopped": 0.09200138407585445
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 7.217563924155623e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.201614792837886,
+              "delta_pf_if_unstopped": 0.00030683075131943127
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 3.608087460892917e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.202842106690366,
+              "delta_pf_if_unstopped": 0.0015341446037995254
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0001802308793637075,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.20897845308249,
+              "delta_pf_if_unstopped": 0.007670490995923096
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00036002865124187263,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.2166483494568014,
+              "delta_pf_if_unstopped": 0.015340387370234687
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0005393943602469087,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.224317627024152,
+              "delta_pf_if_unstopped": 0.02300966493758505
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0007183290506285022,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.231986261704982,
+              "delta_pf_if_unstopped": 0.030678299618415394
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH1",
+      "body_area_mm2": 108.32300356417899,
+      "active_area_mm2": 90.91750841900847,
+      "posts": [
+        [
+          -4.5,
+          13.5
+        ],
+        [
+          -4.5,
+          14.4
+        ],
+        [
+          -4.5,
+          15.3
+        ],
+        [
+          -3.6,
+          13.5
+        ],
+        [
+          -3.6,
+          14.4
+        ],
+        [
+          -3.6,
+          15.3
+        ],
+        [
+          -2.7,
+          0.9
+        ],
+        [
+          -2.7,
+          1.8
+        ],
+        [
+          -2.7,
+          2.7
+        ],
+        [
+          -2.7,
+          3.6
+        ],
+        [
+          -2.7,
+          4.5
+        ],
+        [
+          -2.7,
+          5.4
+        ],
+        [
+          -2.7,
+          6.300000000000001
+        ],
+        [
+          -2.7,
+          7.2
+        ],
+        [
+          -2.7,
+          8.1
+        ],
+        [
+          -2.7,
+          9.0
+        ],
+        [
+          -2.7,
+          9.9
+        ],
+        [
+          -2.7,
+          10.8
+        ],
+        [
+          -2.7,
+          11.700000000000001
+        ],
+        [
+          -2.7,
+          12.600000000000001
+        ],
+        [
+          -2.7,
+          13.5
+        ],
+        [
+          -2.7,
+          14.4
+        ],
+        [
+          -2.7,
+          15.3
+        ],
+        [
+          -1.8000000000000003,
+          0.9
+        ],
+        [
+          -1.8000000000000003,
+          1.8
+        ],
+        [
+          -1.8000000000000003,
+          2.7
+        ],
+        [
+          -1.8000000000000003,
+          3.6
+        ],
+        [
+          -1.8000000000000003,
+          4.5
+        ],
+        [
+          -1.8000000000000003,
+          5.4
+        ],
+        [
+          -1.8000000000000003,
+          6.300000000000001
+        ],
+        [
+          -1.8000000000000003,
+          7.2
+        ],
+        [
+          -1.8000000000000003,
+          8.1
+        ],
+        [
+          -1.8000000000000003,
+          9.0
+        ],
+        [
+          -1.8000000000000003,
+          9.9
+        ],
+        [
+          -1.8000000000000003,
+          10.8
+        ],
+        [
+          -1.8000000000000003,
+          11.700000000000001
+        ],
+        [
+          -1.8000000000000003,
+          12.600000000000001
+        ],
+        [
+          -1.8000000000000003,
+          13.5
+        ],
+        [
+          -1.8000000000000003,
+          14.4
+        ],
+        [
+          -1.8000000000000003,
+          15.3
+        ],
+        [
+          -0.9000000000000004,
+          1.8
+        ],
+        [
+          -0.9000000000000004,
+          2.7
+        ],
+        [
+          -0.9000000000000004,
+          3.6
+        ],
+        [
+          -0.9000000000000004,
+          4.5
+        ],
+        [
+          -0.9000000000000004,
+          5.4
+        ],
+        [
+          -0.9000000000000004,
+          6.300000000000001
+        ],
+        [
+          -0.9000000000000004,
+          7.2
+        ],
+        [
+          -0.9000000000000004,
+          8.1
+        ],
+        [
+          -0.9000000000000004,
+          9.0
+        ],
+        [
+          -0.9000000000000004,
+          9.9
+        ],
+        [
+          -0.9000000000000004,
+          10.8
+        ],
+        [
+          -0.9000000000000004,
+          11.700000000000001
+        ],
+        [
+          -0.9000000000000004,
+          12.600000000000001
+        ],
+        [
+          -0.9000000000000004,
+          13.5
+        ],
+        [
+          -0.9000000000000004,
+          14.4
+        ],
+        [
+          -0.9000000000000004,
+          15.3
+        ],
+        [
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          6.300000000000001
+        ],
+        [
+          0.0,
+          7.2
+        ],
+        [
+          0.0,
+          8.1
+        ],
+        [
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          9.9
+        ],
+        [
+          0.0,
+          10.8
+        ],
+        [
+          0.0,
+          11.700000000000001
+        ],
+        [
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          13.5
+        ],
+        [
+          0.0,
+          14.4
+        ],
+        [
+          0.0,
+          15.3
+        ],
+        [
+          0.8999999999999995,
+          6.300000000000001
+        ],
+        [
+          0.8999999999999995,
+          7.2
+        ],
+        [
+          0.8999999999999995,
+          8.1
+        ],
+        [
+          0.8999999999999995,
+          9.0
+        ],
+        [
+          0.8999999999999995,
+          9.9
+        ],
+        [
+          0.8999999999999995,
+          10.8
+        ],
+        [
+          0.8999999999999995,
+          11.700000000000001
+        ],
+        [
+          0.8999999999999995,
+          12.600000000000001
+        ],
+        [
+          0.8999999999999995,
+          13.5
+        ],
+        [
+          0.8999999999999995,
+          14.4
+        ],
+        [
+          0.8999999999999995,
+          15.3
+        ],
+        [
+          1.799999999999999,
+          9.0
+        ],
+        [
+          1.799999999999999,
+          9.9
+        ],
+        [
+          1.799999999999999,
+          10.8
+        ],
+        [
+          1.799999999999999,
+          11.700000000000001
+        ],
+        [
+          1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          1.799999999999999,
+          13.5
+        ],
+        [
+          1.799999999999999,
+          14.4
+        ],
+        [
+          1.799999999999999,
+          15.3
+        ],
+        [
+          2.6999999999999993,
+          10.8
+        ],
+        [
+          2.6999999999999993,
+          11.700000000000001
+        ],
+        [
+          2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          2.6999999999999993,
+          13.5
+        ],
+        [
+          2.6999999999999993,
+          14.4
+        ],
+        [
+          2.6999999999999993,
+          15.3
+        ],
+        [
+          3.5999999999999996,
+          13.5
+        ],
+        [
+          3.5999999999999996,
+          14.4
+        ],
+        [
+          3.5999999999999996,
+          15.3
+        ],
+        [
+          4.5,
+          15.3
+        ]
+      ],
+      "post_count": 98,
+      "initial_post_area_mm2": 27.70884720466197,
+      "initial_post_area_fraction": 0.30476909988515233,
+      "nominal_unloaded_capacitance_pf": 6.17239970672663,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0008157484954137428,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.207126014083178,
+              "delta_pf_if_unstopped": 0.03472630735654825
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.003991002146845368,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.345871269765371,
+              "delta_pf_if_unstopped": 0.17347156303874112
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0179537134374182,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.031963065489224,
+              "delta_pf_if_unstopped": 0.8595633587625944
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.03173408774061307,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.859328876389533,
+              "delta_pf_if_unstopped": 1.6869291696629034
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.04249986175374217,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.64274622845994,
+              "delta_pf_if_unstopped": 2.47034652173331
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.051089446903945894,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.379301481474918,
+              "delta_pf_if_unstopped": 3.206901774748289
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0005262846679026323,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.194761529010875,
+              "delta_pf_if_unstopped": 0.022361822284245214
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.002594756067125431,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.284148910405434,
+              "delta_pf_if_unstopped": 0.11174920367880414
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.01210900739378864,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.728563510285068,
+              "delta_pf_if_unstopped": 0.5561638035584382
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.022290173164426323,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.274126181906703,
+              "delta_pf_if_unstopped": 1.1017264751800733
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.030900178299522907,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.804152066183037,
+              "delta_pf_if_unstopped": 1.6317523594564074
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.038238666711581416,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.315964508423887,
+              "delta_pf_if_unstopped": 2.1435648016972575
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00021622504891383732,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.181568668332437,
+              "delta_pf_if_unstopped": 0.009168961605807269
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0010749095533818531,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.218235620805094,
+              "delta_pf_if_unstopped": 0.04583591407846477
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.005222759669110522,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.401276786698328,
+              "delta_pf_if_unstopped": 0.22887707997169837
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.010082817748388423,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.629049835356934,
+              "delta_pf_if_unstopped": 0.4566501286303044
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.014607595528599186,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.855203847262717,
+              "delta_pf_if_unstopped": 0.6828041405360876
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.01882343005440698,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 7.079311701525365,
+              "delta_pf_if_unstopped": 0.906911994798735
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 2.1650608160267427e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.173316639852788,
+              "delta_pf_if_unstopped": 0.0009169331261587033
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0001081905590097465,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.176984290909544,
+              "delta_pf_if_unstopped": 0.004584584182913964
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0005393943602469087,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.1953205078897,
+              "delta_pf_if_unstopped": 0.02292080116307016
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0010749095533818531,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.218235620805094,
+              "delta_pf_if_unstopped": 0.04583591407846477
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.001606573773571468,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.241144404086241,
+              "delta_pf_if_unstopped": 0.06874469735961153
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0021344152004592887,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.264046225907347,
+              "delta_pf_if_unstopped": 0.09164651918071698
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 7.217563924155623e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.172705351999038,
+              "delta_pf_if_unstopped": 0.0003056452724079506
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 3.608087460892917e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.173927924104557,
+              "delta_pf_if_unstopped": 0.001528217377927632
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0001802308793637075,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.180040565820875,
+              "delta_pf_if_unstopped": 0.007640859094244945
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00036002865124187263,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.1876808409105655,
+              "delta_pf_if_unstopped": 0.01528113418393584
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0005393943602469087,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.1953205078897,
+              "delta_pf_if_unstopped": 0.02292080116307016
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0007183290506285022,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 6.202959542757595,
+              "delta_pf_if_unstopped": 0.03055983603096557
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH2",
+      "body_area_mm2": 172.7082824632919,
+      "active_area_mm2": 140.66389731860045,
+      "posts": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ]
+      ],
+      "post_count": 169,
+      "initial_post_area_mm2": 47.783624261100755,
+      "initial_post_area_fraction": 0.33970069912731027,
+      "nominal_unloaded_capacitance_pf": 9.833200047959263,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00047412393737991665,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.865738404328917,
+              "delta_pf_if_unstopped": 0.03253835636965441
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0023408391131473417,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.995831020333545,
+              "delta_pf_if_unstopped": 0.16263097237428248
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.010997656937477618,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.643523748472026,
+              "delta_pf_if_unstopped": 0.8103237005127628
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.020401353159935853,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.441626493453699,
+              "delta_pf_if_unstopped": 1.6084264454944357
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.02847749357228738,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.22109447791729,
+              "delta_pf_if_unstopped": 2.3878944299580276
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.035455680677478736,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.978077926246284,
+              "delta_pf_if_unstopped": 3.144877878287021
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0003056341654224415,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.854152153844144,
+              "delta_pf_if_unstopped": 0.020952105884880723
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0015157670391990063,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.937937451117348,
+              "delta_pf_if_unstopped": 0.10473740315808477
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0072789216807956185,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.355945641955978,
+              "delta_pf_if_unstopped": 0.5227455939967154
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.013855103065568785,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.874811778315037,
+              "delta_pf_if_unstopped": 1.0416117303557737
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.019804214580010804,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.387657751087891,
+              "delta_pf_if_unstopped": 1.5544577031286284
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.025196583686416214,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.892869058633876,
+              "delta_pf_if_unstopped": 2.0596690106746127
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00012546097652675335,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.841790655692192,
+              "delta_pf_if_unstopped": 0.008590607732928746
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0006252096779965798,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.876149577785325,
+              "delta_pf_if_unstopped": 0.04294952982606226
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.003074371807307946,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.047833953776877,
+              "delta_pf_if_unstopped": 0.21463390581761388
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.006022841328677975,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.262066601315112,
+              "delta_pf_if_unstopped": 0.42886655335584933
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.008850852990423569,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.47571516119517,
+              "delta_pf_if_unstopped": 0.6425151132359073
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.011563769925248685,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.688613668550168,
+              "delta_pf_if_unstopped": 0.8554136205909053
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 1.2555552004228642e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.834059123549983,
+              "delta_pf_if_unstopped": 0.0008590755907196268
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 6.275674431238665e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.837495393195715,
+              "delta_pf_if_unstopped": 0.0042953452364518085
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0003132590405231672,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.854675930103438,
+              "delta_pf_if_unstopped": 0.021475882144175173
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0006252096779965798,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.876149577785325,
+              "delta_pf_if_unstopped": 0.04294952982606226
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0009358574111886452,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.897620784934144,
+              "delta_pf_if_unstopped": 0.06442073697488127
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0012452077379436599,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.919089347212331,
+              "delta_pf_if_unstopped": 0.08588929925306843
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 4.185417542695857e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.833486406848841,
+              "delta_pf_if_unstopped": 0.0002863588895785085
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 2.0924752164092063e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.834631838795174,
+              "delta_pf_if_unstopped": 0.0014317908359107179
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.00010456539775045014,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.840358910822877,
+              "delta_pf_if_unstopped": 0.007158862863613891
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00020898501003328572,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.847517540769797,
+              "delta_pf_if_unstopped": 0.01431749281053385
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0003132590405231672,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.854675930103438,
+              "delta_pf_if_unstopped": 0.021475882144175173
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.00041738769288482966,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.861834071148175,
+              "delta_pf_if_unstopped": 0.028634023188912394
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH3",
+      "body_area_mm2": 215.82943043073905,
+      "active_area_mm2": 181.6580221820151,
+      "posts": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -5.4,
+          13.500000000000002
+        ],
+        [
+          -5.4,
+          14.400000000000002
+        ],
+        [
+          -5.4,
+          15.300000000000002
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          13.500000000000002
+        ],
+        [
+          -4.5,
+          14.400000000000002
+        ],
+        [
+          -4.5,
+          15.300000000000002
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          13.500000000000002
+        ],
+        [
+          -3.5999999999999996,
+          14.400000000000002
+        ],
+        [
+          -3.5999999999999996,
+          15.300000000000002
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          13.500000000000002
+        ],
+        [
+          -2.6999999999999993,
+          14.400000000000002
+        ],
+        [
+          -2.6999999999999993,
+          15.300000000000002
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          13.500000000000002
+        ],
+        [
+          -1.799999999999999,
+          14.400000000000002
+        ],
+        [
+          -1.799999999999999,
+          15.300000000000002
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          13.500000000000002
+        ],
+        [
+          -0.8999999999999986,
+          14.400000000000002
+        ],
+        [
+          -0.8999999999999986,
+          15.300000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          13.500000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          14.400000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          15.300000000000002
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          13.500000000000002
+        ],
+        [
+          0.9000000000000021,
+          14.400000000000002
+        ],
+        [
+          0.9000000000000021,
+          15.300000000000002
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          13.500000000000002
+        ],
+        [
+          1.8000000000000025,
+          14.400000000000002
+        ],
+        [
+          1.8000000000000025,
+          15.300000000000002
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          13.500000000000002
+        ],
+        [
+          2.700000000000003,
+          14.400000000000002
+        ],
+        [
+          2.700000000000003,
+          15.300000000000002
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          13.500000000000002
+        ],
+        [
+          3.600000000000003,
+          14.400000000000002
+        ],
+        [
+          3.600000000000003,
+          15.300000000000002
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          13.500000000000002
+        ],
+        [
+          4.5000000000000036,
+          14.400000000000002
+        ],
+        [
+          4.5000000000000036,
+          15.300000000000002
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          13.500000000000002
+        ],
+        [
+          5.400000000000004,
+          14.400000000000002
+        ],
+        [
+          5.400000000000004,
+          15.300000000000002
+        ]
+      ],
+      "post_count": 208,
+      "initial_post_area_mm2": 58.81061447520093,
+      "initial_post_area_fraction": 0.32374355819130696,
+      "nominal_unloaded_capacitance_pf": 12.531665032898163,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00038545457643628377,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.56514600391999,
+              "delta_pf_if_unstopped": 0.033480971021827344
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0019075657257521805,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.69901522064823,
+              "delta_pf_if_unstopped": 0.16735018775006694
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.009065568433437587,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.366145743061027,
+              "delta_pf_if_unstopped": 0.8344807101628646
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.01704411058446843,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 14.191278666916306,
+              "delta_pf_if_unstopped": 1.659613634018143
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.024083576401578266,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 15.002192388650323,
+              "delta_pf_if_unstopped": 2.4705273557521608
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.030316866226993665,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 15.79557738809698,
+              "delta_pf_if_unstopped": 3.2639123551988174
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00024842278426838725,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.553224058229825,
+              "delta_pf_if_unstopped": 0.021559025331661985
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0012339128444238177,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.639438911542104,
+              "delta_pf_if_unstopped": 0.1077738786439415
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.005970003996931678,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.069754612923107,
+              "delta_pf_if_unstopped": 0.5380895800249448
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.011466484286414046,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.60482791886094,
+              "delta_pf_if_unstopped": 1.0731628859627769
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.01653071224341584,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 14.135334568513372,
+              "delta_pf_if_unstopped": 1.603669535615209
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.02120189083262267,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 14.66002951032346,
+              "delta_pf_if_unstopped": 2.128364477425297
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00010195304041521469,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.540504466287778,
+              "delta_pf_if_unstopped": 0.008839433389615792
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0005083811683017691,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.575858884831836,
+              "delta_pf_if_unstopped": 0.044193851933673756
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0025076824282707967,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.752533735717059,
+              "delta_pf_if_unstopped": 0.2208687028188958
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0049315724260706574,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.973070981686805,
+              "delta_pf_if_unstopped": 0.4414059487886419
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.007274599930383446,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.193150004897676,
+              "delta_pf_if_unstopped": 0.6614849719995135
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.00953966511594328,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.412653466445269,
+              "delta_pf_if_unstopped": 0.8809884335471061
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 1.0201546021437746e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.53254899048953,
+              "delta_pf_if_unstopped": 0.0008839575913679454
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 5.099385602528872e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.536084789344697,
+              "delta_pf_if_unstopped": 0.004419756446534251
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.00025462279974893806,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.553763008837729,
+              "delta_pf_if_unstopped": 0.022097975939566084
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0005083811683017691,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.575858884831836,
+              "delta_pf_if_unstopped": 0.044193851933673756
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0007612780553882037,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.597952521223982,
+              "delta_pf_if_unstopped": 0.06628748832581977
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0010133164099990432,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.620043779282629,
+              "delta_pf_if_unstopped": 0.08837874638446586
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 3.400669546160806e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.53195968577861,
+              "delta_pf_if_unstopped": 0.0002946528804468329
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 1.7001805869015784e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.533138293811119,
+              "delta_pf_if_unstopped": 0.0014732609129559648
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 8.497049656584487e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.539031249543378,
+              "delta_pf_if_unstopped": 0.0073662166452148625
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00016984472673297056,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.546397243259491,
+              "delta_pf_if_unstopped": 0.014732210361328768
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.00025462279974893806,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.553763008837729,
+              "delta_pf_if_unstopped": 0.022097975939566084
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.00033930482485772793,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.561128541080972,
+              "delta_pf_if_unstopped": 0.029463508182809406
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH4",
+      "body_area_mm2": 171.69272760113688,
+      "active_area_mm2": 142.86998255259127,
+      "posts": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ]
+      ],
+      "post_count": 169,
+      "initial_post_area_mm2": 47.783624261100755,
+      "initial_post_area_fraction": 0.33445530969748194,
+      "nominal_unloaded_capacitance_pf": 9.944177441244204,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00047412393737991665,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.977015549109002,
+              "delta_pf_if_unstopped": 0.032838107864797905
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0023408391131473417,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.10830425049438,
+              "delta_pf_if_unstopped": 0.16412680925017575
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.010997656937477618,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.761897520773674,
+              "delta_pf_if_unstopped": 0.8177200795294706
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.020401353159935853,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.56715381067364,
+              "delta_pf_if_unstopped": 1.622976369429436
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.02847749357228738,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.353493355967192,
+              "delta_pf_if_unstopped": 2.4093159147229883
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.035455680677478736,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 13.11705010918457,
+              "delta_pf_if_unstopped": 3.172872667940366
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0003056341654224415,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.965322590420387,
+              "delta_pf_if_unstopped": 0.021145149176183153
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0015157670391990063,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.049878865975208,
+              "delta_pf_if_unstopped": 0.10570142473100397
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0072789216807956185,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.471710519570234,
+              "delta_pf_if_unstopped": 0.5275330783260301
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.013855103065568785,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.995271502986716,
+              "delta_pf_if_unstopped": 1.0510940617425124
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.019804214580010804,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.512705205362597,
+              "delta_pf_if_unstopped": 1.568527764118393
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.025196583686416214,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 12.022387624144448,
+              "delta_pf_if_unstopped": 2.0782101829002446
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00012546097652675335,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.952847210905274,
+              "delta_pf_if_unstopped": 0.008669769661070248
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0006252096779965798,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.98752258277441,
+              "delta_pf_if_unstopped": 0.04334514153020663
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.003074371807307946,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.160784257145558,
+              "delta_pf_if_unstopped": 0.2166068159013541
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.006022841328677975,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.376976059718451,
+              "delta_pf_if_unstopped": 0.43279861847424783
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.008850852990423569,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.592568670880636,
+              "delta_pf_if_unstopped": 0.6483912296364327
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.011563769925248685,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.807394948335654,
+              "delta_pf_if_unstopped": 0.8632175070914503
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 1.2555552004228642e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.945044433910923,
+              "delta_pf_if_unstopped": 0.0008669926667188577
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 6.275674431238665e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.948512369899639,
+              "delta_pf_if_unstopped": 0.004334928655435277
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0003132590405231672,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.965851191256057,
+              "delta_pf_if_unstopped": 0.021673750011853343
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0006252096779965798,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.98752258277441,
+              "delta_pf_if_unstopped": 0.04334514153020663
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0009358574111886452,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.00919140813625,
+              "delta_pf_if_unstopped": 0.06501396689204597
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0012452077379436599,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.03085746143033,
+              "delta_pf_if_unstopped": 0.08668002018612597
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 4.185417542695857e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.94446643918087,
+              "delta_pf_if_unstopped": 0.00028899793666603557
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 2.0924752164092063e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.945622427097845,
+              "delta_pf_if_unstopped": 0.0014449858536416116
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.00010456539775045014,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.951402273745906,
+              "delta_pf_if_unstopped": 0.007224832501702139
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00020898501003328572,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.958626859668605,
+              "delta_pf_if_unstopped": 0.014449418424401728
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0003132590405231672,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.965851191256057,
+              "delta_pf_if_unstopped": 0.021673750011853343
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.00041738769288482966,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.973075260773191,
+              "delta_pf_if_unstopped": 0.02889781952898751
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH5",
+      "body_area_mm2": 281.72786116150576,
+      "active_area_mm2": 241.98448741931108,
+      "posts": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -5.4,
+          13.500000000000002
+        ],
+        [
+          -5.4,
+          14.400000000000002
+        ],
+        [
+          -5.4,
+          15.300000000000002
+        ],
+        [
+          -5.4,
+          16.200000000000003
+        ],
+        [
+          -5.4,
+          17.1
+        ],
+        [
+          -5.4,
+          18.000000000000004
+        ],
+        [
+          -5.4,
+          18.900000000000002
+        ],
+        [
+          -5.4,
+          19.800000000000004
+        ],
+        [
+          -5.4,
+          20.700000000000003
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          13.500000000000002
+        ],
+        [
+          -4.5,
+          14.400000000000002
+        ],
+        [
+          -4.5,
+          15.300000000000002
+        ],
+        [
+          -4.5,
+          16.200000000000003
+        ],
+        [
+          -4.5,
+          17.1
+        ],
+        [
+          -4.5,
+          18.000000000000004
+        ],
+        [
+          -4.5,
+          18.900000000000002
+        ],
+        [
+          -4.5,
+          19.800000000000004
+        ],
+        [
+          -4.5,
+          20.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          13.500000000000002
+        ],
+        [
+          -3.5999999999999996,
+          14.400000000000002
+        ],
+        [
+          -3.5999999999999996,
+          15.300000000000002
+        ],
+        [
+          -3.5999999999999996,
+          16.200000000000003
+        ],
+        [
+          -3.5999999999999996,
+          17.1
+        ],
+        [
+          -3.5999999999999996,
+          18.000000000000004
+        ],
+        [
+          -3.5999999999999996,
+          18.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          19.800000000000004
+        ],
+        [
+          -3.5999999999999996,
+          20.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          13.500000000000002
+        ],
+        [
+          -2.6999999999999993,
+          14.400000000000002
+        ],
+        [
+          -2.6999999999999993,
+          15.300000000000002
+        ],
+        [
+          -2.6999999999999993,
+          16.200000000000003
+        ],
+        [
+          -2.6999999999999993,
+          17.1
+        ],
+        [
+          -2.6999999999999993,
+          18.000000000000004
+        ],
+        [
+          -2.6999999999999993,
+          18.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          19.800000000000004
+        ],
+        [
+          -2.6999999999999993,
+          20.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          13.500000000000002
+        ],
+        [
+          -1.799999999999999,
+          14.400000000000002
+        ],
+        [
+          -1.799999999999999,
+          15.300000000000002
+        ],
+        [
+          -1.799999999999999,
+          16.200000000000003
+        ],
+        [
+          -1.799999999999999,
+          17.1
+        ],
+        [
+          -1.799999999999999,
+          18.000000000000004
+        ],
+        [
+          -1.799999999999999,
+          18.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          19.800000000000004
+        ],
+        [
+          -1.799999999999999,
+          20.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          13.500000000000002
+        ],
+        [
+          -0.8999999999999986,
+          14.400000000000002
+        ],
+        [
+          -0.8999999999999986,
+          15.300000000000002
+        ],
+        [
+          -0.8999999999999986,
+          16.200000000000003
+        ],
+        [
+          -0.8999999999999986,
+          17.1
+        ],
+        [
+          -0.8999999999999986,
+          18.000000000000004
+        ],
+        [
+          -0.8999999999999986,
+          18.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          19.800000000000004
+        ],
+        [
+          -0.8999999999999986,
+          20.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          13.500000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          14.400000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          15.300000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          16.200000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          17.1
+        ],
+        [
+          1.7763568394002505e-15,
+          18.000000000000004
+        ],
+        [
+          1.7763568394002505e-15,
+          18.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          19.800000000000004
+        ],
+        [
+          1.7763568394002505e-15,
+          20.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          13.500000000000002
+        ],
+        [
+          0.9000000000000021,
+          14.400000000000002
+        ],
+        [
+          0.9000000000000021,
+          15.300000000000002
+        ],
+        [
+          0.9000000000000021,
+          16.200000000000003
+        ],
+        [
+          0.9000000000000021,
+          17.1
+        ],
+        [
+          0.9000000000000021,
+          18.000000000000004
+        ],
+        [
+          0.9000000000000021,
+          18.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          19.800000000000004
+        ],
+        [
+          0.9000000000000021,
+          20.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          13.500000000000002
+        ],
+        [
+          1.8000000000000025,
+          14.400000000000002
+        ],
+        [
+          1.8000000000000025,
+          15.300000000000002
+        ],
+        [
+          1.8000000000000025,
+          16.200000000000003
+        ],
+        [
+          1.8000000000000025,
+          17.1
+        ],
+        [
+          1.8000000000000025,
+          18.000000000000004
+        ],
+        [
+          1.8000000000000025,
+          18.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          19.800000000000004
+        ],
+        [
+          1.8000000000000025,
+          20.700000000000003
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          13.500000000000002
+        ],
+        [
+          2.700000000000003,
+          14.400000000000002
+        ],
+        [
+          2.700000000000003,
+          15.300000000000002
+        ],
+        [
+          2.700000000000003,
+          16.200000000000003
+        ],
+        [
+          2.700000000000003,
+          17.1
+        ],
+        [
+          2.700000000000003,
+          18.000000000000004
+        ],
+        [
+          2.700000000000003,
+          18.900000000000002
+        ],
+        [
+          2.700000000000003,
+          19.800000000000004
+        ],
+        [
+          2.700000000000003,
+          20.700000000000003
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          13.500000000000002
+        ],
+        [
+          3.600000000000003,
+          14.400000000000002
+        ],
+        [
+          3.600000000000003,
+          15.300000000000002
+        ],
+        [
+          3.600000000000003,
+          16.200000000000003
+        ],
+        [
+          3.600000000000003,
+          17.1
+        ],
+        [
+          3.600000000000003,
+          18.000000000000004
+        ],
+        [
+          3.600000000000003,
+          18.900000000000002
+        ],
+        [
+          3.600000000000003,
+          19.800000000000004
+        ],
+        [
+          3.600000000000003,
+          20.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          13.500000000000002
+        ],
+        [
+          4.5000000000000036,
+          14.400000000000002
+        ],
+        [
+          4.5000000000000036,
+          15.300000000000002
+        ],
+        [
+          4.5000000000000036,
+          16.200000000000003
+        ],
+        [
+          4.5000000000000036,
+          17.1
+        ],
+        [
+          4.5000000000000036,
+          18.000000000000004
+        ],
+        [
+          4.5000000000000036,
+          18.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          19.800000000000004
+        ],
+        [
+          4.5000000000000036,
+          20.700000000000003
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          13.500000000000002
+        ],
+        [
+          5.400000000000004,
+          14.400000000000002
+        ],
+        [
+          5.400000000000004,
+          15.300000000000002
+        ],
+        [
+          5.400000000000004,
+          16.200000000000003
+        ],
+        [
+          5.400000000000004,
+          17.1
+        ],
+        [
+          5.400000000000004,
+          18.000000000000004
+        ],
+        [
+          5.400000000000004,
+          18.900000000000002
+        ],
+        [
+          5.400000000000004,
+          19.800000000000004
+        ],
+        [
+          5.400000000000004,
+          20.700000000000003
+        ]
+      ],
+      "post_count": 286,
+      "initial_post_area_mm2": 80.86459490340127,
+      "initial_post_area_fraction": 0.33417263960097976,
+      "nominal_unloaded_capacitance_pf": 16.838896227992088,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00028052749280059187,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.87175184789523,
+              "delta_pf_if_unstopped": 0.032855619903141786
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0013921842544309725,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.003140020404683,
+              "delta_pf_if_unstopped": 0.164243792412595
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.006707463505827976,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.65877596452767,
+              "delta_pf_if_unstopped": 0.819879736535583
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.012817735886838915,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 18.473265687147695,
+              "delta_pf_if_unstopped": 1.6343694591556073
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.018389748433758533,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 19.279455132182743,
+              "delta_pf_if_unstopped": 2.440558904190656
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.02347881508600727,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 20.075086326690744,
+              "delta_pf_if_unstopped": 3.236190098698657
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00018075283568330658,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.860052393093078,
+              "delta_pf_if_unstopped": 0.021156165100990165
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0008994185174611979,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.944663571951168,
+              "delta_pf_if_unstopped": 0.10576734395908005
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.004390556017602676,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.36726455505613,
+              "delta_pf_if_unstopped": 0.5283683270640438
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.008524585302976156,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.893883553061034,
+              "delta_pf_if_unstopped": 1.0549873250689465
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.012418223799119055,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 18.41787683718975,
+              "delta_pf_if_unstopped": 1.5789806091976608
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.016087141155526175,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 18.938488835555574,
+              "delta_pf_if_unstopped": 2.099592607563487
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 7.416141837533474e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.847570406216885,
+              "delta_pf_if_unstopped": 0.008674178224797657
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.00037007449634205434,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.882264986989362,
+              "delta_pf_if_unstopped": 0.04336875899727488
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0018322028054450989,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.055677460651143,
+              "delta_pf_if_unstopped": 0.2167812326590557
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0036196614615054967,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.272259946654138,
+              "delta_pf_if_unstopped": 0.4333637186620507
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.005363506541653851,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.48857564006858,
+              "delta_pf_if_unstopped": 0.649679412076491
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.007064862325536858,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 17.704560077592525,
+              "delta_pf_if_unstopped": 0.8656638496004376
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 7.4194438367758405e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.839763655062505,
+              "delta_pf_if_unstopped": 0.0008674270704176479
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 3.708988024780369e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.84323334287738,
+              "delta_pf_if_unstopped": 0.004337114885291982
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.00018526607081054692,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.860581281095623,
+              "delta_pf_if_unstopped": 0.021685053103535523
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00037007449634205434,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.882264986989362,
+              "delta_pf_if_unstopped": 0.04336875899727488
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0005544264113228669,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.903947272767628,
+              "delta_pf_if_unstopped": 0.06505104477554013
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.000738322950153758,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.925628065855577,
+              "delta_pf_if_unstopped": 0.08673183786348915
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 2.4732295082596776e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.83918537057624,
+              "delta_pf_if_unstopped": 0.00028914258415113636
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 1.2365332055735978e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.840341938652642,
+              "delta_pf_if_unstopped": 0.0014457106605547665
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 6.180627645251957e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.846124724200592,
+              "delta_pf_if_unstopped": 0.007228496208504964
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0001235616193810407,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.85335307613977,
+              "delta_pf_if_unstopped": 0.014456848147681
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.00018526607081054692,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.860581281095623,
+              "delta_pf_if_unstopped": 0.021685053103535523
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.00024691967276530555,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 16.867809336358576,
+              "delta_pf_if_unstopped": 0.028913108366488416
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "REF",
+      "body_area_mm2": 168.0,
+      "active_area_mm2": 120.0,
+      "posts": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ]
+      ],
+      "post_count": 130,
+      "initial_post_area_mm2": 36.756634047000574,
+      "initial_post_area_fraction": 0.30630528372500476,
+      "nominal_unloaded_capacitance_pf": 8.157449699359109,
+      "uniform_scenarios": [
+        {
+          "post_modulus_mpa_assumed": 1.32,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.0006157757988831502,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.192070767868994,
+              "delta_pf_if_unstopped": 0.03462106850988533
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0030287435914175763,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.330443855652984,
+              "delta_pf_if_unstopped": 0.17299415629387482
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.01397337009006589,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.017385321041921,
+              "delta_pf_if_unstopped": 0.859935621682812
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.025390771200919624,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.856444227851807,
+              "delta_pf_if_unstopped": 1.6989945284926975
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.034801533209835984,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.665446758436982,
+              "delta_pf_if_unstopped": 2.507997059077873
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.042646713687077654,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 11.44021266760051,
+              "delta_pf_if_unstopped": 3.2827629682414017
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 2.05,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00039708131320908554,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.179743355259358,
+              "delta_pf_if_unstopped": 0.02229365590024912
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.001964495924728893,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.268875562352756,
+              "delta_pf_if_unstopped": 0.11142586299364687
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.009322034996814265,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.712885456428301,
+              "delta_pf_if_unstopped": 0.5554357570691923
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.017495180879706352,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.261530048208364,
+              "delta_pf_if_unstopped": 1.104080348849255
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.024680526255185957,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.800027025239169,
+              "delta_pf_if_unstopped": 1.64257732588006
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.031022016932685064,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 10.326142945011805,
+              "delta_pf_if_unstopped": 2.1686932456526957
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 5,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 0.00016305832835006862,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.166590548534758,
+              "delta_pf_if_unstopped": 0.00914084917564928
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 0.0008117543145365169,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.20314748626103,
+              "delta_pf_if_unstopped": 0.04569778690192017
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.003971883477871396,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.385731205475306,
+              "delta_pf_if_unstopped": 0.2282815061161969
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00773375781410302,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.613290680764282,
+              "delta_pf_if_unstopped": 0.4558409814051725
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.01129750684672729,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.839817062047748,
+              "delta_pf_if_unstopped": 0.6823673626886393
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.014674728615222447,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 9.065038164619024,
+              "delta_pf_if_unstopped": 0.9075884652599147
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 50,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 1.6321807639790852e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.158363811605414,
+              "delta_pf_if_unstopped": 0.0009141122463045548
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 8.157352574522658e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.162020200255865,
+              "delta_pf_if_unstopped": 0.004570500896756258
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.0004069813638602537,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.180300648059507,
+              "delta_pf_if_unstopped": 0.022850948700398277
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.0008117543145365169,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.20314748626103,
+              "delta_pf_if_unstopped": 0.04569778690192017
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.001214330931896529,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.22598984841112,
+              "delta_pf_if_unstopped": 0.06854014905201034
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0016147232923942767,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.24882737304918,
+              "delta_pf_if_unstopped": 0.09137767369007044
+            }
+          ]
+        },
+        {
+          "post_modulus_mpa_assumed": 150,
+          "loads": [
+            {
+              "force_n_model_input": 0.2,
+              "uniform_travel_mm": 5.440997255912183e-06,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.157754404107088,
+              "delta_pf_if_unstopped": 0.00030470474797894553
+            },
+            {
+              "force_n_model_input": 1,
+              "uniform_travel_mm": 2.720103934156781e-05,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.158973216432356,
+              "delta_pf_if_unstopped": 0.0015235170732470493
+            },
+            {
+              "force_n_model_input": 5,
+              "uniform_travel_mm": 0.00013590657964207553,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.165067116249078,
+              "delta_pf_if_unstopped": 0.0076174168899694195
+            },
+            {
+              "force_n_model_input": 10,
+              "uniform_travel_mm": 0.00027156688510753256,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.172684103712884,
+              "delta_pf_if_unstopped": 0.015234404353774877
+            },
+            {
+              "force_n_model_input": 15,
+              "uniform_travel_mm": 0.0004069813638602537,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.180300648059507,
+              "delta_pf_if_unstopped": 0.022850948700398277
+            },
+            {
+              "force_n_model_input": 20,
+              "uniform_travel_mm": 0.0005421504634773144,
+              "would_reach_stop": false,
+              "capacitance_pf_if_unstopped": 8.187916735655596,
+              "delta_pf_if_unstopped": 0.030467036296487393
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "headroom": [
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9212808255456917,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.7819994742512728,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.0932946644081056,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.26285406136391565,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 0.5234070819296797,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.2625828383590836,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.933693217477769,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.8439599878878923,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.3978421869829791,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.8502234056063243,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.3182335412071753,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 0.1954466195638549,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9469372186562204,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9101281926192142,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.726380626546539,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.49773495088579,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.270721272655269,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.0457679091358676,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9552212477602398,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9515393726790373,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9331320723349572,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9101281926192142,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.887130741611986,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.8641403531966878,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9558349065212228,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9546075926687427,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9484712462766192,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9408013499023076,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9331320723349572,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH0",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9254634376541269,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9503236852759311,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.8115784295937383,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.125486633869885,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.298120822969576,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 0.48529652910083065,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.2218517821158095,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9626881703482342,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.8733007889536752,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.4288861890740412,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.8833235174524061,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -0.353297633176072,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 0.1585148090647781,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9758810310266721,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9392140785540146,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.756172912660781,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.528399864002175,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.3022458520963918,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.0781379978337444,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9841330595063207,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9804654084495654,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9621291914694092,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9392140785540146,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9163052952728679,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.8934034734517624,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9847443473600714,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9835217752545518,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9774091335382344,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9697688584485435,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9621291914694092,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH1",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": -1.9544901566015138,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7082887049698083,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8383813209744364,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.4860740491129167,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.2841767940945896,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.0636447785581815,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.820628226887175,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6967024544850347,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7804877517582387,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.1984959425968693,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.7173620789559276,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.2302080517287823,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.7354193592747666,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6843409563330827,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7186998784262162,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8903842544177678,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.1046169019560033,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.318265461836061,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.5311639691910592,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6766094241908736,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6800456938366057,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.697226230744329,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7186998784262162,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7401710855750352,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7616396478532224,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6760367074897324,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6771821394360646,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6829092114637678,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.6900678414106878,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.697226230744329,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH2",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7043843717890663,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.407696304560881,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.541565521289121,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 5.208696043701918,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 6.033828967557197,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 6.844742689291214,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 7.638127688737871,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.395774358870716,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.481989212182995,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.9123049135639985,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 5.4473782195018305,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 5.977884869154263,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 6.502579810964351,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.3830547669286695,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.418409185472727,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.5950840363579495,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.815621282327696,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 5.035700305538567,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 5.25520376708616,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.375099291130422,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.378635089985588,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.39631330947862,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.418409185472727,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.440502821864873,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.4625940799235195,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.3745099864195005,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.37568859445201,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.3815815501842685,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.388947543900382,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.39631330947862,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH3",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.403678841721863,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8195658497498925,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.9508545511352704,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.604447821414565,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.4097041113145306,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.196043656608083,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 4.959600409825461,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8078728910612778,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8924291666160986,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.314260820211125,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.837821803627607,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.3552555060034877,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 3.8649379247853393,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.795397511546165,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8300728834153013,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.0033345577864488,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.2195263603593425,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.4351189715215273,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 2.649945248976545,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7875947345518135,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.79106267054053,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.808401491896948,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8300728834153013,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8517417087771406,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8734077620712206,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7870167398217607,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7881727277387363,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.7939525743867968,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8011771603094964,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.808401491896948,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH4",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 1.8156255614140822,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.71430214853612,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.845690321045574,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.501326265168561,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 10.315815987788586,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 11.122005432823634,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 1.32,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 11.917636627331635,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.702602693733969,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.787213872592059,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.209814855697022,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.736433853701925,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 10.26042713783064,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 2.05,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 10.781039136196465,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.690120706857776,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.724815287630253,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.898227761292034,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.11481024729503,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.33112594070947,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 5,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 9.547110378233416,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.682313955703396,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.68578364351827,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.703131581736514,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.724815287630253,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.746497573408519,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 50,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.768178366496468,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 0.2,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.68173567121713,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 1,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.682892239293533,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 5,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.688675024841483,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 10,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.69590337678066,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 15,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.703131581736514,
+      "within_fdc_range": true
+    },
+    {
+      "site": "CH5",
+      "modulus_mpa": 150,
+      "force_n": 20,
+      "would_reach_stop": false,
+      "difference_to_reference_pf": 8.710359636999467,
+      "within_fdc_range": true
+    }
+  ],
+  "shield_estimates": [
+    {
+      "bank": 0,
+      "guard_copper_area_mm2": 450.09679900534303,
+      "grounded_CIN_foil_capacitance_pf_screen": 270.99642827867115,
+      "cable_pf_assumed": 44.99999999999999,
+      "total_pf_screen": 335.99642827867115,
+      "below_400pf_screen": true
+    },
+    {
+      "bank": 1,
+      "guard_copper_area_mm2": 512.3244823251065,
+      "grounded_CIN_foil_capacitance_pf_screen": 308.4627687569378,
+      "cable_pf_assumed": 44.99999999999999,
+      "total_pf_screen": 373.4627687569378,
+      "below_400pf_screen": true
+    }
+  ],
+  "nominal_added_nail_mm": 0.7859999999999999,
+  "nominal_added_tpu_mm": 1.736,
+  "scope": "A model sensitivity screen, not a force rating or proof of installed performance",
+  "limits": [
+    "Independent uniform post compression omits end constraint, base-layer strain, viscoelasticity, adhesion and finite plate bending.",
+    "Bulk tensile data must not be substituted for measured microstructure compression; the modulus sweep exposes this uncertainty.",
+    "Fringing fields, cable/PCB parasitics, dielectric loss, temperature and humidity are not solved.",
+    "Protected references may help track drift but do not guarantee cancellation of spatially different thermal or mechanical changes.",
+    "Finite/contact-area loading, edge loads, stops, retention, source motion and physical 20 N/contact tests remain."
+  ]
+}

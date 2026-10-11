@@ -314,24 +314,38 @@
       "related": ["R1", "B1", "CAPACITIVE"]
     },
     {
-      "id": "CAPACITIVE", "slug": "capacitive", "title": "Capacitive skin · Shielded contact cells", "group": "research",
-      "status": "Reference approach only", "status_detail": "A sensing approach and converter reference are identified. No ENPIRE capacitor stack, routed flex or calibrated sensor is supplied.",
-      "summary": "Use shaped capacitive compression cells to obtain thin local contact sensing without permanent magnets.",
+      "id": "CAPACITIVE", "slug": "capacitive", "title": "K1 · Shielded capacitive cells", "group": "development",
+      "status": "Cell tooling and checked readout",
+      "status_detail": "49 current CAD parts, casting patterns, conforming supports, a checked readout PCB and raw code are supplied. Electrode artwork, retention/stops, venting, cable/enclosure integration and physical qualification remain.",
+      "summary": "Place compression capacitors on the two nail prongs and four TPU regions, with protected reference cells and fixed readout electronics.",
       "signal": "Capacitance changes; force depends on the mechanical dielectric structure and calibration.",
       "best_for": "A possible alternative when magnetic interference is unacceptable.",
-      "tradeoff": "Dielectric creep, parasitics, moisture, shielding and interconnect strain need control.",
+      "tradeoff": "The current stack adds thickness and assembly steps. Plate/post mechanics, creep, parasitics, moisture and bending artifacts need measurement.",
       "sensors": [
-        ["Contact cells", "Not finalized: electrode/dielectric cells on local rigid islands", "Under the intended contact patches; dimensions and stack are not selected"],
-        ["Readout reference", "TI FDC1004", "On fixed electronics close to the sensing connections, with an appropriate shield layout"]
+        ["CH0 and CH1", "Covered sensing electrode, molded SYLGARD 184 post sheet and grounded stainless spreader", "One cell over each nail face; preserve the notch"],
+        ["CH2–CH5", "Four separate post-sheet capacitors on conforming rigid supports", "On the four retained TPU contact regions"],
+        ["Two reference cells", "Protected, unloaded capacitors made with the same post-sheet process", "At the readout boards, away from object loads"],
+        ["Two readout boards", "FDC1004DGSR plus ADS1115IDGSR; one board per Pico I²C bus", "Fixed electronics; three pressure cells and one reference per board"]
       ],
-      "placement": "The sensor is the mechanical capacitor, not the converter IC alone. A flexing finger needs a layout that separates contact compression from unwanted bending/strain response.",
+      "placement": "The compression stack is the tactile sensor; the converter stays off the contact surface. The nail addition is nominally 0.786 mm. The 1.736 mm TPU stack figure is above the R1 smoothed-saddle datum, with additional fitting geometry beneath it. None of these dimensions is a measured compressed thickness.",
+      "visual": {"path": "assets/development/capacitive/k1/visuals/k1_cell_placement.png", "alt": "Six K1 capacitor locations and their conforming supports on the source ENPIRE finger", "caption": "Current cell development on the source geometry. Electrode copper, plate joints, stops/retention, cables and the complete physical finger remain unfinished."},
+      "placement_visual": {"path": "assets/development/capacitive/k1/visuals/k1_stack.svg", "alt": "K1 compression capacitor stack with silicone posts, sensing electrode, driven shield and grounded spreader", "caption": "Proposed material stack and sensing connections. The diagram identifies the sensor and where it sits; it is not a force calibration."},
+      "detail_visuals": [
+        {"path": "assets/development/capacitive/k1/visuals/k1_readout.png", "alt": "K1 routed readout board and its two separate driven-shield regions", "caption": "23-component native PCB; zero violations and missing connections in KiCad. Circuit operation, installed parasitics and physical sensor performance remain untested."}
+      ],
       "schematic": ["Object compresses pad", "Capacitor gap changes", "Shielded converter", "Calibrated contact / force"],
       "resources": [
+        ["Start here", "K1 sensor, placement, wiring and reproduction guide", "build-capacitive.html"],
+        ["Development files", "CAD, tooling, native PCB, artwork, raw code and evidence", "assets/development/capacitive/k1/file-index.html"],
+        ["Module download", "K1 development artifacts and scope (ZIP)", "downloads/k1-development.zip"],
+        ["Complete source", "Full repository source and recorder dependencies", "downloads/enpire-source.zip"],
+        ["CAD inventory", "49 current parts and materials (CSV)", "assets/development/capacitive/k1/parts.csv"],
+        ["PCB components", "Readout ordering codes, values and footprints (CSV)", "assets/development/capacitive/k1/pcb_components.csv"],
         ["Review", "Scalability comparison", "architecture.html"],
         ["Reference", "TI FDC1004 documentation", "https://www.ti.com/lit/ds/symlink/fdc1004.pdf"]
       ],
-      "missing": ["A selected dielectric and electrode stack", "Mechanical islands, flex routing, shielding and sealing", "ENPIRE CAD, PCB files, firmware and force data"],
-      "next_steps": ["Make and characterize a single compression coupon.", "Measure contact response separately from bending, moisture and nearby-object effects.", "Develop a shaped array if the coupon supports the required range and durability."],
+      "missing": ["Electrode fabrication, ground bonds, stops and retention", "Vents/seals, guarded cable routes and enclosure", "Measured post/plate behavior and installed parasitics", "Independent contact, 20 N force, wear and precision-task results"],
+      "next_steps": ["Fabricate and measure the post-sheet tools and corrected support fit.", "Bring up the checked PCB with measured capacitors, then complete the cell interfaces and whole-finger assembly.", "Compare independent specimens using the common contact, force and precision tests."],
       "related": ["F1", "B1", "C1"]
     },
     {

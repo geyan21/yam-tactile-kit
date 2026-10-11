@@ -1,0 +1,15 @@
+{
+  "source_runs": {
+    "cells": "build/engineering/prototypes/capacitive/cad_runs/20261011T165415.841509Z",
+    "saddles": "build/engineering/prototypes/capacitive/saddle_runs/20261011T172831.557871Z",
+    "board": "build/engineering/prototypes/capacitive/routing/20261011T172208.410587Z/native-documented-drill",
+    "screen": "build/engineering/prototypes/capacitive/screens/20261011T163932.182186Z",
+    "visuals": "build/engineering/prototypes/capacitive/visuals/20261011T174611.955130Z"
+  },
+  "input_identities": {
+    "cell_manifest": "d5f70e4a250fcdd90df189d9d6ea66100fea4ef97aa954f790078346f8c806ea",
+    "saddle_manifest": "69fe5ce3f1b259efabf68a6de5d27d6ef63b306811cab78baee39eb23a63cc5b",
+    "pcb": "97d87d46629c4bf03cd241419368029b5a129dcfc4a8027c5fbeebf6dbd1a6b4",
+    "native_check": "b03a1e5659712aff83bea122ff2176a557b288fb5f4e07de6ffb69db7fe799b5"
+  }
+}

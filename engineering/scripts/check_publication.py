@@ -39,6 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("commit")
     parser.add_argument("--pages", action="store_true")
+    parser.add_argument("--capacitive", action="store_true")
     args = parser.parse_args()
     if not re.fullmatch(r"[0-9a-f]{40}", args.commit):
         parser.error("Use a full commit SHA")
@@ -75,6 +76,16 @@ def main():
                 summary["pages_contains_rejected_r2_link"] = "r2-routing-study/file-index.html" in page["body"]
                 summary["pages_contains_fitted_foil_packet"] = "fitted-foils-r3/file-index.html" in page["body"]
                 summary["pages_contains_fitted_contact_map"] = "fitted-foils-r3/review/fitted_contact_map.png" in page["body"]
+        if args.capacitive:
+            page = fetch("https://geyan21.github.io/yam-tactile-kit/capacitive.html?"+
+                         urlencode({"commit": args.commit}), decode=False)
+            summary["capacitive_page_http"] = page["status"]
+            if page["status"] == 200:
+                (folder / "capacitive_page.html").write_text(page["body"])
+                summary["capacitive_contains_expected_release"] = tag in page["body"]
+                summary["capacitive_contains_k1_packet"] = "development/capacitive/k1/file-index.html" in page["body"]
+                summary["capacitive_contains_stack"] = "development/capacitive/k1/visuals/k1_stack.svg" in page["body"]
+                summary["capacitive_contains_module_download"] = "k1-development.zip" in page["body"]
         (folder / "summary.json").write_text(json.dumps(summary, indent=2)+"\n")
         record["result"] = summary
         print(json.dumps(summary, indent=2))

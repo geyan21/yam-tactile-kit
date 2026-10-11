@@ -1,0 +1,328 @@
+{
+  "schema": "yam-k1-conforming-saddles/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "cdfeeae99aecc6a3dd6cffd810ad4b1c0f3afc30b73146f582b5457175d0055e",
+    "build/engineering/prototypes/capacitive/cad_runs/20261011T165415.841509Z/manifest.json": "d5f70e4a250fcdd90df189d9d6ea66100fea4ef97aa954f790078346f8c806ea",
+    "engineering/release/r1/r1_manifest.json": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14",
+    "engineering/scripts/build_capacitive_saddles.py": "8ab306d6fc6675fecd00522d50fd4e7a3aacb620e9bb6eb56439f6c1d230ff95",
+    "engineering/scripts/capacitive_geometry.py": "fa6a93b3471f40c0d36a3a31ddc0e155e0940bcb568685dbd7e8750c619d9fa7",
+    "engineering/scripts/build_f1_stack_parts.py": "589eba9809c1f769d5f7b547b91b5d6721cbd89a5c9367ef2dbb02827ffcc72a",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/scripts/check_f1_tail_fit.py": "07d1eb56dc93c007ec7e17480a5fc499f674b37d86031704f7815b4340d659e2",
+    "engineering/scripts/source_brep.py": "228fba41ef66f374a887c02452489991500467780584e18865b127057d2010be",
+    "engineering/scripts/analyze_b1_interfaces.py": "0c4d534a3a3b917e96e8f7934359ada9406d7ecfc89ee6dfa1b4b9d9c7dad1fd",
+    "engineering/release/r1/cad/pad_2_saddle_witness.step": "561b4b83820522a0474e4c9e2e9cd5e8d25fe900bd6b7a16c4bb0d26313f0dbf",
+    "engineering/release/r1/cad/pad_3_saddle_witness.step": "db0740b7bc143f792fb6fa92baf452a881dcb1500eca9439b428147d9ca70e4c",
+    "engineering/release/r1/cad/pad_4_saddle_witness.step": "9453763f54a9dd574ff75f8fe4e1c29b9e203c88ddf75587a4fd2be48bcf8f6e",
+    "engineering/release/r1/cad/pad_5_saddle_witness.step": "4289a798acda26da7b197935d6f1fad2a07fd0c199c464fa535d4455a18ff841"
+  },
+  "parts": [
+    {
+      "id": "k1_ch2_conforming_saddle",
+      "purpose": "CH2 complete rigid support from the retained TPU-fit back surface to the flex bond",
+      "material": "PETG prototype; actual fit, bond, stiffness and durability remain untested",
+      "kind": "fabricate",
+      "step": "cad/k1_ch2_conforming_saddle.step",
+      "stl": "cad/k1_ch2_conforming_saddle.stl",
+      "sha256_step": "453153f56ea64ecb93d4958cb7d27a882594d79a97a1a87eb797efcb9215c365",
+      "sha256_stl": "49be524b72e4ee54194dc7b1eb584d1bd02d1875a722fb6b20220bec8a882db0",
+      "volume_mm3": 283.9317000465442,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.55464935302734,
+          -4.811455726623535
+        ],
+        [
+          -1.0,
+          -76.57280731201172,
+          -0.3732931613922119
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_conforming_saddle",
+      "purpose": "CH3 complete rigid support from the retained TPU-fit back surface to the flex bond",
+      "material": "PETG prototype; actual fit, bond, stiffness and durability remain untested",
+      "kind": "fabricate",
+      "step": "cad/k1_ch3_conforming_saddle.step",
+      "stl": "cad/k1_ch3_conforming_saddle.stl",
+      "sha256_step": "f577454af2877761c3dc9d42bb152219530d1d781838fbc66151143238c7c14b",
+      "sha256_stl": "464e813705932fbb3d4d6239c81dd2a372c748e5e91eebdfaffe969b0ef59767",
+      "volume_mm3": 316.5100965742808,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -5.147702217102051
+        ],
+        [
+          -1.0,
+          -58.70735549926758,
+          3.0029213428497314
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_conforming_saddle",
+      "purpose": "CH4 complete rigid support from the retained TPU-fit back surface to the flex bond",
+      "material": "PETG prototype; actual fit, bond, stiffness and durability remain untested",
+      "kind": "fabricate",
+      "step": "cad/k1_ch4_conforming_saddle.step",
+      "stl": "cad/k1_ch4_conforming_saddle.stl",
+      "sha256_step": "641e004f83f34d2b952603f6b9ffb9f2e63afc758fe28b72263b81607d62d632",
+      "sha256_stl": "5a0fddb808a1b7ab4dd8c6085e019ba07dc63535801bcca52a161bd9c67bebf1",
+      "volume_mm3": 252.67410948004925,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.64786911010742,
+          6.383822441101074
+        ],
+        [
+          -1.0,
+          -42.56605911254883,
+          12.37673282623291
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_conforming_saddle",
+      "purpose": "CH5 complete rigid support from the retained TPU-fit back surface to the flex bond",
+      "material": "PETG prototype; actual fit, bond, stiffness and durability remain untested",
+      "kind": "fabricate",
+      "step": "cad/k1_ch5_conforming_saddle.step",
+      "stl": "cad/k1_ch5_conforming_saddle.stl",
+      "sha256_step": "98b909d940cd318411419fb8cb0a9cbecdaf8001ebe9d08a9503ac3272632927",
+      "sha256_stl": "5328c99f7c77a835e2d6b0733d1be7bbb6a685d2d88f8542f944c5ded0b3b85b",
+      "volume_mm3": 404.29910341466444,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.04669952392578,
+          -5.20420503616333
+        ],
+        [
+          -1.0,
+          -23.580419540405273,
+          10.44504451751709
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "checks": [
+    {
+      "a": "k1_ch2_conforming_saddle",
+      "b": "source_hard_frame",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.4306761926870646,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_conforming_saddle",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.15278567681329103,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_conforming_saddle",
+      "b": "k1_ch2_flex_reference",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.04999921019737723,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_conforming_saddle",
+      "b": "source_hard_frame",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.8009491043630146,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_conforming_saddle",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14959768623493985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_conforming_saddle",
+      "b": "k1_ch2_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.087602608407494,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_conforming_saddle",
+      "b": "k1_ch3_flex_reference",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.049999430661039214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_conforming_saddle",
+      "b": "source_hard_frame",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.28999054858352,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_conforming_saddle",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1496493405459106,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_conforming_saddle",
+      "b": "k1_ch2_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.92493940854699,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_conforming_saddle",
+      "b": "k1_ch3_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.380900641924876,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_conforming_saddle",
+      "b": "k1_ch4_flex_reference",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.04999981881209622,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "source_hard_frame",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.7099288396318213,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14887514208961378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "k1_ch2_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.526111476373764,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "k1_ch3_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.660658249361852,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "k1_ch4_conforming_saddle",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.5193623100538787,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_conforming_saddle",
+      "b": "k1_ch5_flex_reference",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.049998488880846015,
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "passed_nominal_checks": true,
+  "hard_source_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "flex_bond_normal_mm": 0.05,
+  "replaces": [
+    "k1_ch2_rigid_saddle",
+    "k1_ch3_rigid_saddle",
+    "k1_ch4_rigid_saddle",
+    "k1_ch5_rigid_saddle"
+  ],
+  "limits": [
+    "The initial 0.8 mm slab alone did not reach the raw TPU surface; use these full supports.",
+    "The R1 witness supplies the variable-thickness fitting base below the smoothed surface datum.",
+    "The 1.736 mm K1 stack figure is above the R1 datum, not the total addition to raw TPU.",
+    "The back-to-TPU clearance and adhesive filling must be measured on the actual print.",
+    "The declared 0.05 mm flex bond line, source motion, retention, cable routing and force response remain physically unverified."
+  ]
+}

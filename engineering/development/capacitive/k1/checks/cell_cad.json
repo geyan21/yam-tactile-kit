@@ -1,0 +1,7379 @@
+{
+  "schema": "yam-k1-cell-cad/1",
+  "physical_specimens_tested": 0,
+  "integrated_prototype_complete": false,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "cdfeeae99aecc6a3dd6cffd810ad4b1c0f3afc30b73146f582b5457175d0055e",
+    "engineering/scripts/build_capacitive_k1_parts.py": "dda7a667c20058446cf67b8a5dc1eb11db0fde9ab1ffb7743ff97993a9ac41b0",
+    "engineering/scripts/capacitive_geometry.py": "fa6a93b3471f40c0d36a3a31ddc0e155e0940bcb568685dbd7e8750c619d9fa7",
+    "engineering/scripts/f1_surfaces.py": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9",
+    "engineering/scripts/build_f1_stack_parts.py": "589eba9809c1f769d5f7b547b91b5d6721cbd89a5c9367ef2dbb02827ffcc72a",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/scripts/mesh_capacitive_cast.py": "ece61f8ee25dc7a6a6351c15a4647b9c6581b492805a11173de9e9cd3cf152d7",
+    "engineering/release/r1/r1_manifest.json": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14",
+    "engineering/release/contact_regions/contact_report.json": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5"
+  },
+  "parts": [
+    {
+      "id": "k1_ch0_post_sheet_flat",
+      "purpose": "CH0 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch0_post_sheet_flat.step",
+      "stl": "cad/k1_ch0_post_sheet_flat.stl",
+      "sha256_step": "71f77a5027f09bfa066c925133aa693ca62f07922c534f0421ab0409399d8c95",
+      "sha256_stl": "79cbfb722f70f3f38a3a12acb6622d50ca84255370f61202bbb518b51468087a",
+      "volume_mm3": 8.73093541445393,
+      "bounds_mm": [
+        [
+          -4.951341152191162,
+          0.4000000059604645,
+          0.0
+        ],
+        [
+          5.028265476226807,
+          15.779129981994629,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_post_stencil",
+      "purpose": "CH0 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch0_post_stencil.step",
+      "stl": "cad/k1_ch0_post_stencil.stl",
+      "sha256_step": "0416f705cf788d23f9faf0c2f80ea243ab2a5b7915bec684db8a9dcecf3b8f12",
+      "sha256_stl": "8fa38abca3843c9c6d24935eb7973c8ca52f86f70042472c2e35ce949770c984",
+      "volume_mm3": 63.31355474938162,
+      "bounds_mm": [
+        [
+          -9.351778984069824,
+          -4.0,
+          0.0
+        ],
+        [
+          9.328265190124512,
+          20.079130172729492,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_backing_spacer",
+      "purpose": "CH0 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch0_backing_spacer.step",
+      "stl": "cad/k1_ch0_backing_spacer.stl",
+      "sha256_step": "c5c0210a22fb53df5c22eeb59c7e7858d95000046ea6e92cf01d13ebd2844dce",
+      "sha256_stl": "7b42032288c4a868cc86fd6d8eaf67a7e53d56f97e45dd792ad56ec4f543634f",
+      "volume_mm3": 17.915352276272294,
+      "bounds_mm": [
+        [
+          -9.351778984069824,
+          -4.0,
+          0.0
+        ],
+        [
+          9.328265190124512,
+          20.079130172729492,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_flex_reference",
+      "purpose": "CH0 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_flex_reference.step",
+      "stl": "cad/k1_ch0_flex_reference.stl",
+      "sha256_step": "4b168c9c16af9c331dc7b39b2ea6fbfdce41b936b9b0b6243ef7e21ea3f9379f",
+      "sha256_stl": "4714598e4b7aad698ef0a1ebbb439b7fbc82c8cee4d32cf1f42b77656d4133c4",
+      "volume_mm3": 14.80951895024711,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.491312026977539
+        ],
+        [
+          -8.50684642791748,
+          -101.22540283203125,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_ground_spreader",
+      "purpose": "CH0 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch0_ground_spreader.step",
+      "stl": "cad/k1_ch0_ground_spreader.stl",
+      "sha256_step": "717a8ad72943f8acf5646096d7066b3c32c8a9a068b13db6a3fd274b47891fab",
+      "sha256_stl": "7763ffb7cf9a480563741098a161a6c3207098f295331b2bee1d0f9786580a69",
+      "volume_mm3": 32.66805650789805,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.27429962158203,
+          -4.990683555603027
+        ],
+        [
+          -8.50684642791748,
+          -101.2003402709961,
+          -3.8850951194763184
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_reference",
+      "purpose": "CH0 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_reference.step",
+      "stl": "cad/k1_ch0_cover_reference.stl",
+      "sha256_step": "265629a3513e40bea897eb85269096f462c929797fef3076b9498230cc8ef045",
+      "sha256_stl": "def0f660d87cd46db1ceb32cbfca0312163aee3069cb99b0ef6b7b017fa29d32",
+      "volume_mm3": 10.889352169299357,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.25926208496094,
+          -5.09055757522583
+        ],
+        [
+          -8.50684642791748,
+          -101.1953353881836,
+          -4.184718132019043
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_spreader_form",
+      "purpose": "CH0 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch0_spreader_form.step",
+      "stl": "cad/k1_ch0_spreader_form.stl",
+      "sha256_step": "cbd6c476d812ea5ebf2d17d874fb3070948474a73ec149d0479773c6778c9aa2",
+      "sha256_stl": "8759544bf3979262343630141b8fc1a77e05ba201288b06c7ccb54a9c417790a",
+      "volume_mm3": 1123.9880072901503,
+      "bounds_mm": [
+        [
+          -22.185199737548828,
+          -120.47103118896484,
+          -4.841435432434082
+        ],
+        [
+          -5.5068464279174805,
+          -98.21915435791016,
+          0.26025161147117615
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_post_sheet_flat",
+      "purpose": "CH1 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch1_post_sheet_flat.step",
+      "stl": "cad/k1_ch1_post_sheet_flat.stl",
+      "sha256_step": "61b21bf30379c10dc16b0cc278ccc459bf6be6dfeac26e26fc2939c116627204",
+      "sha256_stl": "7cc9d1666cc3115949d561aa154ab9a3bae1d820f04d215a4b3276a32282ce62",
+      "volume_mm3": 8.702202501649658,
+      "bounds_mm": [
+        [
+          -5.03889274597168,
+          0.4000000059604645,
+          0.0
+        ],
+        [
+          4.9550604820251465,
+          15.779129981994629,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_post_stencil",
+      "purpose": "CH1 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch1_post_stencil.step",
+      "stl": "cad/k1_ch1_post_stencil.stl",
+      "sha256_step": "4380c714b6aea8c4dcfac0cfa0cb1b19657bdc91a9b11394478b648baf10d39f",
+      "sha256_stl": "8f980febf4ca6715133a434f2e98b67c72be45fbf80e74d293d1264299ffa4b0",
+      "volume_mm3": 63.36569196742445,
+      "bounds_mm": [
+        [
+          -9.338892936706543,
+          -4.0,
+          0.0
+        ],
+        [
+          9.355587005615234,
+          20.079130172729492,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_backing_spacer",
+      "purpose": "CH1 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch1_backing_spacer.step",
+      "stl": "cad/k1_ch1_backing_spacer.stl",
+      "sha256_step": "fe9eb8b9ec36fc566f6c1a3017b42e8838b44679c3e6b74b43d8f33d94ad8d4e",
+      "sha256_stl": "ae92a8959c2b64feae2d9572d76f2f6da64b707b43c13bb731b0af33c82dcb1f",
+      "volume_mm3": 17.96146426175749,
+      "bounds_mm": [
+        [
+          -9.338892936706543,
+          -4.0,
+          0.0
+        ],
+        [
+          9.355587005615234,
+          20.079130172729492,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_flex_reference",
+      "purpose": "CH1 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_flex_reference.step",
+      "stl": "cad/k1_ch1_flex_reference.stl",
+      "sha256_step": "373d27887066b86a525bd6aa4100cc33631e98f0a7d12961845cb00ba234505f",
+      "sha256_stl": "0dbb039560b6a79d733c0f94cebd9b34f73b4c9c8e4751932a4de839bbdec81a",
+      "volume_mm3": 14.731928484728162,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2911376953125,
+          -4.491312026977539
+        ],
+        [
+          3.3876330852508545,
+          -101.22540283203125,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_ground_spreader",
+      "purpose": "CH1 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch1_ground_spreader.step",
+      "stl": "cad/k1_ch1_ground_spreader.stl",
+      "sha256_step": "08d9ab4ca483462114ccbc6fec07aa2a77a6a942e116a05381789ed6e20202e1",
+      "sha256_stl": "12a0b91432c58bd6e35c88095fb638480daf68a37bede36db5556e57a74574b5",
+      "volume_mm3": 32.4969010692533,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.27429962158203,
+          -4.990683555603027
+        ],
+        [
+          3.3876330852508545,
+          -101.20034790039062,
+          -3.8850948810577393
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_reference",
+      "purpose": "CH1 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_reference.step",
+      "stl": "cad/k1_ch1_cover_reference.stl",
+      "sha256_step": "6730820e285b2367fea69b30a683fcc5da97c7a36ffdd7eaf35ec89fc990537d",
+      "sha256_stl": "e3f04adab63f808edc0f77746d42a203b081c456a542f0c9ee8c5100a6f2fd9d",
+      "volume_mm3": 10.83230035641777,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.25926208496094,
+          -5.09055757522583
+        ],
+        [
+          3.3876330852508545,
+          -101.1953353881836,
+          -4.184717655181885
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_spreader_form",
+      "purpose": "CH1 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch1_spreader_form.step",
+      "stl": "cad/k1_ch1_spreader_form.stl",
+      "sha256_step": "d5fc60b29671de17549b3cc5dc9a558f56a1ec05a27f3c02e0c578e092e53029",
+      "sha256_stl": "33cd254717e5803d41f4ac0bf47b42de84f1d02ca0244d91fe7f4ef1fe49b30c",
+      "volume_mm3": 1121.8678212845552,
+      "bounds_mm": [
+        [
+          -10.306846618652344,
+          -120.47103118896484,
+          -4.841435432434082
+        ],
+        [
+          6.385941028594971,
+          -98.21915435791016,
+          0.2602516710758209
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_post_sheet_flat",
+      "purpose": "CH2 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch2_post_sheet_flat.step",
+      "stl": "cad/k1_ch2_post_sheet_flat.stl",
+      "sha256_step": "82f2f7c781974a6bea9f350d72aa0d57929daf32b41057cf0845fe3d449484b9",
+      "sha256_stl": "106b2f0cb302ef344049cf5e1b79973ac66d04c8040ba6682fbcc46ce515b588",
+      "volume_mm3": 14.200738505095215,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          1.1876046657562256,
+          0.0
+        ],
+        [
+          5.900000095367432,
+          13.10827350616455,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_post_stencil",
+      "purpose": "CH2 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_post_stencil.step",
+      "stl": "cad/k1_ch2_post_stencil.stl",
+      "sha256_step": "10f98521f5911edcace264abb52872d736cf69e2235cc03fa940ff5cb4536bea",
+      "sha256_stl": "9d8e8074154fb6bb4c42426a9c96beb95eccf1a0158c9b74e29eb0cae39e66ad",
+      "volume_mm3": 59.88100172694024,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.4431958198547363,
+          0.0
+        ],
+        [
+          10.5,
+          17.842056274414062,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_backing_spacer",
+      "purpose": "CH2 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_backing_spacer.step",
+      "stl": "cad/k1_ch2_backing_spacer.stl",
+      "sha256_step": "77d7411a5bc2c13b92d86762766e1391fff390b3c5d3e252e3adfd94d0e46cb3",
+      "sha256_stl": "5b141c0975223d89180adb4a63a53faedb91c4075ef60741535a548f7ff62c5f",
+      "volume_mm3": 15.316320256105094,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.4431958198547363,
+          0.0
+        ],
+        [
+          10.5,
+          17.842056274414062,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_flex_reference",
+      "purpose": "CH2 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_flex_reference.step",
+      "stl": "cad/k1_ch2_flex_reference.stl",
+      "sha256_step": "132f9d84a646356a1ea19d48bd9fc0ccc2fc0e497af647fe1bf514c6f5d28c67",
+      "sha256_stl": "b50f5112951fbd8e5b534f513a1abb6daa3a50d26d791e1cd3373e84fb4e53da",
+      "volume_mm3": 23.603540085497485,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.11036682128906,
+          -4.993626594543457
+        ],
+        [
+          -1.0,
+          -76.76053619384766,
+          -2.1258630752563477
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_ground_spreader",
+      "purpose": "CH2 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch2_ground_spreader.step",
+      "stl": "cad/k1_ch2_ground_spreader.stl",
+      "sha256_step": "604c36bbd933a1349ae11b30e07c08d195d958e2944473334dbadecb399524df",
+      "sha256_stl": "64228de34f7918e9f0a6243fd22adb135acdfb22f26b17fd6166ee4cb8228597",
+      "volume_mm3": 50.923358196940306,
+      "bounds_mm": [
+        [
+          -14.0,
+          -88.9498519897461,
+          -5.483334541320801
+        ],
+        [
+          -1.0,
+          -76.82836151123047,
+          -2.461862802505493
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_reference",
+      "purpose": "CH2 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_cover_reference.step",
+      "stl": "cad/k1_ch2_cover_reference.stl",
+      "sha256_step": "226b7d453f8faeb83b38a4dc35dcc49a07d274bdbd769e5b020775208239e2f0",
+      "sha256_stl": "4c6f82742b3da8ca38cf74114b3363f0b003f5ccd3b528fafb8c2df6af60fc17",
+      "volume_mm3": 33.49305445003436,
+      "bounds_mm": [
+        [
+          -14.0,
+          -88.80653381347656,
+          -5.679217338562012
+        ],
+        [
+          -1.0,
+          -76.888916015625,
+          -2.7618627548217773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_rigid_saddle",
+      "purpose": "CH2 rigid saddle on the source contact surface",
+      "material": "PETG local rigid saddle; source fit and added stiffness require physical checks",
+      "kind": "fabricate",
+      "step": "cad/k1_ch2_rigid_saddle.step",
+      "stl": "cad/k1_ch2_rigid_saddle.stl",
+      "sha256_step": "1893b69f6422912100ba82f609d124ab083b1b9d6ed55d345bff23d26c8bfd0e",
+      "sha256_stl": "acd59ea9bce3f4be33036cb797115db17c0fd4d99f767db7fc51bae62b0cde09",
+      "volume_mm3": 142.25776584137262,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.49254608154297,
+          -4.860426425933838
+        ],
+        [
+          -1.0,
+          -76.59905242919922,
+          -1.3258633613586426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_spreader_form",
+      "purpose": "CH2 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_spreader_form.step",
+      "stl": "cad/k1_ch2_spreader_form.stl",
+      "sha256_step": "31f947386d8e865118ba6e965d8bcf6db8916d25e8dac580d259782775458827",
+      "sha256_stl": "37dd6e883b04896914d0eac7ab12a15bbd6983e1af71bc5139ae840402d3629e",
+      "volume_mm3": 2021.1770927776047,
+      "bounds_mm": [
+        [
+          -17.0,
+          -92.45372009277344,
+          -5.285006999969482
+        ],
+        [
+          2.0,
+          -73.22785186767578,
+          1.5381205081939697
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_post_sheet_flat",
+      "purpose": "CH3 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch3_post_sheet_flat.step",
+      "stl": "cad/k1_ch3_post_sheet_flat.stl",
+      "sha256_step": "4e09c84820c75b859bc963a5efffec69b6c80af7c51f0fb33115a00291f74548",
+      "sha256_stl": "09ecbe31a6a51177e165b662fa79206f6f3593b17c8232bd7e6e291db57086f2",
+      "volume_mm3": 17.904493280380713,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          1.1000944375991821,
+          0.0
+        ],
+        [
+          5.900000095367432,
+          16.494842529296875,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_post_stencil",
+      "purpose": "CH3 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_post_stencil.step",
+      "stl": "cad/k1_ch3_post_stencil.stl",
+      "sha256_step": "ac1471d419bd644076c4da77f2ced4a48fe27a15741241aab80c745e30877f8d",
+      "sha256_stl": "621bc74be76d49c2b269e805054c7f7424e0dad6ab20d37e297b42f5956d9cd5",
+      "volume_mm3": 68.67553904847585,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.499906063079834,
+          0.0
+        ],
+        [
+          10.5,
+          21.102357864379883,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_backing_spacer",
+      "purpose": "CH3 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_backing_spacer.step",
+      "stl": "cad/k1_ch3_backing_spacer.stl",
+      "sha256_step": "464988c6c017b772936d87fbe31db4e4ea10097970c2f1c9dc7b0e05a663efcb",
+      "sha256_stl": "8e3f99795addac889d05b60786455503b9da81c50e4f7d40b3c0fa38b0c1e0ab",
+      "volume_mm3": 16.749475964151245,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.499906063079834,
+          0.0
+        ],
+        [
+          10.5,
+          21.102357864379883,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_flex_reference",
+      "purpose": "CH3 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_flex_reference.step",
+      "stl": "cad/k1_ch3_flex_reference.stl",
+      "sha256_step": "4a6504cdbd7fe0db0da14482e1873210330b50cf89f5244a2449d6f6424d3ec0",
+      "sha256_stl": "f7bac0c3b508ec74f8da4ef0bde817610c15ac6b961c3606b66201f3793b4312",
+      "volume_mm3": 29.20071909534081,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -5.333702564239502
+        ],
+        [
+          -1.0,
+          -58.55887222290039,
+          1.6675536632537842
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_ground_spreader",
+      "purpose": "CH3 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch3_ground_spreader.step",
+      "stl": "cad/k1_ch3_ground_spreader.stl",
+      "sha256_step": "925502bdc9cd8162458d386b428e37bfd7b037bbf089106e0f6d1fad32a7681b",
+      "sha256_stl": "c42a7b223e0e1d6564fc7879c8fac3c92500f7219dba3a4396e68a8a1b97b1c5",
+      "volume_mm3": 65.92040020130601,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -5.833702564239502
+        ],
+        [
+          -1.0,
+          -58.159725189208984,
+          1.4651931524276733
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_reference",
+      "purpose": "CH3 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_cover_reference.step",
+      "stl": "cad/k1_ch3_cover_reference.stl",
+      "sha256_step": "056b73e9fb0b482c35874b02aa2b47a4439382c01ec28d5be5e4991364b2b151",
+      "sha256_stl": "01886e47d96ff4dbd6606157a4bfed97a353580ab5bc74dc3c78184aed24af80",
+      "volume_mm3": 44.54783029995376,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -6.033702373504639
+        ],
+        [
+          -1.0,
+          -58.000064849853516,
+          1.28451406955719
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_rigid_saddle",
+      "purpose": "CH3 rigid saddle on the source contact surface",
+      "material": "PETG local rigid saddle; source fit and added stiffness require physical checks",
+      "kind": "fabricate",
+      "step": "cad/k1_ch3_rigid_saddle.step",
+      "stl": "cad/k1_ch3_rigid_saddle.stl",
+      "sha256_step": "df55989c04b3cfa311635b8a390d69578dc5efb737f01382fb3e261920fc6183",
+      "sha256_stl": "b89c6145b1b9bdc1951d9613716da0da10d96fe509321ba220004dc981dba704",
+      "volume_mm3": 167.26942037381275,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -5.197702407836914
+        ],
+        [
+          -1.0,
+          -58.667442321777344,
+          2.1493642330169678
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_spreader_form",
+      "purpose": "CH3 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_spreader_form.step",
+      "stl": "cad/k1_ch3_spreader_form.stl",
+      "sha256_step": "190da09cd7973a5ffed69104c890e431e830f04c8c6f7885cb6350462f5af215",
+      "sha256_stl": "69d3eb827efe5210452066c92da75ead493e3a667dcd99a9e3a3c8396673022d",
+      "volume_mm3": 3617.809787826306,
+      "bounds_mm": [
+        [
+          -17.0,
+          -75.98531341552734,
+          -5.533702373504639
+        ],
+        [
+          2.0,
+          -55.09737777709961,
+          5.866170406341553
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_post_sheet_flat",
+      "purpose": "CH4 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch4_post_sheet_flat.step",
+      "stl": "cad/k1_ch4_post_sheet_flat.stl",
+      "sha256_step": "425245a0ea0b40b9f623bf82e564872862a11f11ffb1427ee3f2bb0efd610f40",
+      "sha256_stl": "e560532bee9fdc4634d80d31102fb184cd6108dbe86f1ac591c355844d09a559",
+      "volume_mm3": 14.311042766794756,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          1.0380381345748901,
+          0.0
+        ],
+        [
+          5.900000095367432,
+          13.14566421508789,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_post_stencil",
+      "purpose": "CH4 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_post_stencil.step",
+      "stl": "cad/k1_ch4_post_stencil.stl",
+      "sha256_step": "942a79017f7024988afb57b67195e7f9c7c5919afdb21daed8ae545ac321e246",
+      "sha256_stl": "5a11dd1356a660c452081418bf5d172c958b59c1a94c1d9890887f9c6010d4ed",
+      "volume_mm3": 59.634924971879585,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.5276310443878174,
+          0.0
+        ],
+        [
+          10.5,
+          17.679502487182617,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_backing_spacer",
+      "purpose": "CH4 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_backing_spacer.step",
+      "stl": "cad/k1_ch4_backing_spacer.stl",
+      "sha256_step": "e99cc6cb090f1d6ac5368aad5c9d52a521fe42c6ba06feab321245e30bb621d0",
+      "sha256_stl": "42017a6be4e9c4dc7af7abdad66d358a1e00252f77e53ce9a7817faca3a1a017",
+      "volume_mm3": 15.123990409385337,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.5276310443878174,
+          0.0
+        ],
+        [
+          10.5,
+          17.679502487182617,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_flex_reference",
+      "purpose": "CH4 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_flex_reference.step",
+      "stl": "cad/k1_ch4_flex_reference.stl",
+      "sha256_step": "d3b91ed2136255680b450cf482823dec814c9867187c24ae010e33723b103d40",
+      "sha256_stl": "f36a7f4edf73ff5d16e50b62b71aaab77b38f01861d48b444feab941aa3500f2",
+      "volume_mm3": 23.508365138390268,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.00740051269531,
+          6.248959541320801
+        ],
+        [
+          -1.0,
+          -42.75324630737305,
+          10.52946662902832
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_ground_spreader",
+      "purpose": "CH4 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch4_ground_spreader.step",
+      "stl": "cad/k1_ch4_ground_spreader.stl",
+      "sha256_step": "17b985d71c8d7a6111456208a860fb53a0a24aa6a6e5a442ed17507c63bba26b",
+      "sha256_stl": "38fdcd37a42cfe3d4a65584bab32f15c65a6225c151382606aab469aa279b177",
+      "volume_mm3": 50.28791763759137,
+      "bounds_mm": [
+        [
+          -14.0,
+          -54.776004791259766,
+          5.886425018310547
+        ],
+        [
+          -1.0,
+          -42.82087326049805,
+          10.193467140197754
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_reference",
+      "purpose": "CH4 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_cover_reference.step",
+      "stl": "cad/k1_ch4_cover_reference.stl",
+      "sha256_step": "1e88a8a12d7be82b2a8e380630c7bf312561f7a51026eabf0998e7e8eb368bb5",
+      "sha256_stl": "e2e02e60cb23c4ceb78fdd7ffd48da5e9f761cb25e3fce9d49223fff8b4ca4eb",
+      "volume_mm3": 32.899771978617075,
+      "bounds_mm": [
+        [
+          -14.0,
+          -54.569400787353516,
+          5.741411209106445
+        ],
+        [
+          -1.0,
+          -42.881256103515625,
+          9.89346694946289
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_rigid_saddle",
+      "purpose": "CH4 rigid saddle on the source contact surface",
+      "material": "PETG local rigid saddle; source fit and added stiffness require physical checks",
+      "kind": "fabricate",
+      "step": "cad/k1_ch4_rigid_saddle.step",
+      "stl": "cad/k1_ch4_rigid_saddle.stl",
+      "sha256_step": "69dcbf049784ea59a93449cf51c70f14efb5b3c92e29cecb7d10c1260c862651",
+      "sha256_stl": "a803a16a92660304a967e90c6bab599cb0fd730f38d3c769cb020961e8c05c72",
+      "volume_mm3": 142.9682930850323,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.55834197998047,
+          6.347568988800049
+        ],
+        [
+          -1.0,
+          -42.59222412109375,
+          11.32946491241455
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_spreader_form",
+      "purpose": "CH4 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_spreader_form.step",
+      "stl": "cad/k1_ch4_spreader_form.stl",
+      "sha256_step": "2eaba1d4b573b4073251610c291d9239cda35fc57006490ee25688c5558ea1ed",
+      "sha256_stl": "95ddd4fcfc56907eec8dc821d196ac88fc95ca9354388447be5f9efadfb21cb6",
+      "volume_mm3": 1965.1867738576238,
+      "bounds_mm": [
+        [
+          -17.0,
+          -58.11095428466797,
+          5.777360916137695
+        ],
+        [
+          2.0,
+          -39.39748001098633,
+          14.193483352661133
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_post_sheet_flat",
+      "purpose": "CH5 flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ch5_post_sheet_flat.step",
+      "stl": "cad/k1_ch5_post_sheet_flat.stl",
+      "sha256_step": "6299fb9d37c4387a2121c63392b47ddf82309209d18fafafd3b324d61df7caa9",
+      "sha256_stl": "c6e298baf59ac31c5767dc5e75d7756431d09c4432811b34e6c59f96cb0183f6",
+      "volume_mm3": 24.228913606475498,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          1.0157337188720703,
+          0.0
+        ],
+        [
+          5.900000095367432,
+          21.52289390563965,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_post_stencil",
+      "purpose": "CH5 through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_post_stencil.step",
+      "stl": "cad/k1_ch5_post_stencil.stl",
+      "sha256_step": "3f9658669bc726cc570dc32ac4ffb83aebe550c6a1eb718489ef67bcbd23f1b6",
+      "sha256_stl": "41338787ae2163636d11949ff2567ffe00c3be0c946e16f15b6ad851b030d7e8",
+      "volume_mm3": 81.3351386613162,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.5387699604034424,
+          0.0
+        ],
+        [
+          10.5,
+          26.132604598999023,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_backing_spacer",
+      "purpose": "CH5 spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_backing_spacer.step",
+      "stl": "cad/k1_ch5_backing_spacer.stl",
+      "sha256_step": "e43856d53fd6da8ae57695ed77223b8ed85ff38b578d24ac43ab5a679ccd0c23",
+      "sha256_stl": "59a7e81b029e8f7c857285b9cf7cc8b1c72b6659fd121bf9f78444f62c09fe4c",
+      "volume_mm3": 19.055718261309917,
+      "bounds_mm": [
+        [
+          -10.5,
+          -3.5387699604034424,
+          0.0
+        ],
+        [
+          10.5,
+          26.132604598999023,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_flex_reference",
+      "purpose": "CH5 flex reference on the source contact surface",
+      "material": "Requested two-layer flexible electrode/guard stack; copper artwork is separate",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_flex_reference.step",
+      "stl": "cad/k1_ch5_flex_reference.stl",
+      "sha256_step": "d5ef1e6501fbe70aaa5a40bd47aabdb413a6dac8a1183664934dd956f755328e",
+      "sha256_stl": "fe7b3c4b3d227dc32d0c7660cd0d5f2b6d98ddafd29b21163d9c30c6c7bd0e0b",
+      "volume_mm3": 38.21540654227447,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.1515998840332,
+          -5.390204906463623
+        ],
+        [
+          -1.0,
+          -23.57938003540039,
+          8.329185485839844
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_ground_spreader",
+      "purpose": "CH5 ground spreader on the source contact surface",
+      "material": "Formed annealed 304 stainless sheet; ground via two separate bonded tabs",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch5_ground_spreader.step",
+      "stl": "cad/k1_ch5_ground_spreader.stl",
+      "sha256_step": "94d04c0db16d003ba6b43ce5b3d3054c49c96745b779caa8c03ca42cdd81d552",
+      "sha256_stl": "7cf158992e4af25c972d446a9b833e6172171f0b750f6b7e29d1ab71591767c2",
+      "volume_mm3": 85.28462014384434,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.43360137939453,
+          -5.890204906463623
+        ],
+        [
+          -1.0,
+          -23.576583862304688,
+          8.051724433898926
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_reference",
+      "purpose": "CH5 cover reference on the source contact surface",
+      "material": "Silicone cover envelope; retention and vent details remain",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_cover_reference.step",
+      "stl": "cad/k1_ch5_cover_reference.stl",
+      "sha256_step": "fc1e5133ff7a33c0578dea268102a1c9bb0acf4a736b6fd0ddf15c28162a0bc0",
+      "sha256_stl": "7c15b0bb500da3f586ce0496ae709ba1dc77b584ab00e8f0b3a35ff9c82aed7c",
+      "volume_mm3": 57.24952716199172,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.5463981628418,
+          -6.090205192565918
+        ],
+        [
+          -1.0,
+          -23.57546615600586,
+          7.803991317749023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_rigid_saddle",
+      "purpose": "CH5 rigid saddle on the source contact surface",
+      "material": "PETG local rigid saddle; source fit and added stiffness require physical checks",
+      "kind": "fabricate",
+      "step": "cad/k1_ch5_rigid_saddle.step",
+      "stl": "cad/k1_ch5_rigid_saddle.stl",
+      "sha256_step": "6d4b9d419b576e9fbaccc48a97bbf39b0241428f106ce454ca88e6b0dc6b5c33",
+      "sha256_stl": "6f651eeb9d0a69bf77fce58a509076c298c3f899ae126ca2f7c689c40bc17f53",
+      "volume_mm3": 221.85287344128054,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.07489776611328,
+          -5.254205226898193
+        ],
+        [
+          -1.0,
+          -23.580141067504883,
+          8.98980712890625
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_spreader_form",
+      "purpose": "CH5 separate matched form for the metal spreader; springback is not compensated",
+      "material": "Rigid forming tool; verify formed curvature before assembly",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_spreader_form.step",
+      "stl": "cad/k1_ch5_spreader_form.stl",
+      "sha256_step": "908ff9ff49813ad43bcbbea55e71f5d19cb60082cbe83e05fa37d64a4b6c04d5",
+      "sha256_stl": "31e8d9e797207d4a06402c14dd9909121a24258940f191d6559b452458a695d7",
+      "volume_mm3": 5219.855031033999,
+      "bounds_mm": [
+        [
+          -17.0,
+          -42.64455795288086,
+          -5.59020471572876
+        ],
+        [
+          2.0,
+          -20.062963485717773,
+          12.301362991333008
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_post_sheet_flat",
+      "purpose": "REF flat molded silicone master; form before installed use",
+      "material": "SYLGARD 184, 10:1; process and compression unqualified",
+      "kind": "cast",
+      "step": "cad/k1_ref_post_sheet_flat.step",
+      "stl": "cad/k1_ref_post_sheet_flat.stl",
+      "sha256_step": "6c45916d1c06c99a6bf95ee1d4d0dbf8ec85fbd4df9fb3bdac6ac0686c72ac70",
+      "sha256_stl": "8207f47b29bf206be23533b59ccafc996d586875a35be7323f30f24b3c397819",
+      "volume_mm3": 11.513495107050089,
+      "bounds_mm": [
+        [
+          -6.0,
+          1.0,
+          0.0
+        ],
+        [
+          6.0,
+          11.0,
+          0.20000000298023224
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_post_stencil",
+      "purpose": "REF through-hole stencil for the separate silicone post sheet",
+      "material": "0.15 mm laser-cut stainless shim; use flat release plates",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ref_post_stencil.step",
+      "stl": "cad/k1_ref_post_stencil.stl",
+      "sha256_step": "3652a15f389d9b338c39a47d366f36cdc91413c789407ba738651a5b960c80a5",
+      "sha256_stl": "4755492125a7ea4b6d67b053e24a1bcbd0c7e40fdefa2e1fb40f5962b2027432",
+      "volume_mm3": 60.48650489294991,
+      "bounds_mm": [
+        [
+          -11.0,
+          -4.0,
+          0.0
+        ],
+        [
+          11.0,
+          16.0,
+          0.15000000596046448
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_backing_spacer",
+      "purpose": "REF spacer defining the thin silicone base above the post stencil",
+      "material": "0.05 mm metal/polyimide shim; verify thickness and cure compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ref_backing_spacer.step",
+      "stl": "cad/k1_ref_backing_spacer.stl",
+      "sha256_step": "1910a4ec09ecf6bfbff59b02cf019109f6d73b8f60a4e5001961ea906b6866d1",
+      "sha256_stl": "c42d06117a7f845a766c872a4e3c90aef193509da27e6f6eeefc137ca5b4f34f",
+      "volume_mm3": 16.0,
+      "bounds_mm": [
+        [
+          -11.0,
+          -4.0,
+          0.0
+        ],
+        [
+          11.0,
+          16.0,
+          0.05000000074505806
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cells": [
+    {
+      "site": "CH0",
+      "post_count": 98,
+      "post_centers_flat_mm": [
+        [
+          -4.5,
+          15.3
+        ],
+        [
+          -3.6,
+          13.5
+        ],
+        [
+          -3.6,
+          14.4
+        ],
+        [
+          -3.6,
+          15.3
+        ],
+        [
+          -2.7,
+          10.8
+        ],
+        [
+          -2.7,
+          11.700000000000001
+        ],
+        [
+          -2.7,
+          12.600000000000001
+        ],
+        [
+          -2.7,
+          13.5
+        ],
+        [
+          -2.7,
+          14.4
+        ],
+        [
+          -2.7,
+          15.3
+        ],
+        [
+          -1.8000000000000003,
+          9.0
+        ],
+        [
+          -1.8000000000000003,
+          9.9
+        ],
+        [
+          -1.8000000000000003,
+          10.8
+        ],
+        [
+          -1.8000000000000003,
+          11.700000000000001
+        ],
+        [
+          -1.8000000000000003,
+          12.600000000000001
+        ],
+        [
+          -1.8000000000000003,
+          13.5
+        ],
+        [
+          -1.8000000000000003,
+          14.4
+        ],
+        [
+          -1.8000000000000003,
+          15.3
+        ],
+        [
+          -0.9000000000000004,
+          6.300000000000001
+        ],
+        [
+          -0.9000000000000004,
+          7.2
+        ],
+        [
+          -0.9000000000000004,
+          8.1
+        ],
+        [
+          -0.9000000000000004,
+          9.0
+        ],
+        [
+          -0.9000000000000004,
+          9.9
+        ],
+        [
+          -0.9000000000000004,
+          10.8
+        ],
+        [
+          -0.9000000000000004,
+          11.700000000000001
+        ],
+        [
+          -0.9000000000000004,
+          12.600000000000001
+        ],
+        [
+          -0.9000000000000004,
+          13.5
+        ],
+        [
+          -0.9000000000000004,
+          14.4
+        ],
+        [
+          -0.9000000000000004,
+          15.3
+        ],
+        [
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          6.300000000000001
+        ],
+        [
+          0.0,
+          7.2
+        ],
+        [
+          0.0,
+          8.1
+        ],
+        [
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          9.9
+        ],
+        [
+          0.0,
+          10.8
+        ],
+        [
+          0.0,
+          11.700000000000001
+        ],
+        [
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          13.5
+        ],
+        [
+          0.0,
+          14.4
+        ],
+        [
+          0.0,
+          15.3
+        ],
+        [
+          0.8999999999999995,
+          1.8
+        ],
+        [
+          0.8999999999999995,
+          2.7
+        ],
+        [
+          0.8999999999999995,
+          3.6
+        ],
+        [
+          0.8999999999999995,
+          4.5
+        ],
+        [
+          0.8999999999999995,
+          5.4
+        ],
+        [
+          0.8999999999999995,
+          6.300000000000001
+        ],
+        [
+          0.8999999999999995,
+          7.2
+        ],
+        [
+          0.8999999999999995,
+          8.1
+        ],
+        [
+          0.8999999999999995,
+          9.0
+        ],
+        [
+          0.8999999999999995,
+          9.9
+        ],
+        [
+          0.8999999999999995,
+          10.8
+        ],
+        [
+          0.8999999999999995,
+          11.700000000000001
+        ],
+        [
+          0.8999999999999995,
+          12.600000000000001
+        ],
+        [
+          0.8999999999999995,
+          13.5
+        ],
+        [
+          0.8999999999999995,
+          14.4
+        ],
+        [
+          0.8999999999999995,
+          15.3
+        ],
+        [
+          1.799999999999999,
+          0.9
+        ],
+        [
+          1.799999999999999,
+          1.8
+        ],
+        [
+          1.799999999999999,
+          2.7
+        ],
+        [
+          1.799999999999999,
+          3.6
+        ],
+        [
+          1.799999999999999,
+          4.5
+        ],
+        [
+          1.799999999999999,
+          5.4
+        ],
+        [
+          1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          1.799999999999999,
+          7.2
+        ],
+        [
+          1.799999999999999,
+          8.1
+        ],
+        [
+          1.799999999999999,
+          9.0
+        ],
+        [
+          1.799999999999999,
+          9.9
+        ],
+        [
+          1.799999999999999,
+          10.8
+        ],
+        [
+          1.799999999999999,
+          11.700000000000001
+        ],
+        [
+          1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          1.799999999999999,
+          13.5
+        ],
+        [
+          1.799999999999999,
+          14.4
+        ],
+        [
+          1.799999999999999,
+          15.3
+        ],
+        [
+          2.6999999999999993,
+          0.9
+        ],
+        [
+          2.6999999999999993,
+          1.8
+        ],
+        [
+          2.6999999999999993,
+          2.7
+        ],
+        [
+          2.6999999999999993,
+          3.6
+        ],
+        [
+          2.6999999999999993,
+          4.5
+        ],
+        [
+          2.6999999999999993,
+          5.4
+        ],
+        [
+          2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          2.6999999999999993,
+          7.2
+        ],
+        [
+          2.6999999999999993,
+          8.1
+        ],
+        [
+          2.6999999999999993,
+          9.0
+        ],
+        [
+          2.6999999999999993,
+          9.9
+        ],
+        [
+          2.6999999999999993,
+          10.8
+        ],
+        [
+          2.6999999999999993,
+          11.700000000000001
+        ],
+        [
+          2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          2.6999999999999993,
+          13.5
+        ],
+        [
+          2.6999999999999993,
+          14.4
+        ],
+        [
+          2.6999999999999993,
+          15.3
+        ],
+        [
+          3.5999999999999996,
+          13.5
+        ],
+        [
+          3.5999999999999996,
+          14.4
+        ],
+        [
+          3.5999999999999996,
+          15.3
+        ],
+        [
+          4.5,
+          13.5
+        ],
+        [
+          4.5,
+          14.4
+        ],
+        [
+          4.5,
+          15.3
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          -5.351779092047373,
+          15.731903716917689
+        ],
+        [
+          -5.342333626329696,
+          15.45078463342273
+        ],
+        [
+          -5.305234899731145,
+          15.171966307208727
+        ],
+        [
+          -5.240845602553891,
+          14.898178256414859
+        ],
+        [
+          -5.148590801097017,
+          14.628561205487056
+        ],
+        [
+          0.6779345320967929,
+          0.0
+        ],
+        [
+          3.858033389886992,
+          0.0
+        ],
+        [
+          3.8650649137921578,
+          3.2181552901615507
+        ],
+        [
+          3.8650683039553355,
+          3.218887948654664
+        ],
+        [
+          3.8937672251589515,
+          7.278419089299367
+        ],
+        [
+          3.8937753539497786,
+          7.279246268926752
+        ],
+        [
+          3.9437135558540746,
+          11.24736149794477
+        ],
+        [
+          3.943720534396299,
+          11.24785221689674
+        ],
+        [
+          3.952565863680967,
+          11.805659424123723
+        ],
+        [
+          3.9535043372268364,
+          11.820201001941259
+        ],
+        [
+          3.955849364334896,
+          11.834582902576502
+        ],
+        [
+          3.959578814388376,
+          11.848669400378224
+        ],
+        [
+          3.96465749161934,
+          11.86232755748682
+        ],
+        [
+          3.9710374672600945,
+          11.875428478402654
+        ],
+        [
+          3.978658531859147,
+          11.887848526405644
+        ],
+        [
+          3.987448763493104,
+          11.89947049034643
+        ],
+        [
+          3.997325206512137,
+          11.91018469079776
+        ],
+        [
+          4.008194654413534,
+          11.919890015127134
+        ],
+        [
+          4.019954529455149,
+          11.928494871722398
+        ],
+        [
+          4.03249385070763,
+          11.935918054365077
+        ],
+        [
+          4.045694281409647,
+          11.942089508594087
+        ],
+        [
+          4.059431245741982,
+          11.946950992827489
+        ],
+        [
+          4.0735751044812005,
+          11.950456628003105
+        ],
+        [
+          4.087992378437942,
+          11.95257333055088
+        ],
+        [
+          4.1025470081339535,
+          11.953281124610946
+        ],
+        [
+          5.328265467728883,
+          11.953281124610946
+        ],
+        [
+          5.328265467728883,
+          16.079129509631485
+        ],
+        [
+          -5.322481055447886,
+          16.079129509631485
+        ],
+        [
+          -5.333476919264454,
+          16.012596348631853
+        ],
+        [
+          -5.351779092047373,
+          15.731903716917689
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          -4.951341278793935,
+          15.725591381764927
+        ],
+        [
+          -4.943222593623384,
+          15.483960380970785
+        ],
+        [
+          -4.911335164780263,
+          15.244307962883358
+        ],
+        [
+          -4.8559916041016855,
+          15.008983052277987
+        ],
+        [
+          -4.773329060608779,
+          14.767399624133406
+        ],
+        [
+          0.9491761609391061,
+          0.3999999999999963
+        ],
+        [
+          3.458906417009678,
+          0.3999999999999963
+        ],
+        [
+          3.46506586859425,
+          3.21902927000241
+        ],
+        [
+          3.4650782991925686,
+          3.2217156844771555
+        ],
+        [
+          3.4937772203961845,
+          7.281246825121859
+        ],
+        [
+          3.49380702596255,
+          7.284279817088935
+        ],
+        [
+          3.5437452278668466,
+          11.252395046106951
+        ],
+        [
+          3.543770815855003,
+          11.254194348930843
+        ],
+        [
+          3.552616145139671,
+          11.812001556157831
+        ],
+        [
+          3.5560572148078586,
+          11.865320674822094
+        ],
+        [
+          3.5646556475374114,
+          11.918054310484651
+        ],
+        [
+          3.578330297733503,
+          11.969704802424324
+        ],
+        [
+          3.5969521142470384,
+          12.019784711822526
+        ],
+        [
+          3.6203453582631377,
+          12.067821421847235
+        ],
+        [
+          3.648289261792998,
+          12.113361597858193
+        ],
+        [
+          3.6805201111175068,
+          12.155975465641069
+        ],
+        [
+          3.716733735520627,
+          12.195260867295948
+        ],
+        [
+          3.756588377825747,
+          12.230847056503652
+        ],
+        [
+          3.7997079196450043,
+          12.262398197352958
+        ],
+        [
+          3.8456854309041013,
+          12.289616533709442
+        ],
+        [
+          3.894087010144828,
+          12.312245199215802
+        ],
+        [
+          3.9444558793633924,
+          12.330070641404944
+        ],
+        [
+          3.9963166947405266,
+          12.342924637048872
+        ],
+        [
+          4.049180032581911,
+          12.350685879724049
+        ],
+        [
+          4.1025470081339535,
+          12.353281124610954
+        ],
+        [
+          5.0282654677288825,
+          12.353281124610954
+        ],
+        [
+          5.0282654677288825,
+          15.779129509631483
+        ],
+        [
+          -4.947850399604468,
+          15.779129509631483
+        ],
+        [
+          -4.951341278793935,
+          15.725591381764927
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.05,
+        "flex_bottom": 0.05,
+        "shield_center": 0.084,
+        "flex_top": 0.186,
+        "post_base_middle": 0.211,
+        "plate_bottom": 0.386,
+        "plate_top": 0.6859999999999999,
+        "cover_top": 0.7859999999999999
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch0_post_sheet_formed_reference.stl",
+        "sha256": "cac306e8630842c24d467a583d9d726601e4cc93acd2edf443349ffb3ced3227",
+        "watertight": true,
+        "surface_chart_handedness": -1.0,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          -5.351779092047373,
+          15.731903716917689
+        ],
+        [
+          -5.342333626329696,
+          15.45078463342273
+        ],
+        [
+          -5.305234899731145,
+          15.171966307208727
+        ],
+        [
+          -5.240845602553891,
+          14.898178256414859
+        ],
+        [
+          -5.148590801097017,
+          14.628561205487056
+        ],
+        [
+          0.6779345320967929,
+          0.0
+        ],
+        [
+          3.858033389886992,
+          0.0
+        ],
+        [
+          3.8650649137921578,
+          3.2181552901615507
+        ],
+        [
+          3.8650683039553355,
+          3.218887948654664
+        ],
+        [
+          3.8937672251589515,
+          7.278419089299367
+        ],
+        [
+          3.8937753539497786,
+          7.279246268926752
+        ],
+        [
+          3.9437135558540746,
+          11.24736149794477
+        ],
+        [
+          3.943720534396299,
+          11.24785221689674
+        ],
+        [
+          3.952565863680967,
+          11.805659424123723
+        ],
+        [
+          3.9535043372268364,
+          11.820201001941259
+        ],
+        [
+          3.955849364334896,
+          11.834582902576502
+        ],
+        [
+          3.959578814388376,
+          11.848669400378224
+        ],
+        [
+          3.96465749161934,
+          11.86232755748682
+        ],
+        [
+          3.9710374672600945,
+          11.875428478402654
+        ],
+        [
+          3.978658531859147,
+          11.887848526405644
+        ],
+        [
+          3.987448763493104,
+          11.89947049034643
+        ],
+        [
+          3.997325206512137,
+          11.91018469079776
+        ],
+        [
+          4.008194654413534,
+          11.919890015127134
+        ],
+        [
+          4.019954529455149,
+          11.928494871722398
+        ],
+        [
+          4.03249385070763,
+          11.935918054365077
+        ],
+        [
+          4.045694281409647,
+          11.942089508594087
+        ],
+        [
+          4.059431245741982,
+          11.946950992827489
+        ],
+        [
+          4.0735751044812005,
+          11.950456628003105
+        ],
+        [
+          4.087992378437942,
+          11.95257333055088
+        ],
+        [
+          4.1025470081339535,
+          11.953281124610946
+        ],
+        [
+          5.328265467728883,
+          11.953281124610946
+        ],
+        [
+          5.328265467728883,
+          16.079129509631485
+        ],
+        [
+          -5.322481055447886,
+          16.079129509631485
+        ],
+        [
+          -5.333476919264454,
+          16.012596348631853
+        ],
+        [
+          -5.351779092047373,
+          15.731903716917689
+        ]
+      ]
+    },
+    {
+      "site": "CH1",
+      "post_count": 98,
+      "post_centers_flat_mm": [
+        [
+          -4.5,
+          13.5
+        ],
+        [
+          -4.5,
+          14.4
+        ],
+        [
+          -4.5,
+          15.3
+        ],
+        [
+          -3.6,
+          13.5
+        ],
+        [
+          -3.6,
+          14.4
+        ],
+        [
+          -3.6,
+          15.3
+        ],
+        [
+          -2.7,
+          0.9
+        ],
+        [
+          -2.7,
+          1.8
+        ],
+        [
+          -2.7,
+          2.7
+        ],
+        [
+          -2.7,
+          3.6
+        ],
+        [
+          -2.7,
+          4.5
+        ],
+        [
+          -2.7,
+          5.4
+        ],
+        [
+          -2.7,
+          6.300000000000001
+        ],
+        [
+          -2.7,
+          7.2
+        ],
+        [
+          -2.7,
+          8.1
+        ],
+        [
+          -2.7,
+          9.0
+        ],
+        [
+          -2.7,
+          9.9
+        ],
+        [
+          -2.7,
+          10.8
+        ],
+        [
+          -2.7,
+          11.700000000000001
+        ],
+        [
+          -2.7,
+          12.600000000000001
+        ],
+        [
+          -2.7,
+          13.5
+        ],
+        [
+          -2.7,
+          14.4
+        ],
+        [
+          -2.7,
+          15.3
+        ],
+        [
+          -1.8000000000000003,
+          0.9
+        ],
+        [
+          -1.8000000000000003,
+          1.8
+        ],
+        [
+          -1.8000000000000003,
+          2.7
+        ],
+        [
+          -1.8000000000000003,
+          3.6
+        ],
+        [
+          -1.8000000000000003,
+          4.5
+        ],
+        [
+          -1.8000000000000003,
+          5.4
+        ],
+        [
+          -1.8000000000000003,
+          6.300000000000001
+        ],
+        [
+          -1.8000000000000003,
+          7.2
+        ],
+        [
+          -1.8000000000000003,
+          8.1
+        ],
+        [
+          -1.8000000000000003,
+          9.0
+        ],
+        [
+          -1.8000000000000003,
+          9.9
+        ],
+        [
+          -1.8000000000000003,
+          10.8
+        ],
+        [
+          -1.8000000000000003,
+          11.700000000000001
+        ],
+        [
+          -1.8000000000000003,
+          12.600000000000001
+        ],
+        [
+          -1.8000000000000003,
+          13.5
+        ],
+        [
+          -1.8000000000000003,
+          14.4
+        ],
+        [
+          -1.8000000000000003,
+          15.3
+        ],
+        [
+          -0.9000000000000004,
+          1.8
+        ],
+        [
+          -0.9000000000000004,
+          2.7
+        ],
+        [
+          -0.9000000000000004,
+          3.6
+        ],
+        [
+          -0.9000000000000004,
+          4.5
+        ],
+        [
+          -0.9000000000000004,
+          5.4
+        ],
+        [
+          -0.9000000000000004,
+          6.300000000000001
+        ],
+        [
+          -0.9000000000000004,
+          7.2
+        ],
+        [
+          -0.9000000000000004,
+          8.1
+        ],
+        [
+          -0.9000000000000004,
+          9.0
+        ],
+        [
+          -0.9000000000000004,
+          9.9
+        ],
+        [
+          -0.9000000000000004,
+          10.8
+        ],
+        [
+          -0.9000000000000004,
+          11.700000000000001
+        ],
+        [
+          -0.9000000000000004,
+          12.600000000000001
+        ],
+        [
+          -0.9000000000000004,
+          13.5
+        ],
+        [
+          -0.9000000000000004,
+          14.4
+        ],
+        [
+          -0.9000000000000004,
+          15.3
+        ],
+        [
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          6.300000000000001
+        ],
+        [
+          0.0,
+          7.2
+        ],
+        [
+          0.0,
+          8.1
+        ],
+        [
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          9.9
+        ],
+        [
+          0.0,
+          10.8
+        ],
+        [
+          0.0,
+          11.700000000000001
+        ],
+        [
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          13.5
+        ],
+        [
+          0.0,
+          14.4
+        ],
+        [
+          0.0,
+          15.3
+        ],
+        [
+          0.8999999999999995,
+          6.300000000000001
+        ],
+        [
+          0.8999999999999995,
+          7.2
+        ],
+        [
+          0.8999999999999995,
+          8.1
+        ],
+        [
+          0.8999999999999995,
+          9.0
+        ],
+        [
+          0.8999999999999995,
+          9.9
+        ],
+        [
+          0.8999999999999995,
+          10.8
+        ],
+        [
+          0.8999999999999995,
+          11.700000000000001
+        ],
+        [
+          0.8999999999999995,
+          12.600000000000001
+        ],
+        [
+          0.8999999999999995,
+          13.5
+        ],
+        [
+          0.8999999999999995,
+          14.4
+        ],
+        [
+          0.8999999999999995,
+          15.3
+        ],
+        [
+          1.799999999999999,
+          9.0
+        ],
+        [
+          1.799999999999999,
+          9.9
+        ],
+        [
+          1.799999999999999,
+          10.8
+        ],
+        [
+          1.799999999999999,
+          11.700000000000001
+        ],
+        [
+          1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          1.799999999999999,
+          13.5
+        ],
+        [
+          1.799999999999999,
+          14.4
+        ],
+        [
+          1.799999999999999,
+          15.3
+        ],
+        [
+          2.6999999999999993,
+          10.8
+        ],
+        [
+          2.6999999999999993,
+          11.700000000000001
+        ],
+        [
+          2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          2.6999999999999993,
+          13.5
+        ],
+        [
+          2.6999999999999993,
+          14.4
+        ],
+        [
+          2.6999999999999993,
+          15.3
+        ],
+        [
+          3.5999999999999996,
+          13.5
+        ],
+        [
+          3.5999999999999996,
+          14.4
+        ],
+        [
+          3.5999999999999996,
+          15.3
+        ],
+        [
+          4.5,
+          15.3
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          -4.074294222327202,
+          11.953281124610946
+        ],
+        [
+          -4.05973960857984,
+          11.952573332105727
+        ],
+        [
+          -4.045322350119502,
+          11.950456634193147
+        ],
+        [
+          -4.031178505979305,
+          11.946951006645447
+        ],
+        [
+          -4.017441554917618,
+          11.942089532888021
+        ],
+        [
+          -4.0042411357478525,
+          11.935918091783396
+        ],
+        [
+          -3.991701823906731,
+          11.928494924661713
+        ],
+        [
+          -3.979941955806808,
+          11.919890085683686
+        ],
+        [
+          -3.9690725120681316,
+          11.910184780723146
+        ],
+        [
+          -3.9591960701682227,
+          11.89947060100825
+        ],
+        [
+          -3.9504058363944807,
+          11.88784865875369
+        ],
+        [
+          -3.942784766234695,
+          11.875428632941116
+        ],
+        [
+          -3.9364047815067433,
+          11.862327734252991
+        ],
+        [
+          -3.9313260916156105,
+          11.848669598928026
+        ],
+        [
+          -3.9275966253431793,
+          11.83458312197713
+        ],
+        [
+          -3.925251578533132,
+          11.820201240771114
+        ],
+        [
+          -3.924313081939555,
+          11.805659680479694
+        ],
+        [
+          -3.9154667989805705,
+          11.247852473252701
+        ],
+        [
+          -3.915459815919433,
+          11.247361461903182
+        ],
+        [
+          -3.865522567689452,
+          7.279246232885165
+        ],
+        [
+          -3.8655144394767498,
+          7.278419106917218
+        ],
+        [
+          -3.836815041435981,
+          3.2188879662725145
+        ],
+        [
+          -3.8368116511482526,
+          3.2181552901615507
+        ],
+        [
+          -3.8297801272430827,
+          0.0
+        ],
+        [
+          -0.6964964113474421,
+          0.0
+        ],
+        [
+          5.152400356772256,
+          14.684722929906806
+        ],
+        [
+          5.24465408948757,
+          14.95433951694406
+        ],
+        [
+          5.309043482568207,
+          15.228135225357361
+        ],
+        [
+          5.346141571620793,
+          15.506953866614273
+        ],
+        [
+          5.3555866106847105,
+          15.788073744925194
+        ],
+        [
+          5.337286695423725,
+          16.068766489748494
+        ],
+        [
+          5.335574010295742,
+          16.079129509631485
+        ],
+        [
+          -5.338892916662937,
+          16.079129509631485
+        ],
+        [
+          -5.338892916662937,
+          11.953281124610946
+        ],
+        [
+          -4.074294222327202,
+          11.953281124610946
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          -4.074294222327202,
+          12.353281124610954
+        ],
+        [
+          -4.020927305253542,
+          12.350685885425154
+        ],
+        [
+          -3.968064024232299,
+          12.342924659745691
+        ],
+        [
+          -3.9162032623849146,
+          12.330070692070791
+        ],
+        [
+          -3.8658344418253945,
+          12.312245288293568
+        ],
+        [
+          -3.8174329048695883,
+          12.289616670909945
+        ],
+        [
+          -3.7714554281188066,
+          12.262398391463774
+        ],
+        [
+          -3.728335911752424,
+          12.230847315211015
+        ],
+        [
+          -3.6884812847106097,
+          12.195261197022365
+        ],
+        [
+          -3.6522676644109433,
+          12.15597587140108
+        ],
+        [
+          -3.620036807240557,
+          12.11336208313436
+        ],
+        [
+          -3.592092883321343,
+          12.067821988488257
+        ],
+        [
+          -3.56869960598552,
+          12.019785359965153
+        ],
+        [
+          -3.5500777430513653,
+          11.969705530440278
+        ],
+        [
+          -3.5364030333857848,
+          11.918055114953654
+        ],
+        [
+          -3.5278045284156105,
+          11.86532155053158
+        ],
+        [
+          -3.524363374239161,
+          11.812002496129688
+        ],
+        [
+          -3.5155170912801768,
+          11.254195288902698
+        ],
+        [
+          -3.5154914867226736,
+          11.252394913954467
+        ],
+        [
+          -3.4655542384926923,
+          7.2842796849364495
+        ],
+        [
+          -3.4655244350461185,
+          7.281246889720643
+        ],
+        [
+          -3.4368250370053497,
+          3.2217157490759387
+        ],
+        [
+          -3.4368126059503448,
+          3.21902927000241
+        ],
+        [
+          -3.4306531543657695,
+          0.3999999999999963
+        ],
+        [
+          -0.9677380000775262,
+          0.3999999999999963
+        ],
+        [
+          4.777138401444345,
+          14.823560812824779
+        ],
+        [
+          4.859799569349764,
+          15.065142603774607
+        ],
+        [
+          4.915143481674061,
+          15.300475240971819
+        ],
+        [
+          4.947030480197286,
+          15.540128814216652
+        ],
+        [
+          4.955060402940781,
+          15.779129509631497
+        ],
+        [
+          -5.038892916662936,
+          15.779129509631497
+        ],
+        [
+          -5.038892916662936,
+          12.353281124610954
+        ],
+        [
+          -4.074294222327202,
+          12.353281124610954
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.05,
+        "flex_bottom": 0.05,
+        "shield_center": 0.084,
+        "flex_top": 0.186,
+        "post_base_middle": 0.211,
+        "plate_bottom": 0.386,
+        "plate_top": 0.6859999999999999,
+        "cover_top": 0.7859999999999999
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch1_post_sheet_formed_reference.stl",
+        "sha256": "ee328e5a2edeaacf26f1172801b21429898f36e330b11366398de35ff3d51aae",
+        "watertight": true,
+        "surface_chart_handedness": -1.0,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          -4.074294222327202,
+          11.953281124610946
+        ],
+        [
+          -4.05973960857984,
+          11.952573332105727
+        ],
+        [
+          -4.045322350119502,
+          11.950456634193147
+        ],
+        [
+          -4.031178505979305,
+          11.946951006645447
+        ],
+        [
+          -4.017441554917618,
+          11.942089532888021
+        ],
+        [
+          -4.0042411357478525,
+          11.935918091783396
+        ],
+        [
+          -3.991701823906731,
+          11.928494924661713
+        ],
+        [
+          -3.979941955806808,
+          11.919890085683686
+        ],
+        [
+          -3.9690725120681316,
+          11.910184780723146
+        ],
+        [
+          -3.9591960701682227,
+          11.89947060100825
+        ],
+        [
+          -3.9504058363944807,
+          11.88784865875369
+        ],
+        [
+          -3.942784766234695,
+          11.875428632941116
+        ],
+        [
+          -3.9364047815067433,
+          11.862327734252991
+        ],
+        [
+          -3.9313260916156105,
+          11.848669598928026
+        ],
+        [
+          -3.9275966253431793,
+          11.83458312197713
+        ],
+        [
+          -3.925251578533132,
+          11.820201240771114
+        ],
+        [
+          -3.924313081939555,
+          11.805659680479694
+        ],
+        [
+          -3.9154667989805705,
+          11.247852473252701
+        ],
+        [
+          -3.915459815919433,
+          11.247361461903182
+        ],
+        [
+          -3.865522567689452,
+          7.279246232885165
+        ],
+        [
+          -3.8655144394767498,
+          7.278419106917218
+        ],
+        [
+          -3.836815041435981,
+          3.2188879662725145
+        ],
+        [
+          -3.8368116511482526,
+          3.2181552901615507
+        ],
+        [
+          -3.8297801272430827,
+          0.0
+        ],
+        [
+          -0.6964964113474421,
+          0.0
+        ],
+        [
+          5.152400356772256,
+          14.684722929906806
+        ],
+        [
+          5.24465408948757,
+          14.95433951694406
+        ],
+        [
+          5.309043482568207,
+          15.228135225357361
+        ],
+        [
+          5.346141571620793,
+          15.506953866614273
+        ],
+        [
+          5.3555866106847105,
+          15.788073744925194
+        ],
+        [
+          5.337286695423725,
+          16.068766489748494
+        ],
+        [
+          5.335574010295742,
+          16.079129509631485
+        ],
+        [
+          -5.338892916662937,
+          16.079129509631485
+        ],
+        [
+          -5.338892916662937,
+          11.953281124610946
+        ],
+        [
+          -4.074294222327202,
+          11.953281124610946
+        ]
+      ]
+    },
+    {
+      "site": "CH2",
+      "post_count": 169,
+      "post_centers_flat_mm": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          6.5,
+          0.5568041271104438
+        ],
+        [
+          6.5,
+          13.842056624286744
+        ],
+        [
+          -6.5,
+          13.842056624286744
+        ],
+        [
+          -6.5,
+          0.5568041271104438
+        ],
+        [
+          6.5,
+          0.5568041271104438
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          5.9,
+          1.187604607483992
+        ],
+        [
+          -5.9,
+          1.187604607483992
+        ],
+        [
+          -5.9,
+          13.108273871772164
+        ],
+        [
+          5.9,
+          13.108273871772164
+        ],
+        [
+          5.9,
+          1.187604607483992
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.1,
+        "flex_bottom": 0.9,
+        "shield_center": 0.934,
+        "flex_top": 1.036,
+        "post_base_middle": 1.061,
+        "plate_bottom": 1.236,
+        "plate_top": 1.536,
+        "cover_top": 1.736
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch2_post_sheet_formed_reference.stl",
+        "sha256": "11944077fce198b2a47e56f099268d223d04c7672d0a45bc91f38b9ac12989b2",
+        "watertight": true,
+        "surface_chart_handedness": -1.0,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          6.5,
+          0.5742043120596814
+        ],
+        [
+          6.5,
+          13.631532389043006
+        ],
+        [
+          -6.5,
+          13.631532389043006
+        ],
+        [
+          -6.5,
+          0.5742043120596814
+        ],
+        [
+          6.5,
+          0.5742043120596814
+        ]
+      ]
+    },
+    {
+      "site": "CH3",
+      "post_count": 208,
+      "post_centers_flat_mm": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -5.4,
+          13.500000000000002
+        ],
+        [
+          -5.4,
+          14.400000000000002
+        ],
+        [
+          -5.4,
+          15.300000000000002
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          13.500000000000002
+        ],
+        [
+          -4.5,
+          14.400000000000002
+        ],
+        [
+          -4.5,
+          15.300000000000002
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          13.500000000000002
+        ],
+        [
+          -3.5999999999999996,
+          14.400000000000002
+        ],
+        [
+          -3.5999999999999996,
+          15.300000000000002
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          13.500000000000002
+        ],
+        [
+          -2.6999999999999993,
+          14.400000000000002
+        ],
+        [
+          -2.6999999999999993,
+          15.300000000000002
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          13.500000000000002
+        ],
+        [
+          -1.799999999999999,
+          14.400000000000002
+        ],
+        [
+          -1.799999999999999,
+          15.300000000000002
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          13.500000000000002
+        ],
+        [
+          -0.8999999999999986,
+          14.400000000000002
+        ],
+        [
+          -0.8999999999999986,
+          15.300000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          13.500000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          14.400000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          15.300000000000002
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          13.500000000000002
+        ],
+        [
+          0.9000000000000021,
+          14.400000000000002
+        ],
+        [
+          0.9000000000000021,
+          15.300000000000002
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          13.500000000000002
+        ],
+        [
+          1.8000000000000025,
+          14.400000000000002
+        ],
+        [
+          1.8000000000000025,
+          15.300000000000002
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          13.500000000000002
+        ],
+        [
+          2.700000000000003,
+          14.400000000000002
+        ],
+        [
+          2.700000000000003,
+          15.300000000000002
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          13.500000000000002
+        ],
+        [
+          3.600000000000003,
+          14.400000000000002
+        ],
+        [
+          3.600000000000003,
+          15.300000000000002
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          13.500000000000002
+        ],
+        [
+          4.5000000000000036,
+          14.400000000000002
+        ],
+        [
+          4.5000000000000036,
+          15.300000000000002
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          13.500000000000002
+        ],
+        [
+          5.400000000000004,
+          14.400000000000002
+        ],
+        [
+          5.400000000000004,
+          15.300000000000002
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          6.5,
+          0.5000938557195296
+        ],
+        [
+          6.5,
+          17.10235773500715
+        ],
+        [
+          -6.5,
+          17.10235773500715
+        ],
+        [
+          -6.5,
+          0.5000938557195296
+        ],
+        [
+          6.5,
+          0.5000938557195296
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          5.9,
+          1.1000944756537068
+        ],
+        [
+          -5.9,
+          1.1000944756537068
+        ],
+        [
+          -5.9,
+          16.494842118197358
+        ],
+        [
+          5.9,
+          16.494842118197358
+        ],
+        [
+          5.9,
+          1.1000944756537068
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.1,
+        "flex_bottom": 0.9,
+        "shield_center": 0.934,
+        "flex_top": 1.036,
+        "post_base_middle": 1.061,
+        "plate_bottom": 1.236,
+        "plate_top": 1.536,
+        "cover_top": 1.736
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch3_post_sheet_formed_reference.stl",
+        "sha256": "0d3b9aeb0bc3f13b0536d27d7bc1e1d2430d66485dc357b10260953f0c2a44e5",
+        "watertight": true,
+        "surface_chart_handedness": -0.9999999999999997,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          6.5,
+          0.5001226051158494
+        ],
+        [
+          6.5,
+          17.402836452097965
+        ],
+        [
+          -6.5,
+          17.402836452097965
+        ],
+        [
+          -6.5,
+          0.5001226051158494
+        ],
+        [
+          6.5,
+          0.5001226051158494
+        ]
+      ]
+    },
+    {
+      "site": "CH4",
+      "post_count": 169,
+      "post_centers_flat_mm": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          6.5,
+          0.47236906895320285
+        ],
+        [
+          6.5,
+          13.679501961348347
+        ],
+        [
+          -6.5,
+          13.679501961348347
+        ],
+        [
+          -6.5,
+          0.47236906895320285
+        ],
+        [
+          6.5,
+          0.47236906895320285
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          5.9,
+          1.0380381284694564
+        ],
+        [
+          -5.9,
+          1.0380381284694564
+        ],
+        [
+          -5.9,
+          13.145663768519563
+        ],
+        [
+          5.9,
+          13.145663768519563
+        ],
+        [
+          5.9,
+          1.0380381284694564
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.1,
+        "flex_bottom": 0.9,
+        "shield_center": 0.934,
+        "flex_top": 1.036,
+        "post_base_middle": 1.061,
+        "plate_bottom": 1.236,
+        "plate_top": 1.536,
+        "cover_top": 1.736
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch4_post_sheet_formed_reference.stl",
+        "sha256": "82434af16061a5c739277d7271c554978581eed8edde393bd778ce3f41533220",
+        "watertight": true,
+        "surface_chart_handedness": -1.0000000000000002,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          6.5,
+          0.46390539106992035
+        ],
+        [
+          6.5,
+          13.358284087583936
+        ],
+        [
+          -6.5,
+          13.358284087583936
+        ],
+        [
+          -6.5,
+          0.46390539106992035
+        ],
+        [
+          6.5,
+          0.46390539106992035
+        ]
+      ]
+    },
+    {
+      "site": "CH5",
+      "post_count": 286,
+      "post_centers_flat_mm": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -5.4,
+          10.800000000000002
+        ],
+        [
+          -5.4,
+          11.700000000000003
+        ],
+        [
+          -5.4,
+          12.600000000000001
+        ],
+        [
+          -5.4,
+          13.500000000000002
+        ],
+        [
+          -5.4,
+          14.400000000000002
+        ],
+        [
+          -5.4,
+          15.300000000000002
+        ],
+        [
+          -5.4,
+          16.200000000000003
+        ],
+        [
+          -5.4,
+          17.1
+        ],
+        [
+          -5.4,
+          18.000000000000004
+        ],
+        [
+          -5.4,
+          18.900000000000002
+        ],
+        [
+          -5.4,
+          19.800000000000004
+        ],
+        [
+          -5.4,
+          20.700000000000003
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          10.800000000000002
+        ],
+        [
+          -4.5,
+          11.700000000000003
+        ],
+        [
+          -4.5,
+          12.600000000000001
+        ],
+        [
+          -4.5,
+          13.500000000000002
+        ],
+        [
+          -4.5,
+          14.400000000000002
+        ],
+        [
+          -4.5,
+          15.300000000000002
+        ],
+        [
+          -4.5,
+          16.200000000000003
+        ],
+        [
+          -4.5,
+          17.1
+        ],
+        [
+          -4.5,
+          18.000000000000004
+        ],
+        [
+          -4.5,
+          18.900000000000002
+        ],
+        [
+          -4.5,
+          19.800000000000004
+        ],
+        [
+          -4.5,
+          20.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          10.800000000000002
+        ],
+        [
+          -3.5999999999999996,
+          11.700000000000003
+        ],
+        [
+          -3.5999999999999996,
+          12.600000000000001
+        ],
+        [
+          -3.5999999999999996,
+          13.500000000000002
+        ],
+        [
+          -3.5999999999999996,
+          14.400000000000002
+        ],
+        [
+          -3.5999999999999996,
+          15.300000000000002
+        ],
+        [
+          -3.5999999999999996,
+          16.200000000000003
+        ],
+        [
+          -3.5999999999999996,
+          17.1
+        ],
+        [
+          -3.5999999999999996,
+          18.000000000000004
+        ],
+        [
+          -3.5999999999999996,
+          18.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          19.800000000000004
+        ],
+        [
+          -3.5999999999999996,
+          20.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          10.800000000000002
+        ],
+        [
+          -2.6999999999999993,
+          11.700000000000003
+        ],
+        [
+          -2.6999999999999993,
+          12.600000000000001
+        ],
+        [
+          -2.6999999999999993,
+          13.500000000000002
+        ],
+        [
+          -2.6999999999999993,
+          14.400000000000002
+        ],
+        [
+          -2.6999999999999993,
+          15.300000000000002
+        ],
+        [
+          -2.6999999999999993,
+          16.200000000000003
+        ],
+        [
+          -2.6999999999999993,
+          17.1
+        ],
+        [
+          -2.6999999999999993,
+          18.000000000000004
+        ],
+        [
+          -2.6999999999999993,
+          18.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          19.800000000000004
+        ],
+        [
+          -2.6999999999999993,
+          20.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          10.800000000000002
+        ],
+        [
+          -1.799999999999999,
+          11.700000000000003
+        ],
+        [
+          -1.799999999999999,
+          12.600000000000001
+        ],
+        [
+          -1.799999999999999,
+          13.500000000000002
+        ],
+        [
+          -1.799999999999999,
+          14.400000000000002
+        ],
+        [
+          -1.799999999999999,
+          15.300000000000002
+        ],
+        [
+          -1.799999999999999,
+          16.200000000000003
+        ],
+        [
+          -1.799999999999999,
+          17.1
+        ],
+        [
+          -1.799999999999999,
+          18.000000000000004
+        ],
+        [
+          -1.799999999999999,
+          18.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          19.800000000000004
+        ],
+        [
+          -1.799999999999999,
+          20.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          10.800000000000002
+        ],
+        [
+          -0.8999999999999986,
+          11.700000000000003
+        ],
+        [
+          -0.8999999999999986,
+          12.600000000000001
+        ],
+        [
+          -0.8999999999999986,
+          13.500000000000002
+        ],
+        [
+          -0.8999999999999986,
+          14.400000000000002
+        ],
+        [
+          -0.8999999999999986,
+          15.300000000000002
+        ],
+        [
+          -0.8999999999999986,
+          16.200000000000003
+        ],
+        [
+          -0.8999999999999986,
+          17.1
+        ],
+        [
+          -0.8999999999999986,
+          18.000000000000004
+        ],
+        [
+          -0.8999999999999986,
+          18.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          19.800000000000004
+        ],
+        [
+          -0.8999999999999986,
+          20.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          10.800000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          11.700000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          12.600000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          13.500000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          14.400000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          15.300000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          16.200000000000003
+        ],
+        [
+          1.7763568394002505e-15,
+          17.1
+        ],
+        [
+          1.7763568394002505e-15,
+          18.000000000000004
+        ],
+        [
+          1.7763568394002505e-15,
+          18.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          19.800000000000004
+        ],
+        [
+          1.7763568394002505e-15,
+          20.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          10.800000000000002
+        ],
+        [
+          0.9000000000000021,
+          11.700000000000003
+        ],
+        [
+          0.9000000000000021,
+          12.600000000000001
+        ],
+        [
+          0.9000000000000021,
+          13.500000000000002
+        ],
+        [
+          0.9000000000000021,
+          14.400000000000002
+        ],
+        [
+          0.9000000000000021,
+          15.300000000000002
+        ],
+        [
+          0.9000000000000021,
+          16.200000000000003
+        ],
+        [
+          0.9000000000000021,
+          17.1
+        ],
+        [
+          0.9000000000000021,
+          18.000000000000004
+        ],
+        [
+          0.9000000000000021,
+          18.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          19.800000000000004
+        ],
+        [
+          0.9000000000000021,
+          20.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          10.800000000000002
+        ],
+        [
+          1.8000000000000025,
+          11.700000000000003
+        ],
+        [
+          1.8000000000000025,
+          12.600000000000001
+        ],
+        [
+          1.8000000000000025,
+          13.500000000000002
+        ],
+        [
+          1.8000000000000025,
+          14.400000000000002
+        ],
+        [
+          1.8000000000000025,
+          15.300000000000002
+        ],
+        [
+          1.8000000000000025,
+          16.200000000000003
+        ],
+        [
+          1.8000000000000025,
+          17.1
+        ],
+        [
+          1.8000000000000025,
+          18.000000000000004
+        ],
+        [
+          1.8000000000000025,
+          18.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          19.800000000000004
+        ],
+        [
+          1.8000000000000025,
+          20.700000000000003
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          10.800000000000002
+        ],
+        [
+          2.700000000000003,
+          11.700000000000003
+        ],
+        [
+          2.700000000000003,
+          12.600000000000001
+        ],
+        [
+          2.700000000000003,
+          13.500000000000002
+        ],
+        [
+          2.700000000000003,
+          14.400000000000002
+        ],
+        [
+          2.700000000000003,
+          15.300000000000002
+        ],
+        [
+          2.700000000000003,
+          16.200000000000003
+        ],
+        [
+          2.700000000000003,
+          17.1
+        ],
+        [
+          2.700000000000003,
+          18.000000000000004
+        ],
+        [
+          2.700000000000003,
+          18.900000000000002
+        ],
+        [
+          2.700000000000003,
+          19.800000000000004
+        ],
+        [
+          2.700000000000003,
+          20.700000000000003
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          10.800000000000002
+        ],
+        [
+          3.600000000000003,
+          11.700000000000003
+        ],
+        [
+          3.600000000000003,
+          12.600000000000001
+        ],
+        [
+          3.600000000000003,
+          13.500000000000002
+        ],
+        [
+          3.600000000000003,
+          14.400000000000002
+        ],
+        [
+          3.600000000000003,
+          15.300000000000002
+        ],
+        [
+          3.600000000000003,
+          16.200000000000003
+        ],
+        [
+          3.600000000000003,
+          17.1
+        ],
+        [
+          3.600000000000003,
+          18.000000000000004
+        ],
+        [
+          3.600000000000003,
+          18.900000000000002
+        ],
+        [
+          3.600000000000003,
+          19.800000000000004
+        ],
+        [
+          3.600000000000003,
+          20.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          10.800000000000002
+        ],
+        [
+          4.5000000000000036,
+          11.700000000000003
+        ],
+        [
+          4.5000000000000036,
+          12.600000000000001
+        ],
+        [
+          4.5000000000000036,
+          13.500000000000002
+        ],
+        [
+          4.5000000000000036,
+          14.400000000000002
+        ],
+        [
+          4.5000000000000036,
+          15.300000000000002
+        ],
+        [
+          4.5000000000000036,
+          16.200000000000003
+        ],
+        [
+          4.5000000000000036,
+          17.1
+        ],
+        [
+          4.5000000000000036,
+          18.000000000000004
+        ],
+        [
+          4.5000000000000036,
+          18.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          19.800000000000004
+        ],
+        [
+          4.5000000000000036,
+          20.700000000000003
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          10.800000000000002
+        ],
+        [
+          5.400000000000004,
+          11.700000000000003
+        ],
+        [
+          5.400000000000004,
+          12.600000000000001
+        ],
+        [
+          5.400000000000004,
+          13.500000000000002
+        ],
+        [
+          5.400000000000004,
+          14.400000000000002
+        ],
+        [
+          5.400000000000004,
+          15.300000000000002
+        ],
+        [
+          5.400000000000004,
+          16.200000000000003
+        ],
+        [
+          5.400000000000004,
+          17.1
+        ],
+        [
+          5.400000000000004,
+          18.000000000000004
+        ],
+        [
+          5.400000000000004,
+          18.900000000000002
+        ],
+        [
+          5.400000000000004,
+          19.800000000000004
+        ],
+        [
+          5.400000000000004,
+          20.700000000000003
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          6.5,
+          0.4612300386590744
+        ],
+        [
+          6.5,
+          22.13260397415952
+        ],
+        [
+          -6.5,
+          22.13260397415952
+        ],
+        [
+          -6.5,
+          0.4612300386590744
+        ],
+        [
+          6.5,
+          0.4612300386590744
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          5.9,
+          1.0157337122408376
+        ],
+        [
+          -5.9,
+          1.0157337122408376
+        ],
+        [
+          -5.9,
+          21.52289366302991
+        ],
+        [
+          5.9,
+          21.52289366302991
+        ],
+        [
+          5.9,
+          1.0157337122408376
+        ]
+      ],
+      "reference_copies_required": 1,
+      "offsets_native_normal_mm": {
+        "mount": 0.1,
+        "flex_bottom": 0.9,
+        "shield_center": 0.934,
+        "flex_top": 1.036,
+        "post_base_middle": 1.061,
+        "plate_bottom": 1.236,
+        "plate_top": 1.536,
+        "cover_top": 1.736
+      },
+      "formed_reference": {
+        "file": "cad/k1_ch5_post_sheet_formed_reference.stl",
+        "sha256": "4b7c5c0fae0fef35d23e77b0cbbd39b576bbb893a44478a8ecfbc95ccfd6d137",
+        "watertight": true,
+        "surface_chart_handedness": -1.0,
+        "method": "Same casting mesh, mapped onto the nominal base mid-plane; no physical forming prediction"
+      },
+      "spreader_flat_cut_mm": [
+        [
+          6.5,
+          0.44935434845643135
+        ],
+        [
+          6.5,
+          22.317290972699304
+        ],
+        [
+          -6.5,
+          22.317290972699304
+        ],
+        [
+          -6.5,
+          0.44935434845643135
+        ],
+        [
+          6.5,
+          0.44935434845643135
+        ]
+      ]
+    },
+    {
+      "site": "REF",
+      "post_count": 130,
+      "post_centers_flat_mm": [
+        [
+          -5.4,
+          1.8
+        ],
+        [
+          -5.4,
+          2.7
+        ],
+        [
+          -5.4,
+          3.6000000000000005
+        ],
+        [
+          -5.4,
+          4.5
+        ],
+        [
+          -5.4,
+          5.4
+        ],
+        [
+          -5.4,
+          6.300000000000001
+        ],
+        [
+          -5.4,
+          7.2
+        ],
+        [
+          -5.4,
+          8.100000000000001
+        ],
+        [
+          -5.4,
+          9.000000000000002
+        ],
+        [
+          -5.4,
+          9.900000000000002
+        ],
+        [
+          -4.5,
+          1.8
+        ],
+        [
+          -4.5,
+          2.7
+        ],
+        [
+          -4.5,
+          3.6000000000000005
+        ],
+        [
+          -4.5,
+          4.5
+        ],
+        [
+          -4.5,
+          5.4
+        ],
+        [
+          -4.5,
+          6.300000000000001
+        ],
+        [
+          -4.5,
+          7.2
+        ],
+        [
+          -4.5,
+          8.100000000000001
+        ],
+        [
+          -4.5,
+          9.000000000000002
+        ],
+        [
+          -4.5,
+          9.900000000000002
+        ],
+        [
+          -3.5999999999999996,
+          1.8
+        ],
+        [
+          -3.5999999999999996,
+          2.7
+        ],
+        [
+          -3.5999999999999996,
+          3.6000000000000005
+        ],
+        [
+          -3.5999999999999996,
+          4.5
+        ],
+        [
+          -3.5999999999999996,
+          5.4
+        ],
+        [
+          -3.5999999999999996,
+          6.300000000000001
+        ],
+        [
+          -3.5999999999999996,
+          7.2
+        ],
+        [
+          -3.5999999999999996,
+          8.100000000000001
+        ],
+        [
+          -3.5999999999999996,
+          9.000000000000002
+        ],
+        [
+          -3.5999999999999996,
+          9.900000000000002
+        ],
+        [
+          -2.6999999999999993,
+          1.8
+        ],
+        [
+          -2.6999999999999993,
+          2.7
+        ],
+        [
+          -2.6999999999999993,
+          3.6000000000000005
+        ],
+        [
+          -2.6999999999999993,
+          4.5
+        ],
+        [
+          -2.6999999999999993,
+          5.4
+        ],
+        [
+          -2.6999999999999993,
+          6.300000000000001
+        ],
+        [
+          -2.6999999999999993,
+          7.2
+        ],
+        [
+          -2.6999999999999993,
+          8.100000000000001
+        ],
+        [
+          -2.6999999999999993,
+          9.000000000000002
+        ],
+        [
+          -2.6999999999999993,
+          9.900000000000002
+        ],
+        [
+          -1.799999999999999,
+          1.8
+        ],
+        [
+          -1.799999999999999,
+          2.7
+        ],
+        [
+          -1.799999999999999,
+          3.6000000000000005
+        ],
+        [
+          -1.799999999999999,
+          4.5
+        ],
+        [
+          -1.799999999999999,
+          5.4
+        ],
+        [
+          -1.799999999999999,
+          6.300000000000001
+        ],
+        [
+          -1.799999999999999,
+          7.2
+        ],
+        [
+          -1.799999999999999,
+          8.100000000000001
+        ],
+        [
+          -1.799999999999999,
+          9.000000000000002
+        ],
+        [
+          -1.799999999999999,
+          9.900000000000002
+        ],
+        [
+          -0.8999999999999986,
+          1.8
+        ],
+        [
+          -0.8999999999999986,
+          2.7
+        ],
+        [
+          -0.8999999999999986,
+          3.6000000000000005
+        ],
+        [
+          -0.8999999999999986,
+          4.5
+        ],
+        [
+          -0.8999999999999986,
+          5.4
+        ],
+        [
+          -0.8999999999999986,
+          6.300000000000001
+        ],
+        [
+          -0.8999999999999986,
+          7.2
+        ],
+        [
+          -0.8999999999999986,
+          8.100000000000001
+        ],
+        [
+          -0.8999999999999986,
+          9.000000000000002
+        ],
+        [
+          -0.8999999999999986,
+          9.900000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          1.8
+        ],
+        [
+          1.7763568394002505e-15,
+          2.7
+        ],
+        [
+          1.7763568394002505e-15,
+          3.6000000000000005
+        ],
+        [
+          1.7763568394002505e-15,
+          4.5
+        ],
+        [
+          1.7763568394002505e-15,
+          5.4
+        ],
+        [
+          1.7763568394002505e-15,
+          6.300000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          7.2
+        ],
+        [
+          1.7763568394002505e-15,
+          8.100000000000001
+        ],
+        [
+          1.7763568394002505e-15,
+          9.000000000000002
+        ],
+        [
+          1.7763568394002505e-15,
+          9.900000000000002
+        ],
+        [
+          0.9000000000000021,
+          1.8
+        ],
+        [
+          0.9000000000000021,
+          2.7
+        ],
+        [
+          0.9000000000000021,
+          3.6000000000000005
+        ],
+        [
+          0.9000000000000021,
+          4.5
+        ],
+        [
+          0.9000000000000021,
+          5.4
+        ],
+        [
+          0.9000000000000021,
+          6.300000000000001
+        ],
+        [
+          0.9000000000000021,
+          7.2
+        ],
+        [
+          0.9000000000000021,
+          8.100000000000001
+        ],
+        [
+          0.9000000000000021,
+          9.000000000000002
+        ],
+        [
+          0.9000000000000021,
+          9.900000000000002
+        ],
+        [
+          1.8000000000000025,
+          1.8
+        ],
+        [
+          1.8000000000000025,
+          2.7
+        ],
+        [
+          1.8000000000000025,
+          3.6000000000000005
+        ],
+        [
+          1.8000000000000025,
+          4.5
+        ],
+        [
+          1.8000000000000025,
+          5.4
+        ],
+        [
+          1.8000000000000025,
+          6.300000000000001
+        ],
+        [
+          1.8000000000000025,
+          7.2
+        ],
+        [
+          1.8000000000000025,
+          8.100000000000001
+        ],
+        [
+          1.8000000000000025,
+          9.000000000000002
+        ],
+        [
+          1.8000000000000025,
+          9.900000000000002
+        ],
+        [
+          2.700000000000003,
+          1.8
+        ],
+        [
+          2.700000000000003,
+          2.7
+        ],
+        [
+          2.700000000000003,
+          3.6000000000000005
+        ],
+        [
+          2.700000000000003,
+          4.5
+        ],
+        [
+          2.700000000000003,
+          5.4
+        ],
+        [
+          2.700000000000003,
+          6.300000000000001
+        ],
+        [
+          2.700000000000003,
+          7.2
+        ],
+        [
+          2.700000000000003,
+          8.100000000000001
+        ],
+        [
+          2.700000000000003,
+          9.000000000000002
+        ],
+        [
+          2.700000000000003,
+          9.900000000000002
+        ],
+        [
+          3.600000000000003,
+          1.8
+        ],
+        [
+          3.600000000000003,
+          2.7
+        ],
+        [
+          3.600000000000003,
+          3.6000000000000005
+        ],
+        [
+          3.600000000000003,
+          4.5
+        ],
+        [
+          3.600000000000003,
+          5.4
+        ],
+        [
+          3.600000000000003,
+          6.300000000000001
+        ],
+        [
+          3.600000000000003,
+          7.2
+        ],
+        [
+          3.600000000000003,
+          8.100000000000001
+        ],
+        [
+          3.600000000000003,
+          9.000000000000002
+        ],
+        [
+          3.600000000000003,
+          9.900000000000002
+        ],
+        [
+          4.5000000000000036,
+          1.8
+        ],
+        [
+          4.5000000000000036,
+          2.7
+        ],
+        [
+          4.5000000000000036,
+          3.6000000000000005
+        ],
+        [
+          4.5000000000000036,
+          4.5
+        ],
+        [
+          4.5000000000000036,
+          5.4
+        ],
+        [
+          4.5000000000000036,
+          6.300000000000001
+        ],
+        [
+          4.5000000000000036,
+          7.2
+        ],
+        [
+          4.5000000000000036,
+          8.100000000000001
+        ],
+        [
+          4.5000000000000036,
+          9.000000000000002
+        ],
+        [
+          4.5000000000000036,
+          9.900000000000002
+        ],
+        [
+          5.400000000000004,
+          1.8
+        ],
+        [
+          5.400000000000004,
+          2.7
+        ],
+        [
+          5.400000000000004,
+          3.6000000000000005
+        ],
+        [
+          5.400000000000004,
+          4.5
+        ],
+        [
+          5.400000000000004,
+          5.4
+        ],
+        [
+          5.400000000000004,
+          6.300000000000001
+        ],
+        [
+          5.400000000000004,
+          7.2
+        ],
+        [
+          5.400000000000004,
+          8.100000000000001
+        ],
+        [
+          5.400000000000004,
+          9.000000000000002
+        ],
+        [
+          5.400000000000004,
+          9.900000000000002
+        ]
+      ],
+      "flat_body_mm": [
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          12.0
+        ],
+        [
+          -7.0,
+          12.0
+        ],
+        [
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ]
+      ],
+      "flat_active_mm": [
+        [
+          6.0,
+          1.0
+        ],
+        [
+          6.0,
+          11.0
+        ],
+        [
+          -6.0,
+          11.0
+        ],
+        [
+          -6.0,
+          1.0
+        ],
+        [
+          6.0,
+          1.0
+        ]
+      ],
+      "reference_copies_required": 2,
+      "offsets_native_normal_mm": null
+    }
+  ],
+  "remaining": [
+    "Stops, vents and retention details",
+    "Electrode artwork and plate ground contacts",
+    "Cable routes, readout PCB and enclosure",
+    "Loaded deformation, calibration and physical comparison"
+  ]
+}

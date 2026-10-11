@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560">
+<rect width="1100" height="560" fill="#f7f8f2"/>
+<g font-family="sans-serif" fill="#203d43">
+<text x="40" y="40" font-size="25">K1: the tactile sensor is the compression capacitor</text>
+<text x="40" y="69" font-size="16">Proposed nail stack · schematic, not to scale · no force calibration or physical result</text>
+<path d="M210 95v42m-8-10 8 10 8-10" fill="none" stroke="#324e53" stroke-width="3"/>
+<text x="240" y="119" font-size="17">Object load</text>
+<rect x="75" y="145" width="390" height="25" fill="#8db69f"/>
+<text x="490" y="164" font-size="17">0.10 mm protective silicone target</text>
+<rect x="75" y="175" width="390" height="38" fill="#9caab0"/>
+<text x="490" y="200" font-size="17">0.30 mm grounded stainless spreader</text>
+<g fill="#bf9862">
+<rect x="90" y="222" width="35" height="40"/><rect x="152" y="222" width="35" height="40"/>
+<rect x="214" y="222" width="35" height="40"/><rect x="276" y="222" width="35" height="40"/>
+<rect x="338" y="222" width="35" height="40"/><rect x="400" y="222" width="35" height="40"/>
+<rect x="75" y="262" width="390" height="15"/></g>
+<text x="490" y="239" font-size="17">Silicone posts: 0.15 mm high, 0.60 mm diameter</text>
+<text x="490" y="269" font-size="17">0.05 mm base · vented spaces between posts</text>
+<rect x="75" y="286" width="390" height="16" fill="#b67448"/>
+<rect x="75" y="302" width="390" height="22" fill="#dcc477"/>
+<rect x="75" y="324" width="390" height="16" fill="#659d89"/>
+<text x="490" y="298" font-size="17">CIN sensing electrode, covered by polyimide coverlay</text>
+<text x="490" y="324" font-size="17">Two copper layers + core + coverlays: 0.136 mm target</text>
+<text x="490" y="349" font-size="17">Driven SHLD1 plane behind the sensing electrode</text>
+<rect x="75" y="356" width="390" height="16" fill="#c6bd9e"/>
+<rect x="75" y="372" width="390" height="45" fill="#c3cecf"/>
+<text x="490" y="387" font-size="17">0.05 mm nail mounting layer, then the existing hard nail</text>
+<text x="490" y="414" font-size="17">TPU cells use the separate conforming rigid saddle</text>
+<text x="40" y="465" font-size="17">Four cell wires: CIN · driven shield · upper-plate ground drive · separate upper-plate ground return</text>
+<text x="40" y="496" font-size="16">Two boards: A = CH0/CH2/CH3, B = CH1/CH4/CH5. Each has a protected, unloaded CIN4 reference.</text>
+<text x="40" y="531" font-size="16">Electrode fabrication, plate contacts, stops/retention, vents, cable routing and physical validation remain.</text>
+</g></svg>

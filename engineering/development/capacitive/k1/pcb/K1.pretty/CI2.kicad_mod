@@ -1,0 +1,135 @@
+(footprint "CI2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+	(tags "capacitor")
+	(property "Reference" "CI2"
+		(at 0 -1.43 0)
+		(layer "F.Fab")
+		(uuid "2683bb6a-58c6-488e-850e-d356b18921ee")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "1nF 50V C0G"
+		(at 0 1.43 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6b6d4ee8-ec64-41f1-a013-37504b246a72")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c99a8dde-9eb7-4280-835d-2cd4549d7c6e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f6a58ef4-aca5-469b-a1c2-54d0adec2b72")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "2bf4ae74-8bc5-4ab2-938f-2a7778e649d4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.14058 -0.51)
+		(end 0.14058 -0.51)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "476f1503-1153-42cf-8a23-ae85e36c3d7a")
+	)
+	(fp_line
+		(start -0.14058 0.51)
+		(end 0.14058 0.51)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "032e74f1-1e95-4d08-84c2-776555255134")
+	)
+	(fp_rect
+		(start -1.48 -0.73)
+		(end 1.48 0.73)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c024c950-416a-4c65-b71f-0977428c03a5")
+	)
+	(fp_rect
+		(start -0.8 -0.4)
+		(end 0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d86e3acf-5fea-4d2b-961d-ac4ddb93f080")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cdac85b9-b8dc-4ef2-87f1-643eafdbcd46")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.06)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.775 0)
+		(size 0.9 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "350fc968-40b5-4a61-86c8-088148890cef")
+	)
+	(pad "2" smd roundrect
+		(at 0.775 0)
+		(size 0.9 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1250176b-c8ac-47f2-bffc-213a60e87582")
+	)
+	(embedded_fonts no)
+)

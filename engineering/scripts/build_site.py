@@ -49,6 +49,7 @@ DOCS=[
     ("RECESSED_ANALYSIS","recessed-analysis","B3 digital results"),
     ("BUILD_F1","build-f1","F1 development & fit packet"),
     ("F1_WRIST_CAPTURE","f1-capture","F1 wiring & raw capture"),
+    ("BUILD_CAPACITIVE","build-capacitive","K1 capacitive development"),
 ]
 
 
@@ -136,11 +137,13 @@ def development_indexes(assets):
                 f'<td>{(folder/name).stat().st_size:,} bytes</td></tr>'
                 for name in sorted(names))
             blocks.append(f'<details open><summary>{html.escape(group)}</summary><table><tbody>{rows}</tbody></table></details>')
-        title="F1 "+folder.name.replace("-"," ")+" files"
+        label=checkpoint.get("design_label","F1")
+        design_page=checkpoint.get("design_page","flexible-matrix.html")
+        title=label+" "+folder.name.replace("-"," ")+" files"
         body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title><link rel="stylesheet" href="{prefix}/assets/style.css"></head><body>
 <main class="doc-body" style="max-width:1100px;margin:2rem auto;padding:1rem">
-<p><a href="{prefix}/flexible-matrix.html">← F1 sensor, placement and build guide</a></p>
+<p><a href="{prefix}/{html.escape(design_page,quote=True)}">← {html.escape(label)} sensor, placement and build guide</a></p>
 <h1>{html.escape(title)}</h1><p><strong>{html.escape(str(checkpoint.get("status","Development checkpoint")))}</strong></p>
 <p>The complete tactile finger and physical qualification remain unfinished.</p>
 <p>Use <a href="README.md">README.md</a> for this module's scope and <a href="checkpoint.json">checkpoint.json</a>
@@ -290,6 +293,9 @@ def main():
                         for path in (ROOT/"engineering/development").rglob("*") if path.is_file()
                         and path.name not in ("models.json","assembly_models.json")})
         write_zip(downloads/"enpire-designs.zip",designs)
+        k1=ROOT/"engineering/development/capacitive/k1"
+        write_zip(downloads/"k1-development.zip",
+                  {str(p.relative_to(k1)):p.read_bytes() for p in k1.rglob("*") if p.is_file()})
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
         offline={}
@@ -316,6 +322,7 @@ def main():
             "B2.1 files: source/engineering/prototypes/b2; instructions: website/build-b2.html.\n"
             "All twelve designs and planned comparisons: website/build-all.html.\n"
             "F1 development modules and fit patterns: website/flexible-matrix.html and source/engineering/development/f1.\n"
+            "K1 capacitive tooling/readout modules: website/capacitive.html and source/engineering/development/capacitive/k1.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()
@@ -334,6 +341,7 @@ def main():
             "additional_prototype_reference_solids":sum(p.get("kind")=="reference_only" for plan in prototype_plans.values() for p in plan["parts"]),
             "separate_concept_solids":2,
             "f1_development_fit_solids":json.loads((ROOT/"engineering/development/f1/r3/checkpoint.json").read_text())["cad_solids"],
+            "k1_development_parts":json.loads((k1/"checkpoint.json").read_text())["current_cad_parts"],
             "documents":len(DOCS)+len(catalog["designs"]),"design_pages":len(catalog["designs"]),
             "requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],

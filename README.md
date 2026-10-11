@@ -38,6 +38,10 @@ The complete resistance budget, finished mating/lamination, object/motion
 details and physical performance remain unfinished; F1 is not yet an eighth
 integrated prototype.
 
+The [K1 capacitive guide](engineering/docs/BUILD_CAPACITIVE.md) adds 49 current
+tooling/reference parts, conforming supports, a checked readout PCB and raw
+acquisition code. Whole-finger interfaces and physical validation remain.
+
 ## Start here
 
 1. [Measure and identify the actual finger](engineering/docs/GEOMETRY.md).

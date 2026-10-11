@@ -1,0 +1,59 @@
+(footprint "MOUNT_M2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "H4"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "dc4fd314-b697-4215-b44e-3c24b05890e6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "M2 clearance"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4ca1975d-1ab9-44be-be57-76e00d5918a8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d5abe39-7efa-4e0d-a79a-42836b0f82bf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "47ad8fbe-39d8-4d1e-ab09-fcf53a6765c3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr board_only exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 2.2 2.2)
+		(drill 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "5a10135d-92fb-47f3-8729-e726b40db2ec")
+	)
+	(embedded_fonts no)
+)

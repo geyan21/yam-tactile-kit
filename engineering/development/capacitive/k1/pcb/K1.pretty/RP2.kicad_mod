@@ -1,0 +1,135 @@
+(footprint "RP2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+	(tags "resistor")
+	(property "Reference" "RP2"
+		(at 0 -1.43 0)
+		(layer "F.Fab")
+		(uuid "af18f579-77c6-4812-810b-3bfbbd8eb0c6")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "100k 1%"
+		(at 0 1.43 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c2604959-9a78-425c-bd8d-83101873a884")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1065adfa-d064-474d-83f5-062116adc7ad")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0b3ede4d-6a60-45b9-affa-c58020603e9a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b127a307-6b33-45d6-813d-3e8a4c6af7b1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.237258 -0.5225)
+		(end 0.237258 -0.5225)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a45b52a-9700-4ddb-aa7d-0f01b29ae2c2")
+	)
+	(fp_line
+		(start -0.237258 0.5225)
+		(end 0.237258 0.5225)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6fc558e4-92e4-4c47-82b1-0712770f9946")
+	)
+	(fp_rect
+		(start -1.48 -0.73)
+		(end 1.48 0.73)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5e01e6c8-5f9f-4f0a-873f-5a246963991a")
+	)
+	(fp_rect
+		(start -0.8 -0.4125)
+		(end 0.8 0.4125)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "97ee7e5e-b6f7-46af-9bec-43093a5e415c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "077efb95-4b71-4fdb-a18f-6b96e2bf8994")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.06)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.825 0)
+		(size 0.8 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "fea088f1-d31a-4f8d-a41a-332ab17ed32b")
+	)
+	(pad "2" smd roundrect
+		(at 0.825 0)
+		(size 0.8 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "4d9c3538-13a2-47b0-95b6-cf239a65659b")
+	)
+	(embedded_fonts no)
+)

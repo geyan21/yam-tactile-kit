@@ -1,0 +1,24 @@
+reference,part_or_value,footprint,source,quantity_per_board
+U1,FDC1004DGSR,Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod,https://www.ti.com/lit/ds/symlink/fdc1004.pdf,1
+U2,ADS1115IDGSR,Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod,https://www.ti.com/lit/ds/symlink/ads1115.pdf,1
+CF1,100nF 16V X7R,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+CF2,1uF 16V X7R; verify effective capacitance,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+RF,10 ohm 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+CD,100nF 16V X7R,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+CB,1uF 16V X7R,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+RSDA,4.7k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+RSCL,4.7k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+RP0,100k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+RI0,1k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+CI0,1nF 50V C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+RP1,100k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+RI1,1k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+CI1,1nF 50V C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+RP2,100k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+RI2,1k 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,,1
+CI2,1nF 50V C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,,1
+JS0,CIN / driven shield / ground drive / ground return,K1 prototype plated wire port,,1
+JS1,CIN / driven shield / ground drive / ground return,K1 prototype plated wire port,,1
+JS2,CIN / driven shield / ground drive / ground return,K1 prototype plated wire port,,1
+JREF,Protected reference: CIN4 / SHLD2 / GND / GND,K1 prototype plated wire port,,1
+JP,3V3 / GND / SDA / SCL,K1 prototype plated wire port,,1

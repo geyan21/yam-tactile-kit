@@ -13,6 +13,50 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+K1 capacitive development is now at `engineering/development/capacitive/k1/`.
+It contains 49 current CAD parts, seven post-sheet patterns (reference tooling
+used twice), corrected conforming supports, a checked readout PCB and raw
+firmware/decoder/recorder. Its 197-file checkpoint is
+`424b8292b2044f82ce40f3e246782a09c70bb7bbf3ad64f6be979810610767cd`.
+The earlier unpublished archive is preserved at
+`build/engineering/prototypes/capacitive/k1-archive-before-capture-setup`;
+the current module adds explicit isolated-recorder setup instructions.
+The full K1 finger remains unfinished; the digital prototype count stays seven.
+
+The K1 cell CAD run is
+`build/engineering/prototypes/capacitive/cad_runs/20261011T165415.841509Z`.
+Earlier large flat-face triangles produced invalid formed views of the
+50 µm base; a source-preserving Gmsh surface mesh resolved that visualization
+problem. The original failures and the direct comparison remain in
+`cad_runs/20261011T164435.452494Z/forming_reviews/`. The four complete
+conforming supports are in `saddle_runs/20261011T172831.557871Z`, with all
+18 declared source/peer/electrode checks passing. These replace the initial
+slab-only supports, which did not reach the raw TPU fitting geometry.
+
+The K1 native board is at
+`routing/20261011T172208.410587Z/native-documented-drill` below the same
+capacitive development root. KiCad 10.0.7 reports zero violations and zero
+missing connections for 23 components, 72 pads, 357 track segments and 34
+vias. In1.Cu is reserved for driven shields. The declared native MSOP-pad
+gap is 0.15 mm; routed clearances remain 0.20 mm and via drills 0.25 mm.
+Earlier component/label findings, failed pin escapes and the first check
+using KiCad's default 0.30 mm drill limit remain preserved.
+
+The revised screen is `screens/20261011T163932.182186Z`. Its pressure-cell
+capacitance estimates range from 6.2 to 16.8 pF before reference subtraction,
+and its conservative shield scenarios are approximately 336/373 pF. Those
+figures are model assumptions, not measured performance. The 0.786 mm nail
+addition and 1.736 mm stack above the R1 TPU datum are precision-access
+concerns; the latter is not the complete addition to bare TPU.
+
+Eighteen focused K1 software checks pass, covering fresh transactions,
+signed results, configuration changes, supply/ground/reference failures,
+gaps and preserved unknown force/contact. Physical noise, timing and fault
+coverage remain unverified. Still required for K1: electrode fabrication,
+plate-ground joints, stops/retention, venting/sealing, guarded cables,
+enclosure and complete-finger physical comparison. The pneumatic, optical,
+force-button and unfinished F1 work remain in scope.
+
 The latest separate F1 module is
 `engineering/development/f1/fitted-foils-r3/`. Its twelve fitted foils pass
 independent KiCad copper/connectivity checks. All 286 unsuppressed

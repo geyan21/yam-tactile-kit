@@ -1,0 +1,18 @@
+{
+  "input_sha256": {
+    "build/engineering/prototypes/capacitive/cad_runs/20261011T165415.841509Z/models.json": "616edcc537d50001e433393538547ba033cd7be47d0a1e30e199dcdad5d25bd1",
+    "build/engineering/prototypes/capacitive/saddle_runs/20261011T172831.557871Z/models.json": "ea4a6eef30c599e2060f391136288c24913dd6d119d604307cf0de587846a77d",
+    "build/engineering/prototypes/capacitive/saddle_runs/20261011T172831.557871Z/manifest.json": "69fe5ce3f1b259efabf68a6de5d27d6ef63b306811cab78baee39eb23a63cc5b",
+    "build/engineering/prototypes/capacitive/routing/20261011T172208.410587Z/native-documented-drill/k1_readout.json": "3122f2595ac486ad9310040b8f694f7ffe254eeb0d7bec3d68c0fb66945446d4",
+    "build/engineering/prototypes/capacitive/routing/20261011T172208.410587Z/native-documented-drill/latest_check.json": "1633616d046da00b3631c64d49fbfbc8a44d31d5e8df32ddd9a05fe9c31c5429",
+    "engineering/scripts/draw_capacitive_development.py": "abc69af5cf6fa83a37cae1ba11807cb6b8d70e7f4190bf1fb9a67718933b76a8"
+  },
+  "physical_specimens_tested": 0,
+  "files_sha256": {
+    "k1_readout.pdf": "015b5e3399973491786df60b789d91f494da39aaaf01c56cee7e1e528721378d",
+    "k1_cell_placement.pdf": "398a5f003c367aa9066b1d94943d193483e5bc7471287c30c4a4aacbe563b2cd",
+    "k1_stack.svg": "fda766649e64c472b6480a26178bfd25b58c2c04c57c13a95c01e912a95e1d00",
+    "k1_readout.png": "f15af42d72d10864583dbcf2ffa36b3b231a11379af8bc526cad967c81058378",
+    "k1_cell_placement.png": "169b20cf11b9f6d5a8fc79ef40420a8c67fdea662bfa26eb5e0ea54325356f5c"
+  }
+}

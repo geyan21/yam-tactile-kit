@@ -178,6 +178,13 @@ def main():
                 "website/assets/development/f1/fitted-foils-r3/file-index.html",
                 "website/assets/development/f1/fitted-foils-r3/review/fitted_contact_map.png",
                 "website/assets/development/f1/fitted-foils-r3/review/taxels.csv",
+                "source/engineering/development/capacitive/k1/checkpoint.json",
+                "source/engineering/development/capacitive/k1/pcb/k1_readout.kicad_pcb",
+                "source/engineering/docs/BUILD_CAPACITIVE.md",
+                "website/build-capacitive.html",
+                "website/assets/development/capacitive/k1/file-index.html",
+                "website/assets/development/capacitive/k1/visuals/k1_stack.svg",
+                "website/downloads/k1-development.zip",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")
