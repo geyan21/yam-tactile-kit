@@ -1,0 +1,63 @@
+{
+  "schema": "yam-k1-cell-mechanics/1",
+  "revision": "K1.2 vented stop and retainer development",
+  "physical_specimens_tested": 0,
+  "stop": {
+    "film": "DuPont Kapton 300HN polyimide",
+    "film_nominal_mm": 0.0762,
+    "adhesive": "3M 467MP transfer adhesive",
+    "adhesive_nominal_mm": 0.05,
+    "outer_inset_mm": 0.4,
+    "active_clearance_mm": 0.1,
+    "vent_slot_mm": 0.6,
+    "minimum_piece_area_mm2": 0.4,
+    "note": "Nominal bonded height is 0.1262 mm. Measure the actual laminated height; adhesive compression and film tolerance are not a force rating."
+  },
+  "plate": {
+    "edge_inset_mm": 0.25,
+    "nail_leading_strip_preserved_mm": 1.0,
+    "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+    "note": "The original leading nail outline is retained over its first 1 mm; other edges reserve room for the silicone retainer."
+  },
+  "cover": {
+    "material": "Smooth-On Dragon Skin 10 Slow",
+    "mix_ratio": "1A:1B by mass or volume",
+    "wall_mm": 0.10,
+    "under_plate_lip_mm": 0.10,
+    "under_plate_lip_thickness_mm": 0.05,
+    "lip_stop_clearance_mm": 0.05,
+    "minimum_retained_lip_area_fraction": 0.75,
+    "foot_outer_inset_mm": 0.03,
+    "foot_thickness_mm": 0.05,
+    "foot_bond_mm": 0.05,
+    "foot_bond_material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+    "vent_slot_mm": 0.8,
+    "vent_top_above_flex_mm": 0.18,
+    "parallel_stiffness_n_per_mm_cases": [0, 10, 50],
+    "stiffness_scope": "Illustrative retainer-bypass sensitivity only. No cured-skirt stiffness has been measured."
+  },
+  "plate_ground_bonds": {
+    "adhesive": "MG Chemicals 8331D silver conductive epoxy",
+    "count": 2,
+    "edge_length_mm": 2.0,
+    "outside_edge_mm": 0.35,
+    "normal_margin_mm": 0.05,
+    "port_margin_mm": 0.15,
+    "centre_spacing_mm": 6.0,
+    "wire": "Fine stranded insulated wire; two independent plate bonds and a slack loop",
+    "note": "Bond after the silicone cover cures. The two connections must pass through the metal plate; one goes to ground drive and one to the ADC return monitor."
+  },
+  "sources": [
+    "https://www.dupont.com/content/dam/electronics/amer/us/en/electronics/public/documents/en/EI-10167-Kapton-General-Specifications.pdf",
+    "https://www.3m.com/3M/en_US/p/dc/v000296039/",
+    "https://www.smooth-on.com/products/dragon-skin-10-slow/",
+    "https://www.smooth-on.com/products/sil-poxy/",
+    "https://mgchemicals.com/products/adhesives/electrically-conductive-adhesives/silver-epoxy/"
+  ],
+  "remaining": [
+    "Geometry and forming checks for the stop pieces, skirt, ports and updated plate",
+    "Matched cover molds, alignment and assembly tooling",
+    "Measured adhesive/retention behavior, vent response and grounded plate connections",
+    "Finite plate/post loading and physical force/contact calibration"
+  ]
+}

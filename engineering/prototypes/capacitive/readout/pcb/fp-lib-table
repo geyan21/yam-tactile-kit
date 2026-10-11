@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "K1") (type "KiCad") (uri "${KIPRJMOD}/K1.pretty") (options "") (descr "K1 native footprints and prototype wire ports")))

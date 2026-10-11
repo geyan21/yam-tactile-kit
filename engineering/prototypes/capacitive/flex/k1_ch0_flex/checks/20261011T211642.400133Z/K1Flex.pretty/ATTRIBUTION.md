@@ -1,0 +1,1 @@
+K1 sensing copper, driven guards, termination lands and plated transition are authored for this MIT-licensed kit. The contact outline is derived from the retained ENPIRE/R1 geometry; source attribution and hashes are in the design package.

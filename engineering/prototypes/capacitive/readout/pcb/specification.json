@@ -1,0 +1,484 @@
+{
+  "schema": "yam-k1-native-board/1",
+  "name": "k1_readout",
+  "thickness_mm": 1.0,
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "outline_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      42,
+      0
+    ],
+    [
+      42,
+      38
+    ],
+    [
+      0,
+      38
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "clearance_mm": 0.2,
+  "edge_clearance_mm": 0.25,
+  "minimum_track_mm": 0.2,
+  "native_package_pad_clearance_mm": 0.15,
+  "package_clearance_note": "The selected native MSOP-10 land pattern has 0.35 mm pads at 0.5 mm pitch. Its 0.15 mm adjacent-pad spacing is declared explicitly for U1/U2; routed trace clearance remains 0.20 mm.",
+  "via_diameter_mm": 0.5,
+  "via_drill_mm": 0.25,
+  "holes": [
+    {
+      "center_mm": [
+        2.8,
+        2.8
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_mm": 5.2
+    },
+    {
+      "center_mm": [
+        39.2,
+        2.8
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_mm": 5.2
+    },
+    {
+      "center_mm": [
+        2.8,
+        35.2
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_mm": 5.2
+    },
+    {
+      "center_mm": [
+        39.2,
+        35.2
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_mm": 5.2
+    }
+  ],
+  "parts": [
+    {
+      "reference": "U1",
+      "value": "FDC1004DGSR",
+      "center_mm": [
+        18,
+        17
+      ],
+      "rotation_deg": 0,
+      "library": "Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "nets": {
+        "1": "SHLD1",
+        "2": "CIN1",
+        "3": "CIN2",
+        "4": "CIN3",
+        "5": "CIN4",
+        "6": "SHLD2",
+        "7": "GND",
+        "8": "VDD_FDC",
+        "9": "SCL",
+        "10": "SDA"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/fdc1004.pdf"
+    },
+    {
+      "reference": "U2",
+      "value": "ADS1115IDGSR",
+      "center_mm": [
+        27,
+        29
+      ],
+      "rotation_deg": 0,
+      "library": "Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "nets": {
+        "1": "GND",
+        "2": "",
+        "3": "GND",
+        "4": "VDD_FDC",
+        "5": "RET0_F",
+        "6": "RET1_F",
+        "7": "RET2_F",
+        "8": "3V3",
+        "9": "SDA",
+        "10": "SCL"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/ads1115.pdf"
+    },
+    {
+      "reference": "CF1",
+      "value": "100nF 16V X7R",
+      "center_mm": [
+        22.8,
+        17
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "VDD_FDC",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CF2",
+      "value": "1uF 16V X7R; verify effective capacitance",
+      "center_mm": [
+        22.3,
+        14
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "VDD_FDC",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RF",
+      "value": "10 ohm 1%",
+      "center_mm": [
+        22.3,
+        20
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "VDD_FDC",
+        "2": "3V3"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CD",
+      "value": "100nF 16V X7R",
+      "center_mm": [
+        32,
+        28.5
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CB",
+      "value": "1uF 16V X7R",
+      "center_mm": [
+        19.5,
+        27
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RSDA",
+      "value": "4.7k 1%",
+      "center_mm": [
+        22,
+        24
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "SDA"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RSCL",
+      "value": "4.7k 1%",
+      "center_mm": [
+        26,
+        24
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "SCL"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RP0",
+      "value": "100k 1%",
+      "center_mm": [
+        16,
+        32
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "RET0"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RI0",
+      "value": "1k 1%",
+      "center_mm": [
+        20,
+        32
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET0",
+        "2": "RET0_F"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CI0",
+      "value": "1nF 50V C0G",
+      "center_mm": [
+        24,
+        32
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET0_F",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RP1",
+      "value": "100k 1%",
+      "center_mm": [
+        36,
+        31
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "RET1"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RI1",
+      "value": "1k 1%",
+      "center_mm": [
+        36,
+        28.5
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET1",
+        "2": "RET1_F"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CI1",
+      "value": "1nF 50V C0G",
+      "center_mm": [
+        32,
+        32
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET1_F",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RP2",
+      "value": "100k 1%",
+      "center_mm": [
+        36,
+        26
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "3V3",
+        "2": "RET2"
+      },
+      "source": ""
+    },
+    {
+      "reference": "RI2",
+      "value": "1k 1%",
+      "center_mm": [
+        36,
+        23.5
+      ],
+      "rotation_deg": 0,
+      "library": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET2",
+        "2": "RET2_F"
+      },
+      "source": ""
+    },
+    {
+      "reference": "CI2",
+      "value": "1nF 50V C0G",
+      "center_mm": [
+        32,
+        25
+      ],
+      "rotation_deg": 0,
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "nets": {
+        "1": "RET2_F",
+        "2": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "JS0",
+      "value": "CIN / driven shield / ground drive / ground return",
+      "center_mm": [
+        7,
+        7
+      ],
+      "rotation_deg": 90,
+      "library": null,
+      "nets": {
+        "1": "CIN1",
+        "2": "SHLD1",
+        "3": "GND",
+        "4": "RET0"
+      },
+      "source": ""
+    },
+    {
+      "reference": "JS1",
+      "value": "CIN / driven shield / ground drive / ground return",
+      "center_mm": [
+        7,
+        17
+      ],
+      "rotation_deg": 90,
+      "library": null,
+      "nets": {
+        "1": "CIN2",
+        "2": "SHLD1",
+        "3": "GND",
+        "4": "RET1"
+      },
+      "source": ""
+    },
+    {
+      "reference": "JS2",
+      "value": "CIN / driven shield / ground drive / ground return",
+      "center_mm": [
+        7,
+        27
+      ],
+      "rotation_deg": 90,
+      "library": null,
+      "nets": {
+        "1": "CIN3",
+        "2": "SHLD1",
+        "3": "GND",
+        "4": "RET2"
+      },
+      "source": ""
+    },
+    {
+      "reference": "JREF",
+      "value": "Protected reference: CIN4 / SHLD2 / GND / GND",
+      "center_mm": [
+        31.5,
+        20.5
+      ],
+      "rotation_deg": 0,
+      "library": null,
+      "nets": {
+        "1": "CIN4",
+        "2": "SHLD2",
+        "3": "GND",
+        "4": "GND"
+      },
+      "source": ""
+    },
+    {
+      "reference": "JP",
+      "value": "3V3 / GND / SDA / SCL",
+      "center_mm": [
+        31,
+        34
+      ],
+      "rotation_deg": 0,
+      "library": null,
+      "nets": {
+        "1": "3V3",
+        "2": "GND",
+        "3": "SDA",
+        "4": "SCL"
+      },
+      "source": ""
+    }
+  ],
+  "reference_cell_body_xy_mm": [
+    [
+      24.5,
+      5.7
+    ],
+    [
+      38.5,
+      5.7
+    ],
+    [
+      38.5,
+      17.7
+    ],
+    [
+      24.5,
+      17.7
+    ],
+    [
+      24.5,
+      5.7
+    ]
+  ],
+  "reference_cell_note": "Reserved for the separate shielded reference coupon and its protected metal plate. No ground plane under unguarded CIN routing.",
+  "wire_port": {
+    "pitch_mm": 1.75,
+    "land_mm": 1.25,
+    "drill_mm": 0.65,
+    "pin1": "square land; other lands circular",
+    "assembly": "Soldered prototype leads with enclosure strain relief"
+  },
+  "physical_boards_tested": 0,
+  "remaining": [
+    "Native placement and pin audit",
+    "Guarded input routes and actual shield polygons",
+    "Power/digital/health routing and native DRC",
+    "Enclosure, physical bring-up and complete sensor tests"
+  ]
+}

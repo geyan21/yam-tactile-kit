@@ -1,0 +1,6 @@
+(version 1)
+(rule "K1 flex copper clearance" (constraint clearance (min 0.20mm)))
+(rule "K1 flex copper to edge" (constraint edge_clearance (min 0.30mm)))
+(rule "K1 flex trace width" (constraint track_width (min 0.20mm)))
+(rule "K1 plated drill" (constraint hole_size (min 0.30mm)))
+(rule "K1 copper to drill" (constraint hole_clearance (min 0.20mm)))

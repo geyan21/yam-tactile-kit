@@ -1,10 +1,11 @@
 {
-  "protocol": "yam-k1/1",
+  "protocol": "yam-k1/2",
   "rate_sps": 400,
   "bus_hz": 400000,
   "quiet_us": 3000,
   "conversion_timeout_us": 15000,
   "minimum_frame_us": 20000,
+  "hello_period_frames": 50,
   "banks": [
     {"bank": 0, "sites": [0, 2, 3], "i2c_id": 0, "sda_gpio": 0, "scl_gpio": 1},
     {"bank": 1, "sites": [1, 4, 5], "i2c_id": 1, "sda_gpio": 2, "scl_gpio": 3}

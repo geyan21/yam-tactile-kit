@@ -1,0 +1,6336 @@
+{
+  "schema": "yam-k1-cell-mechanics/1",
+  "parts": [
+    {
+      "id": "k1_ch0_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch0_retained_plate.step",
+      "stl": "cad/k1_ch0_retained_plate.stl",
+      "sha256_step": "8666c1d01b761c1211bf6c3e9f1dfae30cf7381334cb6299bd5e63e194d385e7",
+      "sha256_stl": "c3ae871e547c891c165f463889c0725eaf8d31aa8b6ad26a64344f6c418fdd0e",
+      "volume_mm3": 29.469274573295973,
+      "bounds_mm": [
+        [
+          -18.936616897583008,
+          -117.27178955078125,
+          -5.040620803833008
+        ],
+        [
+          -8.75684642791748,
+          -101.44752502441406,
+          -3.947563409805298
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stop_0_bond.step",
+      "stl": "cad/k1_ch0_stop_0_bond.stl",
+      "sha256_step": "ebbc39727c7af1048c5afbd4ae458a4a8a6ee52b6ebaa897c9f6dee18833ef53",
+      "sha256_stl": "135b9638460ef344be5b28c1adc50088aead43a7c131ed5b1fb8e14ed62c6580",
+      "volume_mm3": 0.19101195286371203,
+      "bounds_mm": [
+        [
+          -13.525284767150879,
+          -108.9527359008789,
+          -4.173166275024414
+        ],
+        [
+          -8.906846046447754,
+          -101.61988830566406,
+          -3.755333662033081
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch0_stop_0.step",
+      "stl": "cad/k1_ch0_stop_0.stl",
+      "sha256_step": "71d1f7e52ded7283ac5d10547378497bb308eb62eb51ee59fa2527e8f29354f4",
+      "sha256_stl": "aa6ccbdb86121bcba238193908f255300248142ce0ff947116a5a1686f56e449",
+      "volume_mm3": 0.2911022161642982,
+      "bounds_mm": [
+        [
+          -13.525284767150879,
+          -108.95023345947266,
+          -4.249270439147949
+        ],
+        [
+          -8.906846046447754,
+          -101.61607360839844,
+          -3.8052706718444824
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stop_1_bond.step",
+      "stl": "cad/k1_ch0_stop_1_bond.stl",
+      "sha256_step": "14f5d9a15c3db6507ef5a7a2a8130e86f6b0e130034eaa5a637fb35c16bd3c62",
+      "sha256_stl": "c26053c4749e02d85503ef2a1e81130c7431cc42594ac6f7800c065b923f53df",
+      "volume_mm3": 0.17176172690211988,
+      "bounds_mm": [
+        [
+          -13.525284767150879,
+          -116.88232421875,
+          -4.571136474609375
+        ],
+        [
+          -10.335575103759766,
+          -109.54947662353516,
+          -4.153304100036621
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch0_stop_1.step",
+      "stl": "cad/k1_ch0_stop_1.stl",
+      "sha256_step": "1e4b6b078183c6a156cad4a47175a9d9f2e930c910312005eb45509448e42ed8",
+      "sha256_stl": "2fac87601fedecee06c3263b543594d0c21ae00bd8e51c266d7f875885c63cb5",
+      "volume_mm3": 0.26176487179882973,
+      "bounds_mm": [
+        [
+          -13.525284767150879,
+          -116.87981414794922,
+          -4.64724063873291
+        ],
+        [
+          -10.335575103759766,
+          -109.545654296875,
+          -4.203240871429443
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stop_2_bond.step",
+      "stl": "cad/k1_ch0_stop_2_bond.stl",
+      "sha256_step": "d0b4a86e8be505da1bf6854cc78d1eccbdcf2155483b275a3099190f06a2fb39",
+      "sha256_stl": "9cbcf740e913706068ef5129e51c73d65de78e5370b3b17d46e9f5153bd27ded",
+      "volume_mm3": 0.061719417712305685,
+      "bounds_mm": [
+        [
+          -15.809268951416016,
+          -113.77462005615234,
+          -4.415166854858398
+        ],
+        [
+          -14.125285148620605,
+          -109.54947662353516,
+          -4.153304100036621
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch0_stop_2.step",
+      "stl": "cad/k1_ch0_stop_2.stl",
+      "sha256_step": "a292095cdc0b7799f497bb8a244330830a0403d527f5b61fd3e73eb8e85d6c6b",
+      "sha256_stl": "69fc67261437bd53c926ef1cc4a6e3fe94eb169c6bf5f4da7e46623491c50de6",
+      "volume_mm3": 0.09406039259355382,
+      "bounds_mm": [
+        [
+          -15.809268951416016,
+          -113.77210998535156,
+          -4.491271018981934
+        ],
+        [
+          -14.125285148620605,
+          -109.545654296875,
+          -4.203240871429443
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stop_3_bond.step",
+      "stl": "cad/k1_ch0_stop_3_bond.stl",
+      "sha256_step": "4a8bbc12ba3164fd669435aef79d2bdae1888dbbf379b10e306ec68ecb97e2cd",
+      "sha256_stl": "a08f5ef1ff440a8e3d79bd658599a412fc044d97c531a36fe47f18c1c82672be",
+      "volume_mm3": 0.18309616780841814,
+      "bounds_mm": [
+        [
+          -18.784893035888672,
+          -108.9527359008789,
+          -4.173166275024414
+        ],
+        [
+          -14.125285148620605,
+          -101.61988830566406,
+          -3.755333662033081
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch0_stop_3.step",
+      "stl": "cad/k1_ch0_stop_3.stl",
+      "sha256_step": "0a0822dedcbf76841cba8321836f658c9aa4f4e5ab18b6acbd67fe52c5de6b5e",
+      "sha256_stl": "96c503bcd19a05cf698beefa2265be83ec9805c754a0731c2b5ebca8626028fa",
+      "volume_mm3": 0.27903855974002956,
+      "bounds_mm": [
+        [
+          -18.784893035888672,
+          -108.95023345947266,
+          -4.249270439147949
+        ],
+        [
+          -14.125285148620605,
+          -101.61607360839844,
+          -3.8052706718444824
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch0_vented_cover.step",
+      "stl": "cad/k1_ch0_vented_cover.stl",
+      "sha256_step": "be433ca2aebfb5443575025291a6f6470d620e5d560852a2bb845a80a773f883",
+      "sha256_stl": "22e76b42e7727452d40305aa0c80e7754a0e39a4f847db8f6e3cae7e17d84774",
+      "volume_mm3": 12.304970904348712,
+      "bounds_mm": [
+        [
+          -19.156858444213867,
+          -117.27429962158203,
+          -5.1404948234558105
+        ],
+        [
+          -8.536846160888672,
+          -101.24784851074219,
+          -3.78672456741333
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_bond_0.step",
+      "stl": "cad/k1_ch0_cover_bond_0.stl",
+      "sha256_step": "24a8e969fa3cde20f948b029b038078e0fd5efbb5d04aceff55f12aaf7a9bad1",
+      "sha256_stl": "0352bd4af71a69a6911e110e324a902d6aa3c8f476a674f646f03a57c29c1347",
+      "volume_mm3": 0.1408922376852444,
+      "bounds_mm": [
+        [
+          -19.156858444213867,
+          -108.85285949707031,
+          -4.168153762817383
+        ],
+        [
+          -14.225284576416016,
+          -101.25035858154297,
+          -3.7367873191833496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_bond_1.step",
+      "stl": "cad/k1_ch0_cover_bond_1.stl",
+      "sha256_step": "8b74349e65df77590745eaa820a9e52cfc7b23a1cfa00ddc518bcd3c0bd557c0",
+      "sha256_stl": "e00cdcea0aa21c863f7f618abc194ec00ccb36ca7368b4916237aa5790465fc2",
+      "volume_mm3": 0.14882578491526194,
+      "bounds_mm": [
+        [
+          -13.425285339355469,
+          -108.85285949707031,
+          -4.168153762817383
+        ],
+        [
+          -8.536846160888672,
+          -101.25035858154297,
+          -3.7367873191833496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_bond_2.step",
+      "stl": "cad/k1_ch0_cover_bond_2.stl",
+      "sha256_step": "30aed73388c1429f559adb06021e042599c26e0cceac36e856d2b1e850528af7",
+      "sha256_stl": "f38b16b34641015816c0a1dd988118e5d9f1894c9dc056102868c36893478dac",
+      "volume_mm3": 0.07303669978478945,
+      "bounds_mm": [
+        [
+          -10.224894523620605,
+          -116.28307342529297,
+          -4.5410614013671875
+        ],
+        [
+          -9.966804504394531,
+          -109.64935302734375,
+          -4.158316135406494
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_bond_3.step",
+      "stl": "cad/k1_ch0_cover_bond_3.stl",
+      "sha256_step": "62abe83782c5b5593da42572910183368b88a9feb86ba5b59556aef33d1c8c39",
+      "sha256_stl": "4f6119b641a8b682f3dd62cdb697557962c66bbfdd56efb1ba7d89b64d31db4b",
+      "volume_mm3": 0.054223615242722026,
+      "bounds_mm": [
+        [
+          -16.167707443237305,
+          -114.52253723144531,
+          -4.452703475952148
+        ],
+        [
+          -14.225284576416016,
+          -109.64935302734375,
+          -4.158316612243652
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_bond_4",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_cover_bond_4.step",
+      "stl": "cad/k1_ch0_cover_bond_4.stl",
+      "sha256_step": "e8f90fb88ff5e0e24d229ca5065f2727c5109f547ed76e98c55947a25eea4eed",
+      "sha256_stl": "caa19da15226c46875595d7d6e474a857fc7a6ef691a2674fa850e289c6aa37c",
+      "volume_mm3": 0.0012111551210239487,
+      "bounds_mm": [
+        [
+          -13.425285339355469,
+          -116.28307342529297,
+          -4.5410614013671875
+        ],
+        [
+          -13.286375045776367,
+          -115.9322509765625,
+          -4.473642826080322
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_ground_bond_0.step",
+      "stl": "cad/k1_ch0_ground_bond_0.stl",
+      "sha256_step": "ede88cb5db349198a92d87baf71752c7c5f3c201adad360305f4c2fd9ccdd199",
+      "sha256_stl": "1fe07e452f2d149ba924fd994959cbf64afbef0cec441211c9679ebd1a7aedd1",
+      "volume_mm3": 0.280000000000002,
+      "bounds_mm": [
+        [
+          -17.84346580505371,
+          -101.4650650024414,
+          -4.297123432159424
+        ],
+        [
+          -15.843465805053711,
+          -101.095458984375,
+          -3.880082607269287
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_ground_bond_1.step",
+      "stl": "cad/k1_ch0_ground_bond_1.stl",
+      "sha256_step": "4ce8c2adb1448eb68af44e27be8c12dec5ae10c2e0fc9ec5e2c15266701efc7c",
+      "sha256_stl": "bd8df7f10a3de9119f598ce66e141a930e7cbc4740e6df7ae3fd6adcca66687f",
+      "volume_mm3": 0.28000000000000236,
+      "bounds_mm": [
+        [
+          -11.843465805053711,
+          -101.4650650024414,
+          -4.297123432159424
+        ],
+        [
+          -9.843465805053711,
+          -101.095458984375,
+          -3.880082607269287
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch1_retained_plate.step",
+      "stl": "cad/k1_ch1_retained_plate.stl",
+      "sha256_step": "1a9ccdd67ca3ad80c71ddcd3249f1221b8f61a68f2a58bbbaa481258994775b0",
+      "sha256_stl": "54821acd33905f8a95f1d7a3abfd0d5b263aa64363187fc3ba5be3df7570d1bc",
+      "volume_mm3": 29.29346799274807,
+      "bounds_mm": [
+        [
+          -7.056846618652344,
+          -117.27178955078125,
+          -5.040620803833008
+        ],
+        [
+          3.137359380722046,
+          -101.44752502441406,
+          -3.947563409805298
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stop_0_bond.step",
+      "stl": "cad/k1_ch1_stop_0_bond.stl",
+      "sha256_step": "b2f98d3150f4939bb185f59019be6579c80b40b3f634779bf7ccedfb39ec6a59",
+      "sha256_stl": "b8c7a1bc32106ded45ffc91fcedd8a1f7df30ccbba1167ab487f4f645301d827",
+      "volume_mm3": 0.1916043595879819,
+      "bounds_mm": [
+        [
+          -6.906846523284912,
+          -108.9527359008789,
+          -4.173165798187256
+        ],
+        [
+          -2.287794351577759,
+          -101.61988830566406,
+          -3.755333662033081
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch1_stop_0.step",
+      "stl": "cad/k1_ch1_stop_0.stl",
+      "sha256_step": "3b35aa7de83dd76ac1aa15b231b1f2628ac277be974dee52b0ee7b6ebfe14580",
+      "sha256_stl": "8cec88c9a413fb27cd21463fd4543de89967cf73946bba040d52c678908508c7",
+      "volume_mm3": 0.2920050440120852,
+      "bounds_mm": [
+        [
+          -6.906846523284912,
+          -108.95023345947266,
+          -4.249270439147949
+        ],
+        [
+          -2.287794351577759,
+          -101.61607360839844,
+          -3.8052706718444824
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stop_1_bond.step",
+      "stl": "cad/k1_ch1_stop_1_bond.stl",
+      "sha256_step": "e5ec84bfdc9280a50e430a71cf9af4c1f6471d90932828f0960389ba4e25db1b",
+      "sha256_stl": "cd6bc512f6ea937e0eae13bfb75c249ac9a09c3ee8febef7ce93246d6147f291",
+      "volume_mm3": 0.18331004826879008,
+      "bounds_mm": [
+        [
+          -1.6877944469451904,
+          -108.9527359008789,
+          -4.173165798187256
+        ],
+        [
+          2.9837470054626465,
+          -101.61988830566406,
+          -3.755333423614502
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch1_stop_1.step",
+      "stl": "cad/k1_ch1_stop_1.stl",
+      "sha256_step": "32f69cc2c5df9a128452e553dad8f4f0a9e4d502991f39f5d8d6feb2a3d97280",
+      "sha256_stl": "4edc5447e1ef03b42910ba9cd74e32301242e6076b46de3994459de743f437ed",
+      "volume_mm3": 0.2793645135616424,
+      "bounds_mm": [
+        [
+          -1.6877944469451904,
+          -108.95023345947266,
+          -4.249270439147949
+        ],
+        [
+          2.9837470054626465,
+          -101.61607360839844,
+          -3.8052706718444824
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stop_2_bond.step",
+      "stl": "cad/k1_ch1_stop_2_bond.stl",
+      "sha256_step": "25dfcbbd480984a67a1f34be6288354ae5390b67163b5082c32dce4637cb35fc",
+      "sha256_stl": "8e4cbb83c2458253d5275b7b68bfd219fb9d8e0bfcd2e08e01054a23c4a1710e",
+      "volume_mm3": 0.061372931122162265,
+      "bounds_mm": [
+        [
+          -1.6877944469451904,
+          -113.75318908691406,
+          -4.414091110229492
+        ],
+        [
+          -0.01235708873718977,
+          -109.54947662353516,
+          -4.153303623199463
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch1_stop_2.step",
+      "stl": "cad/k1_ch1_stop_2.stl",
+      "sha256_step": "bd770ba05cc79a3bf936ae45f30f21b4b2fbd3ccf888bded1472554625213514",
+      "sha256_stl": "97e41faf063a22abd2f707edfed84bb4de13932027bdb74bd39a49324372fe71",
+      "volume_mm3": 0.0935323470301734,
+      "bounds_mm": [
+        [
+          -1.6877944469451904,
+          -113.75067901611328,
+          -4.490195274353027
+        ],
+        [
+          -0.012357087805867195,
+          -109.545654296875,
+          -4.203240871429443
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stop_3_bond.step",
+      "stl": "cad/k1_ch1_stop_3_bond.stl",
+      "sha256_step": "6393ad270d14414c1fbc6108d74ac63f7a27b2cde0c8acccc349226a1d10c423",
+      "sha256_stl": "1e37787be5175f705226568b1f9a32f5afd632e42e0e6685675727d66427861e",
+      "volume_mm3": 0.1714060019630362,
+      "bounds_mm": [
+        [
+          -5.439237594604492,
+          -116.88232421875,
+          -4.571136474609375
+        ],
+        [
+          -2.287794351577759,
+          -109.54947662353516,
+          -4.153303623199463
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch1_stop_3.step",
+      "stl": "cad/k1_ch1_stop_3.stl",
+      "sha256_step": "3ed7600367e9eb86899d6cbf1fbf5a6c36651d08e6b26b457db173a61d4ffb2e",
+      "sha256_stl": "a24ced8aaf2cf13850b6d153cc7a02a824a6c43bb043ee5ca31111d8f6e55a6e",
+      "volume_mm3": 0.2612227469916668,
+      "bounds_mm": [
+        [
+          -5.439237594604492,
+          -116.87981414794922,
+          -4.64724063873291
+        ],
+        [
+          -2.287794351577759,
+          -109.545654296875,
+          -4.203240871429443
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch1_vented_cover.step",
+      "stl": "cad/k1_ch1_vented_cover.stl",
+      "sha256_step": "60e7a314a6e3fead1617d5dd9c69a0d46f66ab37d42be77a84ad739aed7cf1f8",
+      "sha256_stl": "59a94c24d67212f0e41e4aeac07f3075fa2db84c7fb504686057331c649f6570",
+      "volume_mm3": 12.250207931076032,
+      "bounds_mm": [
+        [
+          -7.276846408843994,
+          -117.27429962158203,
+          -5.1404948234558105
+        ],
+        [
+          3.357600212097168,
+          -101.24784851074219,
+          -3.78672456741333
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_bond_0.step",
+      "stl": "cad/k1_ch1_cover_bond_0.stl",
+      "sha256_step": "6bc1ffbcd09c99f32a61cf7fb7f59e6240609b3ba456d338b71444993b3ab11f",
+      "sha256_stl": "beded94f2f3d005f8c5b1404d9027e4ec180f4a1c3c7ede2e954b1c22dcbe78d",
+      "volume_mm3": 0.14926021653393032,
+      "bounds_mm": [
+        [
+          -7.276846408843994,
+          -108.85285949707031,
+          -4.168153762817383
+        ],
+        [
+          -2.3877944946289062,
+          -101.25035858154297,
+          -3.7367873191833496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_bond_1.step",
+      "stl": "cad/k1_ch1_cover_bond_1.stl",
+      "sha256_step": "038963ced6e78d3b5eea82eff3b6164482f398c5e66b575fd725f1ffa9f7a0a9",
+      "sha256_stl": "10941ee0ea4aa7cd1a804284d2f29cfda1f913e0e27cda42d5031a98b80c7bf4",
+      "volume_mm3": 0.14113445426997917,
+      "bounds_mm": [
+        [
+          -1.5877944231033325,
+          -108.85285949707031,
+          -4.168153285980225
+        ],
+        [
+          3.357600212097168,
+          -101.25035858154297,
+          -3.7367873191833496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_bond_2.step",
+      "stl": "cad/k1_ch1_cover_bond_2.stl",
+      "sha256_step": "7c3821ca990ca1d61fe35d8f1940ccbfd96eb05def38650e21e8395557b26f9f",
+      "sha256_stl": "9def0fd106bd09a7167737b3e8285e5d00b7561050f64aebbc8b413beca83b65",
+      "volume_mm3": 0.053969522229762354,
+      "bounds_mm": [
+        [
+          -1.5877944231033325,
+          -114.5010986328125,
+          -4.451627731323242
+        ],
+        [
+          0.34608185291290283,
+          -109.64935302734375,
+          -4.158316135406494
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_bond_3.step",
+      "stl": "cad/k1_ch1_cover_bond_3.stl",
+      "sha256_step": "5879ae6636503a9aa28942310d8ec66c8bad0cd4ebf746ebdfdab1581949dd38",
+      "sha256_stl": "62be30d4bc4ba6b0489f00ce4fb0fe4ed45e30517cbb9ddf10b586ff64bb539a",
+      "volume_mm3": 0.0013647974298685083,
+      "bounds_mm": [
+        [
+          -2.535252332687378,
+          -116.28307342529297,
+          -4.5410614013671875
+        ],
+        [
+          -2.3877944946289062,
+          -115.91081237792969,
+          -4.472567081451416
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_bond_4",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_cover_bond_4.step",
+      "stl": "cad/k1_ch1_cover_bond_4.stl",
+      "sha256_step": "9e995244e45e9062f15621a7082059a279ab2690e6efa64619ad5cf8393fdae4",
+      "sha256_stl": "93aa674950c61f7bb964422f03aeac25b8baa227005456e4b0d99976899e9a37",
+      "volume_mm3": 0.07303669980994257,
+      "bounds_mm": [
+        [
+          -5.808008193969727,
+          -116.28307342529297,
+          -4.5410614013671875
+        ],
+        [
+          -5.549918174743652,
+          -109.64935302734375,
+          -4.158316135406494
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_ground_bond_0.step",
+      "stl": "cad/k1_ch1_ground_bond_0.stl",
+      "sha256_step": "5f8eefd5c1e19ac69931cfdf4560d37da8463d86a60d4889017823e224626302",
+      "sha256_stl": "46969f9c3d7ebce5e6f0f73d693fee7e03b907fa60cfdddd7c4177f8aa645f85",
+      "volume_mm3": 0.2800000000000044,
+      "bounds_mm": [
+        [
+          -5.961177825927734,
+          -101.4650650024414,
+          -4.297123432159424
+        ],
+        [
+          -3.9611778259277344,
+          -101.095458984375,
+          -3.880082607269287
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_ground_bond_1.step",
+      "stl": "cad/k1_ch1_ground_bond_1.stl",
+      "sha256_step": "002b0ba832902ed63b19459839d5bc3dfa29fb60ed01e1569866657eb0b31966",
+      "sha256_stl": "9b8e34704d7a727efcc3ee68c9af8105c57d8bf74f8b36e6443ec95e420c54ec",
+      "volume_mm3": 0.27999999999999275,
+      "bounds_mm": [
+        [
+          0.038822200149297714,
+          -101.4650650024414,
+          -4.297123432159424
+        ],
+        [
+          2.0388221740722656,
+          -101.095458984375,
+          -3.880082607269287
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch2_retained_plate.step",
+      "stl": "cad/k1_ch2_retained_plate.stl",
+      "sha256_step": "6aa3a4a39c3cbdfddea064219cf1c6a2c26d7fac7dfddc356e960907f0c4725c",
+      "sha256_stl": "d3ff35bd4af4a8dbe7721c57f5611cc8a53dc53c42f269b33640d48258dbb987",
+      "volume_mm3": 46.59241914306625,
+      "bounds_mm": [
+        [
+          -13.75,
+          -88.68890380859375,
+          -5.457082271575928
+        ],
+        [
+          -1.25,
+          -77.14641571044922,
+          -2.5118627548217773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stop_0_bond.step",
+      "stl": "cad/k1_ch2_stop_0_bond.stl",
+      "sha256_step": "badf9ef95a8220be0e7dfbf1de246c5d1bec6b6f33381823ee32bd6d1883c28e",
+      "sha256_stl": "d888857c4bf933f1143a922e6bb37e898e84e6b126daf46cd1fb0c7f9b53bbe8",
+      "volume_mm3": 0.1700727435987256,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -88.6741714477539,
+          -4.108582019805908
+        ],
+        [
+          -7.800000190734863,
+          -83.29054260253906,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch2_stop_0.step",
+      "stl": "cad/k1_ch2_stop_0.stl",
+      "sha256_step": "a40e03e841260dfb1b3abf3979828d4bc3ead739d3becd66a5c896f27a78514f",
+      "sha256_stl": "a544d2002f2cb9cd096e7ce547930fba92f00d4f765aeca164daa266fee7752c",
+      "volume_mm3": 0.25855756812201136,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -88.6493148803711,
+          -4.174698829650879
+        ],
+        [
+          -7.800000190734863,
+          -83.2938003540039,
+          -2.361862897872925
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stop_1_bond.step",
+      "stl": "cad/k1_ch2_stop_1_bond.stl",
+      "sha256_step": "2ad4034bea6631162c7c54ba7cf71155f72f7db405566409990bd767046a1dd6",
+      "sha256_stl": "8ba37358be6590fcfd5acacb94de90edccae9e4f585c15611976b3301811a055",
+      "volume_mm3": 0.1815222542853659,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -82.79095458984375,
+          -4.998531341552734
+        ],
+        [
+          -7.800000190734863,
+          -77.18119812011719,
+          -2.3794379234313965
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch2_stop_1.step",
+      "stl": "cad/k1_ch2_stop_1.stl",
+      "sha256_step": "20d3c71ee8ffc73f98572f824fa54bb1be7c2050c3cfd29d1627eb50b5a50082",
+      "sha256_stl": "43ee1735049e4db4364993a17571c0cb83ba16ae689b5f6ece64726c1e9feeb7",
+      "volume_mm3": 0.27793172596472315,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -82.80219268798828,
+          -5.0719709396362305
+        ],
+        [
+          -7.800000190734863,
+          -77.19453430175781,
+          -2.428891181945801
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stop_2_bond.step",
+      "stl": "cad/k1_ch2_stop_2_bond.stl",
+      "sha256_step": "16af781369c0b60682ed7d4a37d622ff009282fb3aaca1d11798db55955ce73f",
+      "sha256_stl": "325fe68774f97a2597054a673bd8eaa560526b0680ffee26c3a67304c44d4073",
+      "volume_mm3": 0.18152225428536634,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -82.79095458984375,
+          -4.998531341552734
+        ],
+        [
+          -1.399999976158142,
+          -77.18119812011719,
+          -2.3794379234313965
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch2_stop_2.step",
+      "stl": "cad/k1_ch2_stop_2.stl",
+      "sha256_step": "f41698eeda8486de3f94aeaea9bd874c5820c46d6ab31e54d6055a565b451c0d",
+      "sha256_stl": "d9e187c9860c06d0d19b07da1ea61b2d1f3d60a127674bea5ef399861bcf0fd8",
+      "volume_mm3": 0.27793172596472226,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -82.80219268798828,
+          -5.0719709396362305
+        ],
+        [
+          -1.399999976158142,
+          -77.19453430175781,
+          -2.428891181945801
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stop_3_bond.step",
+      "stl": "cad/k1_ch2_stop_3_bond.stl",
+      "sha256_step": "7ae7573e29d32a51138acb777f4289af56f53745b6722546c50102614666761e",
+      "sha256_stl": "50686e91d5753bdbaf51e57e381d051cdb7da2de6c4fea261b1b2a17b20f2733",
+      "volume_mm3": 0.17007274359872504,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -88.6741714477539,
+          -4.108582019805908
+        ],
+        [
+          -1.399999976158142,
+          -83.29054260253906,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch2_stop_3.step",
+      "stl": "cad/k1_ch2_stop_3.stl",
+      "sha256_step": "21a354ae10016d277297cb248fcb1e599875ce511ff400a81d01fe909fbb4a16",
+      "sha256_stl": "d663588959ecd238b27bebd2a7ecaf5b158b605a25d3c7e1b734d584c0f1f94f",
+      "volume_mm3": 0.2585575681220118,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -88.6493148803711,
+          -4.174698829650879
+        ],
+        [
+          -1.399999976158142,
+          -83.2938003540039,
+          -2.361862897872925
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch2_vented_cover.step",
+      "stl": "cad/k1_ch2_vented_cover.stl",
+      "sha256_step": "e3a5591dd3c911a6fa3012dfa30637d7c4bbde8810a906cf5dd390e67067ad65",
+      "sha256_stl": "ca4936f0066c14b4000ea4d517c3330b9f7c1b824ba10138e65fbc593a9d2352",
+      "volume_mm3": 34.410853178801844,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -88.96897888183594,
+          -5.683872699737549
+        ],
+        [
+          -1.0299999713897705,
+          -76.84419250488281,
+          -2.361862897872925
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_cover_bond_0.step",
+      "stl": "cad/k1_ch2_cover_bond_0.stl",
+      "sha256_step": "c0bae481e93e286208cd849932f07cca5f1484745678cf3ef97be86a29b120a9",
+      "sha256_stl": "175fdd4764d6ee261f8ec2e2bff88db8475d1dfc4901dabacb1d42503736da44",
+      "volume_mm3": 0.13521526588935853,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -88.99296569824219,
+          -4.287926197052002
+        ],
+        [
+          -7.900000095367432,
+          -83.37569427490234,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_cover_bond_1.step",
+      "stl": "cad/k1_ch2_cover_bond_1.stl",
+      "sha256_step": "cb5c844b01202643dbe67782528a43f35fee4789ad842bdb4ab7884bfcc47147",
+      "sha256_stl": "03fd9eab2c57bfedb06f8f7181ba75795c0e1c7696bf98a273803d859b716703",
+      "volume_mm3": 0.15040779341558655,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -82.70796203613281,
+          -5.0840325355529785
+        ],
+        [
+          -7.900000095367432,
+          -76.83380889892578,
+          -2.392521858215332
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_cover_bond_2.step",
+      "stl": "cad/k1_ch2_cover_bond_2.stl",
+      "sha256_step": "b26f23a4513681a64df3dcdf4a3aecc4f3e4f70e3122b1139a316b8c62db48ba",
+      "sha256_stl": "059c934869129a80185f777be7abec2c99a575955cf4c0abbc61ec08e7041914",
+      "volume_mm3": 0.15040779341558597,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -82.70796203613281,
+          -5.0840325355529785
+        ],
+        [
+          -1.0299999713897705,
+          -76.83380889892578,
+          -2.392521858215332
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_cover_bond_3.step",
+      "stl": "cad/k1_ch2_cover_bond_3.stl",
+      "sha256_step": "ab68afbf6ed24c151e3fee86d4200cd5075361b547c8a57a9e03e757d19ebca9",
+      "sha256_stl": "017875a25db48ebef13c142bd002feb6576ad5978d190e5686e904b9f26b69e4",
+      "volume_mm3": 0.13521526588935867,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -88.99296569824219,
+          -4.287926197052002
+        ],
+        [
+          -1.0299999713897705,
+          -83.37569427490234,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_ground_bond_0.step",
+      "stl": "cad/k1_ch2_ground_bond_0.stl",
+      "sha256_step": "aef9c6a3606bd8e6c243441cce0167db446956aa55ae7b6ef588f55033782e59",
+      "sha256_stl": "12ddc8965a6bdd762613af8cc2a78ed45a5e64c96c8f8e9eebc33dc82a964b30",
+      "volume_mm3": 0.2330759676151629,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -86.36567687988281,
+          -3.377958297729492
+        ],
+        [
+          -13.75,
+          -84.6607894897461,
+          -2.542107582092285
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_ground_bond_1.step",
+      "stl": "cad/k1_ch2_ground_bond_1.stl",
+      "sha256_step": "74338174fc5024a2234ca9b3bd7620c9cd643954359d21bfd5ef07961eb44bee",
+      "sha256_stl": "dff91b2e68a0f91f8b3b12eacbbb9fca0fa0770c6b61b1f9e7854b640e51af50",
+      "volume_mm3": 0.2449756127661653,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -81.60751342773438,
+          -4.086648941040039
+        ],
+        [
+          -13.75,
+          -79.88867950439453,
+          -2.8999884128570557
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch3_retained_plate.step",
+      "stl": "cad/k1_ch3_retained_plate.stl",
+      "sha256_step": "0588ccd96509526cc658bc1a1e81098b800b89dad599172b8d371c6263752dc5",
+      "sha256_stl": "3229193d7e95a96c2806c12292f167295f5f5a882f354f6022ddbd9a6e0c1098",
+      "volume_mm3": 61.67131784602887,
+      "bounds_mm": [
+        [
+          -13.75,
+          -72.2352066040039,
+          -5.883702278137207
+        ],
+        [
+          -1.25,
+          -58.2727165222168,
+          1.2333706617355347
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stop_0_bond.step",
+      "stl": "cad/k1_ch3_stop_0_bond.stl",
+      "sha256_step": "2c450389f3710f6bab1d77a7133abe6df1371db81b8b0e57653f008ea40e0c65",
+      "sha256_stl": "82d4340864b256801a1d25c8b9a8bb9cb282d0d9e1884a903f4b921a53d0cde8",
+      "volume_mm3": 0.19780445403638755,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -72.085205078125,
+          -5.43370246887207
+        ],
+        [
+          -7.800000190734863,
+          -64.55325317382812,
+          -4.40111780166626
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch3_stop_0.step",
+      "stl": "cad/k1_ch3_stop_0.stl",
+      "sha256_step": "728a4bbcc88af3567b5dd2dc9eb3e4ce19fa2dd14531f930538db01ba6188d07",
+      "sha256_stl": "eb2ca1fdeac44db0e98458ff734890747a6581f96caae2d499244d5de16e7c74",
+      "volume_mm3": 0.30219541969273356,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -72.085205078125,
+          -5.509902477264404
+        ],
+        [
+          -7.800000190734863,
+          -64.51579284667969,
+          -4.444656848907471
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stop_1_bond.step",
+      "stl": "cad/k1_ch3_stop_1_bond.stl",
+      "sha256_step": "3dd493adbdffb3c83146d4d757c9011a367bcad458c95610cfe08478a29a1d5a",
+      "sha256_stl": "109e46530c727d43ac366f14f81272fc70b5fe64a06cecdaaf06f0d9349c1d21",
+      "volume_mm3": 0.19520476554780522,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -64.00164031982422,
+          -4.089510917663574
+        ],
+        [
+          -7.800000190734863,
+          -58.720428466796875,
+          1.2369270324707031
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch3_stop_1.step",
+      "stl": "cad/k1_ch3_stop_1.stl",
+      "sha256_step": "031e04f11363051109843e88b6377c4ed8ef219e3d7b1fbcafc41546abb73882",
+      "sha256_stl": "e46e489542a1cb51470b795a1027eec0a2f33206973492157bcaf7b97f34164a",
+      "volume_mm3": 0.2981010352127196,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -63.97406768798828,
+          -4.153080463409424
+        ],
+        [
+          -7.800000190734863,
+          -58.65978240966797,
+          1.2066545486450195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stop_2_bond.step",
+      "stl": "cad/k1_ch3_stop_2_bond.stl",
+      "sha256_step": "8fd275e3ba4184d87a06ca3c4e7a530ac08001d97420feb9017a364a82938adf",
+      "sha256_stl": "9225a3307469071e63d790c46cf816d7d308f31a934d934a4c614f9f5da44fd4",
+      "volume_mm3": 0.19520476554780847,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -64.00164031982422,
+          -4.089510917663574
+        ],
+        [
+          -1.399999976158142,
+          -58.720428466796875,
+          1.2369270324707031
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch3_stop_2.step",
+      "stl": "cad/k1_ch3_stop_2.stl",
+      "sha256_step": "4f8128aadf87451b23727d97205d865c3266f92c30887bf9a23996c2f7d5939d",
+      "sha256_stl": "f813252630190a939e4f10d91045566980921c878552aa74f7964ab1f9a99471",
+      "volume_mm3": 0.2981010352127199,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -63.97406768798828,
+          -4.153080463409424
+        ],
+        [
+          -1.399999976158142,
+          -58.65978240966797,
+          1.2066545486450195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stop_3_bond.step",
+      "stl": "cad/k1_ch3_stop_3_bond.stl",
+      "sha256_step": "32e87d1dc90e06d7303fdb031f03be10be75ebf8ac044c08d32232069d046c43",
+      "sha256_stl": "ec714bbcb3ab7f12b787f8f04fd0a4aee92d2ed31e75a864acb8ebaf62040efe",
+      "volume_mm3": 0.19780445403638677,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -72.085205078125,
+          -5.43370246887207
+        ],
+        [
+          -1.399999976158142,
+          -64.55325317382812,
+          -4.40111780166626
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch3_stop_3.step",
+      "stl": "cad/k1_ch3_stop_3.stl",
+      "sha256_step": "bca3f8c7ba46f9ac8c51edf27971292bead6ad15b372a2c755e5b389f7dfe1a3",
+      "sha256_stl": "5a4749c410bfbfa17ca30d14233feae8a9aca6768ca043d0666c84010da2c9e0",
+      "volume_mm3": 0.30219541969273417,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -72.085205078125,
+          -5.509902477264404
+        ],
+        [
+          -1.399999976158142,
+          -64.51579284667969,
+          -4.444656848907471
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch3_vented_cover.step",
+      "stl": "cad/k1_ch3_vented_cover.stl",
+      "sha256_step": "b6e9fb95f93dd94a30a4cbd4f0c43e515ec8e12ed8b7ac4869f60918d1acaf40",
+      "sha256_stl": "684e5c5a6ba4b3dec2db207d162bd0ccf4000e7953be28b6057e9dd6a818bd0e",
+      "volume_mm3": 45.77484694937397,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -72.45520782470703,
+          -6.083702564239502
+        ],
+        [
+          -1.0299999713897705,
+          -58.051876068115234,
+          1.5012716054916382
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_cover_bond_0.step",
+      "stl": "cad/k1_ch3_cover_bond_0.stl",
+      "sha256_step": "9b33483c37412c668684578c90c5368d762c149e27e0c241c9501be5e9845f08",
+      "sha256_stl": "2e1c0aa90b163a18508bbfb8085f20778063b005f0c4527a575419f9febbeb38",
+      "volume_mm3": 0.15171600392531187,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -72.45520782470703,
+          -5.43370246887207
+        ],
+        [
+          -7.900000095367432,
+          -64.65370178222656,
+          -4.456650257110596
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_cover_bond_1.step",
+      "stl": "cad/k1_ch3_cover_bond_1.stl",
+      "sha256_step": "8c3b8da98496758036f07644b5dde22796d1c813d8c0f0389ab6ddc42c152025",
+      "sha256_stl": "0b8032f8511e55b71efbbc9ef914fea97c0c8ca9278045192cbecea841b8e0a3",
+      "volume_mm3": 0.15016550919159447,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -63.90918731689453,
+          -4.027426719665527
+        ],
+        [
+          -7.900000095367432,
+          -58.49726486206055,
+          1.5313934087753296
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_cover_bond_2.step",
+      "stl": "cad/k1_ch3_cover_bond_2.stl",
+      "sha256_step": "fab26b9a53443df79f8304be8794649c9eaeab73026170c8a1764a8ba6c2f642",
+      "sha256_stl": "8c1734416a0a0507faee0c6bcff52e7084c0feea80e64ec3c5abbcd545d2c824",
+      "volume_mm3": 0.15016550919159466,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -63.90918731689453,
+          -4.027426719665527
+        ],
+        [
+          -1.0299999713897705,
+          -58.49726486206055,
+          1.5313934087753296
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_cover_bond_3.step",
+      "stl": "cad/k1_ch3_cover_bond_3.stl",
+      "sha256_step": "fd2d6682b476eb99d7255e5cf1272e19f723ca7acccfe9475b69e3e7afb70bfb",
+      "sha256_stl": "4d729e1050cfbcc4d7250d41ef41dedf044d2ae2697f10809dbe1c4925fa77be",
+      "volume_mm3": 0.15171600392531226,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -72.45520782470703,
+          -5.43370246887207
+        ],
+        [
+          -1.0299999713897705,
+          -64.65370178222656,
+          -4.456650257110596
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_ground_bond_0.step",
+      "stl": "cad/k1_ch3_ground_bond_0.stl",
+      "sha256_step": "dbcdcf1bbcab33764d0f118974ec4f96ade696a2296f1e2dea7a261c70671853",
+      "sha256_stl": "db86c2019088c547e63ed44be5cbaefaec2184d40d553ae75a7118808135d7f6",
+      "volume_mm3": 0.323651836575372,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -68.64645385742188,
+          -5.924629211425781
+        ],
+        [
+          -13.75,
+          -66.30158233642578,
+          -5.290195941925049
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_ground_bond_1.step",
+      "stl": "cad/k1_ch3_ground_bond_1.stl",
+      "sha256_step": "1e7228e45432a2a4a880fa5df771a2e4a3f87f94484f6d881a7506f39151d395",
+      "sha256_stl": "dee4735e1fa77ca7abcc40df8610b355c7a198204f61085af0dada5080b7db60",
+      "volume_mm3": 0.29766048671178424,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -62.441993713378906,
+          -3.331890106201172
+        ],
+        [
+          -13.75,
+          -60.63536834716797,
+          -1.5681079626083374
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch4_retained_plate.step",
+      "stl": "cad/k1_ch4_retained_plate.stl",
+      "sha256_step": "6facadab66ce70a277a69c2605a5c1c398fb724801a352df122ceef16048d1b6",
+      "sha256_stl": "29350af67951e3238437dc3a9e7a74e85ff5b46da928235a2019131750f4d063",
+      "volume_mm3": 46.51129076896,
+      "bounds_mm": [
+        [
+          -13.75,
+          -54.571685791015625,
+          6.006657600402832
+        ],
+        [
+          -1.25,
+          -43.04336166381836,
+          10.14346694946289
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stop_0_bond.step",
+      "stl": "cad/k1_ch4_stop_0_bond.stl",
+      "sha256_step": "da172be8001b482a4d1e763b5f33d210731e380c828c32e95ccc599d26896e32",
+      "sha256_stl": "fd3f6c650922d21df5818a6a73ee5968450b8c410fef0dfde8fd060c5c5950c2",
+      "volume_mm3": 0.16904354225343882,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -54.58467483520508,
+          6.449193954467773
+        ],
+        [
+          -7.800000190734863,
+          -49.54225158691406,
+          9.515902519226074
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch4_stop_0.step",
+      "stl": "cad/k1_ch4_stop_0.stl",
+      "sha256_step": "5dbc015088d82814394ae0d1c496c0849dd7991ca66524a7c1452a6fc9a22ff1",
+      "sha256_stl": "73d8f77bb35694a52e876903dd2dce45d69a386a0e607cadc3a7a563c2e734b1",
+      "volume_mm3": 0.25657248776122266,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -54.55107879638672,
+          6.392755508422852
+        ],
+        [
+          -7.800000190734863,
+          -49.51820373535156,
+          9.468457221984863
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stop_1_bond.step",
+      "stl": "cad/k1_ch4_stop_1_bond.stl",
+      "sha256_step": "64d0c52270ef9f5d747f68198cbf69fa58b298d2edb612999a69cd1f1cbce5fd",
+      "sha256_stl": "bec3536df9593a3885bde97161f2c31b778d60dea7b0f656e0617c81a558e806",
+      "volume_mm3": 0.16691953889945563,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -49.02482986450195,
+          9.633795738220215
+        ],
+        [
+          -7.800000190734863,
+          -43.18838882446289,
+          10.343466758728027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch4_stop_1.step",
+      "stl": "cad/k1_ch4_stop_1.stl",
+      "sha256_step": "e65dcc5923a0ad777c4e6745321292de9236192155eb880f4d8dc174402acfe7",
+      "sha256_stl": "3a8404e83bafd6cede6c59992aa64d0731883aebc9c56ea9d2b978ba1ad95b4a",
+      "volume_mm3": 0.25288496821294343,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -49.01087951660156,
+          9.560623168945312
+        ],
+        [
+          -7.800000190734863,
+          -43.196109771728516,
+          10.293466567993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stop_2_bond.step",
+      "stl": "cad/k1_ch4_stop_2_bond.stl",
+      "sha256_step": "f1b5770bd9a79d5d49854048bae1623b606fe6e1393e38acb9961822ec69e881",
+      "sha256_stl": "c1e533f7a7a5bb24b7184124f96e79bf59b5529bc70280f33eb55deb1218bd22",
+      "volume_mm3": 0.16691953889945557,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -49.02482986450195,
+          9.633795738220215
+        ],
+        [
+          -1.399999976158142,
+          -43.18838882446289,
+          10.343466758728027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch4_stop_2.step",
+      "stl": "cad/k1_ch4_stop_2.stl",
+      "sha256_step": "695c1d386b30c1c6fc65d92bcb2276959aacbdd74dc5e674aa2e423c62e1715a",
+      "sha256_stl": "61d16d41b8df03061b22130df2f7c9d22b607a4ba8a88cae2cee48920422534e",
+      "volume_mm3": 0.2528849682129438,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -49.01087951660156,
+          9.560623168945312
+        ],
+        [
+          -1.399999976158142,
+          -43.196109771728516,
+          10.293466567993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stop_3_bond.step",
+      "stl": "cad/k1_ch4_stop_3_bond.stl",
+      "sha256_step": "946ed67f3990747bc096a737010d6f7ca6c5a61b242cda28c1b5f7298d107be6",
+      "sha256_stl": "e79d3362e873f7ef9ddd97a94b08c25123639cb90ab2dfb40a6e0d00380cb715",
+      "volume_mm3": 0.1690435422534379,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -54.58467483520508,
+          6.449193954467773
+        ],
+        [
+          -1.399999976158142,
+          -49.54225158691406,
+          9.515902519226074
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch4_stop_3.step",
+      "stl": "cad/k1_ch4_stop_3.stl",
+      "sha256_step": "070f208ccb7a1034a542606743a65934a4c688ed9f2af70eba9535f8e8f04fc2",
+      "sha256_stl": "30a5feb7e8f35775e6f6b6f6351d8b3d83f7dd35e26f0fc06849ea278012afe9",
+      "volume_mm3": 0.2565724877612232,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -54.55107879638672,
+          6.392755508422852
+        ],
+        [
+          -1.399999976158142,
+          -49.51820373535156,
+          9.468457221984863
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch4_vented_cover.step",
+      "stl": "cad/k1_ch4_vented_cover.stl",
+      "sha256_step": "6ed472b7f21f020f3a36c0330c2f605a7732f7c6bc9f355ce80e109885e5bc1a",
+      "sha256_stl": "c9706f75c6fdd03a5ceacc5d9b49adf7f48440a7de3ffeb755207bc3cb0c17e4",
+      "volume_mm3": 33.73780385133505,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -54.824405670166016,
+          5.798260688781738
+        ],
+        [
+          -1.0299999713897705,
+          -42.82662582397461,
+          10.293466567993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_cover_bond_0.step",
+      "stl": "cad/k1_ch4_cover_bond_0.stl",
+      "sha256_step": "1d1db5d7f629fb6aea4524f6936d9eabe45588656bcfa9601ce51060f3c09fc1",
+      "sha256_stl": "946da75e4f2aceb22945c109f73d64df23845c4a23d39d243cf1c4cd5e23c0dc",
+      "volume_mm3": 0.12854140336681316,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -54.85877990722656,
+          6.195862770080566
+        ],
+        [
+          -7.900000095367432,
+          -49.62984848022461,
+          9.486339569091797
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_cover_bond_1.step",
+      "stl": "cad/k1_ch4_cover_bond_1.stl",
+      "sha256_step": "03b9e6952506fa12003ea3713b71c4cd9621fd0dca973d6039504f8c372fd328",
+      "sha256_stl": "d22996dfa4903d2b762b702d7b1a55a43d80144091d9816b497b8458bc0df096",
+      "volume_mm3": 0.1248162974623629,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -48.935028076171875,
+          9.659514427185059
+        ],
+        [
+          -7.900000095367432,
+          -42.816715240478516,
+          10.343466758728027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_cover_bond_2.step",
+      "stl": "cad/k1_ch4_cover_bond_2.stl",
+      "sha256_step": "40e10ab6ef4e01157fbfd11d1493a2228d203e143fa1864bd551d7aee64f5570",
+      "sha256_stl": "c99ffc083edb115a7c135d6a2343b3190880ba06a44442b149b5c50758609533",
+      "volume_mm3": 0.124816297462363,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -48.935028076171875,
+          9.659514427185059
+        ],
+        [
+          -1.0299999713897705,
+          -42.816715240478516,
+          10.343466758728027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_cover_bond_3.step",
+      "stl": "cad/k1_ch4_cover_bond_3.stl",
+      "sha256_step": "c46aad50c2971528b8bcdc4e38a485598a7396bdbad60307df31c42d54268e57",
+      "sha256_stl": "1ea22922d0b9a0da607a4ff23cd0cc8bc067677aa0382d469b8006f6aad8845f",
+      "volume_mm3": 0.1285414033668143,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -54.85877990722656,
+          6.195862770080566
+        ],
+        [
+          -1.0299999713897705,
+          -49.62984848022461,
+          9.486339569091797
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_ground_bond_0.step",
+      "stl": "cad/k1_ch4_ground_bond_0.stl",
+      "sha256_step": "f093725d36123359e9729e76a7b72e4043232837f394ab94fe8bdb8dda8261b0",
+      "sha256_stl": "b26952431dd26cf3318f8fc02c11ae82d9bf41ba7bafd1a5ac6ca70f2ccc2028",
+      "volume_mm3": 0.2516350527922565,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -52.5332145690918,
+          7.563652038574219
+        ],
+        [
+          -13.75,
+          -50.77548599243164,
+          8.798209190368652
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_ground_bond_1.step",
+      "stl": "cad/k1_ch4_ground_bond_1.stl",
+      "sha256_step": "106e0f0fea0208720e4755ee3b3028af7e5a9d93dc9ec8b7beb2c19853cb88e0",
+      "sha256_stl": "02231d91db26170059eff8674281c75ae6f50865d560a37a1bc14a85bfa53ea6",
+      "volume_mm3": 0.2572577510493511,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -47.44263458251953,
+          9.513007164001465
+        ],
+        [
+          -13.75,
+          -45.56999969482422,
+          10.15650749206543
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ch5_retained_plate.step",
+      "stl": "cad/k1_ch5_retained_plate.stl",
+      "sha256_step": "ab87173778778d85499173c84e108b5f3ee7abc7e2793ecc6d784d1b490597db",
+      "sha256_stl": "e8b5a55f3340147dd82a4c1cf5077b7566ada3554f0d302907e8bfbc4c4889cb",
+      "volume_mm3": 80.31882430394212,
+      "bounds_mm": [
+        [
+          -13.75,
+          -39.280094146728516,
+          -5.940205097198486
+        ],
+        [
+          -1.25,
+          -23.832508087158203,
+          7.880823612213135
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stop_0_bond.step",
+      "stl": "cad/k1_ch5_stop_0_bond.stl",
+      "sha256_step": "c56b031f0db6983e9d65f7f24be0bbf5702730f7b96317c31f3a92525110f5f8",
+      "sha256_stl": "b0ad0d7aa1916e1fa02084a8e5a3f8c4f8dbb0b309b235242c28815d0d467ff6",
+      "volume_mm3": 0.22133961901338958,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -38.88032531738281,
+          0.7300577163696289
+        ],
+        [
+          -7.800000190734863,
+          -32.80367660522461,
+          7.943246841430664
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch5_stop_0.step",
+      "stl": "cad/k1_ch5_stop_0.stl",
+      "sha256_step": "b3dda7f2b23dfda223df0e503e9b41e4df9d598043da44c429050a31241cec28",
+      "sha256_stl": "cac9cd902c55bbde77f5a6d5e42db54fbf60e00de5bc816fe42f46519f5594a7",
+      "volume_mm3": 0.33623924387311943,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -38.92525100708008,
+          0.6872259378433228
+        ],
+        [
+          -7.800000190734863,
+          -32.84503173828125,
+          7.902862071990967
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stop_1_bond.step",
+      "stl": "cad/k1_ch5_stop_1_bond.stl",
+      "sha256_step": "7737adff6f0e480afb7a6c74f2481dcfb8a5164dd5a8f53bfe28cc28ce673ff3",
+      "sha256_stl": "e10f473fe4ed452519e622e159c1937edf1ee7983f303579e5e1d83b57414346",
+      "volume_mm3": 0.245918188316178,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -32.501068115234375,
+          -5.490201473236084
+        ],
+        [
+          -7.800000190734863,
+          -23.97857093811035,
+          0.25614577531814575
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch5_stop_1.step",
+      "stl": "cad/k1_ch5_stop_1.stl",
+      "sha256_step": "02ff4fcf4f43df43db920da522e0690d49f5100dbf30cb57047ffa9b7dabb484",
+      "sha256_stl": "18593b41480fd29fb7c22ba7e7b01eb168b7a5a1c2f28209028b76d35f32e632",
+      "volume_mm3": 0.3762984597527048,
+      "bounds_mm": [
+        [
+          -13.600000381469727,
+          -32.563758850097656,
+          -5.566401481628418
+        ],
+        [
+          -7.800000190734863,
+          -23.97859001159668,
+          0.22772099077701569
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stop_2_bond.step",
+      "stl": "cad/k1_ch5_stop_2_bond.stl",
+      "sha256_step": "6dd2d459e6b0040e4dd3f3990c46cbcb27f2c4e286e78dc64d5f1d8347caea81",
+      "sha256_stl": "f40e345ed428414dcc4119cbff0213966d18d0a9551f3ef425e79d6acdba9ba5",
+      "volume_mm3": 0.2459181883161794,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -32.501068115234375,
+          -5.490201473236084
+        ],
+        [
+          -1.399999976158142,
+          -23.97857093811035,
+          0.25614577531814575
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch5_stop_2.step",
+      "stl": "cad/k1_ch5_stop_2.stl",
+      "sha256_step": "4d968080924e30c2364537d4f57beeb19f1b58b5715d89a0ec883eeaeaa4c408",
+      "sha256_stl": "2d78eaca61cd25585b8fe93f1099de06ca13495fc7a41a35802eb3722faafd73",
+      "volume_mm3": 0.3762984597527024,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -32.563758850097656,
+          -5.566401481628418
+        ],
+        [
+          -1.399999976158142,
+          -23.97859001159668,
+          0.22772099077701569
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stop_3_bond.step",
+      "stl": "cad/k1_ch5_stop_3_bond.stl",
+      "sha256_step": "378d30b0751a4b927148f187f2772ff3d46bf990ed39fd4dd1c1948c9336eb92",
+      "sha256_stl": "0479d3a1cc6538e40cac07665aec542f31ee9a3a7a4317c2eca14d53af5d3b59",
+      "volume_mm3": 0.22133961901339005,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -38.88032531738281,
+          0.7300577163696289
+        ],
+        [
+          -1.399999976158142,
+          -32.80367660522461,
+          7.943246841430664
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ch5_stop_3.step",
+      "stl": "cad/k1_ch5_stop_3.stl",
+      "sha256_step": "e37d709e97b86cdcab28bb77e36d54687d0652c0951bc8e7a07642c9a430ab16",
+      "sha256_stl": "66a64a3df07b5886525ae16ff4e3b6ecdf583ebf21ab9040fb073cdcd7870f4e",
+      "volume_mm3": 0.33623924387311815,
+      "bounds_mm": [
+        [
+          -7.199999809265137,
+          -38.92525100708008,
+          0.6872259378433228
+        ],
+        [
+          -1.399999976158142,
+          -32.84503173828125,
+          7.902862071990967
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ch5_vented_cover.step",
+      "stl": "cad/k1_ch5_vented_cover.stl",
+      "sha256_step": "1d013b89c2a6a45233ad88ed73bc14d967e5128cdd99fdf4a5a20fec1afc37bf",
+      "sha256_stl": "6f57183bfd5093770c3a6fe4b6fdd87e566d695eca0cbbaaafdb06e08da7052d",
+      "volume_mm3": 58.709252364056866,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -39.46712112426758,
+          -6.140204906463623
+        ],
+        [
+          -1.0299999713897705,
+          -23.60915184020996,
+          8.118741035461426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_cover_bond_0.step",
+      "stl": "cad/k1_ch5_cover_bond_0.stl",
+      "sha256_step": "abd621b5f0bb4f1e29c714039be97b64666bfc41caeb51bdeda3e14d7c1f1ec1",
+      "sha256_stl": "23de64eecc8dd21c395097249d8dfe299de5e6642d5a57f89a8e830e955211af",
+      "volume_mm3": 0.16596870506003475,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -39.18526840209961,
+          0.8135767579078674
+        ],
+        [
+          -7.900000095367432,
+          -32.8603630065918,
+          8.159968376159668
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_cover_bond_1.step",
+      "stl": "cad/k1_ch5_cover_bond_1.stl",
+      "sha256_step": "b47a7e95f87cec5a1d7eb678f7eb50127c3140ec209e9fccf865a0aab677b81e",
+      "sha256_stl": "7e61ce9ce0fb1381e2341c9060eae269bf777642e0f0e447fae3c3cfad31d405",
+      "volume_mm3": 0.18783009818486218,
+      "bounds_mm": [
+        [
+          -13.970000267028809,
+          -32.4430046081543,
+          -5.49020528793335
+        ],
+        [
+          -7.900000095367432,
+          -23.609405517578125,
+          0.1723496913909912
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_cover_bond_2.step",
+      "stl": "cad/k1_ch5_cover_bond_2.stl",
+      "sha256_step": "be32f8199723b25e6b71c132f2beb6cc217ef8a92e0db63f45b4c43701357405",
+      "sha256_stl": "f309c0294624cd5681edc3fbe3828a317cdc7e47c022eaada2134ee993cffab5",
+      "volume_mm3": 0.18783009818486118,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -32.4430046081543,
+          -5.49020528793335
+        ],
+        [
+          -1.0299999713897705,
+          -23.609405517578125,
+          0.1723496913909912
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_cover_bond_3.step",
+      "stl": "cad/k1_ch5_cover_bond_3.stl",
+      "sha256_step": "f827b0053189c255d0233c14b5450bb48aab51bbf08f724f6aa95c7d42a24c50",
+      "sha256_stl": "79923c0cb7fa15e189bb3380d6f90f17b2e97ddc8e92ba0bccd8435a87fc9d1b",
+      "volume_mm3": 0.16596870506003553,
+      "bounds_mm": [
+        [
+          -7.099999904632568,
+          -39.18526840209961,
+          0.8135767579078674
+        ],
+        [
+          -1.0299999713897705,
+          -32.8603630065918,
+          8.159968376159668
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_ground_bond_0.step",
+      "stl": "cad/k1_ch5_ground_bond_0.stl",
+      "sha256_step": "19defd4061d8d3e17e4496885293c7c0a4f7c37bc317ae531864e69089349586",
+      "sha256_stl": "668057addf8e93b88f09b099d546b36097cf82405ef62b352f1174602b094419",
+      "volume_mm3": 0.2730162378854283,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -35.32748031616211,
+          1.8555978536605835
+        ],
+        [
+          -13.75,
+          -33.87974166870117,
+          3.681936740875244
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_ground_bond_1.step",
+      "stl": "cad/k1_ch5_ground_bond_1.stl",
+      "sha256_step": "c68b866974704642f1ad47979b362f31b5dc48fc3f1a319f3c14ad2887e23bca",
+      "sha256_stl": "fbc827b6188ab90ac89267fe4c4b8243c1bf053147cec87f064b48e3173a457a",
+      "volume_mm3": 0.29643914360044,
+      "bounds_mm": [
+        [
+          -14.100000381469727,
+          -31.870166778564453,
+          -3.1386988162994385
+        ],
+        [
+          -13.75,
+          -30.209774017333984,
+          -1.2552130222320557
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_retained_plate",
+      "purpose": "Metal pressure spreader with room for the vented retainer; nail leading edge preserved",
+      "material": "Annealed 304 stainless, 0.30 mm, formed with the matching tool",
+      "kind": "form_sheet",
+      "step": "cad/k1_ref_retained_plate.step",
+      "stl": "cad/k1_ref_retained_plate.stl",
+      "sha256_step": "5a96bacdd95379c40c1a40f3ed8ca65bed015df9b4e73b44cbc2a77af09a60ba",
+      "sha256_stl": "daf417d761610b9e2318ce86aa6bcfab7dbfcea49f1ac04f9949b23c6bc7ed15",
+      "volume_mm3": 46.57499999999999,
+      "bounds_mm": [
+        [
+          93.25,
+          -11.75,
+          0.38600000739097595
+        ],
+        [
+          106.75,
+          -0.25,
+          0.6859999895095825
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_0_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_stop_0_bond.step",
+      "stl": "cad/k1_ref_stop_0_bond.stl",
+      "sha256_step": "e718c6dcb673e3037d97023a09dafbde0cbb4c6101680e82ba0e99a2a56647e8",
+      "sha256_stl": "480f4ffb3738cece9c32ce2be2bc75c2bc79f5d2f5272dd7d65421577b348559",
+      "volume_mm3": 0.2774999999999998,
+      "bounds_mm": [
+        [
+          93.4000015258789,
+          -5.699999809265137,
+          0.1860000044107437
+        ],
+        [
+          99.69999694824219,
+          -0.4000000059604645,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_0",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ref_stop_0.step",
+      "stl": "cad/k1_ref_stop_0.stl",
+      "sha256_step": "5e55a6d8f60b95625b40ddb918e04404cbef083213cc5cfcd72f5dea5951394a",
+      "sha256_stl": "2c1e4eab0c963864e95d4cdc4a0dc75cfec3d3c78270abcadaf50a893c509b82",
+      "volume_mm3": 0.4229099999999997,
+      "bounds_mm": [
+        [
+          93.4000015258789,
+          -5.699999809265137,
+          0.23600000143051147
+        ],
+        [
+          99.69999694824219,
+          -0.4000000059604645,
+          0.31220000982284546
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_1_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_stop_1_bond.step",
+      "stl": "cad/k1_ref_stop_1_bond.stl",
+      "sha256_step": "b3724f8ccc918c080333651ecd84f71bdadf4e6a6b72aa07c5a12e2b7c40b805",
+      "sha256_stl": "11fada35e8fb2f6fd8c53f545e3ff78e8a96ea7a33271b4ae51914ccfa821033",
+      "volume_mm3": 0.2774999999999999,
+      "bounds_mm": [
+        [
+          93.4000015258789,
+          -11.600000381469727,
+          0.1860000044107437
+        ],
+        [
+          99.69999694824219,
+          -6.300000190734863,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_1",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ref_stop_1.step",
+      "stl": "cad/k1_ref_stop_1.stl",
+      "sha256_step": "1fa81049658ed01da0c458a64e49c7ef33e13c35c5de52603650bfae062b7d30",
+      "sha256_stl": "2bf1d05ae06eb18e7c730da21eaae681441f2a862551b6f85b503ba950e86eff",
+      "volume_mm3": 0.42290999999999984,
+      "bounds_mm": [
+        [
+          93.4000015258789,
+          -11.600000381469727,
+          0.23600000143051147
+        ],
+        [
+          99.69999694824219,
+          -6.300000190734863,
+          0.31220000982284546
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_2_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_stop_2_bond.step",
+      "stl": "cad/k1_ref_stop_2_bond.stl",
+      "sha256_step": "8c4fb8e632abe63fe2f3677caceb6f091689836c57b06d6df09251f667b8297c",
+      "sha256_stl": "1e1eea9cd861cc7587b9db2c02c8e9e8f533341c9b92bd202ca524efe168b201",
+      "volume_mm3": 0.27749999999999975,
+      "bounds_mm": [
+        [
+          100.30000305175781,
+          -11.600000381469727,
+          0.1860000044107437
+        ],
+        [
+          106.5999984741211,
+          -6.300000190734863,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_2",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ref_stop_2.step",
+      "stl": "cad/k1_ref_stop_2.stl",
+      "sha256_step": "48d552334a270405c3e47fd964bc4703049e88d553399d8510e4d5d6d2226bc1",
+      "sha256_stl": "d7533f6fab722e0c95acbe5ec2c1ee4dfdd52edb92ea093a8227a67cf61b18f6",
+      "volume_mm3": 0.4229099999999997,
+      "bounds_mm": [
+        [
+          100.30000305175781,
+          -11.600000381469727,
+          0.23600000143051147
+        ],
+        [
+          106.5999984741211,
+          -6.300000190734863,
+          0.31220000982284546
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_3_bond",
+      "purpose": "Stop adhesive; nominal thickness is included in the stop stack",
+      "material": "3M 467MP transfer adhesive",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_stop_3_bond.step",
+      "stl": "cad/k1_ref_stop_3_bond.stl",
+      "sha256_step": "87e63b6ff314a4907286b982a8915ca2573a2632214008fdf5ecb1ae1a31c42a",
+      "sha256_stl": "86a40da6c89822a19dbfc7c63e2e43dc3554807ed765cbd2d2c147e03ca53e81",
+      "volume_mm3": 0.27749999999999997,
+      "bounds_mm": [
+        [
+          100.30000305175781,
+          -5.699999809265137,
+          0.1860000044107437
+        ],
+        [
+          106.5999984741211,
+          -0.4000000059604645,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_stop_3",
+      "purpose": "Polyimide overload-stop quadrant; keep the vent gaps open",
+      "material": "DuPont Kapton 300HN polyimide",
+      "kind": "cut_film",
+      "step": "cad/k1_ref_stop_3.step",
+      "stl": "cad/k1_ref_stop_3.stl",
+      "sha256_step": "b0a6ba7d52249db0fe14f40a364bf408eaf4aa34b90eb7bca98bf6061342a66c",
+      "sha256_stl": "20fd476f2a5259c1bf98dccd02fa9e6b8a1fd4431ecc1ccc0ba1c4d3469723b9",
+      "volume_mm3": 0.4229099999999997,
+      "bounds_mm": [
+        [
+          100.30000305175781,
+          -5.699999809265137,
+          0.23600000143051147
+        ],
+        [
+          106.5999984741211,
+          -0.4000000059604645,
+          0.31220000982284546
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_vented_cover",
+      "purpose": "Soft retainer and wear cover; four lower vents and two separate plate-bond access ports",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/k1_ref_vented_cover.step",
+      "stl": "cad/k1_ref_vented_cover.stl",
+      "sha256_step": "6a18c9498f073cce5fb5994c10c4be231ca29c5a020dc291e09fd60eb2213cb3",
+      "sha256_stl": "031a4208bf3449d27f0c923c80ae3cd8d4b477684d44a50baf563b49ea25c37e",
+      "volume_mm3": 18.5292799999999,
+      "bounds_mm": [
+        [
+          93.02999877929688,
+          -11.970000267028809,
+          0.23600000143051147
+        ],
+        [
+          106.97000122070312,
+          -0.029999999329447746,
+          0.7860000133514404
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_bond_0",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_cover_bond_0.step",
+      "stl": "cad/k1_ref_cover_bond_0.stl",
+      "sha256_step": "ad0f0e4e1cf63d6e35a8cb791293241a4ea7e1c835254260a714af6bb1e2d513",
+      "sha256_stl": "0375efe4eae0dd7f5ca06eb55c50fae2c53717d61108db70cd8972027670e5ae",
+      "volume_mm3": 0.13111999999999954,
+      "bounds_mm": [
+        [
+          93.02999877929688,
+          -5.599999904632568,
+          0.1860000044107437
+        ],
+        [
+          99.5999984741211,
+          -0.029999999329447746,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_bond_1",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_cover_bond_1.step",
+      "stl": "cad/k1_ref_cover_bond_1.stl",
+      "sha256_step": "5f2ccd15ebaa6fcf29700e64ade56a2674e6dfd7e178077003376c71f3f9243a",
+      "sha256_stl": "767e7d6c17e4afc97bf571932db54668165d6a5a5741c61bc8c6b87ba408c16e",
+      "volume_mm3": 0.13111999999999976,
+      "bounds_mm": [
+        [
+          93.02999877929688,
+          -11.970000267028809,
+          0.1860000044107437
+        ],
+        [
+          99.5999984741211,
+          -6.400000095367432,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_bond_2",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_cover_bond_2.step",
+      "stl": "cad/k1_ref_cover_bond_2.stl",
+      "sha256_step": "8d922cb8268e24263a82dcac8d4376581e3e64686b9f7d1653cca31d12fc8356",
+      "sha256_stl": "f0f57037f9cf37bc50781767e5ad4b8d8664c97ab82968dd6b1199bee0233d5f",
+      "volume_mm3": 0.13111999999999985,
+      "bounds_mm": [
+        [
+          100.4000015258789,
+          -11.970000267028809,
+          0.1860000044107437
+        ],
+        [
+          106.97000122070312,
+          -6.400000095367432,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_bond_3",
+      "purpose": "Local retainer-foot bond; do not bridge the vent channels",
+      "material": "Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_cover_bond_3.step",
+      "stl": "cad/k1_ref_cover_bond_3.stl",
+      "sha256_step": "13f207bc438dde11ce971c04165df716efaedaa5edf750761d1b2e482cdd9f0e",
+      "sha256_stl": "32c830c861cc36c5c8d151c6b905079c7af052dfc924239e3bce64c07c37924d",
+      "volume_mm3": 0.13111999999999951,
+      "bounds_mm": [
+        [
+          100.4000015258789,
+          -5.599999904632568,
+          0.1860000044107437
+        ],
+        [
+          106.97000122070312,
+          -0.029999999329447746,
+          0.23600000143051147
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_ground_bond_0",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_ground_bond_0.step",
+      "stl": "cad/k1_ref_ground_bond_0.stl",
+      "sha256_step": "51ee331d4f5e3f1082d18caac1f27a0a6040093f834ecdce0d238066f63a851b",
+      "sha256_stl": "d3a8ca77c6a00ff59184da3fbab297461d56edef64edde8c36fc9ffeef34d724",
+      "volume_mm3": 0.2799999999999997,
+      "bounds_mm": [
+        [
+          96.0,
+          -12.100000381469727,
+          0.335999995470047
+        ],
+        [
+          98.0,
+          -11.75,
+          0.7360000014305115
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_ground_bond_1",
+      "purpose": "Separate conductive plate-bond envelope; no connection to the driven shield",
+      "material": "MG Chemicals 8331D silver conductive epoxy",
+      "kind": "reference_only",
+      "step": "cad/k1_ref_ground_bond_1.step",
+      "stl": "cad/k1_ref_ground_bond_1.stl",
+      "sha256_step": "006fb7b47d423cb8d085c439084e3c4d71315ddcbf7cc7c51c98c3efdfe75d64",
+      "sha256_stl": "16cd24336785c9b17b7d448ffd228543b608c4980f60191522dc415fce146234",
+      "volume_mm3": 0.2799999999999997,
+      "bounds_mm": [
+        [
+          102.0,
+          -12.100000381469727,
+          0.335999995470047
+        ],
+        [
+          104.0,
+          -11.75,
+          0.7360000014305115
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cells": [
+    {
+      "site": "CH0",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          -5.0949087442321765,
+          15.829129509631315
+        ],
+        [
+          5.078265467728883,
+          15.829129509631315
+        ],
+        [
+          5.078265467728883,
+          12.203281124610875
+        ],
+        [
+          4.096471827035147,
+          12.203281124610875
+        ],
+        [
+          4.063705995763954,
+          12.201687716792796
+        ],
+        [
+          4.025231535898516,
+          12.196039007649457
+        ],
+        [
+          3.987486721793067,
+          12.186683742550674
+        ],
+        [
+          3.950827760850594,
+          12.173710209510682
+        ],
+        [
+          3.9156006130017507,
+          12.157240843057782
+        ],
+        [
+          3.8821377257932626,
+          12.137431068788633
+        ],
+        [
+          3.850754896995754,
+          12.11446783657735
+        ],
+        [
+          3.8217482943400376,
+          12.08856785628205
+        ],
+        [
+          3.7953916605069575,
+          12.059975552598859
+        ],
+        [
+          3.771933729748111,
+          12.028960758363912
+        ],
+        [
+          3.7515958805175296,
+          11.995816168072317
+        ],
+        [
+          3.7345700462669558,
+          11.960854575645854
+        ],
+        [
+          3.721016904121042,
+          11.92440592251715
+        ],
+        [
+          3.7110643585265506,
+          11.88681418388866
+        ],
+        [
+          3.7048063341855335,
+          11.848434122551165
+        ],
+        [
+          3.7026936135943056,
+          11.815697674071338
+        ],
+        [
+          3.693748718098452,
+          11.25161158808153
+        ],
+        [
+          3.693735924100482,
+          11.250711936395936
+        ],
+        [
+          3.6437908116062516,
+          7.282047588344584
+        ],
+        [
+          3.643775908810192,
+          7.280531091050753
+        ],
+        [
+          3.6150723928640907,
+          3.2203500130766174
+        ],
+        [
+          3.615066177560719,
+          3.219006804928904
+        ],
+        [
+          3.6102177479519044,
+          1.0
+        ],
+        [
+          3.860218344704636,
+          1.0
+        ],
+        [
+          3.858033389886992,
+          0.0
+        ],
+        [
+          0.6779345320967929,
+          0.0
+        ],
+        [
+          0.2796366235500258,
+          1.0
+        ],
+        [
+          0.5487371187131627,
+          1.0
+        ],
+        [
+          -4.914052213291868,
+          14.715335217140874
+        ],
+        [
+          -5.000311853521264,
+          14.967431253829169
+        ],
+        [
+          -5.059047565386842,
+          15.217179842005201
+        ],
+        [
+          -5.092889230888252,
+          15.47151947564011
+        ],
+        [
+          -5.101505458763975,
+          15.72795850744705
+        ],
+        [
+          -5.0949087442321765,
+          15.829129509631315
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            4.928265467728883,
+            12.353281124610868
+          ],
+          [
+            4.092826718375893,
+            12.353281124610868
+          ],
+          [
+            4.049134166159554,
+            12.351156348537979
+          ],
+          [
+            3.996225394748901,
+            12.343388435437303
+          ],
+          [
+            3.944320007423734,
+            12.330523392384626
+          ],
+          [
+            3.8939078485151257,
+            12.312682630060666
+          ],
+          [
+            3.845464670378212,
+            12.290034516273428
+          ],
+          [
+            3.7994476435961193,
+            12.262792787028395
+          ],
+          [
+            3.7562910425450737,
+            12.231214529447502
+          ],
+          [
+            3.7164021470367645,
+            12.19559775557264
+          ],
+          [
+            3.6801573987152643,
+            12.156278589950345
+          ],
+          [
+            3.6478988484814696,
+            12.113628097538875
+          ],
+          [
+            3.619930928471982,
+            12.068048781874129
+          ],
+          [
+            3.596517579055524,
+            12.01997078654129
+          ],
+          [
+            3.577879757960652,
+            11.969847835800564
+          ],
+          [
+            3.5641933550415463,
+            11.918152952676023
+          ],
+          [
+            3.5555875323607506,
+            11.865373994917146
+          ],
+          [
+            3.552770263542309,
+            11.821720624039926
+          ],
+          [
+            3.5437656283197447,
+            11.253867210792498
+          ],
+          [
+            3.543749345048327,
+            11.252722199466664
+          ],
+          [
+            3.5070876464196834,
+            8.339564754815658
+          ],
+          [
+            3.2070638905291124,
+            8.339564754815658
+          ],
+          [
+            3.243776186944009,
+            11.256742725607598
+          ],
+          [
+            3.24379944876232,
+            11.25837845621375
+          ],
+          [
+            3.252923563438316,
+            11.833766523977136
+          ],
+          [
+            3.257149928711186,
+            11.899253739649097
+          ],
+          [
+            3.2704513480715347,
+            11.980830490250714
+          ],
+          [
+            3.2916054656398623,
+            12.060731662367383
+          ],
+          [
+            3.320412644632658,
+            12.138203208332197
+          ],
+          [
+            3.3566010243809,
+            12.212514009477786
+          ],
+          [
+            3.3998290859482143,
+            12.282962775888844
+          ],
+          [
+            3.449688875131878,
+            12.348884664653326
+          ],
+          [
+            3.5057098524302477,
+            12.409657554153867
+          ],
+          [
+            3.5673633336437205,
+            12.464707915187828
+          ],
+          [
+            3.634067479201851,
+            12.513516223507956
+          ],
+          [
+            3.7051927851311333,
+            12.55562186270474
+          ],
+          [
+            3.7800680238442466,
+            12.59062747116065
+          ],
+          [
+            3.8579865786850425,
+            12.618202692052524
+          ],
+          [
+            3.9382131124496884,
+            12.638087291013004
+          ],
+          [
+            4.019990506950753,
+            12.65009361202835
+          ],
+          [
+            4.085536501057349,
+            12.653281124610857
+          ],
+          [
+            4.628265467728883,
+            12.653281124610857
+          ],
+          [
+            4.628265467728883,
+            15.379129509631326
+          ],
+          [
+            0.3098269964571438,
+            15.379129509631326
+          ],
+          [
+            0.3098269964571438,
+            15.679129509631315
+          ],
+          [
+            4.928265467728883,
+            15.679129509631315
+          ],
+          [
+            4.928265467728883,
+            12.353281124610868
+          ]
+        ],
+        [
+          [
+            3.4938000862001357,
+            7.2837283799952734
+          ],
+          [
+            3.493781119000936,
+            7.281798292101465
+          ],
+          [
+            3.465074846209343,
+            3.221227251729714
+          ],
+          [
+            3.465066935821855,
+            3.219517713789168
+          ],
+          [
+            3.4589064170096777,
+            0.4000000000000041
+          ],
+          [
+            0.9491761609391064,
+            0.4000000000000041
+          ],
+          [
+            0.3098269964571438,
+            2.0052034187543146
+          ],
+          [
+            0.3098269964571438,
+            2.815954836892498
+          ],
+          [
+            1.1526073825708414,
+            0.7000000000000001
+          ],
+          [
+            3.159561187351693,
+            0.7000000000000001
+          ],
+          [
+            3.1650684523441277,
+            3.2205395315098677
+          ],
+          [
+            3.1650797528998496,
+            3.222981729036096
+          ],
+          [
+            3.1937915393824254,
+            7.284332694203209
+          ],
+          [
+            3.1938186353879017,
+            7.287089963296488
+          ],
+          [
+            3.1995129704037426,
+            7.739564754815658
+          ],
+          [
+            3.4995367262943136,
+            7.739564754815658
+          ],
+          [
+            3.4938000862001357,
+            7.2837283799952734
+          ]
+        ],
+        [
+          [
+            -1.9741571305475352,
+            7.739564754815658
+          ],
+          [
+            -1.6512365363517703,
+            7.739564754815658
+          ],
+          [
+            -0.2901730035428562,
+            4.322364956366047
+          ],
+          [
+            -0.2901730035428562,
+            3.511613538227863
+          ],
+          [
+            -1.9741571305475352,
+            7.739564754815658
+          ]
+        ],
+        [
+          [
+            -4.773329060608776,
+            14.767399624133251
+          ],
+          [
+            -4.855991604101686,
+            15.008983052277829
+          ],
+          [
+            -4.911335164780262,
+            15.24430796288318
+          ],
+          [
+            -4.943222593623385,
+            15.483960380970622
+          ],
+          [
+            -4.949780182282948,
+            15.679129509631315
+          ],
+          [
+            -0.2901730035428562,
+            15.679129509631315
+          ],
+          [
+            -0.2901730035428562,
+            15.379129509631326
+          ],
+          [
+            -4.634857660026076,
+            15.379129509631326
+          ],
+          [
+            -4.5673511052625315,
+            15.092086649175169
+          ],
+          [
+            -4.4918827552425915,
+            14.871528438118002
+          ],
+          [
+            -1.8902152814798308,
+            8.339564754815658
+          ],
+          [
+            -2.213135875675596,
+            8.339564754815658
+          ],
+          [
+            -4.773329060608776,
+            14.767399624133251
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              5.078265467728883,
+              12.203281124610875
+            ],
+            [
+              4.096471827035147,
+              12.203281124610875
+            ],
+            [
+              4.063705995763954,
+              12.201687716792796
+            ],
+            [
+              4.025231535898516,
+              12.196039007649457
+            ],
+            [
+              3.987486721793067,
+              12.186683742550674
+            ],
+            [
+              3.950827760850594,
+              12.173710209510682
+            ],
+            [
+              3.9156006130017507,
+              12.157240843057782
+            ],
+            [
+              3.8821377257932626,
+              12.137431068788633
+            ],
+            [
+              3.850754896995754,
+              12.11446783657735
+            ],
+            [
+              3.8217482943400376,
+              12.08856785628205
+            ],
+            [
+              3.7953916605069575,
+              12.059975552598859
+            ],
+            [
+              3.771933729748111,
+              12.028960758363912
+            ],
+            [
+              3.7515958805175296,
+              11.995816168072317
+            ],
+            [
+              3.7345700462669558,
+              11.960854575645854
+            ],
+            [
+              3.721016904121042,
+              11.92440592251715
+            ],
+            [
+              3.7110643585265506,
+              11.88681418388866
+            ],
+            [
+              3.7048063341855335,
+              11.848434122551165
+            ],
+            [
+              3.7026936135943056,
+              11.815697674071338
+            ],
+            [
+              3.693748718098452,
+              11.25161158808153
+            ],
+            [
+              3.693735924100482,
+              11.250711936395936
+            ],
+            [
+              3.6437908116062516,
+              7.282047588344584
+            ],
+            [
+              3.643775908810192,
+              7.280531091050753
+            ],
+            [
+              3.6150723928640907,
+              3.2203500130766174
+            ],
+            [
+              3.615066177560719,
+              3.219006804928904
+            ],
+            [
+              3.6102177479519044,
+              1.0
+            ],
+            [
+              3.860218344704636,
+              1.0
+            ],
+            [
+              3.858033389886992,
+              0.0
+            ],
+            [
+              0.6779345320967929,
+              0.0
+            ],
+            [
+              0.2796366235500258,
+              1.0
+            ],
+            [
+              0.5487371187131627,
+              1.0
+            ],
+            [
+              -4.914052213291868,
+              14.715335217140874
+            ],
+            [
+              -5.000311853521264,
+              14.967431253829169
+            ],
+            [
+              -5.059047565386842,
+              15.217179842005201
+            ],
+            [
+              -5.092889230888252,
+              15.47151947564011
+            ],
+            [
+              -5.101505458763975,
+              15.72795850744705
+            ],
+            [
+              -5.0949087442321765,
+              15.829129509631315
+            ],
+            [
+              5.078265467728883,
+              15.829129509631315
+            ],
+            [
+              5.078265467728883,
+              12.203281124610875
+            ]
+          ],
+          "holes": [
+            [
+              [
+                -4.993111472711675,
+                15.479813412527127
+              ],
+              [
+                -4.960572631649121,
+                15.23526525592385
+              ],
+              [
+                -4.904098353908212,
+                14.99513245279494
+              ],
+              [
+                -4.854602839989642,
+                14.850480529142828
+              ],
+              [
+                -4.8202367781698126,
+                14.750044821802472
+              ],
+              [
+                0.6962071076330941,
+                0.9
+              ],
+              [
+                0.4271066124699573,
+                0.9
+              ],
+              [
+                0.745744939307371,
+                0.1
+              ],
+              [
+                3.7582516466676634,
+                0.1
+              ],
+              [
+                3.759999610521779,
+                0.9
+              ],
+              [
+                3.5099990137690473,
+                0.9
+              ],
+              [
+                3.515066683068144,
+                3.219347410835809
+              ],
+              [
+                3.515074028427593,
+                3.2209348388454684
+              ],
+              [
+                3.5212149452844357,
+                4.089582236271786
+              ],
+              [
+                3.5437793822706882,
+                7.281375891751252
+              ],
+              [
+                3.54378523614667,
+                7.281971577758741
+              ],
+              [
+                3.543796994668841,
+                7.283168116111714
+              ],
+              [
+                3.556462362390998,
+                8.289564754815657
+              ],
+              [
+                3.5617930404394453,
+                8.713143176513235
+              ],
+              [
+                3.5937448713990463,
+                11.252052111776491
+              ],
+              [
+                3.5937530908664024,
+                11.252630090425475
+              ],
+              [
+                3.593759991579312,
+                11.253115336555373
+              ],
+              [
+                3.6027447135596415,
+                11.819712974050395
+              ],
+              [
+                3.603929237518948,
+                11.838067084730245
+              ],
+              [
+                3.6053271329690126,
+                11.859727370795156
+              ],
+              [
+                3.613150356203213,
+                11.907706696413555
+              ],
+              [
+                3.617750911800028,
+                11.925083445095524
+              ],
+              [
+                3.6255921400141164,
+                11.954700531372762
+              ],
+              [
+                3.6425350681259996,
+                12.000265382909468
+              ],
+              [
+                3.6638192458204952,
+                12.043971243940183
+              ],
+              [
+                3.68924380890368,
+                12.085405651147212
+              ],
+              [
+                3.7185688193124937,
+                12.124177577499845
+              ],
+              [
+                3.7515175294711858,
+                12.15992112247577
+              ],
+              [
+                3.7877789940286264,
+                12.192298965157441
+              ],
+              [
+                3.827011004328502,
+                12.221005547615137
+              ],
+              [
+                3.8688433179193926,
+                12.245769958534876
+              ],
+              [
+                3.9128811526269485,
+                12.266358489877337
+              ],
+              [
+                3.9587089122135133,
+                12.282576842439974
+              ],
+              [
+                4.005894108465437,
+                12.294271959508018
+              ],
+              [
+                4.053991442694349,
+                12.301333471289581
+              ],
+              [
+                4.094041754595634,
+                12.303281124610868
+              ],
+              [
+                4.978265467728883,
+                12.303281124610868
+              ],
+              [
+                4.978265467728884,
+                15.729129509631315
+              ],
+              [
+                0.2598269964571438,
+                15.729129509631315
+              ],
+              [
+                -0.2401730035428562,
+                15.729129509631315
+              ],
+              [
+                -5.001216755122042,
+                15.729129509631315
+              ],
+              [
+                -5.001488373414343,
+                15.729129509631315
+              ],
+              [
+                -5.001396005450615,
+                15.726380423658869
+              ],
+              [
+                -4.993111472711675,
+                15.479813412527127
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 0.9999999213640074,
+      "lip_cleanup_area_mm2": 1.5360985887618932e-15,
+      "stop_total_height_mm": 0.12619999999999998,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999998,
+      "nominal_remaining_post_height_mm": 0.07619999999999998,
+      "cover_top_normal_offset_mm": 0.836,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -3.0083542400564593,
+            15.829129509631315
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.43599999999999994,
+            0.736
+          ]
+        },
+        {
+          "contact_uv": [
+            2.9916457599435407,
+            15.829129509631315
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.43599999999999994,
+            0.736
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH1",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          -5.088892916662937,
+          12.203281124610875
+        ],
+        [
+          -5.088892916662937,
+          15.829129509631315
+        ],
+        [
+          5.102379213969893,
+          15.829129509631315
+        ],
+        [
+          5.105313024342056,
+          15.78412934026391
+        ],
+        [
+          5.096697139481101,
+          15.527688208865582
+        ],
+        [
+          5.062855982009367,
+          15.273347735116245
+        ],
+        [
+          5.0041200144014395,
+          15.023591446212992
+        ],
+        [
+          4.917861634692317,
+          14.771496606730409
+        ],
+        [
+          -0.5672988535068851,
+          1.0
+        ],
+        [
+          -0.29819834361829684,
+          1.0
+        ],
+        [
+          -0.6964964113474421,
+          0.0
+        ],
+        [
+          -3.8297801272430827,
+          0.0
+        ],
+        [
+          -3.8319650820607283,
+          1.0
+        ],
+        [
+          -3.581964485307996,
+          1.0
+        ],
+        [
+          -3.586812914932853,
+          3.219006812269781
+        ],
+        [
+          -3.5868191304645682,
+          3.220350052717012
+        ],
+        [
+          -3.615523123217988,
+          7.2805311156723755
+        ],
+        [
+          -3.6155380249541484,
+          7.282047514590287
+        ],
+        [
+          -3.66548218489403,
+          11.250711962123193
+        ],
+        [
+          -3.6654949871766807,
+          11.251612149871438
+        ],
+        [
+          -3.674440848905247,
+          11.8156983508427
+        ],
+        [
+          -3.6765536213796435,
+          11.848434759827846
+        ],
+        [
+          -3.6828116982879355,
+          11.886814769253485
+        ],
+        [
+          -3.692764287148746,
+          11.924406452177633
+        ],
+        [
+          -3.706317463058023,
+          11.96085504711452
+        ],
+        [
+          -3.7233433215313787,
+          11.995816580166554
+        ],
+        [
+          -3.743681185568497,
+          12.028961111186158
+        ],
+        [
+          -3.7671391219995467,
+          12.05997584749808
+        ],
+        [
+          -3.793495752803296,
+          12.088568095796846
+        ],
+        [
+          -3.822502344303104,
+          12.114468024361699
+        ],
+        [
+          -3.853885154524789,
+          12.137431209521688
+        ],
+        [
+          -3.8873480165634335,
+          12.157240942338769
+        ],
+        [
+          -3.9225751335796613,
+          12.173710273740703
+        ],
+        [
+          -3.959234059048102,
+          12.186683778803069
+        ],
+        [
+          -3.996978834132752,
+          12.19603902353052
+        ],
+        [
+          -4.035453252581411,
+          12.20168772029503
+        ],
+        [
+          -4.068219047909138,
+          12.203281124610875
+        ],
+        [
+          -5.088892916662937,
+          12.203281124610875
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -4.938892916662937,
+            15.679129509631315
+          ],
+          [
+            -0.3198409030046078,
+            15.679129509631315
+          ],
+          [
+            -0.3198409030046078,
+            15.379129509631326
+          ],
+          [
+            -4.638892916662937,
+            15.379129509631326
+          ],
+          [
+            -4.638892916662937,
+            12.653281124610857
+          ],
+          [
+            -4.0572837339566075,
+            12.653281124610857
+          ],
+          [
+            -3.9917378117842817,
+            12.650093619035887
+          ],
+          [
+            -3.9099605053565982,
+            12.6380873243379
+          ],
+          [
+            -3.8297340545718943,
+            12.618202768686885
+          ],
+          [
+            -3.7518155751713356,
+            12.590627607275646
+          ],
+          [
+            -3.6769404020314527,
+            12.555622073338531
+          ],
+          [
+            -3.6058151496372743,
+            12.51351652226973
+          ],
+          [
+            -3.5391110435964204,
+            12.464708313982218
+          ],
+          [
+            -3.4774575861265538,
+            12.409658062929573
+          ],
+          [
+            -3.421436615295923,
+            12.348885291179881
+          ],
+          [
+            -3.371576814081706,
+            12.282963525564679
+          ],
+          [
+            -3.3283487210653813,
+            12.212514885172391
+          ],
+          [
+            -3.2921602898503246,
+            12.138204210265368
+          ],
+          [
+            -3.263353039108383,
+            12.060732788027016
+          ],
+          [
+            -3.2421988295884994,
+            11.980831734351028
+          ],
+          [
+            -3.228897298503367,
+            11.899255094130096
+          ],
+          [
+            -3.224670829443494,
+            11.833767957496274
+          ],
+          [
+            -3.2155457259296725,
+            11.258379567784798
+          ],
+          [
+            -3.2155224490483043,
+            11.256742862519275
+          ],
+          [
+            -3.1788108520084384,
+            8.339564754815658
+          ],
+          [
+            -3.4788346069917173,
+            8.339564754815658
+          ],
+          [
+            -3.515495606278788,
+            11.2527222622552
+          ],
+          [
+            -3.515511900094341,
+            11.253867955842317
+          ],
+          [
+            -3.524517509084663,
+            11.821721553060568
+          ],
+          [
+            -3.5273348470875523,
+            11.86537487126194
+          ],
+          [
+            -3.5359407420547906,
+            11.918153757619327
+          ],
+          [
+            -3.549627204468623,
+            11.969848564127414
+          ],
+          [
+            -3.5682650719887885,
+            12.019971434831453
+          ],
+          [
+            -3.591678454709377,
+            12.06804934850183
+          ],
+          [
+            -3.6196463950728965,
+            12.113628582645656
+          ],
+          [
+            -3.6519049530983363,
+            12.15627899539201
+          ],
+          [
+            -3.6881496972443664,
+            12.195598084841066
+          ],
+          [
+            -3.7280385774008766,
+            12.231214787568533
+          ],
+          [
+            -3.771195152895615,
+            12.262792980437698
+          ],
+          [
+            -3.8172121450527574,
+            12.29003465267201
+          ],
+          [
+            -3.8656552807768856,
+            12.312682718252342
+          ],
+          [
+            -3.916067390889354,
+            12.33052344209767
+          ],
+          [
+            -3.967972724540712,
+            12.34338845713298
+          ],
+          [
+            -4.020881438982361,
+            12.351156353208648
+          ],
+          [
+            -4.064573943258306,
+            12.353281124610868
+          ],
+          [
+            -4.938892916662937,
+            12.353281124610868
+          ],
+          [
+            -4.938892916662937,
+            15.679129509631315
+          ]
+        ],
+        [
+          [
+            4.951700612405628,
+            15.679129509631315
+          ],
+          [
+            4.947030480197287,
+            15.540128814216477
+          ],
+          [
+            4.915143481674061,
+            15.300475240971657
+          ],
+          [
+            4.859799569349757,
+            15.065142603774419
+          ],
+          [
+            4.777138401444356,
+            14.823560812824645
+          ],
+          [
+            2.194575300375978,
+            8.339564754815658
+          ],
+          [
+            1.8716546885096712,
+            8.339564754815658
+          ],
+          [
+            4.495691934948433,
+            14.92768922501315
+          ],
+          [
+            4.571158679246404,
+            15.148244918897326
+          ],
+          [
+            4.625456530572079,
+            15.379129509631326
+          ],
+          [
+            0.28015909699539215,
+            15.379129509631326
+          ],
+          [
+            0.28015909699539215,
+            15.679129509631315
+          ],
+          [
+            4.951700612405628,
+            15.679129509631315
+          ]
+        ],
+        [
+          [
+            0.28015909699539215,
+            3.5330734396671137
+          ],
+          [
+            0.28015909699539215,
+            4.3438245781484115
+          ],
+          [
+            1.6326758478721837,
+            7.739564754815658
+          ],
+          [
+            1.9555964597384903,
+            7.739564754815658
+          ],
+          [
+            0.28015909699539215,
+            3.5330734396671137
+          ]
+        ],
+        [
+          [
+            -0.9677380000775261,
+            0.4000000000000041
+          ],
+          [
+            -3.4306531543657695,
+            0.4000000000000041
+          ],
+          [
+            -3.4368136732036128,
+            3.2195177255345353
+          ],
+          [
+            -3.436821583881721,
+            3.2212273045837456
+          ],
+          [
+            -3.4655283334627303,
+            7.281798320925421
+          ],
+          [
+            -3.4655472993129672,
+            7.283728283613409
+          ],
+          [
+            -3.471283831066945,
+            7.739564754815658
+          ],
+          [
+            -3.1712600760836667,
+            7.739564754815658
+          ],
+          [
+            -3.165565848030601,
+            7.287089821659335
+          ],
+          [
+            -3.165538753952218,
+            7.284332731431825
+          ],
+          [
+            -3.136826490716025,
+            3.222981808317028
+          ],
+          [
+            -3.1368151897451333,
+            3.220539552064408
+          ],
+          [
+            -3.131307924707784,
+            0.7000000000000001
+          ],
+          [
+            -1.171169191625089,
+            0.7000000000000001
+          ],
+          [
+            -0.3198409030046078,
+            2.837415060721333
+          ],
+          [
+            -0.3198409030046078,
+            2.0266639222400364
+          ],
+          [
+            -0.9677380000775261,
+            0.4000000000000041
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -5.088892916662937,
+              15.829129509631315
+            ],
+            [
+              5.102379213969893,
+              15.829129509631315
+            ],
+            [
+              5.105313024342056,
+              15.78412934026391
+            ],
+            [
+              5.096697139481101,
+              15.527688208865582
+            ],
+            [
+              5.062855982009367,
+              15.273347735116245
+            ],
+            [
+              5.0041200144014395,
+              15.023591446212992
+            ],
+            [
+              4.917861634692317,
+              14.771496606730409
+            ],
+            [
+              -0.5672988535068851,
+              1.0
+            ],
+            [
+              -0.29819834361829684,
+              1.0
+            ],
+            [
+              -0.6964964113474421,
+              0.0
+            ],
+            [
+              -3.8297801272430827,
+              0.0
+            ],
+            [
+              -3.8319650820607283,
+              1.0
+            ],
+            [
+              -3.581964485307996,
+              1.0
+            ],
+            [
+              -3.586812914932853,
+              3.219006812269781
+            ],
+            [
+              -3.5868191304645682,
+              3.220350052717012
+            ],
+            [
+              -3.615523123217988,
+              7.2805311156723755
+            ],
+            [
+              -3.6155380249541484,
+              7.282047514590287
+            ],
+            [
+              -3.66548218489403,
+              11.250711962123193
+            ],
+            [
+              -3.6654949871766807,
+              11.251612149871438
+            ],
+            [
+              -3.674440848905247,
+              11.8156983508427
+            ],
+            [
+              -3.6765536213796435,
+              11.848434759827846
+            ],
+            [
+              -3.6828116982879355,
+              11.886814769253485
+            ],
+            [
+              -3.692764287148746,
+              11.924406452177633
+            ],
+            [
+              -3.706317463058023,
+              11.96085504711452
+            ],
+            [
+              -3.7233433215313787,
+              11.995816580166554
+            ],
+            [
+              -3.743681185568497,
+              12.028961111186158
+            ],
+            [
+              -3.7671391219995467,
+              12.05997584749808
+            ],
+            [
+              -3.793495752803296,
+              12.088568095796846
+            ],
+            [
+              -3.822502344303104,
+              12.114468024361699
+            ],
+            [
+              -3.853885154524789,
+              12.137431209521688
+            ],
+            [
+              -3.8873480165634335,
+              12.157240942338769
+            ],
+            [
+              -3.9225751335796613,
+              12.173710273740703
+            ],
+            [
+              -3.959234059048102,
+              12.186683778803069
+            ],
+            [
+              -3.996978834132752,
+              12.19603902353052
+            ],
+            [
+              -4.035453252581411,
+              12.20168772029503
+            ],
+            [
+              -4.068219047909138,
+              12.203281124610875
+            ],
+            [
+              -5.088892916662937,
+              12.203281124610875
+            ],
+            [
+              -5.088892916662937,
+              15.829129509631315
+            ]
+          ],
+          "holes": [
+            [
+              [
+                -4.065788978141907,
+                12.303281124610875
+              ],
+              [
+                -4.025738710182049,
+                12.30133347557078
+              ],
+              [
+                -3.9776414277380434,
+                12.294271979265496
+              ],
+              [
+                -3.930456280275609,
+                12.282576887666142
+              ],
+              [
+                -3.88462856504448,
+                12.266358570081806
+              ],
+              [
+                -3.8405907688896535,
+                12.245770082560938
+              ],
+              [
+                -3.7987584867720128,
+                12.221005723465707
+              ],
+              [
+                -3.7595264997016242,
+                12.192299199832933
+              ],
+              [
+                -3.7232650490973644,
+                12.159921421826356
+              ],
+              [
+                -3.69031634273207,
+                12.124177946094031
+              ],
+              [
+                -3.6609913252381086,
+                12.085406092159179
+              ],
+              [
+                -3.6355667436500525,
+                12.043971759056754
+              ],
+              [
+                -3.614282535678534,
+                12.000265972259156
+              ],
+              [
+                -3.5973395653620006,
+                11.9547011934775
+              ],
+              [
+                -3.584897727465838,
+                11.90770742816405
+              ],
+              [
+                -3.577074438518248,
+                11.859728167450564
+              ],
+              [
+                -3.574491955691524,
+                11.81971381898793
+              ],
+              [
+                -3.5655062624551253,
+                11.253116020518986
+              ],
+              [
+                -3.565491132483867,
+                11.25205216221109
+              ],
+              [
+                -3.515544207860028,
+                7.283168027272414
+              ],
+              [
+                -3.5155265967144835,
+                7.281375919174468
+              ],
+              [
+                -3.486820766076003,
+                3.2209348872947543
+              ],
+              [
+                -3.4868134204466936,
+                3.219347421113105
+              ],
+              [
+                -3.481745751125139,
+                0.9
+              ],
+              [
+                -3.731746347877871,
+                0.9
+              ],
+              [
+                -3.7299983840237547,
+                0.1
+              ],
+              [
+                -0.7643068085299628,
+                0.1
+              ],
+              [
+                -0.44566835434664664,
+                0.9
+              ],
+              [
+                -0.7147688642352349,
+                0.9
+              ],
+              [
+                4.824046145860335,
+                14.80620607745989
+              ],
+              [
+                4.907906384366989,
+                15.05129221792063
+              ],
+              [
+                4.96438098178583,
+                15.291432739019857
+              ],
+              [
+                4.9969193666252245,
+                15.535981945766178
+              ],
+              [
+                5.003408720194841,
+                15.729129509631315
+              ],
+              [
+                -4.988892916662937,
+                15.729129509631315
+              ],
+              [
+                -4.988892916662937,
+                12.303281124610875
+              ],
+              [
+                -4.065788978141907,
+                12.303281124610875
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 1.0,
+      "lip_cleanup_area_mm2": 0.0,
+      "stop_total_height_mm": 0.12619999999999998,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999998,
+      "nominal_remaining_post_height_mm": 0.07619999999999998,
+      "cover_top_normal_offset_mm": 0.836,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -2.993224253576187,
+            15.829129509631315
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.43599999999999994,
+            0.736
+          ]
+        },
+        {
+          "contact_uv": [
+            3.006775746423813,
+            15.829129509631315
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.43599999999999994,
+            0.736
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH2",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          14.279360550147429
+        ],
+        [
+          6.25,
+          14.279360550147429
+        ],
+        [
+          6.25,
+          0.75
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -6.1,
+            7.268250788480651
+          ],
+          [
+            -5.8,
+            7.268250788480651
+          ],
+          [
+            -5.8,
+            1.170184694199788
+          ],
+          [
+            -0.3,
+            1.170184694199788
+          ],
+          [
+            -0.3,
+            0.873918833273304
+          ],
+          [
+            -6.1,
+            0.873918833273304
+          ],
+          [
+            -6.1,
+            7.268250788480651
+          ]
+        ],
+        [
+          [
+            -6.1,
+            14.207713708466926
+          ],
+          [
+            -0.3,
+            14.207713708466926
+          ],
+          [
+            -0.3,
+            13.94768892817229
+          ],
+          [
+            -5.8,
+            13.94768892817229
+          ],
+          [
+            -5.8,
+            7.86825078848065
+          ],
+          [
+            -6.1,
+            7.86825078848065
+          ],
+          [
+            -6.1,
+            14.207713708466926
+          ]
+        ],
+        [
+          [
+            6.1,
+            14.207713708466926
+          ],
+          [
+            6.1,
+            7.86825078848065
+          ],
+          [
+            5.8,
+            7.86825078848065
+          ],
+          [
+            5.8,
+            13.94768892817229
+          ],
+          [
+            0.3,
+            13.94768892817229
+          ],
+          [
+            0.3,
+            14.207713708466926
+          ],
+          [
+            6.1,
+            14.207713708466926
+          ]
+        ],
+        [
+          [
+            6.1,
+            0.873918833273304
+          ],
+          [
+            0.3,
+            0.873918833273304
+          ],
+          [
+            0.3,
+            1.170184694199788
+          ],
+          [
+            5.8,
+            1.170184694199788
+          ],
+          [
+            5.8,
+            7.268250788480651
+          ],
+          [
+            6.1,
+            7.268250788480651
+          ],
+          [
+            6.1,
+            0.873918833273304
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -6.25,
+              14.279360550147429
+            ],
+            [
+              6.25,
+              14.279360550147429
+            ],
+            [
+              6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              14.279360550147429
+            ]
+          ],
+          "holes": [
+            [
+              [
+                6.1499999999999995,
+                14.179360550147429
+              ],
+              [
+                6.1499999999999995,
+                14.257713708466927
+              ],
+              [
+                0.25,
+                14.257713708466927
+              ],
+              [
+                0.25,
+                14.179360550147429
+              ],
+              [
+                -0.25,
+                14.179360550147429
+              ],
+              [
+                -0.25,
+                14.257713708466927
+              ],
+              [
+                -6.1499999999999995,
+                14.257713708466927
+              ],
+              [
+                -6.1499999999999995,
+                14.179360550147429
+              ],
+              [
+                -6.15,
+                0.85
+              ],
+              [
+                -6.1499999999999995,
+                0.823918833273304
+              ],
+              [
+                -0.25,
+                0.823918833273304
+              ],
+              [
+                -0.25,
+                0.85
+              ],
+              [
+                0.25,
+                0.85
+              ],
+              [
+                0.25,
+                0.823918833273304
+              ],
+              [
+                6.1499999999999995,
+                0.823918833273304
+              ],
+              [
+                6.1499999999999995,
+                0.85
+              ],
+              [
+                6.1499999999999995,
+                14.179360550147429
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 0.7614487913565332,
+      "lip_cleanup_area_mm2": 1.7769857948288328e-14,
+      "stop_total_height_mm": 0.1262000000000001,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999987,
+      "nominal_remaining_post_height_mm": 0.07620000000000009,
+      "cover_top_normal_offset_mm": 1.786,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -6.25,
+            4.5682507884806505
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        },
+        {
+          "contact_uv": [
+            -6.25,
+            10.56825078848065
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH3",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          15.871423573174493
+        ],
+        [
+          6.25,
+          15.871423573174493
+        ],
+        [
+          6.25,
+          0.75
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -6.1,
+            8.01594764051349
+          ],
+          [
+            -5.8,
+            8.01594764051349
+          ],
+          [
+            -5.8,
+            1.1999994090837305
+          ],
+          [
+            -0.3,
+            1.1999994090837305
+          ],
+          [
+            -0.3,
+            0.8999993152535573
+          ],
+          [
+            -6.1,
+            0.8999993152535573
+          ],
+          [
+            -6.1,
+            8.01594764051349
+          ]
+        ],
+        [
+          [
+            -6.1,
+            15.726130280021769
+          ],
+          [
+            -0.3,
+            15.726130280021769
+          ],
+          [
+            -0.3,
+            15.429712721857943
+          ],
+          [
+            -5.8,
+            15.429712721857943
+          ],
+          [
+            -5.8,
+            8.615947640513491
+          ],
+          [
+            -6.1,
+            8.615947640513491
+          ],
+          [
+            -6.1,
+            15.726130280021769
+          ]
+        ],
+        [
+          [
+            6.1,
+            15.726130280021769
+          ],
+          [
+            6.1,
+            8.615947640513491
+          ],
+          [
+            5.8,
+            8.615947640513491
+          ],
+          [
+            5.8,
+            15.429712721857943
+          ],
+          [
+            0.3,
+            15.429712721857943
+          ],
+          [
+            0.3,
+            15.726130280021769
+          ],
+          [
+            6.1,
+            15.726130280021769
+          ]
+        ],
+        [
+          [
+            6.1,
+            0.8999993152535573
+          ],
+          [
+            0.3,
+            0.8999993152535573
+          ],
+          [
+            0.3,
+            1.1999994090837305
+          ],
+          [
+            5.8,
+            1.1999994090837305
+          ],
+          [
+            5.8,
+            8.01594764051349
+          ],
+          [
+            6.1,
+            8.01594764051349
+          ],
+          [
+            6.1,
+            0.8999993152535573
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -6.25,
+              15.871423573174493
+            ],
+            [
+              6.25,
+              15.871423573174493
+            ],
+            [
+              6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              15.871423573174493
+            ]
+          ],
+          "holes": [
+            [
+              [
+                6.1499999999999995,
+                15.771423573174493
+              ],
+              [
+                6.1499999999999995,
+                15.77613028002177
+              ],
+              [
+                0.25,
+                15.77613028002177
+              ],
+              [
+                0.25,
+                15.771423573174493
+              ],
+              [
+                -0.25,
+                15.771423573174493
+              ],
+              [
+                -0.25,
+                15.77613028002177
+              ],
+              [
+                -6.1499999999999995,
+                15.77613028002177
+              ],
+              [
+                -6.1499999999999995,
+                15.771423573174493
+              ],
+              [
+                -6.15,
+                0.85
+              ],
+              [
+                -0.25,
+                0.8499993152535572
+              ],
+              [
+                0.25,
+                0.85
+              ],
+              [
+                6.1499999999999995,
+                0.8499993152535572
+              ],
+              [
+                6.1499999999999995,
+                15.771423573174493
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 0.9898722705186616,
+      "lip_cleanup_area_mm2": 4.211190642911764e-06,
+      "stop_total_height_mm": 0.1262000000000001,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999987,
+      "nominal_remaining_post_height_mm": 0.07620000000000009,
+      "cover_top_normal_offset_mm": 1.786,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -6.25,
+            5.315947640513491
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        },
+        {
+          "contact_uv": [
+            -6.25,
+            11.31594764051349
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH4",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          14.478163435219429
+        ],
+        [
+          6.25,
+          14.478163435219429
+        ],
+        [
+          6.25,
+          0.75
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -6.1,
+            7.291313205411839
+          ],
+          [
+            -5.8,
+            7.291313205411839
+          ],
+          [
+            -5.8,
+            1.238603772402288
+          ],
+          [
+            -0.3,
+            1.238603772402288
+          ],
+          [
+            -0.3,
+            0.9269140962044946
+          ],
+          [
+            -6.1,
+            0.9269140962044946
+          ],
+          [
+            -6.1,
+            7.291313205411839
+          ]
+        ],
+        [
+          [
+            -6.1,
+            14.272336890860956
+          ],
+          [
+            -0.3,
+            14.272336890860956
+          ],
+          [
+            -0.3,
+            13.950370957662255
+          ],
+          [
+            -5.8,
+            13.950370957662255
+          ],
+          [
+            -5.8,
+            7.891313205411839
+          ],
+          [
+            -6.1,
+            7.891313205411839
+          ],
+          [
+            -6.1,
+            14.272336890860956
+          ]
+        ],
+        [
+          [
+            6.1,
+            14.272336890860956
+          ],
+          [
+            6.1,
+            7.891313205411839
+          ],
+          [
+            5.8,
+            7.891313205411839
+          ],
+          [
+            5.8,
+            13.950370957662255
+          ],
+          [
+            0.3,
+            13.950370957662255
+          ],
+          [
+            0.3,
+            14.272336890860956
+          ],
+          [
+            6.1,
+            14.272336890860956
+          ]
+        ],
+        [
+          [
+            6.1,
+            0.9269140962044946
+          ],
+          [
+            0.3,
+            0.9269140962044946
+          ],
+          [
+            0.3,
+            1.238603772402288
+          ],
+          [
+            5.8,
+            1.238603772402288
+          ],
+          [
+            5.8,
+            7.291313205411839
+          ],
+          [
+            6.1,
+            7.291313205411839
+          ],
+          [
+            6.1,
+            0.9269140962044946
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              14.478163435219429
+            ],
+            [
+              6.25,
+              14.478163435219429
+            ],
+            [
+              6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              0.75
+            ]
+          ],
+          "holes": [
+            [
+              [
+                6.15,
+                14.37816343521943
+              ],
+              [
+                -6.15,
+                14.37816343521943
+              ],
+              [
+                -6.15,
+                0.85
+              ],
+              [
+                6.15,
+                0.85
+              ],
+              [
+                6.15,
+                14.37816343521943
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 1.0,
+      "lip_cleanup_area_mm2": 0.0,
+      "stop_total_height_mm": 0.1262000000000001,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999987,
+      "nominal_remaining_post_height_mm": 0.07620000000000009,
+      "cover_top_normal_offset_mm": 1.786,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -6.25,
+            4.591313205411839
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        },
+        {
+          "contact_uv": [
+            -6.25,
+            10.59131320541184
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        }
+      ]
+    },
+    {
+      "site": "CH5",
+      "reference_copies": 1,
+      "plate_domain_native_us": [
+        [
+          6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          0.75
+        ],
+        [
+          -6.25,
+          21.279699472018155
+        ],
+        [
+          6.25,
+          21.279699472018155
+        ],
+        [
+          6.25,
+          0.75
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -6.1,
+            10.751506059774494
+          ],
+          [
+            -5.8,
+            10.751506059774494
+          ],
+          [
+            -5.8,
+            1.2517853720267786
+          ],
+          [
+            -0.3,
+            1.2517853720267786
+          ],
+          [
+            -0.3,
+            0.9367899448434003
+          ],
+          [
+            -6.1,
+            0.9367899448434003
+          ],
+          [
+            -6.1,
+            10.751506059774494
+          ]
+        ],
+        [
+          [
+            -6.1,
+            21.13670488782916
+          ],
+          [
+            -0.3,
+            21.13670488782916
+          ],
+          [
+            -0.3,
+            20.84001078892713
+          ],
+          [
+            -5.8,
+            20.84001078892713
+          ],
+          [
+            -5.8,
+            11.351506059774495
+          ],
+          [
+            -6.1,
+            11.351506059774495
+          ],
+          [
+            -6.1,
+            21.13670488782916
+          ]
+        ],
+        [
+          [
+            6.1,
+            21.13670488782916
+          ],
+          [
+            6.1,
+            11.351506059774495
+          ],
+          [
+            5.8,
+            11.351506059774495
+          ],
+          [
+            5.8,
+            20.84001078892713
+          ],
+          [
+            0.3,
+            20.84001078892713
+          ],
+          [
+            0.3,
+            21.13670488782916
+          ],
+          [
+            6.1,
+            21.13670488782916
+          ]
+        ],
+        [
+          [
+            6.1,
+            0.9367899448434003
+          ],
+          [
+            0.3,
+            0.9367899448434003
+          ],
+          [
+            0.3,
+            1.2517853720267786
+          ],
+          [
+            5.8,
+            1.2517853720267786
+          ],
+          [
+            5.8,
+            10.751506059774494
+          ],
+          [
+            6.1,
+            10.751506059774494
+          ],
+          [
+            6.1,
+            0.9367899448434003
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -6.25,
+              21.279699472018155
+            ],
+            [
+              6.25,
+              21.279699472018155
+            ],
+            [
+              6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              0.75
+            ],
+            [
+              -6.25,
+              21.279699472018155
+            ]
+          ],
+          "holes": [
+            [
+              [
+                6.1499999999999995,
+                21.179699472018154
+              ],
+              [
+                6.1499999999999995,
+                21.186704887829162
+              ],
+              [
+                0.25,
+                21.186704887829162
+              ],
+              [
+                0.25,
+                21.179699472018154
+              ],
+              [
+                -0.25,
+                21.179699472018154
+              ],
+              [
+                -0.25,
+                21.186704887829162
+              ],
+              [
+                -6.1499999999999995,
+                21.186704887829162
+              ],
+              [
+                -6.1499999999999995,
+                21.179699472018154
+              ],
+              [
+                -6.15,
+                0.85
+              ],
+              [
+                6.15,
+                0.85
+              ],
+              [
+                6.1499999999999995,
+                21.179699472018154
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 0.9874101944429412,
+      "lip_cleanup_area_mm2": 1.8056400350035553e-14,
+      "stop_total_height_mm": 0.1262000000000001,
+      "nominal_normal_travel_to_stop_mm": 0.07379999999999987,
+      "nominal_remaining_post_height_mm": 0.07620000000000009,
+      "cover_top_normal_offset_mm": 1.786,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -6.25,
+            8.051506059774495
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        },
+        {
+          "contact_uv": [
+            -6.25,
+            14.051506059774495
+          ],
+          "edge_axis_uv": [
+            0,
+            1
+          ],
+          "normal_interval_mm": [
+            1.286,
+            1.586
+          ]
+        }
+      ]
+    },
+    {
+      "site": "REF",
+      "reference_copies": 2,
+      "plate_domain_native_us": [
+        [
+          6.75,
+          0.25
+        ],
+        [
+          -6.75,
+          0.25
+        ],
+        [
+          -6.75,
+          11.75
+        ],
+        [
+          6.75,
+          11.75
+        ],
+        [
+          6.75,
+          0.25
+        ]
+      ],
+      "stop_domains_native_us": [
+        [
+          [
+            -6.6,
+            5.7
+          ],
+          [
+            -6.1,
+            5.7
+          ],
+          [
+            -6.1,
+            0.9
+          ],
+          [
+            -0.3,
+            0.9
+          ],
+          [
+            -0.3,
+            0.4
+          ],
+          [
+            -6.6,
+            0.4
+          ],
+          [
+            -6.6,
+            5.7
+          ]
+        ],
+        [
+          [
+            -6.6,
+            11.6
+          ],
+          [
+            -0.3,
+            11.6
+          ],
+          [
+            -0.3,
+            11.1
+          ],
+          [
+            -6.1,
+            11.1
+          ],
+          [
+            -6.1,
+            6.3
+          ],
+          [
+            -6.6,
+            6.3
+          ],
+          [
+            -6.6,
+            11.6
+          ]
+        ],
+        [
+          [
+            6.6,
+            11.6
+          ],
+          [
+            6.6,
+            6.3
+          ],
+          [
+            6.1,
+            6.3
+          ],
+          [
+            6.1,
+            11.1
+          ],
+          [
+            0.3,
+            11.1
+          ],
+          [
+            0.3,
+            11.6
+          ],
+          [
+            6.6,
+            11.6
+          ]
+        ],
+        [
+          [
+            6.6,
+            0.4
+          ],
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            6.1,
+            0.9
+          ],
+          [
+            6.1,
+            5.7
+          ],
+          [
+            6.6,
+            5.7
+          ],
+          [
+            6.6,
+            0.4
+          ]
+        ]
+      ],
+      "lip_domains_native_us": [
+        {
+          "outer": [
+            [
+              -6.75,
+              0.25
+            ],
+            [
+              -6.75,
+              11.75
+            ],
+            [
+              6.75,
+              11.75
+            ],
+            [
+              6.75,
+              0.25
+            ],
+            [
+              -6.75,
+              0.25
+            ]
+          ],
+          "holes": [
+            [
+              [
+                6.65,
+                11.65
+              ],
+              [
+                -6.65,
+                11.65
+              ],
+              [
+                -6.65,
+                0.35
+              ],
+              [
+                6.65,
+                0.35
+              ],
+              [
+                6.65,
+                11.65
+              ]
+            ]
+          ]
+        }
+      ],
+      "retained_lip_area_fraction": 1.0,
+      "lip_cleanup_area_mm2": 0.0,
+      "stop_total_height_mm": 0.12619999999999998,
+      "nominal_normal_travel_to_stop_mm": 0.07380000000000003,
+      "nominal_remaining_post_height_mm": 0.07619999999999998,
+      "cover_top_normal_offset_mm": 0.7859999999999999,
+      "ground_bonds": [
+        {
+          "contact_uv": [
+            -3.0,
+            11.75
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.386,
+            0.6859999999999999
+          ]
+        },
+        {
+          "contact_uv": [
+            3.0,
+            11.75
+          ],
+          "edge_axis_uv": [
+            1,
+            0
+          ],
+          "normal_interval_mm": [
+            0.386,
+            0.6859999999999999
+          ]
+        }
+      ]
+    }
+  ],
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "engineering/designs/capacitive_cell_mechanics.json": "679b530e7230324593e1b5e0f1585a577823ba6a4c71fe3dfe6ece26ed60e558",
+    "engineering/scripts/build_capacitive_cell_mechanics.py": "d47072343be34239c7a00884840c6fd59c5ba650c3c5e04b16fda6a4ce4ccb24",
+    "engineering/scripts/capacitive_geometry.py": "36376d2b9e9be0097546f182e50b6abd8efc5da980631e3254ac24d81143bb69",
+    "engineering/scripts/capacitive_cell_geometry.py": "991928e0709e31e4f7dab5427d9fe62705c10276ec6942dcabb2f1f8567aeaaf",
+    "engineering/scripts/f1_surfaces.py": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa"
+  },
+  "status": "Mechanical geometry proposal; source/peer checks, cover molds, assembly and physical tests remain",
+  "limits": [
+    "The adhesive-backed stop height and cover stiffness are not measured.",
+    "The retainer is a parallel mechanical path; its contribution requires calibration and a separate model sensitivity check.",
+    "The plates and cover replace earlier full-outline plate/cover references. Preserve the earlier files as history.",
+    "Ground-bond envelopes specify access, not proven adhesion, electrical resistance or strain relief."
+  ]
+}

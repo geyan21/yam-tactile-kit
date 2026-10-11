@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+<title id="title">K1.2 capacitive cell: exact sensing stack and placement</title>
+<desc id="desc">Six separate custom compression capacitors use a grounded steel plate, silicone posts and a covered flexible electrode with a driven shield. The readout is remote from the contact surface.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#365b60"/></marker></defs>
+<rect width="1100" height="650" fill="#f5f7ef"/>
+<g font-family="Arial,sans-serif" fill="#263f43">
+<text x="38" y="45" font-size="28" font-weight="bold">K1.2 · the capacitor is on the finger</text>
+<text x="38" y="76" font-size="17">CH0 + CH1 on the nail prongs · CH2–CH5 on four curved TPU saddles</text>
+<text x="38" y="104" font-size="14" fill="#677775">Schematic cross-section; exaggerated spacing. Dimensions are manufacturing targets.</text>
+<path d="M300 125v38" stroke="#365b60" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="350" y="149" font-size="18">Object pushes the plate</text>
+<rect x="120" y="178" width="410" height="30" rx="8" fill="#a9c7b2" stroke="#476e66"/>
+<text x="575" y="199" font-size="17">Dragon Skin 10 Slow cover</text>
+<text x="575" y="223" font-size="14">0.10 mm nail / 0.20 mm TPU · vented retaining skirt</text>
+<rect x="132" y="235" width="386" height="35" fill="#a7b8c1" stroke="#536b78"/>
+<text x="575" y="257" font-size="17">0.30 mm formed 304 steel spreader → GROUND</text>
+<path d="M518 246h32m-32 15h32" stroke="#a26c49" stroke-width="4"/>
+<text x="575" y="280" font-size="14">Two separate edge bonds: ground drive + health return</text>
+<g fill="#d0b684" stroke="#9c895e">
+<rect x="158" y="301" width="44" height="50"/><rect x="235" y="301" width="44" height="50"/><rect x="312" y="301" width="44" height="50"/><rect x="389" y="301" width="44" height="50"/>
+<rect x="142" y="351" width="350" height="14"/>
+</g>
+<text x="575" y="324" font-size="17">SYLGARD 184 · 10:1 by mass</text>
+<text x="575" y="348" font-size="14">0.15 mm high posts on a 0.05 mm base · open air gaps</text>
+<rect x="120" y="388" width="410" height="20" fill="#cf9d70"/>
+<rect x="120" y="408" width="410" height="20" fill="#e7dab5"/>
+<rect x="120" y="428" width="410" height="13" fill="#699c8c"/>
+<text x="575" y="405" font-size="17">Top covered copper: CIN electrode + guard</text>
+<text x="575" y="431" font-size="17">100 µm PI core · back copper = driven SHLD</text>
+<text x="575" y="455" font-size="14">Complete flex: 0.186 mm · SHLD is not ground</text>
+<rect x="120" y="477" width="410" height="37" fill="#bac8bd" stroke="#657c73"/>
+<text x="575" y="501" font-size="17">Original nail or conforming rigid TPU saddle</text>
+<path d="M104 382v-72h26m416 72v-72h-20" fill="none" stroke="#9a813f" stroke-width="7"/>
+<text x="38" y="552" font-size="16">Four separate stop quadrants: 76.2 µm Kapton + nominal 50 µm adhesive.</text>
+<text x="38" y="579" font-size="16">Nominal free travel: 73.8 µm. Measure each assembled gap; keep vents and ground ports clear.</text>
+<text x="38" y="619" font-size="16" font-weight="bold">FDC1004DGSR reads capacitance at the bank board. Physical force calibration is required.</text>
+</g></svg>

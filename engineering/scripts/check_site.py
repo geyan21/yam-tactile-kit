@@ -185,6 +185,20 @@ def main():
                 "website/assets/development/capacitive/k1/file-index.html",
                 "website/assets/development/capacitive/k1/visuals/k1_stack.svg",
                 "website/downloads/k1-development.zip",
+                "source/engineering/prototypes/capacitive/prototype_snapshot.json",
+                "source/engineering/prototypes/capacitive/capacitive_manifest.json",
+                "source/engineering/prototypes/capacitive/flex/k1_ref_flex/k1_ref_flex.kicad_pcb",
+                "source/engineering/prototypes/capacitive/readout/pcb/k1_readout.kicad_pcb",
+                "source/engineering/prototypes/capacitive/cad/k1_ch0_retained_plate.step",
+                "source/engineering/prototypes/capacitive/cad/k1_bank_case.stl",
+                "source/engineering/prototypes/capacitive/k1_firmware.zip",
+                "source/engineering/software/capacitive_force.py",
+                "source/engineering/templates/capacitive_force_trials.json",
+                "source/engineering/docs/CAPACITIVE_TESTING.md",
+                "website/capacitive-testing.html",
+                "website/assets/prototypes/capacitive/visuals/k1_wiring.svg",
+                "website/assets/prototypes/capacitive/visuals/assembly_sensitivity.png",
+                "website/downloads/k1-prototype.zip",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

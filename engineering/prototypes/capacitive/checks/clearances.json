@@ -1,0 +1,71 @@
+{
+  "schema": "yam-k1-cell-clearance-screen/1",
+  "physical_specimens_tested": 0,
+  "mechanics_report_sha256": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+  "cells": [
+    {
+      "site": "CH0",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07619999999999998,
+      "nominal_stop_travel_mm": 0.07379999999999998,
+      "nominal_post_height_at_stop_mm": 0.07619999999999998,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "CH1",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07619999999999998,
+      "nominal_stop_travel_mm": 0.07379999999999998,
+      "nominal_post_height_at_stop_mm": 0.07619999999999998,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "CH2",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07620000000000009,
+      "nominal_stop_travel_mm": 0.07379999999999987,
+      "nominal_post_height_at_stop_mm": 0.07620000000000009,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "CH3",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07620000000000009,
+      "nominal_stop_travel_mm": 0.07379999999999987,
+      "nominal_post_height_at_stop_mm": 0.07620000000000009,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "CH4",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07620000000000009,
+      "nominal_stop_travel_mm": 0.07379999999999987,
+      "nominal_post_height_at_stop_mm": 0.07620000000000009,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "CH5",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07620000000000009,
+      "nominal_stop_travel_mm": 0.07379999999999987,
+      "nominal_post_height_at_stop_mm": 0.07620000000000009,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    },
+    {
+      "site": "REF",
+      "lip_stop_projected_overlap_mm2": 0.0,
+      "lip_can_reach_stops_early_under_rigid_plate_motion": false,
+      "ground_bond_min_clearance_at_full_stop_mm": 0.07619999999999998,
+      "nominal_stop_travel_mm": 0.07380000000000003,
+      "nominal_post_height_at_stop_mm": 0.07619999999999998,
+      "scope": "Conservative full lip footprint; actual vent/port cuts may remove portions. Any positive overlap needs explicit review or removal."
+    }
+  ],
+  "passed_lip_stop_screen": true
+}

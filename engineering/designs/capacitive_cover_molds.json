@@ -1,0 +1,19 @@
+{
+  "schema": "yam-k1-cover-molds/1",
+  "blank_margin_mm": 10,
+  "bolt_offset_from_cavity_bounds_mm": 5,
+  "bolt_clearance_mm": 3.4,
+  "dowel_offset_from_cavity_bounds_mm": 7,
+  "dowel_bore_mm": 3.02,
+  "dowel_embed_each_half_mm": 4,
+  "overflow_width_mm": 0.8,
+  "overflow_height_mm": 0.10,
+  "overflow_overlap_into_foot_mm": 0.01,
+  "tool_material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+  "process": "Compression mold around the formed steel insert. Wet the open cavities with degassed Dragon Skin 10 Slow before closing; excess leaves through the two small foot-level overflow channels. Trim flash outside the pressure face after cure.",
+  "limits": [
+    "Nominal tooling geometry only. Fit actual formed steel, inspect mold alignment and verify cast wall/cover thickness before loading.",
+    "The silicone must be compatible with the actual tool, sealer and release agent. Use the manufacturer's small-scale cure/adhesion test.",
+    "The thin retaining lip has a small demolding undercut; its release and tear behavior require the first casting trial."
+  ]
+}

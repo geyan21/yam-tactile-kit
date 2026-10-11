@@ -1,0 +1,19 @@
+{
+  "schema": "yam-k1-assembly-screen/1",
+  "stop_film_mm_cases": [0.0724, 0.0762, 0.08],
+  "stop_film_source": "DuPont Kapton general specifications: 300HN nominal 76.2 µm, specified thickness range 72.4–80 µm",
+  "stop_adhesive_mm_cases": [0.04, 0.05, 0.06],
+  "stop_adhesive_scope": "Illustrative ±10 µm bonded-adhesive scenarios; not a 3M thickness or compressed-bond guarantee",
+  "converter_resolution_pf_datasheet": 0.0005,
+  "illustrative_contact_signal_resolution_multiple": 5,
+  "contact_signal_scope": "A five-resolution-step planning screen at 0.2 N, not a noise bound, contact threshold, accuracy claim or probability guarantee",
+  "maximum_normal_load_n": 20,
+  "minimum_contact_load_n": 0.2,
+  "limits": [
+    "Uniform rigid spreader and independent incompressible neo-Hookean posts only.",
+    "The cover contributes an illustrative parallel linear stiffness; actual cured-cover response and hysteresis are unmeasured.",
+    "The adhesive scenarios expose stop-height sensitivity; actual films and cured bonds must be measured.",
+    "Finite plate bending, edge/nail-tip contact, shear, friction, creep, thermal drift and loaded TPU motion are not solved.",
+    "A build may be geometrically reproducible while failing these planning scenarios or the required physical tests."
+  ]
+}

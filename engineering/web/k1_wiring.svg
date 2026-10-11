@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-labelledby="title desc">
+<title id="title">K1.2 channel placement and wiring</title>
+<desc id="desc">Two banks each read three tactile cells and one protected reference on separate Pico buses. Each pressure cell has a centre conductor and driven shield plus two independent grounded-plate wires.</desc>
+<rect width="1120" height="680" fill="#f5f7ef"/>
+<g font-family="Arial,sans-serif" fill="#263f43">
+<text x="35" y="44" font-size="28" font-weight="bold">K1.2 · wire each cell to the correct bank</text>
+<text x="35" y="75" font-size="17">Two FDC1004DGSR boards · one Raspberry Pi Pico · both banks supplied by 3V3</text>
+<g fill="#e5ede1" stroke="#648477" stroke-width="2">
+<rect x="330" y="116" width="330" height="208" rx="10"/><rect x="330" y="352" width="330" height="208" rx="10"/>
+<rect x="815" y="215" width="260" height="233" rx="10"/>
+</g>
+<g font-size="18">
+<text x="355" y="149" font-weight="bold">BANK A</text><text x="355" y="385" font-weight="bold">BANK B</text>
+<text x="45" y="192">CH0 · left nail</text><text x="45" y="226">CH2 · distal TPU</text><text x="45" y="260">CH3 · middle-distal TPU</text>
+<text x="45" y="428">CH1 · right nail</text><text x="45" y="462">CH4 · middle-proximal TPU</text><text x="45" y="496">CH5 · proximal TPU</text>
+<text x="352" y="192">JS0</text><text x="352" y="226">JS1</text><text x="352" y="260">JS2</text>
+<text x="352" y="428">JS0</text><text x="352" y="462">JS1</text><text x="352" y="496">JS2</text>
+<text x="840" y="251" font-weight="bold">PICO</text>
+<text x="840" y="292">GP0 = A SDA</text><text x="840" y="321">GP1 = A SCL</text>
+<text x="840" y="367">GP2 = B SDA</text><text x="840" y="396">GP3 = B SCL</text>
+</g>
+<g stroke="#597f8a" stroke-width="3" fill="none">
+<path d="M277 186h53m-53 34h53m-53 34h53M277 422h53m-53 34h53m-53 34h53"/>
+<path d="M660 232h66v61h89M660 466h83v-83h72"/>
+</g>
+<g font-size="15">
+<text x="417" y="187">FDC1004 · 0x50</text><text x="417" y="211">ADS1115 · 0x48</text>
+<text x="417" y="247">REF A → JREF / CIN4</text><text x="417" y="272">Protected inside case</text>
+<text x="417" y="423">FDC1004 · 0x50</text><text x="417" y="447">ADS1115 · 0x48</text>
+<text x="417" y="483">REF B → JREF / CIN4</text><text x="417" y="508">Protected inside case</text>
+<text x="354" y="306">JP: 1 3V3 · 2 GND · 3 SDA · 4 SCL</text>
+<text x="354" y="542">JP: 1 3V3 · 2 GND · 3 SDA · 4 SCL</text>
+</g>
+<path d="M35 582h1040" stroke="#bdccc0"/>
+<text x="35" y="610" font-size="17" font-weight="bold">Each JS port: 1 CIN · 2 driven SHLD1 · 3 plate ground drive · 4 independent plate return</text>
+<text x="35" y="636" font-size="15">Coax centre → CIN; braid → SHLD. Use separate slack wires to the two plate bonds. Keep the braid insulated from ground.</text>
+<text x="35" y="661" font-size="15">JREF: 1 CIN4 · 2 SHLD2 · 3 GND · 4 GND. Reference cells stay unloaded. Raw packets are not calibrated force.</text>
+</g></svg>

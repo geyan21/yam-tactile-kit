@@ -15,6 +15,10 @@
   }
   try{
     const catalog=await (await fetch("assets/design-catalog.json")).json();
+    const requested=new URLSearchParams(location.search).get("ids")?.split(",")||null;
+    if(requested&&(new Set(requested).size!==requested.length||
+       requested.some(id=>!catalog.designs.some(item=>item.id===id))))throw Error("Invalid design batch");
+    const selected=requested?requested.map(id=>catalog.designs.find(item=>item.id===id)):catalog.designs;
     await load("designs.html");
     let d=frame.contentDocument;
     const cards=[...d.querySelectorAll("[data-design-card]")];
@@ -23,7 +27,7 @@
       Boolean(d.getElementById(group.id))===catalog.designs.some(item=>item.group===group.id)));
     frame.style.width="390px";await pause(60);
     check("directory fits mobile width",d.documentElement.scrollWidth<=frame.contentWindow.innerWidth+1);
-    for(const item of catalog.designs){
+    for(const item of selected){
       frame.style.width="1200px";
       await load(item.slug+".html");
       d=frame.contentDocument;const w=frame.contentWindow;
@@ -35,6 +39,9 @@
       check(item.id+": diagram loads",image?.complete&&image.naturalWidth>0);
       check(item.id+": current design is marked in navigation",d.querySelector('.design-page-nav a[aria-current="page"]')?.getAttribute("href")===item.slug+".html");
       if(item.viewer_model){
+        check(item.id+": page loads only its own assembly data",
+          w.ENGINEERING?.models.length===1&&w.ENGINEERING.models[0].id===item.viewer_model&&
+          !d.querySelector('script[src="assets/data.js"]'));
         const details=d.querySelector("[data-design-viewer]");
         details.open=true;details.dispatchEvent(new w.Event("toggle"));
         await pause(40);
@@ -81,7 +88,8 @@
           return bounds.width>100&&bounds.height>0&&bounds.left>=0&&bounds.right<=w.innerWidth+1;
         }));
     }
-    observations.design_pages=catalog.designs.length;
+    observations.design_pages=selected.length;
+    observations.design_ids=selected.map(item=>item.id);
   }catch(error){checks.push({name:error.stack||error.message,passed:false});}
   document.getElementById("qa-results").textContent=JSON.stringify({passed:checks.every(item=>item.passed),checks,observations});
 })();

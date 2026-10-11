@@ -27,7 +27,10 @@
       f1_components:"Component body envelopes",f1_fastener_envelopes:"Reserved fasteners",
       support:"Compliant sensor backing",leaves:"Four steel guides",clamps:"Guide clamps",
       sensor:"Honeywell FMA envelope",plunger:"Adjustable plunger",insulation:"PCB insulating film",
-      pcb_components:"Bypass capacitors",root_hardware:"Root fasteners",stops:"Adjustable overload stops"};
+      pcb_components:"Bypass capacitors",root_hardware:"Root fasteners",stops:"Adjustable overload stops",
+      k1_plates:"Grounded steel plates",k1_covers:"Vented silicone retainers",k1_plate_bonds:"Two plate-ground bond envelopes",
+      k1_stops:"Polyimide stop quadrants",k1_flex:"Guarded flexible electrodes",k1_terminals:"Stiffeners and solder envelopes",
+      k1_saddles:"Conforming rigid TPU supports"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){
       const label=document.createElement("label"),input=document.createElement("input");

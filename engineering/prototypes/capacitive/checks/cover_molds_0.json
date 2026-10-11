@@ -1,0 +1,184 @@
+{
+  "schema": "yam-k1-cover-molds/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "k1_ch0_cover_mold_a",
+      "purpose": "CH0 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch0_cover_mold_a.step",
+      "stl": "cad/k1_ch0_cover_mold_a.stl",
+      "sha256_step": "18a7059a8c4e610610c621683cb1d7da081aa4d003a73af310c3e5097032e533",
+      "sha256_stl": "1a7a2b0873af0dea1586a0fc0c645573d2fb51fa3e5f9f1e70f25af15dba1c95",
+      "volume_mm3": 11148.050141682166,
+      "bounds_mm": [
+        [
+          -29.156858444213867,
+          -127.27429962158203,
+          -15.140495300292969
+        ],
+        [
+          -13.84685230255127,
+          -91.24784851074219,
+          6.21327543258667
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_cover_mold_b",
+      "purpose": "CH0 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch0_cover_mold_b.step",
+      "stl": "cad/k1_ch0_cover_mold_b.stl",
+      "sha256_step": "4062b8bbe7a14a9c1fce0e8bdc3cebd0f48503ce37f0ddee9c3c0f98c2514f22",
+      "sha256_stl": "cef98beae24c5ed0c4e062697480392acc636d0d1886eba0b126029ace685ea4",
+      "volume_mm3": 11137.540782002023,
+      "bounds_mm": [
+        [
+          -13.84685230255127,
+          -127.27429962158203,
+          -15.140495300292969
+        ],
+        [
+          1.4631534814834595,
+          -91.24784851074219,
+          6.21327543258667
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cases": [
+    {
+      "site": "CH0",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 1.826303039849893e-13,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -13.846852326819956,
+      "bolt_centres_native_yz_mm": [
+        [
+          -122.2742988855,
+          -10.140494933459
+        ],
+        [
+          -122.2742988855,
+          1.2132754897812577
+        ],
+        [
+          -96.24785010299883,
+          -10.140494933459
+        ],
+        [
+          -96.24785010299883,
+          1.2132754897812577
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -124.2742988855,
+          -4.463609721838871
+        ],
+        [
+          -94.24785010299883,
+          -4.463609721838871
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -8.536846464929637,
+            -103.2794719443125,
+            -3.9135933025051215
+          ],
+          "direction": [
+            1.0,
+            -2.615677728969306e-10,
+            5.211755491210463e-09
+          ],
+          "cover_overlap_mm3": 0.0003999999999958341
+        },
+        {
+          "point": [
+            -15.29868877615283,
+            -111.8271863848647,
+            -4.342586339011783
+          ],
+          "direction": [
+            -0.9290209586884698,
+            -0.36956196377970113,
+            -0.018547594044711676
+          ],
+          "cover_overlap_mm3": 0.0003999999992967018
+        }
+      ]
+    }
+  ],
+  "source_mechanics_sha256": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+  "input_sha256": {
+    "engineering/designs/capacitive_cover_molds.json": "12fae295cf7788f206289a3176f6d33042ae7bf633353e16b49c6e055b300a56",
+    "engineering/designs/capacitive_cell_mechanics.json": "679b530e7230324593e1b5e0f1585a577823ba6a4c71fe3dfe6ece26ed60e558",
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/report.json": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+    "engineering/scripts/build_capacitive_cover_molds.py": "2e2ab541e8b2a27cdfeac31dc46845220de9a33e0f657417c47bf3274afe0dc0"
+  },
+  "limits": [
+    "Nominal tooling geometry only. Fit actual formed steel, inspect mold alignment and verify cast wall/cover thickness before loading.",
+    "The silicone must be compatible with the actual tool, sealer and release agent. Use the manufacturer's small-scale cure/adhesion test.",
+    "The thin retaining lip has a small demolding undercut; its release and tear behavior require the first casting trial."
+  ],
+  "process": "Compression mold around the formed steel insert. Wet the open cavities with degassed Dragon Skin 10 Slow before closing; excess leaves through the two small foot-level overflow channels. Trim flash outside the pressure face after cure."
+}

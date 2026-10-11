@@ -314,38 +314,45 @@
       "related": ["R1", "B1", "CAPACITIVE"]
     },
     {
-      "id": "CAPACITIVE", "slug": "capacitive", "title": "K1 · Shielded capacitive cells", "group": "development",
-      "status": "Cell tooling and checked readout",
-      "status_detail": "49 current CAD parts, casting patterns, conforming supports, a checked readout PCB and raw code are supplied. Electrode artwork, retention/stops, venting, cable/enclosure integration and physical qualification remain.",
-      "summary": "Place compression capacitors on the two nail prongs and four TPU regions, with protected reference cells and fixed readout electronics.",
+      "id": "CAPACITIVE", "slug": "capacitive", "title": "K1.2 · Shielded capacitive cells", "group": "prototype",
+      "status": "Digital bench prototype · unbuilt",
+      "status_detail": "Seven checked flex designs, formed terminals, retained plates, stops, cover molds, bank cases, readout and physical-test software are supplied. Actual fabrication, drive bracket, moving-cable fit and contact/force qualification remain.",
+      "summary": "Build a custom compression capacitor on each nail prong and four TPU regions. Two FDC1004DGSR boards read the six tactile cells against protected references.",
       "signal": "Capacitance changes; force depends on the mechanical dielectric structure and calibration.",
       "best_for": "A possible alternative when magnetic interference is unacceptable.",
-      "tradeoff": "The current stack adds thickness and assembly steps. Plate/post mechanics, creep, parasitics, moisture and bending artifacts need measurement.",
+      "tradeoff": "The nail gains 0.836 mm nominal thickness and the build needs precise molding and bonds. The model exposes a stop-height versus low-force-signal tradeoff; it does not qualify force accuracy.",
       "sensors": [
-        ["CH0 and CH1", "Covered sensing electrode, molded SYLGARD 184 post sheet and grounded stainless spreader", "One cell over each nail face; preserve the notch"],
-        ["CH2–CH5", "Four separate post-sheet capacitors on conforming rigid supports", "On the four retained TPU contact regions"],
+        ["CH0 and CH1", "K1.2 two-layer flex, SYLGARD 184 post sheet, 0.30 mm 304 plate and Dragon Skin 10 Slow cover", "One cell over each nail face; preserve the notch; use the lifted terminal bends"],
+        ["CH2–CH5", "Four separate curved post-sheet capacitors with retained plates and stops", "On four conforming rigid saddles over the retained TPU contact regions"],
         ["Two reference cells", "Protected, unloaded capacitors made with the same post-sheet process", "At the readout boards, away from object loads"],
         ["Two readout boards", "FDC1004DGSR plus ADS1115IDGSR; one board per Pico I²C bus", "Fixed electronics; three pressure cells and one reference per board"]
       ],
-      "placement": "The compression stack is the tactile sensor; the converter stays off the contact surface. The nail addition is nominally 0.786 mm. The 1.736 mm TPU stack figure is above the R1 smoothed-saddle datum, with additional fitting geometry beneath it. None of these dimensions is a measured compressed thickness.",
-      "visual": {"path": "assets/development/capacitive/k1/visuals/k1_cell_placement.png", "alt": "Six K1 capacitor locations and their conforming supports on the source ENPIRE finger", "caption": "Current cell development on the source geometry. Electrode copper, plate joints, stops/retention, cables and the complete physical finger remain unfinished."},
-      "placement_visual": {"path": "assets/development/capacitive/k1/visuals/k1_stack.svg", "alt": "K1 compression capacitor stack with silicone posts, sensing electrode, driven shield and grounded spreader", "caption": "Proposed material stack and sensing connections. The diagram identifies the sensor and where it sits; it is not a force calibration."},
+      "placement": "CH0 → A/JS0, CH2 → A/JS1, CH3 → A/JS2; CH1 → B/JS0, CH4 → B/JS1, CH5 → B/JS2. The compression stack is the tactile sensor; the readout stays in two remote cases. Nominal nail addition is 0.836 mm. The 1.786 mm TPU stack figure is above the R1 smoothed datum, with the fitting base below it; it is not the total addition to bare TPU.",
+      "prototype_cad_group": "capacitive",
+      "viewer_model": "k1_assembly_reference",
+      "visual": {"path": "assets/prototypes/capacitive/visuals/k1_assembly.png", "alt": "Actual K1.2 capacitor plates, guarded flex terminals and conforming supports on the six ENPIRE contact regions", "caption": "Current CAD with separate CH0–CH5 cells. The nail terminals are lifted; the TPU terminals leave the outer side. Physical sensor behavior and moving-harness clearance remain unmeasured."},
+      "placement_visual": {"path": "assets/prototypes/capacitive/visuals/k1_stack.svg", "alt": "K1.2 compression capacitor stack with 150 micrometre posts, 100 micrometre flex core, driven shield and grounded plate", "caption": "Exact selected material stack and connections. Nominal stop travel is 73.8 µm; measure each finished gap and do not seal the vents."},
       "detail_visuals": [
-        {"path": "assets/development/capacitive/k1/visuals/k1_readout.png", "alt": "K1 routed readout board and its two separate driven-shield regions", "caption": "23-component native PCB; zero violations and missing connections in KiCad. Circuit operation, installed parasitics and physical sensor performance remain untested."}
+        {"path": "assets/prototypes/capacitive/visuals/k1_wiring.svg", "alt": "K1.2 channel-to-bank and Pico wiring with separate shield and two plate-ground connections", "caption": "A uses GP0/GP1; B uses GP2/GP3. Coax braid goes to driven SHLD, never ground. Each pressure plate needs two independent ground bonds and slack wires."},
+        {"path": "assets/prototypes/capacitive/visuals/k1_enclosure.png", "alt": "K1 readout case with its protected reference capacitor and lifted lid", "caption": "Make two bank cases. The reference capacitor is protected from lid and object loading. The Pico is outside these cases; fit the case tabs to a measured bench or wrist bracket."},
+        {"path": "assets/prototypes/capacitive/visuals/assembly_sensitivity.png", "alt": "Model sensitivity of low-force signal and 20 newton travel to assumed post modulus", "caption": "Model scenarios only: thick adhesive can cause early nail bottoming; high assumed post stiffness reduces the 0.2 N signal. No physical winner or force calibration is inferred."}
       ],
       "schematic": ["Object compresses pad", "Capacitor gap changes", "Shielded converter", "Calibrated contact / force"],
       "resources": [
         ["Start here", "K1 sensor, placement, wiring and reproduction guide", "build-capacitive.html"],
-        ["Development files", "CAD, tooling, native PCB, artwork, raw code and evidence", "assets/development/capacitive/k1/file-index.html"],
-        ["Module download", "K1 development artifacts and scope (ZIP)", "downloads/k1-development.zip"],
+        ["Prototype files", "Current CAD, tooling, native flex/readout, code and checks", "assets/prototypes/capacitive/file-index.html"],
+        ["Prototype download", "K1.2 complete build module (ZIP)", "downloads/k1-prototype.zip"],
+        ["Test guide", "Raw recording, held-out force evaluation and contact tests", "capacitive-testing.html"],
         ["Complete source", "Full repository source and recorder dependencies", "downloads/enpire-source.zip"],
-        ["CAD inventory", "49 current parts and materials (CSV)", "assets/development/capacitive/k1/parts.csv"],
-        ["PCB components", "Readout ordering codes, values and footprints (CSV)", "assets/development/capacitive/k1/pcb_components.csv"],
+        ["BOM", "Materials, sensors, cable, hardware and per-finger quantities", "assets/prototypes/capacitive/bom.csv"],
+        ["CAD inventory", "Current parts, tools and reference envelopes (CSV)", "assets/prototypes/capacitive/parts.csv"],
+        ["PCB components", "Readout ordering codes, values and footprints (CSV)", "assets/prototypes/capacitive/readout/pcb_components.csv"],
+        ["Earlier design", "Preserved K1 tooling/readout development module", "assets/development/capacitive/k1/file-index.html"],
         ["Review", "Scalability comparison", "architecture.html"],
         ["Reference", "TI FDC1004 documentation", "https://www.ti.com/lit/ds/symlink/fdc1004.pdf"]
       ],
-      "missing": ["Electrode fabrication, ground bonds, stops and retention", "Vents/seals, guarded cable routes and enclosure", "Measured post/plate behavior and installed parasitics", "Independent contact, 20 N force, wear and precision-task results"],
-      "next_steps": ["Fabricate and measure the post-sheet tools and corrected support fit.", "Bring up the checked PCB with measured capacitors, then complete the cell interfaces and whole-finger assembly.", "Compare independent specimens using the common contact, force and precision tests."],
+      "missing": ["Measured fabrication, cure compatibility, thin-cover demolding and bonded stop height", "Installed drive bracket, cable fatigue and full jaw-motion clearance", "Finite plate/edge loading, measured post/cover behavior and actual parasitics", "Independent contact, 20 N force, wear and precision-task results"],
+      "next_steps": ["Fabricate one nail cell and one curved cell, measuring posts, stops, free travel and actual low-force signal before a full build.", "Bring up both banks with measured capacitors, then assemble the remaining cells and inspect every plate bond, vent and cable loop.", "Test three independent specimens with held-out force sessions, leading-edge and mixed contacts, and matched precision tasks."],
       "related": ["F1", "B1", "C1"]
     },
     {

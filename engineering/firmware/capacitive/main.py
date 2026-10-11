@@ -1,12 +1,15 @@
 """K1 Pico acquisition. Copy with the two drivers/config after bench wiring checks."""
 
 import json
+import os
 import time
 
 from fdc1004 import FDC1004
 from health_adc import HealthADC
 
-PROTOCOL = "yam-k1/1"
+PROTOCOL = "yam-k1/2"
+TIMING = {"rate_sps": 400, "bus_hz": 400000, "quiet_us": 3000,
+          "conversion_timeout_us": 15000, "minimum_frame_us": 20000, "hello_period_frames": 50}
 EXPECTED_BANKS = (
     {"bank": 0, "sites": [0, 2, 3], "i2c_id": 0, "sda_gpio": 0, "scl_gpio": 1},
     {"bank": 1, "sites": [1, 4, 5], "i2c_id": 1, "sda_gpio": 2, "scl_gpio": 3},
@@ -14,14 +17,13 @@ EXPECTED_BANKS = (
 
 
 def main():
-    from machine import I2C, Pin
+    from machine import I2C, Pin, unique_id
     with open("config.json") as stream:
         cfg = json.load(stream)
     if (cfg["protocol"] != PROTOCOL or tuple(cfg["banks"]) != EXPECTED_BANKS
-            or cfg["rate_sps"] != 400 or cfg["bus_hz"] != 400000
-            or cfg["quiet_us"] != 3000 or cfg["conversion_timeout_us"] != 15000
-            or cfg["minimum_frame_us"] < 20000):
+            or any(type(cfg.get(k)) is not int or cfg[k] != value for k, value in TIMING.items())):
         raise ValueError("Use the reviewed K1 prototype wiring and timing")
+    boot_id = unique_id().hex()+"-"+os.urandom(8).hex()
     converters, health, startup = [], [], []
     for bank in EXPECTED_BANKS:
         bus = I2C(bank["i2c_id"], sda=Pin(bank["sda_gpio"]), scl=Pin(bank["scl_gpio"]), freq=cfg["bus_hz"])
@@ -43,15 +45,18 @@ def main():
         converters.append(device)
         health.append(adc)
         startup.append(entry)
-    print(json.dumps({"type": "hello", "protocol": PROTOCOL, "firmware": "K1.1 development",
+    hello = {"type": "hello", "protocol": PROTOCOL, "firmware": "K1.2 development",
+                      "boot_id": boot_id, "timing": TIMING,
                       "banks": list(EXPECTED_BANKS), "startup": startup,
                       "rate_sps": cfg["rate_sps"], "capdac_enabled": False,
                       "raw_pF_divisor": 524288, "health_lsb_v": 0.000125,
-                      "contact_calibrated": False, "force_calibrated": False}))
+                      "contact_calibrated": False, "force_calibrated": False}
     sequence, elapsed_us = 0, 0
     previous_ms = time.ticks_ms()
     while True:
         start = time.ticks_us()
+        if sequence % cfg["hello_period_frames"] == 0:
+            print(json.dumps(hello))
         now_ms = time.ticks_ms()
         elapsed_us += time.ticks_diff(now_ms, previous_ms)*1000
         previous_ms = now_ms
@@ -108,6 +113,7 @@ def main():
             except OSError as error:
                 frames[i]["errors"].append("fdc_setup:%s" % error)
         print(json.dumps({"type": "sample", "protocol": PROTOCOL, "seq": sequence,
+                          "boot_id": boot_id,
                           "device_us": elapsed_us, "scan_us": time.ticks_diff(time.ticks_us(), start),
                           "banks": frames}))
         sequence += 1

@@ -13,6 +13,101 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+At this prepublication checkpoint, K1.2 is frozen at `engineering/prototypes/capacitive` on
+`design/k1-integration`, but has not been published. The public site still
+has eight digital prototype packages; the local package count is now nine.
+The new snapshot has 806 files and 241 CAD parts/references.
+The final cell check completed successfully in owned session 47827; its run is
+`cell_mechanics/20261011T222052.188577Z/assembly_reviews/20261011T222735.414702Z`
+under `build/engineering/prototypes/capacitive/`. All six cells passed:
+465 final comparisons and zero findings. Use its final report. Firmware,
+static calibration tools and nominal geometry are still physically untested.
+
+Current mechanical CAD is `cell_mechanics/20261011T222052.188577Z`: 114
+parts across CH0–CH5 and REF. Its report SHA-256 is
+`59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4`.
+The matched review `clearance_reviews/20261011T222343.521394Z` passes all
+seven lip/stop checks. Nominal bonded stop height is 0.1262 mm, travel is
+0.0738 mm, and the conductive-bond envelopes remain 0.0762 mm clear at full
+nominal stop. An earlier CH2 lip/stop overlap was relieved. Failed intermediate
+CAD remains preserved. Sub-nanometre chart roundoff uses a bounded boundary
+displacement check without moving shared outer edges.
+
+Cover tooling is `cover_molds/20261011T222343.629473Z` for CH0 and
+`cover_molds/20261011T222411.385240Z` for CH1–CH5/REF: fourteen registered
+halves, steel-insert cavities and two foot-level overflow channels per shape.
+Physical cure compatibility, flash control and demolding are unqualified.
+`stiffener_tools/20261011T222311.691205Z` supplies seven neutral-plane cut
+patterns and eight curved bonding forms. Polyimide is bonded in curvature;
+no heat-setting is assumed.
+
+The two-copy bank enclosure is `enclosure/20261011T222605.270735Z`:
+44 CAD parts/references and 504 declared checks passing. It has a protected
+reference support, pressure-harness ports, tie slots and mounting tabs.
+Pico stays outside the cases. The actual drive bracket and full moving-harness
+clearances still require measurement.
+
+Foil geometry is `foil_runs/20261011T210432.796205Z`, native set
+`foil_pcb/native-04`, checked in
+`foil_pcb/native-04/independent_checks/20261011T211642.371462Z`.
+All seven boards pass with zero violations/unconnected items. Native KiCad
+and Gerber job files specify the 0.186 mm stack.
+The full formed-foil check is `foil_fit/20261011T214927.820498Z`:
+30 parts and 675 passing comparisons. Nail terminals lift 0.4 mm through a
+length-preserving 4 mm free bend. Current casting CAD is
+`cad_runs/20261011T212153.005385Z`; supports are
+`saddle_runs/20261011T212853.113437Z`.
+
+The complete-outline/cable/retainer study is
+`assembly_screens/20261011T222925.545416Z`. Taoglas 300815C010000A is
+the selected 0.81 mm coax: pressure leads at most 150 mm, references 25 mm.
+Grounded-CIN planning totals are 293.30/312.81 pF nominal and 348.89/373.20 pF
+with an assumed 85 µm core and permittivity 3.6. They meet the conservative
+400 pF joined-shield plan; the real parasitic network remains unmeasured.
+Ninety uniform material/cover cases retain 36 failures of the illustrative
+five-resolution-step signal screen at 0.2 N. Four cases have early-stop
+findings under thicker adhesive assumptions. These are model findings,
+not measured material properties or physical qualification.
+
+Current drawings and viewer models are
+`prototype_visuals/20261011T230622.402815Z`. Earlier renderings remain.
+The newest view uses explicit transparent layer order to prevent whole-mesh
+painter occlusion and separates the case labels.
+Build/test guides, BOM, K1.2 catalog entry and freezer are prepared.
+The freezer checks native/foil/pose and assembly dependency identities.
+
+Protocol 2 preserves boot identity, repeated startup configuration and
+physical/electronics recording labels. The force fitter re-decodes raw data,
+requires held-out sessions, actual >=20 N endpoints and mixed contacts, and
+freezes one force axis in the source finger frame. It cannot silently sum
+differently oriented local normal magnitudes as gripping force.
+Seven focused force tests pass after the earlier 22 acquisition checks.
+No physical calibration or contact threshold exists.
+
+Pages staging now maps development/prototype STEP/STL links to immutable
+GitHub-commit files, retaining local offline archives and hosted viewer meshes.
+File/source hashes must match. The dynamic main-page CAD table receives
+the same URL map as static pages. Seven distribution tests pass.
+All 203 software and fresh-source package tests pass. The verified offline
+browser run is `build/engineering/browser/20261011T233206.622326Z`:
+52 main-page checks and 131 design-page checks, covering all twelve IDs.
+K1 desktop/mobile screenshots and the stack/file views were inspected.
+The single-browser all-page runs at `231945.771903Z` and `232748.518866Z`
+hit their 40-second bound and were stopped as owned processes. They remain
+preserved. Each design now loads only its matching model (about 0.45–3.5 MB
+instead of the shared 18 MB bundle). The unchanged per-page checks run in
+four batches of three, with the 40-second bound kept for each browser and
+explicit complete/unique ID coverage.
+Final archive sealing and hosted distribution checks remain before publication.
+The local report viewer now accepts FB1/K1 static validation, retains
+unavailable holds and rejects K1 files without their declared force axis.
+
+F1's current Hirose page and PDF are reachable through the search service.
+A fresh bounded STEP-cache attempt, owned session 71966, received HTTP 403
+from Hirose, not an automatic-approval rejection. No access control was
+bypassed. F1 mating/lamination and complete resistance/array work,
+pneumatic/optical integration, and all physical builds/tests remain in scope.
+
 The corrected FB1 publication is commit
 `ed0d76dbeacf3a810aa3729a2b6bdbf1afc43726`, release
 `kit-ed0d76dbeacf`. Workflow 38172826768 completed successfully; the four

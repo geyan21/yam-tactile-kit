@@ -1,0 +1,994 @@
+{
+  "schema": "yam-k1-cover-molds/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "k1_ch1_cover_mold_a",
+      "purpose": "CH1 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch1_cover_mold_a.step",
+      "stl": "cad/k1_ch1_cover_mold_a.stl",
+      "sha256_step": "aaa85c73de05190da25878e6fc768538745c61cd699818e279334dc5e54292e0",
+      "sha256_stl": "c0c8988ec0c539c347feba24b686f4e933baa1d41e7f48b88e3533f611dc4c75",
+      "volume_mm3": 11142.984875616903,
+      "bounds_mm": [
+        [
+          -17.276845932006836,
+          -127.27429962158203,
+          -15.140495300292969
+        ],
+        [
+          -1.959623098373413,
+          -91.24784851074219,
+          6.21327543258667
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_cover_mold_b",
+      "purpose": "CH1 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch1_cover_mold_b.step",
+      "stl": "cad/k1_ch1_cover_mold_b.stl",
+      "sha256_step": "256cc73dff81b05d8a26333c191789c7b65a1b80b65a7b23abf6e8898a7300f9",
+      "sha256_stl": "4cae450a1c7159353ef3f00caa9676d73c8f90ea2809915e2c6063e016b3fd4a",
+      "volume_mm3": 11153.415684722757,
+      "bounds_mm": [
+        [
+          -1.959623098373413,
+          -127.27429962158203,
+          -15.140495300292969
+        ],
+        [
+          13.357600212097168,
+          -91.24784851074219,
+          6.21327543258667
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_mold_a",
+      "purpose": "CH2 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_cover_mold_a.step",
+      "stl": "cad/k1_ch2_cover_mold_a.stl",
+      "sha256_step": "32443fabc1842ea296028bb6e32db04d7972734c0a758761bc417fe23d7a4bc4",
+      "sha256_stl": "dcd1b9b4c81fe65002fb56af5420d3310a99cf3c57babf58643350e7ed27a9eb",
+      "volume_mm3": 11642.927005194299,
+      "bounds_mm": [
+        [
+          -23.969999313354492,
+          -98.96897888183594,
+          -15.68387222290039
+        ],
+        [
+          -7.5,
+          -66.84419250488281,
+          7.638136863708496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_cover_mold_b",
+      "purpose": "CH2 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_cover_mold_b.step",
+      "stl": "cad/k1_ch2_cover_mold_b.stl",
+      "sha256_step": "3f361d2d241b692085c121927e7bf47b36dd5d982f7e80d3f04a9984c2794606",
+      "sha256_stl": "f7e1b6ee616def529bb1eefa217950ab9f07836b672374dc168f279012334ad8",
+      "volume_mm3": 11642.711106853161,
+      "bounds_mm": [
+        [
+          -7.5,
+          -98.96897888183594,
+          -15.68387222290039
+        ],
+        [
+          8.970000267028809,
+          -66.84419250488281,
+          7.638136863708496
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_mold_a",
+      "purpose": "CH3 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_cover_mold_a.step",
+      "stl": "cad/k1_ch3_cover_mold_a.stl",
+      "sha256_step": "c6b90a112f34260de777dac04b2623137a368993b18d59ffd3651d6628c44f89",
+      "sha256_stl": "23e2dc917745d275515ba631f9a942130c473bd118cd29345723e42998b61994",
+      "volume_mm3": 14920.45140209659,
+      "bounds_mm": [
+        [
+          -23.969999313354492,
+          -82.45520782470703,
+          -16.083702087402344
+        ],
+        [
+          -7.5,
+          -48.051876068115234,
+          11.50127124786377
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_cover_mold_b",
+      "purpose": "CH3 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_cover_mold_b.step",
+      "stl": "cad/k1_ch3_cover_mold_b.stl",
+      "sha256_step": "e558ebe583a588594428ada55b22f71955dbf24896e269df59a92b4e5718a281",
+      "sha256_stl": "5d81b0330eb639fc6ee167738bd272b21fe21d1aef121725b50b49dcda8d39fc",
+      "volume_mm3": 14920.17032414928,
+      "bounds_mm": [
+        [
+          -7.5,
+          -82.45520782470703,
+          -16.083702087402344
+        ],
+        [
+          8.970000267028809,
+          -48.051876068115234,
+          11.50127124786377
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_mold_a",
+      "purpose": "CH4 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_cover_mold_a.step",
+      "stl": "cad/k1_ch4_cover_mold_a.stl",
+      "sha256_step": "d0c87dae837b89bfa89caa37f49a91cb754901317faf37a9f135823f7676e15a",
+      "sha256_stl": "0e3d47f136a4a087fc90e58a0c5ecb15e461adfd1d531e10f718fdaafd6d43c4",
+      "volume_mm3": 12212.804096365804,
+      "bounds_mm": [
+        [
+          -23.969999313354492,
+          -64.82440185546875,
+          -4.201739311218262
+        ],
+        [
+          -7.5,
+          -32.82662582397461,
+          20.293466567993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_cover_mold_b",
+      "purpose": "CH4 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_cover_mold_b.step",
+      "stl": "cad/k1_ch4_cover_mold_b.stl",
+      "sha256_step": "e2e3c8bd906c8b597b101f49e86fd09ec2928a677db6baf249e3ebf0d4bca83f",
+      "sha256_stl": "3b1b1c06da9696e805e9de0fd4c6dde81257d1b4e5a1e13f9c82428aea34fd42",
+      "volume_mm3": 12212.574490508865,
+      "bounds_mm": [
+        [
+          -7.5,
+          -64.82440185546875,
+          -4.201739311218262
+        ],
+        [
+          8.970000267028809,
+          -32.82662582397461,
+          20.293466567993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_mold_a",
+      "purpose": "CH5 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_cover_mold_a.step",
+      "stl": "cad/k1_ch5_cover_mold_a.stl",
+      "sha256_step": "6392636cae4791c21c8eef9a4e798dff82575e5f9af505b0e13478fcfa40433b",
+      "sha256_stl": "d734c34fc8c45959beae09a2fad6a77dd17499ef8871bea4faf43c93f92ecce4",
+      "volume_mm3": 19507.04469209044,
+      "bounds_mm": [
+        [
+          -23.969999313354492,
+          -49.46712112426758,
+          -16.14020538330078
+        ],
+        [
+          -7.5,
+          -13.609151840209961,
+          18.11874008178711
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_cover_mold_b",
+      "purpose": "CH5 split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_cover_mold_b.step",
+      "stl": "cad/k1_ch5_cover_mold_b.stl",
+      "sha256_step": "3f5b9dec59b41b40c1a7ad24123788f9d212da234375538edc5beb8a09bf42bb",
+      "sha256_stl": "2f8bfd2ac1168d8cae0bfa79148b2644c42c29cd4562bd84adfe64d8361245e5",
+      "volume_mm3": 19506.787355918408,
+      "bounds_mm": [
+        [
+          -7.5,
+          -49.46712112426758,
+          -16.14020538330078
+        ],
+        [
+          8.970000267028809,
+          -13.609151840209961,
+          18.11874008178711
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_mold_a",
+      "purpose": "REF split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ref_cover_mold_a.step",
+      "stl": "cad/k1_ref_cover_mold_a.stl",
+      "sha256_step": "c9eb46a5e1f9c94a2dc6adcf024bb28e6bfa3b5e302c185482d30b4052e13b1f",
+      "sha256_stl": "66e1af092a67ac7776ba6f7fbbe8fdb7435b697887398b36347815e673647568",
+      "volume_mm3": 10431.594002773198,
+      "bounds_mm": [
+        [
+          83.02999877929688,
+          -21.969999313354492,
+          -9.763999938964844
+        ],
+        [
+          100.0,
+          9.970000267028809,
+          10.78600025177002
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ref_cover_mold_b",
+      "purpose": "REF split cover mold with insert pocket and registration",
+      "material": "Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ref_cover_mold_b.step",
+      "stl": "cad/k1_ref_cover_mold_b.stl",
+      "sha256_step": "262c6cf804caa685e7461ade9424c4754ca0ea5525d537965ffe46b9e859f19d",
+      "sha256_stl": "0f377dcd19c0520b4a971ba373cc818c0c839166835d45d678794aac0f00785f",
+      "volume_mm3": 10431.59400277319,
+      "bounds_mm": [
+        [
+          100.0,
+          -21.969999313354492,
+          -9.763999938964844
+        ],
+        [
+          116.97000122070312,
+          9.970000267028809,
+          10.78600025177002
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cases": [
+    {
+      "site": "CH1",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 1.7763568394002505e-15,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 2.1895354514620524e-13,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -1.959623116435049,
+      "bolt_centres_native_yz_mm": [
+        [
+          -122.2742988874,
+          -10.140494895103
+        ],
+        [
+          -122.2742988874,
+          1.2132755516832576
+        ],
+        [
+          -96.2478501061,
+          -10.140494895103
+        ],
+        [
+          -96.2478501061,
+          1.2132755516832576
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -124.2742988874,
+          -4.463609671709872
+        ],
+        [
+          -94.2478501061,
+          -4.463609671709872
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -7.276846464929636,
+            -103.27947194464207,
+            -3.9135932959383095
+          ],
+          "direction": [
+            -1.0,
+            2.615677728969306e-10,
+            -5.211755491210463e-09
+          ],
+          "cover_overlap_mm3": 0.00039999999998962507
+        },
+        {
+          "point": [
+            -0.5186639961049941,
+            -111.81646992034815,
+            -4.3420484234795325
+          ],
+          "direction": [
+            0.929020907851507,
+            -0.36956209174076127,
+            -0.018547590758774504
+          ],
+          "cover_overlap_mm3": 0.00039999999877080885
+        }
+      ]
+    },
+    {
+      "site": "CH2",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -7.5,
+      "bolt_centres_native_yz_mm": [
+        [
+          -93.9689788411306,
+          -10.683872516768
+        ],
+        [
+          -93.9689788411306,
+          2.638137086507199
+        ],
+        [
+          -71.84419230619558,
+          -10.683872516768
+        ],
+        [
+          -71.84419230619558,
+          2.638137086507199
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -95.9689788411306,
+          -4.022867715130401
+        ],
+        [
+          -69.84419230619558,
+          -4.022867715130401
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -13.969999999999999,
+            -86.07501472559457,
+            -2.815294870451078
+          ],
+          "direction": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040017098718635923
+        },
+        {
+          "point": [
+            -1.0300000000000002,
+            -80.20916143256495,
+            -3.461364959983074
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040004022067079105
+        }
+      ]
+    },
+    {
+      "site": "CH3",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -7.5,
+      "bolt_centres_native_yz_mm": [
+        [
+          -77.45520640174,
+          -11.083702394508
+        ],
+        [
+          -77.45520640174,
+          6.501271611707422
+        ],
+        [
+          -53.05187435319826,
+          -11.083702394508
+        ],
+        [
+          -53.05187435319826,
+          6.501271611707422
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -79.45520640174,
+          -2.2912153914002893
+        ],
+        [
+          -51.05187435319826,
+          -2.2912153914002893
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -13.969999999999999,
+            -68.63014107914634,
+            -5.449377768101276
+          ],
+          "direction": [
+            -1.0,
+            -8.072881286218402e-15,
+            -1.5396062026456872e-16
+          ],
+          "cover_overlap_mm3": 0.00040001273911259246
+        },
+        {
+          "point": [
+            -1.0300000000000002,
+            -60.99481970223019,
+            -1.5330872507593662
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040001436870943014
+        }
+      ]
+    },
+    {
+      "site": "CH4",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -7.5,
+      "bolt_centres_native_yz_mm": [
+        [
+          -59.82440441140378,
+          0.7982605477313625
+        ],
+        [
+          -59.82440441140378,
+          15.293466597743
+        ],
+        [
+          -37.82662561654,
+          0.7982605477313625
+        ],
+        [
+          -37.82662561654,
+          15.293466597743
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -61.82440441140378,
+          8.045863572737181
+        ],
+        [
+          -35.82662561654,
+          8.045863572737181
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -13.969999999999999,
+            -45.93501984571529,
+            10.20241278677945
+          ],
+          "direction": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040004696429340406
+        },
+        {
+          "point": [
+            -1.0300000000000002,
+            -52.27970080401678,
+            8.149854996303972
+          ],
+          "direction": [
+            1.0,
+            -3.4199027213754596e-15,
+            -2.145470673260441e-15
+          ],
+          "cover_overlap_mm3": 0.000400054290517117
+        }
+      ]
+    },
+    {
+      "site": "CH5",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": -7.5,
+      "bolt_centres_native_yz_mm": [
+        [
+          -44.467120420593275,
+          -11.140205038384
+        ],
+        [
+          -44.467120420593275,
+          13.118740585928691
+        ],
+        [
+          -18.60915191241903,
+          -11.140205038384
+        ],
+        [
+          -18.60915191241903,
+          13.118740585928691
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -46.467120420593275,
+          0.9892677737723456
+        ],
+        [
+          -16.60915191241903,
+          0.9892677737723456
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            -13.969999999999999,
+            -35.73490148663174,
+            4.761278157906319
+          ],
+          "direction": [
+            -1.0,
+            0.0,
+            -0.0
+          ],
+          "cover_overlap_mm3": 0.0004000149665331957
+        },
+        {
+          "point": [
+            -1.0300000000000002,
+            -29.1707791334683,
+            -3.831840020997495
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.0004000830456866247
+        }
+      ]
+    },
+    {
+      "site": "REF",
+      "checks": [
+        {
+          "a": "left_mold",
+          "b": "right_mold",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "left_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "right_mold",
+          "b": "steel_insert",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "parting_native_x_mm": 100.0,
+      "bolt_centres_native_yz_mm": [
+        [
+          -16.97,
+          -4.764
+        ],
+        [
+          -16.97,
+          5.786
+        ],
+        [
+          4.970000000000001,
+          -4.764
+        ],
+        [
+          4.970000000000001,
+          5.786
+        ]
+      ],
+      "dowel_centres_native_yz_mm": [
+        [
+          -18.97,
+          0.511
+        ],
+        [
+          6.970000000000001,
+          0.511
+        ]
+      ],
+      "suggested_m3_length_mm_min": 40,
+      "dowels": "Two 3 mm \u00d7 8 mm smooth pins; finish and measure the bores for the actual fit",
+      "overflow_channels": [
+        {
+          "point": [
+            93.03,
+            -9.075,
+            0.261
+          ],
+          "direction": [
+            -1.0,
+            -0.0,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040000000000020466
+        },
+        {
+          "point": [
+            106.97,
+            -2.924999999999999,
+            0.261
+          ],
+          "direction": [
+            1.0,
+            8.074349270001116e-15,
+            0.0
+          ],
+          "cover_overlap_mm3": 0.00040000000000020184
+        }
+      ]
+    }
+  ],
+  "source_mechanics_sha256": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+  "input_sha256": {
+    "engineering/designs/capacitive_cover_molds.json": "12fae295cf7788f206289a3176f6d33042ae7bf633353e16b49c6e055b300a56",
+    "engineering/designs/capacitive_cell_mechanics.json": "679b530e7230324593e1b5e0f1585a577823ba6a4c71fe3dfe6ece26ed60e558",
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/report.json": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+    "engineering/scripts/build_capacitive_cover_molds.py": "2e2ab541e8b2a27cdfeac31dc46845220de9a33e0f657417c47bf3274afe0dc0"
+  },
+  "limits": [
+    "Nominal tooling geometry only. Fit actual formed steel, inspect mold alignment and verify cast wall/cover thickness before loading.",
+    "The silicone must be compatible with the actual tool, sealer and release agent. Use the manufacturer's small-scale cure/adhesion test.",
+    "The thin retaining lip has a small demolding undercut; its release and tear behavior require the first casting trial."
+  ],
+  "process": "Compression mold around the formed steel insert. Wet the open cavities with degassed Dragon Skin 10 Slow before closing; excess leaves through the two small foot-level overflow channels. Trim flash outside the pressure face after cure."
+}

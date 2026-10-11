@@ -1,0 +1,242 @@
+id,kind,purpose,material,STEP,STL
+k1_ch0_post_sheet_flat,cast,CH0 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch0_post_sheet_flat.step,cad/k1_ch0_post_sheet_flat.stl
+k1_ch0_post_stencil,fabricate_tool,CH0 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch0_post_stencil.step,cad/k1_ch0_post_stencil.stl
+k1_ch0_backing_spacer,fabricate_tool,CH0 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch0_backing_spacer.step,cad/k1_ch0_backing_spacer.stl
+k1_ch0_spreader_form,fabricate_tool,CH0 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch0_spreader_form.step,cad/k1_ch0_spreader_form.stl
+k1_ch1_post_sheet_flat,cast,CH1 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch1_post_sheet_flat.step,cad/k1_ch1_post_sheet_flat.stl
+k1_ch1_post_stencil,fabricate_tool,CH1 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch1_post_stencil.step,cad/k1_ch1_post_stencil.stl
+k1_ch1_backing_spacer,fabricate_tool,CH1 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch1_backing_spacer.step,cad/k1_ch1_backing_spacer.stl
+k1_ch1_spreader_form,fabricate_tool,CH1 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch1_spreader_form.step,cad/k1_ch1_spreader_form.stl
+k1_ch2_post_sheet_flat,cast,CH2 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch2_post_sheet_flat.step,cad/k1_ch2_post_sheet_flat.stl
+k1_ch2_post_stencil,fabricate_tool,CH2 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch2_post_stencil.step,cad/k1_ch2_post_stencil.stl
+k1_ch2_backing_spacer,fabricate_tool,CH2 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch2_backing_spacer.step,cad/k1_ch2_backing_spacer.stl
+k1_ch2_spreader_form,fabricate_tool,CH2 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch2_spreader_form.step,cad/k1_ch2_spreader_form.stl
+k1_ch3_post_sheet_flat,cast,CH3 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch3_post_sheet_flat.step,cad/k1_ch3_post_sheet_flat.stl
+k1_ch3_post_stencil,fabricate_tool,CH3 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch3_post_stencil.step,cad/k1_ch3_post_stencil.stl
+k1_ch3_backing_spacer,fabricate_tool,CH3 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch3_backing_spacer.step,cad/k1_ch3_backing_spacer.stl
+k1_ch3_spreader_form,fabricate_tool,CH3 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch3_spreader_form.step,cad/k1_ch3_spreader_form.stl
+k1_ch4_post_sheet_flat,cast,CH4 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch4_post_sheet_flat.step,cad/k1_ch4_post_sheet_flat.stl
+k1_ch4_post_stencil,fabricate_tool,CH4 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch4_post_stencil.step,cad/k1_ch4_post_stencil.stl
+k1_ch4_backing_spacer,fabricate_tool,CH4 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch4_backing_spacer.step,cad/k1_ch4_backing_spacer.stl
+k1_ch4_spreader_form,fabricate_tool,CH4 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch4_spreader_form.step,cad/k1_ch4_spreader_form.stl
+k1_ch5_post_sheet_flat,cast,CH5 flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ch5_post_sheet_flat.step,cad/k1_ch5_post_sheet_flat.stl
+k1_ch5_post_stencil,fabricate_tool,CH5 through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ch5_post_stencil.step,cad/k1_ch5_post_stencil.stl
+k1_ch5_backing_spacer,fabricate_tool,CH5 spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ch5_backing_spacer.step,cad/k1_ch5_backing_spacer.stl
+k1_ch5_spreader_form,fabricate_tool,CH5 separate matched form for the metal spreader; springback is not compensated,Rigid forming tool; verify formed curvature before assembly,cad/k1_ch5_spreader_form.step,cad/k1_ch5_spreader_form.stl
+k1_ref_post_sheet_flat,cast,REF flat molded silicone master; form before installed use,"SYLGARD 184, 10:1; process and compression unqualified",cad/k1_ref_post_sheet_flat.step,cad/k1_ref_post_sheet_flat.stl
+k1_ref_post_stencil,fabricate_tool,REF through-hole stencil for the separate silicone post sheet,0.15 mm laser-cut stainless shim; use flat release plates,cad/k1_ref_post_stencil.step,cad/k1_ref_post_stencil.stl
+k1_ref_backing_spacer,fabricate_tool,REF spacer defining the thin silicone base above the post stencil,0.05 mm metal/polyimide shim; verify thickness and cure compatibility,cad/k1_ref_backing_spacer.step,cad/k1_ref_backing_spacer.stl
+k1_ch2_conforming_saddle,fabricate,CH2 complete rigid support from the retained TPU-fit back surface to the flex bond,"PETG prototype; actual fit, bond, stiffness and durability remain untested",cad/k1_ch2_conforming_saddle.step,cad/k1_ch2_conforming_saddle.stl
+k1_ch3_conforming_saddle,fabricate,CH3 complete rigid support from the retained TPU-fit back surface to the flex bond,"PETG prototype; actual fit, bond, stiffness and durability remain untested",cad/k1_ch3_conforming_saddle.step,cad/k1_ch3_conforming_saddle.stl
+k1_ch4_conforming_saddle,fabricate,CH4 complete rigid support from the retained TPU-fit back surface to the flex bond,"PETG prototype; actual fit, bond, stiffness and durability remain untested",cad/k1_ch4_conforming_saddle.step,cad/k1_ch4_conforming_saddle.stl
+k1_ch5_conforming_saddle,fabricate,CH5 complete rigid support from the retained TPU-fit back surface to the flex bond,"PETG prototype; actual fit, bond, stiffness and durability remain untested",cad/k1_ch5_conforming_saddle.step,cad/k1_ch5_conforming_saddle.stl
+k1_ch0_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch0_foil.step,cad/k1_ch0_foil.stl
+k1_ch0_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch0_stiffener.step,cad/k1_ch0_stiffener.stl
+k1_ch0_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch0_stiffener_bond.step,cad/k1_ch0_stiffener_bond.stl
+k1_ch0_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch0_joint_1.step,cad/k1_ch0_joint_1.stl
+k1_ch0_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch0_joint_2.step,cad/k1_ch0_joint_2.stl
+k1_ch1_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch1_foil.step,cad/k1_ch1_foil.stl
+k1_ch1_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch1_stiffener.step,cad/k1_ch1_stiffener.stl
+k1_ch1_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch1_stiffener_bond.step,cad/k1_ch1_stiffener_bond.stl
+k1_ch1_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch1_joint_1.step,cad/k1_ch1_joint_1.stl
+k1_ch1_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch1_joint_2.step,cad/k1_ch1_joint_2.stl
+k1_ch2_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch2_foil.step,cad/k1_ch2_foil.stl
+k1_ch2_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch2_stiffener.step,cad/k1_ch2_stiffener.stl
+k1_ch2_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch2_stiffener_bond.step,cad/k1_ch2_stiffener_bond.stl
+k1_ch2_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch2_joint_1.step,cad/k1_ch2_joint_1.stl
+k1_ch2_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch2_joint_2.step,cad/k1_ch2_joint_2.stl
+k1_ch3_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch3_foil.step,cad/k1_ch3_foil.stl
+k1_ch3_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch3_stiffener.step,cad/k1_ch3_stiffener.stl
+k1_ch3_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch3_stiffener_bond.step,cad/k1_ch3_stiffener_bond.stl
+k1_ch3_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch3_joint_1.step,cad/k1_ch3_joint_1.stl
+k1_ch3_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch3_joint_2.step,cad/k1_ch3_joint_2.stl
+k1_ch4_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch4_foil.step,cad/k1_ch4_foil.stl
+k1_ch4_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch4_stiffener.step,cad/k1_ch4_stiffener.stl
+k1_ch4_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch4_stiffener_bond.step,cad/k1_ch4_stiffener_bond.stl
+k1_ch4_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch4_joint_1.step,cad/k1_ch4_joint_1.stl
+k1_ch4_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch4_joint_2.step,cad/k1_ch4_joint_2.stl
+k1_ch5_foil,reference_only,0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings,Geometry reference; physical fit remains untested,cad/k1_ch5_foil.step,cad/k1_ch5_foil.stl
+k1_ch5_stiffener,reference_only,200 µm polyimide stiffener; separately formed cut geometry remains to be specified,Geometry reference; physical fit remains untested,cad/k1_ch5_stiffener.step,cad/k1_ch5_stiffener.stl
+k1_ch5_stiffener_bond,reference_only,50 µm stiffener bond envelope,Geometry reference; physical fit remains untested,cad/k1_ch5_stiffener_bond.step,cad/k1_ch5_stiffener_bond.stl
+k1_ch5_joint_1,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch5_joint_1.step,cad/k1_ch5_joint_1.stl
+k1_ch5_joint_2,reference_only,"Conservative solder/wire-root envelope, not a printed component",Geometry reference; physical fit remains untested,cad/k1_ch5_joint_2.step,cad/k1_ch5_joint_2.stl
+k1_ch0_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch0_retained_plate.step,cad/k1_ch0_retained_plate.stl
+k1_ch0_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch0_stop_0_bond.step,cad/k1_ch0_stop_0_bond.stl
+k1_ch0_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch0_stop_0.step,cad/k1_ch0_stop_0.stl
+k1_ch0_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch0_stop_1_bond.step,cad/k1_ch0_stop_1_bond.stl
+k1_ch0_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch0_stop_1.step,cad/k1_ch0_stop_1.stl
+k1_ch0_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch0_stop_2_bond.step,cad/k1_ch0_stop_2_bond.stl
+k1_ch0_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch0_stop_2.step,cad/k1_ch0_stop_2.stl
+k1_ch0_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch0_stop_3_bond.step,cad/k1_ch0_stop_3_bond.stl
+k1_ch0_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch0_stop_3.step,cad/k1_ch0_stop_3.stl
+k1_ch0_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch0_vented_cover.step,cad/k1_ch0_vented_cover.stl
+k1_ch0_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch0_cover_bond_0.step,cad/k1_ch0_cover_bond_0.stl
+k1_ch0_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch0_cover_bond_1.step,cad/k1_ch0_cover_bond_1.stl
+k1_ch0_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch0_cover_bond_2.step,cad/k1_ch0_cover_bond_2.stl
+k1_ch0_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch0_cover_bond_3.step,cad/k1_ch0_cover_bond_3.stl
+k1_ch0_cover_bond_4,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch0_cover_bond_4.step,cad/k1_ch0_cover_bond_4.stl
+k1_ch0_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch0_ground_bond_0.step,cad/k1_ch0_ground_bond_0.stl
+k1_ch0_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch0_ground_bond_1.step,cad/k1_ch0_ground_bond_1.stl
+k1_ch1_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch1_retained_plate.step,cad/k1_ch1_retained_plate.stl
+k1_ch1_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch1_stop_0_bond.step,cad/k1_ch1_stop_0_bond.stl
+k1_ch1_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch1_stop_0.step,cad/k1_ch1_stop_0.stl
+k1_ch1_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch1_stop_1_bond.step,cad/k1_ch1_stop_1_bond.stl
+k1_ch1_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch1_stop_1.step,cad/k1_ch1_stop_1.stl
+k1_ch1_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch1_stop_2_bond.step,cad/k1_ch1_stop_2_bond.stl
+k1_ch1_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch1_stop_2.step,cad/k1_ch1_stop_2.stl
+k1_ch1_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch1_stop_3_bond.step,cad/k1_ch1_stop_3_bond.stl
+k1_ch1_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch1_stop_3.step,cad/k1_ch1_stop_3.stl
+k1_ch1_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch1_vented_cover.step,cad/k1_ch1_vented_cover.stl
+k1_ch1_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch1_cover_bond_0.step,cad/k1_ch1_cover_bond_0.stl
+k1_ch1_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch1_cover_bond_1.step,cad/k1_ch1_cover_bond_1.stl
+k1_ch1_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch1_cover_bond_2.step,cad/k1_ch1_cover_bond_2.stl
+k1_ch1_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch1_cover_bond_3.step,cad/k1_ch1_cover_bond_3.stl
+k1_ch1_cover_bond_4,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch1_cover_bond_4.step,cad/k1_ch1_cover_bond_4.stl
+k1_ch1_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch1_ground_bond_0.step,cad/k1_ch1_ground_bond_0.stl
+k1_ch1_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch1_ground_bond_1.step,cad/k1_ch1_ground_bond_1.stl
+k1_ch2_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch2_retained_plate.step,cad/k1_ch2_retained_plate.stl
+k1_ch2_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch2_stop_0_bond.step,cad/k1_ch2_stop_0_bond.stl
+k1_ch2_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch2_stop_0.step,cad/k1_ch2_stop_0.stl
+k1_ch2_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch2_stop_1_bond.step,cad/k1_ch2_stop_1_bond.stl
+k1_ch2_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch2_stop_1.step,cad/k1_ch2_stop_1.stl
+k1_ch2_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch2_stop_2_bond.step,cad/k1_ch2_stop_2_bond.stl
+k1_ch2_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch2_stop_2.step,cad/k1_ch2_stop_2.stl
+k1_ch2_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch2_stop_3_bond.step,cad/k1_ch2_stop_3_bond.stl
+k1_ch2_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch2_stop_3.step,cad/k1_ch2_stop_3.stl
+k1_ch2_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch2_vented_cover.step,cad/k1_ch2_vented_cover.stl
+k1_ch2_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch2_cover_bond_0.step,cad/k1_ch2_cover_bond_0.stl
+k1_ch2_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch2_cover_bond_1.step,cad/k1_ch2_cover_bond_1.stl
+k1_ch2_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch2_cover_bond_2.step,cad/k1_ch2_cover_bond_2.stl
+k1_ch2_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch2_cover_bond_3.step,cad/k1_ch2_cover_bond_3.stl
+k1_ch2_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch2_ground_bond_0.step,cad/k1_ch2_ground_bond_0.stl
+k1_ch2_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch2_ground_bond_1.step,cad/k1_ch2_ground_bond_1.stl
+k1_ch3_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch3_retained_plate.step,cad/k1_ch3_retained_plate.stl
+k1_ch3_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch3_stop_0_bond.step,cad/k1_ch3_stop_0_bond.stl
+k1_ch3_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch3_stop_0.step,cad/k1_ch3_stop_0.stl
+k1_ch3_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch3_stop_1_bond.step,cad/k1_ch3_stop_1_bond.stl
+k1_ch3_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch3_stop_1.step,cad/k1_ch3_stop_1.stl
+k1_ch3_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch3_stop_2_bond.step,cad/k1_ch3_stop_2_bond.stl
+k1_ch3_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch3_stop_2.step,cad/k1_ch3_stop_2.stl
+k1_ch3_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch3_stop_3_bond.step,cad/k1_ch3_stop_3_bond.stl
+k1_ch3_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch3_stop_3.step,cad/k1_ch3_stop_3.stl
+k1_ch3_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch3_vented_cover.step,cad/k1_ch3_vented_cover.stl
+k1_ch3_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch3_cover_bond_0.step,cad/k1_ch3_cover_bond_0.stl
+k1_ch3_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch3_cover_bond_1.step,cad/k1_ch3_cover_bond_1.stl
+k1_ch3_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch3_cover_bond_2.step,cad/k1_ch3_cover_bond_2.stl
+k1_ch3_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch3_cover_bond_3.step,cad/k1_ch3_cover_bond_3.stl
+k1_ch3_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch3_ground_bond_0.step,cad/k1_ch3_ground_bond_0.stl
+k1_ch3_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch3_ground_bond_1.step,cad/k1_ch3_ground_bond_1.stl
+k1_ch4_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch4_retained_plate.step,cad/k1_ch4_retained_plate.stl
+k1_ch4_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch4_stop_0_bond.step,cad/k1_ch4_stop_0_bond.stl
+k1_ch4_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch4_stop_0.step,cad/k1_ch4_stop_0.stl
+k1_ch4_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch4_stop_1_bond.step,cad/k1_ch4_stop_1_bond.stl
+k1_ch4_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch4_stop_1.step,cad/k1_ch4_stop_1.stl
+k1_ch4_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch4_stop_2_bond.step,cad/k1_ch4_stop_2_bond.stl
+k1_ch4_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch4_stop_2.step,cad/k1_ch4_stop_2.stl
+k1_ch4_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch4_stop_3_bond.step,cad/k1_ch4_stop_3_bond.stl
+k1_ch4_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch4_stop_3.step,cad/k1_ch4_stop_3.stl
+k1_ch4_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch4_vented_cover.step,cad/k1_ch4_vented_cover.stl
+k1_ch4_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch4_cover_bond_0.step,cad/k1_ch4_cover_bond_0.stl
+k1_ch4_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch4_cover_bond_1.step,cad/k1_ch4_cover_bond_1.stl
+k1_ch4_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch4_cover_bond_2.step,cad/k1_ch4_cover_bond_2.stl
+k1_ch4_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch4_cover_bond_3.step,cad/k1_ch4_cover_bond_3.stl
+k1_ch4_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch4_ground_bond_0.step,cad/k1_ch4_ground_bond_0.stl
+k1_ch4_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch4_ground_bond_1.step,cad/k1_ch4_ground_bond_1.stl
+k1_ch5_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ch5_retained_plate.step,cad/k1_ch5_retained_plate.stl
+k1_ch5_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch5_stop_0_bond.step,cad/k1_ch5_stop_0_bond.stl
+k1_ch5_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch5_stop_0.step,cad/k1_ch5_stop_0.stl
+k1_ch5_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch5_stop_1_bond.step,cad/k1_ch5_stop_1_bond.stl
+k1_ch5_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch5_stop_1.step,cad/k1_ch5_stop_1.stl
+k1_ch5_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch5_stop_2_bond.step,cad/k1_ch5_stop_2_bond.stl
+k1_ch5_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch5_stop_2.step,cad/k1_ch5_stop_2.stl
+k1_ch5_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ch5_stop_3_bond.step,cad/k1_ch5_stop_3_bond.stl
+k1_ch5_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ch5_stop_3.step,cad/k1_ch5_stop_3.stl
+k1_ch5_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ch5_vented_cover.step,cad/k1_ch5_vented_cover.stl
+k1_ch5_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch5_cover_bond_0.step,cad/k1_ch5_cover_bond_0.stl
+k1_ch5_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch5_cover_bond_1.step,cad/k1_ch5_cover_bond_1.stl
+k1_ch5_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch5_cover_bond_2.step,cad/k1_ch5_cover_bond_2.stl
+k1_ch5_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ch5_cover_bond_3.step,cad/k1_ch5_cover_bond_3.stl
+k1_ch5_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch5_ground_bond_0.step,cad/k1_ch5_ground_bond_0.stl
+k1_ch5_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ch5_ground_bond_1.step,cad/k1_ch5_ground_bond_1.stl
+k1_ref_retained_plate,form_sheet,Metal pressure spreader with room for the vented retainer; nail leading edge preserved,"Annealed 304 stainless, 0.30 mm, formed with the matching tool",cad/k1_ref_retained_plate.step,cad/k1_ref_retained_plate.stl
+k1_ref_stop_0_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ref_stop_0_bond.step,cad/k1_ref_stop_0_bond.stl
+k1_ref_stop_0,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ref_stop_0.step,cad/k1_ref_stop_0.stl
+k1_ref_stop_1_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ref_stop_1_bond.step,cad/k1_ref_stop_1_bond.stl
+k1_ref_stop_1,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ref_stop_1.step,cad/k1_ref_stop_1.stl
+k1_ref_stop_2_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ref_stop_2_bond.step,cad/k1_ref_stop_2_bond.stl
+k1_ref_stop_2,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ref_stop_2.step,cad/k1_ref_stop_2.stl
+k1_ref_stop_3_bond,reference_only,Stop adhesive; nominal thickness is included in the stop stack,3M 467MP transfer adhesive,cad/k1_ref_stop_3_bond.step,cad/k1_ref_stop_3_bond.stl
+k1_ref_stop_3,cut_film,Polyimide overload-stop quadrant; keep the vent gaps open,DuPont Kapton 300HN polyimide,cad/k1_ref_stop_3.step,cad/k1_ref_stop_3.stl
+k1_ref_vented_cover,cast,Soft retainer and wear cover; four lower vents and two separate plate-bond access ports,Smooth-On Dragon Skin 10 Slow,cad/k1_ref_vented_cover.step,cad/k1_ref_vented_cover.stl
+k1_ref_cover_bond_0,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ref_cover_bond_0.step,cad/k1_ref_cover_bond_0.stl
+k1_ref_cover_bond_1,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ref_cover_bond_1.step,cad/k1_ref_cover_bond_1.stl
+k1_ref_cover_bond_2,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ref_cover_bond_2.step,cad/k1_ref_cover_bond_2.stl
+k1_ref_cover_bond_3,reference_only,Local retainer-foot bond; do not bridge the vent channels,Smooth-On Sil-Poxy; qualify the actual silicone-to-polyimide joint on coupons,cad/k1_ref_cover_bond_3.step,cad/k1_ref_cover_bond_3.stl
+k1_ref_ground_bond_0,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ref_ground_bond_0.step,cad/k1_ref_ground_bond_0.stl
+k1_ref_ground_bond_1,reference_only,Separate conductive plate-bond envelope; no connection to the driven shield,MG Chemicals 8331D silver conductive epoxy,cad/k1_ref_ground_bond_1.step,cad/k1_ref_ground_bond_1.stl
+k1_ch2_stiffener_bond_form_lower,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch2_stiffener_bond_form_lower.step,cad/k1_ch2_stiffener_bond_form_lower.stl
+k1_ch2_stiffener_bond_form_upper,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch2_stiffener_bond_form_upper.step,cad/k1_ch2_stiffener_bond_form_upper.stl
+k1_ch3_stiffener_bond_form_lower,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch3_stiffener_bond_form_lower.step,cad/k1_ch3_stiffener_bond_form_lower.stl
+k1_ch3_stiffener_bond_form_upper,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch3_stiffener_bond_form_upper.step,cad/k1_ch3_stiffener_bond_form_upper.stl
+k1_ch4_stiffener_bond_form_lower,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch4_stiffener_bond_form_lower.step,cad/k1_ch4_stiffener_bond_form_lower.stl
+k1_ch4_stiffener_bond_form_upper,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch4_stiffener_bond_form_upper.step,cad/k1_ch4_stiffener_bond_form_upper.stl
+k1_ch5_stiffener_bond_form_lower,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch5_stiffener_bond_form_lower.step,cad/k1_ch5_stiffener_bond_form_lower.stl
+k1_ch5_stiffener_bond_form_upper,fabricate_tool,Curved form for bonding the terminal stiffener without flattening the FPC,Machined smooth polymer or finished precision print; verify adhesive compatibility,cad/k1_ch5_stiffener_bond_form_upper.step,cad/k1_ch5_stiffener_bond_form_upper.stl
+k1_bank_case,print,bank case,PETG or machined insulating polymer; deburr cable ports,cad/k1_bank_case.step,cad/k1_bank_case.stl
+k1_bank_lid,print,bank lid,PETG or machined insulating polymer; deburr cable ports,cad/k1_bank_lid.step,cad/k1_bank_lid.stl
+k1_reference_support,print,reference support,PETG or machined insulating polymer; deburr cable ports,cad/k1_reference_support.step,cad/k1_reference_support.stl
+k1_reference_mount_bond,reference_only,reference mount bond,50 µm insulating adhesive; qualify adhesion,cad/k1_reference_mount_bond.step,cad/k1_reference_mount_bond.stl
+k1_pcb_envelope,reference_only,pcb envelope,1 mm checked PCB reference,cad/k1_pcb_envelope.step,cad/k1_pcb_envelope.stl
+k1_reference_foil,reference_only,reference foil,Placed source reference CAD,cad/k1_reference_foil.step,cad/k1_reference_foil.stl
+k1_reference_stiffener,reference_only,reference stiffener,Placed source reference CAD,cad/k1_reference_stiffener.step,cad/k1_reference_stiffener.stl
+k1_reference_stiffener_bond,reference_only,reference stiffener bond,Placed source reference CAD,cad/k1_reference_stiffener_bond.step,cad/k1_reference_stiffener_bond.stl
+k1_reference_retained_plate,reference_only,reference retained plate,Placed source reference CAD,cad/k1_reference_retained_plate.step,cad/k1_reference_retained_plate.stl
+k1_reference_stop_0_bond,reference_only,reference stop 0 bond,Placed source reference CAD,cad/k1_reference_stop_0_bond.step,cad/k1_reference_stop_0_bond.stl
+k1_reference_stop_0,reference_only,reference stop 0,Placed source reference CAD,cad/k1_reference_stop_0.step,cad/k1_reference_stop_0.stl
+k1_reference_stop_1_bond,reference_only,reference stop 1 bond,Placed source reference CAD,cad/k1_reference_stop_1_bond.step,cad/k1_reference_stop_1_bond.stl
+k1_reference_stop_1,reference_only,reference stop 1,Placed source reference CAD,cad/k1_reference_stop_1.step,cad/k1_reference_stop_1.stl
+k1_reference_stop_2_bond,reference_only,reference stop 2 bond,Placed source reference CAD,cad/k1_reference_stop_2_bond.step,cad/k1_reference_stop_2_bond.stl
+k1_reference_stop_2,reference_only,reference stop 2,Placed source reference CAD,cad/k1_reference_stop_2.step,cad/k1_reference_stop_2.stl
+k1_reference_stop_3_bond,reference_only,reference stop 3 bond,Placed source reference CAD,cad/k1_reference_stop_3_bond.step,cad/k1_reference_stop_3_bond.stl
+k1_reference_stop_3,reference_only,reference stop 3,Placed source reference CAD,cad/k1_reference_stop_3.step,cad/k1_reference_stop_3.stl
+k1_reference_vented_cover,reference_only,reference vented cover,Placed source reference CAD,cad/k1_reference_vented_cover.step,cad/k1_reference_vented_cover.stl
+k1_reference_cover_bond_0,reference_only,reference cover bond 0,Placed source reference CAD,cad/k1_reference_cover_bond_0.step,cad/k1_reference_cover_bond_0.stl
+k1_reference_cover_bond_1,reference_only,reference cover bond 1,Placed source reference CAD,cad/k1_reference_cover_bond_1.step,cad/k1_reference_cover_bond_1.stl
+k1_reference_cover_bond_2,reference_only,reference cover bond 2,Placed source reference CAD,cad/k1_reference_cover_bond_2.step,cad/k1_reference_cover_bond_2.stl
+k1_reference_cover_bond_3,reference_only,reference cover bond 3,Placed source reference CAD,cad/k1_reference_cover_bond_3.step,cad/k1_reference_cover_bond_3.stl
+k1_reference_ground_bond_0,reference_only,reference ground bond 0,Placed source reference CAD,cad/k1_reference_ground_bond_0.step,cad/k1_reference_ground_bond_0.stl
+k1_reference_ground_bond_1,reference_only,reference ground bond 1,Placed source reference CAD,cad/k1_reference_ground_bond_1.step,cad/k1_reference_ground_bond_1.stl
+k1_reference_joint_1,reference_only,reference joint 1,Placed source reference CAD,cad/k1_reference_joint_1.step,cad/k1_reference_joint_1.stl
+k1_reference_joint_2,reference_only,reference joint 2,Placed source reference CAD,cad/k1_reference_joint_2.step,cad/k1_reference_joint_2.stl
+k1_component_U1,reference_only,component U1,Conservative component clearance envelope,cad/k1_component_U1.step,cad/k1_component_U1.stl
+k1_component_U2,reference_only,component U2,Conservative component clearance envelope,cad/k1_component_U2.step,cad/k1_component_U2.stl
+k1_component_CF1,reference_only,component CF1,Conservative component clearance envelope,cad/k1_component_CF1.step,cad/k1_component_CF1.stl
+k1_component_CF2,reference_only,component CF2,Conservative component clearance envelope,cad/k1_component_CF2.step,cad/k1_component_CF2.stl
+k1_component_RF,reference_only,component RF,Conservative component clearance envelope,cad/k1_component_RF.step,cad/k1_component_RF.stl
+k1_component_CD,reference_only,component CD,Conservative component clearance envelope,cad/k1_component_CD.step,cad/k1_component_CD.stl
+k1_component_CB,reference_only,component CB,Conservative component clearance envelope,cad/k1_component_CB.step,cad/k1_component_CB.stl
+k1_component_RSDA,reference_only,component RSDA,Conservative component clearance envelope,cad/k1_component_RSDA.step,cad/k1_component_RSDA.stl
+k1_component_RSCL,reference_only,component RSCL,Conservative component clearance envelope,cad/k1_component_RSCL.step,cad/k1_component_RSCL.stl
+k1_component_RP0,reference_only,component RP0,Conservative component clearance envelope,cad/k1_component_RP0.step,cad/k1_component_RP0.stl
+k1_component_RI0,reference_only,component RI0,Conservative component clearance envelope,cad/k1_component_RI0.step,cad/k1_component_RI0.stl
+k1_component_CI0,reference_only,component CI0,Conservative component clearance envelope,cad/k1_component_CI0.step,cad/k1_component_CI0.stl
+k1_component_RP1,reference_only,component RP1,Conservative component clearance envelope,cad/k1_component_RP1.step,cad/k1_component_RP1.stl
+k1_component_RI1,reference_only,component RI1,Conservative component clearance envelope,cad/k1_component_RI1.step,cad/k1_component_RI1.stl
+k1_component_CI1,reference_only,component CI1,Conservative component clearance envelope,cad/k1_component_CI1.step,cad/k1_component_CI1.stl
+k1_component_RP2,reference_only,component RP2,Conservative component clearance envelope,cad/k1_component_RP2.step,cad/k1_component_RP2.stl
+k1_component_RI2,reference_only,component RI2,Conservative component clearance envelope,cad/k1_component_RI2.step,cad/k1_component_RI2.stl
+k1_component_CI2,reference_only,component CI2,Conservative component clearance envelope,cad/k1_component_CI2.step,cad/k1_component_CI2.stl
+k1_ch0_cover_mold_a,fabricate_tool,CH0 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch0_cover_mold_a.step,cad/k1_ch0_cover_mold_a.stl
+k1_ch0_cover_mold_b,fabricate_tool,CH0 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch0_cover_mold_b.step,cad/k1_ch0_cover_mold_b.stl
+k1_ch1_cover_mold_a,fabricate_tool,CH1 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch1_cover_mold_a.step,cad/k1_ch1_cover_mold_a.stl
+k1_ch1_cover_mold_b,fabricate_tool,CH1 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch1_cover_mold_b.step,cad/k1_ch1_cover_mold_b.stl
+k1_ch2_cover_mold_a,fabricate_tool,CH2 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch2_cover_mold_a.step,cad/k1_ch2_cover_mold_a.stl
+k1_ch2_cover_mold_b,fabricate_tool,CH2 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch2_cover_mold_b.step,cad/k1_ch2_cover_mold_b.stl
+k1_ch3_cover_mold_a,fabricate_tool,CH3 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch3_cover_mold_a.step,cad/k1_ch3_cover_mold_a.stl
+k1_ch3_cover_mold_b,fabricate_tool,CH3 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch3_cover_mold_b.step,cad/k1_ch3_cover_mold_b.stl
+k1_ch4_cover_mold_a,fabricate_tool,CH4 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch4_cover_mold_a.step,cad/k1_ch4_cover_mold_a.stl
+k1_ch4_cover_mold_b,fabricate_tool,CH4 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch4_cover_mold_b.step,cad/k1_ch4_cover_mold_b.stl
+k1_ch5_cover_mold_a,fabricate_tool,CH5 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch5_cover_mold_a.step,cad/k1_ch5_cover_mold_a.stl
+k1_ch5_cover_mold_b,fabricate_tool,CH5 split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ch5_cover_mold_b.step,cad/k1_ch5_cover_mold_b.stl
+k1_ref_cover_mold_a,fabricate_tool,REF split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ref_cover_mold_a.step,cad/k1_ref_cover_mold_a.stl
+k1_ref_cover_mold_b,fabricate_tool,REF split cover mold with insert pocket and registration,Machined tooling or a validated precision printed/sealed tool; ordinary coarse FDM finish is not sufficient evidence for the 0.10 mm cover target.,cad/k1_ref_cover_mold_b.step,cad/k1_ref_cover_mold_b.stl

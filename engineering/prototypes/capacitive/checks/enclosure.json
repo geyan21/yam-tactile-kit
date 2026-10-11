@@ -1,0 +1,5370 @@
+{
+  "schema": "yam-k1-enclosure/1",
+  "parts": [
+    {
+      "id": "k1_bank_case",
+      "purpose": "bank case",
+      "material": "PETG or machined insulating polymer; deburr cable ports",
+      "kind": "print",
+      "step": "cad/k1_bank_case.step",
+      "stl": "cad/k1_bank_case.stl",
+      "sha256_step": "97ab4b789481587fde3001a808887c719e34c5b31bc349558b2bcd43d4d06c53",
+      "sha256_stl": "2c6e26368d6aba93e05a460f6f629365ba8538579ccedb66fb64e2c22a158701",
+      "volume_mm3": 11986.677796597769,
+      "bounds_mm": [
+        [
+          -8.0,
+          0.0,
+          0.0
+        ],
+        [
+          60.0,
+          48.0,
+          18.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_bank_lid",
+      "purpose": "bank lid",
+      "material": "PETG or machined insulating polymer; deburr cable ports",
+      "kind": "print",
+      "step": "cad/k1_bank_lid.step",
+      "stl": "cad/k1_bank_lid.stl",
+      "sha256_step": "67ac5e81b7384c2903b9d0aa12c06627b73798a6026ee52d20ec86f97fab47f7",
+      "sha256_stl": "f017d93c2dda3a0cc68972e8816099467c8772ee89144068e66aecb594b677e7",
+      "volume_mm3": 4961.589383113251,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          18.0
+        ],
+        [
+          52.0,
+          48.0,
+          20.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_support",
+      "purpose": "reference support",
+      "material": "PETG or machined insulating polymer; deburr cable ports",
+      "kind": "print",
+      "step": "cad/k1_reference_support.step",
+      "stl": "cad/k1_reference_support.stl",
+      "sha256_step": "34f947ab293e320672a0e7b5c3a40b0132250f8655ef0215b0be2927f2ff1d82",
+      "sha256_stl": "0bf6de1d0527b925dbbc26440e80b8a9610a01af4cde197583edc7ee76e554b3",
+      "volume_mm3": 84.0,
+      "bounds_mm": [
+        [
+          29.5,
+          10.699999809265137,
+          6.0
+        ],
+        [
+          43.5,
+          22.700000762939453,
+          6.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_mount_bond",
+      "purpose": "reference mount bond",
+      "material": "50 \u00b5m insulating adhesive; qualify adhesion",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_mount_bond.step",
+      "stl": "cad/k1_reference_mount_bond.stl",
+      "sha256_step": "9355c3451b2634a645abd3799cc060f8a2f2b59d682b122aef7741961946a9a4",
+      "sha256_stl": "01494e0acc8a3e24a4a8d800477a40af08ea41d5a474f5599317bd73b9f79493",
+      "volume_mm3": 8.39999999999997,
+      "bounds_mm": [
+        [
+          29.5,
+          10.699999809265137,
+          6.5
+        ],
+        [
+          43.5,
+          22.700000762939453,
+          6.550000190734863
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_pcb_envelope",
+      "purpose": "pcb envelope",
+      "material": "1 mm checked PCB reference",
+      "kind": "reference_only",
+      "step": "cad/k1_pcb_envelope.step",
+      "stl": "cad/k1_pcb_envelope.stl",
+      "sha256_step": "4873436c624cae1e3fe8a752430571b8ff1b634d4c37a4b81152d2533cdd1c70",
+      "sha256_stl": "6cf6390449e261bf2c8024781750823dea8c778748caa60e4f2c3d34325870e4",
+      "volume_mm3": 1580.7946915566254,
+      "bounds_mm": [
+        [
+          5.0,
+          5.0,
+          5.0
+        ],
+        [
+          47.0,
+          43.0,
+          6.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_foil",
+      "purpose": "reference foil",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_foil.step",
+      "stl": "cad/k1_reference_foil.stl",
+      "sha256_step": "325534e3e84bb4f0125741cb67f3f93f0135e0912552ac8fa11eae6bdb60b289",
+      "sha256_stl": "557dcbb428a1f414fb1e036a4cdffab2272b3252aff02230ab4228a909d24d85",
+      "volume_mm3": 33.03359999999999,
+      "bounds_mm": [
+        [
+          29.5,
+          10.699999809265137,
+          6.550000190734863
+        ],
+        [
+          43.5,
+          25.700000762939453,
+          6.736000061035156
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stiffener",
+      "purpose": "reference stiffener",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stiffener.step",
+      "stl": "cad/k1_reference_stiffener.stl",
+      "sha256_step": "b78d905793158a7fa029456996c818b5acc1543520da6cad57e6b0497fa6e350",
+      "sha256_stl": "31b774fb3f31311afc2d9e96ca1e47df30023bd229fd4df99da6444ad6b0ea7c",
+      "volume_mm3": 1.9199999999999935,
+      "bounds_mm": [
+        [
+          34.900001525878906,
+          22.700000762939453,
+          6.300000190734863
+        ],
+        [
+          38.099998474121094,
+          25.700000762939453,
+          6.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stiffener_bond",
+      "purpose": "reference stiffener bond",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stiffener_bond.step",
+      "stl": "cad/k1_reference_stiffener_bond.stl",
+      "sha256_step": "945c898438fa4d564cfaa297be9fd595bdb39a64e38cfaa1da760fb897283372",
+      "sha256_stl": "9a09981a2be0be22d0c216392cc17ce283491fa85764824989bfb6e3c0905937",
+      "volume_mm3": 0.47999999999999765,
+      "bounds_mm": [
+        [
+          34.900001525878906,
+          22.700000762939453,
+          6.5
+        ],
+        [
+          38.099998474121094,
+          25.700000762939453,
+          6.550000190734863
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_retained_plate",
+      "purpose": "reference retained plate",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_retained_plate.step",
+      "stl": "cad/k1_reference_retained_plate.stl",
+      "sha256_step": "e7d04fdc2392e66ef7f5d75f6a548b1286473a829144c47c26d5268f0d4451cf",
+      "sha256_stl": "6b01ed845cac8b709914dc80594f00af5afe25b5dd8318671bdf1b4d9faf900c",
+      "volume_mm3": 46.57499999999999,
+      "bounds_mm": [
+        [
+          29.75,
+          10.949999809265137,
+          6.935999870300293
+        ],
+        [
+          43.25,
+          22.450000762939453,
+          7.236000061035156
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_0_bond",
+      "purpose": "reference stop 0 bond",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_0_bond.step",
+      "stl": "cad/k1_reference_stop_0_bond.stl",
+      "sha256_step": "0acfbe9345056a14ae91540f7115283a598bf36546688c8b6538689238018a54",
+      "sha256_stl": "4de1d1dde4714172d8a5517ac13fa8962c5de3fa5b9207f0b38e632052d57cba",
+      "volume_mm3": 0.2774999999999995,
+      "bounds_mm": [
+        [
+          36.79999923706055,
+          11.100000381469727,
+          6.736000061035156
+        ],
+        [
+          43.099998474121094,
+          16.399999618530273,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_0",
+      "purpose": "reference stop 0",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_0.step",
+      "stl": "cad/k1_reference_stop_0.stl",
+      "sha256_step": "b74e2049c583b10b4fd29a425a92a68ec69af6e3dcdf05804545491674375535",
+      "sha256_stl": "ae56ba808db0d2fab72a48fafe4ba9825510bd0bfabdd5653ee2500e4e0f5068",
+      "volume_mm3": 0.4229099999999999,
+      "bounds_mm": [
+        [
+          36.79999923706055,
+          11.100000381469727,
+          6.785999774932861
+        ],
+        [
+          43.099998474121094,
+          16.399999618530273,
+          6.862199783325195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_1_bond",
+      "purpose": "reference stop 1 bond",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_1_bond.step",
+      "stl": "cad/k1_reference_stop_1_bond.stl",
+      "sha256_step": "e48a034240dfbb45b1291678a16c5cc9ded81740811ae0f699502ec06828ad95",
+      "sha256_stl": "1303b7ec7b9fcc601da2cf305f944a28a3ca8dfc4369e6b4f2fa9b7eaee12b85",
+      "volume_mm3": 0.2774999999999995,
+      "bounds_mm": [
+        [
+          36.79999923706055,
+          17.0,
+          6.736000061035156
+        ],
+        [
+          43.099998474121094,
+          22.299999237060547,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_1",
+      "purpose": "reference stop 1",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_1.step",
+      "stl": "cad/k1_reference_stop_1.stl",
+      "sha256_step": "05ea05932bc62a91e8144d4c1e03f6686d937f275c1c07a2289292c0892d3b26",
+      "sha256_stl": "4fee528eed6df0ee89834deaad17884f2607d6f3bffa85864a2d905af751ddcb",
+      "volume_mm3": 0.42291,
+      "bounds_mm": [
+        [
+          36.79999923706055,
+          17.0,
+          6.785999774932861
+        ],
+        [
+          43.099998474121094,
+          22.299999237060547,
+          6.862199783325195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_2_bond",
+      "purpose": "reference stop 2 bond",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_2_bond.step",
+      "stl": "cad/k1_reference_stop_2_bond.stl",
+      "sha256_step": "531cb9207cf4375994b84fc3e7d26a7bf099eddd4496383d591523d00a0fae42",
+      "sha256_stl": "b503b2902ca7ed09317ffeb19468de556ec60e4e8f635527c6955143862afa95",
+      "volume_mm3": 0.2774999999999995,
+      "bounds_mm": [
+        [
+          29.899999618530273,
+          17.0,
+          6.736000061035156
+        ],
+        [
+          36.20000076293945,
+          22.299999237060547,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_2",
+      "purpose": "reference stop 2",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_2.step",
+      "stl": "cad/k1_reference_stop_2.stl",
+      "sha256_step": "b51760d048e605608d4e34ca267aaff156ad57c3b3fac17191bd0dd6fdcda8a0",
+      "sha256_stl": "73a7e8fb876848efff158a86e44e1be06ec69138892ba2bd604d7d2ae76c1bc9",
+      "volume_mm3": 0.42290999999999984,
+      "bounds_mm": [
+        [
+          29.899999618530273,
+          17.0,
+          6.785999774932861
+        ],
+        [
+          36.20000076293945,
+          22.299999237060547,
+          6.862199783325195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_3_bond",
+      "purpose": "reference stop 3 bond",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_3_bond.step",
+      "stl": "cad/k1_reference_stop_3_bond.stl",
+      "sha256_step": "91494eb8a83b9758ca662fe6b2f6c52a24fa945ec5cd8a9bcb3989abe2c5d89b",
+      "sha256_stl": "56595c60d3ff472ab0f62e42248eafdafcbba0cf1dc5a43313cc5d3eaf315fef",
+      "volume_mm3": 0.2774999999999995,
+      "bounds_mm": [
+        [
+          29.899999618530273,
+          11.100000381469727,
+          6.736000061035156
+        ],
+        [
+          36.20000076293945,
+          16.399999618530273,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_stop_3",
+      "purpose": "reference stop 3",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_stop_3.step",
+      "stl": "cad/k1_reference_stop_3.stl",
+      "sha256_step": "e96ced97276695aac472213170df85948e4eddeaac1678c2ab11d37435feee22",
+      "sha256_stl": "e5c7bb23e404447c294b6970aadb8462d046a3b23b3c762a813448e5c90f3a86",
+      "volume_mm3": 0.42290999999999995,
+      "bounds_mm": [
+        [
+          29.899999618530273,
+          11.100000381469727,
+          6.785999774932861
+        ],
+        [
+          36.20000076293945,
+          16.399999618530273,
+          6.862199783325195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_vented_cover",
+      "purpose": "reference vented cover",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_vented_cover.step",
+      "stl": "cad/k1_reference_vented_cover.stl",
+      "sha256_step": "00493061e028db239012cac403a576e60223d532a4a3c4ac30078c3fcd818c65",
+      "sha256_stl": "677a8eae4bd324feac5323f5f1478888b2018f6184e6863cd32f23deb23deb89",
+      "volume_mm3": 18.52927999999993,
+      "bounds_mm": [
+        [
+          29.530000686645508,
+          10.729999542236328,
+          6.785999774932861
+        ],
+        [
+          43.470001220703125,
+          22.670000076293945,
+          7.335999965667725
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_cover_bond_0",
+      "purpose": "reference cover bond 0",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_cover_bond_0.step",
+      "stl": "cad/k1_reference_cover_bond_0.stl",
+      "sha256_step": "d5233ae675a96dc6563c28d543ca8f431dbfcc2619ebdfde572de94031314653",
+      "sha256_stl": "7903524fc98e53e80ed2b715d227abe174a34388992a102e42bb8bc13e4d443a",
+      "volume_mm3": 0.13111999999999943,
+      "bounds_mm": [
+        [
+          36.900001525878906,
+          10.729999542236328,
+          6.736000061035156
+        ],
+        [
+          43.470001220703125,
+          16.299999237060547,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_cover_bond_1",
+      "purpose": "reference cover bond 1",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_cover_bond_1.step",
+      "stl": "cad/k1_reference_cover_bond_1.stl",
+      "sha256_step": "b091764535430528f7bfd395ba896cd769ee919d18046b66748c97c25086ff99",
+      "sha256_stl": "e433b6fdf2eda5d8a722a7cd983496ea9c9db7a94ad5ef7590bf7d8c7ccf3605",
+      "volume_mm3": 0.13111999999999957,
+      "bounds_mm": [
+        [
+          36.900001525878906,
+          17.100000381469727,
+          6.736000061035156
+        ],
+        [
+          43.470001220703125,
+          22.670000076293945,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_cover_bond_2",
+      "purpose": "reference cover bond 2",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_cover_bond_2.step",
+      "stl": "cad/k1_reference_cover_bond_2.stl",
+      "sha256_step": "4d1bb3ae6e5aa906109e790b5b8ab205b0599c5d74e31c421f2d0db010245a97",
+      "sha256_stl": "e7fd38219fb92480fba00664d726e5569775866960598fd929c1e6719ccc4dbe",
+      "volume_mm3": 0.13112000000000007,
+      "bounds_mm": [
+        [
+          29.530000686645508,
+          17.100000381469727,
+          6.736000061035156
+        ],
+        [
+          36.099998474121094,
+          22.670000076293945,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_cover_bond_3",
+      "purpose": "reference cover bond 3",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_cover_bond_3.step",
+      "stl": "cad/k1_reference_cover_bond_3.stl",
+      "sha256_step": "7221ddfa1d06cf811c1cdaf2c06113277c967fbcfd30e1b5c57fa69e4362d8e5",
+      "sha256_stl": "f3b631a6870d47d8b2f460db6bc7c1c1dc5acd784dbdf1fb37dd19fbfcac501c",
+      "volume_mm3": 0.13111999999999935,
+      "bounds_mm": [
+        [
+          29.530000686645508,
+          10.729999542236328,
+          6.736000061035156
+        ],
+        [
+          36.099998474121094,
+          16.299999237060547,
+          6.785999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_ground_bond_0",
+      "purpose": "reference ground bond 0",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_ground_bond_0.step",
+      "stl": "cad/k1_reference_ground_bond_0.stl",
+      "sha256_step": "10139e86f3bba9c14d81851467243de23aa7f2d0ee8dbebf280835a20f3fb4eb",
+      "sha256_stl": "4b2899547dca415b03df2941368620f3b8f39897942f9f6515c535462e7d5d60",
+      "volume_mm3": 0.2800000000000005,
+      "bounds_mm": [
+        [
+          38.5,
+          22.450000762939453,
+          6.886000156402588
+        ],
+        [
+          40.5,
+          22.799999237060547,
+          7.285999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_ground_bond_1",
+      "purpose": "reference ground bond 1",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_ground_bond_1.step",
+      "stl": "cad/k1_reference_ground_bond_1.stl",
+      "sha256_step": "3f4229c4a166af860135f8cfe4dcc6b204bf6c3a8ed92f92073a6c5bc279ab34",
+      "sha256_stl": "3fc515d215f20a2daa5645aa1d3a617d63637716112eb418eec3d59e72ccd7a5",
+      "volume_mm3": 0.2800000000000005,
+      "bounds_mm": [
+        [
+          32.5,
+          22.450000762939453,
+          6.886000156402588
+        ],
+        [
+          34.5,
+          22.799999237060547,
+          7.285999774932861
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_joint_1",
+      "purpose": "reference joint 1",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_joint_1.step",
+      "stl": "cad/k1_reference_joint_1.stl",
+      "sha256_step": "348b9d82eab98f31a00a6e8c8a5125fec85ba82b9de4c8b5b71b881d97230b0c",
+      "sha256_stl": "e82ee743d750512ad609f88014345edb9cdcf96dce32df80cf0a4b4a5d394453",
+      "volume_mm3": 2.0160000000000067,
+      "bounds_mm": [
+        [
+          36.54999923706055,
+          22.899999618530273,
+          6.736000061035156
+        ],
+        [
+          37.95000076293945,
+          25.299999237060547,
+          7.335999965667725
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_reference_joint_2",
+      "purpose": "reference joint 2",
+      "material": "Placed source reference CAD",
+      "kind": "reference_only",
+      "step": "cad/k1_reference_joint_2.step",
+      "stl": "cad/k1_reference_joint_2.stl",
+      "sha256_step": "a026c527b1a0295b7dcd7772b2b4d4b28147bd6a623737f90bed98a268c13d53",
+      "sha256_stl": "22834748655ddf87808ca1dcf758b0cc330df9af49f5071b1aa05d16c444ff15",
+      "volume_mm3": 2.0160000000000067,
+      "bounds_mm": [
+        [
+          35.04999923706055,
+          22.899999618530273,
+          6.736000061035156
+        ],
+        [
+          36.45000076293945,
+          25.299999237060547,
+          7.335999965667725
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_U1",
+      "purpose": "component U1",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_U1.step",
+      "stl": "cad/k1_component_U1.stl",
+      "sha256_step": "14c97422988ddc04f9c5e04254c77c82d4d4bcd3792621bb66557b7d456bde87",
+      "sha256_stl": "17fd9b9208972ec71d3f72f423517db3c50191aba59b40c7d90ac0c28b75a136",
+      "volume_mm3": 20.591999999999995,
+      "bounds_mm": [
+        [
+          20.399999618530273,
+          20.350000381469727,
+          6.0
+        ],
+        [
+          25.600000381469727,
+          23.649999618530273,
+          7.199999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_U2",
+      "purpose": "component U2",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_U2.step",
+      "stl": "cad/k1_component_U2.stl",
+      "sha256_step": "91c929d95c01b8664a5a55af67fdfe2c0aecc02431c823be0e9fc962a57ca922",
+      "sha256_stl": "cc0e8f8fc077cda84489878fffd1e28e1e49c7c4885daf765e55d4f16cab01ef",
+      "volume_mm3": 20.591999999999995,
+      "bounds_mm": [
+        [
+          29.399999618530273,
+          32.349998474121094,
+          6.0
+        ],
+        [
+          34.599998474121094,
+          35.650001525878906,
+          7.199999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CF1",
+      "purpose": "component CF1",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CF1.step",
+      "stl": "cad/k1_component_CF1.stl",
+      "sha256_step": "f8a8806d3ca7c75994fcf8b393534c6371ab29d46925fc3718e2b3021bbf073a",
+      "sha256_stl": "095e4208130409d7cfc2ffea6419d4863d1e6b3002e68c3cbd70dcce86c7ac9a",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          26.700000762939453,
+          21.350000381469727,
+          6.0
+        ],
+        [
+          28.899999618530273,
+          22.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CF2",
+      "purpose": "component CF2",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CF2.step",
+      "stl": "cad/k1_component_CF2.stl",
+      "sha256_step": "20a40e4bc9587b193042878dd2a70414fcb5eedf9d22a744fe6e5938abbe549f",
+      "sha256_stl": "3564a10190c8902b49367b5163d356977c63fde8f9593ab06bd637643d6154cd",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          26.200000762939453,
+          18.350000381469727,
+          6.0
+        ],
+        [
+          28.399999618530273,
+          19.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RF",
+      "purpose": "component RF",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RF.step",
+      "stl": "cad/k1_component_RF.stl",
+      "sha256_step": "80596f54fa3c52f7b5203611bfd2d62d84773009013dd291f28fecb8422c89d9",
+      "sha256_stl": "bc505d0a590dadd669171c3fa6e9963836a36a3fc797e45ab50118a69f4c021c",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          26.200000762939453,
+          24.350000381469727,
+          6.0
+        ],
+        [
+          28.399999618530273,
+          25.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CD",
+      "purpose": "component CD",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CD.step",
+      "stl": "cad/k1_component_CD.stl",
+      "sha256_step": "75ce47cd0084523115094cd4dfc59042029db115938706c5a428667981be2da0",
+      "sha256_stl": "cccc6c6e4d9a0476b13918de0dea01759207b3e79cc5d1f7cde833630ec1dd14",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          35.900001525878906,
+          32.849998474121094,
+          6.0
+        ],
+        [
+          38.099998474121094,
+          34.150001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CB",
+      "purpose": "component CB",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CB.step",
+      "stl": "cad/k1_component_CB.stl",
+      "sha256_step": "758657795cbaa6f59913ab560857c4221c5f5f1bc91693b520acf49eecb14ba8",
+      "sha256_stl": "6003b0781003be2ed634c88e4477e32691755178456ee5366211c5c9352706f8",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          23.399999618530273,
+          31.350000381469727,
+          6.0
+        ],
+        [
+          25.600000381469727,
+          32.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RSDA",
+      "purpose": "component RSDA",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RSDA.step",
+      "stl": "cad/k1_component_RSDA.stl",
+      "sha256_step": "c4846407c2887620e3c9ebbfb8d5132b8aeee8349080f5b639e580f976d23355",
+      "sha256_stl": "482e53f77f7178d5e42900bcf281bfa4309708584d49e30c3d191932c6c7dde3",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          25.899999618530273,
+          28.350000381469727,
+          6.0
+        ],
+        [
+          28.100000381469727,
+          29.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RSCL",
+      "purpose": "component RSCL",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RSCL.step",
+      "stl": "cad/k1_component_RSCL.stl",
+      "sha256_step": "99a46c2a2521870c620966bb0acdeab6a54720e5de12e8b3b877d1773fb2e70c",
+      "sha256_stl": "24b957313e9a6da89ca2da030f8ba4bda574336cd1212e00d02b78b39512479d",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          29.899999618530273,
+          28.350000381469727,
+          6.0
+        ],
+        [
+          32.099998474121094,
+          29.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RP0",
+      "purpose": "component RP0",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RP0.step",
+      "stl": "cad/k1_component_RP0.stl",
+      "sha256_step": "e5f32c3ae21627beec41a95c9bb77ed5cdbeb09541658a8599b721f40ec9ec46",
+      "sha256_stl": "e39c56b80f9164bc080439d4a4b0e6b7e6b8534a31bfef1d2528269f9a13ad88",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          19.899999618530273,
+          36.349998474121094,
+          6.0
+        ],
+        [
+          22.100000381469727,
+          37.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RI0",
+      "purpose": "component RI0",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RI0.step",
+      "stl": "cad/k1_component_RI0.stl",
+      "sha256_step": "1ef1397f472d80a4d42d008b4655f2a88facd3a76731bca698a861bcdb4fef6d",
+      "sha256_stl": "f86b7a9ce922f796c5ea49c014307804b55b00ef17672a34524ab27375c99ae3",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          23.899999618530273,
+          36.349998474121094,
+          6.0
+        ],
+        [
+          26.100000381469727,
+          37.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CI0",
+      "purpose": "component CI0",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CI0.step",
+      "stl": "cad/k1_component_CI0.stl",
+      "sha256_step": "311512acdeafd26bde74c7c6900b6a03095c0d8d4f5ce0def1dc4811a1e10573",
+      "sha256_stl": "ef93d682a267457a23f54a4b75b17c7c12ecc3f52ef5d12661fe5b0bd4e0a947",
+      "volume_mm3": 3.1459999999999964,
+      "bounds_mm": [
+        [
+          27.899999618530273,
+          36.349998474121094,
+          6.0
+        ],
+        [
+          30.100000381469727,
+          37.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RP1",
+      "purpose": "component RP1",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RP1.step",
+      "stl": "cad/k1_component_RP1.stl",
+      "sha256_step": "1cddf7a0ee15b4efa5e0fe623ce7fb21e8465048ee5f267a1e8ca3ec9d96b3a4",
+      "sha256_stl": "6806bc5138ad95d0f8ab4190d2fe95ad40ffee0d2e4cc44c2500443e44dc69eb",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          39.900001525878906,
+          35.349998474121094,
+          6.0
+        ],
+        [
+          42.099998474121094,
+          36.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RI1",
+      "purpose": "component RI1",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RI1.step",
+      "stl": "cad/k1_component_RI1.stl",
+      "sha256_step": "8f99de8ec5bb86a76b1e72519aaf89f1bf92ea0926a5bd58be5267c1e4d19729",
+      "sha256_stl": "ea6c49ce0843bc6a220f9f94db5aa5e123ed28d9f64f7a5749bf7cf3279e650b",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          39.900001525878906,
+          32.849998474121094,
+          6.0
+        ],
+        [
+          42.099998474121094,
+          34.150001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CI1",
+      "purpose": "component CI1",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CI1.step",
+      "stl": "cad/k1_component_CI1.stl",
+      "sha256_step": "60369c834ad544efa9807f24aa4523ad6382d79f9a48af43d66e55c8d101f1e4",
+      "sha256_stl": "68717c020f6167f09c2f5af100d6dd0099f2778b3e326475a02af6fbcdf79d68",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          35.900001525878906,
+          36.349998474121094,
+          6.0
+        ],
+        [
+          38.099998474121094,
+          37.650001525878906,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RP2",
+      "purpose": "component RP2",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RP2.step",
+      "stl": "cad/k1_component_RP2.stl",
+      "sha256_step": "68f41b659b07331de38c4a3113412ad74b527dff96821f4a0757122012215883",
+      "sha256_stl": "acdf4b7845239ab37a49751698be416254b72fee6e033e0e6857237c9d191d91",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          39.900001525878906,
+          30.350000381469727,
+          6.0
+        ],
+        [
+          42.099998474121094,
+          31.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_RI2",
+      "purpose": "component RI2",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_RI2.step",
+      "stl": "cad/k1_component_RI2.stl",
+      "sha256_step": "8937a50a28c2b5219e67812abf1ec5f9089906c34a3a41e5302bf140aead4a80",
+      "sha256_stl": "fb2272ad5f75cf41631445ca65a7b6c6eeea00568cc42efea4e6e8146ee991fc",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          39.900001525878906,
+          27.850000381469727,
+          6.0
+        ],
+        [
+          42.099998474121094,
+          29.149999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_component_CI2",
+      "purpose": "component CI2",
+      "material": "Conservative component clearance envelope",
+      "kind": "reference_only",
+      "step": "cad/k1_component_CI2.step",
+      "stl": "cad/k1_component_CI2.stl",
+      "sha256_step": "8d77125b13b94b68ab7f9d6e64475b7015788895b7dddc0d2abdf2b272d51f66",
+      "sha256_stl": "823973673cef0fa261177930cc07aaa9c7cde7ca389c3076058ae34c5383c1ac",
+      "volume_mm3": 3.145999999999996,
+      "bounds_mm": [
+        [
+          35.900001525878906,
+          29.350000381469727,
+          6.0
+        ],
+        [
+          38.099998474121094,
+          30.649999618530273,
+          7.099999904632568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "checks": [
+    {
+      "a": "case",
+      "b": "lid",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "case",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "lid",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_support",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.1106602134873216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_support",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_support",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_mount_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.5759334090702255,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_mount_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.45,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_mount_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.623596658602041,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.264,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5499999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.3,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.2999999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.45,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.091031354054242,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.764,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.9359999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.9927791822161174,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.0364844387016405,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.1378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7859999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.786,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.1378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7859999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.786,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.1378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7859999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.786,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.1378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7859999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.8600399112104542,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7859999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.8120840133105847,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.886,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.714,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.8859999999999992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.886,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.714,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.8859999999999992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "pcb",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.7359999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.8,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U1",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.8,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "U2",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF1",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CF2",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RF",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RF",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RF",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CD",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CD",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CD",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CB",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CB",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CB",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSDA",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSDA",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSDA",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSCL",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSCL",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RSCL",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP0",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI0",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI0",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI0",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI0",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.9077195879792368,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP1",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI1",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI1",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI1",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI1",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RP2",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "RI2",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI2",
+      "b": "case",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI2",
+      "b": "lid",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.9,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CI2",
+      "b": "pcb",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.8999999999999986,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5999999999999979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.0999999999999979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.0999999999999979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_foil",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.0000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.8000000000000043,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.0000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.8000000000000043,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.649999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.1499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stiffener_bond",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.6499999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.149999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.8499999999999979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.3499999999999979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.8999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.399999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.8999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.8999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.399999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.899999999999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.8999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.3999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_retained_plate",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.8999999999999915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.899999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.449999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0_bond",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.899999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.449999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_0",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.899999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.699999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.699999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1_bond",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.899999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.399999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.199999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.699999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.699999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_1",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.0000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2_bond",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.0000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.5000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_2",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.9499999999999886,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.449999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3_bond",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.9499999999999886,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.44999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.94999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.449999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_stop_3",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.949999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9299999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.629999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.129999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_vented_cover",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.500000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.500000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_0",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.500000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.500000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.300000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.800000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_1",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9299999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.629999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.129999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.179999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_2",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.679999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_cover_bond_3",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.899999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.599999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.099999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.099999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.899999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.399999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.399999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.4,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_0",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.899999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.599999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.099999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.099999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.399999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_ground_bond_1",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.949999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.649999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.149999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.149999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.949999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.449999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.449999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.449999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_1",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "U1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.449999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "U2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CF1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.149999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CF2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.649999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RF",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.649999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CD",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CB",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.449999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RSDA",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.949999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RSCL",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RP0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.949999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CI0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RP1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.54999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CI1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RP2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "RI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.4499999999999957,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "reference_joint_2",
+      "b": "CI2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.04999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "quantity_per_finger": 2,
+  "physical_specimens_tested": 0,
+  "pcb_mount_xy_mm": [
+    [
+      7.8,
+      7.8
+    ],
+    [
+      44.2,
+      7.8
+    ],
+    [
+      7.8,
+      40.2
+    ],
+    [
+      44.2,
+      40.2
+    ]
+  ],
+  "case_mount_xy_mm": [
+    [
+      -4,
+      24.0
+    ],
+    [
+      56,
+      24.0
+    ]
+  ],
+  "pcb_top_z_mm": 6,
+  "reference_foil_bottom_z_mm": 6.55,
+  "minimum_reference_to_lid_clearance_mm": 10.664,
+  "input_sha256": {
+    "engineering/designs/capacitive_enclosure.json": "a11cac372f941c7c576a68d573a8590ab8ab75a4c982fab41c9e6ac336d9b126",
+    "engineering/development/capacitive/k1/pcb/k1_readout.json": "3122f2595ac486ad9310040b8f694f7ffe254eeb0d7bec3d68c0fb66945446d4",
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "engineering/scripts/build_capacitive_enclosure.py": "b034b3476582801c9cb9aa616672bd54186198f1f812ab6dacb79583428e5831",
+    "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/report.json": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+    "build/engineering/prototypes/capacitive/foil_runs/20261011T210432.796205Z/report.json": "ade6ea0ea986df2a8d647decde4b1b88444770ad6f3ee1932111e433824ae665",
+    "build/engineering/prototypes/capacitive/foil_runs/20261011T210432.796205Z/k1_ref_flex.json": "3c37c2abd85a081e60f1c9fd615dac45f41a11e822edb2e7b997970171d2ff74"
+  },
+  "hardware": [
+    "Per case: four M2 \u00d7 5 mm screws with thin insulating washers for the PCB; finish the printed pilots with an M2 tap",
+    "Per case: four M2 \u00d7 6 mm lid screws; finish the pilots with an M2 tap",
+    "Per case: three 2.5 mm cable ties for the cell harnesses and one for the JP harness",
+    "Two M3 fasteners per case for the supplied side tabs, selected for the measured bench/wrist bracket"
+  ],
+  "limits": [
+    "The reference capacitor is carried in the PCB's reserved 14 \u00d7 12 mm area with a 0.5 mm insulating support. The lid must never preload it.",
+    "Pico and USB sit outside these two bank cases on the bench or in a separate insulated controller holder.",
+    "The supplied mounting tabs do not assert compatibility with an unidentified YAM drive.",
+    "Printed dimensions, tapped pilots, cable retention and thermal behavior need physical verification."
+  ]
+}

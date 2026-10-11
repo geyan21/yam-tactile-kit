@@ -1,0 +1,76 @@
+{
+  "name": "k1_ch2_flex",
+  "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch2_flex/checks/20261011T211644.671015Z",
+  "violations": 0,
+  "unconnected": 0,
+  "source_pcb_sha256": "e412393a73f5a12da82ce3eb1f400a45d3e00f312f2180b7982dbc9bcb84f0d6",
+  "physical_boards_tested": 0,
+  "native_pad_count": 6,
+  "native_copper_layers": 2,
+  "native_thickness_mm": 0.186,
+  "only_terminal_lands_open": true,
+  "native_pin_map": {
+    "1": "CIN",
+    "2": "SHLD"
+  },
+  "shield_transition": true,
+  "checked_pcb_sha256": "7d98395d2ad1c202d92d7b89781a254ac56fdce88fc707f7da67d28d25ac8018",
+  "native_material_stack_checked": true,
+  "material_stack": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.025,
+      "Material": "Polyimide coverlay including adhesive",
+      "Name": "Coverlay"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.018,
+      "Name": "F.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 0.1,
+      "Material": "Polyimide",
+      "Name": "F.Cu/B.Cu",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.018,
+      "Name": "B.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.025,
+      "Material": "Polyimide coverlay including adhesive",
+      "Name": "Coverlay"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ],
+  "files_sha256": {
+    "k1_ch2_flex-Edge_Cuts.gm1": "6dc5644f1857239f44628cb76da53e60f2bea5458e0c61b8e5593d97fbedcefe",
+    "k1_ch2_flex-B_Cu.gbl": "b3e8298d697fbf6b711ec30a17be22359afdcd632e62e85939e7e418fbb2f3ec",
+    "k1_ch2_flex.drl": "9945061a49c969a6dab90ed156c3324777e6cbec833c472d01c2924a820562fe",
+    "k1_ch2_flex-F_Mask.gts": "7461795cbc161e7a6572387d787d7abb8fc060b3f8a68c476c198f925f043321",
+    "k1_ch2_flex-job.gbrjob": "864efe989d410046a85886b7cfc9b332a07370c75237dad34bca11d9015d220b",
+    "k1_ch2_flex-B_Mask.gbs": "0820fc84912961eb493b65fbd7df43563d0ece5ad9b534b83baf9417ab4466b8",
+    "k1_ch2_flex-F_Cu.gtl": "9b267405ffa3304ed7677906b58caf719f5d31d874a15abdb233297fac13eb16"
+  },
+  "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+}

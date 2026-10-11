@@ -1,0 +1,38 @@
+{
+  "schema": "yam-k1-enclosure/1",
+  "quantity_per_finger": 2,
+  "material": "PETG or machined insulating polymer; deburr cable ports",
+  "outer_xy_mm": [52, 48],
+  "base_mm": 2,
+  "wall_mm": 2,
+  "inside_height_mm": 16,
+  "lid_mm": 2,
+  "pcb_origin_xyz_mm": [5, 5, 5],
+  "pcb_thickness_mm": 1,
+  "pcb_post_diameter_mm": 5,
+  "pcb_post_pilot_mm": 1.6,
+  "lid_boss_diameter_mm": 5,
+  "lid_screws_xy_mm": [[3, 3], [49, 3], [3, 45], [49, 45]],
+  "lid_pilot_mm": 1.6,
+  "lid_clearance_mm": 2.2,
+  "reference_mount_mm": 0.5,
+  "reference_bond_mm": 0.05,
+  "cable_port_centres_y_mm": [14.625, 24.625, 34.625],
+  "cable_port_width_y_mm": 7,
+  "cable_port_z_mm": [7, 11],
+  "tie_slot_width_y_mm": 3,
+  "tie_slot_z_mm": [4, 5.5],
+  "mount_tab_hole_mm": 3.4,
+  "hardware": [
+    "Per case: four M2 × 5 mm screws with thin insulating washers for the PCB; finish the printed pilots with an M2 tap",
+    "Per case: four M2 × 6 mm lid screws; finish the pilots with an M2 tap",
+    "Per case: three 2.5 mm cable ties for the cell harnesses and one for the JP harness",
+    "Two M3 fasteners per case for the supplied side tabs, selected for the measured bench/wrist bracket"
+  ],
+  "limits": [
+    "The reference capacitor is carried in the PCB's reserved 14 × 12 mm area with a 0.5 mm insulating support. The lid must never preload it.",
+    "Pico and USB sit outside these two bank cases on the bench or in a separate insulated controller holder.",
+    "The supplied mounting tabs do not assert compatibility with an unidentified YAM drive.",
+    "Printed dimensions, tapped pilots, cable retention and thermal behavior need physical verification."
+  ]
+}

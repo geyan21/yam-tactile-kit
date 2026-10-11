@@ -1,0 +1,15 @@
+{
+  "schema": "yam-k1-formed-tail-poses/1",
+  "revision": "K1.2 formed nail terminals",
+  "nail_terminal_lift_normal_mm": 0.4,
+  "nail_free_bend_length_mm": 4.0,
+  "minimum_nail_bend_radius_mm": 5.0,
+  "curve_sample_mm": 0.025,
+  "nail_shape": "Two opposite circular arcs, followed by a flat terminal. Developed arc length is preserved; the sensing body remains on its original plane.",
+  "tpu_shape": "Retain the source curvature across the side tab. Stiffener pieces require separate forming/cut-pattern review.",
+  "earlier_straight_fit_run": "build/engineering/prototypes/capacitive/foil_fit/20261011T211853.942855Z",
+  "limits": [
+    "Nominal geometry only; actual forming, copper/via strain, adhesive and repeated-motion behavior require bench tests.",
+    "The 4 mm terminal stiffener lies after the bent free section. No bend is intentionally placed through its plated transition."
+  ]
+}

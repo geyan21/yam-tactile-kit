@@ -105,7 +105,7 @@ def main():
                   "limits": [
                       "The initial 0.8 mm slab alone did not reach the raw TPU surface; use these full supports.",
                       "The R1 witness supplies the variable-thickness fitting base below the smoothed surface datum.",
-                      "The 1.736 mm K1 stack figure is above the R1 datum, not the total addition to raw TPU.",
+                      "The nominal K1 stack height is measured above the R1 smoothed datum, not the total addition to raw TPU.",
                       "The back-to-TPU clearance and adhesive filling must be measured on the actual print.",
                       "The declared 0.05 mm flex bond line, source motion, retention, cable routing and force response remain physically unverified."
                   ]}

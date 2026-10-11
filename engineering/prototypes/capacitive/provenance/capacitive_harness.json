@@ -1,0 +1,38 @@
+{
+  "schema": "yam-k1-harness/1",
+  "signal_cable": {
+    "manufacturer": "Taoglas",
+    "part": "300815C010000A Mini 0.81 mm micro-coax",
+    "source": "https://www.taoglas.com/specifications/300815C010000A_Taoglas.pdf",
+    "diameter_nominal_mm": 0.81,
+    "diameter_max_mm": 0.84,
+    "capacitance_nominal_pf_per_m": 96,
+    "capacitance_max_pf_per_m": 99,
+    "manufacturer_minimum_bend_radius_mm": 5,
+    "design_minimum_bend_radius_mm": 10,
+    "sensor_finished_length_max_mm": 150,
+    "reference_finished_length_max_mm": 25,
+    "termination": "Centre conductor to CIN; braid to driven SHLD. Insulate the exposed braid and never connect it to ground.",
+    "soldering": "Leave at most 2 mm unshielded centre conductor at each end. Support the jacket before working on the 0.15 mm conductor; qualify the soldering process on spare foils."
+  },
+  "plate_wires": {
+    "construction": "Two independent 34 AWG stranded insulated copper leads per plate, insulation diameter at most 0.55 mm",
+    "finished_length_max_mm": 150,
+    "service_loop_min_free_length_mm": 15,
+    "connections": ["JS pin 3 to the first plate bond", "JS pin 4 to the separate second plate bond"],
+    "bond_process": "Use MG 8331D only in the supplied ground-bond envelopes after the cover has cured. Measure continuity through the plate; do not join the two wires before their separate plate bonds."
+  },
+  "routing": {
+    "sensor_order": {"A": ["CH0", "CH2", "CH3"], "B": ["CH1", "CH4", "CH5"]},
+    "finger_exit": "Lead the six cables from the supplied side/proximal tabs toward the outer side of the finger; leave the leading nail edge and fork notch free.",
+    "strain_relief": "Anchor each coax jacket to its terminal stiffener with a small qualified flexible adhesive bead beyond the solder lands. Keep the 4 mm nail flex bend unbonded. Ground leads require their own slack loops; they must not brace the moving plate.",
+    "case_relief": "Pass each cell's coax and two ground leads through its numbered case port and secure the insulated jackets with a 2.5 mm cable tie through the adjacent slots. Do not crush the coax.",
+    "installation": "Mount the two bank cases within the 150 mm cable reach. The case tabs are a bench/wrist mounting interface; the unknown installed YAM drive still needs a measured bracket and full jaw-motion clearance check.",
+    "qualification": "Measure cable length, bend radius, no-contact motion signal, pull resistance and full jaw travel before installed operation. CAD clearances alone do not qualify a moving cable."
+  },
+  "limits": [
+    "Cable capacitance is a manufacturer specification; the full shield load and shield stability must be measured on the assembled board.",
+    "This cable is not assigned a robot bend-cycle life by this design.",
+    "The two reference grounds do not replace either independently monitored pressure-plate bond."
+  ]
+}

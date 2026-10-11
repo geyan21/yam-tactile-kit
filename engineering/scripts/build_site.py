@@ -49,7 +49,8 @@ DOCS=[
     ("RECESSED_ANALYSIS","recessed-analysis","B3 digital results"),
     ("BUILD_F1","build-f1","F1 development & fit packet"),
     ("F1_WRIST_CAPTURE","f1-capture","F1 wiring & raw capture"),
-    ("BUILD_CAPACITIVE","build-capacitive","K1 capacitive development"),
+    ("BUILD_CAPACITIVE","build-capacitive","Build K1 capacitive cells"),
+    ("CAPACITIVE_TESTING","capacitive-testing","K1 calibration & tests"),
     ("BUILD_FORCE_BUTTON","build-force-button","Build FB1 force button"),
     ("FORCE_BUTTON_TESTING","force-button-testing","FB1 calibration & tests"),
 ]
@@ -278,6 +279,7 @@ def main():
             (ROOT/"engineering/prototypes/recessed/recessed_firmware.zip","recessed_firmware.zip"),
             (ROOT/"engineering/templates/recessed_specimen.json","recessed_specimen.json"),
             (ROOT/"engineering/templates/force_button_force_trials.json","force_button_force_trials.json"),
+            (ROOT/"engineering/templates/capacitive_force_trials.json","capacitive_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
@@ -306,7 +308,7 @@ def main():
                               for item in catalog["designs"] if item["group"]!="research")
         design_links+="</nav>"
         (SITE/"index.html").write_text((WEB/"index.html").read_text().replace("<!-- DESIGN_PAGE_LINKS -->",design_links))
-        build_design_pages(SITE,catalog)
+        build_design_pages(SITE,catalog,payload["models"])
         all_chapters=[]
         for source,slug,title in DOCS:
             content=chapter(source)
@@ -328,6 +330,9 @@ def main():
         k1=ROOT/"engineering/development/capacitive/k1"
         write_zip(downloads/"k1-development.zip",
                   {str(p.relative_to(k1)):p.read_bytes() for p in k1.rglob("*") if p.is_file()})
+        k12=ROOT/"engineering/prototypes/capacitive"
+        write_zip(downloads/"k1-prototype.zip",
+                  {str(p.relative_to(k12)):p.read_bytes() for p in k12.rglob("*") if p.is_file()})
         fb1=ROOT/"engineering/prototypes/force_button"
         write_zip(downloads/"fb1-prototype.zip",
                   {str(p.relative_to(fb1)):p.read_bytes() for p in fb1.rglob("*") if p.is_file()})
@@ -346,7 +351,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile engineering packet: eight digital prototype packages; physical tests pending\n\n"
+            "ENPIRE tactile engineering packet: nine digital prototype packages; physical tests pending\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
@@ -358,6 +363,7 @@ def main():
             "All twelve designs and planned comparisons: website/build-all.html.\n"
             "F1 development modules and fit patterns: website/flexible-matrix.html and source/engineering/development/f1.\n"
             "K1 capacitive tooling/readout modules: website/capacitive.html and source/engineering/development/capacitive/k1.\n"
+            "K1.2 capacitive bench prototype: source/engineering/prototypes/capacitive; tests: website/capacitive-testing.html.\n"
             "FB1.1 force-button root prototype: website/force-button.html and source/engineering/prototypes/force_button.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"

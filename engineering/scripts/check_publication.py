@@ -84,9 +84,16 @@ def main():
             if page["status"] == 200:
                 (folder / "capacitive_page.html").write_text(page["body"])
                 summary["capacitive_contains_expected_release"] = tag in page["body"]
-                summary["capacitive_contains_k1_packet"] = "development/capacitive/k1/file-index.html" in page["body"]
-                summary["capacitive_contains_stack"] = "development/capacitive/k1/visuals/k1_stack.svg" in page["body"]
-                summary["capacitive_contains_module_download"] = "k1-development.zip" in page["body"]
+                current = "prototypes/capacitive/file-index.html" in page["body"]
+                summary["capacitive_package_kind"] = "K1.2 prototype" if current else "earlier development module"
+                summary["capacitive_contains_k1_packet"] = current or "development/capacitive/k1/file-index.html" in page["body"]
+                summary["capacitive_contains_stack"] = any(path in page["body"] for path in (
+                    "prototypes/capacitive/visuals/k1_stack.svg", "development/capacitive/k1/visuals/k1_stack.svg"))
+                summary["capacitive_contains_module_download"] = any(name in page["body"] for name in (
+                    "k1-prototype.zip", "k1-development.zip"))
+                summary["capacitive_contains_selected_readout"] = "FDC1004DGSR" in page["body"]
+                summary["capacitive_contains_force_testing"] = "capacitive-testing.html" in page["body"]
+                summary["capacitive_contains_current_viewer"] = 'data-model-id="k1_assembly_reference"' in page["body"]
         if args.force_button:
             page = fetch("https://geyan21.github.io/yam-tactile-kit/force-button.html?"+
                          urlencode({"commit": args.commit}), decode=False)

@@ -2,22 +2,44 @@
 
 [Open the design directory for a separate page on every design and alternative](https://geyan21.github.io/yam-tactile-kit/designs.html). Each page states the exact sensor choice, placement, available files and build status.
 
-The decision is driven by reliable contact and grip-force feedback with a thin, precise leading tip. R1, L1, B1, B2, C1 and N1 have separate digital build packages; none has been selected as a physically validated winner.
+The decision is driven by reliable contact and grip-force feedback through
+20 N per finger with a thin, precise leading tip. Nine digital prototype
+packages are available. F1, pneumatic and optical integration remain in
+development. **Physical specimens tested: 0; no measured winner.**
+
+The root-sensing designs preserve the bare contact surfaces and measure an
+aggregate load. The local-cell designs also provide location information,
+with additional material on or inside the finger. Those are design differences;
+their practical value must be measured on the same precision tasks.
 
 **Read [the architecture and scalability study](ARCHITECTURE.md)** for the assessment of magnetic sensing, the earlier B2/C1 concepts, quantitative limitations, and the batch-cost/validation plan. Use the separate B2 and C1 build pages for their current parts. The review below preserves the modality-specific context.
 
 | Candidate | Useful signal | Fit to this finger | Main experiment | Current state |
 |---|---|---|---|---|
-| R1 independent resistive cells | Local contact and calibrated local normal-force proxy | Two custom nail cells; four conformal saddle cells | Drift, edge coverage, hysteresis, cover and cable wear | Tooling and readout supplied; unbuilt |
-| FlexiTac / HiPi-style matrix | Denser pressure distribution | Requires custom fork-shaped flex layout and curved pad treatment | Crosstalk, bending life, sealing, channel rate | Research comparison; no released routed ENPIRE FPC |
-| AnySkin / ReSkin magnetic skin | Magnetic changes from skin deformation | Stock board is wider than the 15 mm insert; requires another mount | Field interference, replacement variation, force calibration | Primary PCB and firmware audited |
-| eFlesh-style printed magnetic structure | Deformation coupled to permanent magnets | Promising for an internal or redesigned compliant section; hard nail remains separate | TPU creep, magnet retention, field bias, contact coverage | Primary process and dimensions reviewed |
-| Baby Fin Ray optical | Dense contact shape and texture | Requires hollow optical path, illumination, and a changed compliant structure | Occlusion under bend, gel wear, camera timing, nail coverage | Primary fabrication method reviewed |
+| R1 independent resistive cells | Local contact and calibrated local force proxies | Two custom nail cells; four conformal saddle cells | Drift, edge coverage, hysteresis, cover and cable wear | Tooling and readout supplied; unbuilt |
 | L1 root normal-force cell | Aggregate normal load including hard-frame contacts | Leaves contact surfaces intact; adds 20 mm reach and a larger root | Off-axis load, moments, stiffness, housing fit, cable route | Aluminum carriers, purchased-cell readout and test fixtures supplied; unbuilt |
 | B1 magnetic insert | Local deformation/field observations; optional nail pressure pads | Original contact envelope, added side spine | Magnetic interference, calibration transfer, TPU mechanics and retention | CAD, PCB and raw readout supplied; unbuilt |
 | B2 consolidated magnetic PCB | Magnetic observations and nail conductance; force calibration pending | One rigid board at the same head poses, with two locating spacers and a backer | Compare assembly, consistency and whole-board repair against B1 | B2.1 checked PCB, CAD and readout package; physically untested |
 | C1 differential strain | Aggregate normal force from two calibrated strain bridges | Transverse metal root adapter; bare nail retained, larger root | Real clamp motion, gauge placement, thermal drift, cross-axis and lever response | C1.1 checked CAD/PCB and acquisition; numerical screen passed, physical tests pending |
 | N1 bare sensing nail | Calibrated nail normal force and four local TPU force proxies | Steel fork with two shear webs, revised frame and side carriers | Whole-finger motion, frame-contact bypass, force calibration, mixed contacts and wear | Four checked CAD parts, selected gauges and combined readout; physical tests pending |
+| B3 recessed magnetic | Magnetic deformation observations and separate nail signals | Recesses the B2 electronics into a revised frame | Frame stiffness, real magnetic headroom, bending, contact and paired B2/B3 performance | B3.1 build package and field/clearance screens; unbuilt |
+| F1 flexible matrix | 64 proposed contact locations from routed row/column electrodes | Twelve shaped foils, fixed fanout and wrist electronics | Mating/lamination, resistance budget, full-array crosstalk, slack, wear and force calibration | Checked modules; complete integrated build remains |
+| K1 capacitive | Six local capacitance signals for physical contact/force calibration | Two nail cells and four curved cells; nominal 0.836 mm nail addition | Stop height, low-force signal, finite plate loading, cable/bending artifacts and wear | K1.2 bench build package; model findings retained; unbuilt |
+| Pneumatic | Pressure response to compliant chamber deformation | Needs ENPIRE chambers, tube paths and nail coverage | Leakage, temperature, pressure/force range, hysteresis and loading rate | Published references; ENPIRE integration remains |
+| Optical | Dense surface deformation or texture images | Needs a camera, illumination and clear optical path within a redesigned finger | Occlusion, depth/force calibration, timing, gel wear and nail coverage | Published references; ENPIRE integration remains |
+| FB1 packaged force button | Aggregate normal-force signal through a guided root adapter | Bare original nail/TPU; 50 mm added reach | Preload, stop gaps, real-joint motion, calibrated accuracy and contact reliability | FB1.1 CAD/PCB, code and structural screen; unbuilt |
+
+K1 illustrates why a passed design check is only one filter. Its complete-foil/
+cable planning case fits the converter's shield limit, and its nominal
+geometry checks pass. Its separate material sweep still exposes early
+bottoming with thick stop adhesive and low 0.2 N signals with high assumed
+post stiffness. Those findings remain visible in the
+[K1 test guide](CAPACITIVE_TESTING.md).
+
+The [common build campaign](BUILD_ALL.md) records missing physical evidence
+instead of assigning an invented score. A design earns a recommendation only
+after contact reliability, force, access and task criteria are met; assembly
+effort, repeatability, wear, replacement and cost then distinguish the survivors.
 
 ## Resistive: manufacturability versus force stability
 

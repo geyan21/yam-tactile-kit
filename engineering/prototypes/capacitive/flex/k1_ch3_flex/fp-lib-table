@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "K1Flex") (type "KiCad") (uri "${KIPRJMOD}/K1Flex.pretty") (options "") (descr "K1 guarded sensor foil and hand-solder lands")))

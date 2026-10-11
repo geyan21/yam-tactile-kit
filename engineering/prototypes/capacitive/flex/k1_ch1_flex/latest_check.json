@@ -1,0 +1,8 @@
+{
+  "directory": "checks/20261011T211643.563033Z",
+  "violations": 0,
+  "unconnected": 0,
+  "tool": "10.0.7",
+  "source_sha256": "f41b540bfe17daf1a925a53ed149da5bc4b3abfaace258e1a9c057afc32ee882",
+  "physical_boards_tested": 0
+}

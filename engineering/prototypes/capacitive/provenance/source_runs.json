@@ -1,0 +1,22 @@
+{
+  "source_runs": {
+    "cells": "build/engineering/prototypes/capacitive/cad_runs/20261011T212153.005385Z",
+    "saddles": "build/engineering/prototypes/capacitive/saddle_runs/20261011T212853.113437Z",
+    "foils": "build/engineering/prototypes/capacitive/foil_runs/20261011T210432.796205Z",
+    "foil_fit": "build/engineering/prototypes/capacitive/foil_fit/20261011T214927.820498Z",
+    "native": "build/engineering/prototypes/capacitive/foil_pcb/native-04",
+    "native_check": "build/engineering/prototypes/capacitive/foil_pcb/native-04/independent_checks/20261011T211642.371462Z",
+    "mechanics": "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z",
+    "clearances": "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/clearance_reviews/20261011T222343.521394Z",
+    "assembly": "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/assembly_reviews/20261011T222735.414702Z",
+    "stiffeners": "build/engineering/prototypes/capacitive/stiffener_tools/20261011T222311.691205Z",
+    "enclosure": "build/engineering/prototypes/capacitive/enclosure/20261011T222605.270735Z",
+    "screen": "build/engineering/prototypes/capacitive/assembly_screens/20261011T222925.545416Z",
+    "visuals": "build/engineering/prototypes/capacitive/prototype_visuals/20261011T230622.402815Z"
+  },
+  "cover_mold_runs": [
+    "build/engineering/prototypes/capacitive/cover_molds/20261011T222343.629473Z",
+    "build/engineering/prototypes/capacitive/cover_molds/20261011T222411.385240Z"
+  ],
+  "retained_readout_module_sha256": "424b8292b2044f82ce40f3e246782a09c70bb7bbf3ad64f6be979810610767cd"
+}

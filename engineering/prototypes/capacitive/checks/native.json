@@ -1,0 +1,57 @@
+{
+  "schema": "yam-k1-native-flex-set/1",
+  "source_geometry_report_sha256": "ade6ea0ea986df2a8d647decde4b1b88444770ad6f3ee1932111e433824ae665",
+  "boards": [
+    {
+      "name": "k1_ch0_flex",
+      "site": "CH0",
+      "directory": "k1_ch0_flex",
+      "pcb_sha256": "a795d9092d651b849b0b18234ed5a176ed5c7ea9f1e6e908c72e02c7d9e6e3c3",
+      "geometry_sha256": "1cfdb9bbf321058da649604ad8fbcb4f28d4f26e472a240c531ebaabf0e55c55"
+    },
+    {
+      "name": "k1_ch1_flex",
+      "site": "CH1",
+      "directory": "k1_ch1_flex",
+      "pcb_sha256": "f41b540bfe17daf1a925a53ed149da5bc4b3abfaace258e1a9c057afc32ee882",
+      "geometry_sha256": "d9e8f5653120ac63986b84f7b40bb1833b8652a10f41d21885d076999e4bd1b7"
+    },
+    {
+      "name": "k1_ch2_flex",
+      "site": "CH2",
+      "directory": "k1_ch2_flex",
+      "pcb_sha256": "e412393a73f5a12da82ce3eb1f400a45d3e00f312f2180b7982dbc9bcb84f0d6",
+      "geometry_sha256": "44e291ba69316b4002c597dc32f8ca341111f7c1611c366d916f00dc023f0701"
+    },
+    {
+      "name": "k1_ch3_flex",
+      "site": "CH3",
+      "directory": "k1_ch3_flex",
+      "pcb_sha256": "bae24c74f22769c6946dee2741f54a19237624e068afac321625a0b8b9f0f79b",
+      "geometry_sha256": "80150845ee16bdb4047b5768ea9b4bbabe5bc6d16dac65abcde8c9ff822c412f"
+    },
+    {
+      "name": "k1_ch4_flex",
+      "site": "CH4",
+      "directory": "k1_ch4_flex",
+      "pcb_sha256": "8ff12698800aa5ecd84cde8b288c59b000f5c58e95afec7c87685d1b406380fa",
+      "geometry_sha256": "272025cea90c449d1fb0ce0bf7cffd2bb6e286b35e5567e25775e1479b4de35a"
+    },
+    {
+      "name": "k1_ch5_flex",
+      "site": "CH5",
+      "directory": "k1_ch5_flex",
+      "pcb_sha256": "6e4069f7626699e71b40dfa0b40144f48df5e73fd3b6fbc58cf660c2105c7cd8",
+      "geometry_sha256": "32e8711964897e257afad13eb2312ed5be2bf0c0484b0f64500984fb68768bef"
+    },
+    {
+      "name": "k1_ref_flex",
+      "site": "REF",
+      "directory": "k1_ref_flex",
+      "pcb_sha256": "ccd293fdcd2f16f6927fd46176c21458d3af259b3ae395b5bcd549391e2cd99f",
+      "geometry_sha256": "3c37c2abd85a081e60f1c9fd615dac45f41a11e822edb2e7b997970171d2ff74"
+    }
+  ],
+  "physical_specimens_tested": 0,
+  "native_checks_pending": true
+}

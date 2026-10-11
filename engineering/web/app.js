@@ -7,7 +7,7 @@
     for(const [key,value] of Object.entries(attributes))node.setAttribute(key,value);
     return node;
   };
-  const link=(label,href)=>element("a",label,{href});
+  const link=(label,href)=>element("a",label,{href:window.KIT_HOSTED_LINKS?.[href]||href});
   const canvas=document.getElementById("cad");
   const viewer=new window.MeshViewer(canvas);
   const select=document.getElementById("model-select");
@@ -31,6 +31,13 @@
     f1_stacks:["F1 film/electrode reference bodies","#74a3c6"],f1_tails:["F1 tail fit references","#bf9758"],
     f1_board:["F1 R3 PCB fit reference","#689969"],f1_carrier:["F1 removable carrier","#7eacb4"],
     f1_components:["F1 component envelopes","#667887"],f1_fastener_envelopes:["F1 reserved fasteners","#808a96"],
+    k1_plates:["K1 grounded plates","#638ca1"],k1_covers:["K1 vented covers","#c1d5ae"],
+    k1_plate_bonds:["K1 independent plate bonds","#b88c64"],k1_stops:["K1 stop quadrants","#c9ad67"],
+    k1_flex:["K1 guarded flex","#679b8c"],k1_terminals:["K1 terminals and stiffeners","#7987b2"],
+    k1_saddles:["K1 conforming rigid supports","#92b9a1"],
+    k1_case:["K1 bank case","#c8d5cf"],k1_case_lid:["K1 case lid","#c8d5cf"],
+    k1_readout:["K1 readout PCB","#81a49a"],k1_electronics:["K1 component envelopes","#48626a"],
+    k1_reference:["K1 protected reference cell","#437e9d"],k1_reference_support:["K1 reference support","#92b9a1"],
   };
   function choose(){
     const model=data.models.find(m=>m.id===select.value);
@@ -168,13 +175,21 @@
     if(report.schema==="yam-contact-validation/1"){renderContactReport(report,name);return;}
     const r1=report.schema==="yam-calibration/1",l1=["yam-l1-calibration/1","yam-l1-finger-validation/1"].includes(report.schema);
     const c1=report.schema==="yam-c1-static-validation/1";
-    const n1=report.schema==="yam-nail-static-validation/1",holds=c1||n1;
-    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!holds))throw Error("Expected a physical R1, L1, C1 or N1 force report from the bench analyzer.");
+    const n1=report.schema==="yam-nail-static-validation/1",fb1=report.schema==="yam-fb1-static-validation/1";
+    const k1=report.schema==="yam-k1-static-validation/1",holds=c1||n1||fb1||k1;
+    const holdLabel=k1?"K1":fb1?"FB1":n1?"N1":"C1";
+    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!holds))throw Error("Expected a physical R1, L1, C1, N1, FB1 or K1 force report from the bench analyzer.");
+    if(k1){
+      const axis=report.force_axis;
+      if(axis?.frame!=="source_finger_native"||!Array.isArray(axis.unit_vector)||axis.unit_vector.length!==3||
+         axis.unit_vector.some(v=>!Number.isFinite(v))||Math.abs(axis.unit_vector.reduce((s,v)=>s+v*v,0)-1)>1e-6)
+        throw Error("K1 report needs its declared unit force axis in the source finger frame.");
+    }
     const points=[];
     let predictions=report.predictions;
     if(holds){
       if(!Array.isArray(report.trials)||report.trials.some(row=>typeof row.available!=="boolean"))throw Error("Static report is missing explicit hold availability.");
-      predictions=report.trials.map(row=>({...row,predicted_n:row.available?row.predicted_n:null,
+      predictions=report.trials.map(row=>({...row,predicted_n:row.available?(k1?row.total_force_n:row.predicted_n):null,
         contact_id:row.condition_id||row.id}));
     }
     const groups=r1?report.channels:[{channel:0,predictions}];
@@ -185,7 +200,7 @@
       for(const point of channel.predictions){
         if(!Number.isFinite(point.reference_n)||point.reference_n<0||point.reference_n>100)throw Error("Invalid reference force.");
         if(point.predicted_n!==null&&(!Number.isFinite(point.predicted_n)||Math.abs(point.predicted_n)>100))throw Error("Invalid predicted force.");
-        points.push({...point,channel:channel.channel,label:r1?`CH${channel.channel}`:String(point.contact_id||(n1?"N1":c1?"C1":"L1"))});
+        points.push({...point,channel:channel.channel,label:r1?`CH${channel.channel}`:String(point.contact_id||(holds?holdLabel:"L1"))});
       }
     }
     if(!points.length)throw Error("No held-out predictions in this report.");
@@ -204,9 +219,9 @@
     document.getElementById("result-status").textContent=`Locally inspected: ${name}. Published specimen count remains unchanged.`;
     document.getElementById("result-metrics").textContent=
       `${points.length} held-out ${holds?"stationary holds":"trials"} · ${out} unavailable · RMSE of available ${holds?"hold means":"trials"}: ${rmse===null?"unavailable":rmse.toFixed(3)+" N"}. `+
-      (holds?`${n1?"N1":"C1"} static means only; dynamic force and contact reliability remain unqualified. `:"Static report only. ")+
+      (holds?`${holdLabel} static means only; dynamic force and contact reliability remain unqualified. `:"Static report only. ")+
       "Provenance and raw data require review.";
-    plot.dataset.loaded="true";plot.dataset.reportKind=n1?"nail-static":c1?"c1-static":"force";
+    plot.dataset.loaded="true";plot.dataset.reportKind=k1?"k1-static":fb1?"fb1-static":n1?"nail-static":c1?"c1-static":"force";
   }
   document.getElementById("result-file").addEventListener("change",async e=>{
     const file=e.target.files[0];if(!file)return;

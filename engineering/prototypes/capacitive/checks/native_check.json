@@ -1,0 +1,541 @@
+{
+  "schema": "yam-k1-native-flex-checks/1",
+  "source_set_sha256": "f1113e15b9804892c377132893e1c92eaaadbb400ffacedfc32393f925db5f16",
+  "boards": [
+    {
+      "name": "k1_ch0_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch0_flex/checks/20261011T211642.400133Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "a795d9092d651b849b0b18234ed5a176ed5c7ea9f1e6e908c72e02c7d9e6e3c3",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "84adc68044749bbe39a25329eef317d4b411660c2daaae8f527e358b0e3e8f46",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch0_flex-B_Cu.gbl": "b428da1b09384bde08ecc9f210ea6a9c0341397feb730281cebceb0ee5ee65b1",
+        "k1_ch0_flex-Edge_Cuts.gm1": "f54725bd70c5db3aa937268258bb94c6014fc9324674e034866aa5bad651423c",
+        "k1_ch0_flex-F_Mask.gts": "9aba7c772c7283f27c8aa7604e056fb3831c3faa970adb0910ecc92888e3469a",
+        "k1_ch0_flex-B_Mask.gbs": "4e03aee25dbdd05b8e7f33891b2038b1d69912bd4ee175960f098d1d8d9f9402",
+        "k1_ch0_flex-F_Cu.gtl": "4116c6396cb6b7ecdc27985c7bd975eb3212c5265c29eb43fdd38457b58c43c3",
+        "k1_ch0_flex.drl": "7ac2873f53cfc076a1ae1bad77a6e724ec4ad714ff23dc2e6caa78983d5f42ba",
+        "k1_ch0_flex-job.gbrjob": "04c15d868161c666c68f7747912a10e8df7787b8dda7d292dc2da6eae68cba1c"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ch1_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch1_flex/checks/20261011T211643.563033Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "f41b540bfe17daf1a925a53ed149da5bc4b3abfaace258e1a9c057afc32ee882",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "89639370fa77a69a4425ecf05031d836ea985091a446c8b59053406137ff5f12",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch1_flex-job.gbrjob": "614839b895436076365d83fda4df5662fd23db4349edac53cd0cc5df2db8f176",
+        "k1_ch1_flex.drl": "98509a42001fbf6c4d6ea32a30d85387f2fccbee68954e442c2e0fde82c15c12",
+        "k1_ch1_flex-B_Cu.gbl": "7103a0d67075f8735ac64f62e1fd7d59e45abf3f1886a658cf76c4727e4df31b",
+        "k1_ch1_flex-B_Mask.gbs": "415501d8300731ad0b17275b0e54ee2d2cf86ff647257f6512e4922c64d3f34d",
+        "k1_ch1_flex-Edge_Cuts.gm1": "cde2a62d87e52fefbab75366b98ebfe5de2fe59017f839ff024228440967ba71",
+        "k1_ch1_flex-F_Mask.gts": "62cf4a29696c8ec222622841105e2d1873695a70bcfe8ebc8c214eeb09c4ba75",
+        "k1_ch1_flex-F_Cu.gtl": "234973a9e8ed96d5450c81ca3335fb92ac9abd281f1bb87ad8efd2c4500cbe4e"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ch2_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch2_flex/checks/20261011T211644.671015Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "e412393a73f5a12da82ce3eb1f400a45d3e00f312f2180b7982dbc9bcb84f0d6",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "7d98395d2ad1c202d92d7b89781a254ac56fdce88fc707f7da67d28d25ac8018",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch2_flex-Edge_Cuts.gm1": "6dc5644f1857239f44628cb76da53e60f2bea5458e0c61b8e5593d97fbedcefe",
+        "k1_ch2_flex-B_Cu.gbl": "b3e8298d697fbf6b711ec30a17be22359afdcd632e62e85939e7e418fbb2f3ec",
+        "k1_ch2_flex.drl": "9945061a49c969a6dab90ed156c3324777e6cbec833c472d01c2924a820562fe",
+        "k1_ch2_flex-F_Mask.gts": "7461795cbc161e7a6572387d787d7abb8fc060b3f8a68c476c198f925f043321",
+        "k1_ch2_flex-job.gbrjob": "864efe989d410046a85886b7cfc9b332a07370c75237dad34bca11d9015d220b",
+        "k1_ch2_flex-B_Mask.gbs": "0820fc84912961eb493b65fbd7df43563d0ece5ad9b534b83baf9417ab4466b8",
+        "k1_ch2_flex-F_Cu.gtl": "9b267405ffa3304ed7677906b58caf719f5d31d874a15abdb233297fac13eb16"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ch3_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch3_flex/checks/20261011T211645.722822Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "bae24c74f22769c6946dee2741f54a19237624e068afac321625a0b8b9f0f79b",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "1e786f8f3ca74c584f40ee8db4e2c652758dbdd116d589a61a280bc88fb935d5",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch3_flex-B_Cu.gbl": "cbbe5dc3e53306280a7d5fbb542662c0344d75df14f8f8ff67b4d03c3fb7a917",
+        "k1_ch3_flex-F_Mask.gts": "a60d2ac5427de6e833d222ae2f6abe8fa845d01de5510c498f53adb93fead95d",
+        "k1_ch3_flex.drl": "324a76be86a513d700bc788ecfd8aefad0154f415629bdf6364181b6d5d11a17",
+        "k1_ch3_flex-B_Mask.gbs": "57a6f41b980d2f80515339a6c5abddb2df7a8f6f408c5b2f1dd3467ca518e8a3",
+        "k1_ch3_flex-F_Cu.gtl": "47c451391926de5883ce1d4b7c257947cb87fc629e637e860cc9076ff6ea83e0",
+        "k1_ch3_flex-Edge_Cuts.gm1": "24ba344e1737b9f89889a853e9c3c09278fae88166f4eb41b9dc27911ee0c6bf",
+        "k1_ch3_flex-job.gbrjob": "75ca4dbe3340d9a2aca5e6c2eb79532f6f9a9990e45678866d3d28f210e13430"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ch4_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch4_flex/checks/20261011T211646.734084Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "8ff12698800aa5ecd84cde8b288c59b000f5c58e95afec7c87685d1b406380fa",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "c0ee2412c09db58ae45e2686774ce431808efa629939b29ea2945eeb6a7f4f2c",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch4_flex-F_Mask.gts": "08956a703677e1a98c34a85cfc2346793be522583ac7ffe51787024e90758915",
+        "k1_ch4_flex-Edge_Cuts.gm1": "ba91db129ba02a5c26b5c6b8c4b73bc09fce4b5ffed4ebcccdc222b051eb33a9",
+        "k1_ch4_flex-job.gbrjob": "9286fd7c7169e2a15bdb8f7ff96bff61b787ac8e0c5141defa3ebcbfeb7369cb",
+        "k1_ch4_flex.drl": "25fc78b41ce78798646d8af252bb946d6fca1ea5fa2e8c5e2e4dfe263b24560a",
+        "k1_ch4_flex-B_Mask.gbs": "90fe191cfe0674f11a375271aca4e4a193dff84785c9408e07521b01ab9d71d6",
+        "k1_ch4_flex-B_Cu.gbl": "172d49e5b826243645947e4689bad1c629fe6e514886ab3d589e79898da37d98",
+        "k1_ch4_flex-F_Cu.gtl": "52642e6cb43cdea8b4ed26027dd9bf78bcb176de4bc162193c3104365bfaf6a4"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ch5_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ch5_flex/checks/20261011T211647.833975Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "6e4069f7626699e71b40dfa0b40144f48df5e73fd3b6fbc58cf660c2105c7cd8",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "59034cbe2b02ca984c531e8e6297a73a2a94e0f3e687df5c4920fdfdb30bcfb1",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ch5_flex-B_Mask.gbs": "b8434f1a52396c6f4e3fa963901e6fdcb2ae8689e9687e15b669bb241f992dd2",
+        "k1_ch5_flex-F_Cu.gtl": "dfcb8528f559d4033ead5fe270b6ccc4f35846a130db907fc31bc132b2aa71d0",
+        "k1_ch5_flex-F_Mask.gts": "c04431910b0d3d5de2cd244cb77d22e7b7270c7e65cdb8c046ca9830ab03c087",
+        "k1_ch5_flex.drl": "4c164c6cb1c45655c8ab1afc862bf5dc8ecfaaa33bd4509c9a54ed91f78bf8ac",
+        "k1_ch5_flex-B_Cu.gbl": "8d17eebed7d04f4c96ae73ebb99a2ecbd8a9e3b1a1bd1d5285ab11f746be6867",
+        "k1_ch5_flex-Edge_Cuts.gm1": "1099fee62631c4f5e205f6f99d58c33b4ed1a377e6775801bc53c43fdc07094d",
+        "k1_ch5_flex-job.gbrjob": "6cda665914a3028a83c3a485092c372b2492d13cef004b679563ad6d9b79ca57"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    },
+    {
+      "name": "k1_ref_flex",
+      "directory": "build/engineering/prototypes/capacitive/foil_pcb/native-04/k1_ref_flex/checks/20261011T211648.885741Z",
+      "violations": 0,
+      "unconnected": 0,
+      "source_pcb_sha256": "ccd293fdcd2f16f6927fd46176c21458d3af259b3ae395b5bcd549391e2cd99f",
+      "physical_boards_tested": 0,
+      "native_pad_count": 6,
+      "native_copper_layers": 2,
+      "native_thickness_mm": 0.186,
+      "only_terminal_lands_open": true,
+      "native_pin_map": {
+        "1": "CIN",
+        "2": "SHLD"
+      },
+      "shield_transition": true,
+      "checked_pcb_sha256": "8506677c02255953dbdf7a608946d39cacf4e1fdd9044af862da5abeaf360f6a",
+      "native_material_stack_checked": true,
+      "material_stack": [
+        {
+          "Type": "Legend",
+          "Name": "Top Silk Screen"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Top Solder Paste"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "F.Cu"
+        },
+        {
+          "Type": "Dielectric",
+          "Thickness": 0.1,
+          "Material": "Polyimide",
+          "Name": "F.Cu/B.Cu",
+          "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+        },
+        {
+          "Type": "Copper",
+          "Thickness": 0.018,
+          "Name": "B.Cu"
+        },
+        {
+          "Type": "SolderMask",
+          "Thickness": 0.025,
+          "Material": "Polyimide coverlay including adhesive",
+          "Name": "Coverlay"
+        },
+        {
+          "Type": "SolderPaste",
+          "Name": "Bottom Solder Paste"
+        },
+        {
+          "Type": "Legend",
+          "Name": "Bottom Silk Screen"
+        }
+      ],
+      "files_sha256": {
+        "k1_ref_flex-B_Mask.gbs": "37638fd7b393af2d14af402283dc19169f8bd84487db862e48c3d9fafe07d3a7",
+        "k1_ref_flex.drl": "ecaf9bf4ea38f4a48b9d75d3cf3bf9bdbb2ff76803d0c169a9dd04c9ecb90efa",
+        "k1_ref_flex-F_Cu.gtl": "7b63f40cbd2908cb39192dd5184e89ea83583105c7d9105755c767a317716a9a",
+        "k1_ref_flex-B_Cu.gbl": "1f3f7596953c4549e53cb90099b54de84ee33d42adb839f533055f1cda9b93cb",
+        "k1_ref_flex-job.gbrjob": "4ced7542fd77a9131b9b3ce4168a6e511c17e3084ebe5aba8b8b71aa9c37c510",
+        "k1_ref_flex-Edge_Cuts.gm1": "4c36fba009c7cefe8e55b06dffb91452e8223612876091e6d8bc0243412f978a",
+        "k1_ref_flex-F_Mask.gts": "d4544ee9aa71ddcde77f998918f590df55ce11b3f1c1052796d8c62385a4b0ed"
+      },
+      "status": "Native copper, terminations and material stack checked; formed fit and physical qualification remain"
+    }
+  ],
+  "passed": true,
+  "physical_boards_tested": 0,
+  "limits": "Native board and fabrication contract checks; not installed fit, material capability, capacitance, force or contact qualification."
+}

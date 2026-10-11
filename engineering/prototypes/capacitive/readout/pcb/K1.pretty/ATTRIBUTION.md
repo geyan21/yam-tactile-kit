@@ -1,0 +1,1 @@
+Library components: KiCad library contributors, CC BY-SA 4.0 with the KiCad Libraries Exception. Original paths and hashes are in the board metadata. Local changes are reference/value fields, mask margin and removal of external 3D paths. Wire ports and mounting holes are authored for this MIT-licensed kit.

@@ -12,7 +12,12 @@ document.getElementById("page").addEventListener("load",async()=>{
     const plans=[[w.ENGINEERING.r1,""],[w.ENGINEERING.l1,"l1/"],[w.ENGINEERING.b1,"b1/"],
       ...Object.entries(w.ENGINEERING.prototypes).map(([id,plan])=>[plan,`prototypes/${id}/`])];
     const expectedLinks=new Set(plans.flatMap(([plan,prefix])=>plan.parts.flatMap(part=>
-      [part.step,part.stl].map(name=>"downloads/"+prefix+name))));
+      [part.step,part.stl].map(name=>"downloads/"+prefix+name).map(href=>w.KIT_HOSTED_LINKS?.[href]||href))));
+    if(new URLSearchParams(location.search).get("hosted")==="1"){
+      check("hosted dynamic CAD links use immutable source URLs",
+        Object.entries(w.KIT_HOSTED_LINKS||{}).some(([key,value])=>key.startsWith("downloads/prototypes/")&&
+          /^https:\/\/raw\.githubusercontent\.com\/geyan21\/yam-tactile-kit\/[0-9a-f]{40}\//.test(value)));
+    }
     const actualLinks=[...d.querySelectorAll("#parts-table a")].map(a=>a.getAttribute("href"));
     check("every prototype STEP/STL link is present exactly once",actualLinks.length===expectedLinks.size&&
       new Set(actualLinks).size===expectedLinks.size&&actualLinks.every(link=>expectedLinks.has(link)));
@@ -63,6 +68,11 @@ document.getElementById("page").addEventListener("load",async()=>{
       d.querySelector('[data-layer="pcb"]')?.getAttribute("aria-label")==="B2 single PCB"&&
       d.querySelector('[data-layer="spacer"]')?.getAttribute("aria-label")==="B3 tapered spacers");
     check("all-design campaign is reachable",d.querySelector('.hero a[href="build-all.html"]')!==null);
+    check("K1 six-cell assembly renders",inspect("k1_assembly_reference"));
+    check("K1 flex, plates, stops, covers and supports have separate controls",
+      ["k1_flex","k1_plates","k1_stops","k1_covers","k1_saddles"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
+    check("K1 protected reference case renders",inspect("k1_bank_reference"));
+    check("FB1 guided root assembly renders",inspect("fb1_assembly_reference"));
     const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
     force.value="10";force.dispatchEvent(new w.Event("input"));
     check("load explorer responds to applied force",d.getElementById("load-moment-value").textContent!==moment&&d.getElementById("load-force-value").textContent==="10.0 N");
@@ -99,6 +109,24 @@ document.getElementById("page").addEventListener("load",async()=>{
               {id:"SOFTWARE_ONLY_2",condition_id:"mixed",available:false,reference_n:.2}]},
       "software test fixture — no hardware evidence");
     check("N1 static preview preserves unavailable holds and scope",d.getElementById("result-plot").dataset.reportKind==="nail-static"&&d.getElementById("result-metrics").textContent.includes("1 unavailable")&&d.getElementById("result-metrics").textContent.includes("N1 static means only"));
+    for(const [schema,prediction,kind] of [["yam-fb1-static-validation/1","predicted_n","fb1-static"],
+                                         ["yam-k1-static-validation/1","total_force_n","k1-static"]]){
+      let rejected=false;
+      try{w.EngineeringUI.renderReport({schema,evidence_kind:"simulation_scenarios",trials:[]});}catch(_){rejected=true;}
+      check(kind+": simulated force report is rejected",rejected);
+      w.EngineeringUI.renderReport({schema,evidence_kind:"physical",
+        force_axis:{frame:"source_finger_native",unit_vector:[0,0,1]},
+        trials:[{id:"SOFTWARE_ONLY_1",condition_id:"fixture",available:true,reference_n:20,[prediction]:19.9},
+                {id:"SOFTWARE_ONLY_2",condition_id:"fixture",available:false,reference_n:.2}]},
+        "software test fixture — no hardware evidence");
+      check(kind+": static preview preserves unavailable holds",
+        d.getElementById("result-plot").dataset.reportKind===kind&&d.querySelectorAll("#result-plot circle").length===1&&
+        d.getElementById("result-metrics").textContent.includes("1 unavailable"));
+    }
+    let missingAxisRejected=false;
+    try{w.EngineeringUI.renderReport({schema:"yam-k1-static-validation/1",evidence_kind:"physical",trials:[]});}
+    catch(_){missingAxisRejected=true;}
+    check("K1 preview rejects an undeclared force axis",missingAxisRejected);
     let contactRejected=false;
     try{w.EngineeringUI.renderReport({schema:"yam-contact-validation/1",evidence_kind:"synthetic",regions:[]});}catch(_){contactRejected=true;}
     check("synthetic contact report is rejected",contactRejected);

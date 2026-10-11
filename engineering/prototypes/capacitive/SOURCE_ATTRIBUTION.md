@@ -1,0 +1,3 @@
+# Original finger geometry
+
+The reference frame/TPU meshes come from [Open-ENPIRE-Gripper](https://github.com/pgeedh/Open-ENPIRE-Gripper), which credits Wenli Xiao's original ENPIRE fingertip and its [MakerWorld profile](https://makerworld.com/en/models/2984746-gripper-finger-for-robot-arm#profileId-3349177). The source repository declares Apache-2.0; its pinned license is copied alongside this notice. Hashes of the exact source geometry used here are retained in the check reports. The original frame and TPU remain reference geometry. The F1 laminate, tails, carrier, forming tools and accompanying studies are new development work in this kit.

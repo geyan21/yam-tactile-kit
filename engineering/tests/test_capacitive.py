@@ -2,6 +2,7 @@
 
 import importlib.util
 import copy
+import json
 from pathlib import Path
 import unittest
 
@@ -16,13 +17,16 @@ protocol_spec.loader.exec_module(protocol)
 
 def packets():
     calibration = [0]*4+[0x4000]*4
-    hello = {"type": "hello", "protocol": "yam-k1/1", "rate_sps": 400, "capdac_enabled": False,
+    boot = "1234567890abcdef-0011223344556677"
+    hello = {"type": "hello", "protocol": protocol.PROTOCOL, "boot_id": boot, "timing": dict(protocol.TIMING),
+             "rate_sps": 400, "capdac_enabled": False,
              "raw_pF_divisor": 524288, "health_lsb_v": .000125,
              "force_calibrated": False, "contact_calibrated": False,
              "banks": [{"bank": i, "sites": list(sites), "i2c_id": i, "sda_gpio": i*2, "scl_gpio": i*2+1}
                        for i, sites in enumerate(protocol.BANK_SITES)],
              "startup": [{"bank": i, "ready": True, "calibration_words": calibration[:]} for i in range(2)]}
-    sample = {"type": "sample", "protocol": "yam-k1/1", "seq": 0, "device_us": 0, "scan_us": 16000, "banks": []}
+    sample = {"type": "sample", "protocol": protocol.PROTOCOL, "boot_id": boot,
+              "seq": 0, "device_us": 0, "scan_us": 16000, "banks": []}
     for i in range(2):
         bank = {"bank": i, "errors": [], "calibration_words": calibration[:], "fdc": [], "health": [],
                 "fdc_us": [3000, 6500, 10000, 13500], "health_us": [3100, 6600, 10100, 13600]}
@@ -264,6 +268,43 @@ class ProtocolTests(unittest.TestCase):
         sample["banks"][0]["fdc"][0]["raw"] = True
         with self.assertRaises(ValueError):
             decoder.accept(sample)
+
+    def test_repeated_hello_preserves_gap_tracking(self):
+        hello, sample = packets()
+        decoder = protocol.Decoder(); decoder.accept(hello); decoder.accept(sample)
+        self.assertFalse(decoder.accept(hello)["restarted"])
+        later = copy.deepcopy(sample)
+        later.update(seq=2, device_us=40000)
+        result = decoder.accept(later)
+        self.assertFalse(result["complete_finger_available"])
+        self.assertIn("acquisition_gap", result["cells"][0]["faults"])
+
+    def test_reboot_and_changed_startup_are_not_silent_resynchronization(self):
+        hello, sample = packets()
+        decoder = protocol.Decoder(); decoder.accept(hello); decoder.accept(sample)
+        changed = copy.deepcopy(hello)
+        changed["startup"][0]["calibration_words"][4] += 1
+        with self.assertRaises(ValueError):
+            decoder.accept(changed)
+        new_boot = "abcdefabcdefabcd-7766554433221100"
+        hello["boot_id"] = sample["boot_id"] = new_boot
+        self.assertTrue(decoder.accept(hello)["restarted"])
+        result = decoder.accept(sample)
+        self.assertFalse(result["complete_finger_available"])
+        self.assertIn("device_restarted", result["cells"][0]["faults"])
+
+    def test_boot_identity_required_and_old_protocol_rejected(self):
+        hello, sample = packets()
+        decoder = protocol.Decoder(); decoder.accept(hello)
+        for change in ({"boot_id": "different"}, {"protocol": "yam-k1/1"}):
+            bad = dict(sample, **change)
+            with self.assertRaises(ValueError):
+                decoder.accept(bad)
+
+    def test_timing_matches_the_firmware_configuration(self):
+        cfg = json.loads((ROOT / "engineering/firmware/capacitive/config.json").read_text())
+        self.assertEqual(cfg["protocol"], protocol.PROTOCOL)
+        self.assertEqual({key: cfg[key] for key in protocol.TIMING}, protocol.TIMING)
 
 
 if __name__ == "__main__":

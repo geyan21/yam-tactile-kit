@@ -1,0 +1,3777 @@
+{
+  "schema": "yam-k1-installed-cell-fit/1",
+  "physical_specimens_tested": 0,
+  "sites_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "checks": [
+    {
+      "a": "CH0_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.2359996123555704,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.2902509940487334,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 2.220446049250313e-15,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.8389661696568567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.8489911591519785,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.05931219287686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.059312192486857,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.23000291517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.969382915953,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.9693829169970005,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.119382918228,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.619382918228,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.98508748130341,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.633480877642754,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.654859486085726,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.827361033046856,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.214412081846774,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.61025256079685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.12728653783543,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.192213432426854,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.41213556989686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 36.77324660992268,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.088056568526774,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.13803649481521,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.22008844153663,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.45304516688686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 51.850177581076856,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 61.91565228261686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.11493019088573,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.07348502787332,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 67.50600272786686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.36074162335686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "CH1_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.2599999994779978,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "CH2_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.102490570366854,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "CH3_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.64025089113686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "CH4_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.23667675677686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH0_retained_cell",
+      "b": "CH5_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 61.62833687228358,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499999999980615,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379999999804635,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999872288,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379999999870863,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999822294,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379999999820867,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999785985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379999999784471,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999651573,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499999999967626,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.149999999998213,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999780958,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_cover_bond_4",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999719818,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 9.319782108600358e-12,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_retained_plate",
+      "b": "k1_ch0_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 1.878150453116532e-12,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.318181233639084,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.3181812339000007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408301876891,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588780876894,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408300576897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588779576885,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.1548239371768858,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15100441617688887,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 4.795711131966352e-13,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999999999775021,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.4181812336390838,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282597476837,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282595968,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_cover_bond_4",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.46718016787689,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_0",
+      "b": "k1_ch0_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9999999979100007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15482393697681118,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15100441597680003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408300276849,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588779276852,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408298976854,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588777976843,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2818187640100014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2818187636100014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 9.774823175191134e-13,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.381818764010001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999999999665171,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282595876795,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282594367957,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_ground_bond_1",
+      "b": "k1_ch0_cover_bond_4",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.467180166276847,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.23599958522877418,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.290250997148746,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.2299954677289975,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.959505466865336,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.959505466608082,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.609505462508009,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.109505462508009,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 1.8207657603852567e-14,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.8389661696468664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.848991159146877,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.059312192876874,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.059312192486871,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.985087484403422,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.633480880742766,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.65485948918574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.82736103614687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.214412084946787,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.610252563896864,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.127286540935444,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.19221343552687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.412135572996874,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 36.77324661302269,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.08805657162679,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.13803649791522,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.220088444636644,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.45304516998687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 51.85017758417687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 61.915652285716874,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.11493019398574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.07348503097333,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 67.50600273096687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.36074162645687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "CH2_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.102490573466866,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "CH3_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.64025089423687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "CH4_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.23667675987687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH1_retained_cell",
+      "b": "CH5_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 61.628336875383596,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999991795,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379999999990369,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.15000000000015018,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07380000000013592,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.15000000000024244,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.0738000000002273,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999937896,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07380000000037704,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999707384,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999720534,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999645258,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999809804,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_cover_bond_4",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999999999743752,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 1.1724452273914784e-11,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_retained_plate",
+      "b": "k1_ch1_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 4.268626973860784e-12,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15482393709999087,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15100441609999393,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2733833477010004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2733833479619996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408301397858,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.08058878039786,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408300099952,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588779099955,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 2.6640544151291183e-12,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999999999605942,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.3733833477009996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282596998301,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.445746401095377,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_cover_bond_4",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.18428259549998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_0",
+      "b": "k1_ch1_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.999999997912484,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.326616649950484,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.3266166495524834,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15482393697685382,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15100441597684267,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408299874752,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.080588778874755,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.084408298576847,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.08058877757685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 2.6860606544066303e-13,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.4266166499504838,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.10000000000172594,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282595475196,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.445746399572272,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_ground_bond_1",
+      "b": "k1_ch1_cover_bond_4",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.184282593976874,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.88491942602216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.5811852308776402,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.2466981038100045,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.258527591420005,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.256021344045166,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.616120317250008,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.616120317640011,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.246698106915474,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.25852759452998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.256021347150011,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.616120320350021,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.616120320743789,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 4.192931962025256e-06,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.348601601909991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.86563557894857,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.930562473539993,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.15048461101,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.511595651035819,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.826405609639913,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.87638553592835,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.95843748264977,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.191394208,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.588526622189995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.65400132373,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.853279231998876,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.81183406898645,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.244351768979996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.09909066447,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "CH3_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.3785999322499976,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "CH4_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.975025797889998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH2_retained_cell",
+      "b": "CH5_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.36668591339672,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499991322899679,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379957308097422,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499976307333241,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379883432177073,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499976307333241,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379883432177073,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499991322899679,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379957308097422,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999914324643626,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499976307333241,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.1499976307333241,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999914324643626,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_retained_plate",
+      "b": "k1_ch2_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.8698357539199861,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.8585959597299961,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.0999994987694498,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.9528327776199887,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_0",
+      "b": "k1_ch2_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.0532749124699876,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.6830280009799878,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.6862839456999978,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.76817657142999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999936151250753,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_ground_bond_1",
+      "b": "k1_ch2_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.4517742897968895,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.434665483691185,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.78445842458001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.79628791219001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.79378166481517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.153880638020013,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.153880638410016,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.78445842768548,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.796287915299985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.793781667920015,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.153880641120026,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.153880641513794,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.305334133329879,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.703343379019955,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.781204569560003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.43587203336996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.009939038690007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 5.074410700178821e-06,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.681312699783816,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.7253046954784725,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.679706259349887,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.409462227208259,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.806594641398256,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.87206934293826,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.071347251207136,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.02990208819471,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.462419788188257,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.317158683678258,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "CH4_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.2668671968102485,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH3_retained_cell",
+      "b": "CH5_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.584753932604983,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999829207989443,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379915970297056,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999930097334702,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379965607820382,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999930097334702,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379965607820382,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999829207989443,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379915970297056,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999829207989443,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999930097419992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999930097419992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999829207989443,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_retained_plate",
+      "b": "k1_ch3_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2999456258870055,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.3275149484375106,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999896671041114,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.3923979476799957,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_0",
+      "b": "k1_ch3_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.859589642609997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.111261387067124,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.0737960388199994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.2117059443599985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999981600040016,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_ground_bond_1",
+      "b": "k1_ch3_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.8287756820793897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.4801164475486146,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.38088429022001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.39271377783001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.39020753045517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.75030650366001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.750306504050016,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.38088429332548,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.392713780939985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.390207533560016,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.750306506760026,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.750306507153795,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.90175999896988,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.299769244659956,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.377630435200004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.03229789900996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.606364904330007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.130705602751578,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.806254352399362,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.961837602967023,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.101483733954362,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.239676836226362,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 6.944124540587923e-05,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.6369116397596315,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.836189548028507,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.794744385016081,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.227262085009627,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.082000980499629,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH4_retained_cell",
+      "b": "CH5_retained_cell",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.3495962294263535,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999966382974572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379983460142567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999948983616582,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379974899587778,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999948983616582,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379974899587778,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999966382974572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379983460142567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999966382974572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999947300338676,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999947300338676,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999966382974572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_retained_plate",
+      "b": "k1_ch4_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.7506530263100046,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.7646058298495504,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.0999997758861979,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.8404556921000008,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_0",
+      "b": "k1_ch4_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.332850585467895,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.0996179137178927,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.07557045750265,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.1872139553378886,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.0999998637083102,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_ground_bond_1",
+      "b": "k1_ch4_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.6261678227367096,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.424383453851351,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch0_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.772544405726734,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch0_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.784373893336735,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.781867645961896,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch0_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.14196661916674,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch0_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.14196661955674,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.7725444088322,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.78437389644671,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.78186764906674,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.14196662226675,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.14196662266052,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.2934201144766,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.69142936016668,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.76929055070673,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.423958014516685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.99802501983673,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.051836723816727,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.730540690916726,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.69912229250386,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.635469054016724,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.328069151346725,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.2861249541163957,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.333279217786725,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.323102031722392,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.692875436666725,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.304235966976727,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch5_foil",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 2.901114869305e-05,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.9000000000000004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "CH5_retained_cell",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.1,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_0_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999962936825897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379981764659063,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_1_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999546731892807,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379776992006351,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_2_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999546731892807,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379776992006351,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_3_bond",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999962936825897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_stop_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.07379981764659063,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999962936825897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999546731892807,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_cover_bond_2",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999546731892807,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_cover_bond_3",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14999962936825897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_ground_bond_0",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_retained_plate",
+      "b": "k1_ch5_ground_bond_1",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.5994520773983623,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.6278768573074023,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_cover_bond_0",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.09999994479751902,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_cover_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.6832481569563622,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_0",
+      "b": "k1_ch5_ground_bond_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.110810841471362,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_0_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.985270711253,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.9424389479238395,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_1_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.15000000000000036,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_2_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_3_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_stop_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.549999999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_vented_cover",
+      "method": "OpenCascade_distance_and_common",
+      "distance_mm": 0.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_cover_bond_0",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.068789773653,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_cover_bond_1",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.0999998657152377,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_cover_bond_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_ground_bond_1",
+      "b": "k1_ch5_cover_bond_3",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.65,
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed_declared_checks": true,
+  "source_hard_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "input_sha256": {
+    "engineering/scripts/check_capacitive_assembly.py": "362f10143ed0430fb5d55c093ec7da1e95ae3d942b93d400c42bf16052a594bf",
+    "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/report.json": "59f76ed43e016f71287a566ae54dceea297f751476b40e8392dfb571c50513f4",
+    "build/engineering/prototypes/capacitive/foil_fit/20261011T214927.820498Z/report.json": "5de7a0cf3e06882844764e417d19ed04959201749ecf8cf4f8b9d34b4e299d65",
+    "engineering/scripts/check_f1_tail_fit.py": "07d1eb56dc93c007ec7e17480a5fc499f674b37d86031704f7815b4340d659e2"
+  },
+  "limits": [
+    "Nominal unloaded source geometry only; no moving jaw, loaded TPU or real fabrication tolerances.",
+    "Known stop/bond film layers and foot pieces are defined by separate source-chart intervals; their plate/cover ports are checked here.",
+    "The separate lip/stop review covers nominal full-stroke rigid-plate motion.",
+    "A reference cell is checked in its electronics case, separately from these six finger cells."
+  ]
+}

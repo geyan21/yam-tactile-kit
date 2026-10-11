@@ -1,0 +1,12 @@
+(version 1)
+(rule "K1 clearance" (constraint clearance (min 0.2mm)))
+(rule "K1 copper edge" (constraint edge_clearance (min 0.25mm)))
+(rule "K1 width" (constraint track_width (min 0.2mm)))
+(rule "K1 minimum drill" (constraint hole_size (min 0.25mm)))
+(rule "K1 drill separation" (constraint hole_to_hole (min 0.25mm)))
+# Stock MSOP-10 package lands: 0.35 mm pads on 0.5 mm pitch.
+# This exception is only pad-to-pad within the same U1/U2 package.
+# Track-to-pad, track-to-track and all other clearances remain 0.20 mm.
+(rule "K1 native package pad spacing"
+ (condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('U1') && B.memberOfFootprint('U1')) || (A.memberOfFootprint('U2') && B.memberOfFootprint('U2')))")
+ (constraint clearance (min 0.15mm)))

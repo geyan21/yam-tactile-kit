@@ -1,0 +1,40 @@
+{
+  "schema": "yam-k1-force-trials/1",
+  "evidence_kind": "unmeasured_template",
+  "phase": "train",
+  "specimen": "K1-REPLACE",
+  "session_id": "REPLACE-independent-bench-session",
+  "geometry_sha256": null,
+  "reference_id": null,
+  "reference_uncertainty_n": null,
+  "force_axis": {"frame": "source_finger_native", "unit_vector": null},
+  "minimum_holds_per_level": 3,
+  "transfer_experiment": false,
+  "required_conditions": [
+    {"condition_id": "left_nail", "region": "left_nail", "sites": ["CH0"]},
+    {"condition_id": "right_nail", "region": "right_nail", "sites": ["CH1"]},
+    {"condition_id": "left_nail_edge", "region": "nail_edges_notch", "sites": ["CH0"]},
+    {"condition_id": "right_nail_edge", "region": "nail_edges_notch", "sites": ["CH1"]},
+    {"condition_id": "distal_tpu", "region": "distal_tpu", "sites": ["CH2"]},
+    {"condition_id": "middle_distal_tpu", "region": "middle_tpu", "sites": ["CH3"]},
+    {"condition_id": "middle_proximal_tpu", "region": "middle_tpu", "sites": ["CH4"]},
+    {"condition_id": "proximal_tpu", "region": "proximal_tpu", "sites": ["CH5"]},
+    {"condition_id": "both_nails", "region": "mixture", "sites": ["CH0", "CH1"]},
+    {"condition_id": "two_tpu_regions", "region": "mixture", "sites": ["CH2", "CH3"]},
+    {"condition_id": "nail_and_tpu", "region": "mixture", "sites": ["CH0", "CH4"]}
+  ],
+  "instructions": "No measurements are supplied. Declare the same gripper-force axis for all cells, as a unit vector giving force on the finger in its native CAD frame. Reference readings are components along this axis, not each curved cell's local normal-force magnitude. Train each cell separately at 0, 0.2, 0.5, 1, 2, 5, 10, 15 and actual at least 20 N. Use at least three independent holds per level. Each test condition needs the same coverage in a new bench session. Sites identify planned loading locations, including during zero-force baseline; they are not contact-classification ground truth. Use additional conditions for probe area, loading/unloading and environmental changes. Electronic fixed-capacitor tests cannot be labeled tactile evidence.",
+  "trials": [
+    {
+      "id": "REPLACE",
+      "condition_id": "left_nail",
+      "region": "left_nail",
+      "sites": ["CH0"],
+      "recording": "recordings/REPLACE.jsonl",
+      "recording_sha256": null,
+      "window_host_s": [2, 12],
+      "reference_before_n": null,
+      "reference_after_n": null
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 """K1 raw decoding with acquisition, supply and ground-return checks."""
 
-PROTOCOL = "yam-k1/1"
+PROTOCOL = "yam-k1/2"
+TIMING = {"rate_sps": 400, "bus_hz": 400000, "quiet_us": 3000,
+          "conversion_timeout_us": 15000, "minimum_frame_us": 20000, "hello_period_frames": 50}
 BANK_SITES = ((0, 2, 3), (1, 4, 5))
 MEASURE = (0x0C00, 0x2C00, 0x4C00, 0x7C00)
 
@@ -16,14 +18,20 @@ class Decoder:
         self.startup = None
         self.last_sequence = None
         self.last_time = None
+        self.boot_id = None
+        self.restarted = False
 
     def accept(self, packet):
         if not isinstance(packet, dict) or packet.get("protocol") != PROTOCOL:
             raise ValueError("Not a K1 packet")
+        boot = packet.get("boot_id")
+        if not isinstance(boot, str) or not 12 <= len(boot) <= 80 or any(c not in "0123456789abcdef-" for c in boot):
+            raise ValueError("Missing K1 boot identity")
         if packet.get("type") == "hello":
             if (packet.get("rate_sps") != 400 or packet.get("capdac_enabled") is not False
                     or packet.get("raw_pF_divisor") != 524288 or packet.get("health_lsb_v") != .000125
-                    or packet.get("force_calibrated") is not False or packet.get("contact_calibrated") is not False):
+                    or packet.get("force_calibrated") is not False or packet.get("contact_calibrated") is not False
+                    or packet.get("timing") != TIMING):
                 raise ValueError("Unreviewed K1 acquisition configuration")
             identity = packet.get("banks")
             if not isinstance(identity, list) or len(identity) != 2 or [b.get("sites") for b in identity] != [list(s) for s in BANK_SITES]:
@@ -46,12 +54,20 @@ class Decoder:
                         integer(value, 0, 65535, "calibration word")
                     if any(value == 0 for value in words[4:]):
                         raise ValueError("Degenerate converter gain")
-            self.startup = [{"bank": row["bank"], "ready": row["ready"],
+            observed_startup = [{"bank": row["bank"], "ready": row["ready"],
                              "calibration_words": list(row["calibration_words"]) if row["calibration_words"] is not None else None}
                             for row in startup]
-            self.last_sequence = self.last_time = None
-            return {"type": "hello", "protocol": PROTOCOL, "raw": packet}
-        if packet.get("type") != "sample" or self.startup is None:
+            restarted = self.boot_id is not None and self.boot_id != boot
+            if self.boot_id == boot:
+                if self.startup != observed_startup:
+                    raise ValueError("K1 startup identity changed without a new boot")
+            else:
+                self.startup = observed_startup
+                self.last_sequence = self.last_time = None
+                self.restarted = restarted
+                self.boot_id = boot
+            return {"type": "hello", "protocol": PROTOCOL, "boot_id": boot, "restarted": restarted, "raw": packet}
+        if packet.get("type") != "sample" or self.startup is None or boot != self.boot_id:
             raise ValueError("A K1 hello must precede samples")
         seq = integer(packet.get("seq"), 0, 2**63-1, "sequence")
         timestamp = integer(packet.get("device_us"), 0, 2**63-1, "timestamp")
@@ -116,6 +132,8 @@ class Decoder:
                 reasons.append("reference_unavailable")
             if gap:
                 reasons.append("acquisition_gap")
+            if self.restarted:
+                reasons.append("device_restarted")
             for slot, site in enumerate(BANK_SITES[index]):
                 faults = list(reasons)
                 if volts[slot+1] is None or abs(volts[slot+1]) > .005:
@@ -133,7 +151,9 @@ class Decoder:
                               "contact": None, "force_n": None})
             reports.append({"bank": index, "supply_v": volts[0], "faults": sorted(set(reasons))})
         self.last_sequence, self.last_time = seq, timestamp
+        self.restarted = False
         return {"type": "sample", "protocol": PROTOCOL, "seq": seq, "device_us": timestamp,
+                "boot_id": boot,
                 "scan_us": span, "cells": sorted(cells, key=lambda c: c["site"]), "banks": reports,
                 "complete_finger_available": all(c["available"] for c in cells),
                 "availability_scope": "Acquisition/configuration, supply/ground loops and coarse capacitance plausibility; no tactile qualification",

@@ -1,0 +1,6250 @@
+{
+  "schema": "yam-k1-assembly-screen/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "engineering/designs/capacitive_cell_mechanics.json": "679b530e7230324593e1b5e0f1585a577823ba6a4c71fe3dfe6ece26ed60e558",
+    "engineering/designs/capacitive_assembly_screen.json": "b02df31ea2b96115bc176e29d880e8de9d6c554263ba68e9b555b14b050df34b",
+    "engineering/designs/capacitive_harness.json": "c2a35594b86cf5a845036e55ae9501518fa495282c301ad241168a8dda127818",
+    "engineering/scripts/screen_capacitive_assembly.py": "37040f353b348cb128ac191e5f4c561ad8de4d17e6ab4baf571f217468fa0599",
+    "build/engineering/prototypes/capacitive/foil_runs/20261011T210432.796205Z/report.json": "ade6ea0ea986df2a8d647decde4b1b88444770ad6f3ee1932111e433824ae665",
+    "engineering/scripts/screen_capacitive_k1.py": "0e002cd6f173cbf318330fa7e3ea324e3227243bc9fb146af6c8c1f406869fed",
+    "engineering/scripts/capacitive_geometry.py": "36376d2b9e9be0097546f182e50b6abd8efc5da980631e3254ac24d81143bb69"
+  },
+  "foil_area_bounds": {
+    "CH0": {
+      "whole_foil_area_mm2_bound": 134.49432037785
+    },
+    "CH1": {
+      "whole_foil_area_mm2_bound": 133.92358417330001
+    },
+    "CH2": {
+      "whole_foil_area_mm2_bound": 198.92822
+    },
+    "CH3": {
+      "whole_foil_area_mm2_bound": 240.6122
+    },
+    "CH4": {
+      "whole_foil_area_mm2_bound": 198.14341
+    },
+    "CH5": {
+      "whole_foil_area_mm2_bound": 306.79324999999994
+    },
+    "REF": {
+      "whole_foil_area_mm2_bound": 177.6
+    }
+  },
+  "shield": [
+    {
+      "bank": 0,
+      "actual_whole_foil_area_mm2_bound": 751.63474037785,
+      "cable_length_m_bound": 0.475,
+      "cable_capacitance_pf_bound": 47.025,
+      "nominal_total_pf_screen": 293.29891536964215,
+      "minimum_core_max_permittivity_pf_screen": 348.8887008064746,
+      "below_joined_shield_planning_limit": true,
+      "scope": "Grounded-CIN parallel-plate bound using the complete foil outlines, plus maximum-length specified cable and a board allowance; not a measured network."
+    },
+    {
+      "bank": 1,
+      "actual_whole_foil_area_mm2_bound": 816.4602441733,
+      "cable_length_m_bound": 0.475,
+      "cable_capacitance_pf_bound": 47.025,
+      "nominal_total_pf_screen": 312.81413968222813,
+      "minimum_core_max_permittivity_pf_screen": 373.19832278755064,
+      "below_joined_shield_planning_limit": true,
+      "scope": "Grounded-CIN parallel-plate bound using the complete foil outlines, plus maximum-length specified cable and a board allowance; not a measured network."
+    }
+  ],
+  "uniform_cases": [
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.06261778707148948,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.088061041401206,
+      "delta_at_0p2n_pf": 0.03798028479225746,
+      "planning_signal_in_resolution_steps": 75.96056958451491,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.061619612873404075,
+      "cover_force_20n_n": 0.6161961287340407,
+      "capacitance_20n_pf": 8.002410054214275,
+      "delta_at_0p2n_pf": 0.035876323498369445,
+      "planning_signal_in_resolution_steps": 71.75264699673889,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.057662651347642646,
+      "cover_force_20n_n": 2.883132567382132,
+      "capacitance_20n_pf": 7.678854960524992,
+      "delta_at_0p2n_pf": 0.029359663534366476,
+      "planning_signal_in_resolution_steps": 58.71932706873295,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.048799908793558486,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 7.035944714365052,
+      "delta_at_0p2n_pf": 0.024458697772774762,
+      "planning_signal_in_resolution_steps": 48.917395545549525,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.04806257768445086,
+      "cover_force_20n_n": 0.4806257768445086,
+      "capacitance_20n_pf": 6.986970602363842,
+      "delta_at_0p2n_pf": 0.023566398475988848,
+      "planning_signal_in_resolution_steps": 47.132796951977696,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.04520646983223104,
+      "cover_force_20n_n": 2.260323491611552,
+      "capacitance_20n_pf": 6.803134832506677,
+      "delta_at_0p2n_pf": 0.020563307248478324,
+      "planning_signal_in_resolution_steps": 41.12661449695665,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.025584891879748942,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 5.750530488816264,
+      "delta_at_0p2n_pf": 0.010029359989610853,
+      "planning_signal_in_resolution_steps": 20.058719979221706,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.025321134169466818,
+      "cover_force_20n_n": 0.2532113416946682,
+      "capacitance_20n_pf": 5.738475101684097,
+      "delta_at_0p2n_pf": 0.009875595544905025,
+      "planning_signal_in_resolution_steps": 19.75119108981005,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.024306936334312943,
+      "cover_force_20n_n": 1.2153468167156474,
+      "capacitance_20n_pf": 5.692560087917173,
+      "delta_at_0p2n_pf": 0.009304882416478755,
+      "planning_signal_in_resolution_steps": 18.60976483295751,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0030566607568161485,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 4.868619350919815,
+      "delta_at_0p2n_pf": 0.001003013645338946,
+      "planning_signal_in_resolution_steps": 2.006027290677892,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0030520923381993467,
+      "cover_force_20n_n": 0.03052092338199347,
+      "capacitance_20n_pf": 4.868466612630125,
+      "delta_at_0p2n_pf": 0.0010014513758784815,
+      "planning_signal_in_resolution_steps": 2.002902751756963,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0030339515705874788,
+      "cover_force_20n_n": 0.15169757852937393,
+      "capacitance_20n_pf": 4.8678601926865745,
+      "delta_at_0p2n_pf": 0.0009952506538422057,
+      "planning_signal_in_resolution_steps": 1.9905013076844114,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.001033047901926648,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 4.801841140032297,
+      "delta_at_0p2n_pf": 0.0003343397637474155,
+      "planning_signal_in_resolution_steps": 0.668679527494831,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0010325182693898705,
+      "cover_force_20n_n": 0.010325182693898705,
+      "capacitance_20n_pf": 4.80182388997644,
+      "delta_at_0p2n_pf": 0.00033416597182167607,
+      "planning_signal_in_resolution_steps": 0.6683319436433521,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "posts": 68,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.001030405121216993,
+      "cover_force_20n_n": 0.051520256060849645,
+      "capacitance_20n_pf": 4.801755066213564,
+      "delta_at_0p2n_pf": 0.0003334726070063354,
+      "planning_signal_in_resolution_steps": 0.6669452140126708,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.06455137935179302,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.06708972643807,
+      "delta_at_0p2n_pf": 0.0393062426773918,
+      "planning_signal_in_resolution_steps": 78.6124853547836,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": true
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.06352209214776881,
+      "cover_force_20n_n": 0.635220921477688,
+      "capacitance_20n_pf": 7.978028082651899,
+      "delta_at_0p2n_pf": 0.037001791125397254,
+      "planning_signal_in_resolution_steps": 74.00358225079451,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.059424331384695876,
+      "cover_force_20n_n": 2.971216569234794,
+      "capacitance_20n_pf": 7.640925213380228,
+      "delta_at_0p2n_pf": 0.029962109310373464,
+      "planning_signal_in_resolution_steps": 59.92421862074693,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.05065426071480119,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 7.002102803273518,
+      "delta_at_0p2n_pf": 0.025313087598767936,
+      "planning_signal_in_resolution_steps": 50.62617519753587,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.04987897892196786,
+      "cover_force_20n_n": 0.4987897892196786,
+      "capacitance_20n_pf": 6.950418895749023,
+      "delta_at_0p2n_pf": 0.02433444243132321,
+      "planning_signal_in_resolution_steps": 48.66888486264642,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.04686888127766107,
+      "cover_force_20n_n": 2.3434440638830534,
+      "capacitance_20n_pf": 6.7563516193077815,
+      "delta_at_0p2n_pf": 0.021072778503683054,
+      "planning_signal_in_resolution_steps": 42.14555700736611,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.02686808226970414,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 5.687825377739709,
+      "delta_at_0p2n_pf": 0.01037991326133536,
+      "planning_signal_in_resolution_steps": 20.75982652267072,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.026580878226507152,
+      "cover_force_20n_n": 0.26580878226507154,
+      "capacitance_20n_pf": 5.674809546059355,
+      "delta_at_0p2n_pf": 0.010211013199399765,
+      "planning_signal_in_resolution_steps": 20.42202639879953,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.025477259871553165,
+      "cover_force_20n_n": 1.2738629935776582,
+      "capacitance_20n_pf": 5.625313567146724,
+      "delta_at_0p2n_pf": 0.00958692284610052,
+      "planning_signal_in_resolution_steps": 19.17384569220104,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0032435138839852105,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 4.7777875806943815,
+      "delta_at_0p2n_pf": 0.0010380842915891364,
+      "planning_signal_in_resolution_steps": 2.076168583178273,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0032383770217182914,
+      "cover_force_20n_n": 0.03238377021718292,
+      "capacitance_20n_pf": 4.777619907148312,
+      "delta_at_0p2n_pf": 0.0010363665327668414,
+      "planning_signal_in_resolution_steps": 2.072733065533683,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0032179876631091065,
+      "cover_force_20n_n": 0.16089938315545532,
+      "capacitance_20n_pf": 4.776954483539504,
+      "delta_at_0p2n_pf": 0.0010295519602490089,
+      "planning_signal_in_resolution_steps": 2.0591039204980177,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.001097138919558016,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 4.708688474677277,
+      "delta_at_0p2n_pf": 0.00034603035167268814,
+      "planning_signal_in_resolution_steps": 0.6920607033453763,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0010965418089143363,
+      "cover_force_20n_n": 0.010965418089143364,
+      "capacitance_20n_pf": 4.708669516215367,
+      "delta_at_0p2n_pf": 0.0003458392482267314,
+      "planning_signal_in_resolution_steps": 0.6916784964534628,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "posts": 64,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0010941598038181177,
+      "cover_force_20n_n": 0.054707990190905886,
+      "capacitance_20n_pf": 4.7085938882047085,
+      "delta_at_0p2n_pf": 0.00034507694046670423,
+      "planning_signal_in_resolution_steps": 0.6901538809334085,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.04220911383145787,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 12.280073171343632,
+      "delta_at_0p2n_pf": 0.036488706627844536,
+      "planning_signal_in_resolution_steps": 72.97741325568907,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.041610098171221264,
+      "cover_force_20n_n": 0.41610098171221266,
+      "capacitance_20n_pf": 12.213599993274457,
+      "delta_at_0p2n_pf": 0.03541482293093523,
+      "planning_signal_in_resolution_steps": 70.82964586187046,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.03930415119184847,
+      "cover_force_20n_n": 1.9652075595924234,
+      "capacitance_20n_pf": 11.96386067987312,
+      "delta_at_0p2n_pf": 0.03168308074535631,
+      "planning_signal_in_resolution_steps": 63.366161490712614,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.03065931534168686,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 11.1070730351117,
+      "delta_at_0p2n_pf": 0.023496475936909178,
+      "planning_signal_in_resolution_steps": 46.992951873818356,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.030299549857998834,
+      "cover_force_20n_n": 0.30299549857998836,
+      "capacitance_20n_pf": 11.073906870676092,
+      "delta_at_0p2n_pf": 0.023045858656209006,
+      "planning_signal_in_resolution_steps": 46.09171731241801,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.028918800904291334,
+      "cover_force_20n_n": 1.4459400452145668,
+      "capacitance_20n_pf": 10.948323349771355,
+      "delta_at_0p2n_pf": 0.02140356637579366,
+      "planning_signal_in_resolution_steps": 42.80713275158732,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.014475149822669224,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 9.779208772185939,
+      "delta_at_0p2n_pf": 0.00963411158296168,
+      "planning_signal_in_resolution_steps": 19.26822316592336,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.014381644532675902,
+      "cover_force_20n_n": 0.14381644532675902,
+      "capacitance_20n_pf": 9.772408009322874,
+      "delta_at_0p2n_pf": 0.009557372848275847,
+      "planning_signal_in_resolution_steps": 19.114745696551694,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.014018104224997774,
+      "cover_force_20n_n": 0.7009052112498887,
+      "capacitance_20n_pf": 9.746051699181061,
+      "delta_at_0p2n_pf": 0.009262253659858999,
+      "planning_signal_in_resolution_steps": 18.524507319717998,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.001590519044666755,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.919377723899649,
+      "delta_at_0p2n_pf": 0.000963445116539674,
+      "planning_signal_in_resolution_steps": 1.926890233079348,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0015892686487280483,
+      "cover_force_20n_n": 0.015892686487280483,
+      "capacitance_20n_pf": 8.919301233626216,
+      "delta_at_0p2n_pf": 0.0009626713947739063,
+      "planning_signal_in_resolution_steps": 1.9253427895478126,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0015842864528569866,
+      "cover_force_20n_n": 0.07921432264284933,
+      "capacitance_20n_pf": 8.918996470863354,
+      "delta_at_0p2n_pf": 0.0009595888937639074,
+      "planning_signal_in_resolution_steps": 1.9191777875278149,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0005339653736951111,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.855184776016873,
+      "delta_at_0p2n_pf": 0.0003211492016159667,
+      "planning_signal_in_resolution_steps": 0.6422984032319334,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0005338233605106823,
+      "cover_force_20n_n": 0.0053382336051068235,
+      "capacitance_20n_pf": 8.855176206488656,
+      "delta_at_0p2n_pf": 0.00032106317989821775,
+      "planning_signal_in_resolution_steps": 0.6421263597964355,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 2,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0005332560596672641,
+      "cover_force_20n_n": 0.02666280298336321,
+      "capacitance_20n_pf": 8.85514197390399,
+      "delta_at_0p2n_pf": 0.0003207195533434515,
+      "planning_signal_in_resolution_steps": 0.641439106686903,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.03441067199874326,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 14.958157592743266,
+      "delta_at_0p2n_pf": 0.03580659679735554,
+      "planning_signal_in_resolution_steps": 71.61319359471108,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.03397530278429707,
+      "cover_force_20n_n": 0.33975302784297073,
+      "capacitance_20n_pf": 14.90241784313586,
+      "delta_at_0p2n_pf": 0.03500959500097167,
+      "planning_signal_in_resolution_steps": 70.01919000194334,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0323046091618244,
+      "cover_force_20n_n": 1.61523045809122,
+      "capacitance_20n_pf": 14.692077414862105,
+      "delta_at_0p2n_pf": 0.03214658249532398,
+      "planning_signal_in_resolution_steps": 64.29316499064797,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.024373244619157845,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 13.7649520492946,
+      "delta_at_0p2n_pf": 0.023056849971935023,
+      "planning_signal_in_resolution_steps": 46.113699943870046,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0241310306417491,
+      "cover_force_20n_n": 0.24131030641749102,
+      "capacitance_20n_pf": 13.738364684232495,
+      "delta_at_0p2n_pf": 0.022723395475248154,
+      "planning_signal_in_resolution_steps": 45.44679095049631,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.023198978453082986,
+      "cover_force_20n_n": 1.1599489226541493,
+      "capacitance_20n_pf": 13.63694722659959,
+      "delta_at_0p2n_pf": 0.021480598063979173,
+      "planning_signal_in_resolution_steps": 42.961196127958345,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.011139651205988366,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 12.441321050870467,
+      "delta_at_0p2n_pf": 0.00945369107393823,
+      "planning_signal_in_resolution_steps": 18.90738214787646,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.011082698947814667,
+      "cover_force_20n_n": 0.11082698947814668,
+      "capacitance_20n_pf": 12.436143653040846,
+      "delta_at_0p2n_pf": 0.00939708664483696,
+      "planning_signal_in_resolution_steps": 18.79417328967392,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.01086012884535502,
+      "cover_force_20n_n": 0.5430064422677511,
+      "capacitance_20n_pf": 12.415949169341287,
+      "delta_at_0p2n_pf": 0.00917728380061078,
+      "planning_signal_in_resolution_steps": 18.35456760122156,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0011960794717639277,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 11.595064281126778,
+      "delta_at_0p2n_pf": 0.0009453925736195856,
+      "planning_signal_in_resolution_steps": 1.8907851472391712,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0011953703199336862,
+      "cover_force_20n_n": 0.011953703199336863,
+      "capacitance_20n_pf": 11.595007811065146,
+      "delta_at_0p2n_pf": 0.0009448230252928624,
+      "planning_signal_in_resolution_steps": 1.8896460505857249,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.001192542034226951,
+      "cover_force_20n_n": 0.05962710171134755,
+      "capacitance_20n_pf": 11.594782598638655,
+      "delta_at_0p2n_pf": 0.0009425516773866605,
+      "planning_signal_in_resolution_steps": 1.885103354773321,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.00040083148697396266,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 11.532063016568836,
+      "delta_at_0p2n_pf": 0.00031513143025563295,
+      "planning_signal_in_resolution_steps": 0.6302628605112659,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.00040075138504961917,
+      "cover_force_20n_n": 0.004007513850496192,
+      "capacitance_20n_pf": 11.53205670329431,
+      "delta_at_0p2n_pf": 0.00031506811806103485,
+      "planning_signal_in_resolution_steps": 0.6301362361220697,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 3,
+      "posts": 176,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.00040043129638922537,
+      "cover_force_20n_n": 0.02002156481946127,
+      "capacitance_20n_pf": 11.532031475406434,
+      "delta_at_0p2n_pf": 0.00031481512346331897,
+      "planning_signal_in_resolution_steps": 0.6296302469266379,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.04220911383145787,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 12.238693328246907,
+      "delta_at_0p2n_pf": 0.03637994094350461,
+      "planning_signal_in_resolution_steps": 72.75988188700921,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.041610098171221264,
+      "cover_force_20n_n": 0.41610098171221266,
+      "capacitance_20n_pf": 12.17240457916053,
+      "delta_at_0p2n_pf": 0.035309256879109796,
+      "planning_signal_in_resolution_steps": 70.61851375821959,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.03930415119184847,
+      "cover_force_20n_n": 1.9652075595924234,
+      "capacitance_20n_pf": 11.92336014955166,
+      "delta_at_0p2n_pf": 0.031588634066912036,
+      "planning_signal_in_resolution_steps": 63.17726813382407,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.03065931534168686,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 11.068981308450741,
+      "delta_at_0p2n_pf": 0.023426426268017053,
+      "planning_signal_in_resolution_steps": 46.852852536034106,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.030299549857998834,
+      "cover_force_20n_n": 0.30299549857998836,
+      "capacitance_20n_pf": 11.035909194377734,
+      "delta_at_0p2n_pf": 0.0229771520215305,
+      "planning_signal_in_resolution_steps": 45.954304043061,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.028918800904291334,
+      "cover_force_20n_n": 1.4459400452145668,
+      "capacitance_20n_pf": 10.910682359489876,
+      "delta_at_0p2n_pf": 0.02133975460870907,
+      "planning_signal_in_resolution_steps": 42.67950921741814,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.014475149822669224,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 9.744933461086523,
+      "delta_at_0p2n_pf": 0.009605384619893798,
+      "planning_signal_in_resolution_steps": 19.210769239787595,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.014381644532675902,
+      "cover_force_20n_n": 0.14381644532675902,
+      "capacitance_20n_pf": 9.73815252722985,
+      "delta_at_0p2n_pf": 0.009528874677377175,
+      "planning_signal_in_resolution_steps": 19.05774935475435,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.014018104224997774,
+      "cover_force_20n_n": 0.7009052112498887,
+      "capacitance_20n_pf": 9.711873093000644,
+      "delta_at_0p2n_pf": 0.009234635374079758,
+      "planning_signal_in_resolution_steps": 18.469270748159516,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.001590519044666755,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.887634386825498,
+      "delta_at_0p2n_pf": 0.0009605720096814707,
+      "planning_signal_in_resolution_steps": 1.9211440193629414,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0015892686487280483,
+      "cover_force_20n_n": 0.015892686487280483,
+      "capacitance_20n_pf": 8.887558124115714,
+      "delta_at_0p2n_pf": 0.0009598005952131672,
+      "planning_signal_in_resolution_steps": 1.9196011904263344,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0015842864528569866,
+      "cover_force_20n_n": 0.07921432264284933,
+      "capacitance_20n_pf": 8.887254268046574,
+      "delta_at_0p2n_pf": 0.0009567272864785537,
+      "planning_signal_in_resolution_steps": 1.9134545729571073,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0005339653736951111,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 8.823632568203365,
+      "delta_at_0p2n_pf": 0.0003201914892159152,
+      "planning_signal_in_resolution_steps": 0.6403829784318305,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0005338233605106823,
+      "cover_force_20n_n": 0.0053382336051068235,
+      "capacitance_20n_pf": 8.823624024210455,
+      "delta_at_0p2n_pf": 0.00032010572402541015,
+      "planning_signal_in_resolution_steps": 0.6402114480508203,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 4,
+      "posts": 132,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0005332560596672641,
+      "cover_force_20n_n": 0.02666280298336321,
+      "capacitance_20n_pf": 8.823589893631414,
+      "delta_at_0p2n_pf": 0.0003197631222100483,
+      "planning_signal_in_resolution_steps": 0.6395262444200966,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.026905848634113216,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 18.922730754142744,
+      "delta_at_0p2n_pf": 0.03517733270681411,
+      "planning_signal_in_resolution_steps": 70.35466541362823,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.026617945225147432,
+      "cover_force_20n_n": 0.2661794522514743,
+      "capacitance_20n_pf": 18.878359991784283,
+      "delta_at_0p2n_pf": 0.03460393344967194,
+      "planning_signal_in_resolution_steps": 69.20786689934388,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 1.32,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.025511659023447174,
+      "cover_force_20n_n": 1.2755829511723586,
+      "capacitance_20n_pf": 18.709658553116483,
+      "delta_at_0p2n_pf": 0.032485493841086566,
+      "planning_signal_in_resolution_steps": 64.97098768217313,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.018622918538185606,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 17.719619519515657,
+      "delta_at_0p2n_pf": 0.02265136455324246,
+      "planning_signal_in_resolution_steps": 45.30272910648492,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.018473698240828357,
+      "cover_force_20n_n": 0.18473698240828357,
+      "capacitance_20n_pf": 17.699261425774512,
+      "delta_at_0p2n_pf": 0.022412045006740655,
+      "planning_signal_in_resolution_steps": 44.82409001348131,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 2.05,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.017896570096082393,
+      "cover_force_20n_n": 0.8948285048041196,
+      "capacitance_20n_pf": 17.6209352299738,
+      "delta_at_0p2n_pf": 0.02150322385146808,
+      "planning_signal_in_resolution_steps": 43.00644770293616,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.00827616172858014,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 16.405059048734362,
+      "delta_at_0p2n_pf": 0.009287314753184006,
+      "planning_signal_in_resolution_steps": 18.574629506368012,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.008243989079837992,
+      "cover_force_20n_n": 0.08243989079837993,
+      "capacitance_20n_pf": 16.40125817726647,
+      "delta_at_0p2n_pf": 0.009246797138850127,
+      "planning_signal_in_resolution_steps": 18.493594277700254,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 5,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.008117615460613759,
+      "cover_force_20n_n": 0.4058807730306879,
+      "capacitance_20n_pf": 16.386344443189426,
+      "delta_at_0p2n_pf": 0.009088199411181108,
+      "planning_signal_in_resolution_steps": 18.176398822362216,
+      "passes_five_step_signal_screen": true,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.0008717805139861867,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 15.571991776393565,
+      "delta_at_0p2n_pf": 0.0009287471947523329,
+      "planning_signal_in_resolution_steps": 1.8574943895046658,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.0008714028930793094,
+      "cover_force_20n_n": 0.008714028930793094,
+      "capacitance_20n_pf": 15.571951327279978,
+      "delta_at_0p2n_pf": 0.0009283401946991177,
+      "planning_signal_in_resolution_steps": 1.8566803893982353,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 50,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.0008698956560836135,
+      "cover_force_20n_n": 0.043494782804180676,
+      "capacitance_20n_pf": 15.571789880564555,
+      "delta_at_0p2n_pf": 0.0009267157551882121,
+      "planning_signal_in_resolution_steps": 1.8534315103764243,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 0,
+      "uniform_travel_20n_mm": 0.00029172674148736366,
+      "cover_force_20n_n": 0.0,
+      "capacitance_20n_pf": 15.510091705920946,
+      "delta_at_0p2n_pf": 0.00030958278491333147,
+      "planning_signal_in_resolution_steps": 0.6191655698266629,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 10,
+      "uniform_travel_20n_mm": 0.00029168427827593323,
+      "cover_force_20n_n": 0.0029168427827593324,
+      "capacitance_20n_pf": 15.510087191477318,
+      "delta_at_0p2n_pf": 0.00030953754759543983,
+      "planning_signal_in_resolution_steps": 0.6190750951908797,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    },
+    {
+      "site": 5,
+      "posts": 242,
+      "modulus_mpa_assumed": 150,
+      "cover_stiffness_n_per_mm_assumed": 50,
+      "uniform_travel_20n_mm": 0.00029151454873476145,
+      "cover_force_20n_n": 0.014575727436738073,
+      "capacitance_20n_pf": 15.510069146836592,
+      "delta_at_0p2n_pf": 0.00030935673044751866,
+      "planning_signal_in_resolution_steps": 0.6187134608950373,
+      "passes_five_step_signal_screen": false,
+      "stop_cases": [
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08759999999999998,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07759999999999999,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0724,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.0676,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.0738,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.04,
+          "available_travel_mm": 0.08000000000000002,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.05,
+          "available_travel_mm": 0.07,
+          "would_reach_stop_at_20n": false
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": false
+        }
+      ]
+    }
+  ],
+  "signal_planning_failures": 36,
+  "stop_scenario_findings": [
+    {
+      "site": 0,
+      "modulus_mpa": 1.32,
+      "cover_stiffness_n_per_mm": 0,
+      "cases": [
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 0,
+      "modulus_mpa": 1.32,
+      "cover_stiffness_n_per_mm": 10,
+      "cases": [
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "modulus_mpa": 1.32,
+      "cover_stiffness_n_per_mm": 0,
+      "cases": [
+        {
+          "film_mm": 0.0762,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06380000000000001,
+          "would_reach_stop_at_20n": true
+        },
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    },
+    {
+      "site": 1,
+      "modulus_mpa": 1.32,
+      "cover_stiffness_n_per_mm": 10,
+      "cases": [
+        {
+          "film_mm": 0.08,
+          "adhesive_mm_assumed": 0.06,
+          "available_travel_mm": 0.06000000000000001,
+          "would_reach_stop_at_20n": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Uniform rigid spreader and independent incompressible neo-Hookean posts only.",
+    "The cover contributes an illustrative parallel linear stiffness; actual cured-cover response and hysteresis are unmeasured.",
+    "The adhesive scenarios expose stop-height sensitivity; actual films and cured bonds must be measured.",
+    "Finite plate bending, edge/nail-tip contact, shear, friction, creep, thermal drift and loaded TPU motion are not solved.",
+    "A build may be geometrically reproducible while failing these planning scenarios or the required physical tests."
+  ],
+  "status": "Model scenarios for build/test decisions; no physical pass assigned"
+}

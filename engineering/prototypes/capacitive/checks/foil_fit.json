@@ -1,0 +1,6313 @@
+{
+  "schema": "yam-k1-foil-fit/1",
+  "source_geometry_sha256": "ade6ea0ea986df2a8d647decde4b1b88444770ad6f3ee1932111e433824ae665",
+  "sites_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "pose_configuration": {
+    "schema": "yam-k1-formed-tail-poses/1",
+    "revision": "K1.2 formed nail terminals",
+    "nail_terminal_lift_normal_mm": 0.4,
+    "nail_free_bend_length_mm": 4.0,
+    "minimum_nail_bend_radius_mm": 5.0,
+    "curve_sample_mm": 0.025,
+    "nail_shape": "Two opposite circular arcs, followed by a flat terminal. Developed arc length is preserved; the sensing body remains on its original plane.",
+    "tpu_shape": "Retain the source curvature across the side tab. Stiffener pieces require separate forming/cut-pattern review.",
+    "earlier_straight_fit_run": "build/engineering/prototypes/capacitive/foil_fit/20261011T211853.942855Z",
+    "limits": [
+      "Nominal geometry only; actual forming, copper/via strain, adhesive and repeated-motion behavior require bench tests.",
+      "The 4 mm terminal stiffener lies after the bent free section. No bend is intentionally placed through its plated transition."
+    ]
+  },
+  "pose_sha256": "0c81245746bb94f0440a8b834b19f954a3397e30022fa63e9e9d7b70d95ecd89",
+  "nail_volume_checks": [
+    {
+      "id": "k1_ch0_foil",
+      "expected_volume_mm3": 25.0159435902801,
+      "volume_difference_mm3": 2.4967054450542037e-06,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch0_stiffener",
+      "expected_volume_mm3": 2.5600000000000005,
+      "volume_difference_mm3": 2.042810365310288e-13,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch0_stiffener_bond",
+      "expected_volume_mm3": 0.6400000000000001,
+      "volume_difference_mm3": 5.495603971894525e-14,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch0_joint_1",
+      "expected_volume_mm3": 2.0159999999999987,
+      "volume_difference_mm3": 1.1546319456101628e-14,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch0_joint_2",
+      "expected_volume_mm3": 2.0159999999999987,
+      "volume_difference_mm3": 3.552713678800501e-14,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch1_foil",
+      "expected_volume_mm3": 24.909786656233802,
+      "volume_difference_mm3": 2.496705398868926e-06,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch1_stiffener",
+      "expected_volume_mm3": 2.5600000000000005,
+      "volume_difference_mm3": 1.0524914273446484e-13,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch1_stiffener_bond",
+      "expected_volume_mm3": 0.6400000000000001,
+      "volume_difference_mm3": 3.7281289166912757e-13,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch1_joint_1",
+      "expected_volume_mm3": 2.0159999999999987,
+      "volume_difference_mm3": 2.930988785010413e-14,
+      "relative_to_same_flat_outline": true
+    },
+    {
+      "id": "k1_ch1_joint_2",
+      "expected_volume_mm3": 2.0159999999999987,
+      "volume_difference_mm3": 3.552713678800501e-14,
+      "relative_to_same_flat_outline": true
+    }
+  ],
+  "parts": [
+    {
+      "id": "k1_ch0_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_foil.step",
+      "stl": "cad/k1_ch0_foil.stl",
+      "sha256_step": "45bed03f64117e7cb2012672355fa2abad8beaeb74582a2cc497fd1b18d50c3a",
+      "sha256_stl": "37e9470297459f2b5f19b1b347ec311d732c66b365d865e9fde46f9869ff7f10",
+      "volume_mm3": 25.015941093574654,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.5412492752075195
+        ],
+        [
+          -8.506841659545898,
+          -93.23966217041016,
+          -3.536872148513794
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stiffener.step",
+      "stl": "cad/k1_ch0_stiffener.stl",
+      "sha256_step": "728b163b7a5b988c802f47ffc72e3c25e74590f00fdeaa996b561354f96b2d6e",
+      "sha256_stl": "6e3ccd0ece760fa0e9261402b161a25913a6c46a4778bae2cc69d0f4607aa746",
+      "volume_mm3": 2.560000000000205,
+      "bounds_mm": [
+        [
+          -15.436351776123047,
+          -97.2564926147461,
+          -3.699920654296875
+        ],
+        [
+          -12.23635196685791,
+          -93.25149536132812,
+          -3.2996721267700195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_stiffener_bond.step",
+      "stl": "cad/k1_ch0_stiffener_bond.stl",
+      "sha256_step": "822ba650dc7158905f80a50d508a51572a3585ad6ef59094662d94b61897b3b1",
+      "sha256_stl": "49da7ca82c60a584f6fa4d2f972d37356ea47e9e0dedaee2e441f793d45bb154",
+      "volume_mm3": 0.6400000000000551,
+      "bounds_mm": [
+        [
+          -15.436351776123047,
+          -97.24646759033203,
+          -3.7498579025268555
+        ],
+        [
+          -12.23635196685791,
+          -93.24898529052734,
+          -3.4994208812713623
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_joint_1.step",
+      "stl": "cad/k1_ch0_joint_1.stl",
+      "sha256_step": "de8bf10e05b6716e18553121d5dbba13954ff6cd9afac5d4ff88e13a464db47c",
+      "sha256_stl": "68f81891786fa7afb2cb047a12a1ec1c6a475cccf45d62dbc4f72cf4aa36db54",
+      "volume_mm3": 2.0160000000000102,
+      "bounds_mm": [
+        [
+          -15.286352157592773,
+          -96.03614807128906,
+          -4.474720001220703
+        ],
+        [
+          -13.886351585388184,
+          -93.60908508300781,
+          -3.755174160003662
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch0_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch0_joint_2.step",
+      "stl": "cad/k1_ch0_joint_2.stl",
+      "sha256_step": "7997f03d2907a37181ac1c1e2ffc18c498bd6c074bc6c0ff44cfc3eaf506b07c",
+      "sha256_stl": "8c3af0c33fafaa5ef108ad9399ade40de9b92d633fa67036d2ec5a06145d4c4d",
+      "volume_mm3": 2.015999999999963,
+      "bounds_mm": [
+        [
+          -13.786352157592773,
+          -96.03614807128906,
+          -4.474720001220703
+        ],
+        [
+          -12.386351585388184,
+          -93.60908508300781,
+          -3.755174160003662
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_foil.step",
+      "stl": "cad/k1_ch1_foil.stl",
+      "sha256_step": "e5cbb3373c2485d6f2714f05f626bc384eed11cb6609453132823a1a23c25488",
+      "sha256_stl": "b0af0dd4a975016b1567dda8c8bda94116335c3c01780ef3ee7dd698aea6729d",
+      "volume_mm3": 24.909784159528403,
+      "bounds_mm": [
+        [
+          -7.3068437576293945,
+          -117.2911376953125,
+          -4.5412492752075195
+        ],
+        [
+          3.387636423110962,
+          -93.23966217041016,
+          -3.536872148513794
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stiffener.step",
+      "stl": "cad/k1_ch1_stiffener.stl",
+      "sha256_step": "1e706c5ea16fc1b9fef7269cfcad1ac165093086d0062ee6cb4d02ca45a626db",
+      "sha256_stl": "1602fb14891c8310799287cec1cbc3162914a7c456fe0f2f12c1ec2e96a903ce",
+      "volume_mm3": 2.5599999999998952,
+      "bounds_mm": [
+        [
+          -3.5674636363983154,
+          -97.2564926147461,
+          -3.699920654296875
+        ],
+        [
+          -0.3674635589122772,
+          -93.25149536132812,
+          -3.2996721267700195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_stiffener_bond.step",
+      "stl": "cad/k1_ch1_stiffener_bond.stl",
+      "sha256_step": "650b97f6cb0b6c6d953976b9fe323b70893038def78ee961df80e88d10b9e791",
+      "sha256_stl": "28eb8625bc0078a2e8dac1fc67ad0ba485a812e1d9880c6e0ebd1df889ac5226",
+      "volume_mm3": 0.6400000000003729,
+      "bounds_mm": [
+        [
+          -3.5674636363983154,
+          -97.24646759033203,
+          -3.7498576641082764
+        ],
+        [
+          -0.3674635589122772,
+          -93.24898529052734,
+          -3.4994208812713623
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_joint_1.step",
+      "stl": "cad/k1_ch1_joint_1.stl",
+      "sha256_step": "764d1dfe67083b47f86a6b33f15ba1d7e941efb76594a66b033f869d967c4455",
+      "sha256_stl": "45f58497735f872b69ede084972380c72297bfbf38d9fa90001818e2beabe89d",
+      "volume_mm3": 2.0159999999999694,
+      "bounds_mm": [
+        [
+          -3.417463541030884,
+          -96.03614807128906,
+          -4.474719524383545
+        ],
+        [
+          -2.017463445663452,
+          -93.60908508300781,
+          -3.755174160003662
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch1_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch1_joint_2.step",
+      "stl": "cad/k1_ch1_joint_2.stl",
+      "sha256_step": "933388d0a6c61149ff70e3bb35b64b6b1a258b3949f58b0b8aa08739cc1ff30b",
+      "sha256_stl": "e0fc91df8109b1d2aa7778ff1f78359daa7337b9cb60072c7bb79fb6b3e22bd6",
+      "volume_mm3": 2.015999999999963,
+      "bounds_mm": [
+        [
+          -1.9174635410308838,
+          -96.03614807128906,
+          -4.474719524383545
+        ],
+        [
+          -0.5174635648727417,
+          -93.60908508300781,
+          -3.755174160003662
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_foil.step",
+      "stl": "cad/k1_ch2_foil.stl",
+      "sha256_step": "ae808d25dcef93c23e201d9962c2374f4072bfed315aea14c931b0cedffdc41d",
+      "sha256_stl": "1e0244211181255d822464af0e121d8775b6a00d40c8a98d0befb9c501df9d77",
+      "volume_mm3": 37.00047267462705,
+      "bounds_mm": [
+        [
+          -22.0,
+          -89.11036682128906,
+          -5.042596340179443
+        ],
+        [
+          -1.0,
+          -76.76054382324219,
+          -2.1258630752563477
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stiffener.step",
+      "stl": "cad/k1_ch2_stiffener.stl",
+      "sha256_step": "ab4a52566d884140d987907aecdbbf9e95fd8f4afe91b84a4deab776fe0d7d1a",
+      "sha256_stl": "0e1f0a15ddeadc48bc8cbc6322f4822bef65d27a55d0e635fe4e2df64e09e18c",
+      "volume_mm3": 2.6585312919046746,
+      "bounds_mm": [
+        [
+          -22.0,
+          -84.46197509765625,
+          -2.5733253955841064
+        ],
+        [
+          -18.0,
+          -81.1585464477539,
+          -1.8758630752563477
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_stiffener_bond.step",
+      "stl": "cad/k1_ch2_stiffener_bond.stl",
+      "sha256_step": "3fd4efe54796b4b5558acae2f82018ca233d33c1eab51ade2a08e76d4d6bfa31",
+      "sha256_stl": "935caddf9b327fd2694486401b3e921bddfc26b62240e96ba239eb96e2c8969e",
+      "volume_mm3": 0.6519585333986924,
+      "bounds_mm": [
+        [
+          -22.0,
+          -84.44059753417969,
+          -2.6193807125091553
+        ],
+        [
+          -18.0,
+          -81.23641204833984,
+          -2.0758631229400635
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_joint_1.step",
+      "stl": "cad/k1_ch2_joint_1.stl",
+      "sha256_step": "eac4619973d59eb8b6dc1d9f39d77300b47a78708706366056ca3649e9e0925d",
+      "sha256_stl": "e780167641bc20d4b96b93309763aabcc520f6c57517899e939248f2eea13640",
+      "volume_mm3": 1.8941198956907674,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -84.26809692382812,
+          -2.959317922592163
+        ],
+        [
+          -19.200000762939453,
+          -82.89107513427734,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch2_joint_2.step",
+      "stl": "cad/k1_ch2_joint_2.stl",
+      "sha256_step": "523257ef7ebe2ae3cb5f0b1dae82ceef12682539279f8e65bce7b385034f5c12",
+      "sha256_stl": "2a85f7d1d62b4d0b6b6b6ab33d7d82a26792fd0402d98ba59c76d525a5d525bd",
+      "volume_mm3": 1.885476628357189,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -82.88104248046875,
+          -3.29256534576416
+        ],
+        [
+          -19.200000762939453,
+          -81.46514892578125,
+          -2.377962350845337
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_foil.step",
+      "stl": "cad/k1_ch3_foil.stl",
+      "sha256_step": "f0f7e6a1e94e70d6a933378be9e131e39641d1cddf1ab9988b6ce5ab93be49dd",
+      "sha256_stl": "7a76476f9a5b4a5fc2b7e481cef8b671cc5f7acc512552eb6c76b96ff44f80b5",
+      "volume_mm3": 44.75372951647848,
+      "bounds_mm": [
+        [
+          -22.0,
+          -72.4852066040039,
+          -5.383702278137207
+        ],
+        [
+          -1.0,
+          -58.518959045410156,
+          1.6675549745559692
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stiffener.step",
+      "stl": "cad/k1_ch3_stiffener.stl",
+      "sha256_step": "a2a7d205e17a2e2cce86876234c31283a14a565f0ca423b4336e12ea85e05147",
+      "sha256_stl": "6234100325951b53911cfce3cc680ce52c871d4a7cd476f89f63697e90a9b8fc",
+      "volume_mm3": 2.4921700372418676,
+      "bounds_mm": [
+        [
+          -22.0,
+          -65.96817016601562,
+          -4.745596885681152
+        ],
+        [
+          -18.0,
+          -63.197662353515625,
+          -3.007993698120117
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_stiffener_bond.step",
+      "stl": "cad/k1_ch3_stiffener_bond.stl",
+      "sha256_step": "7c0f08cf0d68cefa31b643658e8e659d58d13ca29fa03f3245e56ddd85e18048",
+      "sha256_stl": "aec4fe269e8628bff778d4a89089c43d9934aeaa88aa5194a5b6621954725083",
+      "volume_mm3": 0.6317631345462343,
+      "bounds_mm": [
+        [
+          -22.0,
+          -65.90324401855469,
+          -4.792888641357422
+        ],
+        [
+          -18.0,
+          -63.16624450683594,
+          -3.163577079772949
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_joint_1.step",
+      "stl": "cad/k1_ch3_joint_1.stl",
+      "sha256_step": "0746a62861c0a6bebf2e249ef9ba38ff6ebc377ad692af9f358ae3b686cb4dc3",
+      "sha256_stl": "a4598b3e3703e782bf1e2fba257ec06b320bd45241929b21784ac03d2e5b150b",
+      "volume_mm3": 2.1191400016445554,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -65.68331909179688,
+          -5.48075532913208
+        ],
+        [
+          -19.200000762939453,
+          -64.10259246826172,
+          -4.303223133087158
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch3_joint_2.step",
+      "stl": "cad/k1_ch3_joint_2.stl",
+      "sha256_step": "249b2a3bee2c8f60f9990a11baf0b35ecd12fe9477202d02d69ef2d9011c1f19",
+      "sha256_stl": "d061b173ecc794379df168aabf92f44ca54ffab6c671c5b56d5ed209f8634916",
+      "volume_mm3": 2.0854462570605485,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -64.32221221923828,
+          -4.763908386230469
+        ],
+        [
+          -19.200000762939453,
+          -62.795188903808594,
+          -3.4414162635803223
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_foil.step",
+      "stl": "cad/k1_ch4_foil.stl",
+      "sha256_step": "2301ee7c10415215f00893cf2e0330bb4cd1a997eeeff04cb69e6ad0868fd350",
+      "sha256_stl": "206606612434fc65d546146663d44c87857d914fa4a6155da8c9f2313b9fe902",
+      "volume_mm3": 36.854562865749045,
+      "bounds_mm": [
+        [
+          -22.0,
+          -55.00740051269531,
+          6.212706089019775
+        ],
+        [
+          -1.0,
+          -42.75324630737305,
+          10.52946662902832
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stiffener.step",
+      "stl": "cad/k1_ch4_stiffener.stl",
+      "sha256_step": "5cc1e9c870f011f32d344f681e8d498cca1e03c8d351243674a5696c7485e06f",
+      "sha256_stl": "af2a8d0d12c1263ad85759c0f0d3f4940b54f7600503f028bcea9bb2defd2326",
+      "volume_mm3": 2.6023274501056024,
+      "bounds_mm": [
+        [
+          -22.0,
+          -50.957420349121094,
+          9.256697654724121
+        ],
+        [
+          -18.0,
+          -47.80039978027344,
+          10.42385482788086
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_stiffener_bond.step",
+      "stl": "cad/k1_ch4_stiffener_bond.stl",
+      "sha256_step": "852de9af1dce870fda6240d48a2ccf4d3210faf515613ab1f5bff5b43a7e9913",
+      "sha256_stl": "fec3d31f588bdbe142874cbfd76242d7819ac220bf441671d4f24076f0708f98",
+      "volume_mm3": 0.6451378033535997,
+      "bounds_mm": [
+        [
+          -22.0,
+          -50.875370025634766,
+          9.211099624633789
+        ],
+        [
+          -18.0,
+          -47.79022216796875,
+          10.228041648864746
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_joint_1.step",
+      "stl": "cad/k1_ch4_joint_1.stl",
+      "sha256_step": "52835a7523cf836a154527c9fd980ffd78786c0d599aa2c47fedcaf900380a5a",
+      "sha256_stl": "025f461996e9499a55523a30fffd11017f45c61aec8591b0aade33796f15a415",
+      "volume_mm3": 1.9562087700827702,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -50.64241027832031,
+          8.551600456237793
+        ],
+        [
+          -19.200000762939453,
+          -49.159996032714844,
+          9.586409568786621
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch4_joint_2.step",
+      "stl": "cad/k1_ch4_joint_2.stl",
+      "sha256_step": "93a65c39fba2563e313b52f22d22b4427f145ff8c10e0186e90f3252560d7e90",
+      "sha256_stl": "05da8222b5005bd6aaa9583a141e70609983be1acd4570f8463c9a170bc68a74",
+      "volume_mm3": 1.9679398106503907,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -49.24528121948242,
+          9.042399406433105
+        ],
+        [
+          -19.200000762939453,
+          -47.77135467529297,
+          9.966004371643066
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_foil",
+      "purpose": "0.186 mm PI/Cu/coverlay envelope; native artwork governs real copper and terminal openings",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_foil.step",
+      "stl": "cad/k1_ch5_foil.stl",
+      "sha256_step": "cca348d65ef8d2ebcfb1f2772423b8ef956b49a9f5f0885dba529614fb07e656",
+      "sha256_stl": "4e69c341c6b3699b765e14d062669e8a31e973273834f087ea8a75acf0664d59",
+      "volume_mm3": 57.06339081669702,
+      "bounds_mm": [
+        [
+          -22.0,
+          -39.179805755615234,
+          -5.440205097198486
+        ],
+        [
+          -1.0,
+          -23.5791015625,
+          8.329188346862793
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stiffener",
+      "purpose": "200 \u00b5m polyimide stiffener; separately formed cut geometry remains to be specified",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stiffener.step",
+      "stl": "cad/k1_ch5_stiffener.stl",
+      "sha256_step": "a57b9e902fc3f1fac7dea58684007e91bc4a7e4d091ab9eb5e1a6e44aa2d6e4b",
+      "sha256_stl": "607dab5d6a2b4bcb0af361276570508a786d7429661d541a1b9024731623cf7f",
+      "volume_mm3": 2.547159093742159,
+      "bounds_mm": [
+        [
+          -22.0,
+          -32.980525970458984,
+          -1.1624099016189575
+        ],
+        [
+          -18.0,
+          -30.97869110107422,
+          1.5525531768798828
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stiffener_bond",
+      "purpose": "50 \u00b5m stiffener bond envelope",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_stiffener_bond.step",
+      "stl": "cad/k1_ch5_stiffener_bond.stl",
+      "sha256_step": "0bb2ac0e96ba282adc93e44269317611ef605e70d73d013e7b397c340a348441",
+      "sha256_stl": "7bf092441a34ef7b85c30a0a1b98da94fab909c14af1626e7360678b1e9f975c",
+      "volume_mm3": 0.6384435633830041,
+      "bounds_mm": [
+        [
+          -22.0,
+          -33.02197265625,
+          -1.193057894706726
+        ],
+        [
+          -18.0,
+          -31.1367130279541,
+          1.4406747817993164
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_joint_1",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_joint_1.step",
+      "stl": "cad/k1_ch5_joint_1.stl",
+      "sha256_step": "eb77be4e05e9d783e6b16126dc90bf4d39829f25e415c028ff82e560ae65fe85",
+      "sha256_stl": "3ad788eee6bb4d9ff3989f87097c978cdc6ea5191a59ad6a0f56d64c618c08a6",
+      "volume_mm3": 2.02501028229509,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -33.589454650878906,
+          -0.31615573167800903
+        ],
+        [
+          -19.200000762939453,
+          -32.301082611083984,
+          1.1843112707138062
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_joint_2",
+      "purpose": "Conservative solder/wire-root envelope, not a printed component",
+      "material": "Geometry reference; physical fit remains untested",
+      "kind": "reference_only",
+      "step": "cad/k1_ch5_joint_2.step",
+      "stl": "cad/k1_ch5_joint_2.stl",
+      "sha256_step": "a74ae3003095c9f5c9c2d9fa2b51883d571f14fe7a8b8ae2f97b4d80fbe07ffa",
+      "sha256_stl": "8d666e0e653cc4382570734aeb0d743ff54fba2982a1563fea2101d64e9d90dc",
+      "volume_mm3": 2.039886666321729,
+      "bounds_mm": [
+        [
+          -21.600000381469727,
+          -32.73471450805664,
+          -1.5529729127883911
+        ],
+        [
+          -19.200000762939453,
+          -31.415111541748047,
+          -0.0545947402715683
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "checks": [
+    {
+      "a": "k1_ch0_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.04999960886040906,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.3221189400701814,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.1999953677340862,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.2186316816608525,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.754457452959997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.36104646561872,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.66506607110579,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch0_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch0_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch0_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.199998183421184,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.939378184203916,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.939378185247557,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.0893781864791094,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.58937818647911,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.1292948147529245,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.777688211089739,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.799066819533977,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.97156836649576,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.358619415290661,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.754459894243823,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.27149387128462,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.336420765876454,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.556342903346376,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.917453943369736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.232263901563485,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.28224382825973,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.36429577498154,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.597252500337305,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.99438491452739,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.05985961606892,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.25913752433699,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.21769236132029,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.65021006131816,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.50494895680429,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.20000000959297393,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.08491899419844229,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.929505366878233,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.2304611692702565,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.7662869405694,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.372875953228125,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.676895558715195,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch0_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch0_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch0_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.929508182565331,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.668888183348063,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.668888184391704,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.818888185623257,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.318888185623257,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.1411243023623285,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.789517698699143,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.81089630714338,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.983397854105164,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.370448902900065,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.766289381853227,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.283323358894023,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.34825025348586,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.56817239095578,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.92928343097914,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.24409338917289,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.294073315869134,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.376125262590946,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.60908198794671,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.00621440213679,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.071689103678324,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.2709670119464,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.22952184892969,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.66203954892757,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.516778444413696,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.4000000095929736,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.28466758514581425,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.9295053666171675,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.227954921895233,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.763780693194377,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.3703697058531,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.67438931134017,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch0_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch0_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.929508182304265,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.668888183086997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.668888184130639,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.81888818536219,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.31888818536219,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.138618054987305,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.787011451324119,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.808390059768357,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.98089160673014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.367942655525042,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.763783134478203,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.280817111519,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.345744006110834,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.565666143580756,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.926777183604116,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.241587141797865,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.29156706849411,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.37361901521592,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.606575740571685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.00370815476177,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.0691828563033,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.26846076457137,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.22701560155467,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.65953330155254,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.51427219703867,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.9784653949733333,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.540420910062517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.579505362515722,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.588053895096607,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.12387966639575,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.730468679054475,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.034488284541546,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch0_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.579508178202819,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.318888178985551,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.318888180029193,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.468888181260745,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.968888181260745,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.498717028188679,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.147110424525493,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.168489032969731,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.340990579931514,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.728041628726416,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123882107679577,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.640916084720374,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.70584297931221,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.92576511678213,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.28687615680549,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.60168611499924,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.651666041695485,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.7337179884173,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.96667471377306,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.36380712796314,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.429281829504674,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.62855973777275,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.58711457475604,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.01963227475392,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.874371170240046,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.9784653898854987,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5404209022449256,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.156680143378011,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.588053895488983,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123879666788127,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.73046867944685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.03448828493392,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch1_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.079508178202851,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch1_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.818888178985583,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.818888180029225,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch1_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.968888181260777,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch1_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.468888181260777,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.498717028581055,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.14711042491787,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.168489033362107,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.34099058032389,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.728041629118792,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123882108071953,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.64091608511275,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.705842979704585,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.925765117174507,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.286876157197867,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.601686115391615,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.65166604208786,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.73371798880967,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.966674714165435,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.36380712835552,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.42928182989705,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.62855973816512,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.58711457514842,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.01963227514629,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch0_joint_2",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.87437117063242,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.049999582896156865,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.322118878212462,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 1.2000028125613253,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.21863168476537,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.754457456064515,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.36104646872324,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.66506607421031,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch1_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch1_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch1_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.129294817857442,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.693156250371292,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.69315625037127,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.893156250371295,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.893156250371291,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.75445989734834,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.271493874389137,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.33642076898097,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.556342906450894,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.917453946474254,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.232263904668,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.28224383136425,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.36429577808606,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.59725250344182,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.994384917631905,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.05985961917344,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.25913752744151,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.217692364424806,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.65021006442268,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.50494895990881,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.19999994765737386,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.08491893234069492,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.939382813344057,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.230461172374817,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.76628694367396,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.372875956332685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.676895561819755,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch1_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch1_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch1_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.141124305466889,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.432536251154023,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.432536251154001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.632536251154026,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.632536251154022,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.766289384957787,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.283323361998583,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.34825025659042,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.56817239406034,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.9292834340837,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.24409339227745,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.294073318973695,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.37612526569551,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.60908199105127,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.00621440524135,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.071689106782884,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.27096701505096,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.22952185203425,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.66203955203213,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.516778447518256,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.39999994765737446,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.2846675232882312,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.939382814387699,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.227954924999892,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.763780696299037,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.37036970895776,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 53.67438931444483,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch1_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch1_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.138618058091964,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.432536252197664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.432536252197643,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.632536252197667,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.632536252197664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.763783137582863,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.28081711462366,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.345744009215494,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.565666146685416,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.926777186708776,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.241587144902525,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.29156707159877,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.37361901832058,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.606575743676345,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.00370815786643,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.06918285940796,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.26846076767603,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.22701560465933,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 59.6595333046572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.51427220014333,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.9784653547153523,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5404208482048145,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 5.15668013756607,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.588053898201153,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123879669500297,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.73046868215902,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.03448828764609,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch1_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.498717031293225,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.582536253429216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.582536253429195,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.78253625342922,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.782536253429216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123882110784123,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.64091608782492,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.705842982416755,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.925765119886677,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.286876159910037,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.601686118103785,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.65166604480003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.73371799152184,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.966674716877606,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.36380713106769,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.42928183260922,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.62855974087729,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.58711457786059,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.01963227785846,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.87437117334459,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.9784653496275189,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 0.5404208403871817,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 6.589382815619252,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.5880538985935,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.123879669892645,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.73046868255137,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.03448828803844,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch2_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.4987170316855725,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch2_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.082536253429218,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.082536253429197,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch2_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 17.28253625342922,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch2_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 17.282536253429218,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.12388211117647,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.640916088217267,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.705842982809102,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.925765120279024,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.286876160302384,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 38.60168611849613,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.65166604519238,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.73371799191419,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.96667471726995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.363807131460035,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 54.42928183300157,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.62855974126964,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.58711457825294,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.01963227825081,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch1_joint_2",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 60.87437117373694,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.6991535988406437,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.395187537995472,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.082455429094807,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.082455432194578,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.27533316170458,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.881922174363304,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.185941779850374,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch2_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch2_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch2_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.275335602988406,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.792369580029202,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.857296474621037,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.07721861209096,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.43832965211432,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.753139610308068,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.803119537004314,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.885171483726126,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.11812820908189,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.51526062327197,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.5807353248135,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.780013233081576,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.73856807006487,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.171085770062746,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.025824665548875,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.739751185068659,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999846,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.73084882543162,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.730848828531393,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.673342407396888,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.27993142005561,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.58395102554268,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch2_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch2_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch2_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.673344848680713,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.19037882572151,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.255305720313345,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.475227857783267,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.836338897806627,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.151148856000376,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.20112878269662,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.283180729418433,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.516137454774196,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.913269868964278,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.97874457050581,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.17802247877388,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.13657731575718,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 47.56909501575505,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.42383391124118,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.8785690606731404,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999633,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.75222743387586,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.75222743697563,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.751203597935287,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.35779261059401,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.66181221608108,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch2_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch2_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.751206039219113,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.26824001625991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.333166910851745,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.553089048321667,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.914200088345027,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.229010046538775,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.27898997323502,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.361041919956833,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.593998645312595,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.991131059502678,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.05660576104421,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.25588366931228,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.21443850629558,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 47.64695620629345,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.50169510177958,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 5.3771683016939535,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.1999998999999875,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.924728980837642,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.924728983937413,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.405871061742502,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.012460074401226,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.316479679888296,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch2_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.405873503026328,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.922907480067124,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.98783437465896,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 17.20775651212888,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.56886755215224,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.88367751034599,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.933657437042235,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 32.01570938376405,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 32.24866610911981,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 33.64579852330989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.711273224851425,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 49.9105511331195,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 49.869105970102794,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 49.30162367010067,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.1563625655868,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.155799998385014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999984,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.311780029632544,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.311780032732315,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.979938067067337,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.58652707972606,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 41.89054668521313,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch3_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.979940508351163,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch3_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.49697448539196,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.561901379983794,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch3_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.781823517453716,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch3_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 17.142934557477076,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.457744515670825,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.50772444236707,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.589776389088883,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.822733114444645,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 32.21986552863473,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 42.28534023017626,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.48461813844433,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.44317297542763,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 47.8756906754255,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch2_joint_2",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 48.73042957091163,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.267451074300152,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.2486656512143604,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.707620508585705,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 28.707620511685477,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.313078220009416,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.037602870729204,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.944358389191315,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch3_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch3_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch3_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.545150905317621,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.589142901420741,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.643588093067066,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.876544818422829,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.273677232612911,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 19.339151934154444,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.538429842422516,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.496984679405813,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.929502379403687,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.784241274889816,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 7.363688691818739,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.999999899999974,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.2246544856265,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.22465448872627,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.830112197050212,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.713151620376454,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.623062356292216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch3_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch3_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch3_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.220699654964873,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.264691651067992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.322292060167968,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.55524878552373,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.952381199713813,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.017855901255345,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.217133809523418,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.175688646506714,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.608206346504588,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.462945241990717,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 7.506734746257914,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999846,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.28958138021834,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.28958138331811,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.895039091642047,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.868734870945142,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.591643957878148,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch3_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch3_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.376282905533559,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.42027490163668,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.374676465507232,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.523830387109662,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.920962801299744,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.986437502841277,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.18571541110935,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.144270248092646,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.57678794809052,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.43152684357665,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 7.783443127407991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999984,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.50950351768826,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 35.50950352078803,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 11.11496122911197,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.008381001931497,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.527990719395767,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch3_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.515929036519914,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.559921032623034,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.514322596493585,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.460177148627281,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.857309562817363,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.922784264358896,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.12206217262697,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.080617009610265,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.51313470960814,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 31.367873605094267,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 8.6990670366391,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999984,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 36.87061455771162,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 36.87061456081139,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.47607226913533,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.146574104203392,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.220590816725277,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch4_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.65412213879181,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch4_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.69811413489493,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.652515698765482,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch4_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 12.152777245956791,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch4_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 13.549909660146874,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 23.615384361688406,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.81466226995648,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.773217106939775,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 29.20573480693765,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch3_joint_2",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 30.060473702423778,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 2.6449196317621064,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.2941200763583098,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.18542451590537,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 46.18542451900514,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 21.790882227329078,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.657775578574072,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.1786466179739747,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch4_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch4_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch4_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.5734401629371035,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.772718071205176,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.731272908188473,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.163790608186346,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.018529503672475,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.3172803557576507,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.999999899999988,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.23540444260161,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.235404445701384,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.840862154025324,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.701767574677191,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.22580088316252,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch4_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch4_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch4_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.62059442812565,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.819872336393722,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.778427173377018,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.210944873374892,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.065683768861021,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.5096826911273875,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999455,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.317456389323425,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.317456392423196,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.922914100747136,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.656169138547744,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.21562369709794,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch4_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch4_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.610417242061068,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.80969515032914,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.768249987312437,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.20076768731031,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.05550658279644,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.77822889739754,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.1999998999999875,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.55041311467919,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 50.55041311777896,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 26.1558708261029,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 7.317737696196232,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.585397102044567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch4_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.980190647007696,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.17946855527577,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.138023392259065,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.570541092256938,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 16.425279987743068,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 4.132025931701169,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 51.94754552886927,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 51.94754553196904,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 27.55300324029298,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.714870110386315,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.196757632355421,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "k1_ch5_foil",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 8.59155117731855,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "k1_ch5_stiffener",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.790829085586623,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.749383922569919,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "k1_ch5_joint_1",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 14.181901622567793,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch4_joint_2",
+      "b": "k1_ch5_joint_2",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 15.036640518053922,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 3.4393921931933065,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.2383964712692406,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 62.0130202304108,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 62.013020233510574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.61847794183451,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 18.780344811927847,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.6110777903157967,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "CH5_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "k1_ch5_stiffener",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "k1_ch5_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_foil",
+      "b": "k1_ch5_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 5.526143066478771,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999917,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.21229813867888,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.21229814177865,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.817755850102586,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.97962272019592,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.81035569858387,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "CH5_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "k1_ch5_stiffener_bond",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "k1_ch5_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener",
+      "b": "k1_ch5_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 5.676572793000584,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 2.9999998999999917,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.17085297566217,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.17085297876194,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.77631068708588,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.938177557179216,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.768910535567166,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "CH5_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "k1_ch5_joint_1",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_stiffener_bond",
+      "b": "k1_ch5_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 5.952877676665664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 67.60337067566005,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 67.60337067875982,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 43.208828387083756,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 24.37069525717709,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 9.20142823556504,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "CH5_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_1",
+      "b": "k1_ch5_joint_2",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 6.931781981863068,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "source_TPU",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 4.199999899999977,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH0_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.45810957114617,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH1_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 68.45810957424595,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH2_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 44.063567282569885,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH3_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 25.22543415266322,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH4_cell_stack_keepout",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 10.056167131051168,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "k1_ch5_joint_2",
+      "b": "CH5_cell_stack_keepout",
+      "method": "disjoint_injective_material_coordinates",
+      "overlap_mm3": 0,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed_declared_checks": true,
+  "source_hard_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "physical_specimens_tested": 0,
+  "limits": [
+    "Nominal shaped nail tails and conforming TPU side tabs; cable slack and moving-source behavior remain.",
+    "Known same-cell layers use disjoint material domains or thickness intervals in an injective chart; source and other-cell comparisons use native solids.",
+    "Common curve samples closer than 0.00001 mm are consolidated to avoid duplicate CAD vertices.",
+    "Solder and stiffener envelopes must clear the complete source finger and every other cell stack.",
+    "Curved stiffener fabrication and strain at the plated transition are not qualified by a geometric fit check."
+  ]
+}

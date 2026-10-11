@@ -192,13 +192,23 @@ def catalog_content(catalog):
 <nav class="design-section-nav" aria-label="Design categories">{category_links}</nav>'''+ "".join(cards)
 
 
-def build_design_pages(site,catalog=None):
-    catalog=catalog or load_catalog()
+def build_design_pages(site,catalog,models):
     directory=site/"assets/design-schematics";directory.mkdir(parents=True,exist_ok=True)
+    model_directory=site/"assets/design-models";model_directory.mkdir(parents=True,exist_ok=True)
+    by_id={model["id"]:model for model in models}
+    if len(by_id)!=len(models):
+        raise ValueError("Assembly model identifiers must be unique")
     for item in catalog["designs"]:
         (directory/f'{item["slug"]}.svg').write_text(schematic(item))
-        scripts=('<script src="assets/data.js" defer></script><script src="assets/viewer.js" defer></script>'
-                 '<script src="assets/design-viewer.js" defer></script>') if item.get("viewer_model") else ""
+        scripts=""
+        if item.get("viewer_model"):
+            if item["viewer_model"] not in by_id:
+                raise ValueError("Missing design-page assembly: "+item["viewer_model"])
+            data={"models":[by_id[item["viewer_model"]]]}
+            (model_directory/f'{item["slug"]}.js').write_text(
+                "window.ENGINEERING="+json.dumps(data,separators=(",",":")).replace("</","<\\/")+";\n")
+            scripts=(f'<script src="assets/design-models/{esc(item["slug"])}.js" defer></script>'
+                     '<script src="assets/viewer.js" defer></script><script src="assets/design-viewer.js" defer></script>')
         (site/f'{item["slug"]}.html').write_text(shell(item["title"],design_content(item,catalog),catalog,item["slug"],scripts))
     (site/"designs.html").write_text(shell("All designs and readiness",catalog_content(catalog),catalog))
     (site/"assets/design-catalog.json").write_text(json.dumps(catalog,indent=2)+"\n")

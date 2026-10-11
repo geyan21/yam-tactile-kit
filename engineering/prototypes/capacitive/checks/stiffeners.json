@@ -1,0 +1,357 @@
+{
+  "schema": "yam-k1-stiffener-tools/1",
+  "parts": [
+    {
+      "id": "k1_ch2_stiffener_bond_form_lower",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_stiffener_bond_form_lower.step",
+      "stl": "cad/k1_ch2_stiffener_bond_form_lower.stl",
+      "sha256_step": "91379019c894c496f6ffac29b961fc0b29232b90ede39ec0fcc7e2c472a940e9",
+      "sha256_stl": "3dc629b5f0085e4c8769cd6115f10a6eccf1c1af2d83e447e1fa708482547472",
+      "volume_mm3": 114.01695956388416,
+      "bounds_mm": [
+        [
+          -23.0,
+          -86.05474090576172,
+          -2.8002548217773438
+        ],
+        [
+          -17.0,
+          -78.8599853515625,
+          1.1241357326507568
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch2_stiffener_bond_form_upper",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch2_stiffener_bond_form_upper.step",
+      "stl": "cad/k1_ch2_stiffener_bond_form_upper.stl",
+      "sha256_step": "98029d48df408fdf03d9d67bde17803574b0c3d5dc062a66d4a7af2bb0970d59",
+      "sha256_stl": "0e1a57838414085513182dcb5872f5f629f42ed5dea0c781fd3de8a72b898d1c",
+      "volume_mm3": 68.11096315445053,
+      "bounds_mm": [
+        [
+          -23.0,
+          -85.26773834228516,
+          -5.797081470489502
+        ],
+        [
+          -17.0,
+          -80.5407943725586,
+          -2.3118629455566406
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stiffener_bond_form_lower",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_stiffener_bond_form_lower.step",
+      "stl": "cad/k1_ch3_stiffener_bond_form_lower.stl",
+      "sha256_step": "0d31e45dff02bbbcc6201eda46583e70dc4f57424c739c7289bf8c842366d05c",
+      "sha256_stl": "25e9057b87e41eaa4a2e11a0b3176ca1bd131e7d21518f702d5053e5da3d8c41",
+      "volume_mm3": 78.41934947460122,
+      "bounds_mm": [
+        [
+          -23.0,
+          -67.51423645019531,
+          -4.82232141494751
+        ],
+        [
+          -17.0,
+          -62.53619384765625,
+          -0.11483409255743027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch3_stiffener_bond_form_upper",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch3_stiffener_bond_form_upper.step",
+      "stl": "cad/k1_ch3_stiffener_bond_form_upper.stl",
+      "sha256_step": "a32dee5fbc89117a481b7f1b544bde07714b95f12749265c25e9ca4a96546547",
+      "sha256_stl": "33136c3550022778ff68f3fc2f6c5443fc4bf147744a21337f7789c763ea5f71",
+      "volume_mm3": 114.57761794508323,
+      "bounds_mm": [
+        [
+          -23.0,
+          -66.98015594482422,
+          -8.216559410095215
+        ],
+        [
+          -17.0,
+          -60.21754455566406,
+          -2.6505725383758545
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stiffener_bond_form_lower",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_stiffener_bond_form_lower.step",
+      "stl": "cad/k1_ch4_stiffener_bond_form_lower.stl",
+      "sha256_step": "570ffeaeae16aa4706316aadf80778f68a8cee9675f976d68fb9368f84ae0600",
+      "sha256_stl": "43421fe5705f335f1ad6aa746f5906601d38268cc9089476118cd77385fc8f63",
+      "volume_mm3": 102.76427177539621,
+      "bounds_mm": [
+        [
+          -23.0,
+          -53.2410888671875,
+          9.016589164733887
+        ],
+        [
+          -17.0,
+          -46.890567779541016,
+          13.560891151428223
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch4_stiffener_bond_form_upper",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch4_stiffener_bond_form_upper.step",
+      "stl": "cad/k1_ch4_stiffener_bond_form_upper.stl",
+      "sha256_step": "22136d201f9fa3bde95be817db2f5f6e2c4846e9c747829dadb4e17e3aa071c5",
+      "sha256_stl": "a7144080519979d9e2f59845e5b0d0597660c5ff86a6ca7d160dcab4b5ed830d",
+      "volume_mm3": 81.45240937125065,
+      "bounds_mm": [
+        [
+          -23.0,
+          -51.601680755615234,
+          5.996913433074951
+        ],
+        [
+          -17.0,
+          -46.36759948730469,
+          10.164922714233398
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stiffener_bond_form_lower",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_stiffener_bond_form_lower.step",
+      "stl": "cad/k1_ch5_stiffener_bond_form_lower.stl",
+      "sha256_step": "0ca804a984f802f7d64f0d829d397122274c30e73b2f747f850c82bb77afae07",
+      "sha256_stl": "49c1c6b98046450afd4678638006bcacfea724a57e31da6248d648dffd79aaad",
+      "volume_mm3": 90.84399406657877,
+      "bounds_mm": [
+        [
+          -23.0,
+          -33.3736572265625,
+          -1.8378872871398926
+        ],
+        [
+          -17.0,
+          -28.039709091186523,
+          4.066671848297119
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "k1_ch5_stiffener_bond_form_upper",
+      "purpose": "Curved form for bonding the terminal stiffener without flattening the FPC",
+      "material": "Machined smooth polymer or finished precision print; verify adhesive compatibility",
+      "kind": "fabricate_tool",
+      "step": "cad/k1_ch5_stiffener_bond_form_upper.step",
+      "stl": "cad/k1_ch5_stiffener_bond_form_upper.stl",
+      "sha256_step": "fc6836c8a58a744ae05fe972771c5fd563079c84ff4a3173fc5861851c2ac5e2",
+      "sha256_stl": "57b222fde39fff336a6895449649488b543c640c6b2f2b96aacbe7703524c07c",
+      "volume_mm3": 97.20877797261834,
+      "bounds_mm": [
+        [
+          -23.0,
+          -36.214168548583984,
+          -4.052746772766113
+        ],
+        [
+          -17.0,
+          -30.666587829589844,
+          2.1333861351013184
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cases": [
+    {
+      "site": "CH0",
+      "flat_pattern_bounds_mm": [
+        -1.6012400000000002,
+        20.07913,
+        1.59876,
+        24.07913
+      ],
+      "flat_area_mm2": 12.8,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Flat terminal: bond between smooth release-treated flat plates",
+      "curvature_note": null,
+      "copies_per_finger": 1
+    },
+    {
+      "site": "CH1",
+      "flat_pattern_bounds_mm": [
+        -1.59951,
+        20.07913,
+        1.6004900000000002,
+        24.07913
+      ],
+      "flat_area_mm2": 12.8,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Flat terminal: bond between smooth release-treated flat plates",
+      "curvature_note": null,
+      "copies_per_finger": 1
+    },
+    {
+      "site": "CH2",
+      "flat_pattern_bounds_mm": [
+        -14.5,
+        5.701618717874464,
+        -10.5,
+        9.024812868774902
+      ],
+      "flat_area_mm2": 13.292776603601752,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Elastically bend the cut stiffener on the lower form; laminate to the FPC with 50 \u00b5m adhesive and the upper form",
+      "curvature_note": "Curvature follows the supplied STEP forms; qualify residual spring load and adhesion",
+      "copies_per_finger": 1
+    },
+    {
+      "site": "CH3",
+      "flat_pattern_bounds_mm": [
+        -14.5,
+        7.089427505944819,
+        -10.5,
+        10.204664029608539
+      ],
+      "flat_area_mm2": 12.46094609465488,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Elastically bend the cut stiffener on the lower form; laminate to the FPC with 50 \u00b5m adhesive and the upper form",
+      "curvature_note": "Curvature follows the supplied STEP forms; qualify residual spring load and adhesion",
+      "copies_per_finger": 1
+    },
+    {
+      "site": "CH4",
+      "flat_pattern_bounds_mm": [
+        -14.5,
+        5.5986254416225485,
+        -10.5,
+        8.851541706170526
+      ],
+      "flat_area_mm2": 13.011665058191909,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Elastically bend the cut stiffener on the lower form; laminate to the FPC with 50 \u00b5m adhesive and the upper form",
+      "curvature_note": "Curvature follows the supplied STEP forms; qualify residual spring load and adhesion",
+      "copies_per_finger": 1
+    },
+    {
+      "site": "CH5",
+      "flat_pattern_bounds_mm": [
+        -14.5,
+        9.779547844030015,
+        -10.5,
+        12.963474573947465
+      ],
+      "flat_area_mm2": 12.735706919669802,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Elastically bend the cut stiffener on the lower form; laminate to the FPC with 50 \u00b5m adhesive and the upper form",
+      "curvature_note": "Curvature follows the supplied STEP forms; qualify residual spring load and adhesion",
+      "copies_per_finger": 1
+    },
+    {
+      "site": "REF",
+      "flat_pattern_bounds_mm": [
+        -1.6,
+        12.0,
+        1.6,
+        15.0
+      ],
+      "flat_area_mm2": 9.600000000000001,
+      "material": "0.20 mm polyimide stiffener supplied by the FPC fabricator",
+      "adhesive": "0.05 mm nominal flex-compatible bonding film, selected with the FPC fabricator",
+      "process": "Flat terminal: bond between smooth release-treated flat plates",
+      "curvature_note": null,
+      "copies_per_finger": 2
+    }
+  ],
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "engineering/scripts/build_capacitive_stiffener_tools.py": "c8db95645b2c81115c7710bec0714e82890329bb7151ff766b73006084e0cc07",
+    "engineering/scripts/capacitive_cell_geometry.py": "991928e0709e31e4f7dab5427d9fe62705c10276ec6942dcabb2f1f8567aeaaf",
+    "engineering/scripts/build_capacitive_cell_mechanics.py": "d47072343be34239c7a00884840c6fd59c5ba650c3c5e04b16fda6a4ce4ccb24",
+    "build/engineering/prototypes/capacitive/foil_runs/20261011T210432.796205Z/report.json": "ade6ea0ea986df2a8d647decde4b1b88444770ad6f3ee1932111e433824ae665"
+  },
+  "limits": [
+    "The FPC fabricator must approve the PI, adhesive, copper and coverlay stack.",
+    "These forms hold the curved terminal during bonding; polyimide is not assumed to retain a heat-formed shape.",
+    "Adhesive durability, springback, soldering heat and bend-cycle life require physical tests."
+  ]
+}

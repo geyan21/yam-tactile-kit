@@ -1,0 +1,36 @@
+item,quantity_per_finger,unit,specification,placement_or_use,source_or_note
+Sensing flex CH0–CH5,6,boards,Custom K1.2 two-layer 0.186 mm flexible PCB,One per named contact cell,Use each checked flex fabrication ZIP; quantity one per shape
+Reference flex REF,2,boards,Same checked REF flex design,One protected cell per bank case,Confirm actual PI core and coverlay stack with fabricator
+Readout PCB,2,boards,K1 four-layer 42 x 38 x 1 mm PCB,Banks A and B,Use readout PCB component list for 23 components per board
+FDC1004DGSR,2,ICs,TI capacitance converter,Readout U1; included in board component list,https://www.ti.com/lit/ds/symlink/fdc1004.pdf
+ADS1115IDGSR,2,ICs,TI four-channel ADC,Readout U2; included in board component list,https://www.ti.com/lit/ds/symlink/ads1115.pdf
+Raspberry Pi Pico,1,board,Original RP2040 Pico with suitable USB cable,External insulated controller holder,No actuator control is supplied
+SYLGARD 184,1,small batch,10:1 base to curing agent by mass,Eight molded post sheets,Buy kit and record lot and cure; do not estimate accuracy from bulk modulus
+Dragon Skin 10 Slow,1,small batch,1A:1B by mass or volume,Eight retained wear covers,Qualify cure compatibility with tooling and release
+Annealed 304 stainless,8,cut plates,0.30 mm sheet,CH0–CH5 once and REF twice,Use current plate cutting patterns and forming tools
+Kapton 300HN,32,stop quadrants,0.0762 mm nominal polyimide,Four per cell including both references,Use current stop patterns; measure real film thickness
+3M 467MP,1,small sheet,0.05 mm nominal transfer adhesive,Stop lower faces,Measure the bonded film-plus-adhesive height
+Polyimide stiffeners,8,cut pieces,0.20 mm nominal,Back of each flex terminal,Use the separate neutral-plane cut patterns
+Stiffener bonding film,8,cut pieces,0.05 mm nominal FPC-compatible adhesive,Between stiffener and flex,Select and qualify with the FPC fabricator
+Sil-Poxy,1,small tube,Smooth-On silicone adhesive,Designated retainer feet,Qualify actual silicone-to-coverlay joint; keep vents clear
+MG 8331D,1,small kit,Silver conductive epoxy,Two independent plate bonds per cell,Follow current manufacturer mixing and cure instructions
+Taoglas 300815C010000A,6,cable pieces,0.81 mm micro-coax; finished length at most 150 mm,CIN and driven SHLD to six pressure cells,https://www.taoglas.com/specifications/300815C010000A_Taoglas.pdf
+Taoglas 300815C010000A,2,cable pieces,Finished length at most 25 mm,Reference CIN4 and driven SHLD2,Minimum design bend radius 10 mm
+Fine stranded wire,16,leads,34 AWG copper; insulation diameter at most 0.55 mm,Two independent leads per grounded plate,Pressure-cell leads at most 150 mm; leave plate slack loops
+JP harness,2,four-wire sets,Short insulated 3V3/GND/SDA/SCL leads,Each bank to its own Pico bus,Keep bank addresses on separate buses
+Conforming saddles,4,parts,Finished PETG prototype or suitable insulating polymer,Four retained TPU contact regions,Print fit witnesses and inspect the actual insert before bonding
+Nail flex mounting bond,2,patches,0.05 mm nominal insulating bond,Under nail foils,Qualify adhesion and measure stack height
+Saddle flex mounting bond,4,patches,0.05 mm nominal insulating bond,Above each conforming support,The CAD reserves this upper bond; preserve the retained lower fit interface
+Bank case and lid,2,sets,Finished insulating polymer,Readout protection,Use the supplied tapped-pilot and cable-port geometry
+Reference support,2,parts,0.5 mm support plus 0.05 mm insulating bond,PCB reserved 14 x 12 mm area,The lid must not load the reference plate
+M2 x 5 mm screws,8,fasteners,PCB fasteners with thin insulating washers,Four per readout case,Finish printed pilots with an M2 tap
+M2 x 6 mm screws,8,fasteners,Lid fasteners,Four per case,Verify real thread engagement and pilot dimensions
+Cable ties,8,ties,2.5 mm width,Six pressure harnesses and two JP harnesses,Clamp insulated jackets without crushing coax
+M3 mounting fasteners,4,sets,Select length for actual bracket,Two tabs per case,Actual drive bracket and jaw clearances remain specimen-specific
+Post stencils and backing spacers,7,tool sets,150 µm metal stencil plus 50 µm backing spacer,Reusable CH0–CH5 and REF tooling,Use smooth release-treated backing plates; verify actual thickness
+Spreader forming tools,6,tools,Matched source curvature,CH0–CH5 steel plates,REF is flat; inspect springback
+Cover mold halves,14,halves,Seven registered two-part molds,Reusable CH0–CH5 and REF cover tooling,Precision 50–100 µm features require a qualified process
+3 mm x 8 mm dowel pins,14,pins,Two per cover mold,Tool registration,Finish bores for actual fit
+M3 mold clamp fasteners,28,sets,Four per mold; length from tooling report,Clamp registered mold halves,Use the per-shape minimum-length table and suitable nuts/washers
+Curved stiffener bonding forms,8,halves,Four matched lower/upper form pairs,CH2–CH5 terminal lamination,Nail and REF stiffeners are bonded flat
+Independent force reference,1,shared instrument,Calibrated through the required load range,Physical training and held-out tests,Record reference uncertainty; no physical model is supplied

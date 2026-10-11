@@ -1,161 +1,191 @@
-# K1: capacitive cells on the ENPIRE finger
+# K1.2: build the six-cell capacitive finger
 
-**K1 has cell tooling, conforming supports, a checked readout PCB and raw
-acquisition code. The complete tactile finger remains unfinished.**
-There are no physical specimens or measured 20 N results.
+**The tactile sensor is a custom compression capacitor at each contact region.**
+Buy **TI FDC1004DGSR** for its readout, **Dow SYLGARD 184** for the patterned
+dielectric, and the specified two-layer flexible electrodes. An FDC1004 board
+alone is not a tactile sensor.
 
-The sensor is a compression capacitor. A patterned SYLGARD 184 sheet sits
-between a covered sensing electrode and a grounded stainless spreader.
-Compression changes capacitance. The FDC1004 converts that electrical
-response; it does not supply a calibrated force value by itself.
+The new [K1.2 package](../prototypes/capacitive/README.md) contains the formed
+electrodes, retained plates, stops, casting and bonding tools, bank enclosures,
+checked electrical artwork and raw/force-calibration software.
+**Physical specimens tested: 0. No measured 20 N pass or contact winner exists.**
+The [earlier K1 module](../development/capacitive/k1/README.md) remains available.
 
-![Cell positions](../development/capacitive/k1/visuals/k1_cell_placement.png)
+![Actual cell and terminal placement](../prototypes/capacitive/visuals/k1_assembly.png)
 
-## Exactly what to use and where
+## Sensors and placement
 
-| Location | Selected development construction | Readout connection |
+| Position on the finger | What to assemble | Connection |
 | --- | --- | --- |
-| Left nail, CH0 | One thin compression cell over the nail face | Board A, JS0 |
-| Right nail, CH1 | A separate cell on the other prong; keep the notch open | Board B, JS0 |
-| Distal TPU, CH2 | Cell on its conforming rigid support | Board A, JS1 |
-| Next TPU region, CH3 | Separate cell and support | Board A, JS2 |
-| Next TPU region, CH4 | Separate cell and support | Board B, JS1 |
-| Proximal TPU, CH5 | Separate cell and support | Board B, JS2 |
-| Protected reference, two copies | Unloaded post-sheet capacitor at each readout board | Its board's JREF / CIN4 |
-| Readout boards, two copies | FDC1004DGSR plus ADS1115IDGSR and passive components | Fixed electronics away from the contact surfaces |
+| Left nail prong, CH0 | Left shaped flex, post sheet, steel plate and thin silicone cover | Bank A, JS0 |
+| Right nail prong, CH1 | Separate right shaped cell; keep the fork notch open | Bank B, JS0 |
+| Distal TPU region, CH2 | Curved cell on its conforming rigid saddle | Bank A, JS1 |
+| Middle-distal TPU, CH3 | Separate curved cell and saddle | Bank A, JS2 |
+| Middle-proximal TPU, CH4 | Separate curved cell and saddle | Bank B, JS1 |
+| Proximal TPU, CH5 | Separate curved cell and saddle | Bank B, JS2 |
+| Two protected references | Build REF twice; one inside each bank case, away from external force | Respective JREF / CIN4 |
+| Two bank boards | FDC1004DGSR plus ADS1115IDGSR health monitor | Separate Pico I²C buses |
 
-![Capacitive stack](../development/capacitive/k1/visuals/k1_stack.svg)
+![Layer order and dimensions](../prototypes/capacitive/visuals/k1_stack.svg)
 
-The molding target is a **0.05 mm base with 0.15 mm high, 0.60 mm diameter
-posts**. The proposed spreader is 0.30 mm stainless. The requested two-copper
-flex stack is 0.136 mm including its core and coverlays. These are manufacturing
-targets and nominal geometry, not measurements of delivered parts.
+Nominal flex thickness is **0.186 mm**: 100 µm polyimide core, 18 µm copper
+on each side, and 25 µm coverlay including adhesive on each face.
+The post sheet has a **50 µm base and 150 µm high, 600 µm diameter posts**.
+The grounded plate is **0.30 mm annealed 304 stainless**.
 
-Use [Dow SYLGARD 184](https://www.dow.com/en-us/pdp.sylgard-184-silicone-elastomer-kit.01064291z.html)
-at the manufacturer's 10:1 ratio. The candidate cure is 100 °C for 35 minutes
-after the part reaches temperature. Use compatible metal/glass tooling for
-that process and record the actual cure and dimensions.
-The [bulk-material study](https://uhra.herts.ac.uk/id/eprint/3211/1/906746.pdf)
-shows why cure and loading mode matter; its tensile modulus is not a
-calibration of these small compression posts.
+Nominal nail addition is **0.836 mm**. The **1.786 mm TPU stack height is above
+the R1 smoothed-saddle datum**; the fitting base is below that datum.
+It is not the total addition to bare TPU. The TPU between saddles remains
+compliant, but each saddle locally stiffens its contact region. Measure the
+resulting access and bending behavior against the bare finger.
 
-The nominal nail addition is **0.786 mm**. The TPU figure of **1.736 mm is above
-the R1 smoothed-saddle datum**; the conforming fitting base lies below that
-datum. It is not the total addition to bare TPU. Compare actual task access
-with the thinner alternatives before selecting this approach.
+## Order and fabricate
 
-## Files available now
+Use the [bill of materials](../prototypes/capacitive/bom.csv),
+[part table](../prototypes/capacitive/parts.csv) and
+[file index](https://geyan21.github.io/yam-tactile-kit/assets/prototypes/capacitive/file-index.html).
+`reference_only` CAD files describe fit envelopes; they are not items to print.
 
-Use the [module scope and file list](../development/capacitive/k1/README.md)
-and [current parts table](../development/capacitive/k1/parts.csv).
+1. **Order the flex set.** Use the seven native KiCad designs and their checked
+   Gerber/drill ZIPs under `flex/`. Order CH0–CH5 once and REF twice per finger.
+   Keep the terminal labels: **1 = CIN, 2 = driven SHLD**. Only those top lands
+   are opened. The guarded sensing copper stays under coverlay. Require the
+   fabricator to confirm the 0.186 mm material stack and the requested core
+   thickness; a generic rigid-board service is unsuitable.
+2. **Make the rigid supports and tools.** Print and fit the four conforming
+   saddles on the real TPU. Make the seven post stencils and backing spacers,
+   six spreader forms, seven pairs of cover-mold halves, and four pairs of
+   curved stiffener bonding forms. The mold's 50–100 µm features need a
+   qualified precision process; an ordinary coarse FDM print does not prove
+   those dimensions.
+3. **Cut the metal plates and stop quadrants.** Use the current plate/stop SVGs
+   in millimetres. Deburr the 0.30 mm plates and form them with the matching
+   tooling. The current plate outline reserves space for the retaining skirt
+   while retaining the first 1 mm of the leading nail outline.
+4. **Build two readout boards.** Use the retained, checked four-layer
+   `readout/` artwork and its component list. Each board has 23 components.
+   Supply it from the Pico's 3V3 rail. Build the electronics first with measured
+   fixed capacitors, labeling those records as electronics tests.
 
-The current set contains 49 STEP/STL parts. It includes seven casting patterns
-(the reference is used twice), laser stencils, backing spacers, shaped metal
-spreaders, forming tools, electrode/cover envelopes and the corrected
-conforming supports. Six formed post-sheet STL files are additional viewing
-references. Use the flat casting masters for manufacture.
+## Assemble the contact cells
 
-The four earlier slab-only supports remain in `history/`. The current supports
-reach the retained TPU fitting geometry and reserve a 0.05 mm flex bond.
-Their eighteen declared source/peer/electrode comparisons pass. Print and fit
-them on the actual finger before committing to the complete assembly.
+1. **Mold the post sheets.** Mix
+   [SYLGARD 184](https://www.dow.com/en-us/pdp.sylgard-184-silicone-elastomer-kit.01064291z.html)
+   at 10:1 by mass. Use the 150 µm stencil and 50 µm backing spacer with smooth,
+   release-treated plates. The candidate cure is 100 °C for 35 minutes after
+   the part reaches temperature; follow the current material instructions and
+   verify tool compatibility. Measure the finished base, post height, diameter
+   and missing/merged posts. The supplied flat post-sheet geometry is the
+   manufacturing master; curved meshes illustrate the installed form.
+2. **Prepare the flex terminals.** Use the separate 0.20 mm polyimide
+   stiffener cutting patterns, with the fabricator-approved 0.05 mm bond.
+   The curved patterns are developed at the stiffener's own neutral plane.
+   Hold the TPU terminals on the supplied forms during bonding. Polyimide is
+   not assumed to retain a heat-formed shape. The nail terminal has a
+   length-preserving 4 mm bend followed by a flat stiffener; keep its free bend
+   unbonded and retain the specified 0.4 mm outward lift.
+3. **Mold the retained cover around its plate.** Use
+   [Dragon Skin 10 Slow](https://www.smooth-on.com/products/dragon-skin-10-slow/)
+   at 1A:1B by mass or volume. Test cure compatibility first. Wet the open
+   cavities with degassed material, locate the formed plate, register the
+   halves with two 3 × 8 mm pins and close the four M3 fasteners evenly.
+   The foot-level overflow channels let excess material escape. Follow the
+   current cure instructions, demold carefully, and trim flash without cutting
+   the retaining lip, four vents or two ground-bond access ports.
+4. **Laminate the stops.** Use DuPont Kapton 300HN with 3M 467MP on its lower
+   face. Nominal film plus adhesive height is **0.1262 mm**, leaving
+   **0.0738 mm** nominal travel above the flex. The model exposes early
+   bottoming in some thick-adhesive cases. Measure the bonded height and the
+   assembled free gap for every cell; a nominal material label is insufficient.
+   Place all four separate stop quadrants without filling their vent gaps.
+5. **Stack and retain.** Mount the flex on the nail or matching saddle with
+   the specified bond thickness. Place the post sheet over the active
+   electrode, align its pattern, and install the retained plate/cover.
+   Bond only the designated cover feet with
+   [Sil-Poxy](https://www.smooth-on.com/products/sil-poxy/), after qualifying
+   the actual silicone-to-coverlay joint. Do not fill the air cavity, bond
+   the moving plate to the base, or bridge the open vents.
+6. **Make two separate plate bonds.** After the cover has cured, use
+   [MG 8331D](https://mgchemicals.com/products/adhesives/electrically-conductive-adhesives/silver-epoxy/)
+   in the two exposed edge-bond envelopes. Follow its current mixing/cure
+   instructions. Attach independent fine stranded wires, one to ground drive
+   and one to the health return. Keep a slack loop at each moving plate.
+   Measure continuity through the plate. The driven shield must remain separate.
 
-The electrode envelopes are not copper artwork, and printing them does not
-produce a functional capacitor. Stops, retention, vents/sealing, grounded
-spreader joints, the guarded cable installation and enclosure remain.
+The nominal lip-to-stop check passes for all seven cell shapes. Its minimum
+ground-bond clearance at full nominal stop is 0.0762 mm. These are CAD values;
+flash, adhesive, plate shape, tolerances and wear can change the real result.
 
-## PCB, wiring and code
+## Wire and protect the electronics
 
-![Readout layout](../development/capacitive/k1/visuals/k1_readout.png)
+![Pin connections and protected references](../prototypes/capacitive/visuals/k1_wiring.svg)
 
-One board has 23 components and serves three pressure cells plus a reference.
-Build two copies using the
-[component list](../development/capacitive/k1/pcb_components.csv),
-[native pin table](../development/capacitive/k1/pcb/k1_readout_pins.csv)
-and checked artwork. KiCad reports zero violations and zero missing connections.
-The declared 0.15 mm spacing applies only between native package pads;
-routed clearances remain 0.20 mm, with 0.25 mm via drills.
-
-| Interface | Pin order |
+| Port | Pin order |
 | --- | --- |
 | JP | 1 = 3V3, 2 = GND, 3 = SDA, 4 = SCL |
-| JS0 / JS1 / JS2 | 1 = CIN, 2 = driven SHLD1, 3 = ground drive to the spreader, 4 = independent ground return |
+| JS0, JS1, JS2 | 1 = CIN, 2 = SHLD1, 3 = plate ground drive, 4 = separate plate return |
 | JREF | 1 = CIN4, 2 = SHLD2, 3 = GND, 4 = GND |
 
-The two spreader-ground connections must be separate physical bonds so the
-health loop passes through the metal plate. The driven shield is separate
-from ground. Cable design and termination details still need completion.
-[TI's FDC1004 data sheet](https://www.ti.com/lit/ds/symlink/fdc1004.pdf)
-describes the shielding and differential-input requirements.
+Use **Taoglas 300815C010000A 0.81 mm micro-coax** for each CIN/shield pair:
+centre to CIN, braid to SHLD. The
+[manufacturer specification](https://www.taoglas.com/specifications/300815C010000A_Taoglas.pdf)
+gives 96 ± 3 pF/m and a 5 mm minimum bend radius; this design reserves a
+10 mm bend radius. Finished pressure-cell leads must be at most 150 mm and
+reference leads at most 25 mm. Keep the exposed centre conductor at each
+termination at most 2 mm and insulate the shield braid.
 
-Connect board A to Pico GP0/GP1 and board B to GP2/GP3 for SDA/SCL respectively.
-Both use address 0x50 for FDC1004 and 0x48 for ADS1115, so they require separate
-buses. Use the Pico's 3V3 output and ground.
+Use the supplied harness plan for jacket anchoring and plate-wire slack.
+Pass each cell's coax and two ground leads through its numbered case port and secure only
+its insulated jackets using the adjacent tie slots. Do not crush the coax.
+Print two bank cases, lids and reference supports. The 0.5 mm support places
+REF in the PCB's reserved 14 × 12 mm area; the lid must not load its plate.
+Keep the Pico and USB in a separate insulated holder on the bench.
+
+Bank A uses Pico **GP0 SDA / GP1 SCL**. Bank B uses **GP2 SDA / GP3 SCL**.
+Each bank has FDC1004 address **0x50** and ADS1115 address **0x48**, so the
+buses must stay separate. The case's M3 tabs provide a mounting interface;
+the unidentified YAM drive still needs a measured bracket and a full
+jaw-motion clearance check.
+
+The conservative complete-foil/cable screen gives about **349 pF for A and
+373 pF for B** in the declared thin-core/high-permittivity case, below the
+400 pF planning limit. Confirm actual shield loading and operation. The
+[FDC1004 data sheet](https://www.ti.com/lit/ds/symlink/fdc1004.pdf) defines
+the converter's electrical limits; those limits do not establish force accuracy.
+
+## Record and evaluate
 
 Copy all four files from `engineering/firmware/capacitive/` to the dedicated
-bench Pico. The code reads differences against CIN4, then the reference
-itself. It records raw words and separate sample times. The host decoder
-checks configuration, supply, ground loops, missing/stale data and coarse
-capacitance plausibility. No contact or force inference is enabled.
+Pico. Use the [K1 test guide](CAPACITIVE_TESTING.md) for commands, fixed-capacitor
+bring-up, held-out force evaluation and contact trials.
+
+The new protocol preserves boot identity, repeated startup configuration,
+raw capacitance words, timestamps, supply checks and separate plate-return
+health signals. The force fitter requires physical training data and separate
+evaluation sessions. No calibrated physical model or contact rule is bundled.
+
+## Reproduce the digital files
+
+Prepare the same project-local CAD, KiCad and Gmsh tools used by the existing
+K1 module. The new package's `provenance/source_runs.json` identifies every
+input and result; commands print fresh result directories rather than replacing
+old evidence. Run the generators in this order:
 
 ```sh
-/usr/bin/python3 -m venv build/engineering/tools/k1-capture-venv
-build/engineering/tools/k1-capture-venv/bin/python -m pip install pyserial==3.5
-build/engineering/tools/k1-capture-venv/bin/python engineering/software/capacitive_record.py \
-  --port PORT --specimen ID --condition CONDITION \
-  --seconds 30 --output NEW_RECORDING.jsonl
-```
-
-Replace the port and identifiers with the actual setup. Keep raw recordings,
-failed readings, specimen identity, reference-load measurements and photos.
-Capacitance plausibility cannot guarantee detection of every cable fault.
-
-## First student work and qualification
-
-1. Inspect the actual printed support fit, post height/diameter, base thickness
-   and formed spreader curvature. Record shrinkage and springback.
-2. Bring up the readout independently with measured fixed capacitors. Label
-   those records as electronics tests; they are not tactile measurements.
-3. Complete the electrode, stop, retention, vent, bond and cable details.
-   Keep electrode contacts insulated and the reference protected from load.
-4. Measure unloaded noise, drift, cable movement and all wire-disconnection
-   cases before fitting a contact threshold.
-5. Calibrate independent specimens with the common reference loads and probe
-   shapes through 20 N. Record bottoming, loading/unloading differences,
-   temperature effects, no-contact bending, tip movement and precision tasks.
-6. Evaluate held-out specimens/sessions using the [all-design campaign](BUILD_ALL.md).
-
-The uniform post model fits the converter range in its stated scenarios.
-Its revised shield-load estimates are about 336 and 373 pF. These calculations
-omit finite plate loading, friction, viscoelasticity and measured parasitics;
-they do not establish force accuracy or reliable grasping.
-
-## Reproduce the current digital modules
-
-For a fresh Linux checkout, prepare the project-local tools and source solids.
-The shared structural-tool cache supplies Gmsh for the post-sheet surface mesh.
-Keep the supplied R1 release files as the retained geometry basis.
-
-```sh
-/usr/bin/python3 engineering/scripts/collect_geometry_sources.py
-/usr/bin/python3 engineering/scripts/prepare_environment.py
-/usr/bin/python3 engineering/scripts/prepare_b1_eda.py --extract
-/usr/bin/python3 engineering/scripts/prepare_c1_fea.py
-build/engineering/tools/cad-venv/bin/python engineering/scripts/prepare_source_brep.py --part hard_frame
-```
-
-The generation commands print fresh output directories; use those exact directories
-for `CELLS`, `PLACEMENT`, `NATIVE` and `ROUTE` below.
-
-```sh
-build/engineering/tools/cad-venv/bin/python engineering/scripts/screen_capacitive_k1.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/design_capacitive_foils.py
 build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_k1_parts.py --reference
 build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_saddles.py CELLS
-/usr/bin/python3 engineering/scripts/design_capacitive_board.py
-build/engineering/tools/b1-kicad/AppDir/bin/python3.11 engineering/scripts/write_capacitive_board.py PLACEMENT/specification.json NATIVE
-/usr/bin/python3 engineering/scripts/check_prototype_pcb.py NATIVE --name k1_readout --kicad-cli build/engineering/tools/b1-kicad/AppDir/bin/kicad-cli
-build/engineering/tools/cad-venv/bin/python engineering/scripts/route_capacitive_board.py NATIVE
-build/engineering/tools/b1-kicad/AppDir/bin/python3.11 engineering/scripts/write_capacitive_board.py PLACEMENT/specification.json ROUTE/native --routing ROUTE/routing.json
-/usr/bin/python3 engineering/scripts/check_prototype_pcb.py ROUTE/native --name k1_readout --export --kicad-cli build/engineering/tools/b1-kicad/AppDir/bin/kicad-cli
-/usr/bin/python3 engineering/scripts/verify_capacitive_checkpoint.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_foil_fit.py FOILS
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_cell_mechanics.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/check_capacitive_cell_clearances.py MECHANICS
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_cover_molds.py MECHANICS
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_stiffener_tools.py FOILS
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_capacitive_enclosure.py MECHANICS FOILS
+build/engineering/tools/cad-venv/bin/python engineering/scripts/check_capacitive_assembly.py MECHANICS FOIL_FIT
+build/engineering/tools/cad-venv/bin/python engineering/scripts/screen_capacitive_assembly.py FOILS
 ```
+
+The flex fabrication step uses `write_capacitive_foils.py` and
+`check_capacitive_foils.py` under the supplied KiCad environment. Read their
+`--help` and the saved commands in the execution records; do not send an
+unchecked intermediate board to fabrication.

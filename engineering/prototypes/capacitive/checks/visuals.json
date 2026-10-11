@@ -1,0 +1,25 @@
+{
+  "schema": "yam-k1-prototype-visuals/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/capacitive_k1.json": "08de3ec52af65ec0bec38751ca187cff3d4561765f9d0f00485494a8d38ce29e",
+    "engineering/scripts/draw_capacitive_prototype.py": "be5480906e699b690a48e4cac61543d6516ace1a36c92ffe92c54e4d702d5c88",
+    "engineering/web/k1_stack.svg": "7972d54c70841333133af15223b4392dd0c193b44397aa4d3d913f3ffd945f0b",
+    "engineering/web/k1_wiring.svg": "ec694747ec7610b400f003915c23b5c6353125b63390b3c90fe86708832ce67e",
+    "build/engineering/prototypes/capacitive/cell_mechanics/20261011T222052.188577Z/models.json": "a87a39839c2dba4b04b44d6b6e2630f42fa00b02c8517446d10eb6efb54d8918",
+    "build/engineering/prototypes/capacitive/foil_fit/20261011T214927.820498Z/models.json": "a7fe86275b356880b2415f8aaa39b5c3f268a6a423dc77e85d6a5850e476fb67",
+    "build/engineering/prototypes/capacitive/saddle_runs/20261011T212853.113437Z/models.json": "ea4a6eef30c599e2060f391136288c24913dd6d119d604307cf0de587846a77d",
+    "build/engineering/prototypes/capacitive/enclosure/20261011T222605.270735Z/models.json": "4a66d87a005b9a1728a789759eca952ddae7293daca797b667a5e0dafe8ab669",
+    "build/engineering/prototypes/capacitive/assembly_screens/20261011T222925.545416Z/report.json": "34c8aabce4caa565f6ab6518382fafafc7a9efb7e189de09cf4e50cf5b982df1"
+  },
+  "files_sha256": {
+    "k1_assembly.png": "676be0756eb0ff8e916bd91638e5eb4b60bb7945d02258c6cb1cc9ad7b528b13",
+    "k1_wiring.svg": "ec694747ec7610b400f003915c23b5c6353125b63390b3c90fe86708832ce67e",
+    "models.json": "6fc3ca090bec559e4f9b09ff6efb8de2445cb08014674e16aeac94ab5ed151e9",
+    "k1_stack.svg": "7972d54c70841333133af15223b4392dd0c193b44397aa4d3d913f3ffd945f0b",
+    "assembly_sensitivity.pdf": "bc545c947ae779e1cfc9d2141a3790d16e3c3f3cb865a77a4dbe953a3b63e879",
+    "k1_review_drawings.pdf": "8c9a3df37e686a8a2ed1e59635126513e87716636379d7255092c02f6b4b5443",
+    "k1_enclosure.png": "e519b9a915f8525d638dcd8eab3f7e61d3e4bc999622e7d5a1f3591d56a33600",
+    "assembly_sensitivity.png": "9c28efdaf1fad3557a40d55a4eb7009c82c8a3f184d7a1802544b11b6442b889"
+  }
+}
