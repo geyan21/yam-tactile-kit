@@ -68,6 +68,8 @@ def navigation(catalog,active=""):
     groups=[]
     for group in catalog["groups"]:
         items=[item for item in catalog["designs"] if item["group"]==group["id"]]
+        if not items:
+            continue
         links="".join(link(item["title"],item["slug"]+".html",
                            **({"aria_current":"page","class":"active"} if item["slug"]==active else {})) for item in items)
         groups.append(f'<div class="design-nav-group"><p>{esc(group["title"])}</p>{links}</div>')
@@ -168,6 +170,8 @@ def catalog_content(catalog):
     cards=[]
     for group in catalog["groups"]:
         items=[item for item in catalog["designs"] if item["group"]==group["id"]]
+        if not items:
+            continue
         entries=[]
         for item in items:
             visual=item.get("visual",{"path":f'assets/design-schematics/{item["slug"]}.svg',"alt":item["title"]+" principle"})
@@ -177,10 +181,13 @@ def catalog_content(catalog):
 <h3>{esc(item["title"])}</h3><p>{esc(item["summary"])}</p><span class="design-card-action">Open this design →</span></div></a>''')
         cards.append(f'<section id="{esc(group["id"])}" class="design-catalog-group"><h2>{esc(group["title"])}</h2><p>{esc(group["description"])}</p><div class="design-card-grid">{"".join(entries)}</div></section>')
     counts={group["id"]:sum(item["group"]==group["id"] for item in catalog["designs"]) for group in catalog["groups"]}
+    category_links="".join(
+        f'<a href="#{group["id"]}">{counts[group["id"]]} {esc(group["title"].lower())}</a>'
+        for group in catalog["groups"] if counts[group["id"]])
     return f'''<div class="design-intro"><p class="eyebrow">ONE PAGE PER DESIGN</p><h1>Choose a design.<br>See exactly what exists.</h1>
 <p class="design-summary">Each page gives its purpose, sensor choice, placement, visuals, available files and remaining work.</p>
-<p class="design-stage-detail">{counts["prototype"]} prototype packages have build files. The concept and research pages explain their limits. No design is yet physically qualified through the 20 N per finger target. <a href="build-all.html">Follow the all-design build and comparison campaign →</a></p></div>
-<nav class="design-section-nav" aria-label="Design categories"><a href="#prototype">{counts["prototype"]} prototype packages</a><a href="#concept">{counts["concept"]} concepts</a><a href="#research">{counts["research"]} alternative approaches</a></nav>'''+ "".join(cards)
+<p class="design-stage-detail">{counts["prototype"]} prototype packages have build files. Other approaches remain in development. No design is yet physically qualified through the 20 N per finger target. <a href="build-all.html">Follow the all-design build and comparison campaign →</a></p></div>
+<nav class="design-section-nav" aria-label="Design categories">{category_links}</nav>'''+ "".join(cards)
 
 
 def build_design_pages(site,catalog=None):

@@ -1,7 +1,7 @@
 {
   "schema": "yam-design-pages/1",
   "groups": [
-    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1, B2, C1 and N1 have assembly files and readout code. All still require physical qualification."},
+    {"id": "prototype", "title": "Prototype build packages", "description": "R1, L1, B1, B2, C1, N1 and B3 have assembly files and readout code. All still require physical qualification."},
     {"id": "concept", "title": "Our next design concepts", "description": "Separate ideas and engineering studies. Check each page for exactly which files exist and which work remains."},
     {"id": "research", "title": "Alternative sensing approaches", "description": "Reference approaches considered in the study. These are not completed ENPIRE designs."}
   ],
@@ -222,28 +222,47 @@
       "related": ["B1", "B2", "C1"]
     },
     {
-      "id": "RECESSED", "slug": "recessed-magnetic", "title": "Recessed magnetic board · Revise the frame", "group": "concept",
-      "status": "Field/clearance study", "status_detail": "Only translation-based field and clearance scenarios exist. No recessed hard-frame CAD or approved sensor travel is supplied.",
-      "summary": "Explore placing the magnetic board closer to the embedded magnets to increase signal and potentially reduce side bulk.",
-      "signal": "Magnetic deformation observations, as in B1; a new gain/range choice may be required.",
-      "best_for": "A later frame redesign if measured B1 signal quality or side thickness is unacceptable.",
-      "tradeoff": "Less space for TPU motion, failed stock-frame clearance screens, and possible readout-range overflow.",
+      "id": "RECESSED", "slug": "recessed-magnetic", "title": "B3 · Recessed magnetic board", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "B3.1 supplies five checked CAD solids, the retained B2 PCB, a sampled magnetic-range review, gain-5 firmware and raw capture. Physical assembly, frame stiffness and 20 N qualification remain pending.",
+      "summary": "Move the magnetic board inward by 2.44 mm using a separately recessed hard frame and tapered locating spacers. Keep the compliant B1 insert, four magnets and two thin nail pads.",
+      "signal": "Gain-5 magnetic-field observations and two nail conductances. Physical calibration is required to estimate force.",
+      "best_for": "A paired B2/B3 experiment to determine whether a narrower board assembly helps precision access.",
+      "tradeoff": "Adds 3.61 mm global width with reserved heads, compared with B2's 6.05 mm; wires excluded. The changed frame, smaller spacer feet, actual deformation and interference require tests.",
       "sensors": [
-        ["S0–S4", "The B1 MLX90393 heads used as the study basis", "Translated inward in the model while retaining their length/height positions"],
-        ["M0–M3", "The B1 magnets used as the study basis", "Held at their released positions for this comparison"]
+        ["S0–S3 / U1–U4", "Four MLX90393SLW-ABA-011 ICs on the retained B2 PCB", "Beside the four TPU regions; component face at native X = 6.00 mm"],
+        ["S4 / U5", "One identical MLX90393", "Proximal reference position on the same board; it also sees the magnets"],
+        ["M0–M3", "Four S-03-01-N, N48, 3 × 1 mm axial discs", "Inside the retained B1 TPU pockets; north toward native +X"],
+        ["T0 / T1", "Two R1 N0 pressure-film laminates", "Object-facing surfaces of both hard nail prongs; mandatory in the complete B3 build"],
+        ["U10 / U11", "TCA9548ARGER multiplexer + ADS1115IDGSR", "Retained B2 board's base bay"],
+        ["Controller", "Pico RP2040 with yam-b3/1 firmware; GAIN_SEL=5 and RES=1", "Wrist/base; J1 bus and J2 nail wiring match B2"]
       ],
-      "placement": "The study compares PCB planes at the original native X≈8.44 mm and hypothetical 6.0, 4.0 and 2.8 mm planes. The inward cases fail the conservative existing-frame screen. They are not installation instructions.",
-      "visual": {"path": "assets/concepts/magnetic_gap.svg", "alt": "Calculated signal increase and configured range consumption as the board moves inward", "caption": "Field/clearance scenarios only. No modified frame, load deformation or safe travel was modeled."},
-      "schematic": ["Revise rigid frame", "Bring fixed heads inward", "More field / less space", "Recheck range and bending"],
+      "placement": "The PCB remains rigid while magnets move with the TPU. The board's length/height poses and orientations are retained from B2, with a 2.439 mm shift inward. Two Ø4.8 mm spacer feet seat on the revised frame, widening to Ø7 mm PCB flanges. The original nail and inner TPU attachments are preserved. Actual drive and cable motion still need physical checks.",
+      "visual": {"path": "assets/prototypes/recessed/recessed_assembly.png", "alt": "B3 recessed frame, retained magnetic TPU, two nail pads, one board and removable backer", "caption": "Actual CAD rendering with component and screw-head envelopes. No physical specimen is pictured; cable loops and coatings are omitted."},
+      "placement_visual": {"path": "assets/prototypes/recessed/recessed_placement.svg", "alt": "B3 labeled S0-S4 magnetometers, M0-M3 magnets and T0-T1 nail pads", "caption": "Exact sensor placement from the checked assembly. Die centers and orientation matrices are available in the CSV and CAD manifest."},
+      "schematic": ["Compliant TPU + nail pads", "Recessed fixed board", "Gain-5 raw acquisition", "Physical calibration"],
+      "viewer_model": "recessed_assembly",
+      "prototype_cad_group": "recessed",
       "resources": [
-        ["Calculation", "Recessed-board scenarios in the magnetic study JSON", "assets/concepts/magnetic_scaling.json"],
-        ["Plot", "Signal and range tradeoff SVG", "assets/concepts/magnetic_gap.svg"],
-        ["Baseline", "Current B1 geometry and build", "b1.html"],
-        ["Source", "Scenario calculator in the complete source", "downloads/enpire-source.zip"]
+        ["Assembly", "B3.1 complete build and wiring guide", "build-recessed.html"],
+        ["Testing", "Matched B2/B3 fit, force and contact tests", "recessed-testing.html"],
+        ["Results", "CAD and magnetic findings with their limits", "recessed-analysis.html"],
+        ["Materials", "Complete B3 bill of materials", "downloads/recessed_bom.csv"],
+        ["Drawings", "Assembly, exploded view and spacer dimensions", "downloads/recessed_review_drawings.pdf"],
+        ["Placement", "Exact die centers and orientation CSV", "assets/prototypes/recessed/recessed_sensor_placement.csv"],
+        ["Stack", "Fixed board and tapered spacer cross-sections", "assets/prototypes/recessed/recessed_stack.svg"],
+        ["Wiring", "B3 bus, nail leads and gain setting", "assets/prototypes/recessed/recessed-wiring.svg"],
+        ["PCB", "Retained checked B2 Gerbers and drill files", "downloads/b2_main_fabrication.zip"],
+        ["PCB source", "Retained B2 KiCad board", "assets/prototypes/b2/pcb/b2_main.kicad_pcb"],
+        ["Firmware", "Complete five-file B3 Pico package", "downloads/recessed_firmware.zip"],
+        ["Recording", "B3 specimen and measurement record", "downloads/recessed_specimen.json"],
+        ["Field study", "Sampled magnetic range and assumptions", "assets/prototypes/recessed/recessed_magnetic_review.json"],
+        ["Clearance", "Head, solder and prescribed-motion checks", "assets/prototypes/recessed/recessed_clearance_review.json"],
+        ["Source", "CAD generators, firmware, raw recorder and checks", "downloads/enpire-source.zip"],
+        ["Earlier study", "Preserved hypothetical inward-plane scenarios", "assets/concepts/magnetic_gap.svg"]
       ],
-      "missing": ["A redesigned frame with verified structural load paths", "Motion/clearance checks under load", "A selected readout configuration and saturation analysis over actual motion", "Manufacturing files for a recessed frame"],
-      "next_steps": ["Measure whether the existing B1 actually has a signal or bulk problem.", "Design the frame recess and mechanical protection if the change is justified.", "Recheck field range, contact sensitivity and clearance before loading the new part."],
-      "related": ["B1", "B2"]
+      "missing": ["Physical assembly and complete installed-drive/cable clearance", "Printed-frame stiffness, retention, fatigue and 20 N mechanical tests", "Measured headroom, force calibration, contact reliability and interference behavior", "Independent-build yield, repair effort and precision-task comparison"],
+      "next_steps": ["Print the revised frame, both identical spacers, backer and PCB witness; measure seating and actual drive fit.", "Populate the retained B2 board and both nail cells, then install all five B3 firmware files and check every fault path.", "Build matched B2/B3 specimens and run the common physical tests before choosing the narrower design."],
+      "related": ["B2", "B1", "NAIL", "C1"]
     },
     {
       "id": "F1", "slug": "flexible-matrix", "title": "Flexible matrix · Dense resistive contact array", "group": "research",

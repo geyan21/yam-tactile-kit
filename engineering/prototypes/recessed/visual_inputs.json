@@ -1,0 +1,22 @@
+{
+  "source_hashes": {
+    "engineering/designs/recessed.json": "580c77f09c3c36a40fe0357c153c1cc46eb745b5b423b313f80d5df8b1c26fbb",
+    "build/engineering/prototypes/recessed/recessed_manifest.json": "a03ed2c17b2f64e2d0643883396ed28fe44264d02544e2db4efdd88b579fcd88",
+    "build/engineering/prototypes/recessed/recessed_clearance_review.json": "6415f3d6b9409b2ae1f112e8057222373edc22fa00e7582b3958e0b314aacfe1",
+    "engineering/scripts/draw_recessed.py": "c697cb6d1f66122e54f813dc21462c2eaa64c385b293b38ba48ca1bf672ada72",
+    "engineering/scripts/draw_l1.py": "9c25065ef20105c2101da95a0798241873763c039be966e4f33020009cbc0370",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/release/b1/models.json": "301844b585aef6b8161eef4c5a0e4008e88fd53623857601c9f3ebdead48b8c8",
+    "engineering/release/models.json": "fc0a9bca0395f366c23ed8bcb24fe83708ce304a8ae83cd7306b4d7c1db8bcbb",
+    "engineering/prototypes/b2/pcb/b2_design_checks.json": "23a93224370c77db532a9b4a384bd8fd1e6d997ebb8e011883c5fbf4c6e66799"
+  },
+  "files": {
+    "models.json": "443ce831e031c8bb3b7e04c169377905deac14a0e2490cf47b40bd416badbe6d",
+    "recessed_assembly.png": "87ce2e3cab6fd23e35ea2c589451d3f21a83c74360b30af66519344b145436b3",
+    "recessed_exploded.png": "97ce16667bd9129857ea67804f824ac935dfd5be75411e119c4d6e9c7d049761",
+    "recessed_placement.svg": "eab63a7e8e15c6068515936fc675412af3d3005e5f234e1e5f78e97fd8ec9e80",
+    "recessed_stack.svg": "116309ad5b0b9c17a6c0e51689da1ee9840c85f33e0224e1c8c443db2598c3f7",
+    "recessed_stack.png": "755086933abebd374ba4e31a336c6ebf10992d8cc3b656f82d92d3a8fbec732f",
+    "recessed_review_drawings.pdf": "cead2ef4d8b961802d8d63ee180285698a28cf10486be6090bce0783bc861b18"
+  }
+}

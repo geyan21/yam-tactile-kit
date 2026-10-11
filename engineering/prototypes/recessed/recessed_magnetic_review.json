@@ -1,0 +1,6650 @@
+{
+  "schema": "yam-b3-magnetic-range/1",
+  "evidence_kind": "sampled_magnetic_model",
+  "physical_specimens_tested": 0,
+  "force_accuracy_qualified": false,
+  "assumptions": {
+    "schema": "yam-b3-magnetic-scenarios/1",
+    "evidence_kind": "prescribed_calculation_inputs",
+    "magnet_position_error_mm": 0.25,
+    "sensor_position_error_mm": 0.25,
+    "relative_position_grid": [
+      -1,
+      0,
+      1
+    ],
+    "magnet_diameter_tolerance_mm": 0.1,
+    "magnet_thickness_tolerance_mm": 0.1,
+    "remanence_relative_bound": 0.02,
+    "sensor_axis_error_deg_assumed": 4.0,
+    "electrical_scale_margin_assumed": 0.1,
+    "electrical_offset_allowance_ut_assumed": 250.0,
+    "external_field_native_axis_bound_ut_assumed": 1000.0,
+    "digital_range_fraction_limit": 0.8,
+    "imc_saturation_onset_ut": 50000.0,
+    "imc_range_fraction_limit": 0.8,
+    "coarse_quadrature": [
+      8,
+      24
+    ],
+    "fine_quadrature": [
+      16,
+      48
+    ],
+    "quadrature_difference_limit_ut": 0.05,
+    "notes": [
+      "Sampled motion, placement and dimension scenarios, not measured tolerances or a force-to-motion law.",
+      "Per-magnet component intervals enclose combinations of the sampled states. They do not certify every unsampled continuous state.",
+      "The electrical scale/offset and external-field allowances are engineering assumptions, not manufacturer guarantees.",
+      "Sensor conversion uses Table 17 at 25 C, HALLCONF=0xC, RES=1 and TCMP off.",
+      "The standard -011 sensor's 50 mT IMC onset is checked separately from digital word range.",
+      "Actual motor, second jaw, steel, temperature and permitted travel still require physical checks."
+    ]
+  },
+  "planes": [
+    {
+      "pcb_plane_native_x_mm": 8.43918638229734,
+      "nominal_field_native_ut": [
+        [
+          1380.6776709729436,
+          -197.5381457462504,
+          583.0917973281446
+        ],
+        [
+          432.8967933157855,
+          -77.67570256567089,
+          668.8596378169095
+        ],
+        [
+          1581.5981652759226,
+          24.39556798414442,
+          374.002319917169
+        ],
+        [
+          1249.3478064378128,
+          365.0396668966795,
+          562.8908611379084
+        ],
+        [
+          -62.01970199698216,
+          92.40987170619823,
+          149.0443990599039
+        ]
+      ],
+      "nominal_own_response_to_0p1mm_inward_ut": [
+        26.339593325575038,
+        17.702503030581216,
+        26.375605889857752,
+        25.5650096018203
+      ],
+      "summed_sampled_component_intervals_ut": {
+        "low": [
+          [
+            -734.6419245735052,
+            -1370.591126947656,
+            -4977.7583229204565
+          ],
+          [
+            -1229.4728615316085,
+            214.63237247897644,
+            -3100.1995939443364
+          ],
+          [
+            -1597.7269066962917,
+            -2161.584741923837,
+            -4940.493298745782
+          ],
+          [
+            -1061.8287971654222,
+            -857.3270613984917,
+            -4922.438732490869
+          ],
+          [
+            -233.5345575951972,
+            50.74216982784782,
+            -59.10346205982479
+          ]
+        ],
+        "high": [
+          [
+            1758.7711666856524,
+            2376.5627408090318,
+            -680.9513154552167
+          ],
+          [
+            469.04627624773553,
+            2354.6036303559526,
+            144.08339268108946
+          ],
+          [
+            671.3823531231005,
+            2022.262289420017,
+            -707.6969671944489
+          ],
+          [
+            1854.7541376444324,
+            2359.1333252723293,
+            -595.345222362272
+          ],
+          [
+            -9.788297873100449,
+            429.83099366434186,
+            225.22302868029075
+          ]
+        ]
+      },
+      "physical_field_component_bound_with_external_ut": [
+        [
+          2905.1223180251204,
+          3522.9138921485,
+          5977.7583229204565
+        ],
+        [
+          2400.664195216905,
+          3525.794964041249,
+          4100.199593944337
+        ],
+        [
+          2847.559353950888,
+          3411.4171891784335,
+          5940.493298745782
+        ],
+        [
+          3180.8069061334527,
+          3685.186093761349,
+          5922.438732490869
+        ],
+        [
+          1233.5345575951972,
+          1429.8309936643418,
+          1225.2230286802908
+        ]
+      ],
+      "required_nominal_output_component_bound_ut": [
+        [
+          4023.1846139508257,
+          4702.755345486544,
+          7403.084219335697
+        ],
+        [
+          3344.9999617842373,
+          4582.643807491016,
+          5214.488900384412
+        ],
+        [
+          3951.908198278154,
+          4572.1518170284535,
+          7354.135537552537
+        ],
+        [
+          4337.5039014957165,
+          4892.321007886402,
+          7353.298910488875
+        ],
+        [
+          1779.720620449935,
+          1995.6467001259941,
+          1770.5779386435381
+        ]
+      ],
+      "maximum_physical_vector_bound_ut": 7666.3817841186565,
+      "imc_screen_met": true,
+      "gain_options": [
+        {
+          "gain_sel": 7,
+          "lsb_ut": [
+            0.3,
+            0.3,
+            0.484
+          ],
+          "peak_fraction_by_sensor": [
+            0.4784036119150918,
+            0.46618486154678135,
+            0.4651175285122688,
+            0.4976878167960043,
+            0.20301387576179225
+          ],
+          "maximum_fraction": 0.4976878167960043,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 6,
+          "lsb_ut": [
+            0.401,
+            0.401,
+            0.645
+          ],
+          "peak_fraction_by_sensor": [
+            0.3579079390885973,
+            0.34876672933674413,
+            0.3479682258196524,
+            0.3723350250344172,
+            0.15188070505869744
+          ],
+          "maximum_fraction": 0.3723350250344172,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 5,
+          "lsb_ut": [
+            0.501,
+            0.501,
+            0.807
+          ],
+          "peak_fraction_by_sensor": [
+            0.28646922869167174,
+            0.2791526117046595,
+            0.2785134901271071,
+            0.29801665676407446,
+            0.12156519506694148
+          ],
+          "maximum_fraction": 0.29801665676407446,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 4,
+          "lsb_ut": [
+            0.601,
+            0.601,
+            0.968
+          ],
+          "peak_fraction_by_sensor": [
+            0.23880379962483783,
+            0.23270458979040667,
+            0.23217181123740538,
+            0.2484298586336128,
+            0.10133804114565337
+          ],
+          "maximum_fraction": 0.2484298586336128,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 3,
+          "lsb_ut": [
+            0.751,
+            0.751,
+            1.21
+          ],
+          "peak_fraction_by_sensor": [
+            0.19110663591814586,
+            0.1862256437603654,
+            0.1857992790328637,
+            0.19881004665619348,
+            0.08109742041083579
+          ],
+          "maximum_fraction": 0.19881004665619348,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 2,
+          "lsb_ut": [
+            0.901,
+            0.901,
+            1.452
+          ],
+          "peak_fraction_by_sensor": [
+            0.15929088077084078,
+            0.15522248442179182,
+            0.15486710161340803,
+            0.16571181469345317,
+            0.06759618504832152
+          ],
+          "maximum_fraction": 0.16571181469345317,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 1,
+          "lsb_ut": [
+            1.202,
+            1.202,
+            1.936
+          ],
+          "peak_fraction_by_sensor": [
+            0.11940189981241892,
+            0.11635229489520334,
+            0.11608590561870269,
+            0.1242149293168064,
+            0.050669020572826684
+          ],
+          "maximum_fraction": 0.1242149293168064,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 0,
+          "lsb_ut": [
+            1.502,
+            1.502,
+            2.42
+          ],
+          "peak_fraction_by_sensor": [
+            0.09555331795907293,
+            0.0931128218801827,
+            0.09289963951643185,
+            0.09940502332809674,
+            0.04054871020541789
+          ],
+          "maximum_fraction": 0.09940502332809674,
+          "sampled_range_screen_met": true
+        }
+      ],
+      "highest_gain_passing_sampled_screen": 7,
+      "quadrature_max_difference_ut": 2.546585164964199e-11,
+      "limiting_source_samples": [
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.137374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -757.7186288297523,
+          "magnet": 0,
+          "fine_component_ut": -757.7186288297531,
+          "quadrature_difference_ut": 7.958078640513122e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1337.5136486521285,
+          "magnet": 0,
+          "fine_component_ut": -1337.5136486521292,
+          "quadrature_difference_ut": 6.821210263296962e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.38028986705419,
+            4.669675209861951
+          ],
+          "magnet_axis_native": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4876.058628071168,
+          "magnet": 0,
+          "fine_component_ut": -4876.058628071159,
+          "quadrature_difference_ut": 9.094947017729282e-12
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -252.46256223938158,
+          "magnet": 0,
+          "fine_component_ut": -252.46256223938116,
+          "quadrature_difference_ut": 4.263256414560601e-13
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -70.05397054466026,
+          "magnet": 0,
+          "fine_component_ut": -70.0539705446595,
+          "quadrature_difference_ut": 7.531752999057062e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -21.836612418360282,
+          "magnet": 0,
+          "fine_component_ut": -21.836612418357586,
+          "quadrature_difference_ut": 2.6965096822095802e-12
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -21.29574094212912,
+          "magnet": 0,
+          "fine_component_ut": -21.29574094212969,
+          "quadrature_difference_ut": 5.684341886080801e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4.358247926924109,
+          "magnet": 0,
+          "fine_component_ut": -4.358247926924547,
+          "quadrature_difference_ut": 4.3876013933186186e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 6.72965783865723,
+          "magnet": 0,
+          "fine_component_ut": 6.729657838657014,
+          "quadrature_difference_ut": 2.1671553440683056e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4.823267939378663,
+          "magnet": 0,
+          "fine_component_ut": -4.823267939378521,
+          "quadrature_difference_ut": 1.4210854715202004e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.770349960148993,
+          "magnet": 0,
+          "fine_component_ut": -0.7703499601491821,
+          "quadrature_difference_ut": 1.8907098109366416e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.8961132831266445,
+          "magnet": 0,
+          "fine_component_ut": 2.896113283126608,
+          "quadrature_difference_ut": 3.6415315207705135e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -3.622577982765304,
+          "magnet": 0,
+          "fine_component_ut": -3.6225779827654003,
+          "quadrature_difference_ut": 9.636735853746359e-14
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.7428746438479161,
+          "magnet": 0,
+          "fine_component_ut": -0.7428746438479401,
+          "quadrature_difference_ut": 2.398081733190338e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.0826272039400937,
+          "magnet": 0,
+          "fine_component_ut": 2.082627203940112,
+          "quadrature_difference_ut": 1.8207657603852567e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1473.660555119006,
+          "magnet": 0,
+          "fine_component_ut": 1473.6605551190078,
+          "quadrature_difference_ut": 1.8189894035458565e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.90365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 2226.6103288539935,
+          "magnet": 0,
+          "fine_component_ut": 2226.610328853993,
+          "quadrature_difference_ut": 4.547473508864641e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -84.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -844.5585731041615,
+          "magnet": 0,
+          "fine_component_ut": -844.55857310416,
+          "quadrature_difference_ut": 1.4779288903810084e-12
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -68.32027011453917,
+          "magnet": 0,
+          "fine_component_ut": -68.32027011453927,
+          "quadrature_difference_ut": 9.947598300641403e-14
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 52.22316959214315,
+          "magnet": 0,
+          "fine_component_ut": 52.22316959214332,
+          "quadrature_difference_ut": 1.7053025658242404e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 125.62116020887443,
+          "magnet": 0,
+          "fine_component_ut": 125.62116020887291,
+          "quadrature_difference_ut": 1.5205614545266144e-12
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -1.1378373840649834,
+          "magnet": 0,
+          "fine_component_ut": -1.1378373840656348,
+          "quadrature_difference_ut": 6.514788708500419e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.93918638229734,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -0.6499999999999999,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.982970403980271,
+          "magnet": 0,
+          "fine_component_ut": 4.982970403979946,
+          "quadrature_difference_ut": 3.2507330161024584e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 19.367465365088222,
+          "magnet": 0,
+          "fine_component_ut": 19.367465365088222,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 0.45275284522980874,
+          "magnet": 0,
+          "fine_component_ut": 0.4527528452296886,
+          "quadrature_difference_ut": 1.2012613126444194e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 3.2534137130574505,
+          "magnet": 0,
+          "fine_component_ut": 3.253413713057653,
+          "quadrature_difference_ut": 2.0250467969162855e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 5.8533897117675275,
+          "magnet": 0,
+          "fine_component_ut": 5.853389711767437,
+          "quadrature_difference_ut": 9.059419880941277e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 0.49241586096232365,
+          "magnet": 0,
+          "fine_component_ut": 0.49241586096239587,
+          "quadrature_difference_ut": 7.222000775186643e-14
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.4601449335271,
+            3.672868724951962
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.630960414803147,
+          "magnet": 0,
+          "fine_component_ut": 1.630960414803135,
+          "quadrature_difference_ut": 1.199040866595169e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.210718679288463,
+          "magnet": 0,
+          "fine_component_ut": 4.210718679288459,
+          "quadrature_difference_ut": 3.552713678800501e-15
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -84.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 37.70210862680936,
+          "magnet": 1,
+          "fine_component_ut": 37.702108626808965,
+          "quadrature_difference_ut": 3.979039320256561e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.2101262011273626,
+          "magnet": 1,
+          "fine_component_ut": 2.210126201126882,
+          "quadrature_difference_ut": 4.805045250577678e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -83.40365398486632,
+            5.137374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -13.58105436414279,
+          "magnet": 1,
+          "fine_component_ut": -13.581054364143176,
+          "quadrature_difference_ut": 3.8546943414985435e-13
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -978.4168588760579,
+          "magnet": 1,
+          "fine_component_ut": -978.416858876058,
+          "quadrature_difference_ut": 1.1368683772161603e-13
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 354.6689101864996,
+          "magnet": 1,
+          "fine_component_ut": 354.6689101865003,
+          "quadrature_difference_ut": 6.821210263296962e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.27793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.0,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -3027.6236912595787,
+          "magnet": 1,
+          "fine_component_ut": -3027.623691259591,
+          "quadrature_difference_ut": 1.2278178473934531e-11
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.93918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -0.6499999999999999,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -93.96216553863592,
+          "magnet": 1,
+          "fine_component_ut": -93.96216553863418,
+          "quadrature_difference_ut": 1.7337242752546445e-12
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1.1675914707082757,
+          "magnet": 1,
+          "fine_component_ut": -1.1675914707087705,
+          "quadrature_difference_ut": 4.947153797729698e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 8.604871791988055,
+          "magnet": 1,
+          "fine_component_ut": 8.60487179198815,
+          "quadrature_difference_ut": 9.592326932761353e-14
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -15.353442313974206,
+          "magnet": 1,
+          "fine_component_ut": -15.353442313974343,
+          "quadrature_difference_ut": 1.3677947663381929e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.5049736668018696,
+          "magnet": 1,
+          "fine_component_ut": -0.5049736668011174,
+          "quadrature_difference_ut": 7.521760991835436e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 6.470803603497329,
+          "magnet": 1,
+          "fine_component_ut": 6.470803603497353,
+          "quadrature_difference_ut": 2.398081733190338e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -8.802144048087353,
+          "magnet": 1,
+          "fine_component_ut": -8.802144048087449,
+          "quadrature_difference_ut": 9.592326932761353e-14
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -24.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.9067776942921095,
+          "magnet": 1,
+          "fine_component_ut": -0.9067776942919892,
+          "quadrature_difference_ut": 1.2034817586936697e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 4.110779134407201,
+          "magnet": 1,
+          "fine_component_ut": 4.110779134407249,
+          "quadrature_difference_ut": 4.796163466380676e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 224.31560924756297,
+          "magnet": 1,
+          "fine_component_ut": 224.3156092475686,
+          "quadrature_difference_ut": 5.6274984672199935e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 98.14103863867044,
+          "magnet": 1,
+          "fine_component_ut": 98.14103863867057,
+          "quadrature_difference_ut": 1.2789769243681803e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.137374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 118.63611112919234,
+          "magnet": 1,
+          "fine_component_ut": 118.63611112919234,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.44773085164704,
+            1.0331992647408472
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 367.3052798449459,
+          "magnet": 1,
+          "fine_component_ut": 367.30527984494427,
+          "quadrature_difference_ut": 1.6484591469634324e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 2242.037411658954,
+          "magnet": 1,
+          "fine_component_ut": 2242.037411658961,
+          "quadrature_difference_ut": 6.821210263296962e-12
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -96.07713059800288,
+          "magnet": 1,
+          "fine_component_ut": -96.0771305980075,
+          "quadrature_difference_ut": 4.618527782440651e-12
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -13.505239321725533,
+          "magnet": 1,
+          "fine_component_ut": -13.505239321726263,
+          "quadrature_difference_ut": 7.300826609935029e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.93918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 42.03382720851994,
+          "magnet": 1,
+          "fine_component_ut": 42.03382720852021,
+          "quadrature_difference_ut": 2.7000623958883807e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 68.81755449954632,
+          "magnet": 1,
+          "fine_component_ut": 68.81755449954544,
+          "quadrature_difference_ut": 8.810729923425242e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -0.1811441837691935,
+          "magnet": 1,
+          "fine_component_ut": -0.181144183768931,
+          "quadrature_difference_ut": 2.6251223417261826e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 12.159501099878966,
+          "magnet": 1,
+          "fine_component_ut": 12.159501099879202,
+          "quadrature_difference_ut": 2.362554596402333e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 16.679462607243156,
+          "magnet": 1,
+          "fine_component_ut": 16.679462607242986,
+          "quadrature_difference_ut": 1.7053025658242404e-13
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 0.4614327608221242,
+          "magnet": 1,
+          "fine_component_ut": 0.4614327608220761,
+          "quadrature_difference_ut": 4.807265696626928e-14
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.933516324090309,
+          "magnet": 1,
+          "fine_component_ut": 4.933516324089852,
+          "quadrature_difference_ut": 4.574118861455645e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.86046170329406,
+            1.944052295750084
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 9.34884170029044,
+          "magnet": 1,
+          "fine_component_ut": 9.3488417002905,
+          "quadrature_difference_ut": 6.039613253960852e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 1.2313006536458289,
+          "magnet": 2,
+          "fine_component_ut": 1.2313006536453457,
+          "quadrature_difference_ut": 4.831690603168681e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -7.33197860195123,
+          "magnet": 2,
+          "fine_component_ut": -7.331978601951257,
+          "quadrature_difference_ut": 2.7533531010703882e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 7.071743976272667,
+          "magnet": 2,
+          "fine_component_ut": 7.07174397627269,
+          "quadrature_difference_ut": 2.3092638912203256e-14
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 24.87811367255864,
+          "magnet": 2,
+          "fine_component_ut": 24.878113672559635,
+          "quadrature_difference_ut": 9.947598300641403e-13
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.93918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -57.91671793028659,
+          "magnet": 2,
+          "fine_component_ut": -57.91671793028601,
+          "quadrature_difference_ut": 5.755396159656812e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 3.962458868212675,
+          "magnet": 2,
+          "fine_component_ut": 3.9624588682117126,
+          "quadrature_difference_ut": 9.623413177450857e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1465.7690081975495,
+          "magnet": 2,
+          "fine_component_ut": -1465.7690081975475,
+          "quadrature_difference_ut": 2.0463630789890885e-12
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.858843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2124.524416097971,
+          "magnet": 2,
+          "fine_component_ut": -2124.524416097977,
+          "quadrature_difference_ut": 5.9117155615240335e-12
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.906457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4863.585277457033,
+          "magnet": 2,
+          "fine_component_ut": -4863.5852774570585,
+          "quadrature_difference_ut": 2.546585164964199e-11
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -0.6499999999999999,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -121.61735954564568,
+          "magnet": 2,
+          "fine_component_ut": -121.61735954564841,
+          "quadrature_difference_ut": 2.7284841053187847e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -16.339668111280858,
+          "magnet": 2,
+          "fine_component_ut": -16.33966811128049,
+          "quadrature_difference_ut": 3.694822225952521e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 6.933977664689381,
+          "magnet": 2,
+          "fine_component_ut": 6.933977664689476,
+          "quadrature_difference_ut": 9.50350909079134e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.93918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -66.46678694254003,
+          "magnet": 2,
+          "fine_component_ut": -66.46678694253946,
+          "quadrature_difference_ut": 5.684341886080801e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -6.180955325649665,
+          "magnet": 2,
+          "fine_component_ut": -6.1809553256496885,
+          "quadrature_difference_ut": 2.3092638912203256e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 11.249201409967478,
+          "magnet": 2,
+          "fine_component_ut": 11.249201409967478,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.6230780715308,
+            16.6438800660954
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 21.116381310387883,
+          "magnet": 2,
+          "fine_component_ut": 21.11638131038884,
+          "quadrature_difference_ut": 9.556799795973347e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 3.448509036446465,
+          "magnet": 2,
+          "fine_component_ut": 3.4485090364464397,
+          "quadrature_difference_ut": 2.531308496145357e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.6230780715308,
+            16.6438800660954
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 19.08608810961292,
+          "magnet": 2,
+          "fine_component_ut": 19.086088109612675,
+          "quadrature_difference_ut": 2.4513724383723456e-13
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.93918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 139.37639748877066,
+          "magnet": 2,
+          "fine_component_ut": 139.37639748877197,
+          "quadrature_difference_ut": 1.3073986337985843e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 7.228367264580848,
+          "magnet": 2,
+          "fine_component_ut": 7.2283672645830235,
+          "quadrature_difference_ut": 2.1751489498456067e-12
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 89.9551206048095,
+          "magnet": 2,
+          "fine_component_ut": 89.9551206048091,
+          "quadrature_difference_ut": 3.979039320256561e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 575.6732641682673,
+          "magnet": 2,
+          "fine_component_ut": 575.6732641682672,
+          "quadrature_difference_ut": 1.1368683772161603e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1846.6382798724994,
+          "magnet": 2,
+          "fine_component_ut": 1846.6382798724994,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -901.6982377005302,
+          "magnet": 2,
+          "fine_component_ut": -901.6982377005216,
+          "quadrature_difference_ut": 8.526512829121202e-12
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -20.55275967453338,
+          "magnet": 2,
+          "fine_component_ut": -20.552759674532222,
+          "quadrature_difference_ut": 1.1581846592889633e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.0,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 32.748964646785026,
+          "magnet": 2,
+          "fine_component_ut": 32.74896464678563,
+          "quadrature_difference_ut": 6.039613253960852e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 82.50701312681792,
+          "magnet": 2,
+          "fine_component_ut": 82.50701312681879,
+          "quadrature_difference_ut": 8.668621376273222e-13
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -10.742528512996541,
+          "magnet": 2,
+          "fine_component_ut": -10.74252851299558,
+          "quadrature_difference_ut": 9.610090501155355e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 28.012535782870163,
+          "magnet": 2,
+          "fine_component_ut": 28.01253578286992,
+          "quadrature_difference_ut": 2.4158453015843406e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 51.06080266356762,
+          "magnet": 2,
+          "fine_component_ut": 51.060802663568346,
+          "quadrature_difference_ut": 7.247535904753022e-13
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 0.0778936101999966,
+          "magnet": 3,
+          "fine_component_ut": 0.0778936101997561,
+          "quadrature_difference_ut": 2.4050206270942454e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.994618456469846,
+          "magnet": 3,
+          "fine_component_ut": -0.9946184564697772,
+          "quadrature_difference_ut": 6.88338275267597e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.7998408845036886,
+          "magnet": 3,
+          "fine_component_ut": 2.7998408845036944,
+          "quadrature_difference_ut": 5.773159728050814e-15
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 1.6771393949310462,
+          "magnet": 3,
+          "fine_component_ut": 1.6771393949315236,
+          "quadrature_difference_ut": 4.773959005888173e-13
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2.3657424111248417,
+          "magnet": 3,
+          "fine_component_ut": -2.3657424111250944,
+          "quadrature_difference_ut": 2.5268676040468563e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 6.496638894196832,
+          "magnet": 3,
+          "fine_component_ut": 6.496638894196832,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 15.225047219988872,
+          "magnet": 3,
+          "fine_component_ut": 15.225047219988712,
+          "quadrature_difference_ut": 1.5987211554602254e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 11.292366001712692,
+          "magnet": 3,
+          "fine_component_ut": 11.2923660017131,
+          "quadrature_difference_ut": 4.085620730620576e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 5.444740022815826,
+          "magnet": 3,
+          "fine_component_ut": 5.444740022815923,
+          "quadrature_difference_ut": 9.681144774731365e-14
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -899.214554872984,
+          "magnet": 3,
+          "fine_component_ut": -899.2145548729861,
+          "quadrature_difference_ut": 2.1600499167107046e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -822.9017351230345,
+          "magnet": 3,
+          "fine_component_ut": -822.9017351230345,
+          "quadrature_difference_ut": 0.0
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4841.5819697560355,
+          "magnet": 3,
+          "fine_component_ut": -4841.581969756051,
+          "quadrature_difference_ut": 1.546140993013978e-11
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -24.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -150.0639396493497,
+          "magnet": 3,
+          "fine_component_ut": -150.0639396493501,
+          "quadrature_difference_ut": 3.979039320256561e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 59.92794861725847,
+          "magnet": 3,
+          "fine_component_ut": 59.927948617260014,
+          "quadrature_difference_ut": 1.5418777365994174e-12
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -74.70315456193458,
+          "magnet": 3,
+          "fine_component_ut": -74.70315456193688,
+          "quadrature_difference_ut": 2.3021584638627246e-12
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 5.19291185799643,
+          "magnet": 3,
+          "fine_component_ut": 5.192911857995718,
+          "quadrature_difference_ut": 7.123190925995004e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.7635948522932472,
+          "magnet": 3,
+          "fine_component_ut": 1.763594852293164,
+          "quadrature_difference_ut": 8.326672684688674e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 6.1171009443923845,
+          "magnet": 3,
+          "fine_component_ut": 6.11710094439239,
+          "quadrature_difference_ut": 5.329070518200751e-15
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            8.43918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 18.808656940777446,
+          "magnet": 3,
+          "fine_component_ut": 18.80865694077735,
+          "quadrature_difference_ut": 9.592326932761353e-14
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            8.43918638229734,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 6.9459832058440725,
+          "magnet": 3,
+          "fine_component_ut": 6.945983205844066,
+          "quadrature_difference_ut": 6.217248937900877e-15
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 17.991347291347715,
+          "magnet": 3,
+          "fine_component_ut": 17.991347291347694,
+          "quadrature_difference_ut": 2.1316282072803006e-14
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            7.93918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 96.61356749327696,
+          "magnet": 3,
+          "fine_component_ut": 96.61356749327676,
+          "quadrature_difference_ut": 1.9895196601282805e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            7.93918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -0.6499999999999999,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 88.95501018168363,
+          "magnet": 3,
+          "fine_component_ut": 88.95501018168508,
+          "quadrature_difference_ut": 1.4495071809506044e-12
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 84.33194655896403,
+          "magnet": 3,
+          "fine_component_ut": 84.33194655896499,
+          "quadrature_difference_ut": 9.521272659185342e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1837.8544661994454,
+          "magnet": 3,
+          "fine_component_ut": 1837.8544661994456,
+          "quadrature_difference_ut": 2.2737367544323206e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -29.304081518588657,
+            9.072045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 2264.7139296307973,
+          "magnet": 3,
+          "fine_component_ut": 2264.713929630799,
+          "quadrature_difference_ut": 1.8189894035458565e-12
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            8.43918638229734,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -716.8223317520584,
+          "magnet": 3,
+          "fine_component_ut": -716.8223317520532,
+          "quadrature_difference_ut": 5.229594535194337e-12
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -0.23831175977956606,
+          "magnet": 3,
+          "fine_component_ut": -0.2383117597792772,
+          "quadrature_difference_ut": 2.888522754318501e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 386.82592244327736,
+          "magnet": 3,
+          "fine_component_ut": 386.82592244327424,
+          "quadrature_difference_ut": 3.126388037344441e-12
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            7.43918638229734,
+            -25.0,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 156.18652781988362,
+          "magnet": 3,
+          "fine_component_ut": 156.18652781988422,
+          "quadrature_difference_ut": 5.968558980384842e-13
+        }
+      ]
+    },
+    {
+      "pcb_plane_native_x_mm": 6.0,
+      "nominal_field_native_ut": [
+        [
+          2859.3398601256085,
+          -337.88152967935184,
+          1581.4555208417326
+        ],
+        [
+          384.1185832279913,
+          -174.06189719609915,
+          1220.8552752887956
+        ],
+        [
+          3661.375538881864,
+          114.60868107342762,
+          972.8591544936462
+        ],
+        [
+          2423.3546708361023,
+          817.043158529256,
+          1525.9229214067786
+        ],
+        [
+          -114.26675511424438,
+          85.98844185498845,
+          147.05629482639196
+        ]
+      ],
+      "nominal_own_response_to_0p1mm_inward_ut": [
+        80.00140293153528,
+        37.52649052360468,
+        81.71002532054158,
+        75.07920398540288
+      ],
+      "summed_sampled_component_intervals_ut": {
+        "low": [
+          [
+            -2586.950535679116,
+            -5514.21732732415,
+            -16285.205979062424
+          ],
+          [
+            -3129.8175705936096,
+            611.0956269451922,
+            -5923.334729260285
+          ],
+          [
+            -6087.94764124598,
+            -7755.463985753664,
+            -16188.851526293767
+          ],
+          [
+            -2903.987946905679,
+            -2948.6535880235033,
+            -16099.837130037205
+          ],
+          [
+            -240.03858827703658,
+            19.003042408393792,
+            20.51582033046511
+          ]
+        ],
+        "high": [
+          [
+            6242.78997524141,
+            7748.2564168532335,
+            -1308.7624657441227
+          ],
+          [
+            892.9432190285278,
+            6829.285900585685,
+            920.6743418572258
+          ],
+          [
+            1959.3443422330581,
+            7461.646782501662,
+            -1474.7544673175564
+          ],
+          [
+            7194.036621609158,
+            7821.107835802358,
+            -1031.6191671627676
+          ],
+          [
+            19.585471294545258,
+            447.5292098564124,
+            354.5399142771407
+          ]
+        ]
+      },
+      "physical_field_component_bound_with_external_ut": [
+        [
+          7389.141126580877,
+          8894.607568192701,
+          17285.205979062426
+        ],
+        [
+          4301.008904278906,
+          8000.477234270981,
+          6923.334729260285
+        ],
+        [
+          7337.780088500576,
+          9005.296433008261,
+          17188.851526293765
+        ],
+        [
+          8520.089390098177,
+          9147.160604291377,
+          17099.837130037205
+        ],
+        [
+          1240.0385882770365,
+          1447.5292098564123,
+          1354.5399142771407
+        ]
+      ],
+      "required_nominal_output_component_bound_ut": [
+        [
+          9974.782652948506,
+          11630.795738721512,
+          20860.453990678212
+        ],
+        [
+          5858.000306394692,
+          9927.415469385976,
+          8742.55871387421
+        ],
+        [
+          9914.410195905191,
+          11748.678174863644,
+          20750.588777477697
+        ],
+        [
+          11248.410305931406,
+          11938.188641543926,
+          20686.13281986434
+        ],
+        [
+          1793.5772902116414,
+          2021.816973948955,
+          1919.528748811756
+        ]
+      ],
+      "maximum_physical_vector_bound_ut": 21181.758666592414,
+      "imc_screen_met": true,
+      "gain_options": [
+        {
+          "gain_sel": 7,
+          "lsb_ut": [
+            0.3,
+            0.3,
+            0.484
+          ],
+          "peak_fraction_by_sensor": [
+            1.3153511627853647,
+            1.0098997435820567,
+            1.3084236368553184,
+            1.3043593811668728,
+            0.2056761349273105
+          ],
+          "maximum_fraction": 1.3153511627853647,
+          "sampled_range_screen_met": false
+        },
+        {
+          "gain_sel": 6,
+          "lsb_ut": [
+            0.401,
+            0.401,
+            0.645
+          ],
+          "peak_fraction_by_sensor": [
+            0.9870231981211108,
+            0.7555359677671247,
+            0.9818248685860063,
+            0.9787751015267695,
+            0.15387242014512006
+          ],
+          "maximum_fraction": 0.9870231981211108,
+          "sampled_range_screen_met": false
+        },
+        {
+          "gain_sel": 5,
+          "lsb_ut": [
+            0.501,
+            0.501,
+            0.807
+          ],
+          "peak_fraction_by_sensor": [
+            0.7888847122529324,
+            0.6047303853784771,
+            0.7847299135538712,
+            0.7822923673912842,
+            0.12315936223192245
+          ],
+          "maximum_fraction": 0.7888847122529324,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 4,
+          "lsb_ut": [
+            0.601,
+            0.601,
+            0.968
+          ],
+          "peak_fraction_by_sensor": [
+            0.6576755813926823,
+            0.5041096889760682,
+            0.6542118184276592,
+            0.6521796905834364,
+            0.10266695587053769
+          ],
+          "maximum_fraction": 0.6576755813926823,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 3,
+          "lsb_ut": [
+            0.751,
+            0.751,
+            1.21
+          ],
+          "peak_fraction_by_sensor": [
+            0.5261404651141458,
+            0.40342200143091483,
+            0.5233694547421274,
+            0.5217437524667491,
+            0.08216090609612936
+          ],
+          "maximum_fraction": 0.5261404651141458,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 2,
+          "lsb_ut": [
+            0.901,
+            0.901,
+            1.452
+          ],
+          "peak_fraction_by_sensor": [
+            0.4384503875951215,
+            0.336259626053959,
+            0.4361412122851061,
+            0.4347864603889575,
+            0.06848261984261171
+          ],
+          "maximum_fraction": 0.4384503875951215,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 1,
+          "lsb_ut": [
+            1.202,
+            1.202,
+            1.936
+          ],
+          "peak_fraction_by_sensor": [
+            0.32883779069634117,
+            0.2520548444880341,
+            0.3271059092138296,
+            0.3260898452917182,
+            0.051333477935268844
+          ],
+          "maximum_fraction": 0.32883779069634117,
+          "sampled_range_screen_met": true
+        },
+        {
+          "gain_sel": 0,
+          "lsb_ut": [
+            1.502,
+            1.502,
+            2.42
+          ],
+          "peak_fraction_by_sensor": [
+            0.2630702325570729,
+            0.20171100071545742,
+            0.2616847273710637,
+            0.26087187623337454,
+            0.04108045304806468
+          ],
+          "maximum_fraction": 0.2630702325570729,
+          "sampled_range_screen_met": true
+        }
+      ],
+      "highest_gain_passing_sampled_screen": 5,
+      "quadrature_max_difference_ut": 6.184563972055912e-11,
+      "limiting_source_samples": [
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2550.218390565502,
+          "magnet": 0,
+          "fine_component_ut": -2550.218390565504,
+          "quadrature_difference_ut": 1.8189894035458565e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -5387.42781981798,
+          "magnet": 0,
+          "fine_component_ut": -5387.427819817971,
+          "quadrature_difference_ut": 9.094947017729282e-12
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.38028986705419,
+            4.669675209861951
+          ],
+          "magnet_axis_native": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -16000.42112632562,
+          "magnet": 0,
+          "fine_component_ut": -16000.421126325577,
+          "quadrature_difference_ut": 4.3655745685100555e-11
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -253.5190367668361,
+          "magnet": 0,
+          "fine_component_ut": -253.5190367668338,
+          "quadrature_difference_ut": 2.3021584638627246e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -73.60453468700518,
+          "magnet": 0,
+          "fine_component_ut": -73.60453468700557,
+          "quadrature_difference_ut": 3.836930773104541e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.38028986705419,
+            4.669675209861951
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 21.91404790526406,
+          "magnet": 0,
+          "fine_component_ut": 21.91404790526483,
+          "quadrature_difference_ut": 7.709388682997087e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -19.495124493390275,
+          "magnet": 0,
+          "fine_component_ut": -19.495124493391128,
+          "quadrature_difference_ut": 8.526512829121202e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4.432248292464987,
+          "magnet": 0,
+          "fine_component_ut": -4.432248292465419,
+          "quadrature_difference_ut": 4.32542890393961e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 8.364823065459893,
+          "magnet": 0,
+          "fine_component_ut": 8.364823065459857,
+          "quadrature_difference_ut": 3.552713678800501e-14
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4.342415449691489,
+          "magnet": 0,
+          "fine_component_ut": -4.342415449691884,
+          "quadrature_difference_ut": 3.943512183468556e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1.1479935119460558,
+          "magnet": 0,
+          "fine_component_ut": -1.1479935119463134,
+          "quadrature_difference_ut": 2.575717417130363e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 3.1971124836522087,
+          "magnet": 0,
+          "fine_component_ut": 3.1971124836522025,
+          "quadrature_difference_ut": 6.217248937900877e-15
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -3.26957841882314,
+          "magnet": 0,
+          "fine_component_ut": -3.269578418822899,
+          "quadrature_difference_ut": 2.4069635173873394e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.8839448717223705,
+          "magnet": 0,
+          "fine_component_ut": -0.8839448717224185,
+          "quadrature_difference_ut": 4.807265696626928e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.2647154642325713,
+          "magnet": 0,
+          "fine_component_ut": 2.2647154642325837,
+          "quadrature_difference_ut": 1.2434497875801753e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -84.40365398486632,
+            5.137374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 5871.415533174649,
+          "magnet": 0,
+          "fine_component_ut": 5871.415533174658,
+          "quadrature_difference_ut": 9.094947017729282e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -83.90365398486632,
+            5.137374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 7491.354870401804,
+          "magnet": 0,
+          "fine_component_ut": 7491.3548704018185,
+          "quadrature_difference_ut": 1.4551915228366852e-11
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -84.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -1543.5551250676608,
+          "magnet": 0,
+          "fine_component_ut": -1543.555125067656,
+          "quadrature_difference_ut": 4.774847184307873e-12
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -38.85367115701447,
+          "magnet": 0,
+          "fine_component_ut": -38.85367115701588,
+          "quadrature_difference_ut": 1.4139800441625994e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 55.91821614563995,
+          "magnet": 0,
+          "fine_component_ut": 55.91821614564065,
+          "quadrature_difference_ut": 6.963318810448982e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 192.77858769034003,
+          "magnet": 0,
+          "fine_component_ut": 192.77858769033895,
+          "quadrature_difference_ut": 1.0800249583553523e-12
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -48.858843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.499135379592913,
+          "magnet": 0,
+          "fine_component_ut": 1.4991353795934939,
+          "quadrature_difference_ut": 5.808686864838819e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.9756042076228155,
+          "magnet": 0,
+          "fine_component_ut": 4.975604207622592,
+          "quadrature_difference_ut": 2.2382096176443156e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 20.49025019316349,
+          "magnet": 0,
+          "fine_component_ut": 20.49025019316354,
+          "quadrature_difference_ut": 4.973799150320701e-14
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.0970545965469334,
+          "magnet": 0,
+          "fine_component_ut": 1.0970545965469822,
+          "quadrature_difference_ut": 4.884981308350689e-14
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.54,
+            2.676062240041973
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 2.98241474915787,
+          "magnet": 0,
+          "fine_component_ut": 2.9824147491578388,
+          "quadrature_difference_ut": 3.108624468950438e-14
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 5.975541065526491,
+          "magnet": 0,
+          "fine_component_ut": 5.975541065526484,
+          "quadrature_difference_ut": 7.105427357601002e-15
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.4601449335271,
+            3.672868724951962
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 0.9402845656802873,
+          "magnet": 0,
+          "fine_component_ut": 0.9402845656806482,
+          "quadrature_difference_ut": 3.609335053056384e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -83.38028986705419,
+            4.669675209861951
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.531573572281716,
+          "magnet": 0,
+          "fine_component_ut": 1.531573572281728,
+          "quadrature_difference_ut": 1.199040866595169e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -83.30043480058129,
+            5.666481694771939
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.2710881080561665,
+          "magnet": 0,
+          "fine_component_ut": 4.271088108056185,
+          "quadrature_difference_ut": 1.865174681370263e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -84.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 16.921024979374124,
+          "magnet": 1,
+          "fine_component_ut": 16.921024979376753,
+          "quadrature_difference_ut": 2.6290081223123707e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -10.45075557847358,
+          "magnet": 1,
+          "fine_component_ut": -10.45075557847445,
+          "quadrature_difference_ut": 8.704148513061227e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 23.980019675393184,
+          "magnet": 1,
+          "fine_component_ut": 23.980019675392604,
+          "quadrature_difference_ut": 5.790923296444817e-13
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2822.963494608507,
+          "magnet": 1,
+          "fine_component_ut": -2822.9634946085043,
+          "quadrature_difference_ut": 2.7284841053187847e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 763.7288784771902,
+          "magnet": 1,
+          "fine_component_ut": 763.7288784771687,
+          "quadrature_difference_ut": 2.148681232938543e-11
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -67.27793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.0,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -5858.124651767481,
+          "magnet": 1,
+          "fine_component_ut": -5858.124651767429,
+          "quadrature_difference_ut": 5.184119800105691e-11
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -93.42706520948852,
+          "magnet": 1,
+          "fine_component_ut": -93.42706520949098,
+          "quadrature_difference_ut": 2.4584778657299466e-12
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -6.816709861195246,
+          "magnet": 1,
+          "fine_component_ut": -6.816709861194488,
+          "quadrature_difference_ut": 7.585043704239069e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 20.111951971325418,
+          "magnet": 1,
+          "fine_component_ut": 20.111951971324505,
+          "quadrature_difference_ut": 9.130474154517287e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -14.14103250223401,
+          "magnet": 1,
+          "fine_component_ut": -14.14103250223316,
+          "quadrature_difference_ut": 8.490985692333197e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2.0766295186653214,
+          "magnet": 1,
+          "fine_component_ut": -2.0766295186652375,
+          "quadrature_difference_ut": 8.393286066166183e-14
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 7.8555648807414515,
+          "magnet": 1,
+          "fine_component_ut": 7.855564880741379,
+          "quadrature_difference_ut": 7.283063041541027e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -8.010287058255718,
+          "magnet": 1,
+          "fine_component_ut": -8.010287058255862,
+          "quadrature_difference_ut": 1.438849039914203e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1.4963044900939932,
+          "magnet": 1,
+          "fine_component_ut": -1.4963044900941136,
+          "quadrature_difference_ut": 1.2034817586936697e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 4.744279287589593,
+          "magnet": 1,
+          "fine_component_ut": 4.744279287589575,
+          "quadrature_difference_ut": 1.7763568394002505e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 224.96009734342547,
+          "magnet": 1,
+          "fine_component_ut": 224.96009734342206,
+          "quadrature_difference_ut": 3.410605131648481e-12
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.5,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -0.6499999999999999,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 99.33013803801441,
+          "magnet": 1,
+          "fine_component_ut": 99.33013803801539,
+          "quadrature_difference_ut": 9.805489753489383e-13
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 173.5154971210651,
+          "magnet": 1,
+          "fine_component_ut": 173.5154971210645,
+          "quadrature_difference_ut": 5.968558980384842e-13
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.86046170329406,
+            1.944052295750084
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 756.326475777739,
+          "magnet": 1,
+          "fine_component_ut": 756.3264757777396,
+          "quadrature_difference_ut": 5.684341886080801e-13
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -67.27793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 6618.909324401767,
+          "magnet": 1,
+          "fine_component_ut": 6618.909324401752,
+          "quadrature_difference_ut": 1.4551915228366852e-11
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 576.1631614103811,
+          "magnet": 1,
+          "fine_component_ut": 576.163161410389,
+          "quadrature_difference_ut": 7.844391802791506e-12
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -3.0982280723769917,
+          "magnet": 1,
+          "fine_component_ut": -3.0982280723767794,
+          "quadrature_difference_ut": 2.1227464230832993e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.24136542582352,
+            0.5777727492362288
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 41.18737088466393,
+          "magnet": 1,
+          "fine_component_ut": 41.18737088466277,
+          "quadrature_difference_ut": 1.1581846592889633e-12
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -67.2731925549411,
+            2.8549053267593205
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 81.98601617453207,
+          "magnet": 1,
+          "fine_component_ut": 81.98601617453237,
+          "quadrature_difference_ut": 2.984279490192421e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 2.070203922990726,
+          "magnet": 1,
+          "fine_component_ut": 2.070203922989999,
+          "quadrature_difference_ut": 7.269740365245525e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 11.161866834395143,
+          "magnet": 1,
+          "fine_component_ut": 11.161866834394752,
+          "quadrature_difference_ut": 3.907985046680551e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 17.54719011731415,
+          "magnet": 1,
+          "fine_component_ut": 17.547190117314234,
+          "quadrature_difference_ut": 8.526512829121202e-14
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.7069915099222193,
+          "magnet": 1,
+          "fine_component_ut": 1.706991509922123,
+          "quadrature_difference_ut": 9.636735853746359e-14
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -66.035,
+            0.12234623373161047
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.506260192311231,
+          "magnet": 1,
+          "fine_component_ut": 4.506260192310966,
+          "quadrature_difference_ut": 2.646771690706373e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -66.86046170329406,
+            1.944052295750084
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 9.573636404472602,
+          "magnet": 1,
+          "fine_component_ut": 9.57363640447265,
+          "quadrature_difference_ut": 4.796163466380676e-14
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1.6170276679804731,
+          "magnet": 2,
+          "fine_component_ut": -1.617027667980051,
+          "quadrature_difference_ut": 4.221067939624845e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -83.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -7.084193643510988,
+          "magnet": 2,
+          "fine_component_ut": -7.084193643511009,
+          "quadrature_difference_ut": 2.1316282072803006e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 8.885569269716173,
+          "magnet": 2,
+          "fine_component_ut": 8.885569269716148,
+          "quadrature_difference_ut": 2.4868995751603507e-14
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 8.733664507786576,
+          "magnet": 2,
+          "fine_component_ut": 8.733664507784596,
+          "quadrature_difference_ut": 1.9806378759312793e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -57.92364331727093,
+          "magnet": 2,
+          "fine_component_ut": -57.923643317270155,
+          "quadrature_difference_ut": 7.744915819785092e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 23.285841665244103,
+          "magnet": 2,
+          "fine_component_ut": 23.28584166524372,
+          "quadrature_difference_ut": 3.836930773104541e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -48.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -5859.215930798818,
+          "magnet": 2,
+          "fine_component_ut": -5859.215930798804,
+          "quadrature_difference_ut": 1.3642420526593924e-11
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -7594.888711628416,
+          "magnet": 2,
+          "fine_component_ut": -7594.88871162842,
+          "quadrature_difference_ut": 4.547473508864641e-12
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.906457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.0,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -15920.818672369129,
+          "magnet": 2,
+          "fine_component_ut": -15920.81867236919,
+          "quadrature_difference_ut": 6.184563972055912e-11
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -121.41422419586435,
+          "magnet": 2,
+          "fine_component_ut": -121.4142241958615,
+          "quadrature_difference_ut": 2.8563817977556027e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -17.938733355597957,
+          "magnet": 2,
+          "fine_component_ut": -17.938733355600235,
+          "quadrature_difference_ut": 2.277289468111121e-12
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 22.063674517113093,
+          "magnet": 2,
+          "fine_component_ut": 22.063674517112418,
+          "quadrature_difference_ut": 6.750155989720952e-13
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -64.73382620977569,
+          "magnet": 2,
+          "fine_component_ut": -64.73382620977395,
+          "quadrature_difference_ut": 1.7337242752546445e-12
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -8.995724812558187,
+          "magnet": 2,
+          "fine_component_ut": -8.995724812558018,
+          "quadrature_difference_ut": 1.687538997430238e-13
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 18.950137837467647,
+          "magnet": 2,
+          "fine_component_ut": 18.950137837467405,
+          "quadrature_difference_ut": 2.4158453015843406e-13
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.6230780715308,
+            16.6438800660954
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 19.393143991276045,
+          "magnet": 2,
+          "fine_component_ut": 19.39314399127574,
+          "quadrature_difference_ut": 3.055333763768431e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 3.9441796302779037,
+          "magnet": 2,
+          "fine_component_ut": 3.944179630277988,
+          "quadrature_difference_ut": 8.43769498715119e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.6230780715308,
+            16.6438800660954
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 20.156899930239437,
+          "magnet": 2,
+          "fine_component_ut": 20.156899930239398,
+          "quadrature_difference_ut": 3.907985046680551e-14
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 139.37722175772006,
+          "magnet": 2,
+          "fine_component_ut": 139.37722175772348,
+          "quadrature_difference_ut": 3.410605131648481e-12
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -67.27793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 13.853159476017545,
+          "magnet": 2,
+          "fine_component_ut": 13.85315947601831,
+          "quadrature_difference_ut": 7.65609797781508e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 114.55175590132575,
+          "magnet": 2,
+          "fine_component_ut": 114.55175590132555,
+          "quadrature_difference_ut": 1.9895196601282805e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.3290390357654,
+            15.688086654606204
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1825.7811757209129,
+          "magnet": 2,
+          "fine_component_ut": 1825.781175720915,
+          "quadrature_difference_ut": 2.0463630789890885e-12
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 7180.835940379598,
+          "magnet": 2,
+          "fine_component_ut": 7180.835940379623,
+          "quadrature_difference_ut": 2.546585164964199e-11
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -1721.0271948082943,
+          "magnet": 2,
+          "fine_component_ut": -1721.0271948082727,
+          "quadrature_difference_ut": 2.1600499167107046e-11
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.9171171072962,
+            17.59967347758459
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -7.40746112135194,
+          "magnet": 2,
+          "fine_component_ut": -7.40746112135046,
+          "quadrature_difference_ut": 1.4797052472204086e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.5,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.0,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 32.75002141254367,
+          "magnet": 2,
+          "fine_component_ut": 32.75002141254436,
+          "quadrature_difference_ut": 6.963318810448982e-13
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 103.94894145485284,
+          "magnet": 2,
+          "fine_component_ut": 103.948941454853,
+          "quadrature_difference_ut": 1.5631940186722204e-13
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -2.1989074025490383,
+          "magnet": 2,
+          "fine_component_ut": -2.1989074025488455,
+          "quadrature_difference_ut": 1.9273471707492718e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 27.715304156543507,
+          "magnet": 2,
+          "fine_component_ut": 27.71530415654341,
+          "quadrature_difference_ut": 9.592326932761353e-14
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -49.035,
+            14.73229324311701
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 58.85279268076662,
+          "magnet": 2,
+          "fine_component_ut": 58.85279268076638,
+          "quadrature_difference_ut": 2.4158453015843406e-13
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.6480525105398103,
+          "magnet": 3,
+          "fine_component_ut": -0.6480525105400485,
+          "quadrature_difference_ut": 2.382538610845586e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -1.1326499052801589,
+          "magnet": 3,
+          "fine_component_ut": -1.1326499052802432,
+          "quadrature_difference_ut": 8.43769498715119e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -84.40365398486632,
+            4.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 3.076829207656265,
+          "magnet": 3,
+          "fine_component_ut": 3.0768292076562234,
+          "quadrature_difference_ut": 4.1744385725905886e-14
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -67.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -0.3572351062657211,
+          "magnet": 3,
+          "fine_component_ut": -0.3572351062658185,
+          "quadrature_difference_ut": 9.742207041085749e-14
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -3.1371886255808796,
+          "magnet": 3,
+          "fine_component_ut": -3.13718862558085,
+          "quadrature_difference_ut": 2.9753977059954195e-14
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -67.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 7.812779350456866,
+          "magnet": 3,
+          "fine_component_ut": 7.812779350456938,
+          "quadrature_difference_ut": 7.194245199571014e-14
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 3.707389454847606,
+          "magnet": 3,
+          "fine_component_ut": 3.7073894548487814,
+          "quadrature_difference_ut": 1.1755041384731157e-12
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -49.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 2.8535075755647483,
+          "magnet": 3,
+          "fine_component_ut": 2.853507575565152,
+          "quadrature_difference_ut": 4.036770917537069e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -49.358843856938385,
+            16.40645745198408
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 22.934979578259366,
+          "magnet": 3,
+          "fine_component_ut": 22.934979578259465,
+          "quadrature_difference_ut": 9.947598300641403e-14
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2707.149334622484,
+          "magnet": 3,
+          "fine_component_ut": -2707.1493346224756,
+          "quadrature_difference_ut": 8.185452315956354e-12
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -2869.6734946172255,
+          "magnet": 3,
+          "fine_component_ut": -2869.673494617228,
+          "quadrature_difference_ut": 2.2737367544323206e-12
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -28.804081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            -0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -15815.971720471649,
+          "magnet": 3,
+          "fine_component_ut": -15815.971720471642,
+          "quadrature_difference_ut": 7.275957614183426e-12
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            5.5,
+            -24.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -159.3182576043578,
+          "magnet": 3,
+          "fine_component_ut": -159.3182576043559,
+          "quadrature_difference_ut": 1.9042545318370685e-12
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -24.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": 31.231159251281465,
+          "magnet": 3,
+          "fine_component_ut": 31.231159251276072,
+          "quadrature_difference_ut": 5.3930193644191604e-12
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": -4.827578046116573,
+          "magnet": 3,
+          "fine_component_ut": -4.827578046119076,
+          "quadrature_difference_ut": 2.502886786714953e-12
+        },
+        {
+          "sensor": 0,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 4.613554158698056,
+          "magnet": 3,
+          "fine_component_ut": 4.613554158698388,
+          "quadrature_difference_ut": 3.3217872896784684e-13
+        },
+        {
+          "sensor": 0,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 1.7006323742509473,
+          "magnet": 3,
+          "fine_component_ut": 1.7006323742509186,
+          "quadrature_difference_ut": 2.864375403532904e-14
+        },
+        {
+          "sensor": 0,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -83.40365398486632,
+            5.637374915134451
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 6.250697872406049,
+          "magnet": 3,
+          "fine_component_ut": 6.250697872406086,
+          "quadrature_difference_ut": 3.6415315207705135e-14
+        },
+        {
+          "sensor": 1,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 17.060828702189944,
+          "magnet": 3,
+          "fine_component_ut": 17.060828702189852,
+          "quadrature_difference_ut": 9.237055564881302e-14
+        },
+        {
+          "sensor": 1,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -66.77793857439772,
+            7.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 6.697633884110347,
+          "magnet": 3,
+          "fine_component_ut": 6.697633884110223,
+          "quadrature_difference_ut": 1.2434497875801753e-13
+        },
+        {
+          "sensor": 1,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -66.77793857439772,
+            6.190701396490805
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.984807753012208,
+            0.17364817766693033,
+            -0.0
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 19.128398779547133,
+          "magnet": 3,
+          "fine_component_ut": 19.128398779546977,
+          "quadrature_difference_ut": 1.5631940186722204e-13
+        },
+        {
+          "sensor": 2,
+          "component": 0,
+          "observer_native_mm": [
+            6.0,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 96.6222435504624,
+          "magnet": 3,
+          "fine_component_ut": 96.6222435504627,
+          "quadrature_difference_ut": 2.984279490192421e-13
+        },
+        {
+          "sensor": 2,
+          "component": 1,
+          "observer_native_mm": [
+            6.0,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 88.34106737288197,
+          "magnet": 3,
+          "fine_component_ut": 88.34106737288253,
+          "quadrature_difference_ut": 5.684341886080801e-13
+        },
+        {
+          "sensor": 2,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -48.358843856938385,
+            15.406457451984078
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 105.22195284266895,
+          "magnet": 3,
+          "fine_component_ut": 105.22195284266924,
+          "quadrature_difference_ut": 2.8421709430404007e-13
+        },
+        {
+          "sensor": 3,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -29.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 7056.926793939367,
+          "magnet": 3,
+          "fine_component_ut": 7056.926793939366,
+          "quadrature_difference_ut": 9.094947017729282e-13
+        },
+        {
+          "sensor": 3,
+          "component": 1,
+          "observer_native_mm": [
+            5.0,
+            -29.304081518588657,
+            8.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -30.27752477044982,
+            6.6417482926363975
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 7620.858477202293,
+          "magnet": 3,
+          "fine_component_ut": 7620.858477202282,
+          "quadrature_difference_ut": 1.0913936421275139e-11
+        },
+        {
+          "sensor": 3,
+          "component": 2,
+          "observer_native_mm": [
+            6.0,
+            -28.804081518588657,
+            9.572045153552866
+          ],
+          "magnet_center_native_mm": [
+            -1.65,
+            -30.635,
+            6.292160735280527
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 2.9,
+          "thickness_mm": 0.9,
+          "coarse_component_ut": -1185.3472176053212,
+          "magnet": 3,
+          "fine_component_ut": -1185.3472176053074,
+          "quadrature_difference_ut": 1.3869794202037156e-11
+        },
+        {
+          "sensor": 4,
+          "component": 0,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            22.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 18.666842109734077,
+          "magnet": 3,
+          "fine_component_ut": 18.66684210973379,
+          "quadrature_difference_ut": 2.877698079828406e-13
+        },
+        {
+          "sensor": 4,
+          "component": 1,
+          "observer_native_mm": [
+            5.5,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            0.17101007166283433,
+            0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 405.00098938907183,
+          "magnet": 3,
+          "fine_component_ut": 405.00098938906945,
+          "quadrature_difference_ut": 2.3874235921539366e-12
+        },
+        {
+          "sensor": 4,
+          "component": 2,
+          "observer_native_mm": [
+            5.0,
+            -25.5,
+            21.5
+          ],
+          "magnet_center_native_mm": [
+            0.3500000000000001,
+            -28.490148622698904,
+            8.38968607941575
+          ],
+          "magnet_axis_native": [
+            0.9698463103929541,
+            -0.17101007166283433,
+            -0.17364817766693033
+          ],
+          "diameter_mm": 3.1,
+          "thickness_mm": 1.1,
+          "coarse_component_ut": 274.89063405880336,
+          "magnet": 3,
+          "fine_component_ut": 274.8906340588015,
+          "quadrature_difference_ut": 1.8758328224066645e-12
+        }
+      ]
+    }
+  ],
+  "quadrature_check": {
+    "maximum_difference_ut": 6.184563972055912e-11,
+    "limit_ut": 0.05,
+    "passed": true
+  },
+  "source_hashes": {
+    "engineering/designs/recessed.json": "580c77f09c3c36a40fe0357c153c1cc46eb745b5b423b313f80d5df8b1c26fbb",
+    "engineering/designs/recessed_field_screen.json": "2c7b0e0f35b2f6b0f8244d1d490b2fdf7fccdf3f4e8e36e6ecee4cc4c10e17d5",
+    "engineering/release/b1/b1_manifest.json": "0bc9b4de6c93834f6af51bb7172adbc305301d509ae022f7262282ae2ba9e3a6",
+    "engineering/designs/b1.json": "8b4b2820d4fbd483f80c2f660b9e62cc6d46d9b4898c0559cc1bb3eec47a7351",
+    "engineering/scripts/screen_recessed_fields.py": "3d9cd0f20fae3cee6066c38febd6530b2c7af3056456247cfe979e857a3db21e",
+    "engineering/scripts/model_b1_field.py": "edc8241090c0186a6259c3621a5bced8f147c27333bd49714e050a40963e6ad0"
+  },
+  "limits": [
+    "Sampled motion, placement and dimension scenarios, not measured tolerances or a force-to-motion law.",
+    "Per-magnet component intervals enclose combinations of the sampled states. They do not certify every unsampled continuous state.",
+    "The electrical scale/offset and external-field allowances are engineering assumptions, not manufacturer guarantees.",
+    "Sensor conversion uses Table 17 at 25 C, HALLCONF=0xC, RES=1 and TCMP off.",
+    "The standard -011 sensor's 50 mT IMC onset is checked separately from digital word range.",
+    "Actual motor, second jaw, steel, temperature and permitted travel still require physical checks.",
+    "This interval contains combinations of sampled source states; no continuous-domain or hardware guarantee is claimed.",
+    "The geometric motion cases are not a prediction of TPU movement under 20 N.",
+    "Actual field bias, repeatability, force calibration and contact confidence require physical data."
+  ]
+}

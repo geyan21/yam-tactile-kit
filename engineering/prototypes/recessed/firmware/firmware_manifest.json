@@ -1,0 +1,30 @@
+{
+  "protocol": "yam-b3/1",
+  "hardware_revision": "B3.1",
+  "files": {
+    "main.py": "0daeca1c8931f190b75146029d6f4ff59f96e59dc06515b0d708576c31ed0693",
+    "config.json": "82a839370cbe06c3f80bcee2a59cd390cc63cad39b9dbc47b5786b73486739ee",
+    "mlx90393.py": "66feb1d2335d2f5a6b881515d717bb51d1940015dbc7e5e9eb278d8dba564d73",
+    "mlx90393_base.py": "232ecbbf65e5829f9fd4e97f605c0f033aa804c828f7e5c4eb55558c3a45f3fb",
+    "magnetic_main.py": "f3e2378a273c4462785aaa8cb87ac638f10383eab75e056485107d70994ef5af"
+  },
+  "source_paths": {
+    "main.py": "engineering/firmware/recessed/main.py",
+    "config.json": "engineering/firmware/recessed/config.json",
+    "mlx90393.py": "engineering/firmware/recessed/mlx90393.py",
+    "mlx90393_base.py": "engineering/firmware/b1/mlx90393.py",
+    "magnetic_main.py": "engineering/firmware/b1/main.py"
+  },
+  "gain_sel": 5,
+  "resolution": 1,
+  "lsb_ut_at_25c": [
+    0.501,
+    0.501,
+    0.807
+  ],
+  "physical_boards_tested": 0,
+  "actuator_control": false,
+  "nail_cells_required": true,
+  "nail_continuity_resistors_at_tips_ohm": 100000,
+  "note": "Copy all five files to a Raspberry Pi Pico running MicroPython. The wrapper sets B3 identity; its gain-5 driver replaces the magnetic scale only. Preserve raw data and use a new B3 calibration."
+}

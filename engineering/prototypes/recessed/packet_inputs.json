@@ -1,0 +1,13 @@
+{
+  "source_hashes": {
+    "build/engineering/prototypes/recessed/recessed_manifest.json": "a03ed2c17b2f64e2d0643883396ed28fe44264d02544e2db4efdd88b579fcd88",
+    "engineering/b2_bom.csv": "48c611b2414061155dff4c2aa5d6a7f42c9a5e5330eba6fbf0c76bb5265bc0cf",
+    "engineering/web/b2-wiring.svg": "bcab2c11cb01a5c665f2ce6ad0f0b08eb68b7230d346d9a4a526d5b93a54b3d4",
+    "engineering/scripts/make_recessed_packet.py": "55df98b55eaa9d0783b482e22596c18e3527521e245c08721fa3ed1ce7a0d774"
+  },
+  "files": {
+    "recessed_bom.csv": "7b26ad1c65e3b272bc35f35a77c39dba53a26e31167e467bcd891afb649c9f6e",
+    "recessed-wiring.svg": "a774f2ab69f282a1d9ccd5d4368da94931c2baa13e5c9c221fb5f06d9edaf927",
+    "recessed_sensor_placement.csv": "67c1d19a8aeffc5ca3b41ad977aec66b6b72f18278f451794573b93161050f0a"
+  }
+}

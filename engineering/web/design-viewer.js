@@ -13,11 +13,11 @@
     viewer.visible=new Set(model.components.map(part=>part.group));
     viewer.setModel(model);
     details.querySelector(".design-viewer-note").textContent=model.note;
-    const labels={frame:model.id==="nail_assembly"?"N1 revised frame":"Original frame",tpu:"Original TPU",saddles:"R1 saddles",laminate:"R1 sensing laminates",
+    const labels={frame:model.id==="nail_assembly"?"N1 revised frame":model.id==="recessed_assembly"?"B3 recessed frame":"Original frame",tpu:"Original TPU",saddles:"R1 saddles",laminate:"R1 sensing laminates",
       fixed:"Fixed carrier",floating:"Floating carrier",cell:"Cell reference",hardware:"Reserved fasteners",
       b1tpu:"Magnetic TPU",spine:"Fixed spine",magnet:"Magnets",plug:"Retaining plugs",
-      pcb:model.id==="b2_assembly"?"One B2 PCB":"Sensor heads",
-      backer:"Removable backer",spacer:"Locating spacers",electronics:"IC / component envelopes",nail:"T0 / T1 nail pads",
+      pcb:["b2_assembly","recessed_assembly"].includes(model.id)?"One B2 PCB":"Sensor heads",
+      backer:"Removable backer",spacer:model.id==="recessed_assembly"?"B3 tapered spacers":"Locating spacers",electronics:"IC / component envelopes",nail:"T0 / T1 nail pads",
       c1fixed:"Fixed root carrier",c1floating:"Floating finger carrier",c1beam:"Transverse strain beam",
       c1clamp:"Beam end clamps",c1gauge:"Eight active strain-grid locations",
       nailbody:"N1 bare fork and sensing webs",nailleft:"Left fixed carrier",nailright:"Right fixed carrier",

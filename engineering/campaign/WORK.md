@@ -24,14 +24,21 @@ the declared numerical checks and calculated 0.094 mm added tip motion at
 N1.1 adds a bare steel nail with two shear bridges, two carriers, a revised
 frame and four retained R1 TPU cells. Its readout, static calibration tools
 and checked digital package are separate. No physical N1 measurements exist.
-The next mechanical work is the recessed frame; the full list below remains
-in scope.
+B3.1 adds a separately recessed frame and two identical tapered spacers,
+retains the B2 PCB, B1 magnetic TPU and two N0 nail pads, and supplies gain-5
+firmware and raw recording. Five CAD solids, protected material, full spacer
+seating, 42 head/solder checks and sampled magnetic range passed. The board
+moves inward 2.439 mm. Actual drive/cable motion, frame stiffness, assembly
+and contact/force performance still need physical tests.
+
+Seven digital packages are available. The five remaining designs below and
+the common measured comparison remain in scope.
 
 ## Work sequence
 
 1. B2 digital package completed; fabricate, assemble and measure it.
 2. C1 digital package completed; verify drive fit, machine, bond, assemble and measure it.
-3. N1 digital package completed; develop the recessed-frame design next and physically test both.
+3. N1 and B3 digital packages completed; fabricate, assemble and physically test both.
 4. Develop the resistive matrix, capacitive, pneumatic, optical and packaged
    force-button prototypes, including their contact and mounting interfaces.
 5. Supply the common fixtures, raw-data contracts and held-out comparison tools.

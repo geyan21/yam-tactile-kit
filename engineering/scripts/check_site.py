@@ -141,6 +141,20 @@ def main():
                 "website/build-nail.html","website/nail-testing.html","website/nail-analysis.html",
                 "website/assets/prototypes/nail/nail-wiring.svg",
                 "website/assets/prototypes/nail/nail_placement.svg",
+                "source/engineering/firmware/recessed/main.py",
+                "source/engineering/firmware/recessed/mlx90393.py",
+                "source/engineering/software/recessed_protocol.py",
+                "source/engineering/software/recessed_record.py",
+                "source/engineering/prototypes/recessed/prototype_snapshot.json",
+                "source/engineering/prototypes/recessed/cad/recessed_hard_frame.step",
+                "source/engineering/prototypes/recessed/cad/recessed_locating_spacer_1.stl",
+                "source/engineering/prototypes/recessed/recessed_firmware.zip",
+                "source/engineering/prototypes/recessed/recessed_clearance_review.json",
+                "source/engineering/prototypes/recessed/recessed_magnetic_review.json",
+                "website/build-recessed.html","website/recessed-testing.html","website/recessed-analysis.html",
+                "website/assets/prototypes/recessed/recessed_placement.svg",
+                "website/assets/prototypes/recessed/recessed-wiring.svg",
+                "website/downloads/recessed_bom.csv","website/downloads/recessed_specimen.json",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

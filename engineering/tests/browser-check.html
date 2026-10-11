@@ -9,7 +9,13 @@ document.getElementById("page").addEventListener("load",async()=>{
     await pause(800);
     const frame=document.getElementById("page"),w=frame.contentWindow,d=w.document;
     check("real mesh assembly renders",Number(d.getElementById("cad").dataset.faces)>10000);
-    check("all six prototype packages have their STEP/STL links",d.querySelectorAll("#parts-table a").length===90);
+    const plans=[[w.ENGINEERING.r1,""],[w.ENGINEERING.l1,"l1/"],[w.ENGINEERING.b1,"b1/"],
+      ...Object.entries(w.ENGINEERING.prototypes).map(([id,plan])=>[plan,`prototypes/${id}/`])];
+    const expectedLinks=new Set(plans.flatMap(([plan,prefix])=>plan.parts.flatMap(part=>
+      [part.step,part.stl].map(name=>"downloads/"+prefix+name))));
+    const actualLinks=[...d.querySelectorAll("#parts-table a")].map(a=>a.getAttribute("href"));
+    check("every prototype STEP/STL link is present exactly once",actualLinks.length===expectedLinks.size&&
+      new Set(actualLinks).size===expectedLinks.size&&actualLinks.every(link=>expectedLinks.has(link)));
     check("all twelve designs are listed separately",d.querySelectorAll("#candidate-table tr").length===12);
     check("scalability study is reachable",d.querySelector('a[href="architecture.html"]')!==null);
     check("design directory is prominent and candidates have their own pages",d.querySelector('.hero a[href="designs.html"]')&&d.querySelectorAll("#candidate-table a").length===12);
@@ -49,6 +55,13 @@ document.getElementById("page").addEventListener("load",async()=>{
     check("N1 assembled sensing nail renders",inspect("nail_assembly"));
     check("N1 steel fork, carriers, foils and TPU layers are separate",["nailbody","nailleft","nailright","nailgauges","saddles","laminate"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
     check("N1 frame layer is accurately labeled as revised",d.querySelector('[data-layer="frame"]')?.getAttribute("aria-label")==="N1 revised PETG frame");
+    check("B3 recessed assembly renders",inspect("recessed_assembly"));
+    check("B3 board, backer, spacers, magnets and nail cells have separate controls",
+      ["pcb","backer","spacer","electronics","magnet","plug","b1tpu","nail"].every(group=>d.querySelector(`[data-layer="${group}"]`)));
+    check("B3 frame and retained PCB labels match the design",
+      d.querySelector('[data-layer="frame"]')?.getAttribute("aria-label")==="B3 recessed PETG frame"&&
+      d.querySelector('[data-layer="pcb"]')?.getAttribute("aria-label")==="B2 single PCB"&&
+      d.querySelector('[data-layer="spacer"]')?.getAttribute("aria-label")==="B3 tapered spacers");
     check("all-design campaign is reachable",d.querySelector('.hero a[href="build-all.html"]')!==null);
     const force=d.getElementById("load-force"),moment=d.getElementById("load-moment-value").textContent;
     force.value="10";force.dispatchEvent(new w.Event("input"));

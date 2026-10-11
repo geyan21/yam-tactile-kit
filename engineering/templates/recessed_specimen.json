@@ -1,0 +1,59 @@
+{
+  "schema": "yam-recessed-specimen/1",
+  "evidence_kind": "unmeasured_template",
+  "specimen": "B3-REPLACE-ME",
+  "operator": null,
+  "geometry_sha256": null,
+  "requested_force_n_per_finger": 20,
+  "controls": {"matched_b2_specimen": null, "original_finger_specimen": null},
+  "frame": {
+    "filament_grade_and_lot": null,
+    "print_orientation_layer_infill_perimeters": null,
+    "measured_recess_floor_x_mm": null,
+    "measured_mount_seats_x_mm": [null, null],
+    "cracks_or_support_damage": null,
+    "nail_root_and_tpu_attachments_checked": false
+  },
+  "spacers": {
+    "measured_foot_diameters_mm": [null, null],
+    "measured_body_lengths_mm": [null, null],
+    "measured_shoulder_diameters_mm": [null, null],
+    "full_seating_checked": false,
+    "clamp_and_reassembly_records": null
+  },
+  "sensing": {
+    "tpu_grade_lot_and_print_process": null,
+    "magnet_lot_and_polarity_record": null,
+    "nail_pad_build_records": null,
+    "sensor_component_face_measured_x_mm": null,
+    "measured_headroom_across_conditions": null
+  },
+  "electronics": {
+    "b2_pcb_serial_and_fabrication_hash": null,
+    "board_thickness_mm": null,
+    "gain_sel": 5,
+    "resolution": 1,
+    "firmware_hashes_and_micropython_version": null,
+    "solder_height_and_cable_route_records": null,
+    "supply_current_and_bus_waveforms": null,
+    "fault_injection_recordings": []
+  },
+  "installation": {
+    "actual_drive_variant": null,
+    "actual_screw_material_lengths_and_engagement": null,
+    "both_jaw_orientations_and_full_opening_checked": false,
+    "minimum_unloaded_and_loaded_clearances_mm": null,
+    "tpu_positive_x_motion_at_each_force_mm": null
+  },
+  "tests": {
+    "reference_force_sensor_id_and_calibration": null,
+    "physical_training_trials": null,
+    "held_out_force_and_contact_trials": null,
+    "added_tip_motion_vs_original_mm_at_20n": null,
+    "temperature_motor_steel_cable_and_wear_records": null,
+    "precision_task_records": null
+  },
+  "assembly_minutes": null,
+  "rework_minutes": null,
+  "physical_qualification": false
+}

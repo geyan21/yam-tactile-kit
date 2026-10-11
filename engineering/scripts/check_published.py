@@ -76,7 +76,9 @@ def main():
                              "c1_readout_fabrication.zip","c1_firmware.zip","c1_review_drawings.pdf",
                              "c1_bom.csv","c1_force_trials.json","prototypes/c1/cad/c1_strain_beam.step",
                              "nail_bom.csv","nail_firmware.zip","nail_review_drawings.pdf","nail_force_trials.json",
-                             "prototypes/nail/cad/nail_bare_sensing_fork.step"):
+                             "prototypes/nail/cad/nail_bare_sensing_fork.step",
+                             "recessed_bom.csv","recessed_firmware.zip","recessed_review_drawings.pdf","recessed_specimen.json",
+                             "prototypes/recessed/cad/recessed_hard_frame.step"):
                     local=(ROOT/"build/site/downloads"/name).read_bytes()
                     remote=read(SITE+"downloads/"+name,limit=max(64*1024*1024,len(local)+4*1024*1024))
                     checks[name]=content_hash(remote,name)==content_hash(local,name)
@@ -84,7 +86,8 @@ def main():
                 summary["b1_guide_pages_match"]={name:read(SITE+name)==(ROOT/"build/site"/name).read_bytes()
                     for name in ("build-b1.html","b1-electronics.html","b1-testing.html","sensors.html","architecture.html","build-b2.html","build-all.html",
                                  "build-c1.html","c1-testing.html","c1-analysis.html",
-                                 "build-nail.html","nail-testing.html","nail-analysis.html")}
+                                 "build-nail.html","nail-testing.html","nail-analysis.html",
+                                 "build-recessed.html","recessed-testing.html","recessed-analysis.html")}
                 summary["b2_prototype_assets_match"]={name:read(SITE+"assets/prototypes/b2/"+name)==(ROOT/"build/site/assets/prototypes/b2"/name).read_bytes()
                     for name in ("prototype_snapshot.json","b2_manifest.json","b2_placement.svg","b2-wiring.svg",
                                  "b2_assembly.png","b2_exploded.png","models.json","pcb/pcb_checks.json","pcb/b2_main.kicad_pcb")}
@@ -95,6 +98,10 @@ def main():
                 summary["nail_prototype_assets_match"]={name:read(SITE+"assets/prototypes/nail/"+name)==(ROOT/"build/site/assets/prototypes/nail"/name).read_bytes()
                     for name in ("prototype_snapshot.json","nail_manifest.json","nail_gauge_placement.svg","nail-wiring.svg",
                                  "nail_assembly.png","models.json","fastener_checks.json","nail_structural_review.json")}
+                summary["recessed_prototype_assets_match"]={name:read(SITE+"assets/prototypes/recessed/"+name)==(ROOT/"build/site/assets/prototypes/recessed"/name).read_bytes()
+                    for name in ("prototype_snapshot.json","recessed_manifest.json","recessed_placement.svg",
+                                 "recessed-wiring.svg","recessed_assembly.png","recessed_stack.svg","models.json",
+                                 "recessed_clearance_review.json","recessed_magnetic_review.json")}
                 summary["sensor_placement_assets_match"]={name:read(SITE+"assets/"+name)==(ROOT/"build/site/assets"/name).read_bytes()
                     for name in ("sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg")}
                 summary["architecture_artifacts_match"]={name:read(SITE+"assets/concepts/"+name)==(ROOT/"build/site/assets/concepts"/name).read_bytes()
@@ -129,6 +136,8 @@ def main():
             and all(summary.get("c1_prototype_assets_match",{}).values())
             and bool(summary.get("nail_prototype_assets_match"))
             and all(summary.get("nail_prototype_assets_match",{}).values())
+            and bool(summary.get("recessed_prototype_assets_match"))
+            and all(summary.get("recessed_prototype_assets_match",{}).values())
             and any(run["conclusion"]=="success" for run in summary["runs"])
         )
         record["publication"]=summary

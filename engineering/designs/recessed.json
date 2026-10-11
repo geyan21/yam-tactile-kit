@@ -1,0 +1,84 @@
+{
+  "revision": "B3.1",
+  "status": "Experimental recessed-frame development; physical assembly and qualification pending",
+  "design_id": "RECESSED",
+  "requested_force_n_per_finger": 20,
+  "architecture": "Retained B2 magnetic PCB and B1 magnet/TPU cartridge, with a separately recessed hard frame and registered board supports",
+  "basis": {
+    "b2_snapshot": "engineering/prototypes/b2/prototype_snapshot.json",
+    "source_frame_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "source_tpu_sha256": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc"
+  },
+  "mechanical": {
+    "pcb_component_plane_native_x_mm": 6.0,
+    "pcb_thickness_mm": 0.8,
+    "frame_component_clearance_mm": 0.5,
+    "frame_board_clearance_mm": 0.25,
+    "pocket_planar_clearance_mm": 0.35,
+    "front_solder_height_allowance_mm": 1.0,
+    "mount_seat_native_x_mm": [4.0, 4.0],
+    "mount_recess_radius_mm": 4.0,
+    "spacer_outer_diameter_mm": 7.0,
+    "spacer_foot_diameter_mm": 4.8,
+    "spacer_foot_height_mm": 0.2,
+    "spacer_taper_height_mm": 1.1,
+    "fastener_clearance_mm": 3.2,
+    "pcb_bore_mm": 5.0,
+    "shoulder_outer_diameter_mm": 4.85,
+    "shoulder_height_mm": 0.65,
+    "backer_seat_allowance_mm": 0.1,
+    "backer_thickness_mm": 1.2,
+    "reserved_head_diameter_mm": 6.0,
+    "reserved_head_height_mm": 2.4,
+    "material": "PETG prototype frame, spacers and backer; record grade and print process",
+    "notes": [
+      "PCB and magnet Y/Z poses remain those of the retained B2/B1 build; the PCB shifts only along native X.",
+      "Flatten the two source side-support seats to the specified plane only where required.",
+      "The 4.8 mm foot fits the narrower middle support; a taper widens to the 7 mm PCB clamping flange.",
+      "The component and solder allowances are assembly clearances, not manufacturer package dimensions.",
+      "Printed fit and clamping require measurement before force tests."
+    ]
+  },
+  "protected_source_regions": {
+    "central_material_max_native_x_mm": 2.0,
+    "original_nail_max_native_y_mm": -95.0,
+    "jaw_face_preserved_depth_mm": 0.5,
+    "jaw_bolt_region_radius_mm": 4.0,
+    "tpu_anchor_x_range_mm": [-16.0, 1.0],
+    "tpu_anchor_region_radius_mm": 3.25,
+    "notes": [
+      "Keep the original nail, central frame, mating face/key and material around the two jaw bolts.",
+      "Preserve the inner TPU attachment geometry; the positive-X outer seating bosses are intentionally recessed.",
+      "These geometric invariants do not establish unchanged printed strength or compliance."
+    ]
+  },
+  "readout": {
+    "pcb": "Retained B2.1 checked PCB",
+    "part": "MLX90393SLW-ABA-011",
+    "sensor_count": 5,
+    "gain_sel": 5,
+    "resolution": 1,
+    "hallconf": 12,
+    "dig_filt": 2,
+    "osr": 2,
+    "temperature_compensation": false,
+    "source": "https://media.melexis.com/-/media/files/documents/datasheets/mlx90393-datasheet-melexis.pdf",
+    "notes": [
+      "GAIN_SEL=5 is the candidate from the sampled recessed-position range study; confirm headroom over the physical test conditions.",
+      "Preserve raw words and actual settings; a new mechanical arrangement needs new physical calibration.",
+      "Use a distinct B3 protocol and recording identity."
+    ]
+  },
+  "motion_screen": {
+    "side_bulge_native_x_mm": [0.0, 1.0, 2.0],
+    "magnet_inward_motion_mm": [0.0, 0.5, 1.0, 2.0, 3.0],
+    "magnet_axis_tilt_deg": 10.0,
+    "nominal_range_fraction_limit": 0.8,
+    "assumed_external_field_axis_bound_ut": 1000.0,
+    "notes": [
+      "Prescribed clearance and magnetic scenarios, not measured displacement at 20 N.",
+      "The actual allowed travel and installed jaw/drive/cable clearances must be measured.",
+      "No sensor or ADC range is a mechanical force rating."
+    ]
+  }
+}

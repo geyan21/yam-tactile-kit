@@ -23,7 +23,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser",type=Path,required=True)
     parser.add_argument("--checks-only",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
@@ -40,6 +40,7 @@ def main():
             (site/"mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="index.html" title="390px mobile website" style="width:390px;height:2400px;border:0"></iframe></body></html>')
             (site/"design-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="b2.html" title="390px mobile design page" style="width:390px;height:2500px;border:0"></iframe></body></html>')
             (site/"nail-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="rigid-nail.html" title="390px N1 design page" style="width:390px;height:2700px;border:0"></iframe></body></html>')
+            (site/"recessed-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="recessed-magnetic.html" title="390px B3 design page" style="width:390px;height:2700px;border:0"></iframe></body></html>')
             index=(site/"index.html").read_text()
             for name,style in (
                 ("design",".hero,.brief{display:none} #design{padding-top:25px}"),
@@ -47,7 +48,7 @@ def main():
                 ("root",".hero,.brief,#design,#bending{display:none} #root-force{padding-top:25px}"),
             ):
                 (site/f"{name}-review.html").write_text(index.replace("</head>",f"<style>{style}</style></head>"))
-            for name,model in (("l1-assembly","l1_assembly"),("l1-bench","l1_bench"),("b1-assembly","b1_assembly"),("b2-assembly","b2_assembly"),("c1-assembly","c1_assembly"),("nail-assembly","nail_assembly")):
+            for name,model in (("l1-assembly","l1_assembly"),("l1-bench","l1_bench"),("b1-assembly","b1_assembly"),("b2-assembly","b2_assembly"),("c1-assembly","c1_assembly"),("nail-assembly","nail_assembly"),("recessed-assembly","recessed_assembly")):
                 prepared=index.replace("</head>","<style>.hero,.brief{display:none} #design{padding-top:25px}</style></head>")
                 script=(
                     "<script>window.addEventListener('load',()=>{"
@@ -123,6 +124,13 @@ def main():
                     ("nail-guide","1440,1800","build-nail.html"),
                     ("nail-analysis","1440,1700","nail-analysis.html"),
                     ("nail-mobile","500,2800","nail-mobile.html"),
+                    ("recessed-page","1440,1550","recessed-magnetic.html"),
+                    ("recessed-mobile","500,2800","recessed-mobile.html"),
+                    ("recessed-assembly","1440,1150","recessed-assembly-review.html"),
+                    ("recessed-wiring","1280,930","assets/prototypes/recessed/recessed-wiring.svg"),
+                    ("recessed-placement","1400,760","assets/prototypes/recessed/recessed_placement.svg"),
+                    ("recessed-guide","1440,1800","build-recessed.html"),
+                    ("recessed-analysis","1440,1800","recessed-analysis.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])

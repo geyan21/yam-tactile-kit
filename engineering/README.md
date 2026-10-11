@@ -4,9 +4,9 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Six have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, and **N1.1** a bare sensing nail. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Seven have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, and **B3.1** a recessed magnetic board. All require physical assembly and testing.
 
-**Available:** editable CAD generators; 45 checked STEP/STL solids including four component references; an electrode cut sheet; assembly drawings; six BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1/N1 force-analysis tools; material recipes; and student test plans.
+**Available:** editable CAD generators; 50 checked STEP/STL solids including five component references; an electrode cut sheet; assembly drawings; seven BOMs; B1/B2/C1 editable PCBs and checked Gerbers/drills; firmware and raw recorders; R1/L1/C1/N1 force-analysis tools; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -28,6 +28,11 @@ The [architecture study](docs/ARCHITECTURE.md) assesses scalability and alternat
 and combined readout package. It reuses the C1 bridge PCB and R1 CH2–CH5
 interfaces. [BUILD_NAIL.md](docs/BUILD_NAIL.md) gathers the exact sensor
 locations, wiring and assembly steps.
+
+`prototypes/recessed/` contains B3.1: a separate recessed frame and tapered
+spacers, the retained B2 PCB and B1 TPU/magnets, and two N0 nail cells.
+[BUILD_RECESSED.md](docs/BUILD_RECESSED.md) gives exact sensor locations,
+gain-5 wiring/readout, fabrication and the paired B2/B3 experiment.
 
 ## File map
 
@@ -237,3 +242,36 @@ N1's static force baseline uses only preserved physical holds. It does not
 turn a structural calculation or dummy-resistor recording into a measured
 sensor result. Follow [NAIL_TESTING.md](docs/NAIL_TESTING.md) for the actual
 training, validation and remaining qualification work.
+
+## Reproduce B3.1 separately
+
+Collect the original geometry and prepare the existing CAD environment. Use
+the retained B1/B2 snapshots; B3 does not require a new circuit board design.
+Keep those packages intact.
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/prepare_source_brep.py \
+  --part hard_frame
+build/engineering/tools/cad-venv/bin/python engineering/scripts/build_recessed_parts.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/check_recessed_clearance.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/screen_recessed_fields.py
+/usr/bin/python3 engineering/scripts/prepare_recessed_firmware.py
+/usr/bin/python3 engineering/scripts/make_recessed_packet.py
+build/engineering/tools/cad-venv/bin/python engineering/scripts/draw_recessed.py
+/usr/bin/python3 engineering/scripts/freeze_recessed_prototype.py
+/usr/bin/python3 -m unittest discover -s engineering/tests -p test_recessed.py -v
+/usr/bin/python3 engineering/scripts/build_site.py
+/usr/bin/python3 engineering/scripts/check_site.py
+```
+
+The freezer verifies the preserved releases, five CAD exports, protected
+source regions, full spacer seating, head/solder clearances, sampled field
+range, firmware settings and current visualization inputs. Failed CAD
+iterations and field runs remain under the working build directory. Before
+changing evaluated geometry, use `archive_prototype_state.py --design recessed
+--label REVISION_LABEL` with a lowercase descriptive label.
+
+B3 has no structural force prediction or measured force calibration. The
+prescribed side-motion envelope is not a 20 N or travel rating.
+[RECESSED_ANALYSIS.md](docs/RECESSED_ANALYSIS.md) separates the digital
+findings from the remaining [physical tests](docs/RECESSED_TESTING.md).

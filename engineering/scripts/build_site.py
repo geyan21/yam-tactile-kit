@@ -43,6 +43,9 @@ DOCS=[
     ("BUILD_NAIL","build-nail","Build N1 bare sensing nail"),
     ("NAIL_TESTING","nail-testing","N1 calibration & tests"),
     ("NAIL_ANALYSIS","nail-analysis","N1 digital results"),
+    ("BUILD_RECESSED","build-recessed","Build B3 recessed board"),
+    ("RECESSED_TESTING","recessed-testing","B3 paired physical tests"),
+    ("RECESSED_ANALYSIS","recessed-analysis","B3 digital results"),
 ]
 
 
@@ -190,6 +193,10 @@ def main():
             (ROOT/"engineering/prototypes/nail/nail_firmware.zip","nail_firmware.zip"),
             (ROOT/"engineering/templates/nail_specimen.json","nail_specimen.json"),
             (ROOT/"engineering/templates/nail_force_trials.json","nail_force_trials.json"),
+            (ROOT/"engineering/prototypes/recessed/recessed_bom.csv","recessed_bom.csv"),
+            (ROOT/"engineering/prototypes/recessed/recessed_review_drawings.pdf","recessed_review_drawings.pdf"),
+            (ROOT/"engineering/prototypes/recessed/recessed_firmware.zip","recessed_firmware.zip"),
+            (ROOT/"engineering/templates/recessed_specimen.json","recessed_specimen.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
@@ -246,7 +253,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile engineering packet: R1 + L1 + B1 + B2.1 prototype packages\n\n"
+            "ENPIRE tactile engineering packet: seven digital prototype packages; physical tests pending\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"

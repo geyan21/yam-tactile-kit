@@ -1,0 +1,342 @@
+{
+  "schema": "yam-b3-clearance/1",
+  "evidence_kind": "geometry_and_prescribed_motion_bound",
+  "physical_specimens_tested": 0,
+  "installed_drive_verified": false,
+  "rigid_overlaps_mm3": {
+    "head_0_vs_recessed_hard_frame": 0.0,
+    "head_0_vs_recessed_removable_backer": 0.0,
+    "head_0_vs_recessed_pcb_fit_reference": 0.0,
+    "head_0_vs_recessed_locating_spacer_1": 0.0,
+    "head_0_vs_recessed_locating_spacer_2": 0.0,
+    "head_1_vs_recessed_hard_frame": 0.0,
+    "head_1_vs_recessed_removable_backer": 0.0,
+    "head_1_vs_recessed_pcb_fit_reference": 0.0,
+    "head_1_vs_recessed_locating_spacer_1": 0.0,
+    "head_1_vs_recessed_locating_spacer_2": 0.0,
+    "rear_J1_1_vs_recessed_removable_backer": 0.0,
+    "rear_J1_1_vs_recessed_hard_frame": 0.0,
+    "rear_J1_1_vs_head_0": 0.0,
+    "rear_J1_1_vs_head_1": 0.0,
+    "rear_J1_2_vs_recessed_removable_backer": 0.0,
+    "rear_J1_2_vs_recessed_hard_frame": 0.0,
+    "rear_J1_2_vs_head_0": 0.0,
+    "rear_J1_2_vs_head_1": 0.0,
+    "rear_J1_3_vs_recessed_removable_backer": 0.0,
+    "rear_J1_3_vs_recessed_hard_frame": 0.0,
+    "rear_J1_3_vs_head_0": 0.0,
+    "rear_J1_3_vs_head_1": 0.0,
+    "rear_J1_4_vs_recessed_removable_backer": 0.0,
+    "rear_J1_4_vs_recessed_hard_frame": 0.0,
+    "rear_J1_4_vs_head_0": 0.0,
+    "rear_J1_4_vs_head_1": 0.0,
+    "rear_J2_1_vs_recessed_removable_backer": 0.0,
+    "rear_J2_1_vs_recessed_hard_frame": 0.0,
+    "rear_J2_1_vs_head_0": 0.0,
+    "rear_J2_1_vs_head_1": 0.0,
+    "rear_J2_2_vs_recessed_removable_backer": 0.0,
+    "rear_J2_2_vs_recessed_hard_frame": 0.0,
+    "rear_J2_2_vs_head_0": 0.0,
+    "rear_J2_2_vs_head_1": 0.0,
+    "rear_J2_3_vs_recessed_removable_backer": 0.0,
+    "rear_J2_3_vs_recessed_hard_frame": 0.0,
+    "rear_J2_3_vs_head_0": 0.0,
+    "rear_J2_3_vs_head_1": 0.0,
+    "rear_J2_4_vs_recessed_removable_backer": 0.0,
+    "rear_J2_4_vs_recessed_hard_frame": 0.0,
+    "rear_J2_4_vs_head_0": 0.0,
+    "rear_J2_4_vs_head_1": 0.0
+  },
+  "source_moving_geometry_max_native_x_mm": -0.0,
+  "pointwise_positive_x_displacement_bound_mm_assumed": 2.0,
+  "model_coordinate_allowance_mm_assumed": 0.05,
+  "moving_geometry_max_native_x_mm_assumed": 2.05,
+  "moving_to_fixed_separation_bounds": [
+    {
+      "part": "recessed_removable_backer",
+      "fixed_min_native_x_mm": 6.9,
+      "separation_lower_bound_mm": 4.8500000000000005
+    },
+    {
+      "part": "recessed_pcb_fit_reference",
+      "fixed_min_native_x_mm": 6.0,
+      "separation_lower_bound_mm": 3.95
+    },
+    {
+      "part": "recessed_locating_spacer_1",
+      "fixed_min_native_x_mm": 4.0,
+      "separation_lower_bound_mm": 1.9500000000000002
+    },
+    {
+      "part": "recessed_locating_spacer_2",
+      "fixed_min_native_x_mm": 4.0,
+      "separation_lower_bound_mm": 1.9500000000000002
+    },
+    {
+      "part": "U1",
+      "fixed_min_native_x_mm": 4.95,
+      "separation_lower_bound_mm": 2.9000000000000004
+    },
+    {
+      "part": "C11",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C12",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R11",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R12",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "U2",
+      "fixed_min_native_x_mm": 4.95,
+      "separation_lower_bound_mm": 2.9000000000000004
+    },
+    {
+      "part": "C21",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C22",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R21",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R22",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "U3",
+      "fixed_min_native_x_mm": 4.95,
+      "separation_lower_bound_mm": 2.9000000000000004
+    },
+    {
+      "part": "C31",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C32",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R31",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R32",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "U4",
+      "fixed_min_native_x_mm": 4.95,
+      "separation_lower_bound_mm": 2.9000000000000004
+    },
+    {
+      "part": "C41",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C42",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R41",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R42",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "U5",
+      "fixed_min_native_x_mm": 4.95,
+      "separation_lower_bound_mm": 2.9000000000000004
+    },
+    {
+      "part": "C51",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C52",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R51",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R52",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "U10",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "U11",
+      "fixed_min_native_x_mm": 4.9,
+      "separation_lower_bound_mm": 2.8500000000000005
+    },
+    {
+      "part": "R100",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R101",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R102",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C100",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C101",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "C102",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R103",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R104",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R105",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R106",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R107",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "R108",
+      "fixed_min_native_x_mm": 5.45,
+      "separation_lower_bound_mm": 3.4000000000000004
+    },
+    {
+      "part": "J1_1",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J1_2",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J1_3",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J1_4",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J2_1",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J2_2",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J2_3",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "J2_4",
+      "fixed_min_native_x_mm": 5.0,
+      "separation_lower_bound_mm": 2.95
+    },
+    {
+      "part": "reserved_head_0",
+      "fixed_min_native_x_mm": 8.1,
+      "separation_lower_bound_mm": 6.05
+    },
+    {
+      "part": "reserved_head_1",
+      "fixed_min_native_x_mm": 8.1,
+      "separation_lower_bound_mm": 6.05
+    }
+  ],
+  "minimum_moving_to_electronics_and_support_gap_bound_mm": 1.9500000000000002,
+  "rear_solder_envelope": {
+    "radius_mm": 0.8,
+    "height_behind_pcb_mm": 1.0
+  },
+  "added_width_mm_before_heads_excluding_wires": 1.2108136177031028,
+  "added_width_mm_with_reserved_heads_excluding_wires": 3.6108136177031027,
+  "added_reach_mm": 0,
+  "limits": [
+    "This is not a measured 20 N displacement or a permissible-travel rating.",
+    "Every moving TPU/magnet/plug point is assumed to stay within +2 mm of its unloaded native X; arbitrarily large deformation is not covered.",
+    "The source frame and intended TPU attachments are excluded from the moving-to-electronics separation test.",
+    "Rear solder envelopes fit the retained backer exits. Actual cable loops, strain relief, jaw drive, opposite jaw and tool access need physical checks through full opening and closing.",
+    "The 6 mm diameter by 2.4 mm head reservation is an envelope, not a selected screw length or a clamp strength rating."
+  ],
+  "source_hashes": {
+    "engineering/designs/recessed.json": "580c77f09c3c36a40fe0357c153c1cc46eb745b5b423b313f80d5df8b1c26fbb",
+    "build/engineering/prototypes/recessed/recessed_manifest.json": "a03ed2c17b2f64e2d0643883396ed28fe44264d02544e2db4efdd88b579fcd88",
+    "engineering/release/b1/models.json": "301844b585aef6b8161eef4c5a0e4008e88fd53623857601c9f3ebdead48b8c8",
+    "engineering/scripts/check_recessed_clearance.py": "b042d88e30daad50f6d3a7d2e3bfda2c4e85419685f282d78baf7c2404694403"
+  }
+}

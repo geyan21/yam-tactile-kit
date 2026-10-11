@@ -1,0 +1,28 @@
+{
+  "schema": "yam-b3-magnetic-scenarios/1",
+  "evidence_kind": "prescribed_calculation_inputs",
+  "magnet_position_error_mm": 0.25,
+  "sensor_position_error_mm": 0.25,
+  "relative_position_grid": [-1, 0, 1],
+  "magnet_diameter_tolerance_mm": 0.1,
+  "magnet_thickness_tolerance_mm": 0.1,
+  "remanence_relative_bound": 0.02,
+  "sensor_axis_error_deg_assumed": 4.0,
+  "electrical_scale_margin_assumed": 0.10,
+  "electrical_offset_allowance_ut_assumed": 250.0,
+  "external_field_native_axis_bound_ut_assumed": 1000.0,
+  "digital_range_fraction_limit": 0.8,
+  "imc_saturation_onset_ut": 50000.0,
+  "imc_range_fraction_limit": 0.8,
+  "coarse_quadrature": [8, 24],
+  "fine_quadrature": [16, 48],
+  "quadrature_difference_limit_ut": 0.05,
+  "notes": [
+    "Sampled motion, placement and dimension scenarios, not measured tolerances or a force-to-motion law.",
+    "Per-magnet component intervals enclose combinations of the sampled states. They do not certify every unsampled continuous state.",
+    "The electrical scale/offset and external-field allowances are engineering assumptions, not manufacturer guarantees.",
+    "Sensor conversion uses Table 17 at 25 C, HALLCONF=0xC, RES=1 and TCMP off.",
+    "The standard -011 sensor's 50 mT IMC onset is checked separately from digital word range.",
+    "Actual motor, second jaw, steel, temperature and permitted travel still require physical checks."
+  ]
+}

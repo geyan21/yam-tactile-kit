@@ -19,7 +19,8 @@
     let d=frame.contentDocument;
     const cards=[...d.querySelectorAll("[data-design-card]")];
     check("directory contains every design once",cards.length===catalog.designs.length&&new Set(cards.map(c=>c.getAttribute("href"))).size===catalog.designs.length);
-    check("directory separates prototypes, concepts and alternatives",catalog.groups.every(group=>d.getElementById(group.id)));
+    check("directory shows each populated category without empty sections",catalog.groups.every(group=>
+      Boolean(d.getElementById(group.id))===catalog.designs.some(item=>item.group===group.id)));
     frame.style.width="390px";await pause(60);
     check("directory fits mobile width",d.documentElement.scrollWidth<=frame.contentWindow.innerWidth+1);
     for(const item of catalog.designs){
@@ -43,6 +44,13 @@
         const original=w.DesignPageViewer?.visible.size;
         checkbox.click();w.DesignPageViewer.draw();
         check(item.id+": layer controls work",w.DesignPageViewer.visible.size===original-1);
+        if(item.id==="RECESSED"){
+          const frameLabel=d.querySelector('[data-design-layer="frame"]').parentElement.textContent;
+          const pcbLabel=d.querySelector('[data-design-layer="pcb"]').parentElement.textContent;
+          const spacerLabel=d.querySelector('[data-design-layer="spacer"]').parentElement.textContent;
+          check("B3: revised frame and retained board are correctly labeled",
+            frameLabel==="B3 recessed frame"&&pcbLabel==="One B2 PCB"&&spacerLabel==="B3 tapered spacers");
+        }
       }
       frame.style.width="390px";await pause(50);
       check(item.id+": readable mobile layout without page overflow",d.documentElement.scrollWidth<=w.innerWidth+1);

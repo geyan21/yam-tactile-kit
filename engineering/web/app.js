@@ -22,7 +22,7 @@
     b1tpu:["B1 magnetic TPU insert","#a8bd80"],spine:["B1 fixed sensor spine","#24897f"],
     magnet:["B1 embedded magnets","#cc8047"],plug:["B1 flush retaining plugs","#e1bf67"],pcb:["B1 fixed sensor heads","#716b9b"],
     backer:["B2 removable backer","#2e746e"],spacer:["B2 locating spacers","#78afa1"],
-    electronics:["B2 component envelopes","#8374a2"],nail:["T0 / T1 thin nail pads","#d69936"],
+    electronics:["IC / component envelopes","#8374a2"],nail:["T0 / T1 thin nail pads","#d69936"],
     c1fixed:["C1 fixed carrier","#31847c"],c1floating:["C1 floating carrier","#cb8542"],
     c1beam:["C1 transverse strain beam","#788b9b"],c1clamp:["C1 end clamps","#997c57"],
     c1gauge:["C1 active strain-grid locations","#dfad3f"],
@@ -37,7 +37,10 @@
     const controls=document.getElementById("layer-controls");controls.replaceChildren();
     for(const group of viewer.visible){
       const definition=group==="frame"&&model.id==="nail_assembly"?["N1 revised PETG frame","#657c89"]:
-        group==="pcb"&&model.id.startsWith("b2")?["B2 single PCB","#48967e"]:layerDefinitions[group];
+        group==="frame"&&model.id==="recessed_assembly"?["B3 recessed PETG frame","#657c89"]:
+        group==="spacer"&&model.id==="recessed_assembly"?["B3 tapered spacers","#78afa1"]:
+        group==="backer"&&model.id==="recessed_assembly"?["B3 removable backer","#2e746e"]:
+        group==="pcb"&&(model.id.startsWith("b2")||model.id==="recessed_assembly")?["B2 single PCB","#48967e"]:layerDefinitions[group];
       const [label,color]=definition||[group,"#71979c"],row=element("label",null);
       const input=element("input",null,{type:"checkbox","data-layer":group,"aria-label":label});
       input.checked=true;input.addEventListener("change",()=>{input.checked?viewer.visible.add(group):viewer.visible.delete(group);viewer.draw();});
