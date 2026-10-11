@@ -1,0 +1,287 @@
+{
+ "rows_tail": [
+  {
+   "pin": 1,
+   "signal": "GND",
+   "u": -5.56
+  },
+  {
+   "pin": 2,
+   "signal": "NROW04L",
+   "u": -5.26
+  },
+  {
+   "pin": 3,
+   "signal": "NROW05L",
+   "u": -4.96
+  },
+  {
+   "pin": 4,
+   "signal": "NROW06L",
+   "u": -4.66
+  },
+  {
+   "pin": 5,
+   "signal": "NROW07L",
+   "u": -4.36
+  },
+  {
+   "pin": 6,
+   "signal": "NROW08L",
+   "u": -4.06
+  },
+  {
+   "pin": 7,
+   "signal": "NROW09L",
+   "u": -3.76
+  },
+  {
+   "pin": 8,
+   "signal": "NROW10L",
+   "u": -3.46
+  },
+  {
+   "pin": 9,
+   "signal": "NROW11L",
+   "u": -3.16
+  },
+  {
+   "pin": 10,
+   "signal": "NROW00",
+   "u": -2.86
+  },
+  {
+   "pin": 11,
+   "signal": "NROW01",
+   "u": -2.56
+  },
+  {
+   "pin": 12,
+   "signal": "NROW02",
+   "u": -2.26
+  },
+  {
+   "pin": 13,
+   "signal": "NROW03",
+   "u": -1.96
+  },
+  {
+   "pin": 14,
+   "signal": "NROW10R",
+   "u": -1.66
+  },
+  {
+   "pin": 15,
+   "signal": "NROW11R",
+   "u": -1.36
+  },
+  {
+   "pin": 16,
+   "signal": "NROW07R",
+   "u": -1.06
+  },
+  {
+   "pin": 17,
+   "signal": "NROW08R",
+   "u": -0.76
+  },
+  {
+   "pin": 18,
+   "signal": "NROW09R",
+   "u": -0.46
+  },
+  {
+   "pin": 19,
+   "signal": "NROW05R",
+   "u": -0.16
+  },
+  {
+   "pin": 20,
+   "signal": "NROW06R",
+   "u": 0.14
+  },
+  {
+   "pin": 21,
+   "signal": "NROW04R",
+   "u": 0.44
+  },
+  {
+   "pin": 22,
+   "signal": "GND",
+   "u": 0.74
+  }
+ ],
+ "cols_tail": [
+  {
+   "pin": 1,
+   "signal": "GND",
+   "u": 0.44
+  },
+  {
+   "pin": 2,
+   "signal": "NCOL03",
+   "u": 0.74
+  },
+  {
+   "pin": 3,
+   "signal": "NCOL02",
+   "u": 1.04
+  },
+  {
+   "pin": 4,
+   "signal": "NCOL01",
+   "u": 1.34
+  },
+  {
+   "pin": 5,
+   "signal": "NCOL00",
+   "u": 1.64
+  },
+  {
+   "pin": 6,
+   "signal": "NCOL04",
+   "u": 1.94
+  },
+  {
+   "pin": 7,
+   "signal": "NCOL05",
+   "u": 2.24
+  },
+  {
+   "pin": 8,
+   "signal": "NCOL06",
+   "u": 2.54
+  },
+  {
+   "pin": 9,
+   "signal": "NCOL07",
+   "u": 2.84
+  },
+  {
+   "pin": 10,
+   "signal": "NCOL08",
+   "u": 3.14
+  },
+  {
+   "pin": 11,
+   "signal": "NCOL13",
+   "u": 3.44
+  },
+  {
+   "pin": 12,
+   "signal": "NCOL12",
+   "u": 3.74
+  },
+  {
+   "pin": 13,
+   "signal": "NCOL11",
+   "u": 4.04
+  },
+  {
+   "pin": 14,
+   "signal": "NCOL09",
+   "u": 4.34
+  },
+  {
+   "pin": 15,
+   "signal": "NCOL10",
+   "u": 4.64
+  },
+  {
+   "pin": 16,
+   "signal": "GND",
+   "u": 4.94
+  }
+ ],
+ "rows_tail_pins": 22,
+ "cols_tail_pins": 16,
+ "pitch_mm": 0.3,
+ "fpc_width_mm": {
+  "rows": 6.9,
+  "cols": 5.1
+ },
+ "tail_length_mm": {
+  "slot": 4.1,
+  "cols": 12.41,
+  "rows": 19.34,
+  "slack": 0.3
+ },
+ "connectors": {
+  "a_entry_y": 20.79,
+  "b_entry_y": 13.08
+ },
+ "scan": {
+  "row_lines": [
+   "NROW00",
+   "NROW01",
+   "NROW02",
+   "NROW03",
+   "NROW04R",
+   "NROW04L",
+   "NROW05R",
+   "NROW05L",
+   "NROW06R",
+   "NROW06L",
+   "NROW07R",
+   "NROW07L",
+   "NROW08R",
+   "NROW08L",
+   "NROW09R",
+   "NROW09L",
+   "NROW10R",
+   "NROW10L",
+   "NROW11R",
+   "NROW11L"
+  ],
+  "col_lines": [
+   "NCOL00",
+   "NCOL01",
+   "NCOL02",
+   "NCOL03",
+   "NCOL04",
+   "NCOL05",
+   "NCOL06",
+   "NCOL07",
+   "NCOL08",
+   "NCOL09",
+   "NCOL10",
+   "NCOL11",
+   "NCOL12",
+   "NCOL13"
+  ]
+ },
+ "pogo": [
+  {
+   "pin": 1,
+   "signal": "GND"
+  },
+  {
+   "pin": 2,
+   "signal": "D-"
+  },
+  {
+   "pin": 3,
+   "signal": "D+"
+  },
+  {
+   "pin": 4,
+   "signal": "VBUS"
+  },
+  {
+   "pin": 5,
+   "signal": "GND"
+  }
+ ],
+ "connector_contacts": {
+  "A": "contacts on the side away from the PCB (top contact): the cols fingers face down",
+  "B": "contacts on the PCB side (bottom contact): the rows fingers face the board"
+ },
+ "notes": [
+  "cols tail -> connector A (near the cavity's back wall, entry facing +y)",
+  "rows tail -> along the cavity floor under A -> connector B",
+  "both tails carry their fingers on L2; after their bends the rows fingers face the PCB and the cols fingers face away",
+  "thread the rows tail's stiffened end up through the flange slot first, then the cols tail's; latch both with the PCB held above the flange before anything is bonded",
+  "the two tails run side by side behind the TPU insert (rows sheet on the -x side of the channel)",
+  "the cols sheet's neck is 0.21 mm longer than the rows sheet's: it goes round the nail root outside it"
+ ]
+}

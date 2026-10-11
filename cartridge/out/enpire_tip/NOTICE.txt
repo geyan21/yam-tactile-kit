@@ -1,0 +1,6 @@
+ENPIRE-T Tip parts in this folder are a modified version of the ENPIRE gripper finger.
+Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified (ENPIRE-T Tip): filled nail slot, nail sensor pocket, plug-in dock flange, a laminate channel round the nail root (its corner cleared there) and along the back spine, a ledge behind that channel at the frame's windows, and a closed back between the root block and the spine bar. The TPU insert is used unchanged.
+Licence: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ . Changes are listed above and in docs/ENPIRE_T_TIP.md.
+The cradle is the original TPU insert (I2RT_UCG_Soft.stl), unchanged: print it from the original file, which
+cad/enpire_source.py fetches. The sim model (sim/assets/tpu_*.stl) and the web viewer carry copies of it placed
+on the finger, under the same licence.

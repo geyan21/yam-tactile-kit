@@ -1,6 +1,6 @@
 # ENPIRE-T: the ENPIRE finger as a tactile cartridge
 
-ENPIRE-T keeps the outside of the ENPIRE gripper finger (Wenli Xiao, NVIDIA GEAR, CC BY 4.0) and makes it a plug-in tactile cartridge for the YAM Linear 4310. It docks on the same socket as the v0.2 flat cartridge, so one socket per carriage takes either finger. The thin grooved nail keeps its shape and gets a flush 56-taxel pad. The serrated cradle becomes rigid, carries a 246-taxel strip under a molded skin with ENPIRE's teeth, and keeps its outer shape.
+ENPIRE-T keeps the outside of the ENPIRE gripper finger (Wenli Xiao, NVIDIA GEAR, CC BY 4.0) and makes it a plug-in tactile cartridge for the YAM Linear 4310. It docks on the same socket as the v0.2 flat cartridge, so one socket per carriage takes any of these fingers. The thin grooved nail keeps its shape and gets a flush 56-taxel pad. The serrated cradle becomes rigid, carries a 246-taxel strip under a molded skin with ENPIRE's teeth, and keeps its outer shape. If you only need touch at the nail, [ENPIRE-T Tip](ENPIRE_T_TIP.md) keeps ENPIRE's compliant TPU cradle and puts 92 taxels on the nail alone.
 
 **Status: design release.** The geometry is checked digitally against the i2rt YAM meshes and the original ENPIRE meshes, and the sensing is checked in MuJoCo. The readout electronics, the laminate, the skin and its mold, and the print settings are untested: nothing has been printed, laminated or loaded yet.
 
@@ -60,7 +60,7 @@ ENPIRE-T removes those problems. The seat is the TPU outline with the teeth stri
 | laminate: rows sheet + cols sheet (2-layer flex), Velostat 4 mil, thin PSA | 1 | `fpc_pcb/rows_sheet_fab.dxf`, `cols_sheet_fab.dxf` |
 | polyurethane protective tape, 0.20 mm total (3M 8562), cut to the nail pocket | 1 | wear part; `film.stl` gives the outline; the pocket depth assumes 0.20 mm, so measure your tape |
 | finger PCB 28.8 × 21.5 × 0.8 mm, 4-layer, ENIG, bottom-side parts ≤ 2.2 mm | 1 | new board, not the v0.2 one; `fpc_pcb/finger_pcb_outline.dxf` |
-| 0.3 mm FPC connectors: 60-contact (rows, B) and 18-contact (columns, A) | 1 + 1 | e.g. Hirose FH26W series; check the contact counts you can buy |
+| 0.3 mm FPC connectors: 60-contact with contacts away from the board (B, rows; top contact, e.g. Hirose FH35) and 18-contact with contacts on the board side (A, columns; bottom contact, e.g. Hirose FH26W) | 1 + 1 | the tails turn toward the back of the cavity, so the rows fingers face down and the cols fingers face the board; check the contact side, contact count and height (≤ 2.2 mm) of what you can buy |
 | v0.2 socket, socket PCB, 5 pogo pins, 2 dowels, 4 inserts, 2 thumbscrews | 1 set | unchanged from v0.2 (see `../README.md`) |
 
 ## Printing and casting
@@ -73,12 +73,16 @@ To cast the skin, spray release on the mold, push the core plug into the shell f
 
 ## Assembly
 
-1. Build the laminate on the core, not flat. Around the top lobe the outer sheet runs about 0.5 mm further than the inner one, and a stack laminated flat would wrinkle there. Bond the rows sheet to the core with a thin PSA, starting at the nail pocket and working toward the flange. Its pad sits in the pocket, its strip follows the seat, and its tail goes up through the flange slot.
-2. Lay the Velostat pieces on the strip and the nail pad, then lay the cols sheet over them with its tail in front of the rows tail. Bond the two sheets to each other only at the nail end and in the flange slot, so they can slide over the strip, where the skin holds them down. Keep them apart where they leave the flange, which is a 1.8 mm bend.
-3. In the cavity, take the cols tail (front) up to connector A, the near one. Take the rows tail (rear) along the cavity floor, under A, and up into connector B. Close the latches and seat the finger PCB, pogo targets up.
-4. Press the PU tape over the nail pad and the short neck behind it.
-5. Wet the cradle with soapy water or IPA and press the skin on. Its side walls go into the slots beside the cradle and flex outward while their hook ribs pass the lip, then click into the grooves. Bond the last 3 mm of the feather edge, at the nail end, with silicone transfer tape.
-6. Dock it on the socket like the v0.2 cartridge: straight up onto the dowels, then hand-tighten both thumbscrews.
+The connectors sit under the finger PCB, inside the closed cavity, so their latches can only be reached with the board held clear of the flange. Latch both tails first, while the laminate is still loose, and build it on the core after the board is seated.
+
+1. Feed the rows tail, then the cols tail in front of it, up through the flange slot from below and on up through the cavity, far enough to reach the board held above the flange. The rest of the laminate hangs free.
+2. Hold the finger PCB above the flange, its underside toward you, and latch the cols tail (front) into connector A, the near one, and the rows tail (rear) into connector B.
+3. Lower the board into its seat, pogo targets up, feeding the tails back down through the slot as it goes. In the cavity the cols tail rises to A, and the rows tail runs along the cavity floor, under A, and up into B.
+4. Build the laminate on the core, not flat. Around the top lobe the outer sheet runs about 0.5 mm further than the inner one, and a stack laminated flat would wrinkle there. Bond the rows sheet to the core with a thin PSA, starting at the nail pocket and working toward the flange, and push any spare length up through the slot into the cavity. Its pad sits in the pocket, its strip follows the seat, and its tail runs up through the flange slot.
+5. Lay the Velostat pieces on the strip and the nail pad, then lay the cols sheet over them, its tail in front of the rows tail. Bond the two sheets to each other at the nail end only: the connectors already hold the tails, and the sheets must slide over each other along the strip, where the skin holds them down. Keep them apart where they leave the flange, which is a 1.8 mm bend.
+6. Press the PU tape over the nail pad and the short neck behind it.
+7. Wet the cradle with soapy water or IPA and press the skin on. Its side walls go into the slots beside the cradle and flex outward while their hook ribs pass the lip, then click into the grooves. Bond the last 3 mm of the feather edge, at the nail end, with silicone transfer tape.
+8. Dock it on the socket like the v0.2 cartridge: straight up onto the dowels, then hand-tighten both thumbscrews.
 
 ## Electronics
 
@@ -142,4 +146,4 @@ Rebuild with `make enpire` (a few minutes, after `make i2rt`). `make verify` inc
 
 ## Licence and attribution
 
-ENPIRE-T's core, skin, film and their meshes are a modified version of the ENPIRE gripper finger by Wenli Xiao (MakerWorld model 2984746), licensed CC BY 4.0. The changes are listed above and in `out/enpire/NOTICE.txt`. The original STLs are not redistributed: `make enpire-src` downloads them from github.com/pgeedh/Open-ENPIRE-Gripper at commit 72cc833 and checks them against the SHA-256 hashes pinned in `cad/enpire_source.py`. The laminate artwork is new; the FlexiTac process notes in `../README.md` apply.
+ENPIRE-T's core, skin, film and their meshes are a modified version of the ENPIRE gripper finger by Wenli Xiao (MakerWorld model 2984746), licensed CC BY 4.0. The changes are listed above and in `out/enpire/NOTICE.txt`. ENPIRE-T ships none of the original STLs: `make enpire-src` downloads them from github.com/pgeedh/Open-ENPIRE-Gripper at commit 72cc833 and checks them against the SHA-256 hashes pinned in `cad/enpire_source.py`. (ENPIRE-T Tip's sim model and the page's 3D view do carry an unchanged, placed copy of the TPU insert; see [ENPIRE_T_TIP.md](ENPIRE_T_TIP.md#licence-and-attribution).) The laminate artwork is new; the FlexiTac process notes in `../README.md` apply.

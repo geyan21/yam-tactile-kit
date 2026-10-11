@@ -1,0 +1,43 @@
+{
+ "drc_issues": [],
+ "drc_stats": {
+  "rows/R1_min_gap_mm": ">0.2",
+  "rows/R2_min_gap_mm": 0.1,
+  "cols/C1_min_gap_mm": ">0.2",
+  "cols/C2_min_gap_mm": 0.1
+ },
+ "pcb_issues": [],
+ "pcb_free_mm2": 322.0,
+ "tail_room_mm": {
+  "cols_before_A": 1.1,
+  "rows_before_B": 0.3,
+  "rows_under_A": 1.42
+ },
+ "taxels": {
+  "nail": 92
+ },
+ "lines": {
+  "rows": 20,
+  "cols": 14
+ },
+ "sheets_part_at_s_mm": 96.8,
+ "laminate_min_bend_radius": {
+  "single_sheet": {
+   "mm": 1.83,
+   "at_s_mm": 88.44,
+   "bend": "diagonal into the slit"
+  },
+  "stacked": {
+   "mm": 1.6,
+   "at_s_mm": 97.3,
+   "bend": "round the nail root"
+  }
+ },
+ "cols_neck_extra_mm": 0.213,
+ "film_cut": {
+  "width_mm": 21.07,
+  "length_mm": 19.84,
+  "wrap_strip_mm": 3.35,
+  "wrap_strip_width_mm": 9.0
+ }
+}

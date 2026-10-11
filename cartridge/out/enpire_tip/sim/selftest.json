@@ -1,0 +1,271 @@
+{
+ "nail_pinch": {
+  "object_d_mm": 3,
+  "object_len_mm": 12,
+  "objects": {
+   "pin": "capsule",
+   "rod": "cylinder",
+   "bar_edge_on": "square bar, edge first"
+  },
+  "z_mm": -176.68,
+  "q_mm": 2.08,
+  "grip_N": 15.0,
+  "expected_normal_N": 15.02,
+  "left_nail_N": 15.01,
+  "right_nail_N": 15.01,
+  "sensed_share": [
+   1.0,
+   1.0
+  ],
+  "sensors_match_contacts": true,
+  "active_nail": [
+   8,
+   8
+  ],
+  "runs": [
+   {
+    "object": "pin",
+    "offset_mm": 0.0,
+    "touch_N": [
+     15.01,
+     15.01
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     8,
+     8
+    ]
+   },
+   {
+    "object": "pin",
+    "offset_mm": 0.3,
+    "touch_N": [
+     15.05,
+     15.05
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     8,
+     8
+    ]
+   },
+   {
+    "object": "pin",
+    "offset_mm": 0.6,
+    "touch_N": [
+     15.1,
+     15.1
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     16,
+     16
+    ]
+   },
+   {
+    "object": "pin",
+    "offset_mm": 0.625,
+    "touch_N": [
+     15.09,
+     15.09
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     16,
+     16
+    ]
+   },
+   {
+    "object": "rod",
+    "offset_mm": 0.0,
+    "touch_N": [
+     15.01,
+     15.01
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     10,
+     10
+    ]
+   },
+   {
+    "object": "rod",
+    "offset_mm": 0.3,
+    "touch_N": [
+     15.05,
+     15.05
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     10,
+     10
+    ]
+   },
+   {
+    "object": "rod",
+    "offset_mm": 0.6,
+    "touch_N": [
+     15.11,
+     15.11
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     10,
+     10
+    ]
+   },
+   {
+    "object": "rod",
+    "offset_mm": 0.625,
+    "touch_N": [
+     15.11,
+     15.11
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     20,
+     20
+    ]
+   },
+   {
+    "object": "bar_edge_on",
+    "offset_mm": 0.0,
+    "touch_N": [
+     15.01,
+     15.01
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     10,
+     10
+    ]
+   },
+   {
+    "object": "bar_edge_on",
+    "offset_mm": 0.3,
+    "touch_N": [
+     15.07,
+     15.07
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     10,
+     10
+    ]
+   },
+   {
+    "object": "bar_edge_on",
+    "offset_mm": 0.6,
+    "touch_N": [
+     15.11,
+     15.11
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     20,
+     20
+    ]
+   },
+   {
+    "object": "bar_edge_on",
+    "offset_mm": 0.625,
+    "touch_N": [
+     15.09,
+     15.09
+    ],
+    "sensed_share": [
+     1.0,
+     1.0
+    ],
+    "sensors_match_contacts": true,
+    "active": [
+     20,
+     20
+    ]
+   }
+  ],
+  "min_sensed_share": 1.0,
+  "all_match_contacts": true,
+  "max_touch_error_by_object": {
+   "pin": 0.0054,
+   "rod": 0.0061,
+   "bar_edge_on": 0.0061
+  },
+  "max_touch_error": 0.0061
+ },
+ "cradle_grasp": {
+  "rod_d_mm": 32,
+  "z_mm": -121.5,
+  "q_mm": 4.01,
+  "grip_N": 15.0,
+  "contact_N_both_fingers": 50.02,
+  "sensed_share": [
+   0.0,
+   0.0
+  ],
+  "left_nail_N": 0.0,
+  "right_nail_N": 0.0
+ },
+ "flat_tip_pinch": {
+  "plate_mm": [
+   2,
+   20,
+   15
+  ],
+  "bottom_above_tip_mm": 0.5,
+  "q_mm": 2.41,
+  "grip_N": 15.0,
+  "contact_N_both_fingers": 30.03,
+  "sensed_share": [
+   0.0,
+   0.0
+  ],
+  "left_nail_N": 0.0,
+  "right_nail_N": 0.0
+ },
+ "nsensor": 184
+}

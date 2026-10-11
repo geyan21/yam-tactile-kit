@@ -1,0 +1,153 @@
+{
+ "params": {
+  "DZ": -8.5,
+  "TPU_X": [
+   -15.0,
+   0.0
+  ],
+  "X_PROFILE": -7.5,
+  "FLEX_T": 0.45,
+  "FLEX_CLR": 0.05,
+  "FILM_T": 0.2,
+  "TIP_BARE": 3.0,
+  "PAD_EDGE": 1.0,
+  "GROOVE_CLR": 1.0,
+  "POCKET_CLR": 0.15,
+  "NAIL_PITCH": 1.25,
+  "NAIL_EW": 0.85,
+  "NAIL_ACTIVE_EDGE": 0.45,
+  "TAIL_T": 0.17,
+  "TAIL_CLR": 0.05,
+  "SHEET_T": 0.14,
+  "RECESS": 0.2,
+  "Z_RISE": 21.0,
+  "Y_SLIT": -96.6,
+  "R_BEND": 1.6,
+  "STACK_Z": 1.5,
+  "R_S": 4.0,
+  "R_TOP": 4.0,
+  "R_DS": 2.0,
+  "S_MID": [
+   -20.3,
+   60.0
+  ],
+  "CHANNEL_X": [
+   -12.1,
+   -2.9
+  ],
+  "BACK_Z": 28.28,
+  "SLOT_X": [
+   -6.2,
+   5.5
+  ],
+  "CUT_EXTRA": 0.15,
+  "LEDGE_T": 1.0
+ },
+ "derived": {
+  "Zs": -80.88,
+  "Zf": -89.88,
+  "DZ": -8.5,
+  "POCKET_D": 0.7,
+  "C_length": 116.621,
+  "s_nail0": 99.732,
+  "v_nail0": -7.154,
+  "v_pad_max": 9.236,
+  "s_slit_top": 90.731,
+  "s_bend0": 97.299,
+  "s_stack": 94.755,
+  "tip_g": [
+   -0.053,
+   -1.453,
+   -193.757
+  ],
+  "tip_below_carriage_mm": 123.38,
+  "channel_u": [
+   -5.06,
+   4.14
+  ],
+  "route_min_bend_radius": {
+   "mm": 1.83,
+   "at_s_mm": 88.44,
+   "bend": "diagonal into the slit"
+  },
+  "stack_min_bend_radius": {
+   "mm": 1.6,
+   "at_s_mm": 97.3,
+   "bend": "round the nail root"
+  },
+  "stack_bend_turn_deg": 87.13,
+  "laminate_bends": [
+   {
+    "bend": "S-curve, lower",
+    "at_s_mm": 2.49,
+    "radius_mm": 4.0,
+    "inner_face_mm": 4.0,
+    "turn_deg": 60.0,
+    "sheets": 1
+   },
+   {
+    "bend": "S-curve, upper",
+    "at_s_mm": 8.97,
+    "radius_mm": 4.0,
+    "inner_face_mm": 3.83,
+    "turn_deg": 60.0,
+    "sheets": 1
+   },
+   {
+    "bend": "spine top to diagonal",
+    "at_s_mm": 39.77,
+    "radius_mm": 4.0,
+    "inner_face_mm": 3.83,
+    "turn_deg": 24.24,
+    "sheets": 1
+   },
+   {
+    "bend": "diagonal into the slit",
+    "at_s_mm": 88.44,
+    "radius_mm": 2.0,
+    "inner_face_mm": 1.83,
+    "turn_deg": 65.76,
+    "sheets": 1
+   },
+   {
+    "bend": "round the nail root",
+    "at_s_mm": 97.3,
+    "radius_mm": 1.6,
+    "inner_face_mm": 1.6,
+    "turn_deg": 87.13,
+    "sheets": 2
+   }
+  ],
+  "y_rise_g": 23.87,
+  "nail_plane_g": {
+   "origin": [
+    -0.0532,
+    -0.8301,
+    -181.3397
+   ],
+   "normal": [
+    0.0,
+    -0.998743,
+    0.050125
+   ],
+   "u": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "v": [
+    0.0,
+    -0.050125,
+    -0.998743
+   ]
+  }
+ },
+ "source": {
+  "commit": "72cc833bfe1521132318db6a2724e7e9bbb8cd6e",
+  "files": {
+   "hard": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+   "soft": "6dc8c8ae8ebe5f4981e4bd097b95b36c9c98cac23020d237aed8418db9c0bbdc"
+  },
+  "attribution": "Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified (ENPIRE-T Tip): filled nail slot, nail sensor pocket, plug-in dock flange, a laminate channel round the nail root (its corner cleared there) and along the back spine, a ledge behind that channel at the frame's windows, and a closed back between the root block and the spine bar. The TPU insert is used unchanged."
+ }
+}

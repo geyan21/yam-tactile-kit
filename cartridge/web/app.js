@@ -178,8 +178,9 @@
       note.className = "view-fallback";
       note.textContent = "This browser has WebGL turned off, so a rendered picture is shown instead of the 3D view.";
       img.after(note);
+      const camel = k => k.split("_").map(w => w[0].toUpperCase() + w.slice(1)).join("");     // enpire_tip -> EnpireTip
       document.querySelectorAll("a[data-model]").forEach(a => a.addEventListener("click", () => {
-        const alt = canvas.dataset["fallback" + a.dataset.model[0].toUpperCase() + a.dataset.model.slice(1)];
+        const alt = canvas.dataset["fallback" + camel(a.dataset.model)];
         if (alt) { img.src = alt; img.alt = "Rendered view of the YAM gripper with two " + D.models[a.dataset.model].label + " fingers"; }
       }));
       return;
@@ -210,27 +211,28 @@
     models(v, drawLegend);
   }
 
-  // ---------------------------------------------------------------- finger switch (flat cartridge / ENPIRE-T)
+  // ---------------------------------------------------------------- finger switch (flat cartridge / ENPIRE-T / ENPIRE-T Tip)
   function models(v, drawLegend) {
     const M = D.models, head = document.getElementById("view-head"), status = document.getElementById("view-status");
     if (!M || !head) return;
     const radios = [...head.querySelectorAll('input[name="model"]')];
     const dataSrc = document.querySelector('script[src$="data.js"]').getAttribute("src");
-    let loading = null, wanted = v.model;
+    const loading = {};
+    let wanted = v.model;
     head.hidden = false;
-    function load(key) {                       // the extra model's meshes arrive only when someone asks for them
+    function load(key) {                       // a model's meshes arrive only when someone asks for them
       if (v.models[key]) return Promise.resolve();
-      if (!loading) {                          // one extra model on this page; a second would need a promise per key
-        loading = new Promise((resolve, reject) => {
+      if (!loading[key]) {
+        loading[key] = new Promise((resolve, reject) => {
           const s = document.createElement("script");
           s.src = dataSrc.replace(/data\.js$/, M[key].src);
           s.onload = () => (window[M[key].var] ? resolve() : reject(new Error("empty")));
-          s.onerror = () => reject(new Error("load failed"));
+          s.onerror = () => { s.remove(); reject(new Error("load failed")); };
           document.head.append(s);
         }).then(() => v.addModel(key, window[M[key].var]));
-        loading.catch(() => { loading = null; });
+        loading[key].catch(() => { delete loading[key]; });
       }
-      return loading;
+      return loading[key];
     }
     async function show(key) {
       wanted = key;
@@ -248,6 +250,9 @@
       }
       v.setModel(key);
       drawLegend();
+      const cover = M[key].cover || "skin";      // what the skin toggles hide or show through on this finger
+      document.getElementById("t-skin-name").textContent = cover[0].toUpperCase() + cover.slice(1);
+      document.getElementById("t-xray-name").textContent = cover;
       status.textContent = M[key].caption;
     }
     radios.forEach(r => r.addEventListener("change", () => { if (r.checked) show(r.value); }));

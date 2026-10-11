@@ -19,7 +19,8 @@ Strip: 6 x 41 taxels at 2.0 mm on the cradle seat. Nail: a 1.5 mm grid around th
 Outputs (out/enpire/fpc_pcb/): rows_sheet_fab.dxf, cols_sheet_fab.dxf, finger_pcb_outline.dxf,
 flex_preview_full.png, flex_preview_nail.png, flex_preview_tails.png, pcb_preview.png, pinmap.json,
 drc.json; and out/enpire/taxel_map.json. Exits 1 if the DRC or the PCB zone check finds anything.
-DXF layers: OUTLINE, CU_L1, CU_L2, VIA, COVERLAY_OPEN, VELOSTAT, STIFFENER, NOTE. Units mm.
+DXF layers: OUTLINE, CU_L1, CU_L2, VIA, COVERLAY_OPEN_L1 (electrode windows), COVERLAY_OPEN_L2 (finger windows),
+VELOSTAT, STIFFENER (on the L1 face, behind the fingers), NOTE. Units mm.
 Run (from cartridge/): python3 cad/enpire_fpc.py
 """
 import itertools
@@ -267,17 +268,38 @@ def build():
 # ----------------------------------------------------------------------------------------------
 # tails (s < 0): through the flange slot, bend, fan out to 0.3 mm fingers
 # ----------------------------------------------------------------------------------------------
+TAIL_SLACK = 0.3          # mm over the centreline length; taken up as a slight bow in front of the connector
+TAIL_INS = 2.5            # how far a tail's end goes into its connector
+
+
+def cavity_tail(kind, z0, z_fl, z_contact, y_rise, y_entry, rb, y_s=None, ins=TAIL_INS):
+    """Centreline length of a tail from the flange face (z0) to its stop in the connector, as the list of
+    its straight runs and 90 deg bends (radius rb). An "up" tail rises to the contact height and turns
+    toward its connector. A "floor" tail turns onto the cavity floor as it leaves the slot, runs to y_s,
+    S-bends up to the contact height and runs into its connector. y distances count toward the connectors,
+    in either direction."""
+    arc = np.pi / 2 * rb
+    if kind == "up":
+        segs = [z_contact - rb - z0, arc, abs(y_entry - y_rise) - rb, ins]
+    else:
+        segs = [z_fl - z0, arc, abs(y_s - y_rise) - rb, arc, z_contact - (z_fl + rb) - 2 * rb, arc,
+                abs(y_entry - y_s) - 2 * rb, ins]
+    assert min(segs) >= -1e-9, f"{kind} tail: a straight run is negative {np.round(segs, 3).tolist()}"
+    return float(sum(segs)), segs
+
+
 def tail_lengths():
     """Path length of each tail from the flange face (s = 0) to its connector stop, from the CAD."""
     cav_floor = E.Zs - E.P["PCB"]["recess"] - E.P["PCB"]["t"] - E.P["CAVITY"]["depth"]
     slot = cav_floor - E.Zf
-    bend = np.pi / 2 * (L["BEND_R"] + 0.1)
-    y_slot = E.P["Z_SLOT"] - E.P["FLEX_T"] / 2 + 2.87
+    rb = L["BEND_R"] + 0.1
+    y_front = E.P["Z_SLOT"] - E.P["FLEX_T"] + 2.87                          # the stack's front face in the slot
+    y_cols, y_rows = y_front + 0.06, y_front + E.P["FLEX_T"] - 0.06          # cols sheet in front, rows sheet behind
     z_contact = E.Zs - E.P["PCB"]["recess"] - E.P["PCB"]["t"] - 0.5
-    ins = 2.5
-    cols = slot + (z_contact - cav_floor) + bend + (L["CONN_A_Y"] - y_slot) + ins            # up, turn, into A
-    rows = slot + bend + (L["CONN_B_Y"] - 1.2 - y_slot) + 2 * bend + (z_contact - cav_floor - 0.4) + ins   # floor, under A, up into B
-    return dict(slot=round(slot, 2), cols=round(cols + 1.0, 2), rows=round(rows + 1.0, 2), slack=1.0)
+    cols, _ = cavity_tail("up", E.Zf, cav_floor, z_contact, y_cols, L["CONN_A_Y"], rb)               # up, turn, into A
+    rows, _ = cavity_tail("floor", E.Zf, cav_floor, z_contact, y_rows, L["CONN_B_Y"], rb,
+                          y_s=L["CONN_A_Y"] + L["CONN_DEPTH"] + 0.3)                                 # floor, under A, up into B
+    return dict(slot=round(slot, 2), cols=round(cols + TAIL_SLACK, 2), rows=round(rows + TAIL_SLACK, 2), slack=TAIL_SLACK)
 
 
 def tail(b, sheet):
@@ -321,6 +343,7 @@ def tail(b, sheet):
     stairs = staircase([u for _, u, _ in starts], sig_u, s_fan0, L["LANE"], s_end=s_end + L["FINGER_EDGE"])
     n_lev = max(1, len(starts) // 2 + 1)
     s_fan_end = s_fan0 - L["LANE"] * n_lev - 0.4
+    assert min(p[1][1] for p in stairs) >= s_end + L["FINGER_EDGE"] + L["FINGER_L"] + 0.2, f"{sheet} tail: fan-out runs into the fingers"
     for (net, u0, s0), uf, pts in zip(starts, sig_u, stairs):
         out.append((net, layer, path([(u0, s0)] + pts, L["TRACE_W"])))
         out.append((net, layer, rect(uf - fw / 2, uf + fw / 2, s_end + L["FINGER_EDGE"], s_end + L["FINGER_EDGE"] + L["FINGER_L"])))
@@ -442,7 +465,7 @@ def preview(b, fname, s_range=None, title=""):
     plt.tight_layout(); plt.savefig(os.path.join(OUT, fname), dpi=72 if tall else 80); plt.close()
 
 
-DXF_LAYERS = dict(OUTLINE=7, CU_L1=1, CU_L2=5, VIA=6, COVERLAY_OPEN=3, VELOSTAT=2, STIFFENER=8, NOTE=8)
+DXF_LAYERS = dict(OUTLINE=7, CU_L1=1, CU_L2=5, VIA=6, COVERLAY_OPEN_L1=3, COVERLAY_OPEN_L2=4, VELOSTAT=2, STIFFENER=8, NOTE=8)
 
 
 def add_geom(msp, geom, layer):
@@ -472,16 +495,19 @@ def write_sheet_dxf(b, sheet):
     # coverlay openings: electrode faces toward the Velostat, and the finger row
     elec = [g for net, g in cu[l1].items() if net.startswith(("SROW", "NROW", "SCOL", "NCOL"))]
     sense = rect(-40, 40, 0.0, 200)
-    add_geom(msp, unary_union(elec).intersection(sense).buffer(-0.05), "COVERLAY_OPEN")
-    add_geom(msp, t["gang"], "COVERLAY_OPEN")
+    add_geom(msp, unary_union(elec).intersection(sense).buffer(-0.05), "COVERLAY_OPEN_L1")
+    add_geom(msp, t["gang"], "COVERLAY_OPEN_L2")
     for g in velostat(b):
         add_geom(msp, g, "VELOSTAT")
     add_geom(msp, t["stiffener"], "STIFFENER")
-    note = {"rows": "ROWS SHEET (seat side), seen from the contact side. L1 = row electrodes (face the Velostat), "
-                    "L2 = leads + tail fingers. 2-layer flex, 12.5 um PI core, 1/3 oz Cu, laser microvias 0.1/0.3 filled+capped, ENIG, "
-                    "stiffener to 0.2 mm at the fingers.",
-            "cols": "COLS SHEET (object side), seen from the contact side (fab: mirror). L1 = column electrodes (face the Velostat), "
-                    "L2 = nail-column leads + tail fingers. Same stack as the rows sheet."}[sheet]
+    note = {"rows": "ROWS SHEET, the sheet against the seat. Drawn looking from the seat toward the object (x = gripper x of the right "
+                    "finger, tip up), so this is its L2 side: mirror it for fab, with L1 as the top layer. L1 = row electrodes (face the "
+                    "Velostat), L2 = leads + tail fingers. 2-layer flex, 12.5 um PI core, 1/3 oz Cu, laser microvias 0.1/0.3 filled+capped, "
+                    "ENIG. Coverlay windows: COVERLAY_OPEN_L1 over the electrodes, COVERLAY_OPEN_L2 over the fingers; stiffener to 0.2 mm "
+                    "on the L1 face, behind the fingers.",
+            "cols": "COLS SHEET, the sheet on the object side. Drawn looking from the seat toward the object (x = gripper x of the right "
+                    "finger, tip up), so this is its L1 side: fab it as drawn, with L1 as the top layer. L1 = column electrodes (face the "
+                    "Velostat), L2 = nail-column leads + tail fingers. Same stack, coverlay layers and stiffener as the rows sheet."}[sheet]
     msp.add_text(note, height=0.5, dxfattribs=dict(layer="NOTE")).set_placement((U_LO, -tail_lengths()[sheet] - 3))
     doc.saveas(os.path.join(OUT, f"{sheet}_sheet_fab.dxf"))
 
@@ -621,9 +647,12 @@ def main():
                tail_length_mm=TL, scan=dict(row_lines=[r["net"] for r in b["strip_rows"]] + [r["net"] for r in b["nail_rows"]],
                                             col_lines=[f"SCOL{j}" for j in range(len(b["strip"]["cols_u"]))] + [c["net"] for c in b["nail_cols"]]),
                pogo=[dict(pin=i + 1, signal=sname) for i, sname in enumerate(["GND", "D-", "D+", "VBUS", "GND"])],
+               connector_contacts=dict(A="contacts on the PCB side (bottom contact): the cols fingers face the board",
+                                       B="contacts on the side away from the PCB (top contact): the rows fingers face down"),
                notes=["rows tail -> connector B (far), runs along the cavity floor under connector A",
                       "cols tail -> connector A (near); both tails pass the flange slot stacked (cols sheet in front)",
-                      "fingers on L2 of each sheet: pick top- or bottom-contact 0.3 mm FPC connectors to match the bend direction"])
+                      "fingers on L2 of each sheet; the tails turn from the slot toward the back of the cavity, which leaves the rows "
+                      "fingers facing down and the cols fingers facing the board"])
     json.dump(pin, open(os.path.join(OUT, "pinmap.json"), "w"), indent=1)
     rep = dict(drc_issues=issues, drc_stats=stats, pcb_issues=fp["issues"], pcb_free_mm2=fp["free_mm2"],
                tail_room_mm=fp["tail_room_mm"], taxels=tm["counts"],

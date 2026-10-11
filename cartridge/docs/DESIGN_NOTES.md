@@ -22,6 +22,8 @@ Using one standard pad for every finger also matters for a fleet. FlexiTac repor
 
 For tasks that need ENPIRE's thin nail and its cradle, the second finger, ENPIRE-T, keeps that shape and solves each problem in place instead. The teeth move into a molded skin over a smooth, rigid seat, so nothing flexes under the sensor, and the nail gets a flush 56-taxel pad around its groove. It docks on the same socket. [ENPIRE_T.md](ENPIRE_T.md) has the design and its checks.
 
+When a task needs touch only at the nail, the cradle's compliance is worth keeping for power grasps. The third finger, ENPIRE-T Tip, senses on the nail only, with 92 taxels at 1.25 mm, and keeps ENPIRE's own TPU insert as the cradle. Its laminate wraps round the nail root and runs up the back spine behind the insert, one sheet thick, so the contact side changes only at the nail root's edge. [ENPIRE_T_TIP.md](ENPIRE_T_TIP.md) has the design and its checks.
+
 ## Sensor choice
 
 The cartridge uses FlexiTac-style piezoresistive pads: a sealed FPC / Velostat / FPC laminate under 1 mm thick. A full unit with readout costs about $30, and the authors report that pads typically last about a year, with some teams logging thousands of demonstrations without breaking one. The dense pressure map converts directly into 3D tactile points that fuse with point-map and video streams, and a lot of compatible data already exists. Deform360, for example, holds 215.7 hours captured with FlexiTac.

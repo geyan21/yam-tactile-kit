@@ -1,0 +1,229 @@
+{
+ "tip_profile": [
+  {
+   "from_tip_mm": 0.5,
+   "thickness_mm": 1.59,
+   "stock_thickness_mm": 1.59,
+   "width_mm": 10.933,
+   "stock_width_mm": 10.933
+  },
+  {
+   "from_tip_mm": 1.7,
+   "thickness_mm": 2.717,
+   "stock_thickness_mm": 2.717,
+   "width_mm": 11.89,
+   "stock_width_mm": 11.89
+  },
+  {
+   "from_tip_mm": 3.0,
+   "thickness_mm": 3.861,
+   "stock_thickness_mm": 3.861,
+   "width_mm": 12.927,
+   "stock_width_mm": 12.927
+  },
+  {
+   "from_tip_mm": 5.0,
+   "thickness_mm": 5.436,
+   "stock_thickness_mm": 5.436,
+   "width_mm": 14.522,
+   "stock_width_mm": 14.522
+  },
+  {
+   "from_tip_mm": 10.0,
+   "thickness_mm": 8.84,
+   "stock_thickness_mm": 8.84,
+   "width_mm": 18.51,
+   "stock_width_mm": 18.51
+  }
+ ],
+ "tip_below_carriage_mm": 123.38,
+ "finger_root_to_tip_mm": 112.88,
+ "laminate_length_mm": 116.621,
+ "tail_length_mm": {
+  "slot": 4.1,
+  "cols": 12.41,
+  "rows": 19.34,
+  "slack": 0.3
+ },
+ "core_volume_cm3": 26.82,
+ "core_mass_g_pa12_mjf": 27.1,
+ "tpu_insert_mass_g": 14.0,
+ "stock_enpire_mass_g_solid_estimate": 42.9,
+ "nail_pocket_depth_mm": 0.7,
+ "taxels": {
+  "nail": 92
+ },
+ "lines": {
+  "rows": 20,
+  "cols": 14
+ },
+ "pitch_mm": 1.25,
+ "sensing_area_mm2": 143.8,
+ "nail_face_area_mm2": 326.2,
+ "distal_taxel_edge_from_tip_mm": 3.97,
+ "proximal_taxel_edge_from_nail_root_mm": 1.89,
+ "sheets_part_at_s_mm": 96.8,
+ "laminate_min_bend_radius": {
+  "single_sheet": {
+   "mm": 1.83,
+   "at_s_mm": 88.44,
+   "bend": "diagonal into the slit"
+  },
+  "stacked": {
+   "mm": 1.6,
+   "at_s_mm": 97.3,
+   "bend": "round the nail root"
+  }
+ },
+ "pcb_free_mm2": 322.0,
+ "q_touch_mm": 1.443,
+ "stock_q_touch_mm": 1.443,
+ "route_gap_to_tpu_mm": {
+  "top_mm": 0.225,
+  "diagonal_mm": 0.486,
+  "slit_and_bend_mm": 1.095,
+  "min_mm": 0.225,
+  "stock_root_face_to_tpu_mm": 0.716
+ },
+ "walls": {
+  "nail_behind_pocket_min_mm": {
+   "t": 3.29,
+   "at_uv": [
+    -5.43,
+    9.05
+   ]
+  },
+  "nail_lip_pocket_to_groove_mm": 0.85,
+  "nail_lip_pocket_to_face_edge_mm": 0.85,
+  "behind_laminate_s_curve_mm": {
+   "t": 1.29,
+   "at_s_u": [
+    12.94,
+    -4.6
+   ]
+  },
+  "behind_laminate_top_mm": {
+   "t": 0.98,
+   "at_s_u": [
+    29.56,
+    3.7
+   ]
+  },
+  "behind_laminate_top_fillet_mm": {
+   "t": 1.28,
+   "at_s_u": [
+    39.77,
+    -4.6
+   ]
+  },
+  "behind_laminate_diagonal_mm": {
+   "t": 0.98,
+   "at_s_u": [
+    87.87,
+    -4.6
+   ]
+  },
+  "behind_laminate_slit_fillet_mm": {
+   "t": 0.979,
+   "at_s_u": [
+    88.84,
+    -4.6
+   ]
+  },
+  "behind_laminate_slit_mm": {
+   "t": 10.411,
+   "at_s_u": [
+    90.73,
+    3.7
+   ]
+  },
+  "behind_laminate_bend_mm": {
+   "t": 10.572,
+   "at_s_u": [
+    99.7,
+    3.7
+   ]
+  },
+  "free_side_clear_mm": {
+   "min_mm": 2.0,
+   "at_s_u": null
+  },
+  "wall_thumbscrew_L_mm": 2.1,
+  "wall_thumbscrew_R_mm": 2.1,
+  "wall_dowel_L_mm": 1.94,
+  "wall_dowel_R_mm": 1.45,
+  "cavity_floor_min_mm": 4.09,
+  "tail_slot_walls_mm": {
+   "back": 7.123,
+   "front": 3.104,
+   "sides": 8.469
+  }
+ },
+ "tail_room_mm": {
+  "cols_before_A": 1.1,
+  "rows_before_B": 0.3,
+  "rows_under_A": 1.42
+ },
+ "shape": {
+  "depth_map_cradle_mm": {
+   "n": 4340,
+   "p50": 0.0,
+   "p95": 0.0,
+   "max": 0.0
+  },
+  "depth_map_transition_mm": {
+   "n": 278,
+   "p50": 0.0,
+   "p95": 8.347,
+   "max": 8.347
+  },
+  "depth_map_nail_mm": {
+   "n": 1466,
+   "p50": 0.0,
+   "p95": 0.0226,
+   "max": 0.7009
+  },
+  "depth_map_sides_mm": {
+   "n": 2604,
+   "p50": 0.0,
+   "p95": 0.0001,
+   "max": 0.0036
+  },
+  "depth_map_coverage_change": 0,
+  "laminate_exposed_rays_outside_root": 0,
+  "nail_root": {
+   "rays": 6816,
+   "edge_rays": 1995,
+   "mouth_rays": 665,
+   "edge_max_deeper_mm": 0.392,
+   "edge_max_nearer_mm": 0.0,
+   "mouth_max_deeper_mm": 8.541,
+   "mouth_max_nearer_mm": 0.0,
+   "bare_laminate_min_depth_mm": 10.04,
+   "film_end_depth_mm": 2.18,
+   "laminate_outside_stock_frame_mm": {
+    "max": 0.0,
+    "n": 44433,
+    "at_native_yz": [
+     -98.44,
+     -3.36
+    ]
+   }
+  },
+  "core_vs_hard_frame_mm": {
+   "n": 8249,
+   "p50": 0.0,
+   "p99": 0.0001,
+   "max": 0.0022
+  },
+  "hard_frame_vs_core_mm": {
+   "n": 7363,
+   "p50": 0.0,
+   "p99": 0.0001,
+   "max": 0.0019
+  },
+  "film_vs_nail_plane_mm": {
+   "max_abs": 0.0
+  }
+ }
+}

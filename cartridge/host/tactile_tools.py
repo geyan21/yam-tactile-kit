@@ -15,10 +15,11 @@ Cartridge stream protocol v1 (little endian, one frame per scan, 200 Hz default)
   -> 268 bytes / frame. USB iSerial = MCU 96-bit UID (hex), so a udev rule can name the port and the
   host can log which physical cartridge produced each episode.
 
-Stream protocol v2 (any layout; the ENPIRE-T cartridge uses it):
+Stream protocol v2 (any layout; the ENPIRE-T cartridges use it):
   0xAA 0x55 | ver u8 = 2 | flags u8 | seq u16 | t_us u32 | layout u8 | reserved u8 | n u16 |
   n x u16 (12-bit ADC, taxel order of that layout's taxel_map.json) | crc u16 (same CRC, same span)
-  layout 1 = v0.2 flat cartridge (n = 128), layout 2 = ENPIRE-T (n = 302) -> 620 bytes / frame.
+  layout 1 = v0.2 flat cartridge (n = 128), layout 2 = ENPIRE-T (n = 302) -> 620 bytes / frame,
+  layout 3 = ENPIRE-T Tip (n = 92) -> 200 bytes / frame.
   The parser below accepts v1 and v2 frames on the same port.
 """
 import json
@@ -34,6 +35,8 @@ LAYOUTS = {
     1: dict(name="v0.2 flat cartridge", n=128, taxel_map=TAXEL_MAP, pinmap=PINMAP),
     2: dict(name="ENPIRE-T", n=302, taxel_map=os.path.join(ROOT, "out", "enpire", "taxel_map.json"),
             pinmap=os.path.join(ROOT, "out", "enpire", "fpc_pcb", "pinmap.json")),
+    3: dict(name="ENPIRE-T Tip", n=92, taxel_map=os.path.join(ROOT, "out", "enpire_tip", "taxel_map.json"),
+            pinmap=os.path.join(ROOT, "out", "enpire_tip", "fpc_pcb", "pinmap.json")),
 }
 NR, NC = 16, 8
 FRAME_LEN = 2 + 1 + 1 + 2 + 4 + 2 * NR * NC + 2
@@ -218,16 +221,19 @@ if __name__ == "__main__":
     print("parser ok; frame bytes", FRAME_LEN, "| right r0c0", np.round(pts[1][0] * 1000, 2),
           "mm | left r0c0", np.round(pts[0][0] * 1000, 2), "mm")
     print("lifted points:", lift({"left": np.ones((16, 8)), "right": np.zeros((16, 8))}, 0.01, 0.01, 0.5).shape)
-    if os.path.isfile(LAYOUTS[2]["taxel_map"]):
-        n = LAYOUTS[2]["n"]
+    for lay in (2, 3):
+        if not os.path.isfile(LAYOUTS[lay]["taxel_map"]):
+            continue
+        n = LAYOUTS[lay]["n"]
         v = np.arange(n) % 4096
-        f2 = encode_frame_v2(9, 1000, v)
+        f2 = encode_frame_v2(9, 1000, v, layout=lay)
         mixed = encode_frame(10, 2000, fr)[:5] + f2 + encode_frame(11, 3000, fr) + f2[:40]      # junk, v2, v1, partial v2
         got = list(FrameParser().feed(mixed))
-        assert [g["ver"] for g in got] == [2, 1] and np.array_equal(got[0]["values"], v) and len(f2) == 16 + 2 * n
-        tab = scan_table(2)
+        assert [g["ver"] for g in got] == [2, 1] and got[0]["layout"] == lay and np.array_equal(got[0]["values"], v)
+        assert len(f2) == 16 + 2 * n
+        tab = scan_table(lay)
         assert len(tab) == n and len(set(tab)) == n, "two taxels share a row/column crossing"
-        P = layout_points(2, 0.0, 0.0)
+        P = layout_points(lay, 0.0, 0.0)
         assert P.shape == (2, n, 3) and np.allclose(P[0] * [-1, -1, 1], P[1])
-        print(f"v2 ok: ENPIRE-T {n} taxels, {len(f2)} bytes/frame, {max(r for r, _ in tab) + 1} row x "
-              f"{max(c for _, c in tab) + 1} column lines; nail tip taxel at", np.round(P[1][-1] * 1000, 2), "mm")
+        print(f"v2 ok: {LAYOUTS[lay]['name']} {n} taxels, {len(f2)} bytes/frame, {max(r for r, _ in tab) + 1} row x "
+              f"{max(c for _, c in tab) + 1} column lines; last taxel at", np.round(P[1][-1] * 1000, 2), "mm")

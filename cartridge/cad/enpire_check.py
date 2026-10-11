@@ -70,12 +70,12 @@ def placed(parts, q, side):
 
 
 # ----------------------------------------------------------------------------------------------
-def fit(parts, qs=np.linspace(0.0, 0.0475, 9)):
+def fit(parts, qs=np.linspace(0.0, 0.0475, 9), names=("socket", "core", "skin", "ph_thumbscrews")):
     rows = []
     for q in qs:
         G, CL, CR, _, _ = cf.yam_meshes(q)
         Rf = placed(parts, q, +1)
-        for nm in ("socket", "core", "skin", "ph_thumbscrews"):
+        for nm in names:
             m = Rf[nm]
             rows.append(dict(q_mm=round(q * 1000, 2), part=nm, vs_housing=clearance(m, G),
                              vs_opposite_carriage=clearance(m, CL), vs_own_carriage_overlap=round(cf.ivol(m, CR), 3),

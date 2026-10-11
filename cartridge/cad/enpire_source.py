@@ -2,9 +2,11 @@
 ENPIRE finger source geometry: fetch, verify and place it on the YAM.
 
 The original finger is Wenli Xiao's ENPIRE gripper finger (MakerWorld model 2984746, CC BY 4.0).
-Its STLs are not redistributed here; this module downloads the copies from the community
+The original STLs are not committed here; this module downloads the copies from the community
 Open-ENPIRE-Gripper repository at a pinned commit and checks their SHA-256 (the same files and
 hashes as the engineering study on main). Files land in cartridge/third_party/enpire/ (ignored by git).
+(ENPIRE-T Tip's sim model and the web viewer carry a placed copy of the unchanged TPU insert, under its
+CC BY 4.0 licence, with attribution in out/enpire_tip/.)
 
 Native ENPIRE axes: X across the insert width, -Y toward the tip, -Z out of the contact face.
 Gripper frame (i2rt linear_4310 'gripper' body, right finger at q = 0, mm): x lateral, y closing

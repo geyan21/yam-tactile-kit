@@ -5,10 +5,11 @@ Build the cartridge webpage data from the pipeline outputs.
                       layout, pin maps, measurements and the file list
   web/data_enpire.js  the ENPIRE-T model for the same viewer (loaded only when someone picks it): its own
                       parts, decimated where that changes nothing visible, plus the socket parts it shares
+  web/data_enpire_tip.js  the same for ENPIRE-T Tip (its core, laminate and film, and the stock TPU insert)
   web/index.html      web/index.template.html with every {{placeholder}} filled from the same numbers,
                       so the page reads correctly even without JavaScript
 
-Usage (from cartridge/): python3 cad/export_web.py      (run after the other pipeline steps, `make enpire` included)
+Usage (from cartridge/): python3 cad/export_web.py      (run after the other pipeline steps, `make enpire enpire-tip` included)
 """
 import json
 import os
@@ -55,7 +56,19 @@ ENPIRE_PARTS = {
     "film": ("film", "Nail film", "#2aa198", (0, -24, 0), "skin", 1.0),
     "skin": ("skin", "Silicone skin", "#e8873a", (0, -30, 0), "skin", 0.5),
 }
-GLASS = ("skin", "film")          # drawn see-through when "See through the skin" is on
+ENPIRE_TIP = os.path.join(OUT, "enpire_tip")
+ENPIRE_TIP_PARTS = {   # as ENPIRE_PARTS; stl None = the stock TPU insert, loaded from the ENPIRE source files
+    "socket": (0, 0, 40), "dowels": (0, 0, 40), "socket_pcb": (0, 0, 28), "pogo_pins": (0, 0, 28),
+    "finger_pcb": ("ph_finger_pcb", "Finger PCB", "#1f6b3f", (0, 0, 16), "electronics", 1.0),
+    "finger_pcb_parts": ("ph_finger_pcb_parts", "Finger PCB components", "#2b3238", (0, 0, 16), "electronics", 1.0),
+    "core": ("core", "Rigid core (ENPIRE frame)", "#2f6fb3", (0, 0, 0), "cartridge", 0.6),
+    "thumbscrews": (0, 0, -14),
+    "flex": ("flex", "Sensing laminate", "#d9961e", (0, -8, 0), "pad", 1.0),
+    "film": ("film", "Nail film", "#2aa198", (0, -18, 0), "skin", 1.0),
+    "tpu": (None, "TPU insert (stock ENPIRE)", "#e8873a", (0, -28, 0), "skin", 1.0),
+}
+GLASS = ("skin", "film", "tpu")   # drawn see-through when "See through the skin" is on (ENPIRE-T Tip: "the insert and film")
+TILE = dict(strip=1.4, nail=1.0)  # taxel square size in the viewer (electrode width), per region
 
 
 def mesh_of(shape, tmp, name):
@@ -89,14 +102,14 @@ def decimate(m, keep):
     return trimesh.Trimesh(v.astype(float), f, process=True)
 
 
-def enpire_taxels():
-    """One square per ENPIRE-T taxel (electrode width) on the laminate's outer face, right finger, q = 0."""
-    tm = json.load(open(os.path.join(ENPIRE, "taxel_map.json")))
-    lift = json.load(open(os.path.join(ENPIRE, "params.json")))["params"]["FLEX_T"] / 2 + 0.03
+def enpire_taxels(base=ENPIRE, tile=TILE):
+    """One square per taxel (electrode width) on the laminate's outer face, right finger, q = 0."""
+    tm = json.load(open(os.path.join(base, "taxel_map.json")))
+    lift = json.load(open(os.path.join(base, "params.json")))["params"]["FLEX_T"] / 2 + 0.03
     R = tm["fingers"]["right"]
     v, f = [], []
     for t, p, n in zip(tm["taxels"], R["sensor_q0"], R["normal_toward_object"]):
-        a = (1.4 if t["region"] == "strip" else 1.0) / 2
+        a = tile[t["region"]] / 2
         n = np.asarray(n, float) / np.linalg.norm(n)
         e1 = np.array([1.0, 0, 0]) - n * n[0]
         e1 /= np.linalg.norm(e1)
@@ -108,24 +121,28 @@ def enpire_taxels():
     return np.array(v), np.array(f), len(tm["taxels"])
 
 
-def enpire_model():
-    """The ENPIRE-T viewer model (web/data_enpire.js)."""
+def enpire_model(base=ENPIRE, spec_all=ENPIRE_PARTS, tile=TILE, name_="ENPIRE-T"):
+    """An ENPIRE viewer model (web/data_enpire.js, web/data_enpire_tip.js)."""
     parts = []
-    for name, spec in ENPIRE_PARTS.items():
-        if not isinstance(spec[0], str):                   # a v0.2 socket-side part, shared
+    for name, spec in spec_all.items():
+        if not isinstance(spec[0], (str, type(None))):     # a v0.2 socket-side part, shared
             parts.append(dict(name=name, shared=True, explode=list(spec)))
             continue
         stl, label, colour, explode, group, keep = spec
-        m = trimesh.load(os.path.join(ENPIRE, stl + ".stl"))
+        if stl is None:
+            import enpire_tip as T                          # the stock TPU insert, as the tip finger uses it
+            m = T.tpu_stock()
+        else:
+            m = trimesh.load(os.path.join(base, stl + ".stl"))
         m.merge_vertices()
         m = decimate(m, keep)
         parts.append(dict(name=name, label=label, color=colour, explode=list(explode), group=group, glass=name in GLASS, **pack(m)))
         if name == "flex":
-            v, f, n = enpire_taxels()
+            v, f, n = enpire_taxels(base, tile)
             parts.append(dict(name="taxels", label="Taxels", color="#b0631f", explode=list(explode), group="pad", glass=False,
                               v=np.round(v * 100).astype(int).ravel().tolist(), f=f.ravel().tolist(), e=[]))
-    meas = json.load(open(os.path.join(ENPIRE, "check", "measurements.json")))
-    return dict(frame="as data.js; ENPIRE-T right finger at q = 0", parts=parts, measurements=meas)
+    meas = json.load(open(os.path.join(base, "check", "measurements.json")))
+    return dict(frame=f"as data.js; {name_} right finger at q = 0", parts=parts, measurements=meas)
 
 
 def file_list():
@@ -143,6 +160,28 @@ def fmt(x, nd=2):
         return str(x)
     s = f"{x:.{nd}f}"
     return s.rstrip("0").rstrip(".") if "." in s else s       # 10.0 at nd=0 stays "10"
+
+
+def fmt_min(x, nd=2):
+    """A lower bound ("at least ..."): rounded down, so the page never claims more than was measured."""
+    return fmt(float(np.floor(float(x) * 10 ** nd + 1e-9) / 10 ** nd), nd)
+
+
+def fmt_max(x, nd=2):
+    """An upper bound ("within ...", "up to ..."): rounded up, so the page never claims less than was measured."""
+    return fmt(float(np.ceil(float(x) * 10 ** nd - 1e-9) / 10 ** nd), nd)
+
+
+PAGE_INPUTS = "page_inputs.json"     # web/: hashes of the JSON files the page's numbers come from (check_outputs.py)
+
+
+def page_inputs():
+    """SHA-256 of every output JSON the template values are read from."""
+    import hashlib
+    rels = (["check/measurements.json", "check/interference.json", "fpc_pcb/pinmap.json", "sim/selftest.json"] +
+            [f"{v}/{f}" for v in ("enpire", "enpire_tip") for f in ("check/checks.json", "check/measurements.json", "sim/selftest.json",
+                                                                     "fpc_pcb/drc.json", "fpc_pcb/pinmap.json", "params.json", "taxel_map.json")])
+    return {f"out/{r}": hashlib.sha256(open(os.path.join(OUT, r), "rb").read()).hexdigest() for r in rels}
 
 
 def gap_band(tm):
@@ -180,7 +219,7 @@ def enpire_values(em, n_e):
         "e_cradle_p95": fmt(em["shape"]["depth_map_cradle_mm"]["p95"], 3),
         "e_notch_depth": fmt(em["shape"]["transition_notch_filled"]["max_depth_mm"], 0),
         "e_clear_socket": fmt(min(r["vs_opposite_carriage"] for r in sw if r["part"] == "socket"), 1),
-        "e_clear_finger": fmt(min(min(r["vs_opposite_carriage"], r["vs_housing"]) for r in sw
+        "e_clear_finger": fmt_min(min(min(r["vs_opposite_carriage"], r["vs_housing"]) for r in sw
                                   if r["part"] in ("core", "skin", "ph_thumbscrews")), 1),
         "e_wall_nail": fmt(walls["nail_behind_pocket_min_mm"]["t"], 1),
         "e_wall_dowel": fmt(min(walls["wall_dowel_L_mm"], walls["wall_dowel_R_mm"]), 2),
@@ -202,6 +241,50 @@ def enpire_values(em, n_e):
         "e_pcb_h": fmt(max(r[3] for r in rects) - min(r[2] for r in rects) - 0.2, 1),
         "e_rows_pins": str(epm["rows_tail_pins"]), "e_cols_pins": str(epm["cols_tail_pins"]),
         "e_doc_url": f"https://github.com/{REPO}/blob/{BRANCH}/cartridge/docs/ENPIRE_T.md",
+    }
+
+
+def tip_values():
+    """Template values for the ENPIRE-T Tip section, from out/enpire_tip/."""
+    def J(rel):
+        return json.load(open(os.path.join(ENPIRE_TIP, rel)))
+    tc, ts, td, tpm, tm = (J("check/checks.json"), J("sim/selftest.json"), J("fpc_pcb/drc.json"), J("fpc_pcb/pinmap.json"),
+                           J("check/measurements.json"))
+    tp = J("params.json")["params"]
+    sw, w = tc["clearance_sweep"], tm["walls"]
+    pin, rod, flat = ts["nail_pinch"], ts["cradle_grasp"], ts["flat_tip_pinch"]
+    bend = td["laminate_min_bend_radius"]
+    behind = min(v["t"] for k, v in w.items() if k.startswith("behind_laminate_"))
+    root = tc["shape"]["nail_root"]
+    room = td["tail_room_mm"]
+    return {
+        "t_taxels": str(tm["taxels"]["nail"]), "t_pitch": fmt(float(tp["NAIL_PITCH"]), 2),
+        "t_rows_lines": str(tm["lines"]["rows"]), "t_cols_lines": str(tm["lines"]["cols"]),
+        "t_frame_bytes": str(16 + 2 * tm["taxels"]["nail"]),
+        "t_q_touch": fmt(tc["contact"]["q_touch_mm"], 3), "t_q_stock": fmt(tc["contact"]["stock_q_touch_mm"], 3),
+        "t_gap_tpu": fmt_min(tm["route_gap_to_tpu_mm"]["min_mm"], 2), "t_recess": fmt(float(tp["RECESS"]), 1),
+        "t_slit": fmt_min(tm["route_gap_to_tpu_mm"]["slit_and_bend_mm"], 2),
+        "t_slit_stock": fmt(tc["route_gap_to_tpu_mm"]["stock_root_face_to_tpu_mm"], 2),
+        "t_film_end": fmt_min(root["film_end_depth_mm"], 1),
+        "t_tip_edge": fmt(tm["distal_taxel_edge_from_tip_mm"], 0), "t_tip_bare": fmt(float(tp["TIP_BARE"]), 1),
+        "t_film_t": fmt(float(tp["FILM_T"]), 2),
+        "t_edge_deep": fmt_max(max(root["edge_max_deeper_mm"], 0.01), 1),
+        "t_grip": fmt(pin["grip_N"], 0), "t_pin_d": fmt(float(pin["object_d_mm"]), 0),
+        "t_pin_share": fmt_min(100 * pin["min_sensed_share"], 0),
+        "t_pin_err": fmt_max(100 * pin["max_touch_error"], 1),
+        "t_rod_d": fmt(float(rod["rod_d_mm"]), 0),
+        "t_flat_n": fmt(max(flat["left_nail_N"], flat["right_nail_N"]), 1),
+        "t_wall_nail": fmt_min(w["nail_behind_pocket_min_mm"]["t"], 1),
+        "t_wall_spine": fmt_min(behind, 2),
+        "t_clear_socket": fmt_min(min(r["vs_opposite_carriage"] for r in sw if r["part"] == "socket"), 1),
+        "t_clear_finger": fmt_min(min(min(r["vs_opposite_carriage"], r["vs_housing"]) for r in sw
+                                      if r["part"] in ("core", "tpu", "ph_thumbscrews")), 1),
+        "t_drc_gap": fmt(min(v for v in td["drc_stats"].values() if isinstance(v, (int, float))), 2),
+        "t_free_mm2": fmt(td["pcb_free_mm2"], 0),
+        "t_rows_pins": str(tpm["rows_tail_pins"]), "t_cols_pins": str(tpm["cols_tail_pins"]),
+        "t_bend_single": fmt_min(bend["single_sheet"]["mm"], 1), "t_bend_stack": fmt_min(bend["stacked"]["mm"], 1),
+        "t_tail_room": fmt_min(min(room.values()), 1),
+        "t_doc_url": f"https://github.com/{REPO}/blob/{BRANCH}/cartridge/docs/ENPIRE_T_TIP.md",
     }
 
 
@@ -240,11 +323,18 @@ def main():
         flat=dict(label="Flat cartridge", caption=f"Flat cartridge v{VERSION}: {P['N_ROWS'] * P['N_COLS']} taxels on one flat pad."),
         enpire=dict(label="ENPIRE-T", src="data_enpire.js", var="CARTRIDGE_ENPIRE",
                     caption=f"ENPIRE-T: {n_e} taxels, {em['taxels']['strip']} on the cradle and {em['taxels']['nail']} on the nail."))
+    tmz = json.load(open(os.path.join(ENPIRE_TIP, "check", "measurements.json")))
+    data["models"]["enpire_tip"] = dict(label="ENPIRE-T Tip", src="data_enpire_tip.js", var="CARTRIDGE_ENPIRE_TIP", cover="insert and film",
+                                        caption=f"ENPIRE-T Tip: {tmz['taxels']['nail']} taxels on the nail; the cradle is ENPIRE's own TPU insert.")
     os.makedirs(WEB, exist_ok=True)
     js = "window.CARTRIDGE = " + json.dumps(data, separators=(",", ":")) + ";\n"
     open(os.path.join(WEB, "data.js"), "w").write(js)
     ejs = "window.CARTRIDGE_ENPIRE = " + json.dumps(enpire_model(), separators=(",", ":")) + ";\n"
     open(os.path.join(WEB, "data_enpire.js"), "w").write(ejs)
+    tew = json.load(open(os.path.join(ENPIRE_TIP, "params.json")))["params"]["NAIL_EW"]
+    tjs = "window.CARTRIDGE_ENPIRE_TIP = " + json.dumps(enpire_model(ENPIRE_TIP, ENPIRE_TIP_PARTS, dict(nail=tew), "ENPIRE-T Tip"),
+                                                        separators=(",", ":")) + ";\n"
+    open(os.path.join(WEB, "data_enpire_tip.js"), "w").write(tjs)
 
     sweep = inter["clearance_sweep"]
     values = {
@@ -278,6 +368,7 @@ def main():
         "tcp_z": fmt(P["TCP_Z"], 2),
     }
     values.update(enpire_values(em, n_e))
+    values.update(tip_values())
     files_html = []
     groups = [("Printable parts", ("out/socket.", "out/cartridge.", "out/skin.")),
               ("Assembly", ("out/finger_assembly",)),
@@ -290,7 +381,13 @@ def main():
               ("ENPIRE-T sim, data and checks", ("out/enpire/sim/linear_4310_enpire_t.xml", "out/enpire/sim/selftest.json",
                                                  "out/enpire/taxel_map.json", "out/enpire/params.json",
                                                  "out/enpire/check/checks.json", "out/enpire/check/measurements.json",
-                                                 "out/enpire/NOTICE.txt"))]
+                                                 "out/enpire/NOTICE.txt")),
+              ("ENPIRE-T Tip parts", ("out/enpire_tip/core.stl", "out/enpire_tip/film.stl")),
+              ("ENPIRE-T Tip laminate, film outline and PCB", ("out/enpire_tip/fpc_pcb/",)),
+              ("ENPIRE-T Tip sim, data and checks", ("out/enpire_tip/sim/linear_4310_enpire_t_tip.xml", "out/enpire_tip/sim/selftest.json",
+                                                     "out/enpire_tip/taxel_map.json", "out/enpire_tip/params.json",
+                                                     "out/enpire_tip/check/checks.json", "out/enpire_tip/check/measurements.json",
+                                                     "out/enpire_tip/NOTICE.txt"))]
     listed = set()
     for title, prefixes in groups:
         rows = [f for f in data["files"] if f["path"].startswith(prefixes) and not f["path"].endswith(".png")]
@@ -313,6 +410,7 @@ def main():
         return values[key]
     html = re.sub(r"\{\{([a-z0-9_]+)\}\}", sub, tpl)
     assert "{{" not in html, "unfilled placeholder"
+    json.dump(page_inputs(), open(os.path.join(WEB, PAGE_INPUTS), "w"), indent=1)
 
     def size(mt):   # width/height attributes always match the image on disk (no layout shift)
         from PIL import Image

@@ -4,9 +4,10 @@ I2RT_ROOT ?= $(CURDIR)/third_party/i2rt
 I2RT_COMMIT := 120c3c81400171174604e503943f8d1ebc891058
 export I2RT_ROOT
 
-.PHONY: all cad fpc checks sim renders web verify standalone i2rt enpire enpire-src enpire-cad enpire-fpc enpire-checks enpire-sim enpire-renders
+.PHONY: all cad fpc checks sim renders web verify standalone i2rt enpire enpire-src enpire-cad enpire-fpc enpire-checks enpire-sim enpire-renders \
+        enpire-tip enpire-tip-cad enpire-tip-fpc enpire-tip-checks enpire-tip-sim enpire-tip-renders
 
-all: cad fpc checks sim renders enpire web
+all: cad fpc checks sim renders enpire enpire-tip web
 
 i2rt: $(I2RT_ROOT)/.git
 $(I2RT_ROOT)/.git:
@@ -26,7 +27,7 @@ renders: checks # section views and shaded renders
 	$(PY) cad/render_views.py
 	$(PY) cad/render_vtk.py
 # --- ENPIRE-T: the ENPIRE finger as a tactile cartridge on the same socket (outputs in out/enpire/) ---
-enpire-src:     # ENPIRE STLs from Open-ENPIRE-Gripper at a pinned commit, SHA-256 checked (not redistributed)
+enpire-src:     # ENPIRE STLs from Open-ENPIRE-Gripper at a pinned commit, SHA-256 checked (the originals are not committed)
 	$(PY) cad/enpire_source.py
 enpire-cad: enpire-src
 	$(PY) cad/enpire_finger.py --build
@@ -40,8 +41,20 @@ enpire-sim: enpire-fpc  # MuJoCo model with 2 x 302 touch sensors + nail-pinch a
 enpire-renders: enpire-checks
 	$(PY) cad/enpire_render.py
 enpire: enpire-cad enpire-fpc enpire-checks enpire-sim enpire-renders
+# --- ENPIRE-T Tip: ENPIRE with the stock TPU cradle, sensing on the nail only (outputs in out/enpire_tip/) ---
+enpire-tip-cad: enpire-src
+	$(PY) cad/enpire_tip.py --build
+enpire-tip-fpc: enpire-tip-cad   # nail pad + side-by-side tails: flat pattern, DRC, pinmap, taxel_map, finger PCB
+	$(PY) cad/enpire_tip_fpc.py
+enpire-tip-checks: enpire-tip-fpc   # fit/shape/wall checks vs the YAM and the original ENPIRE, measurements
+	$(PY) cad/enpire_tip_check.py
+enpire-tip-sim: enpire-tip-fpc  # MuJoCo model with 2 x 92 touch sensors + pin, rod and flat-plate self-tests
+	$(PY) cad/enpire_tip_sim.py
+enpire-tip-renders: enpire-tip-checks
+	$(PY) cad/enpire_tip_render.py
+enpire-tip: enpire-tip-cad enpire-tip-fpc enpire-tip-checks enpire-tip-sim enpire-tip-renders
 
-web: checks sim enpire   # web/data.js, web/data_enpire.js + web/index.html from the outputs above
+web: checks sim enpire enpire-tip   # web/data.js, data_enpire.js, data_enpire_tip.js + web/index.html from the outputs above
 	$(PY) cad/export_web.py
 
 standalone:     # self-contained copy of the current page for any static host -> build/standalone/

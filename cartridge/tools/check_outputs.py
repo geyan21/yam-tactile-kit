@@ -6,6 +6,7 @@ measurement files, the taxel and pin maps are self-consistent, and the key margi
 Usage (from cartridge/): python3 tools/check_outputs.py      exit code 1 on any failure
 """
 import json
+import math
 import os
 import re
 import sys
@@ -109,11 +110,12 @@ def main():
           "sim self-test: touch sensors do not read the grip force")
 
     check_enpire()
+    check_enpire_tip()
     if problems:
         print("\n".join(problems))
         sys.exit(1)
-    print(f"outputs OK: {len(REQUIRED)} + {len(ENPIRE_REQUIRED)} files, page links, data.js, taxel/pin maps, margins, "
-          f"sim self-tests (v0.2 and ENPIRE-T)")
+    print(f"outputs OK: {len(REQUIRED)} + {len(ENPIRE_REQUIRED)} + {len(TIP_REQUIRED)} files, page links, data.js, taxel/pin maps, "
+          f"margins, sim self-tests (v0.2, ENPIRE-T and ENPIRE-T Tip)")
 
 
 ENPIRE_REQUIRED = [
@@ -195,6 +197,126 @@ def check_enpire():
         check(max(p["f"] + p["e"], default=0) < nv, f"ENPIRE-T mesh {p['name']}: index out of range")
     tx = [p for p in edata.get("parts", []) if p["name"] == "taxels"]
     check(len(tx) == 1 and len(tx[0]["f"]) == 6 * n, "web/data_enpire.js: not one square per ENPIRE-T taxel")
+
+
+TIP_REQUIRED = [
+    "core.stl", "flex.stl", "film.stl", "params.json", "profile.json", "taxel_map.json", "NOTICE.txt",
+    "fpc_pcb/rows_sheet_fab.dxf", "fpc_pcb/cols_sheet_fab.dxf", "fpc_pcb/film_cut.dxf", "fpc_pcb/finger_pcb_outline.dxf",
+    "fpc_pcb/pinmap.json", "fpc_pcb/drc.json", "check/checks.json", "check/measurements.json",
+    "sim/linear_4310_enpire_t_tip.xml", "sim/selftest.json", "sim/NOTICE.txt", "sim/I2RT_LICENSE",
+    "renders/overview_sheet.png", "renders/section.png", "renders/route_view.png", "renders/hero.png", "renders/nail_closeup.png",
+]
+
+
+def check_enpire_tip():
+    """ENPIRE-T Tip outputs: present, mutually consistent, and every check still passing."""
+    base = os.path.join(OUT, "enpire_tip")
+    for rel in TIP_REQUIRED:
+        check(os.path.isfile(os.path.join(base, rel)), f"missing out/enpire_tip/{rel}")
+    if problems:
+        return
+    def J(rel):
+        with open(os.path.join(base, rel)) as f:
+            return json.load(f)
+    tm, pin, drc, meas = J("taxel_map.json"), J("fpc_pcb/pinmap.json"), J("fpc_pcb/drc.json"), J("check/measurements.json")
+    n = len(tm["taxels"])
+    check(tm["counts"]["nail"] == n == meas["taxels"]["nail"], "tip taxel_map: counts do not add up")
+    R, L = tm["fingers"]["right"], tm["fingers"]["left"]
+    for key in ("sensor_q0", "surface_q0"):
+        check(len(R[key]) == n and all(abs(r[0] + l[0]) < 1e-9 and abs(r[1] + l[1]) < 1e-9 and abs(r[2] - l[2]) < 1e-9
+                                         for r, l in zip(R[key], L[key])), f"tip taxel_map {key}: left is not the right rotated 180 deg")
+    rows, cols = set(pin["scan"]["row_lines"]), set(pin["scan"]["col_lines"])
+    cross = [(t["row_net"], t["col_net"]) for t in tm["taxels"]]
+    check(all(r in rows and c in cols for r, c in cross), "tip: a taxel uses a line missing from the pin map")
+    check(len(set(cross)) == n, "tip: two taxels share a row/column crossing")
+    for tail, key in (("rows_tail", "row_lines"), ("cols_tail", "col_lines")):
+        sig = [p["signal"] for p in pin[tail] if p["signal"] != "GND"]
+        check(sorted(sig) == sorted(pin["scan"][key]), f"tip pinmap: {tail} does not carry exactly the {key}")
+    check(not drc["drc_issues"] and not drc["pcb_issues"], "tip: flex DRC or PCB placement issues")
+    check(min(drc["tail_room_mm"].values()) >= 0.2, "tip: a tail has no room for its bends and stiffener in the cavity")
+    bend = drc["laminate_min_bend_radius"]
+    check(bend["single_sheet"]["mm"] >= 1.8 and bend["stacked"]["mm"] >= 1.5, f"tip: laminate bends too tight {bend}")
+    der = J("params.json")["derived"]
+    sheet_t = J("params.json")["params"]["SHEET_T"]
+    check(abs(drc["cols_neck_extra_mm"] - sheet_t * math.radians(der["stack_bend_turn_deg"])) < 0.002,
+          "tip: the cols sheet's neck does not carry its extra length round the nail root")
+    cx = J("params.json")["params"]["CHANNEL_X"]
+    check(drc["film_cut"]["wrap_strip_mm"] > (der["s_nail0"] - der["s_bend0"]) and drc["film_cut"]["width_mm"] > 8.0
+          and abs(drc["film_cut"]["wrap_strip_width_mm"] - (cx[1] - cx[0] - 0.2)) < 0.02,
+          "tip: the film's cut outline does not reach round the nail root as film.stl does")
+    check(der["s_slit_top"] < drc["sheets_part_at_s_mm"] < der["s_bend0"] and der["s_stack"] <= drc["sheets_part_at_s_mm"] - 0.3,
+          "tip: the sheets no longer part in the slit, inside the stacked channel")
+    for rel, words in (("NOTICE.txt", ("Wenli Xiao", "CC BY 4.0", "ENPIRE-T Tip")), ("sim/NOTICE.txt", ("Wenli Xiao", "ENPIRE-T Tip", "unchanged"))):
+        with open(os.path.join(base, rel)) as f:
+            txt = f.read()
+        check(all(w in txt for w in words), f"out/enpire_tip/{rel} lacks the attribution")
+    chk = J("check/checks.json")
+    internal = {k: v for k, v in chk["internal"].items() if k != "ph_finger_pcb x ph_pogo_pins"}   # pogo stroke by design
+    check(all(v < 1e-3 for v in internal.values()), f"tip: parts overlap inside one finger {[k for k, v in internal.items() if v >= 1e-3]}")
+    check(chk["route_gap_to_tpu_mm"]["min_mm"] >= 0.2, "tip: the laminate comes within 0.2 mm of the TPU insert")
+    sw = chk["clearance_sweep"]
+    check(min(r["vs_housing"] for r in sw) >= 1.0 and min(r["vs_opposite_carriage"] for r in sw) >= 1.0,
+          "tip: clearance to the YAM < 1 mm over the stroke")
+    check(max(r["vol_x_housing"] + r["vol_x_opposite"] for r in sw) == 0, "tip: parts intersect the YAM over the stroke")
+    ct = chk["contact"]
+    check(abs(ct["q_touch_mm"] - ct["stock_q_touch_mm"]) < 0.02, "tip: the fingers no longer meet at the stock ENPIRE opening")
+    sh = chk["shape"]
+    check(sh["depth_map_cradle_mm"]["max"] < 0.01 and sh["depth_map_sides_mm"]["max"] < 0.01 and sh["depth_map_nail_mm"]["p95"] < 0.05
+          and sh["film_vs_nail_plane_mm"]["max_abs"] < 0.01, "tip: the contact side moved away from the original ENPIRE shape")
+    check(sh["core_vs_hard_frame_mm"]["max"] < 0.05 and sh["hard_frame_vs_core_mm"]["max"] < 0.05,
+          "tip: the core differs from the stock frame outside the zones changed on purpose")
+    root = sh["nail_root"]
+    # the docs say: the film-covered bend lies within the stock corner (flush at most), the slit's mouth is no
+    # narrower than stock, and bare laminate shows only deep in the slit
+    check(root["laminate_outside_stock_frame_mm"]["max"] <= 0.02 and root["edge_max_nearer_mm"] <= 0.02 and root["mouth_max_nearer_mm"] <= 0.02,
+          f"tip: the laminate or film stands proud of the stock nail root {root}")
+    check(sh["laminate_exposed_rays_outside_root"] == 0 and (root["bare_laminate_min_depth_mm"] is None or root["bare_laminate_min_depth_mm"] >= 5.0)
+          and root["film_end_depth_mm"] >= 2.0,
+          "tip: bare laminate shows outside the slit, or nearer the nail face than the docs say")
+    check(chk["route_gap_to_tpu_mm"]["slit_and_bend_mm"] >= chk["route_gap_to_tpu_mm"]["stock_root_face_to_tpu_mm"],
+          "tip: the slit beside the insert is narrower than stock")
+    w = chk["walls"]
+    behind = {k: v["t"] for k, v in w.items() if k.startswith("behind_laminate_")}
+    check(len(behind) == 7 and min(behind.values()) >= 0.8, f"tip: thin or missing material behind the laminate {behind}")
+    fs = w["free_side_clear_mm"]["min_mm"]
+    check(isinstance(fs, str) or fs >= 2.0, f"tip: core material in front of the laminate ({fs} mm)")
+    check(w["nail_behind_pocket_min_mm"]["t"] >= 2.0 and w["nail_lip_pocket_to_groove_mm"] >= 0.8 and
+          w["nail_lip_pocket_to_face_edge_mm"] >= 0.6 and min(w[k] for k in w if k.startswith("wall_")) >= 1.3 and
+          w["cavity_floor_min_mm"] >= 2.0 and min(w["tail_slot_walls_mm"].values()) >= 1.0, "tip: a wall is too thin")
+    st = J("sim/selftest.json")
+    check(st["nsensor"] == 2 * n, "tip sim: sensor count")
+    nail, cr, fl = st["nail_pinch"], st["cradle_grasp"], st["flat_tip_pinch"]
+    check(nail["min_sensed_share"] >= 0.99 and nail["all_match_contacts"] and nail["max_touch_error"] <= 0.01
+          and set(nail["max_touch_error_by_object"]) == {"pin", "rod", "bar_edge_on"},
+          "tip sim: the nail taxels do not read the pin's, rod's and bar's force (the page says within 1%, all on taxels)")
+    check(max(cr["sensed_share"]) == 0 and cr["contact_N_both_fingers"] > 2 * cr["grip_N"] - 1.0,
+          "tip sim: the cradle grasp should load only the (unsensed) stock insert")
+    check(abs(fl["contact_N_both_fingers"] - 2 * fl["grip_N"]) < 1.0 and max(fl["sensed_share"]) == 0,
+          "tip sim: the flat plate at the tips should be gripped by the bare tips only (the page says so)")
+    # the page's numbers come from these files: they must not have changed since web/index.html was written
+    import hashlib
+    with open(os.path.join(WEB, "page_inputs.json")) as f:
+        inputs = json.load(f)
+    stale = [r for r, h in inputs.items() if hashlib.sha256(open(os.path.join(ROOT, r), "rb").read()).hexdigest() != h]
+    check(not stale, f"web/index.html is stale: {stale} changed since (run cad/export_web.py)")
+    with open(os.path.join(WEB, "data.js")) as f:
+        m = re.fullmatch(r"window\.CARTRIDGE = (.*);\n", f.read(), re.S)
+    data = json.loads(m.group(1)) if m else {}
+    check(data.get("models", {}).get("enpire_tip", {}).get("src") == "data_enpire_tip.js", "web/data.js does not point at data_enpire_tip.js")
+    with open(os.path.join(WEB, "data_enpire_tip.js")) as f:
+        m = re.fullmatch(r"window\.CARTRIDGE_ENPIRE_TIP = (.*);\n", f.read(), re.S)
+    check(m is not None, "web/data_enpire_tip.js has an unexpected format")
+    tdata = json.loads(m.group(1)) if m else {}
+    check(tdata.get("measurements") == meas, "web/data_enpire_tip.js is stale (run cad/export_web.py)")
+    for p in tdata.get("parts", []):
+        if p.get("shared"):
+            check(p["name"] in data.get("meshes", {}), f"web/data_enpire_tip.js: shared part {p['name']} is not in data.js")
+            continue
+        nv = len(p["v"]) // 3
+        check(len(p["v"]) % 3 == 0 and len(p["f"]) % 3 == 0, f"ENPIRE-T Tip mesh {p['name']}: ragged arrays")
+        check(max(p["f"] + p["e"], default=0) < nv, f"ENPIRE-T Tip mesh {p['name']}: index out of range")
+    tx = [p for p in tdata.get("parts", []) if p["name"] == "taxels"]
+    check(len(tx) == 1 and len(tx[0]["f"]) == 6 * n, "web/data_enpire_tip.js: not one square per taxel")
 
 
 if __name__ == "__main__":

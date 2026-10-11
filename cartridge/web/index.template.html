@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YAM tactile cartridge</title>
-<meta name="description" content="Plug-in tactile fingers for the i2rt YAM Linear 4310 gripper: a flat {{cols}} × {{rows}} taxel pad, in-finger readout and pogo-pin docking, plus ENPIRE-T, the ENPIRE finger with {{e_taxels}} taxels on the same socket. CAD, FPC layout, MuJoCo model and build guide.">
+<meta name="description" content="Plug-in tactile fingers for the i2rt YAM Linear 4310 gripper: a flat {{cols}} × {{rows}} taxel pad, in-finger readout and pogo-pin docking, plus ENPIRE-T, the ENPIRE finger with {{e_taxels}} taxels on the same socket, and ENPIRE-T Tip with {{t_taxels}} on the nail alone. CAD, FPC layout, MuJoCo model and build guide.">
 <meta name="theme-color" content="#1b2b34">
 <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -21,7 +21,7 @@
       <span>YAM tactile cartridge</span>
     </a>
     <nav aria-label="Sections">
-      <a href="#why">Design</a><a href="#enpire">ENPIRE-T</a><a href="#inspect">3D view</a><a href="#assembly">Assembly</a><a href="#sensor">Sensor</a><a href="#checks">Checks</a><a href="#build">Build</a><a href="#files">Files</a>
+      <a href="#why">Design</a><a href="#enpire">ENPIRE-T</a><a href="#enpire-tip">Tip</a><a href="#inspect">3D view</a><a href="#assembly">Assembly</a><a href="#sensor">Sensor</a><a href="#checks">Checks</a><a href="#build">Build</a><a href="#files">Files</a>
     </nav>
     <a class="button small" href="{{zip_url}}">Download v{{version}}</a>
   </div>
@@ -34,7 +34,7 @@
     <p class="lede">Each finger is a cartridge: a flat {{cols}} × {{rows}} taxel pad under a replaceable TPU skin, its own readout board, and five pogo pins to the robot. It docks with two thumbscrews and keeps the stock fingertip position.</p>
     <div class="actions"><a class="button" href="#inspect">Inspect it in 3D</a><a class="button quiet" href="#files">Get the files</a></div>
     <p class="status"><span class="dot" aria-hidden="true"></span>Design release v{{version}}. The geometry is checked against i2rt's YAM meshes. Nothing has been printed or run on a robot yet.</p>
-    <p class="also">Need ENPIRE's thin nail and cradle? <a href="#enpire">ENPIRE-T</a> fits the same socket and carries {{e_taxels}} taxels.</p>
+    <p class="also">Need ENPIRE's thin nail and cradle? <a href="#enpire">ENPIRE-T</a> fits the same socket and carries {{e_taxels}} taxels, and <a href="#enpire-tip">ENPIRE-T Tip</a> keeps the stock cradle and senses at the nail.</p>
   </div>
   <figure class="pad-demo">
     <canvas id="pad" tabindex="0" role="application" aria-label="Interactive taxel pad. Press it, or move with the arrow keys and hold Space, to apply pressure." aria-describedby="pad-help"></canvas>
@@ -83,7 +83,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>ENPIRE-T: the ENPIRE finger with {{e_taxels}} taxels</h2>
-      <p>For tasks that need ENPIRE's thin grooved nail and its serrated cradle. ENPIRE-T is that finger rebuilt as a cartridge for the same socket, so one socket takes either finger.</p>
+      <p>For tasks that need ENPIRE's thin grooved nail and its serrated cradle. ENPIRE-T is that finger rebuilt as a cartridge for the same socket, so one socket takes any of these fingers.</p>
     </div>
     <div class="cols">
       <figure class="figure">
@@ -147,6 +147,58 @@
   </div>
 </section>
 
+<section class="band" id="enpire-tip">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>ENPIRE-T Tip: the stock cradle and a sensing nail</h2>
+      <p>When a task needs touch only at the nail, ENPIRE-T Tip senses there and keeps ENPIRE's compliant TPU cradle, which you print from the original file. It fits the same socket.</p>
+    </div>
+    <div class="cols">
+      <figure class="figure">
+        <img src="../out/enpire_tip/renders/route_view.png" alt="ENPIRE-T Tip with its core drawn see-through: the nail pad with its taxels, and the laminate's tails running up the back spine into the flange and the finger PCB" width="1100" height="1300" loading="lazy">
+        <figcaption>The laminate, with the core drawn see-through and the insert hidden: taxels on the nail, tails along the back spine to the flange.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>The nail is ENPIRE-T's: a flush pocket under a {{t_film_t}} mm film, here with {{t_taxels}} taxels at {{t_pitch}} mm around the groove. The frame is ENPIRE's, with a recess for the laminate along the back spine, the open back behind the insert's top corner closed, and the flange. On the contact side the one other change is at the nail root: over the laminate's width its corner is rounded off and the film-covered laminate wraps round it, up to {{t_edge_deep}} mm inside the stock surface and nowhere outside it, and the slit beside the insert is wider there.</p>
+        <p>The laminate's two sheets wrap round the nail root together and part at the foot of the slit beside the insert. From there their tails run side by side, one sheet thick, in a {{t_recess}} mm recess along the spine, at least {{t_gap_tpu}} mm clear of the insert, and rise into the flange at the back of the cavity. The finger PCB keeps ENPIRE-T's outline and pogo targets, with smaller connectors at the back of the cavity.</p>
+        <p>The taxels all sit on the flat nail, so their positions come straight from the CAD, and every surface on the route unrolls exactly, so the laminate fits without stretching.</p>
+        <div class="actions"><a class="button" href="#inspect" data-model="enpire_tip">Inspect ENPIRE-T Tip in 3D</a><a class="button quiet" href="{{t_doc_url}}">Read the build guide</a></div>
+      </div>
+    </div>
+    <div class="cols enpire-detail">
+      <figure class="figure">
+        <img src="../out/enpire_tip/renders/nail_closeup.png" alt="The nail of ENPIRE-T Tip with its taxels arranged around the centre groove under a translucent film, below the stock orange TPU insert" width="1100" height="1000" loading="lazy">
+        <figcaption>The nail pad: {{t_taxels}} taxels at {{t_pitch}} mm around the groove, below the stock insert.</figcaption>
+      </figure>
+      <div>
+        <div class="table-scroll">
+          <table class="specs">
+            <tbody>
+              <tr><th scope="row">Taxels</th><td>{{t_taxels}} on the nail at {{t_pitch}} mm; the cradle has none</td></tr>
+              <tr><th scope="row">Scan lines</th><td>{{t_rows_lines}} rows × {{t_cols_lines}} columns, on two 2-layer flex sheets with Velostat between them</td></tr>
+              <tr><th scope="row">Cover</th><td>A {{t_film_t}} mm PU film over the nail and round its root, replaceable</td></tr>
+              <tr><th scope="row">Readout</th><td>A finger PCB with ENPIRE-T's outline and {{t_free_mm2}} mm² free for the readout; tails with {{t_rows_pins}} and {{t_cols_pins}} contacts at 0.3 mm pitch</td></tr>
+              <tr><th scope="row">Stream</th><td>Protocol v2, layout 3, {{t_frame_bytes}} bytes per frame</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="checks">
+          <li>The fingers meet at {{t_q_touch}} mm per jaw, as stock ENPIRE does ({{t_q_stock}} mm). The cradle is the stock insert, the nail film lies on the original nail plane, and the film covers the laminate round the nail root; above it, in the slit, the laminate's coverlay sits at least {{t_film_end}} mm behind the nail face.</li>
+          <li>Over the full stroke the socket keeps its {{t_clear_socket}} mm to the opposite carriage, and the finger stays at least {{t_clear_finger}} mm from the carriages and the housing.</li>
+          <li>Walls are {{t_wall_nail}} mm behind the nail pocket and at least {{t_wall_spine}} mm behind the laminate all along its route, with nothing of the core in front of it.</li>
+          <li>The flex artwork passes its design-rule check, with {{t_drc_gap}} mm spaces. At the laminate's inner face its tightest bends are {{t_bend_single}} mm for a single tail and {{t_bend_stack}} mm where both sheets go round the nail root, and each tail has at least {{t_tail_room}} mm to spare in the cavity.</li>
+          <li>In MuJoCo at a {{t_grip}} N grip, a {{t_pin_d}} mm pin, rod or square bar (edge first) pinched across the nails lands {{t_pin_share}}% on taxels, and they read the nails' normal force to within {{t_pin_err}}%, on a row or in the gap between rows. A {{t_rod_d}} mm rod held in the cradle registers nothing, by design.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="open">
+      <h3>Limits, and what isn't verified yet</h3>
+      <p>The nail faces are tilted {{e_tilt}}°, as on ENPIRE-T, so a rigid flat part held at the tips loads only the bare tip ({{t_flat_n}} N on the taxels in MuJoCo). The taxels stop about {{t_tip_edge}} mm short of the tip: the last {{t_tip_bare}} mm of the nail is left bare, and beside the groove the narrowing prongs leave no room for another row before that. Nothing in the cradle is sensed.</p>
+      <p>The slit between the insert's lower end and the nail root stays open and, over the laminate's width, is wider than on stock ENPIRE: at least {{t_slit}} mm from the film-covered laminate to the insert, against {{t_slit_stock}} mm from the stock root face. A hard grasp in the cradle's lower lobe pushes the insert toward it, so check on the first build that it doesn't pinch the laminate. Nothing has been printed, laminated or loaded. Before a batch, test-print one core, fit a stock insert to it, and dry-fit the tails with paper cut-outs.</p>
+    </div>
+  </div>
+</section>
+
 <section class="band" id="inspect">
   <div class="wrap">
     <div class="section-head">
@@ -159,17 +211,18 @@
           <legend class="sr-only">Finger to show</legend>
           <label><input type="radio" name="model" value="flat" checked> Flat cartridge</label>
           <label><input type="radio" name="model" value="enpire"> ENPIRE-T</label>
+          <label><input type="radio" name="model" value="enpire_tip"> ENPIRE-T Tip</label>
         </fieldset>
         <p class="view-status" id="view-status" aria-live="polite">Flat cartridge v{{version}}: {{taxels}} taxels on one flat pad.</p>
       </div>
-      <canvas id="view" tabindex="0" data-fallback="../out/renders/hero.png" data-fallback-enpire="../out/enpire/renders/hero.png" aria-label="3D view of the tactile cartridge assembly. Drag or use the arrow keys to rotate, plus and minus to zoom."></canvas>
+      <canvas id="view" tabindex="0" data-fallback="../out/renders/hero.png" data-fallback-enpire="../out/enpire/renders/hero.png" data-fallback-enpire-tip="../out/enpire_tip/renders/hero.png" aria-label="3D view of the tactile cartridge assembly. Drag or use the arrow keys to rotate, plus and minus to zoom."></canvas>
       <noscript><img src="../out/renders/hero.png" alt="Rendered view of the YAM gripper with two tactile cartridges" width="1400" height="1100"></noscript>
       <div class="viewer-bar">
         <label class="range">Separate the parts <input id="explode" type="range" min="0" max="100" value="0"></label>
         <fieldset class="toggles">
           <legend class="sr-only">Parts to show</legend>
-          <label><input type="checkbox" id="t-skin" checked> Skin</label>
-          <label><input type="checkbox" id="t-xray" checked> See through the skin</label>
+          <label><input type="checkbox" id="t-skin" checked> <span id="t-skin-name">Skin</span></label>
+          <label><input type="checkbox" id="t-xray" checked> See through the <span id="t-xray-name">skin</span></label>
           <label><input type="checkbox" id="t-socket" checked> Socket</label>
           <label><input type="checkbox" id="t-electronics" checked> Electronics</label>
         </fieldset>
@@ -331,7 +384,7 @@
         <pre><code>cd cartridge
 pip install -r requirements.txt
 make i2rt    # i2rt meshes at the measured commit
-make all     # CAD, FPC, checks, sim, renders, ENPIRE-T, this page</code></pre>
+make all     # CAD, FPC, checks, sim, renders, ENPIRE-T, ENPIRE-T Tip, this page</code></pre>
         <p class="small">The host tools in <code>host/tactile_tools.py</code> decode the frame stream, lift taxels to 3D points for visuo-tactile fusion, and handle bench bring-up on a FlexiTac readout board.</p>
         <p class="actions"><a class="button" href="{{zip_url}}">Download v{{version}}</a><a class="button quiet" href="{{tree_url}}">Browse on GitHub</a></p>
       </div>
@@ -342,7 +395,7 @@ make all     # CAD, FPC, checks, sim, renders, ENPIRE-T, this page</code></pre>
 
 <footer class="foot">
   <div class="wrap">
-    <p>The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware files are CC BY-NC 4.0; check that licence before any commercial use. Meshes derived from i2rt are MIT-licensed; see <code>out/sim/NOTICE.txt</code>. ENPIRE-T's core, skin and film are a modified version of the <a href="https://makerworld.com/en/models/2984746-gripper-finger-for-robot-arm">ENPIRE gripper finger</a> by Wenli Xiao, licensed CC BY 4.0; see <code>out/enpire/NOTICE.txt</code>.</p>
+    <p>The pad follows the FlexiTac V2 process (Huang and Li, Columbia), whose hardware files are CC BY-NC 4.0; check that licence before any commercial use. Meshes derived from i2rt are MIT-licensed; see <code>out/sim/NOTICE.txt</code>. ENPIRE-T's core, skin and film are a modified version of the <a href="https://makerworld.com/en/models/2984746-gripper-finger-for-robot-arm">ENPIRE gripper finger</a> by Wenli Xiao, licensed CC BY 4.0; see <code>out/enpire/NOTICE.txt</code>. ENPIRE-T Tip's core and film are modified from it too, and its 3D view includes ENPIRE's TPU insert, unchanged, under the same licence; see <code>out/enpire_tip/NOTICE.txt</code>.</p>
     <p>YAM tactile cartridge v{{version}}, branch <code>{{branch}}</code> of <a href="https://github.com/{{repo}}">{{repo}}</a>. The repository's other design track, the ENPIRE engineering study, is on the <a href="https://geyan21.github.io/yam-tactile-kit/">project website</a>.</p>
   </div>
 </footer>

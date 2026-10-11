@@ -402,9 +402,9 @@
  },
  "tail_length_mm": {
   "slot": 4.1,
-  "cols": 14.07,
-  "rows": 23.1,
-  "slack": 1.0
+  "cols": 11.73,
+  "rows": 18.43,
+  "slack": 0.3
  },
  "scan": {
   "row_lines": [
@@ -508,9 +508,13 @@
    "signal": "GND"
   }
  ],
+ "connector_contacts": {
+  "A": "contacts on the PCB side (bottom contact): the cols fingers face the board",
+  "B": "contacts on the side away from the PCB (top contact): the rows fingers face down"
+ },
  "notes": [
   "rows tail -> connector B (far), runs along the cavity floor under connector A",
   "cols tail -> connector A (near); both tails pass the flange slot stacked (cols sheet in front)",
-  "fingers on L2 of each sheet: pick top- or bottom-contact 0.3 mm FPC connectors to match the bend direction"
+  "fingers on L2 of each sheet; the tails turn from the slot toward the back of the cavity, which leaves the rows fingers facing down and the cols fingers facing the board"
  ]
 }

@@ -1,0 +1,8 @@
+gripper.stl and carriage_*.stl are copied/derived from i2rt-robotics/i2rt
+(i2rt/robot_models/gripper/linear_4310/assets, commit 120c3c8), MIT License, Copyright (c) I2RT Robotics.
+See I2RT_LICENSE.
+
+core_*.stl and film_*.stl are a modified version of the ENPIRE gripper finger; tpu_*.stl is the original
+ENPIRE TPU insert, unchanged, placed on each finger.
+Derived from the ENPIRE gripper finger by Wenli Xiao (NVIDIA GEAR ENPIRE), https://makerworld.com/en/models/2984746, licensed CC BY 4.0. Source STLs via github.com/pgeedh/Open-ENPIRE-Gripper@72cc833. Modified (ENPIRE-T Tip): filled nail slot, nail sensor pocket, plug-in dock flange, a laminate channel round the nail root (its corner cleared there) and along the back spine, a ledge behind that channel at the frame's windows, and a closed back between the root block and the spine bar. The TPU insert is used unchanged.
+Licence: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/

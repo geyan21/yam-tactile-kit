@@ -239,9 +239,11 @@ pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
   .top-row { gap: 20px; }
   .top nav { gap: 15px; font-size: 14px; }
 }
-@media (max-width: 920px) {
+@media (max-width: 960px) {
   .top nav { display: none; }
   .top-row .button { margin-left: auto; }
+}
+@media (max-width: 920px) {
   .hero, .cols, .section-head { grid-template-columns: minmax(0, 1fr); }
   .section-head { gap: 12px; }
   .sections { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
