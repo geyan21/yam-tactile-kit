@@ -1,0 +1,1043 @@
+{
+  "schema": "yam-f1-stack-cad/1",
+  "physical_specimens_tested": 0,
+  "complete_f1_package": false,
+  "input_hashes": {
+    "engineering/designs/f1_formed_stack.json": "195271cdb3dbc5f0406709ca153e41764aec08215c161fc84fe4e2afc1422e72",
+    "engineering/scripts/build_f1_stack_parts.py": "589eba9809c1f769d5f7b547b91b5d6721cbd89a5c9367ef2dbb02827ffcc72a",
+    "engineering/scripts/f1_surfaces.py": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/release/r1/r1_manifest.json": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14",
+    "engineering/release/contact_regions/contact_report.json": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5"
+  },
+  "parts": [
+    {
+      "id": "f1_ch0_columns_body",
+      "purpose": "CH0 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_body.step",
+      "stl": "cad/f1_ch0_columns_body.stl",
+      "sha256_step": "00baf3d99e2361b971add3a71d9ce135ffbfc32397a0c9bd67079a88f07fd28f",
+      "sha256_stl": "027580a0aa27ac33cb80fd3ce4332142c9de06f5dad326e0843dfd196366e6fb",
+      "volume_mm3": 7.173633212721785,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.4653449058532715
+        ],
+        [
+          -8.50684642791748,
+          -101.2267074584961,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_film_body",
+      "purpose": "CH0 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_film_body.step",
+      "stl": "cad/f1_ch0_film_body.stl",
+      "sha256_step": "c99cf5640092831b937d9107e9a5ac26b7fbdc6fa48abec9f43fe085aacf5361",
+      "sha256_stl": "c73e3669641cc955710b613178cf12e1b82163faf2f5c6ecaa90f3cb4dc0d6b4",
+      "volume_mm3": 9.149216667509252,
+      "bounds_mm": [
+        [
+          -18.786453247070312,
+          -116.88863372802734,
+          -4.495231628417969
+        ],
+        [
+          -8.806846618652344,
+          -101.5238265991211,
+          -3.6244795322418213
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_body",
+      "purpose": "CH0 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_body.step",
+      "stl": "cad/f1_ch0_rows_body.stl",
+      "sha256_step": "bd51bef1aa9a80eb80cc9245dfb3805fac1a80d8290a5ccb3b0894d3dc85616b",
+      "sha256_stl": "cafe76ae3e389e367b2231a5801608db3647fd402d405256abb3de0af8c948a9",
+      "volume_mm3": 16.429582556626315,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.28562927246094,
+          -4.660099506378174
+        ],
+        [
+          -8.50684642791748,
+          -101.21693420410156,
+          -3.659379243850708
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_cover_body",
+      "purpose": "CH0 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_cover_body.step",
+      "stl": "cad/f1_ch0_cover_body.stl",
+      "sha256_step": "8af4dd742e2e981693035ea2dc655d7a0ea82b50aa894215f5dc809caefe7349",
+      "sha256_stl": "d0619c22abf0e09633d5dd8b323f7db90ef62f4ca8c1e25d26006a04b69e5ffd",
+      "volume_mm3": 10.889352169299357,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2758560180664,
+          -4.759974002838135
+        ],
+        [
+          -8.50684642791748,
+          -101.21192169189453,
+          -3.8541340827941895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_forming_mandrel",
+      "purpose": "CH0 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch0_forming_mandrel.step",
+      "stl": "cad/f1_ch0_forming_mandrel.stl",
+      "sha256_step": "30bd85e9e0d091ffa696829c14a823fbd83f1adc92ffa023c85e1521390ac100",
+      "sha256_stl": "4d286eb18ee55fc1946035ae301fb239cc9006f43ccffb96b0334656aa63aa2b",
+      "volume_mm3": 1123.988007290151,
+      "bounds_mm": [
+        [
+          -22.185199737548828,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          -5.5068464279174805,
+          -98.23599243164062,
+          0.5958292484283447
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_body",
+      "purpose": "CH1 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_body.step",
+      "stl": "cad/f1_ch1_columns_body.stl",
+      "sha256_step": "111f5421e99c44592dfce739c255408abb5e2136f582c7b2a6fadf1e9e29f799",
+      "sha256_stl": "2598a89dcafc79593bb3cb094cb22f1a8a868a983a751d814717048280d8f125",
+      "volume_mm3": 7.139514811795749,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2911376953125,
+          -4.465344429016113
+        ],
+        [
+          3.3876330852508545,
+          -101.2267074584961,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_film_body",
+      "purpose": "CH1 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_film_body.step",
+      "stl": "cad/f1_ch1_film_body.stl",
+      "sha256_step": "e502654c86dfc79635fc2bdd0ba1988c577c54299efe4bf8bf8cd5c72895d71b",
+      "sha256_stl": "f77a5b0d0d69c8a1d35e17a96622a14f056d5cdaf85bca36ac792e35880bbbbb",
+      "volume_mm3": 9.091750841900735,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -116.88863372802734,
+          -4.495231628417969
+        ],
+        [
+          2.9871068000793457,
+          -101.5238265991211,
+          -3.6244795322418213
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_body",
+      "purpose": "CH1 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_body.step",
+      "stl": "cad/f1_ch1_rows_body.stl",
+      "sha256_step": "5032eaff7663d77709048b97ca468c20966acb61c55218e7cfe9ad33e659dddc",
+      "sha256_stl": "a5c599f4aabf0bdb40f11217db336910c440df1902ae586fd205f9b8f0128e1b",
+      "volume_mm3": 16.346970114750867,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.28562927246094,
+          -4.660099506378174
+        ],
+        [
+          3.3876330852508545,
+          -101.21693420410156,
+          -3.659379005432129
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_cover_body",
+      "purpose": "CH1 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_cover_body.step",
+      "stl": "cad/f1_ch1_cover_body.stl",
+      "sha256_step": "48b43ca0df6433220795f09314c6d7a6975d2b16cab1ff2f1053264aec1ef3d1",
+      "sha256_stl": "9709ac5f3befd7f2420c4ebb966c71e3488fe0c0ea3c3e9d73c18551e648df20",
+      "volume_mm3": 10.832300356417779,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2758560180664,
+          -4.759974002838135
+        ],
+        [
+          3.3876330852508545,
+          -101.21192169189453,
+          -3.8541340827941895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_forming_mandrel",
+      "purpose": "CH1 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch1_forming_mandrel.step",
+      "stl": "cad/f1_ch1_forming_mandrel.stl",
+      "sha256_step": "03ed1d00ec2d2b369a99ccdd1c9b6a5b1d38a517d1860ee7f407fea84e29132d",
+      "sha256_stl": "fc162e0edd4a4f6756bc6c1ffe9512583944e4491337b0e261d31974a5f23244",
+      "volume_mm3": 1121.867821284555,
+      "bounds_mm": [
+        [
+          -10.306846618652344,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          6.385941028594971,
+          -98.23599243164062,
+          0.5958293080329895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_body",
+      "purpose": "CH2 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_body.step",
+      "stl": "cad/f1_ch2_columns_body.stl",
+      "sha256_step": "7e9e16e17f19b659cc109770a8f92b2534181150bcdd89ba3a0bfdc691e776cb",
+      "sha256_stl": "114c027b28460e7cf831524ce54d51a3e6e1ad5e75f21f33e8d55addd4e253f8",
+      "volume_mm3": 13.259657308053574,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.49253845214844,
+          -4.184628963470459
+        ],
+        [
+          -1.0,
+          -76.59905242919922,
+          -1.3258635997772217
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_film_body",
+      "purpose": "CH2 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_film_body.step",
+      "stl": "cad/f1_ch2_film_body.stl",
+      "sha256_step": "a7538230742a2364c81d22b97425afc75a51fe4dbb8e0cc0881d474c83b91dac",
+      "sha256_stl": "07b623451a65f22d622e4843e124932bcf331440a3e2dec90e3b24dc54ae4fd5",
+      "volume_mm3": 12.807606607342601,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -88.93782806396484,
+          -4.067532062530518
+        ],
+        [
+          -3.2750000953674316,
+          -77.20917510986328,
+          -1.3858636617660522
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_body",
+      "purpose": "CH2 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_body.step",
+      "stl": "cad/f1_ch2_rows_body.stl",
+      "sha256_step": "c26359e05800f912d5fb85f4432afa0781fb6a733c006f96ae19c931fc2a231a",
+      "sha256_stl": "c1ecfc68fbc812dcf4992617620f655dc6d1705b3f0687b09630e37c7c4512aa",
+      "volume_mm3": 13.17083795889162,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.43998718261719,
+          -4.292364597320557
+        ],
+        [
+          -1.0,
+          -76.62126159667969,
+          -1.4358636140823364
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_cover_body",
+      "purpose": "CH2 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_cover_body.step",
+      "stl": "cad/f1_ch2_cover_body.stl",
+      "sha256_step": "e338b8ea1d69090199c7887ca197e0edf7b0cf67bf482d991ce94acbed79dd14",
+      "sha256_stl": "bff0524a90d1e2c721e9b8d21c9414bfa1e069ac7499a8018462f32f655b2bab",
+      "volume_mm3": 76.6378560423132,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.84760284423828,
+          -4.772454738616943
+        ],
+        [
+          -1.0,
+          -76.12213897705078,
+          -1.5458635091781616
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_forming_mandrel",
+      "purpose": "CH2 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_forming_mandrel.step",
+      "stl": "cad/f1_ch2_forming_mandrel.stl",
+      "sha256_step": "0b74007c710fbe7e2a4443b74d2bf1c390929e24719cb6351116f7bd61c1ea85",
+      "sha256_stl": "fdc7141a9993bcf822bc49a6bfcbf8f62f291290d0a768d874188f0affeded4b",
+      "volume_mm3": 2078.6860546070234,
+      "bounds_mm": [
+        [
+          -17.0,
+          -92.94220733642578,
+          -4.15659761428833
+        ],
+        [
+          2.0,
+          -73.09674835205078,
+          2.674117088317871
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_body",
+      "purpose": "CH3 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_body.step",
+      "stl": "cad/f1_ch3_columns_body.stl",
+      "sha256_step": "25f01b05f5a1cfb585cfc40e51fc6293f33766319684323603baa178289f1e2d",
+      "sha256_stl": "6b0b89cb7aefcd74e0e858c683c78b2908d458730129d21d2f690432a41627de",
+      "volume_mm3": 14.90745325978066,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.507702350616455
+        ],
+        [
+          -1.0,
+          -59.218265533447266,
+          2.149364471435547
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_film_body",
+      "purpose": "CH3 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_film_body.step",
+      "stl": "cad/f1_ch3_film_body.stl",
+      "sha256_step": "5ecb0e7d9eb5412234c4b25178e7398f1c45c689a9246611e965c0402ea23164",
+      "sha256_stl": "bc7cbd5a5a1ca92f1c633dc90a2b2e3c79b3442f472a7047c65bbc87f2d1d83c",
+      "volume_mm3": 14.796732719494228,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -71.88520812988281,
+          -4.557702541351318
+        ],
+        [
+          -3.2750000953674316,
+          -59.54228210449219,
+          1.6344497203826904
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_body",
+      "purpose": "CH3 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_body.step",
+      "stl": "cad/f1_ch3_rows_body.stl",
+      "sha256_step": "f3a737097a0ec569e9595ee1716f71543ce67709a76cd8c8c0995bfe81a447fa",
+      "sha256_stl": "45b80a1ec3bd1e89240efeb3002f5b0d68b06d5ca679d573a1f6494e6a71274b",
+      "volume_mm3": 15.029150055563168,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.617702484130859
+        ],
+        [
+          -1.0,
+          -59.130455017089844,
+          2.083115577697754
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_cover_body",
+      "purpose": "CH3 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_cover_body.step",
+      "stl": "cad/f1_ch3_cover_body.stl",
+      "sha256_step": "e89e8a543603b86cfd6b4452ed419bb76c57b4aca1c1fad5350adb8695189e78",
+      "sha256_stl": "fa03752a45327ed0f09cd3dbfd86635d3b128d753914a8a856fdd153d6570199",
+      "volume_mm3": 88.93544050150645,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.98526763916016,
+          -5.017702579498291
+        ],
+        [
+          -1.0,
+          -58.50977325439453,
+          2.4167282581329346
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_forming_mandrel",
+      "purpose": "CH3 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_forming_mandrel.step",
+      "stl": "cad/f1_ch3_forming_mandrel.stl",
+      "sha256_step": "d47d861ed7d1351dd85619eda704e763f71f520abf60fe0ce88b686e30a49e5a",
+      "sha256_stl": "0e72b37fdfb5b17f3d2aa3d80c2825046c310e30c6985386e6b123fd059fc67f",
+      "volume_mm3": 3338.097087165478,
+      "bounds_mm": [
+        [
+          -17.0,
+          -75.98521423339844,
+          -4.397702217102051
+        ],
+        [
+          2.0,
+          -56.00528335571289,
+          6.5489583015441895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_body",
+      "purpose": "CH4 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_body.step",
+      "stl": "cad/f1_ch4_columns_body.stl",
+      "sha256_step": "49f03c8e597ff50378205c0caee2bb12d8a47a5d25016d7e3d3946b9b67f1839",
+      "sha256_stl": "daee73b265394e4c23e6ec9ed669952e0f599cde494537d17a11508234f0268c",
+      "volume_mm3": 13.388280868728259,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.558345794677734,
+          6.847860813140869
+        ],
+        [
+          -1.0,
+          -42.592220306396484,
+          11.329483985900879
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_film_body",
+      "purpose": "CH4 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_film_body.step",
+      "stl": "cad/f1_ch4_film_body.stl",
+      "sha256_step": "52232eb50ce85640b709f18a28771040b2761740341fc230432cc32519da0cbc",
+      "sha256_stl": "735f3ae710798fd91ae9de578ed9fa9c147cd4ef71ed71d57ee97ad1f26e019b",
+      "volume_mm3": 13.006530941946814,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -55.079227447509766,
+          7.212046146392822
+        ],
+        [
+          -3.2750000953674316,
+          -43.18558883666992,
+          11.26948356628418
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_body",
+      "purpose": "CH4 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_body.step",
+      "stl": "cad/f1_ch4_rows_body.stl",
+      "sha256_step": "2fabb3a7bcca0feb3733603f709fbeda53a326164b17b1807f5c206a573b6f34",
+      "sha256_stl": "5ea8d5c0a81a2a9dbc3ada8fbd344e0f3f39c8e545243baa8f3ea9dd75b1b26d",
+      "volume_mm3": 13.25970880115541,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.48259353637695,
+          6.76810359954834
+        ],
+        [
+          -1.0,
+          -42.61436080932617,
+          11.219483375549316
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_cover_body",
+      "purpose": "CH4 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_cover_body.step",
+      "stl": "cad/f1_ch4_cover_body.stl",
+      "sha256_step": "a5e3f6b99f69d2b3e1e065017f2b005dab5b351d623d810fd8688dbf8823d6b7",
+      "sha256_stl": "8c15c6b346afd8eaa8b5b07830a5ece6030ace5d08f052b07b49dabfca38b7c6",
+      "volume_mm3": 76.37120814707106,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.75886154174805,
+          6.142116069793701
+        ],
+        [
+          -1.0,
+          -42.166053771972656,
+          11.10948371887207
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_forming_mandrel",
+      "purpose": "CH4 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_forming_mandrel.step",
+      "stl": "cad/f1_ch4_forming_mandrel.stl",
+      "sha256_step": "a4aec6b2a61f568cc3b13f80acde71e67127a74c5a1ef782bd43ff6cfaac14fe",
+      "sha256_stl": "391d0ae66661711f4255575f6595332bacdf5d23257cddf30010ffd20f3a8b8b",
+      "volume_mm3": 2113.2261266173814,
+      "bounds_mm": [
+        [
+          -17.0,
+          -58.91447448730469,
+          6.580388069152832
+        ],
+        [
+          2.0,
+          -39.110469818115234,
+          15.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_body",
+      "purpose": "CH5 columns reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_body.step",
+      "stl": "cad/f1_ch5_columns_body.stl",
+      "sha256_step": "7ae9463989a6ff3a4adcba05e59b1cff1113c2f83f5cba69caed05b352ac2fc4",
+      "sha256_stl": "32bee108686e298c13e71d9611e6be11de7c4a3411e002c80a343909e9e84328",
+      "volume_mm3": 19.805712464155494,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.685726165771484,
+          -4.564206123352051
+        ],
+        [
+          -1.0,
+          -23.58399772644043,
+          8.989798545837402
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_film_body",
+      "purpose": "CH5 film reference body on the actual source surface; tail not yet attached",
+      "material": "0.10 mm conductive pressure film",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_film_body.step",
+      "stl": "cad/f1_ch5_film_body.stl",
+      "sha256_step": "25f2c60d5b532c4fd6d9bfdeae087a1a8fc94e96d051852d14d08fabd507d265",
+      "sha256_stl": "0bc696b8e3a19902c7914cb0ba93cd9c27212599b440c519ce173c4217a2a93d",
+      "volume_mm3": 20.213316822778314,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -38.23497009277344,
+          -4.613801002502441
+        ],
+        [
+          -3.2750000953674316,
+          -24.185739517211914,
+          8.59527587890625
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_body",
+      "purpose": "CH5 rows reference body on the actual source surface; tail not yet attached",
+      "material": "PI/Cu flex envelope; active coverlay opening",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_body.step",
+      "stl": "cad/f1_ch5_rows_body.stl",
+      "sha256_step": "f2fad485edcb2c2294a2b5c7651bb15beec9aedf989211b2af54ebdfe08c64fa",
+      "sha256_stl": "017b3120031dd68d9cc39853fc3e4226775dd4110f0548c3638da080d2a96795",
+      "volume_mm3": 19.88450720257167,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.74776840209961,
+          -4.674205780029297
+        ],
+        [
+          -1.0,
+          -23.583383560180664,
+          8.89896297454834
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_cover_body",
+      "purpose": "CH5 cover reference body on the actual source surface; tail not yet attached",
+      "material": "Silicone cover process target",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_cover_body.step",
+      "stl": "cad/f1_ch5_cover_body.stl",
+      "sha256_step": "526308d316281fbd167dafa3a9c0589ef19f8cd4a0a9907cbfc2c8bec890f695",
+      "sha256_stl": "2dd2978f8fb8d21e8590467925a47a8571c7e3fe23936ba0ab34607cc27b7aea",
+      "volume_mm3": 116.12443383095774,
+      "bounds_mm": [
+        [
+          -14.0,
+          -39.369293212890625,
+          -5.0742058753967285
+        ],
+        [
+          -1.0,
+          -23.072248458862305,
+          9.076141357421875
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_forming_mandrel",
+      "purpose": "CH5 rigid backing form for separate-layer assembly away from the robot",
+      "material": "PETG/engineering plastic tool; smooth the contact surface and use a release film",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_forming_mandrel.step",
+      "stl": "cad/f1_ch5_forming_mandrel.stl",
+      "sha256_step": "e26d45fcbb32913767df177bef55d06f991fecd740da54d1c541fa17db797d1d",
+      "sha256_stl": "c04155bb9ddb1dfa4be2a66d7e5534565a0dbc92339e122630d1d1e459b8b6d6",
+      "volume_mm3": 4970.055021593342,
+      "bounds_mm": [
+        [
+          -17.0,
+          -42.038551330566406,
+          -4.454204559326172
+        ],
+        [
+          2.0,
+          -20.083406448364258,
+          13.262223243713379
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "stack_checks": [
+    {
+      "site": "CH0",
+      "intersections_mm3": {
+        "columns/film": 0.0,
+        "columns/rows": 0.0,
+        "columns/cover": 0.0,
+        "film/rows": 0.0,
+        "film/cover": 0.0,
+        "rows/cover": 0.0
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 7.173633212721814,
+        "film": 9.149216667509243,
+        "rows": 16.42958255662626,
+        "cover": 10.889352169299352
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 1.7763568394002505e-15,
+        "film": 8.881784197001252e-15,
+        "rows": 2.1316282072803006e-14,
+        "cover": 5.329070518200751e-15
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    },
+    {
+      "site": "CH1",
+      "intersections_mm3": {
+        "columns/film": 0.0,
+        "columns/rows": 0.0,
+        "columns/cover": 0.0,
+        "film/rows": 0.0,
+        "film/cover": 0.0,
+        "rows/cover": 0.0
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 7.139514811795748,
+        "film": 9.091750841900726,
+        "rows": 16.34697011475085,
+        "cover": 10.83230035641777
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 3.108624468950438e-14,
+        "film": 8.881784197001252e-15,
+        "rows": 3.552713678800501e-15,
+        "cover": 8.881784197001252e-15
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    },
+    {
+      "site": "CH2",
+      "intersections_mm3": {
+        "columns/film": 0.0,
+        "columns/rows": 0.0,
+        "columns/cover": 0.0,
+        "film/rows": 4.3421000439886806e-07,
+        "film/cover": 0.0,
+        "rows/cover": 9.922425712644358e-07
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 13.259657308053749,
+        "film": 12.807606607342528,
+        "rows": 13.170837958891443,
+        "cover": 76.63785604231275
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 2.042810365310288e-13,
+        "film": 7.283063041541027e-14,
+        "rows": 2.3447910280083306e-13,
+        "cover": 4.547473508864641e-13
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    },
+    {
+      "site": "CH3",
+      "intersections_mm3": {
+        "columns/film": 8.270143084965272e-15,
+        "columns/rows": 0.0,
+        "columns/cover": 0.0,
+        "film/rows": 3.7779742083207145e-07,
+        "film/cover": 0.0,
+        "rows/cover": 1.070914796379367e-08
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 14.907453260960732,
+        "film": 14.796732719494173,
+        "rows": 15.0291500567467,
+        "cover": 88.93544050150597
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 1.1799237142895436e-09,
+        "film": 5.5067062021407764e-14,
+        "rows": 1.1837961721994361e-09,
+        "cover": 4.831690603168681e-13
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    },
+    {
+      "site": "CH4",
+      "intersections_mm3": {
+        "columns/film": 1.849416746178549e-07,
+        "columns/rows": 1.2868988781490306e-16,
+        "columns/cover": 0.0,
+        "film/rows": 0.0,
+        "film/cover": 0.0,
+        "rows/cover": 0.0
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 13.38828086872788,
+        "film": 13.00653094194702,
+        "rows": 13.259708801155618,
+        "cover": 76.37120814707106
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 1.0125233984581428e-13,
+        "film": 2.0605739337042905e-13,
+        "rows": 8.881784197001252e-14,
+        "cover": 0.0
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    },
+    {
+      "site": "CH5",
+      "intersections_mm3": {
+        "columns/film": 6.473642382952735e-07,
+        "columns/rows": 2.2024957270320998e-16,
+        "columns/cover": 0.0,
+        "film/rows": 3.0832862890264827e-09,
+        "film/cover": 0.0,
+        "rows/cover": 9.445654202552326e-10
+      },
+      "section_integral_volumes_mm3": {
+        "columns": 19.805712464159075,
+        "film": 20.21331682277834,
+        "rows": 19.884507202572394,
+        "cover": 116.12443383095696
+      },
+      "cad_volume_difference_mm3": {
+        "columns": 2.7213786779611837e-12,
+        "film": 2.4868995751603507e-14,
+        "rows": 6.039613253960852e-14,
+        "cover": 7.815970093361102e-13
+      },
+      "method": "Parallel extrusion section algebra, checked against CAD volumes",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Foil solids are conservative material envelopes; they are not copper Gerbers or printer-ready sensor foils.",
+    "Tail geometry, connector mating, mounted-frame collisions, retention and sealing remain to be completed.",
+    "The tools establish nominal forming surfaces. Actual material thickness, preload, bonding and release process require trial assemblies.",
+    "No contact, force, durability or 20 N qualification follows from these geometric checks."
+  ]
+}

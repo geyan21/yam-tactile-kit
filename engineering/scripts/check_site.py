@@ -167,6 +167,12 @@ def main():
                 "source/engineering/docs/BUILD_F1.md",
                 "website/flexible-matrix.html","website/build-f1.html","website/f1-capture.html",
                 "website/assets/development/f1/mechanics/file-index.html",
+                "source/engineering/development/f1/r3/checkpoint.json",
+                "source/engineering/development/f1/r3/pcb/f1_fanout_r3.kicad_pcb",
+                "source/engineering/development/f1/r3/cad/f1_r3_carrier.step",
+                "source/engineering/development/f1/r3/patterns/f1_ch0_rows_fit.pdf",
+                "website/assets/development/f1/r3/file-index.html",
+                "website/assets/development/f1/r3/visuals/inner_ground.png",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")

@@ -1,0 +1,30 @@
+{
+  "schema": "yam-f1-carrier-development/1",
+  "board_revision": "r3",
+  "status": "Separate removable carrier/reference for R3; installed drive and physical fit unverified",
+  "physical_specimens_tested": 0,
+  "board_native_x_center_mm": 12.2,
+  "active_board_mount_indices": [0, 1],
+  "rail_front_native_yz_mm": [[-58, 19], [-40, 19]],
+  "backplate_native_x_mm": [7.3, 9.3],
+  "rail_width_mm": 5.8,
+  "board_post_outer_diameter_mm": 4.6,
+  "board_screw_clearance_mm": 2.2,
+  "board_nut_across_flats_mm": 4.15,
+  "board_nut_pocket_depth_mm": 1.65,
+  "board_screw_head_envelope_mm": [4.0, 2.0],
+  "frame_mounts_native_yz_mm": [[-75.26417028511005, 0.0], [-18.559447378460487, 1.7714835093]],
+  "frame_post_outer_diameter_mm": 7.0,
+  "frame_screw_clearance_mm": 3.2,
+  "frame_screw_head_envelope_mm": [6.0, 2.4],
+  "material": "PETG or machined insulating plastic for a bench prototype; shrinkage, strength and creep unqualified",
+  "notes": [
+    "The two original side-fastener axes locate the carrier on the fixed hard frame.",
+    "Two M2 screws and captive M2 nuts at the back edge retain the fanout. The PCB is removable to reach inner connector latches.",
+    "The front rail corners brace the carrier but do not have board posts. The corresponding unused PCB holes are removed in the current R2 placement. Earlier four-hole and four-post studies remain preserved.",
+    "Board bending, cable pull and connector loads need a physical retention test; support the removed PCB during mating.",
+    "M2 screw length and M3 engagement must be checked against actual nuts, washers and the installed frame before assembly.",
+    "R3 retains the two back mounting axes; its outline cleanup and moved test circuit require a fresh complete fit check. Prior R2 artifacts remain unchanged.",
+    "No housing, jaw-drive, cable, moving-tail or loaded-frame fit is inferred from static carrier checks."
+  ]
+}

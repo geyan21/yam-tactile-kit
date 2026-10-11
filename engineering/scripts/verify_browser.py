@@ -136,9 +136,9 @@ def main():
                     ("recessed-analysis","1440,1800","recessed-analysis.html"),
                     ("f1-page","1440,1700","flexible-matrix.html"),
                     ("f1-mobile","500,3200","f1-mobile.html"),
-                    ("f1-placement","1440,1100","assets/development/f1/mechanics/visuals/sensor_placement.png"),
+                    ("f1-placement","1440,1100","assets/development/f1/r3/visuals/sensor_placement.png"),
                     ("f1-guide","1440,1800","build-f1.html"),
-                    ("f1-files","1440,1600","assets/development/f1/mechanics/file-index.html"),
+                    ("f1-files","1440,1600","assets/development/f1/r3/file-index.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])

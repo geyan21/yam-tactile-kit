@@ -69,7 +69,9 @@ def main():
             if page["status"] == 200:
                 (folder / "f1_page.html").write_text(page["body"])
                 summary["pages_contains_expected_release"] = tag in page["body"]
-                summary["pages_contains_fit_viewer"] = 'data-model-id="f1_assembly_reference"' in page["body"]
+                models = ("f1_assembly_reference", "f1_r3_assembly_reference")
+                summary["fit_viewer_models"] = [name for name in models if f'data-model-id="{name}"' in page["body"]]
+                summary["pages_contains_fit_viewer"] = bool(summary["fit_viewer_models"])
                 summary["pages_contains_rejected_r2_link"] = "r2-routing-study/file-index.html" in page["body"]
         (folder / "summary.json").write_text(json.dumps(summary, indent=2)+"\n")
         record["result"] = summary

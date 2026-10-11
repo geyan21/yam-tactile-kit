@@ -23,7 +23,7 @@
       nailbody:"N1 bare fork and sensing webs",nailleft:"Left fixed carrier",nailright:"Right fixed carrier",
       nailgauges:"NL / NR foil-carrier locations",
       f1_stacks:"Film and electrode reference bodies",f1_tails:"Tail fit references",
-      f1_board:"R2 PCB fit reference",f1_carrier:"Removable carrier",
+      f1_board:model.id==="f1_r3_assembly_reference"?"R3 PCB fit reference":"R2 PCB fit reference",f1_carrier:"Removable carrier",
       f1_components:"Component body envelopes",f1_fastener_envelopes:"Reserved fasteners"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){

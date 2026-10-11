@@ -1,0 +1,44 @@
+{
+  "schema": "yam-f1-fanout-r3/1",
+  "name": "f1_fanout_r3",
+  "status": "New fanout revision: full courtyard, outline and local supply checks before routing",
+  "source_board": "engineering/development/f1/fanout/pcb/f1_fanout.json",
+  "source_configuration": "engineering/designs/f1_fanout_development.json",
+  "upper_connector_ids": ["J1R", "J1C", "J3R", "J3C", "J5R", "J5C"],
+  "upper_rotation_deg": 180,
+  "test_mux_center_pcb_mm": [37.5, 18.75],
+  "test_pull_downs": {
+    "side": "B",
+    "centers_pcb_mm": [[40, 6], [40, 8], [40, 10], [40, 12], [40, 14]]
+  },
+  "part_overrides": {
+    "CT1": {"center_mm": [31.2, 21.4], "rotation_deg": 180},
+    "CT2": {"center_mm": [31.2, 19.9], "rotation_deg": 180},
+    "RT": {"center_mm": [31.2, 16.4], "rotation_deg": 90}
+  },
+  "mount_hole_centers_pcb_mm": [[58, 2.5], [40, 2.5]],
+  "contour_inward_rounding_radius_mm": 0.75,
+  "outline_cleanup": {
+    "additional_inset_mm": 0.01,
+    "simplification_mm": 0.003,
+    "minimum_segment_mm": 0.003
+  },
+  "maximum_bypass_pad_distance_mm": 3.0,
+  "via_to_paste_clearance_mm": 0.1,
+  "reference_positions_pcb_mm": {"J1R": [59.7, 12.7], "J1C": [59.7, 12.7]},
+  "tab": {
+    "width_mm": 7,
+    "stiffener_length_mm": 8,
+    "connector_mouth_local_y_mm": 4.4,
+    "conservative_tip_local_y_interval_mm": [-1.8, 0.9],
+    "contact_plane_selected": false
+  },
+  "notes": [
+    "Retain R2 and its rejected routing study. This is a new board revision.",
+    "Move the test mux and its bypass/test parts together; retain every electrical net and connector pose.",
+    "Keep actual library courtyard boundaries. Do not suppress courtyard findings.",
+    "Remove microscopic outline segments within an added inward allowance; remain inside the original contact-access envelope.",
+    "The pad-distance screen is a placement target. Actual short supply routing and a ground return must be checked after routing.",
+    "Recheck all fitted tails and carrier against this revision before replacing the prior fit package."
+  ]
+}

@@ -4,6 +4,7 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -21,12 +22,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("checked_directory", type=Path)
     parser.add_argument("routing", type=Path)
+    parser.add_argument("--name", choices=("f1_wrist", "f1_fanout_r3"), default="f1_wrist")
     args = parser.parse_args()
     checked, routing = args.checked_directory.resolve(), args.routing.resolve()
     if not all(p.is_relative_to(ROOT) for p in (checked, routing)):
         parser.error("Use repository-owned checked geometry")
     summary = json.loads((checked / "summary.json").read_text())
-    board = checked / "f1_wrist.kicad_pcb"
+    board = checked / (args.name+".kicad_pcb")
     if not summary["passed"] or digest(board) != summary["checked_pcb_sha256"]:
         raise ValueError("Use an unchanged, clean independent check")
     route = json.loads(routing.read_text())
@@ -58,7 +60,10 @@ def main():
                 item["exit_code"] = code
                 if code:
                     raise RuntimeError((folder / f"export_{index}.log").read_text()[-2000:])
-        lengths = route.get("inner_ground_layer_signal_length_mm", {})
+        lengths = {}
+        for track in route["tracks"]:
+            if track["layer"] == "In1.Cu" and track["net"] != "GND":
+                lengths[track["net"]] = lengths.get(track["net"], 0)+math.dist(track["start"], track["end"])
         report = {"schema": "yam-f1-inner-plane-review/1", "physical_evidence": False,
                   "checked_pcb_sha256": digest(board), "independent_check_sha256": digest(checked / "summary.json"),
                   "routing_sha256": digest(routing),

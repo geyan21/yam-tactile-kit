@@ -80,7 +80,10 @@ def main():
             if digest(path) != part["sha256_step"]:
                 raise ValueError("Tail CAD changed")
             tails.append((part["id"], cq.importers.importStep(str(path)).val(), pattern))
-        carrier_part = next(p for p in carrier_manifest["parts"] if p["id"] == "f1_r2_carrier")
+        carrier_parts = [p for p in carrier_manifest["parts"] if p["kind"] == "fabricate" and p["id"].endswith("_carrier")]
+        if len(carrier_parts) != 1:
+            raise ValueError("Expected exactly one identified carrier")
+        carrier_part = carrier_parts[0]
         carrier_path = carrier / carrier_part["step"]
         if digest(carrier_path) != carrier_part["sha256_step"]:
             raise ValueError("Carrier CAD changed")
@@ -133,7 +136,8 @@ def main():
                    xlabel="Native Y (mm)", ylabel="Native Z (mm)", zlabel="Native X (mm)")
             ax.set_box_aspect((117, 59, 45))
             ax.view_init(elev=25, azim=azimuth)
-        fig.suptitle("F1 nominal integration references · six sensor stacks, twelve tails, R2 board and carrier\n"
+        revision = carrier_manifest.get("board_revision", "r2").upper()
+        fig.suptitle(f"F1 nominal integration references · six sensor stacks, twelve tails, {revision} board and carrier\n"
                      "Fitted copper, connector cavities, stiffeners, slack and physical qualification remain")
         fig.tight_layout()
         for suffix in ("png", "svg", "pdf"):
@@ -141,6 +145,7 @@ def main():
         plt.close(fig)
         report = {
             "schema": "yam-f1-tail-fit-check/1", "physical_specimens_tested": 0,
+            "board_revision": revision,
             "complete_f1_assembly": False, "passed_declared_checks": not failures,
             "source_frame_conversion": source_check,
             "input_sha256": {str(path.relative_to(ROOT)): digest(path) for path in paths},

@@ -13,7 +13,37 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
-The current F1 mechanical checkpoint is `engineering/development/f1/mechanics/`:
+The latest F1 interface/fit module is `engineering/development/f1/r3/`.
+Its native R3 board has 42 components, 232 pads, 959 track segments and
+155 vias. Independent KiCad checking at
+`build/engineering/prototypes/f1/fanout_r3_checks/20261011T152916.383909Z`
+reports zero violations and zero missing connections. The same source was
+rechecked after packaging. In1.Cu contains no signal tracks; its actual
+filled plane was reviewed. All sixteen short sensor pickoffs, both VDD
+bypass paths and nearby ground paths are preserved. Minimum nominal
+via-to-paste gap is 0.115 mm, and the fifty cable pin correspondences pass.
+
+R3 moves UT and CT1/CT2/RT together, includes actual native courtyards in
+placement acceptance, cleans the inward board edge, names the mounting
+footprints, and fixes the two upper labels. Explicit connector escapes,
+extra planning clearance and specific verified cleanup replace the
+sub-minimum necks/unused transitions in the earlier routes. No DRC rule was
+suppressed. The rejected R2 study and intermediate R3 attempts are retained.
+
+R3's matching 44 CAD solids and twelve fit patterns have 654 passing nominal
+hardware-to-hardware comparisons. Their source/configuration chain is checked
+against the PCB placement. Twelve connector cavities/mating interfaces,
+fitted electrode copper, finished stiffeners, sealing, own-layer joins,
+object-approach envelopes, inextensible motion slack, full resistance/
+coupled-array/reference checks and every physical experiment remain.
+The current module checksum is
+`4c4645a2220a3e9013aca1ca2d63e1b17e6ec1d79c4fd29eef1576f7112cfa9f`.
+
+This completes another interface module, not the integrated F1 finger.
+Seven digital prototype packages remain available; the other four unfinished
+sensing designs and the common measured comparison remain in scope.
+
+The earlier F1 mechanical checkpoint is retained at `engineering/development/f1/mechanics/`:
 44 checked CAD solids, twelve printable fit patterns, individual surface
 unrolls, a clear sensor-placement drawing and a viewer model. Its 654 declared
 static comparisons pass; twelve connector cavities/mating interfaces, fitted

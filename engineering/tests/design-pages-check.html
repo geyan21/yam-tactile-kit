@@ -46,6 +46,9 @@
             item.group==="development"&&model.note.includes("Partial integration")&&
             model.components.filter(part=>part.group==="f1_stacks").length===24&&
             model.components.filter(part=>part.group==="f1_tails").length===12);
+          check("F1: current R3 interface is identified",
+            model.id==="f1_r3_assembly_reference"&&
+            d.querySelector('[data-design-layer="f1_board"]').parentElement.textContent==="R3 PCB fit reference");
         }
         const checkbox=d.querySelector("[data-design-layer]");
         const original=w.DesignPageViewer?.visible.size;

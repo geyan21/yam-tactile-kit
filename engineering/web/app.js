@@ -29,7 +29,7 @@
     nailbody:["N1 bare fork and sensing webs","#8c9ca4"],nailleft:["N1 left fixed carrier","#397d76"],
     nailright:["N1 right fixed carrier","#65a294"],nailgauges:["NL / NR foil-carrier locations","#d7aa47"],
     f1_stacks:["F1 film/electrode reference bodies","#74a3c6"],f1_tails:["F1 tail fit references","#bf9758"],
-    f1_board:["F1 R2 PCB fit reference","#689969"],f1_carrier:["F1 removable carrier","#7eacb4"],
+    f1_board:["F1 R3 PCB fit reference","#689969"],f1_carrier:["F1 removable carrier","#7eacb4"],
     f1_components:["F1 component envelopes","#667887"],f1_fastener_envelopes:["F1 reserved fasteners","#808a96"],
   };
   function choose(){

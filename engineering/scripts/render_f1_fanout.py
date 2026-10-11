@@ -28,12 +28,13 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("checked_directory", type=Path)
+    parser.add_argument("--name", choices=("f1_fanout", "f1_fanout_r3"), default="f1_fanout")
     args = parser.parse_args()
     source = args.checked_directory.resolve()
     if not source.is_relative_to(ROOT):
         parser.error("Use one repository-owned independent check")
     summary = json.loads((source / "summary.json").read_text())
-    manifest = source / "f1_fanout.json"
+    manifest = source / (args.name+".json")
     if not summary["passed"] or digest(manifest) != summary["source_manifest_sha256"]:
         raise ValueError("Select unchanged geometry from a clean independent check")
     board = json.loads(manifest.read_text())
@@ -80,7 +81,8 @@ def main():
                    aspect="equal", xlabel="PCB x = −native Y (mm)", ylabel="PCB y = 44 −native Z (mm)")
             ax.grid(alpha=.15)
             ax.set_title("Outer row face • F.Cu" if side == "F" else "Inner column face • B.Cu, viewed from the back")
-        fig.suptitle("F1 connector-board development • four copper layers • 42 components\n"
+        revision = " R3" if args.name.endswith("_r3") else ""
+        fig.suptitle(f"F1 connector-board{revision} development • four copper layers • 42 components\n"
                      "Independent DRC: 0 violations, 0 unconnected • no physical prototype tested", fontsize=13)
         fig.text(.5, .02, "Actual routed outer-layer copper; rectangular part envelopes. "
                  "KiCad assembly SVGs provide pad numbers and silkscreen. The inner ground pour is not pictured.",

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="15" y="12" font-family="sans-serif" font-size="5">f1_ch2_rows_fit</text>
+<text x="15" y="20" font-family="sans-serif" font-size="3.4">FIT PATTERN ONLY · NO COPPER ARTWORK · PRINT AT 100%</text>
+<text x="15" y="26" font-family="sans-serif" font-size="3.3">CH2 rows → J2R · view from F.Cu side</text>
+<path d="M63.14618,59.06409 L61.27018,55.61418 L59.98033,53.24220 L59.16740,52.37523 L55.25009,45.17143 L55.27644,45.15710 L49.20939,34.00000 L46.40245,35.52637 L46.25913,35.26282 L34.10515,41.87196 L40.31552,53.29261 L52.44315,46.69780 L52.46950,46.68347 L53.27343,46.24630 L57.19075,53.45010 L57.47657,54.60370 L58.76642,56.97568 L59.79608,58.86920 L27.56197,63.15996 L27.41150,63.18829 L27.26494,63.23260 L27.12398,63.29238 L26.99025,63.36693 L17.74025,69.19632 L17.62273,69.27893 L17.51414,69.37296 L17.41556,69.47744 L17.32800,69.59131 L17.25235,69.71342 L17.18937,69.84253 L17.13972,69.97732 L17.10389,70.11642 L17.08224,70.25842 L17.07500,70.40189 L17.07500,70.70189 L15.00000,74.65189 L15.00000,82.65189 L22.00000,82.65189 L22.00000,74.65189 L20.11694,71.06726 L28.24649,65.94398 L62.22565,61.42093 L62.36132,61.39614 L62.49397,61.35834 L62.62233,61.30790 L62.74523,61.24529 L62.86149,61.17109 L62.97003,61.08600 L63.06984,60.99081 L63.15998,60.88642 L63.23961,60.77380 L63.30797,60.65401 L63.36444,60.52818 L63.40847,60.39747 L63.43967,60.26312 L63.45772,60.12639 L63.46248,59.98854 L63.45389,59.85089 L63.43203,59.71471 L63.39710,59.58128 L63.34945,59.45185 L63.28950,59.32764 L63.14618,59.06409 L61.88309,59.75094 L63.14618,59.06409 Z" fill="#eef3e9" fill-rule="evenodd" stroke="#29464d" stroke-width=".15"/>
+<path d="M52.46950,46.68347 L40.31552,53.29261 L34.10515,41.87196 L46.25913,35.26282 L52.46950,46.68347 Z" fill="#d6e5bd" fill-rule="evenodd" stroke="#5c7754" stroke-width=".15"/>
+<polyline points="61.27018,55.61418 58.76642,56.97568" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<polyline points="63.14618,59.06409 60.64242,60.42559" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<rect x="15.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="16.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">1</text>
+<rect x="16.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="17.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">2</text>
+<rect x="17.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="18.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">3</text>
+<rect x="18.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="19.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">4</text>
+<rect x="19.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="20.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">5</text>
+<rect x="20.67500" y="76.35189" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="21.00000" y="84.85189" text-anchor="middle" font-family="sans-serif" font-size="1.7">6</text>
+<path d="M15 271v-2M15 270h50M65 271v-2" fill="none" stroke="#223b43" stroke-width=".25"/>
+<text x="15" y="277" font-family="sans-serif" font-size="3.2">50 mm scale bar · verify with a ruler</text>
+<text x="15" y="284" font-family="sans-serif" font-size="3.1">Dashed lines bound the 90° bend. Form around the radius; do not crease.</text>
+<text x="15" y="290" font-family="sans-serif" font-size="3.1">Connector datum, source join, bending slack and physical fit remain unverified.</text>
+</svg>

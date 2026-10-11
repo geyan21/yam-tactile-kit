@@ -236,6 +236,9 @@ def make_pattern(surface, route, cfg, exits, stack):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("tail_run", type=Path)
+    parser.add_argument("--route-config", type=Path,
+                        default=Path("engineering/designs/f1_tail_route_development.json"),
+                        help="Configuration path within the saved route run's inputs")
     args = parser.parse_args()
     source = args.tail_run.resolve()
     if not source.is_relative_to(ROOT):
@@ -244,7 +247,9 @@ def main():
     report = json.loads(report_path.read_text())
     if report["nominal_lanes_passed"] != 12:
         raise ValueError("Use a study with twelve nominal lanes")
-    route_path = source / "inputs/engineering/designs/f1_tail_route_development.json"
+    route_path = (source / "inputs" / args.route_config).resolve()
+    if not route_path.is_relative_to(source / "inputs"):
+        parser.error("Select a configuration captured inside this route run")
     cfg = json.loads(route_path.read_text())
     exits_path = source / "inputs" / cfg["exit_configuration"]
     exits = json.loads(exits_path.read_text())

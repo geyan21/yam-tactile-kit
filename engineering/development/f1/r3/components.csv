@@ -1,0 +1,43 @@
+reference,part_or_value,package,side,source,status
+J0R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J0C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC1,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC0,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+J1R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J1C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC3,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC2,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+J2R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J2C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC6,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC5,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC4,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+J3R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J3C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC9,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC8,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC7,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+J4R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J4C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC12,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC11,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC10,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+J5R,FH12-6S-1SH(1)(98),custom Hirose land pattern,F,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+J5C,FH12-6S-1SH(1)(98),custom Hirose land pattern,B,https://www.hirose.com/en/product/p/CL0528-0030-8-98,selected development IC/connector
+RKC15,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC14,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RKC13,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+JW,FH12-50S-0.5SH(55),Connector_FFC-FPC.pretty/Hirose_FH12-50S-0.5SH_1x50-1MP_P0.50mm_Horizontal.kicad_mod,F,https://www.hirose.com/en/product/p/CL0586-0529-2-55,selected development IC/connector
+UT,ADG706BRUZ,Package_SO.pretty/TSSOP-28_4.4x9.7mm_P0.65mm.kicad_mod,F,https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf,selected development IC/connector
+RKR0,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+RKR1,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+RKR2,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+RKR3,0 ohm sense pickoff,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+CT1,100 nF X7R 10 V,Capacitor_SMD.pretty/C_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+CT2,1 uF X7R 10 V,Capacitor_SMD.pretty/C_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+RT,10.0k 0.1% 25ppm/K,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,F,,passive value/package; supplier/lot and derating review remain
+RP0,100k,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RP1,100k,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RP2,100k,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RP3,100k,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain
+RP4,100k,Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod,B,,passive value/package; supplier/lot and derating review remain

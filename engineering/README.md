@@ -46,14 +46,21 @@ or a physical performance result.
 The [checked wrist-board module](development/f1/wrist/README.md) now includes
 its native PCB, fabrication files, drawings, cable checklist and firmware.
 Its 135-component board passes independent copper/connectivity DRC.
-The [F1 fit module](development/f1/mechanics/README.md) contains 44 checked
+The current [R3 interface and fit packet](development/f1/r3/README.md) adds a
+checked 42-component fanout with 959 tracks, 155 vias, zero native DRC findings
+and a reserved inner ground plane. Its local bypass/sense paths and fifty-pin
+correspondence are checked. It includes 44 matching CAD solids and twelve
+fit patterns; sensor copper, mating details, object/motion clearance and
+physical qualification remain unfinished.
+
+The earlier [R2 fit module](development/f1/mechanics/README.md) contains 44 checked
 CAD solids, twelve printable tail patterns, a sensor-placement drawing,
 an interactive-viewer model, and 654 passing declared static pair checks.
 Its connector cavities, stiffeners, fitted copper, tail slack and physical
 performance remain unqualified. The earlier crossing is retained with its
 two exact involved solids.
 
-Use [the current F1 build and fit guide](docs/BUILD_F1.md) for the student
+Use [the current F1 build and fit guide](docs/BUILD_F1.md) for the R3 student
 procedure. [F1 development](docs/F1_DEVELOPMENT.md) retains the historical
 circuit and layout checkpoints.
 

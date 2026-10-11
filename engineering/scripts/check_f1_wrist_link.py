@@ -43,14 +43,17 @@ def unrotated_contacts(folder, name):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("wrist_directory", type=Path)
+    parser.add_argument("--fanout", type=Path, default=FANOUT)
+    parser.add_argument("--fanout-name", choices=("f1_fanout", "f1_fanout_r3"), default="f1_fanout")
     args = parser.parse_args()
     wrist_folder = args.wrist_directory.resolve()
-    if not wrist_folder.is_relative_to(ROOT):
+    fanout_folder = args.fanout.resolve()
+    if not wrist_folder.is_relative_to(ROOT) or not fanout_folder.is_relative_to(ROOT):
         parser.error("Use a repository-owned wrist board")
     folder = ROOT / "build/engineering/prototypes/f1/mating_checks" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     with execution(ROOT / "build/records", "Check fifty native FFC pin identities for a stated same-side-contact cable inspection pose; no claim of physical continuity or installed cable fit") as record:
         folder.mkdir(parents=True, exist_ok=False)
-        fanout, fp, first = unrotated_contacts(FANOUT, "f1_fanout")
+        fanout, fp, first = unrotated_contacts(fanout_folder, args.fanout_name)
         wrist, wp, second = unrotated_contacts(wrist_folder, "f1_wrist")
         if fp["value"] != wp["value"]:
             raise ValueError("The contract assumes identical bottom-contact connector parts")

@@ -252,7 +252,7 @@ def main():
         for path in sorted((ROOT/"engineering/prototypes").glob("*/models.json")):
             prototype_models.extend(json.loads(path.read_text()))
             prototype_plans[path.parent.name]=json.loads((path.parent/f"{path.parent.name}_manifest.json").read_text())
-        development_models=json.loads((ROOT/"engineering/development/f1/mechanics/models.json").read_text())
+        development_models=json.loads((ROOT/"engineering/development/f1/r3/models.json").read_text())
         payload={
             "models":[r1_models[0],b1_models[0],*prototype_models,*development_models,*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
             "r1":json.loads((RELEASE/"r1/r1_manifest.json").read_text()),
@@ -331,7 +331,7 @@ def main():
             "purchased_reference_solids":3,
             "additional_prototype_reference_solids":sum(p.get("kind")=="reference_only" for plan in prototype_plans.values() for p in plan["parts"]),
             "separate_concept_solids":2,
-            "f1_development_fit_solids":json.loads((ROOT/"engineering/development/f1/mechanics/checkpoint.json").read_text())["cad_solids"],
+            "f1_development_fit_solids":json.loads((ROOT/"engineering/development/f1/r3/checkpoint.json").read_text())["cad_solids"],
             "documents":len(DOCS)+len(catalog["designs"]),"design_pages":len(catalog["designs"]),
             "requested_per_finger_force_n":20,
             "physical_specimens_tested":payload["study"]["physical_specimens_tested"],

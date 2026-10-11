@@ -51,7 +51,7 @@ def emit(node):
     return "("+" ".join(emit(value) for value in node)+")"
 
 
-def row_rules(text, omit_component_drawings=False):
+def row_rules(text, omit_component_drawings=False, planning_clearance_mm=None):
     tree = parse(text)
     unit = next(item for item in tree if isinstance(item, list) and item[0] == "unit")
     if unit != ["unit", "um"]:
@@ -84,7 +84,15 @@ def row_rules(text, omit_component_drawings=False):
         raise ValueError("Signal rule is not the exported 0.15 mm target")
     width[1] = "500"
     default[:] = [item for item in default if not isinstance(item, str) or item not in rows]
-    network.append(["class", "F1_ROWS", *rows, *options])
+    row_class = ["class", "F1_ROWS", *rows, *options]
+    network.append(row_class)
+    if planning_clearance_mm is not None:
+        if not .15 <= planning_clearance_mm <= .3:
+            raise ValueError("Planning clearance must preserve or strengthen the 0.15 mm requirement")
+        for net_class in (default, row_class):
+            rules = next(item for item in net_class if isinstance(item, list) and item[0] == "rule")
+            clearance = next(item for item in rules[1:] if item[0] == "clearance")
+            clearance[1] = f"{planning_clearance_mm*1000:g}"
     if [item for item in network[1:] if item[0] == "net"] != nets_before:
         raise ValueError("Rule adjustment changed a net or pin membership")
     if structure != structure_before:
@@ -92,6 +100,7 @@ def row_rules(text, omit_component_drawings=False):
     result = emit(tree).replace("(string_quote __DOUBLE_QUOTE__)", '(string_quote ")')+"\n"
     return result, {"nets_preserved": len(nets_before), "row_current_width_mm": .5,
                     "signal_width_mm": .15, "clearance_mm": .15,
+                    "planning_clearance_mm": planning_clearance_mm or .15,
                     "row_nets": rows, "no_ignored_net_classes": True,
                     "nonrouting_component_drawings_omitted": omitted,
                     "board_boundary_and_keepouts_unchanged": True,
@@ -105,6 +114,11 @@ def main():
     parser.add_argument("--seconds", type=int, default=240)
     parser.add_argument("--omit-component-drawings", action="store_true")
     parser.add_argument("--jvm-bundle", action="store_true")
+    parser.add_argument("--name", choices=("f1_fanout_r2", "f1_fanout_r3"), default="f1_fanout_r2")
+    parser.add_argument("--no-neckdown", action="store_true")
+    parser.add_argument("--no-optimize", action="store_true")
+    parser.add_argument("--planning-clearance-mm", type=float)
+    parser.add_argument("--reserve-ground-layer", action="store_true")
     args = parser.parse_args()
     source = args.export_directory.resolve()
     if not source.is_relative_to(ROOT / "build") or not 30 <= args.seconds <= 600:
@@ -130,7 +144,7 @@ def main():
                          "java_options": environment["JAVA_TOOL_OPTIONS"]}
     elif digest(BINARY) != BINARY_SHA:
         raise ValueError("Native router differs from the checked official release")
-    dsn_path = source / "f1_fanout_r2.dsn"
+    dsn_path = source / (args.name+".dsn")
     exported = json.loads((source / "report.json").read_text())
     if digest(dsn_path) != exported["dsn_sha256"]:
         raise ValueError("Native export changed")
@@ -139,16 +153,32 @@ def main():
         folder.mkdir(parents=True, exist_ok=False)
         for path in (dsn_path, source / "report.json", Path(__file__)):
             shutil.copyfile(path, folder / ("source_"+path.name))
-        changed, rules = row_rules(dsn_path.read_text(), args.omit_component_drawings)
-        target = folder / "f1_r2_input.dsn"
+        changed, rules = row_rules(dsn_path.read_text(), args.omit_component_drawings, args.planning_clearance_mm)
+        stem = "f1_r2" if args.name == "f1_fanout_r2" else "f1_r3"
+        target = folder / (stem+"_input.dsn")
         target.write_text(changed)
         (folder / "rules.json").write_text(json.dumps(rules, indent=2)+"\n")
-        output = folder / "f1_r2_output.ses"
+        output = folder / (stem+"_output.ses")
         command = [str(executable), "-de", str(target), "-do", str(output),
                    "--gui.enabled=false", "--api_server.enabled=false", "-da",
                    "--user_data_path="+str(folder / "tool-data"),
                    "--logging.file.location="+str(folder / "tool-logs"),
                    "--router.autorouter.max_passes=30", "-mt", "1", "-l", "en"]
+        if args.no_neckdown:
+            command.append("--router.automatic_neckdown=false")
+        if args.no_optimize:
+            command.append("--router.optimizer.enabled=false")
+        if args.reserve_ground_layer:
+            tree = parse(dsn_path.read_text())
+            structure = next(item for item in tree if isinstance(item, list) and item[0] == "structure")
+            layers = [item[1] for item in structure if isinstance(item, list) and item[0] == "layer"]
+            if layers != ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"]:
+                raise ValueError("Review routing-layer order before reserving the ground layer")
+            command.append("--router.layers.routable=true,false,true,true")
+        rules["automatic_neckdown_disabled"] = args.no_neckdown
+        rules["optimization_enabled"] = not args.no_optimize
+        rules["reserved_ground_layer"] = "In1.Cu" if args.reserve_ground_layer else None
+        (folder / "rules.json").write_text(json.dumps(rules, indent=2)+"\n")
         started = time.monotonic()
         with (folder / "router.log").open("w") as stream:
             process = subprocess.Popen(command, cwd=folder, env=environment, stdout=stream, stderr=subprocess.STDOUT)

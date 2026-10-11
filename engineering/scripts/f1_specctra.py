@@ -24,13 +24,14 @@ def main():
     parser.add_argument("output", type=Path)
     parser.add_argument("--session", type=Path)
     parser.add_argument("--normalize-empty-component", action="store_true")
+    parser.add_argument("--name", choices=("f1_fanout_r2", "f1_fanout_r3"), default="f1_fanout_r2")
     args = parser.parse_args()
     source, output = args.board_directory.resolve(), args.output.resolve()
     if not source.is_relative_to(ROOT) or not output.is_relative_to(ROOT / "build"):
         parser.error("Use repository-owned source and generated output")
     if output.exists():
         parser.error("Use a fresh output folder")
-    name = "f1_fanout_r2"
+    name = args.name
     pcb_path = source / (name+".kicad_pcb")
     manifest_path = source / (name+".json")
     manifest = json.loads(manifest_path.read_text())
@@ -47,10 +48,11 @@ def main():
             default.SetTrackWidth(pcb.FromMM(.15))
             default.SetViaDiameter(pcb.FromMM(.45))
             default.SetViaDrill(pcb.FromMM(.2))
-            target = output / "f1_fanout_r2.dsn"
+            target = output / (name+".dsn")
             if not pcb.ExportSpecctraDSN(board, str(target)):
                 raise RuntimeError("Native DSN export failed")
             report = {"schema": "yam-f1-specctra-export/1", "source_pcb_sha256": digest(pcb_path),
+                      "board_name": name,
                       "dsn_sha256": digest(target), "kicad": pcb.GetBuildVersion(),
                       "source_manifest_sha256": digest(manifest_path),
                       "note": "Default 0.15 mm signal width/clearance, 0.45 mm via/0.20 mm drill. Per-row widths and fabrication acceptance require the recorded routing rules and independent checks."}
@@ -115,7 +117,7 @@ def main():
                      "physical_boards_tested": 0, "session_sha256": digest(session),
                      "source_pcb_sha256": digest(pcb_path)}
             (output / "routing.json").write_text(json.dumps(route, indent=2)+"\n")
-            pcb.SaveBoard(str(output / "imported_f1_fanout_r2.kicad_pcb"), board)
+            pcb.SaveBoard(str(output / ("imported_"+name+".kicad_pcb")), board)
             report = {"schema": "yam-f1-specctra-import/1", "source_pcb_sha256": digest(pcb_path),
                       "session_sha256": digest(session), "tracks": len(tracks), "vias": len(vias),
                       "original_session_sha256": raw_session_sha,

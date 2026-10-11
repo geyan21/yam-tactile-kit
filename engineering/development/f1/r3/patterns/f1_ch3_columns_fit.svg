@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="15" y="12" font-family="sans-serif" font-size="5">f1_ch3_columns_fit</text>
+<text x="15" y="20" font-family="sans-serif" font-size="3.4">FIT PATTERN ONLY · NO COPPER ARTWORK · PRINT AT 100%</text>
+<text x="15" y="26" font-family="sans-serif" font-size="3.3">CH3 columns → J3C · view from F.Cu side</text>
+<path d="M26.71583,103.99623 L17.22828,91.42053 L17.46777,91.23985 L15.00000,87.96883 L25.13838,80.32009 L25.15645,80.34404 L31.70248,75.40548 L32.43985,74.47339 L35.16058,72.42077 L31.58566,42.42501 L29.43724,40.49142 L29.43724,47.67428 L22.43724,47.67428 L22.43724,39.67428 L24.51224,35.72428 L24.51224,35.42428 L24.51938,35.28180 L24.54073,35.14074 L24.57608,35.00253 L24.62507,34.86854 L24.68722,34.74012 L24.76189,34.61856 L24.84835,34.50508 L24.94571,34.40080 L25.05302,34.30679 L25.16919,34.22398 L25.29306,34.15320 L25.42338,34.09516 L25.55885,34.05044 L25.69812,34.01949 L25.83978,34.00262 L25.98242,34.00000 L26.12461,34.01166 L26.26492,34.03747 L26.40194,34.07719 L26.53431,34.13040 L26.66069,34.19659 L26.77983,34.27508 L26.89051,34.36509 L33.89051,40.66509 L33.99414,40.76847 L34.08662,40.88193 L34.16696,41.00429 L34.23434,41.13424 L34.28802,41.27041 L34.32746,41.41138 L34.35222,41.55564 L38.08746,72.89656 L38.09707,73.03129 L38.09388,73.16633 L38.07791,73.30046 L38.04932,73.43248 L38.00836,73.56119 L37.95540,73.68545 L37.89091,73.80414 L37.81547,73.91619 L37.72976,74.02059 L37.63455,74.11640 L37.53069,74.20277 L37.29121,74.38345 L37.29121,74.38345 L34.15630,76.74853 L33.05758,77.20165 L26.51154,82.14021 L27.60614,83.59110 L27.62421,83.61505 L37.09369,96.16681 L26.71583,103.99623 Z M35.68917,72.25996 L35.68917,72.25996 L36.22318,72.96779 L35.68917,72.25996 Z" fill="#eef3e9" fill-rule="evenodd" stroke="#29464d" stroke-width=".15"/>
+<path d="M37.09369,96.16681 L27.60614,83.59110 L17.22828,91.42053 L26.71583,103.99623 L37.09369,96.16681 Z" fill="#d6e5bd" fill-rule="evenodd" stroke="#5c7754" stroke-width=".15"/>
+<polyline points="34.15630,76.74853 32.43985,74.47339" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<polyline points="37.29121,74.38345 35.57475,72.10830" fill="none" stroke="#ac6436" stroke-width=".2" stroke-dasharray="1 .7"/>
+<rect x="23.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="23.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">1</text>
+<rect x="24.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="24.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">2</text>
+<rect x="25.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="25.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">3</text>
+<rect x="26.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="26.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">4</text>
+<rect x="27.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="27.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">5</text>
+<rect x="28.11224" y="41.37428" width=".65" height="6" fill="none" stroke="#8a9296" stroke-width=".1"/>
+<text x="28.43724" y="49.87428" text-anchor="middle" font-family="sans-serif" font-size="1.7">6</text>
+<path d="M15 271v-2M15 270h50M65 271v-2" fill="none" stroke="#223b43" stroke-width=".25"/>
+<text x="15" y="277" font-family="sans-serif" font-size="3.2">50 mm scale bar · verify with a ruler</text>
+<text x="15" y="284" font-family="sans-serif" font-size="3.1">Dashed lines bound the 90° bend. Form around the radius; do not crease.</text>
+<text x="15" y="290" font-family="sans-serif" font-size="3.1">Connector datum, source join, bending slack and physical fit remain unverified.</text>
+</svg>

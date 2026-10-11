@@ -50,7 +50,7 @@
     {"id": "C1", "slug": "c1", "development": "C1.1 digital prototype package completed; fit, machining, gauge bonding, assembly and measurements pending", "physical_evidence": "missing"},
     {"id": "NAIL", "slug": "rigid-nail", "development": "N1.1 digital prototype package completed; fit, machining, gauge bonding, complete assembly and physical tests pending", "physical_evidence": "missing"},
     {"id": "RECESSED", "slug": "recessed-magnetic", "development": "B3.1 digital prototype package completed; actual drive/cable motion, frame stiffness, assembly and physical force/contact tests pending", "physical_evidence": "missing"},
-    {"id": "F1", "slug": "flexible-matrix", "development": "design array stack, artwork, readout and shaped finger integration", "physical_evidence": "missing"},
+    {"id": "F1", "slug": "flexible-matrix", "development": "R3 interface PCB and nominal fit packet checked; complete fitted sensor copper, mating/stiffeners, object/motion envelopes, sealing, slack, full-array checks and physical comparison", "physical_evidence": "missing"},
     {"id": "CAPACITIVE", "slug": "capacitive", "development": "design shielded compression cells, readout and finger integration", "physical_evidence": "missing"},
     {"id": "PNEUMATIC", "slug": "pneumatic", "development": "design chambers, sealing, pressure readout and nail coverage", "physical_evidence": "missing"},
     {"id": "O1", "slug": "optical", "development": "design optical path, sensing surface, camera processing and nail coverage", "physical_evidence": "missing"},

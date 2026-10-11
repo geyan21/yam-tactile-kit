@@ -62,8 +62,9 @@ def main():
     stack = json.loads(STACK.read_text())
     spec_path = source / "specification.json"
     spec = json.loads(spec_path.read_text())
-    if spec["name"] != "f1_fanout_r2":
-        raise ValueError("The carrier matches only the separate R2 board")
+    revision = cfg.get("board_revision", "r2")
+    if revision not in ("r2", "r3") or spec["name"] != "f1_fanout_"+revision:
+        raise ValueError("Carrier configuration does not match the board revision")
     if not json.loads((source / "placement_check.json").read_text())["passed"]:
         raise ValueError("Resolve the R2 placement findings first")
     hard_path = ROOT / stack["basis"]["hard_frame"]
@@ -132,8 +133,8 @@ def main():
                                         y, z, hole["diameter_mm"]/2))
         parts, models = [], []
         for name, shape, kind, material, color in (
-                ("f1_r2_carrier", carrier, "fabricate", cfg["material"], "#7eacb4"),
-                ("f1_r2_pcb_fit_reference", board, "reference_only", "1 mm FR4 reference; use independently checked PCB artwork for electronics", "#689969")):
+                (f"f1_{revision}_carrier", carrier, "fabricate", cfg["material"], "#7eacb4"),
+                (f"f1_{revision}_pcb_fit_reference", board, "reference_only", "1 mm FR4 reference; use independently checked PCB artwork for electronics", "#689969")):
             mesh = export_part(shape, name, folder, parts, name.replace("_", " "), material, kind)
             models.append(packed(mesh, name, "carrier" if kind == "fabricate" else "board", color))
         fastener_shapes, fastener_rows = [], []
@@ -197,14 +198,15 @@ def main():
                    xlabel="Native Y (mm)", ylabel="Native Z (mm)", zlabel="Native X (mm)")
             ax.set_box_aspect((115, 54, 46))
             ax.view_init(elev=22, azim=azimuth)
-        fig.suptitle("F1 R2 removable carrier · actual source frame and component envelopes\n"
+        fig.suptitle(f"F1 {revision.upper()} removable carrier · actual source frame and component envelopes\n"
                      "Flexible tails, cable, drive housing and physical fit are not yet included")
         fig.tight_layout()
         for suffix in ("png", "svg", "pdf"):
             fig.savefig(folder / ("carrier_assembly."+suffix), dpi=160)
         plt.close(fig)
         report = {
-            "schema": "yam-f1-r2-carrier/1", "passed_declared_static_checks": not failures,
+            "schema": "yam-f1-"+revision+"-carrier/1", "board_revision": revision,
+            "passed_declared_static_checks": not failures,
             "physical_specimens_tested": 0, "complete_f1_assembly": False,
             "input_sha256": {str(path.relative_to(ROOT)): digest(path) for path in inputs+[hard_path]},
             "parts": parts, "source_supports": support_rows,
