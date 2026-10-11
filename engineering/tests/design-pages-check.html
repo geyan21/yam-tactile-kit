@@ -50,6 +50,17 @@
             model.id==="f1_r3_assembly_reference"&&
             d.querySelector('[data-design-layer="f1_board"]').parentElement.textContent==="R3 PCB fit reference");
         }
+        if(item.id==="FORCE_BUTTON"){
+          const model=w.DesignPageViewer?.model;
+          check("FB1: original finger and four guides are visible",
+            model.components.filter(part=>part.group==="leaves").length===4&&
+            model.components.some(part=>part.group==="frame")&&model.components.some(part=>part.group==="tpu"));
+          check("FB1: force sensor is distinct from the monitoring ADC",
+            model.components.filter(part=>part.group==="sensor").length===1&&
+            d.querySelector('[data-design-layer="pcb"]').parentElement.textContent==="FMA sensor PCB"&&
+            d.querySelector(".design-sensor-table").textContent.includes("FMAMSDXX025WC2C3")&&
+            d.querySelector(".design-sensor-table").textContent.includes("0x48"));
+        }
         const checkbox=d.querySelector("[data-design-layer]");
         const original=w.DesignPageViewer?.visible.size;
         checkbox.click();w.DesignPageViewer.draw();

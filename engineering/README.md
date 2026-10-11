@@ -4,7 +4,7 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Seven have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, and **B3.1** a recessed magnetic board. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Eight have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, and **FB1.1** a packaged force button at the root. All require physical assembly and testing.
 
 **Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans. F1 adds a separately labeled development and mechanical-fit packet.
 
@@ -64,6 +64,14 @@ a checked 23-component readout board and raw firmware/recording code. Its
 eighteen declared support-fit comparisons pass. Electrode fabrication,
 retention, vents, cables, enclosure and physical force/contact testing remain.
 Use [the K1 guide](docs/BUILD_CAPACITIVE.md) for exact scope and next steps.
+
+The [FB1.1 force-button prototype](prototypes/force_button/README.md) supplies
+54 CAD parts/references, a checked two-layer FMA board, raw Pico acquisition,
+static calibration tools and a bonded-metal structural comparison. Its
+current guides are 0.50 mm spring steel. The earlier 0.40 mm study is retained
+because it lacked margin for the provisional motion target.
+Use [the FB1 build guide](docs/BUILD_FORCE_BUTTON.md) and
+[physical test procedure](docs/FORCE_BUTTON_TESTING.md).
 
 The earlier [R2 fit module](development/f1/mechanics/README.md) contains 44 checked
 CAD solids, twelve printable tail patterns, a sensor-placement drawing,

@@ -1,0 +1,1254 @@
+{
+  "schema": "yam-fb1-native-board/1",
+  "name": "fb1_sensor",
+  "parts": [
+    {
+      "reference": "U1",
+      "value": "FMAMSDXX025WC2C3",
+      "footprint": "Honeywell_FMA_25N_I2C",
+      "center_mm": [
+        7,
+        7
+      ],
+      "rotation_deg": 0,
+      "nets": {
+        "1": "VDD_REMOTE",
+        "2": "",
+        "3": "GND_REMOTE",
+        "4": "SCL",
+        "5": "SDA",
+        "6": ""
+      },
+      "pads": [
+        {
+          "pad": "1",
+          "center_mm": [
+            -0.38,
+            -1.7
+          ],
+          "size_mm": [
+            1.5,
+            1.2
+          ]
+        },
+        {
+          "pad": "2",
+          "center_mm": [
+            2.16,
+            -1.7
+          ],
+          "size_mm": [
+            1.5,
+            1.2
+          ]
+        },
+        {
+          "pad": "3",
+          "center_mm": [
+            2.16,
+            1.7
+          ],
+          "size_mm": [
+            1.5,
+            1.2
+          ]
+        },
+        {
+          "pad": "4",
+          "center_mm": [
+            -0.38,
+            1.7
+          ],
+          "size_mm": [
+            1.5,
+            1.2
+          ]
+        },
+        {
+          "pad": "5",
+          "center_mm": [
+            2.59,
+            0
+          ],
+          "size_mm": [
+            1.2,
+            1.5
+          ]
+        },
+        {
+          "pad": "6",
+          "center_mm": [
+            -0.97,
+            0
+          ],
+          "size_mm": [
+            1.0,
+            1.73
+          ]
+        }
+      ],
+      "body_bounds_mm": [
+        -1.61,
+        -2.5,
+        3.39,
+        2.5
+      ],
+      "courtyard_bounds_mm": [
+        -1.86,
+        -2.75,
+        3.64,
+        2.75
+      ],
+      "vent_diameter_mm": 0.45,
+      "source": "Honeywell FMA data sheet 32347833, Figure 3 recommended land pattern and Table 6, reviewed 2026-10-11"
+    },
+    {
+      "reference": "C1",
+      "value": "100nF 16V X7R",
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "center_mm": [
+        3.5,
+        5.3
+      ],
+      "rotation_deg": 180,
+      "nets": {
+        "1": "VDD_REMOTE",
+        "2": "GND_REMOTE"
+      }
+    },
+    {
+      "reference": "C2",
+      "value": "1uF 16V X7R; effective capacitance to be verified",
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "center_mm": [
+        3.5,
+        8
+      ],
+      "rotation_deg": 180,
+      "nets": {
+        "1": "VDD_REMOTE",
+        "2": "GND_REMOTE"
+      }
+    },
+    {
+      "reference": "JW",
+      "value": "Six separate soldered cable conductors",
+      "footprint": "FB1_Wire_Port",
+      "center_mm": [
+        0,
+        0
+      ],
+      "rotation_deg": 0,
+      "nets": {
+        "1": "VDD_REMOTE",
+        "2": "GND_REMOTE",
+        "3": "SDA",
+        "4": "SCL",
+        "5": "VDD_REMOTE",
+        "6": "GND_REMOTE"
+      },
+      "pads": [
+        {
+          "pad": "1",
+          "center_mm": [
+            4.5,
+            16
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        },
+        {
+          "pad": "2",
+          "center_mm": [
+            4.5,
+            18
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        },
+        {
+          "pad": "3",
+          "center_mm": [
+            6.5,
+            16
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        },
+        {
+          "pad": "4",
+          "center_mm": [
+            6.5,
+            18
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        },
+        {
+          "pad": "5",
+          "center_mm": [
+            8.5,
+            16
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        },
+        {
+          "pad": "6",
+          "center_mm": [
+            8.5,
+            18
+          ],
+          "size_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_mm": 0.6
+        }
+      ],
+      "body_bounds_mm": [
+        3.6,
+        15.1,
+        9.4,
+        18.9
+      ],
+      "courtyard_bounds_mm": [
+        3.35,
+        14.85,
+        9.65,
+        19.15
+      ]
+    }
+  ],
+  "pads": [
+    {
+      "reference": "U1",
+      "pad": "6",
+      "net": "",
+      "center": [
+        6.03,
+        7.0
+      ],
+      "size": [
+        1.0,
+        1.73
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "U1",
+      "pad": "5",
+      "net": "SDA",
+      "center": [
+        9.59,
+        7.0
+      ],
+      "size": [
+        1.2,
+        1.5
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "U1",
+      "pad": "4",
+      "net": "SCL",
+      "center": [
+        6.62,
+        8.7
+      ],
+      "size": [
+        1.5,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "U1",
+      "pad": "3",
+      "net": "GND_REMOTE",
+      "center": [
+        9.16,
+        8.7
+      ],
+      "size": [
+        1.5,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "U1",
+      "pad": "2",
+      "net": "",
+      "center": [
+        9.16,
+        5.3
+      ],
+      "size": [
+        1.5,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "U1",
+      "pad": "1",
+      "net": "VDD_REMOTE",
+      "center": [
+        6.62,
+        5.3
+      ],
+      "size": [
+        1.5,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 1,
+      "paste": true
+    },
+    {
+      "reference": "C1",
+      "pad": "1",
+      "net": "VDD_REMOTE",
+      "center": [
+        4.275,
+        5.3
+      ],
+      "size": [
+        0.9,
+        0.95
+      ],
+      "rotation": 180.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 4,
+      "paste": true
+    },
+    {
+      "reference": "C1",
+      "pad": "2",
+      "net": "GND_REMOTE",
+      "center": [
+        2.725,
+        5.3
+      ],
+      "size": [
+        0.9,
+        0.95
+      ],
+      "rotation": 180.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 4,
+      "paste": true
+    },
+    {
+      "reference": "C2",
+      "pad": "1",
+      "net": "VDD_REMOTE",
+      "center": [
+        4.275,
+        8.0
+      ],
+      "size": [
+        0.9,
+        0.95
+      ],
+      "rotation": 180.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 4,
+      "paste": true
+    },
+    {
+      "reference": "C2",
+      "pad": "2",
+      "net": "GND_REMOTE",
+      "center": [
+        2.725,
+        8.0
+      ],
+      "size": [
+        0.9,
+        0.95
+      ],
+      "rotation": 180.0,
+      "layers": [
+        "F.Cu"
+      ],
+      "drill": 0.0,
+      "native_shape": 4,
+      "paste": true
+    },
+    {
+      "reference": "JW",
+      "pad": "6",
+      "net": "GND_REMOTE",
+      "center": [
+        8.5,
+        18.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 0,
+      "paste": false
+    },
+    {
+      "reference": "JW",
+      "pad": "5",
+      "net": "VDD_REMOTE",
+      "center": [
+        8.5,
+        16.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 0,
+      "paste": false
+    },
+    {
+      "reference": "JW",
+      "pad": "4",
+      "net": "SCL",
+      "center": [
+        6.5,
+        18.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 0,
+      "paste": false
+    },
+    {
+      "reference": "JW",
+      "pad": "3",
+      "net": "SDA",
+      "center": [
+        6.5,
+        16.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 0,
+      "paste": false
+    },
+    {
+      "reference": "JW",
+      "pad": "2",
+      "net": "GND_REMOTE",
+      "center": [
+        4.5,
+        18.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 0,
+      "paste": false
+    },
+    {
+      "reference": "JW",
+      "pad": "1",
+      "net": "VDD_REMOTE",
+      "center": [
+        4.5,
+        16.0
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "rotation": 0.0,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "drill": 0.6,
+      "native_shape": 1,
+      "paste": false
+    }
+  ],
+  "outline_xy_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      14,
+      20
+    ],
+    [
+      0,
+      20
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "thickness_mm": 1.0,
+  "holes": [
+    {
+      "center_mm": [
+        2,
+        2
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_diameter_mm": 4.8
+    },
+    {
+      "center_mm": [
+        12,
+        12
+      ],
+      "diameter_mm": 2.2,
+      "copper_keepout_diameter_mm": 4.8
+    },
+    {
+      "center_mm": [
+        7,
+        7
+      ],
+      "diameter_mm": 0.45,
+      "copper_keepout_diameter_mm": 0.85,
+      "purpose": "Sensor reference vent"
+    }
+  ],
+  "clearance_mm": 0.2,
+  "edge_mm": 0.25,
+  "tracks": [
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        6.62,
+        5.3
+      ],
+      "end": [
+        4.275,
+        5.3
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        4.275,
+        5.3
+      ],
+      "end": [
+        4.275,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        2.725,
+        5.3
+      ],
+      "end": [
+        2.725,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SCL",
+      "start": [
+        6.5,
+        18.0
+      ],
+      "end": [
+        6.5,
+        17.7
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SCL",
+      "start": [
+        6.5,
+        17.7
+      ],
+      "end": [
+        7.450000000000001,
+        16.75
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SCL",
+      "start": [
+        7.450000000000001,
+        16.75
+      ],
+      "end": [
+        7.450000000000001,
+        9.55
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SCL",
+      "start": [
+        7.450000000000001,
+        9.55
+      ],
+      "end": [
+        6.6000000000000005,
+        8.700000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SCL",
+      "start": [
+        6.6000000000000005,
+        8.700000000000001
+      ],
+      "end": [
+        6.62,
+        8.7
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        6.5,
+        16.0
+      ],
+      "end": [
+        6.5,
+        10.100000000000001
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        6.5,
+        10.100000000000001
+      ],
+      "end": [
+        8.600000000000001,
+        8.0
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        8.600000000000001,
+        8.0
+      ],
+      "end": [
+        8.600000000000001,
+        7.6
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        8.600000000000001,
+        7.6
+      ],
+      "end": [
+        9.0,
+        7.6
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        9.0,
+        7.6
+      ],
+      "end": [
+        9.600000000000001,
+        7.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "SDA",
+      "start": [
+        9.600000000000001,
+        7.0
+      ],
+      "end": [
+        9.59,
+        7.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.16,
+        8.7
+      ],
+      "end": [
+        9.15,
+        8.700000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.15,
+        8.700000000000001
+      ],
+      "end": [
+        8.600000000000001,
+        8.700000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        8.600000000000001,
+        8.700000000000001
+      ],
+      "end": [
+        7.800000000000001,
+        7.9
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        7.800000000000001,
+        7.9
+      ],
+      "end": [
+        4.050000000000001,
+        7.9
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        4.050000000000001,
+        7.9
+      ],
+      "end": [
+        3.4000000000000004,
+        7.25
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        3.4000000000000004,
+        7.25
+      ],
+      "end": [
+        3.4000000000000004,
+        7.300000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        3.4000000000000004,
+        7.300000000000001
+      ],
+      "end": [
+        2.7,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        2.7,
+        8.0
+      ],
+      "end": [
+        2.725,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        8.5,
+        18.0
+      ],
+      "end": [
+        8.5,
+        17.7
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        8.5,
+        17.7
+      ],
+      "end": [
+        9.450000000000001,
+        16.75
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.450000000000001,
+        16.75
+      ],
+      "end": [
+        9.450000000000001,
+        13.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.450000000000001,
+        13.0
+      ],
+      "end": [
+        9.4,
+        12.950000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.4,
+        12.950000000000001
+      ],
+      "end": [
+        9.4,
+        12.850000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.4,
+        12.850000000000001
+      ],
+      "end": [
+        9.350000000000001,
+        12.8
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.350000000000001,
+        12.8
+      ],
+      "end": [
+        9.350000000000001,
+        12.65
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.350000000000001,
+        12.65
+      ],
+      "end": [
+        9.3,
+        12.600000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.3,
+        12.600000000000001
+      ],
+      "end": [
+        9.3,
+        12.4
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.3,
+        12.4
+      ],
+      "end": [
+        9.25,
+        12.350000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.25,
+        12.350000000000001
+      ],
+      "end": [
+        9.25,
+        8.8
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.25,
+        8.8
+      ],
+      "end": [
+        9.15,
+        8.700000000000001
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        9.15,
+        8.700000000000001
+      ],
+      "end": [
+        9.16,
+        8.7
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        4.5,
+        18.0
+      ],
+      "end": [
+        4.800000000000001,
+        18.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        4.800000000000001,
+        18.0
+      ],
+      "end": [
+        5.75,
+        18.950000000000003
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        5.75,
+        18.950000000000003
+      ],
+      "end": [
+        7.550000000000001,
+        18.950000000000003
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "GND_REMOTE",
+      "start": [
+        7.550000000000001,
+        18.950000000000003
+      ],
+      "end": [
+        8.5,
+        18.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        4.5,
+        16.0
+      ],
+      "end": [
+        4.5,
+        8.25
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        4.5,
+        8.25
+      ],
+      "end": [
+        4.25,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        4.25,
+        8.0
+      ],
+      "end": [
+        4.275,
+        8.0
+      ],
+      "layer": "F.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        8.5,
+        16.0
+      ],
+      "end": [
+        8.200000000000001,
+        16.0
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        8.200000000000001,
+        16.0
+      ],
+      "end": [
+        7.25,
+        16.95
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        7.25,
+        16.95
+      ],
+      "end": [
+        5.45,
+        16.95
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    },
+    {
+      "net": "VDD_REMOTE",
+      "start": [
+        5.45,
+        16.95
+      ],
+      "end": [
+        4.5,
+        16.0
+      ],
+      "layer": "B.Cu",
+      "width": 0.2
+    }
+  ],
+  "vias": [
+    {
+      "net": "SDA",
+      "center": [
+        8.600000000000001,
+        7.6
+      ],
+      "diameter": 0.5,
+      "drill": 0.25
+    },
+    {
+      "net": "GND_REMOTE",
+      "center": [
+        7.800000000000001,
+        7.9
+      ],
+      "diameter": 0.5,
+      "drill": 0.25
+    },
+    {
+      "net": "GND_REMOTE",
+      "center": [
+        3.4000000000000004,
+        7.25
+      ],
+      "diameter": 0.5,
+      "drill": 0.25
+    }
+  ],
+  "zones": [],
+  "source_footprints_sha256": {
+    "build/engineering/tools/b1-kicad/AppDir/share/kicad/footprints/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405"
+  },
+  "specification_sha256": "6f67d97f0a00988c07f1795ecea40579b5bb01d2c1bd9b6afd5e19f1e3105d05",
+  "pcb_sha256": "3ced4dedd8104e4521b5ba77abfe1223b0a9382e6d7c9aee4beaeca82fc6a69d",
+  "physical_boards_tested": 0
+}

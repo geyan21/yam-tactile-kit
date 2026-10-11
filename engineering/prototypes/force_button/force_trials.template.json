@@ -1,0 +1,33 @@
+{
+  "schema": "yam-fb1-force-trials/1",
+  "evidence_kind": "unmeasured_template",
+  "phase": "train",
+  "specimen": "FB1-REPLACE",
+  "session_id": "REPLACE-independent-bench-session",
+  "geometry_sha256": null,
+  "reference_id": null,
+  "reference_uncertainty_n": null,
+  "transfer_experiment": false,
+  "minimum_holds_per_level": 3,
+  "required_conditions": [
+    {"region": "left_nail", "condition_id": "left_nail_axial"},
+    {"region": "right_nail", "condition_id": "right_nail_axial"},
+    {"region": "nail_edges_notch", "condition_id": "nail_edge_axial"},
+    {"region": "distal_tpu", "condition_id": "distal_tpu_axial"},
+    {"region": "middle_tpu", "condition_id": "middle_tpu_axial"},
+    {"region": "proximal_tpu", "condition_id": "proximal_tpu_axial"}
+  ],
+  "instructions": "No measurements are supplied. Fill from physical recordings. Plan 0, 0.2, 0.5, 1, 2, 5, 10, 15 and 20 N, at least three independent holds per level. Evaluation needs every required condition, new recordings and a held-out bench session. Record loading and unloading separately. Do not turn synthetic data into physical evidence.",
+  "trials": [
+    {
+      "id": "REPLACE",
+      "region": "left_nail",
+      "condition_id": "left_nail_axial",
+      "recording": "recordings/REPLACE.jsonl",
+      "recording_sha256": null,
+      "window_host_s": [2, 12],
+      "reference_before_n": null,
+      "reference_after_n": null
+    }
+  ]
+}

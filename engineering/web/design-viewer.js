@@ -16,7 +16,7 @@
     const labels={frame:model.id==="nail_assembly"?"N1 revised frame":model.id==="recessed_assembly"?"B3 recessed frame":"Original frame",tpu:"Original TPU",saddles:"R1 saddles",laminate:"R1 sensing laminates",
       fixed:"Fixed carrier",floating:"Floating carrier",cell:"Cell reference",hardware:"Reserved fasteners",
       b1tpu:"Magnetic TPU",spine:"Fixed spine",magnet:"Magnets",plug:"Retaining plugs",
-      pcb:["b2_assembly","recessed_assembly"].includes(model.id)?"One B2 PCB":"Sensor heads",
+      pcb:model.id==="fb1_assembly_reference"?"FMA sensor PCB":["b2_assembly","recessed_assembly"].includes(model.id)?"One B2 PCB":"Sensor heads",
       backer:"Removable backer",spacer:model.id==="recessed_assembly"?"B3 tapered spacers":"Locating spacers",electronics:"IC / component envelopes",nail:"T0 / T1 nail pads",
       c1fixed:"Fixed root carrier",c1floating:"Floating finger carrier",c1beam:"Transverse strain beam",
       c1clamp:"Beam end clamps",c1gauge:"Eight active strain-grid locations",
@@ -24,7 +24,10 @@
       nailgauges:"NL / NR foil-carrier locations",
       f1_stacks:"Film and electrode reference bodies",f1_tails:"Tail fit references",
       f1_board:model.id==="f1_r3_assembly_reference"?"R3 PCB fit reference":"R2 PCB fit reference",f1_carrier:"Removable carrier",
-      f1_components:"Component body envelopes",f1_fastener_envelopes:"Reserved fasteners"};
+      f1_components:"Component body envelopes",f1_fastener_envelopes:"Reserved fasteners",
+      support:"Compliant sensor backing",leaves:"Four steel guides",clamps:"Guide clamps",
+      sensor:"Honeywell FMA envelope",plunger:"Adjustable plunger",insulation:"PCB insulating film",
+      pcb_components:"Bypass capacitors",root_hardware:"Root fasteners",stops:"Adjustable overload stops"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){
       const label=document.createElement("label"),input=document.createElement("input");

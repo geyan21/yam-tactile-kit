@@ -1,0 +1,103 @@
+{
+  "schema": "yam-fb1-electronics/1",
+  "name": "fb1_sensor",
+  "revision": "FB1.1 development",
+  "thickness_mm": 1.0,
+  "copper_layers": ["F.Cu", "B.Cu"],
+  "outline_mm": [[0, 0], [14, 0], [14, 20], [0, 20], [0, 0]],
+  "force_axis_xy_mm": [7, 7],
+  "clearance_mm": 0.2,
+  "edge_clearance_mm": 0.25,
+  "minimum_track_mm": 0.2,
+  "via_diameter_mm": 0.5,
+  "via_drill_mm": 0.25,
+  "holes": [
+    {"center_mm": [2, 2], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8},
+    {"center_mm": [12, 12], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8}
+  ],
+  "parts": [
+    {
+      "reference": "U1",
+      "value": "FMAMSDXX025WC2C3",
+      "footprint": "Honeywell_FMA_25N_I2C",
+      "center_mm": [7, 7],
+      "rotation_deg": 0,
+      "nets": {"1": "VDD_REMOTE", "2": "", "3": "GND_REMOTE", "4": "SCL", "5": "SDA", "6": ""},
+      "pads": [
+        {"pad": "1", "center_mm": [-0.38, -1.70], "size_mm": [1.50, 1.20]},
+        {"pad": "2", "center_mm": [2.16, -1.70], "size_mm": [1.50, 1.20]},
+        {"pad": "3", "center_mm": [2.16, 1.70], "size_mm": [1.50, 1.20]},
+        {"pad": "4", "center_mm": [-0.38, 1.70], "size_mm": [1.50, 1.20]},
+        {"pad": "5", "center_mm": [2.59, 0], "size_mm": [1.20, 1.50]},
+        {"pad": "6", "center_mm": [-0.97, 0], "size_mm": [1.00, 1.73]}
+      ],
+      "body_bounds_mm": [-1.61, -2.5, 3.39, 2.5],
+      "courtyard_bounds_mm": [-1.86, -2.75, 3.64, 2.75],
+      "vent_diameter_mm": 0.45,
+      "source": "Honeywell FMA data sheet 32347833, Figure 3 recommended land pattern and Table 6, reviewed 2026-10-11"
+    },
+    {
+      "reference": "C1",
+      "value": "100nF 16V X7R",
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "center_mm": [3.5, 5.3],
+      "rotation_deg": 180,
+      "nets": {"1": "VDD_REMOTE", "2": "GND_REMOTE"}
+    },
+    {
+      "reference": "C2",
+      "value": "1uF 16V X7R; effective capacitance to be verified",
+      "library": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "center_mm": [3.5, 8],
+      "rotation_deg": 180,
+      "nets": {"1": "VDD_REMOTE", "2": "GND_REMOTE"}
+    },
+    {
+      "reference": "JW",
+      "value": "Six separate soldered cable conductors",
+      "footprint": "FB1_Wire_Port",
+      "center_mm": [0, 0],
+      "rotation_deg": 0,
+      "nets": {"1": "VDD_REMOTE", "2": "GND_REMOTE", "3": "SDA", "4": "SCL", "5": "VDD_REMOTE", "6": "GND_REMOTE"},
+      "pads": [
+        {"pad": "1", "center_mm": [4.5, 16], "size_mm": [1.2, 1.2], "drill_mm": 0.6},
+        {"pad": "2", "center_mm": [4.5, 18], "size_mm": [1.2, 1.2], "drill_mm": 0.6},
+        {"pad": "3", "center_mm": [6.5, 16], "size_mm": [1.2, 1.2], "drill_mm": 0.6},
+        {"pad": "4", "center_mm": [6.5, 18], "size_mm": [1.2, 1.2], "drill_mm": 0.6},
+        {"pad": "5", "center_mm": [8.5, 16], "size_mm": [1.2, 1.2], "drill_mm": 0.6},
+        {"pad": "6", "center_mm": [8.5, 18], "size_mm": [1.2, 1.2], "drill_mm": 0.6}
+      ],
+      "body_bounds_mm": [3.6, 15.1, 9.4, 18.9],
+      "courtyard_bounds_mm": [3.35, 14.85, 9.65, 19.15]
+    }
+  ],
+  "wire_port_assignment": {
+    "1": "Pico 3V3 OUT, physical pin 36; power drive",
+    "2": "Pico GND, physical pin 38; return drive",
+    "3": "Pico GP4 / I2C0 SDA, physical pin 6",
+    "4": "Pico GP5 / I2C0 SCL, physical pin 7",
+    "5": "ADS1115 A0; separate remote supply-sense wire, 100k to controller ground",
+    "6": "ADS1115 A1; separate remote ground-sense wire, 100k to controller 3V3"
+  },
+  "controller": {
+    "board": "Raspberry Pi Pico RP2040",
+    "health_adc": "Adafruit ADS1115 16-bit breakout, product 1085",
+    "adc_address": 72,
+    "sensor_address": 40,
+    "bus_hz": 100000,
+    "adc_gain_range_v": 4.096,
+    "adc_rate_sps": 860,
+    "adc_channels": ["Remote VDD sense", "Remote GND sense", "Pico 3V3 source", "Pico GND reference"],
+    "frame_target_hz": 100,
+    "bus_pullups": "Use the ADS1115 breakout's 10k pullups to 3V3. Verify rise time with the actual cable at 100 kHz; do not power the breakout at 5 V.",
+    "reference": "https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/pinouts"
+  },
+  "limits": [
+    "This is a digital prototype, not a tested physical PCB.",
+    "The six cable wires include separate remote voltage observations. The two supply nets join on the sensor board; this is not a precision four-terminal force transducer.",
+    "The vent is open and must not be filled with solder, flux, adhesive or encapsulant.",
+    "Solder leads from the back of the wiring tab, with strain relief on the fixed carrier. Do not fit a tall connector on the component face.",
+    "Use an insulating film beneath the supported PCB region and verify flat support and the unobstructed vent.",
+    "Supply and status checks cannot prove contact coupling, calibration, wire immunity or complete fault coverage."
+  ]
+}

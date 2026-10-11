@@ -1,0 +1,96 @@
+{
+  "schema": "yam-fb1-structural-review/1",
+  "physical_specimens_tested": 0,
+  "inputs": [
+    {
+      "directory": "build/engineering/prototypes/force_button/fea/20261011T195018.756057Z",
+      "report_sha256": "29c5d95fe141c03cf5beb46ced30ff936358d4916b1993f60449e6005f744aac"
+    },
+    {
+      "directory": "build/engineering/prototypes/force_button/fea/20261011T195515.063058Z",
+      "report_sha256": "7bedc87da04009ef2be9295ba715484731be25a56c593fd91b3c5229c0e47d1c"
+    },
+    {
+      "directory": "build/engineering/prototypes/force_button/fea/20261011T195728.478300Z",
+      "report_sha256": "94d12c1f780c9feb2939d6f7525a5edc1ca12d83173994e91f12fb1f085bde36"
+    }
+  ],
+  "convergence": {
+    "passed": true,
+    "criterion": "At most 1% change in each contact motion and root Fz sensor gain",
+    "contact_comparisons": [
+      {
+        "site": "nail_1",
+        "fine_motion_mm": 0.09243780857581146,
+        "coarse_motion_mm": 0.09181971760192173,
+        "difference_mm": 0.0006180909738897344,
+        "relative_difference": 0.006686560222625967
+      },
+      {
+        "site": "nail_2",
+        "fine_motion_mm": 0.09236024565771077,
+        "coarse_motion_mm": 0.09173212649897268,
+        "difference_mm": 0.0006281191587380885,
+        "relative_difference": 0.0068007523612043305
+      },
+      {
+        "site": "nail_3",
+        "fine_motion_mm": 0.08775339424167652,
+        "coarse_motion_mm": 0.08717389482074907,
+        "difference_mm": 0.0005794994209274568,
+        "relative_difference": 0.006603726567333579
+      },
+      {
+        "site": "nail_4",
+        "fine_motion_mm": 0.08757390705419661,
+        "coarse_motion_mm": 0.08697674958785834,
+        "difference_mm": 0.0005971574663382745,
+        "relative_difference": 0.006818897162698398
+      },
+      {
+        "site": "tpu_1",
+        "fine_motion_mm": 0.07313477307939371,
+        "coarse_motion_mm": 0.07267497305788008,
+        "difference_mm": 0.0004598000215136344,
+        "relative_difference": 0.006287023288012178
+      },
+      {
+        "site": "tpu_2",
+        "fine_motion_mm": 0.06525369192399062,
+        "coarse_motion_mm": 0.06486008098388353,
+        "difference_mm": 0.00039361094010709197,
+        "relative_difference": 0.006032010274078918
+      },
+      {
+        "site": "tpu_3",
+        "fine_motion_mm": 0.0587324682899487,
+        "coarse_motion_mm": 0.05839384898747406,
+        "difference_mm": 0.0003386193024746409,
+        "relative_difference": 0.005765453289021589
+      },
+      {
+        "site": "tpu_4",
+        "fine_motion_mm": 0.0535974495752982,
+        "coarse_motion_mm": 0.05330178657790698,
+        "difference_mm": 0.0002956629973912203,
+        "relative_difference": 0.0055163631802264785
+      }
+    ],
+    "root_fz_gain_relative_difference": 0.00010431988649939328
+  },
+  "sensor_compliance_cases_mm_per_n": [
+    0.0001,
+    0.0005
+  ],
+  "maximum_observed_contact_motion_mm": 0.09243780857581146,
+  "mesh_comparison_allowance_mm": 0.0006281191587380885,
+  "motion_screen_with_mesh_allowance_mm": 0.09306592773454955,
+  "motion_screen_met": true,
+  "maximum_model_contact_location_error_n": 0.06854450789291278,
+  "limits": [
+    "The mesh allowance is the observed mesh difference, not a rigorous error bound.",
+    "Only the stated sensor compliance cases are evaluated; no manufacturer stroke law is guaranteed.",
+    "Perfectly bonded clamps, rigid local patches, linear materials and the source finger as a rigid lever.",
+    "No physical force accuracy, low-force contact reliability, overforce strength, fatigue or moving-robot qualification."
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "schema": "yam-fb1-bonded-fea/1",
+  "physical_specimens_tested": 0,
+  "mesh": {
+    "nodes": 109781,
+    "elements": 61721,
+    "element": "C3D10",
+    "global_size_mm": 2.0,
+    "leaf_size_mm": 0.65,
+    "minimum_jacobian_determinant": 2.0217637065917924e-06,
+    "geometry_order": "Straight midside geometry; curved surfaces are represented by the mesh and require convergence",
+    "steel_volume_tags": [
+      7,
+      10,
+      13,
+      16
+    ],
+    "aluminum_volume_tags": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15
+    ],
+    "bonded_leaf_interfaces": [
+      {
+        "leaf": 0,
+        "carrier": "fixed",
+        "shared_nodes": 739
+      },
+      {
+        "leaf": 0,
+        "carrier": "floating",
+        "shared_nodes": 877
+      },
+      {
+        "leaf": 1,
+        "carrier": "fixed",
+        "shared_nodes": 731
+      },
+      {
+        "leaf": 1,
+        "carrier": "floating",
+        "shared_nodes": 877
+      },
+      {
+        "leaf": 2,
+        "carrier": "fixed",
+        "shared_nodes": 739
+      },
+      {
+        "leaf": 2,
+        "carrier": "floating",
+        "shared_nodes": 801
+      },
+      {
+        "leaf": 3,
+        "carrier": "fixed",
+        "shared_nodes": 731
+      },
+      {
+        "leaf": 3,
+        "carrier": "floating",
+        "shared_nodes": 805
+      }
+    ]
+  },
+  "sensor_compliance_mm_per_n": 0.0001,
+  "sensor_gain_per_root_wrench": [
+    5.745310000000002e-05,
+    0.00020298199999999972,
+    0.8776399999999972,
+    1.4318399999999998e-05,
+    1.9412900000000056e-06,
+    4.092300000000011e-07
+  ],
+  "compliance_about_finger_mount": [
+    [
+      0.000253579,
+      5.585396e-07,
+      1.626239e-06,
+      -6.262916999999999e-08,
+      1.71791e-06,
+      2.267002e-06
+    ],
+    [
+      5.585396e-07,
+      1.436049e-05,
+      6.366894e-06,
+      -2.336376e-07,
+      -6.213197e-09,
+      3.301672e-08
+    ],
+    [
+      1.626239e-06,
+      6.366894e-06,
+      0.002472357,
+      -3.4540460000000003e-06,
+      -6.513744e-08,
+      6.72057e-08
+    ],
+    [
+      -6.262917e-08,
+      -2.336376e-07,
+      -3.454046e-06,
+      1.4456040000000001e-07,
+      2.430766e-09,
+      -2.760381e-09
+    ],
+    [
+      1.71791e-06,
+      -6.213197e-09,
+      -6.513744e-08,
+      2.430766e-09,
+      1.967241e-06,
+      -1.218519e-08
+    ],
+    [
+      2.267002e-06,
+      3.301672e-08,
+      6.72057e-08,
+      -2.760381e-09,
+      -1.218519e-08,
+      9.601285e-08
+    ]
+  ],
+  "reciprocity_relative_error": 1.7130069550115545e-19,
+  "reaction_residuals": [
+    [
+      2.2687500766949142e-08,
+      -3.45652995002374e-08,
+      -5.968999441583172e-10,
+      -6.139858364367923e-07,
+      -4.2848071146739386e-08,
+      -1.1106698340479504e-06
+    ],
+    [
+      -4.765499974127528e-09,
+      4.6409996956597865e-09,
+      5.959000261822073e-10,
+      3.2687598992137135e-08,
+      -4.472078806230795e-08,
+      1.2953331810644508e-07
+    ],
+    [
+      1.1877397815762084e-08,
+      5.3783199432250184e-08,
+      2.0294999236725175e-08,
+      8.596436457952716e-07,
+      -8.814765382891832e-09,
+      -7.3406550601951e-08
+    ],
+    [
+      -9.052280044996586e-08,
+      -1.925560079718558e-07,
+      -4.307281834675658e-08,
+      4.888563580607297e-07,
+      1.1927033676251142e-06,
+      6.661639178062728e-07
+    ],
+    [
+      -1.624040002590199e-06,
+      -4.838713034832631e-06,
+      6.41423991101786e-07,
+      -5.307766078210818e-06,
+      -8.859469630806416e-06,
+      9.171972980936971e-05
+    ],
+    [
+      -1.278610175306505e-07,
+      1.988220150739295e-07,
+      1.1661816015640092e-07,
+      -8.634187631528789e-08,
+      3.87568243020997e-06,
+      7.715962169640989e-06
+    ]
+  ],
+  "contact_cases": [
+    {
+      "id": "nail_1",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -2138.9552,
+        78.13692,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        -0.0022905183527384674,
+        -0.007782835001268997,
+        0.09784209825156842
+      ],
+      "added_motion_norm_mm": 0.09817787523291986,
+      "modeled_sensor_increment_n": 17.52232527028569,
+      "modeled_preloaded_sensor_n": 19.52232527028569,
+      "apparent_force_from_root_fz_gain_n": 19.965276503219712,
+      "peak_aluminum_integration_stress_mpa": 27.16144203573921,
+      "peak_steel_integration_stress_mpa": 48.17684106538308
+    },
+    {
+      "id": "nail_2",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -2138.9552,
+        -61.863080000000004,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.003759067909564529,
+        -0.007740160879674758,
+        0.0977090249718999
+      ],
+      "added_motion_norm_mm": 0.09808717675084407,
+      "modeled_sensor_increment_n": 17.522053489685693,
+      "modeled_preloaded_sensor_n": 19.522053489685693,
+      "apparent_force_from_root_fz_gain_n": 19.9649668311446,
+      "peak_aluminum_integration_stress_mpa": 27.031153790024426,
+      "peak_steel_integration_stress_mpa": 48.29484857686378
+    },
+    {
+      "id": "nail_3",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1949.19404,
+        148.13692,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        -0.005304228510485923,
+        -0.007060431092364471,
+        0.092443207399907
+      ],
+      "added_motion_norm_mm": 0.09286404644254793,
+      "modeled_sensor_increment_n": 17.525178236779034,
+      "modeled_preloaded_sensor_n": 19.525178236779034,
+      "apparent_force_from_root_fz_gain_n": 19.968527228452544,
+      "peak_aluminum_integration_stress_mpa": 27.237165772158015,
+      "peak_steel_integration_stress_mpa": 50.41210739707262
+    },
+    {
+      "id": "nail_4",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1949.19404,
+        -131.86308,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.006500275267852224,
+        -0.006982092132817034,
+        0.09216414542124621
+      ],
+      "added_motion_norm_mm": 0.09265653182770017,
+      "modeled_sensor_increment_n": 17.524634675579033,
+      "modeled_preloaded_sensor_n": 19.524634675579033,
+      "apparent_force_from_root_fz_gain_n": 19.96790788430232,
+      "peak_aluminum_integration_stress_mpa": 27.078147888971305,
+      "peak_steel_integration_stress_mpa": 50.06206257135343
+    },
+    {
+      "id": "tpu_1",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1505.3041200000005,
+        -0.0,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.0006312237125704737,
+        -0.004750851154854464,
+        0.07622418255613284
+      ],
+      "added_motion_norm_mm": 0.07637470154718484,
+      "modeled_sensor_increment_n": 17.531246453488137,
+      "modeled_preloaded_sensor_n": 19.531246453488137,
+      "apparent_force_from_root_fz_gain_n": 19.97544147200241,
+      "peak_aluminum_integration_stress_mpa": 27.082095530616517,
+      "peak_steel_integration_stress_mpa": 34.135867351194975
+    },
+    {
+      "id": "tpu_2",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -1165.3041200000002,
+        -0.0,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.0004579925350992827,
+        -0.004583410791087875,
+        0.06731233995403199
+      ],
+      "added_motion_norm_mm": 0.06746976005388813,
+      "modeled_sensor_increment_n": 17.536114709488135,
+      "modeled_preloaded_sensor_n": 19.536114709488135,
+      "apparent_force_from_root_fz_gain_n": 19.9809884570988,
+      "peak_aluminum_integration_stress_mpa": 27.100889263801665,
+      "peak_steel_integration_stress_mpa": 28.20546172402946
+    },
+    {
+      "id": "tpu_3",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -825.3041200000001,
+        -0.0,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.00025409448143393955,
+        -0.0008417470099261054,
+        0.06007161557593116
+      ],
+      "added_motion_norm_mm": 0.06007805006769668,
+      "modeled_sensor_increment_n": 17.540982965488137,
+      "modeled_preloaded_sensor_n": 19.540982965488137,
+      "apparent_force_from_root_fz_gain_n": 19.986535442195198,
+      "peak_aluminum_integration_stress_mpa": 27.122785480396406,
+      "peak_steel_integration_stress_mpa": 22.664943846304993
+    },
+    {
+      "id": "tpu_4",
+      "wrench_n_nmm": [
+        0.0,
+        0.0,
+        20.0,
+        -465.3041200000001,
+        -0.0,
+        0.0
+      ],
+      "added_contact_motion_mm": [
+        0.00016451842755248072,
+        -0.002099986374312647,
+        0.05422642727441263
+      ],
+      "added_motion_norm_mm": 0.05426732372277506,
+      "modeled_sensor_increment_n": 17.546137589488136,
+      "modeled_preloaded_sensor_n": 19.546137589488136,
+      "apparent_force_from_root_fz_gain_n": 19.992408720532556,
+      "peak_aluminum_integration_stress_mpa": 27.145972547072187,
+      "peak_steel_integration_stress_mpa": 17.237533741454314
+    }
+  ],
+  "maximum_added_contact_motion_mm": 0.09817787523291986,
+  "maximum_root_gain_contact_error_n": 0.03503316885539931,
+  "input_sha256": {
+    "engineering/designs/force_button_fb1.json": "e905e9fd509b0c700a8ebb89c896dcf56f4afb2b35b39221e2689ce692397bd9",
+    "engineering/scripts/run_force_button_fea.py": "ea297875abcf26b5f8c77a78b3e118fa3f76be6405a0a18e1d15ee8c9c65ed48",
+    "engineering/scripts/structural_tools.py": "8dda820d2ac43057ba59b6b9680007298443269d86ed5f5f2d87a6ae63bba1be",
+    "engineering/scripts/force_button_mechanics.py": "3426c0196d7de3ecb5de7a87b87096482734fab8930dd8f4f1629126c6bbf91c",
+    "build/engineering/prototypes/force_button/cad_runs/20261011T193546.767616Z/manifest.json": "5fc90e1f6bcb65ad5694518cf798da58566f767165018cb4246d01bf673420c4",
+    "build/engineering/prototypes/force_button/fit_checks/20261011T193751.012136Z/report.json": "dd8df51bf3de4315ff3a725d2f714f018d0c41e3e237b0562ee895f3044524f5"
+  },
+  "mesh_sha256": "973203b0b7bcd41b9c708748a86ecf266c67b64f99a9f0c80d5e4259b55e810d",
+  "solver_deck_sha256": "19ccfb9288d30081e883658d6b560a2b5fa325c2eb578744c6c61dc2cfd2fad8",
+  "tools": {
+    "schema": "yam-structural-tools/1",
+    "downloads": [
+      {
+        "url": "https://www.dhondt.de/ccx_2.23.tar.bz2",
+        "archive": "ccx_2.23.tar.bz2",
+        "sha256": "35d426fed5eb164fbbaaafa20819d13d22e30bc2b9bc9c6c4ed957e9468355dd",
+        "bytes": 2502788
+      },
+      {
+        "url": "https://gmsh.info/bin/Linux/gmsh-4.15.2-Linux64-sdk.tgz",
+        "archive": "gmsh-4.15.2-Linux64-sdk.tgz",
+        "sha256": "2dbd68d033f99b05789554bf4db6d47f4108dd36b0b36d4a50935df0ceb9e772",
+        "bytes": 40160535
+      },
+      {
+        "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/libgfortran4_7.5.0-3ubuntu1~18.04_amd64.deb",
+        "archive": "libgfortran4_7.5.0-3ubuntu1~18.04_amd64.deb",
+        "sha256": "f89b2473bc251ba0c8eb9479ad31d5f96019e2ea1f8be466beea3a68b11b19fc",
+        "bytes": 492148
+      }
+    ],
+    "calculix": "build/engineering/tools/fea/calculix/CalculiX/ccx_2.23/src/ccx_2.23",
+    "gmsh_python_directory": "build/engineering/tools/fea/gmsh/gmsh-4.15.2-Linux64-sdk/lib",
+    "runtime_library_directory": "build/engineering/tools/fea/runtime/usr/lib/x86_64-linux-gnu",
+    "calculix_sha256": "31be21fc2f0902bd9a05acc2651dbac6dc2a2573dabbf235e39a38cb6f458862",
+    "versions": {
+      "calculix": "2.23",
+      "gmsh": "4.15.2"
+    },
+    "note": "Official downloads, pinned versions and local content hashes. No physical sensor result."
+  },
+  "rigid_patch_node_counts": {
+    "SUPPORT": 1303,
+    "FINGER": 1530,
+    "SENSOR_TOP": 69,
+    "PLUNGER": 71
+  },
+  "limits": [
+    "Linear isotropic metals; leaf and backing clamps are perfectly bonded. Screw preload, slip and contact separation are omitted.",
+    "The sensor/PCB contact patch and plunger-thread bore are rigid local regions. The normal-only spring uses an assumed sensor compliance.",
+    "The original finger is a rigid lever. Reported motion is adapter addition, not total original-finger deflection.",
+    "The 2 N preload is assumed. Local stress peaks are mesh-dependent; no strength, buckling, fatigue or overforce rating follows.",
+    "Stops remain open in this linear solve. Loaded gaps, numerical convergence and physical qualification are separate."
+  ]
+}

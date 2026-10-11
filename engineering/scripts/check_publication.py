@@ -40,6 +40,7 @@ def main():
     parser.add_argument("commit")
     parser.add_argument("--pages", action="store_true")
     parser.add_argument("--capacitive", action="store_true")
+    parser.add_argument("--force-button", action="store_true")
     args = parser.parse_args()
     if not re.fullmatch(r"[0-9a-f]{40}", args.commit):
         parser.error("Use a full commit SHA")
@@ -86,6 +87,17 @@ def main():
                 summary["capacitive_contains_k1_packet"] = "development/capacitive/k1/file-index.html" in page["body"]
                 summary["capacitive_contains_stack"] = "development/capacitive/k1/visuals/k1_stack.svg" in page["body"]
                 summary["capacitive_contains_module_download"] = "k1-development.zip" in page["body"]
+        if args.force_button:
+            page = fetch("https://geyan21.github.io/yam-tactile-kit/force-button.html?"+
+                         urlencode({"commit": args.commit}), decode=False)
+            summary["force_button_page_http"] = page["status"]
+            if page["status"] == 200:
+                (folder / "fb1_page.html").write_text(page["body"])
+                summary["force_button_contains_expected_release"] = tag in page["body"]
+                summary["force_button_contains_selected_sensor"] = "FMAMSDXX025WC2C3" in page["body"]
+                summary["force_button_contains_packet"] = "prototypes/force_button/file-index.html" in page["body"]
+                summary["force_button_contains_stack"] = "prototypes/force_button/visuals/fb1_stack.svg" in page["body"]
+                summary["force_button_contains_download"] = "fb1-prototype.zip" in page["body"]
         (folder / "summary.json").write_text(json.dumps(summary, indent=2)+"\n")
         record["result"] = summary
         print(json.dumps(summary, indent=2))

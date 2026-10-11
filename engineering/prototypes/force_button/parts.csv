@@ -1,0 +1,55 @@
+id,kind,purpose,material,STEP,STL
+fb1_fixed_carrier,fabricate,"Fixed root carrier, guide anchors, independent stop frame and sensor-beam anchor",6061-T6 aluminum; tap designated holes after machining,cad/fb1_fixed_carrier.step,cad/fb1_fixed_carrier.stl
+fb1_floating_carrier,fabricate,"Original-finger carrier, guide anchors, plunger tongue and adjustable-stop supports",6061-T6 aluminum; tap M3/M4 threads as documented,cad/fb1_floating_carrier.step,cad/fb1_floating_carrier.stl
+fb1_sensor_backing_beam,fabricate,Compliant backing beam and fully supported sensor-PCB seat with open vent,6061-T6 aluminum,cad/fb1_sensor_backing_beam.step,cad/fb1_sensor_backing_beam.stl
+fb1_sensor_backing_clamp,fabricate,Clamp for the sensor-support beam root,6061-T6 aluminum,cad/fb1_sensor_backing_clamp.step,cad/fb1_sensor_backing_clamp.stl
+fb1_sensor_pcb_reference,reference_only,"Sensor PCB mechanical reference, not fabrication artwork",1 mm FR4 reference; electrical design remains separate,cad/fb1_sensor_pcb_reference.step,cad/fb1_sensor_pcb_reference.stl
+fb1_pcb_insulating_film,fabricate,Flat 50 µm polyimide film between supported PCB back and metal; keep vent and mounting holes open,"Polyimide film, 0.05 mm; no adhesive or folds under the sensor",cad/fb1_pcb_insulating_film.step,cad/fb1_pcb_insulating_film.stl
+fb1_c1_body_reference,reference_only,Maximum selected 0603 capacitor body; verify purchased component envelope,100nF 16V X7R,cad/fb1_c1_body_reference.step,cad/fb1_c1_body_reference.stl
+fb1_c2_body_reference,reference_only,Maximum selected 0603 capacitor body; verify purchased component envelope,1uF 16V X7R; effective capacitance to be verified,cad/fb1_c2_body_reference.step,cad/fb1_c2_body_reference.stl
+fb1_leaf_clamp_0_0,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_0_0.step,cad/fb1_leaf_clamp_0_0.stl
+fb1_leaf_clamp_0_1,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_0_1.step,cad/fb1_leaf_clamp_0_1.stl
+fb1_guide_leaf_0,fabricate,"Flat spring strip, active span between two clamped ends","0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",cad/fb1_guide_leaf_0.step,cad/fb1_guide_leaf_0.stl
+fb1_leaf_clamp_1_0,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_1_0.step,cad/fb1_leaf_clamp_1_0.stl
+fb1_leaf_clamp_1_1,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_1_1.step,cad/fb1_leaf_clamp_1_1.stl
+fb1_guide_leaf_1,fabricate,"Flat spring strip, active span between two clamped ends","0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",cad/fb1_guide_leaf_1.step,cad/fb1_guide_leaf_1.stl
+fb1_leaf_clamp_2_0,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_2_0.step,cad/fb1_leaf_clamp_2_0.stl
+fb1_leaf_clamp_2_1,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_2_1.step,cad/fb1_leaf_clamp_2_1.stl
+fb1_guide_leaf_2,fabricate,"Flat spring strip, active span between two clamped ends","0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",cad/fb1_guide_leaf_2.step,cad/fb1_guide_leaf_2.stl
+fb1_leaf_clamp_3_0,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_3_0.step,cad/fb1_leaf_clamp_3_0.stl
+fb1_leaf_clamp_3_1,fabricate,Metal leaf clamp; assembled on the specified deck,6061-T6 aluminum,cad/fb1_leaf_clamp_3_1.step,cad/fb1_leaf_clamp_3_1.stl
+fb1_guide_leaf_3,fabricate,"Flat spring strip, active span between two clamped ends","0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",cad/fb1_guide_leaf_3.step,cad/fb1_guide_leaf_3.stl
+fb1_fma25_envelope,reference_only,Own conservative package/sphere envelope based on manufacturer dimensions; not the vendor CAD,Purchased FMAMSDXX025WC2C3 reference,cad/fb1_fma25_envelope.step,cad/fb1_fma25_envelope.stl
+fb1_adjustable_plunger_reference,hardware_reference,M4×0.7 adjustable plunger with flat 5 mm contact face and 1 mm wide × 1.5 mm deep bottom drive slot; helical threads not modeled,Polished hardened steel flat pad; inspect contact wear in the pilot,cad/fb1_adjustable_plunger_reference.step,cad/fb1_adjustable_plunger_reference.stl
+fb1_plunger_locknut_reference,hardware_reference,M4 thin locknut below the floating tongue,Steel; reference only,cad/fb1_plunger_locknut_reference.step,cad/fb1_plunger_locknut_reference.stl
+fb1_stop_screw_0_reference,hardware_reference,Inverted M3×8 flat-point stop; establish gap by measurement,Hardened steel; thread/socket details omitted,cad/fb1_stop_screw_0_reference.step,cad/fb1_stop_screw_0_reference.stl
+fb1_stop_locknut_0_reference,hardware_reference,M3 thin locknut below the upper flange,Steel; reference only,cad/fb1_stop_locknut_0_reference.step,cad/fb1_stop_locknut_0_reference.stl
+fb1_stop_screw_1_reference,hardware_reference,Inverted M3×8 flat-point stop; establish gap by measurement,Hardened steel; thread/socket details omitted,cad/fb1_stop_screw_1_reference.step,cad/fb1_stop_screw_1_reference.stl
+fb1_stop_locknut_1_reference,hardware_reference,M3 thin locknut below the upper flange,Steel; reference only,cad/fb1_stop_locknut_1_reference.step,cad/fb1_stop_locknut_1_reference.stl
+fb1_stop_screw_2_reference,hardware_reference,Inverted M3×8 flat-point stop; establish gap by measurement,Hardened steel; thread/socket details omitted,cad/fb1_stop_screw_2_reference.step,cad/fb1_stop_screw_2_reference.stl
+fb1_stop_locknut_2_reference,hardware_reference,M3 thin locknut below the upper flange,Steel; reference only,cad/fb1_stop_locknut_2_reference.step,cad/fb1_stop_locknut_2_reference.stl
+fb1_beam_clamp_screw_0,hardware_reference,M3×10 sensor-support clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_beam_clamp_screw_0.step,cad/fb1_beam_clamp_screw_0.stl
+fb1_beam_clamp_screw_1,hardware_reference,M3×10 sensor-support clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_beam_clamp_screw_1.step,cad/fb1_beam_clamp_screw_1.stl
+fb1_pcb_screw_0,hardware_reference,PCB M2×6 screw reference; unmodeled threads,Steel hardware reference; actual part dimensions must be checked,cad/fb1_pcb_screw_0.step,cad/fb1_pcb_screw_0.stl
+fb1_pcb_screw_1,hardware_reference,PCB M2×6 screw reference; unmodeled threads,Steel hardware reference; actual part dimensions must be checked,cad/fb1_pcb_screw_1.step,cad/fb1_pcb_screw_1.stl
+fb1_leaf_screw_0_0_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_0_0_-2.step,cad/fb1_leaf_screw_0_0_-2.stl
+fb1_leaf_screw_0_0_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_0_0_2.step,cad/fb1_leaf_screw_0_0_2.stl
+fb1_leaf_screw_0_1_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_0_1_-2.step,cad/fb1_leaf_screw_0_1_-2.stl
+fb1_leaf_screw_0_1_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_0_1_2.step,cad/fb1_leaf_screw_0_1_2.stl
+fb1_leaf_screw_1_0_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_1_0_-2.step,cad/fb1_leaf_screw_1_0_-2.stl
+fb1_leaf_screw_1_0_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_1_0_2.step,cad/fb1_leaf_screw_1_0_2.stl
+fb1_leaf_screw_1_1_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_1_1_-2.step,cad/fb1_leaf_screw_1_1_-2.stl
+fb1_leaf_screw_1_1_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_1_1_2.step,cad/fb1_leaf_screw_1_1_2.stl
+fb1_leaf_screw_2_0_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_2_0_-2.step,cad/fb1_leaf_screw_2_0_-2.stl
+fb1_leaf_screw_2_0_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_2_0_2.step,cad/fb1_leaf_screw_2_0_2.stl
+fb1_leaf_screw_2_1_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_2_1_-2.step,cad/fb1_leaf_screw_2_1_-2.stl
+fb1_leaf_screw_2_1_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_2_1_2.step,cad/fb1_leaf_screw_2_1_2.stl
+fb1_leaf_screw_3_0_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_3_0_-2.step,cad/fb1_leaf_screw_3_0_-2.stl
+fb1_leaf_screw_3_0_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_3_0_2.step,cad/fb1_leaf_screw_3_0_2.stl
+fb1_leaf_screw_3_1_-2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_3_1_-2.step,cad/fb1_leaf_screw_3_1_-2.stl
+fb1_leaf_screw_3_1_2,hardware_reference,M2×6 clamp screw reference,Steel hardware reference; actual part dimensions must be checked,cad/fb1_leaf_screw_3_1_2.step,cad/fb1_leaf_screw_3_1_2.stl
+fb1_fixed_root_m3x12_0_reference,hardware_reference,M3×12 countersunk reference for the independent bench receiver; installed-drive length remains conditional,Steel hardware reference,cad/fb1_fixed_root_m3x12_0_reference.step,cad/fb1_fixed_root_m3x12_0_reference.stl
+fb1_finger_m3_retention_0_reference,hardware_reference,Rear M3 washer and nut envelope; retain a compatible original-finger head and choose the measured through-bolt length,Steel hardware reference,cad/fb1_finger_m3_retention_0_reference.step,cad/fb1_finger_m3_retention_0_reference.stl
+fb1_fixed_root_m3x12_1_reference,hardware_reference,M3×12 countersunk reference for the independent bench receiver; installed-drive length remains conditional,Steel hardware reference,cad/fb1_fixed_root_m3x12_1_reference.step,cad/fb1_fixed_root_m3x12_1_reference.stl
+fb1_finger_m3_retention_1_reference,hardware_reference,Rear M3 washer and nut envelope; retain a compatible original-finger head and choose the measured through-bolt length,Steel hardware reference,cad/fb1_finger_m3_retention_1_reference.step,cad/fb1_finger_m3_retention_1_reference.stl
+fb1_bench_receiver,fabricate,Common ENPIRE root bench receiver; M3 tapped interface and 50 mm square M6 stand pattern,6061-T6 aluminum; tap M3 pilot bores,cad/fb1_bench_receiver.step,cad/fb1_bench_receiver.stl

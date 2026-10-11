@@ -1,0 +1,31 @@
+item,quantity_per_finger,make_or_buy,specification,placement_or_note,primary_reference
+FMA force sensor,1,buy,Honeywell FMAMSDXX025WC2C3; 25 N; I2C 0x28; 3.3 V,U1 on the small downward-facing FB1 PCB,https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/force-sensors/fma-series-microforce-sensor
+Sensor PCB,1,fabricate,fb1_sensor; 14 x 20 mm; 1.0 mm FR4; 2 copper layers; 0.45 mm NPTH vent,Use the checked native board and Gerbers; fully support its central 14 x 14 mm region,
+C1,1,buy,100 nF; 16 V or higher; X7R; 0603; body at most 1.8 x 1.0 x 0.9 mm,Local FMA bypass,
+C2,1,buy,1 uF; 16 V or higher; X7R; 0603; body at most 1.8 x 1.0 x 0.9 mm,Local bulk bypass; verify effective capacitance at 3.3 V,
+Controller,1,buy,Raspberry Pi Pico RP2040,One controller per finger for this pilot,https://www.raspberrypi.com/products/raspberry-pi-pico/
+Health ADC,1,buy,Adafruit ADS1115 breakout product 1085; default address 0x48; powered at 3.3 V,At the fixed base; reads cable supply and return checks,https://www.adafruit.com/product/1085
+Sense-line bias resistors,2,buy,100 kohm 1%; suitable insulated perfboard assembly,A0 to controller GND; A1 to controller 3V3,
+Six-conductor pigtail,1,fabricate,Individually insulated fine flexible wires; solder termination fits 0.6 mm PTH,Separate power drive and sense conductors; loose service loop; strain relief at fixed carrier,
+PCB insulating film,1,fabricate,50 um polyimide; use fb1_pcb_insulating_film pattern,Flat and uncreased under PCB; holes and vent remain open,
+Fixed carrier,1,machine,6061-T6 aluminum; fb1_fixed_carrier,Printed copy is a fit witness only; machine force-bearing specimen,
+Floating carrier,1,machine,6061-T6 aluminum; fb1_floating_carrier,Retains the original ENPIRE finger,
+Sensor backing beam,1,machine,6061-T6 aluminum; fb1_sensor_backing_beam,Active section 11 x 12 x 2.25 mm; preserve its free span,
+Backing clamp,1,machine,6061-T6 aluminum; fb1_sensor_backing_clamp,Clamps only the beam root,
+Guide leaf,4,cut,0.50 mm AISI 301 full-hard spring stainless; nominal 36 x 8 mm,Use the four CAD patterns; the moving-end holes are offset; deburr without scoring active spans,
+Guide clamp cap,8,machine,6061-T6 aluminum; 2 mm thickness,Use the individual CAD parts and their asymmetric hole positions,
+Leaf clamp screws,16,buy,M2 x 6 socket head; head at most 3.8 mm diameter x 2 mm high,Tap carrier pilot holes M2 x 0.4; check actual screw engagement,
+PCB screws,2,buy,M2 x 6; head at most 3.8 mm diameter x 2 mm high,Tap backing-block pilots M2 x 0.4; board must seat flat,
+Backing clamp screws,2,buy,M3 x 10 socket head; head at most 5.5 mm diameter x 3 mm high,Tap fixed-carrier pilots M3 x 0.5,
+Adjustable plunger,1,machine,Hardened polished steel; M4 x 0.7 shaft; 5 mm flat contact head,Machine to the CAD envelope and add the specified bottom drive feature; threads are drawing callouts,
+Plunger jam nut,1,buy,M4 thin nut; across flats 7 mm; height at most 2.2 mm,Below floating tongue; lock after preload adjustment,
+Overload stop screws,3,buy,M3 x 8 flat-point set screws; tip no larger than 2 mm,Inverted in the floating flange; measure gap after preload,
+Stop locking nuts,3,buy,M3 nut; across flats 5.5 mm; height at most 2.4 mm,Inside the underside access pockets,
+Fixed-root bench screws,2,buy,M3 x 12 countersunk; 90 degree head no larger than 6 mm,For the supplied bench receiver; installed-jaw length depends on actual thread depth,
+Original-finger through fasteners,2,buy,Compatible original M3 heads; select length after measuring finger and 6 mm carrier stack,No universal length inferred from the source STL,
+Finger rear washers,2,buy,M3; outside diameter at most 7 mm; thickness at most 0.5 mm,Behind the floating carrier,
+Finger rear nuts,2,buy,M3; across flats 5.5 mm; height at most 2.4 mm,Combined modeled rear washer/nut projection 2.9 mm; keep bolt protrusion inside the available relief,
+Common bench receiver,1 shared,machine,6061-T6 aluminum; fb1_bench_receiver; M3 tapped root interface; 50 mm square M6 stand pattern,Shared fixture derived from the existing C1 receiver,
+Bench force reference,1 shared,buy or existing,Documented 0 to at least 25 N reference with total uncertainty at most 0.05 N,Example Mark-10 M5-5; 25 N capacity and 0.005 N display resolution; verify calibration certificate,https://www.mark-10.com/downloads/product-downloads/DataSheetSeries5.pdf
+Bench positioning and inspection,1 shared,existing,Force test stand; flat probe no larger than 5 mm near FMA; displacement indicator; optical inspection; multimeter,Align force to native +Z and measure actual stop gaps and tip motion,
+Original finger,1,existing,Matched ENPIRE/YAM hard frame and TPU insert,Retained source geometry and original contact shape,https://github.com/pgeedh/Open-ENPIRE-Gripper

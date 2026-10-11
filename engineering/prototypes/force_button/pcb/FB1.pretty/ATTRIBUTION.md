@@ -1,0 +1,1 @@
+Capacitor footprint: KiCad library contributors, CC BY-SA 4.0 with KiCad Libraries Exception; source path/hash in the board metadata. FMA functional land geometry follows Honeywell data-sheet Figure 3. The footprint, open vent, wire port and holes are authored for this MIT-licensed kit. Vendor CAD and complete data sheets are not redistributed.

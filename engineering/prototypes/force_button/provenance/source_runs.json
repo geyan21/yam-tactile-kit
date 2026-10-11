@@ -1,0 +1,13 @@
+{
+  "source_runs": {
+    "cad": "build/engineering/prototypes/force_button/cad_runs/20261011T194618.636721Z",
+    "fit": "build/engineering/prototypes/force_button/fit_checks/20261011T194806.883664Z",
+    "board": "build/engineering/prototypes/force_button/pcb/routed-01",
+    "screen": "build/engineering/prototypes/force_button/screens/20261011T194617.483667Z",
+    "numerics": "build/engineering/prototypes/force_button/numerical_checks/20261011T194617.123158Z",
+    "visuals": "build/engineering/prototypes/force_button/visuals/20261011T195020.292080Z",
+    "structure": "build/engineering/prototypes/force_button/structural_reviews/20261011T200303.184054Z"
+  },
+  "cad_manifest_sha256": "a54c42b2c562f315ab02bad8c33d5df718a0483a1992d19ec85ff4ef01e9d115",
+  "native_pcb_receipt_sha256": "968087c43c0217535d5f9225ea758c3a678c26b7d57f5664d8c7249f385cd3a6"
+}

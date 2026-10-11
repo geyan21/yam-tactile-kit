@@ -4,9 +4,9 @@ The goal is a measured comparison of all twelve designs for reliable contact
 and grip-force feedback through **20 N per finger**, while retaining thin-tip
 access for precision manipulation.
 
-**Current evidence:** seven digital prototype packages are available. Physical
+**Current evidence:** eight digital prototype packages are available. Physical
 specimens tested: **0**. No measured winner has been selected. The remaining
-five designs still need the development listed below.
+four designs still need the development listed below.
 
 ## Status of every design
 
@@ -23,7 +23,7 @@ five designs still need the development listed below.
 | [K1 capacitive](https://geyan21.github.io/yam-tactile-kit/capacitive.html) | 49 current CAD parts, post-sheet tooling, conforming supports, checked readout PCB and raw acquisition | Finish electrodes, ground bonds, stops/retention, vents, guarded cables and enclosure; then assemble and measure complete specimens |
 | [Pneumatic](https://geyan21.github.io/yam-tactile-kit/pneumatic.html) | Published reference hardware | Develop ENPIRE chambers, sealing, range and nail-contact coverage |
 | [Optical](https://geyan21.github.io/yam-tactile-kit/optical.html) | Published optical approaches | Design the optical path, camera, surface, image processing and nail coverage |
-| [Force button](https://geyan21.github.io/yam-tactile-kit/force-button.html) | A commercial component reference | Design controlled compression, side-load protection, readout and mount |
+| [FB1 force button](https://geyan21.github.io/yam-tactile-kit/force-button.html) | Guided root adapter, selected Honeywell FMA, checked sensor PCB, firmware, calibration tools and structural screen | Machine and assemble; measure preload, stop gaps, actual drive fit, contact reliability and held-out finger-force accuracy |
 
 Each design keeps its separate page. New packages are added there with their
 actual CAD, circuit and software checks. A coupon remains a development step
@@ -42,7 +42,7 @@ until its installed finger has been designed and evaluated.
 R1/L1 already have their dedicated force/contact workflows. B1/B2 have raw
 magnetic acquisition and bench conditions; force/contact models for those
 designs still require measured training and held-out validation data.
-C1 and N1 have separate stationary-hold fitters and evaluators; dynamic force and
+C1, N1 and FB1 have separate stationary-hold fitters and evaluators; dynamic force and
 contact reliability still need their own measured evidence.
 
 ## Proposed comparison targets

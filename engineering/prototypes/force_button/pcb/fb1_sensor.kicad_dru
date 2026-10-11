@@ -1,0 +1,8 @@
+(version 1)
+(rule "FB1 clearance" (constraint clearance (min 0.20mm)))
+# The vendor land pattern leaves 0.245 mm between pad 6 and the reference vent.
+(rule "FB1 copper to hole" (constraint hole_clearance (min 0.20mm)))
+(rule "FB1 copper edge" (constraint edge_clearance (min 0.25mm)))
+(rule "FB1 width" (constraint track_width (min 0.20mm)))
+(rule "FB1 minimum drill" (constraint hole_size (min 0.25mm)))
+(rule "FB1 drill separation" (constraint hole_to_hole (min 0.25mm)))

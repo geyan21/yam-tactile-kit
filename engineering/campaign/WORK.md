@@ -13,6 +13,54 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+FB1.1 is now packaged at `engineering/prototypes/force_button/`, bringing the
+digital prototype count to **eight**. Its 174-file snapshot includes 54 CAD
+parts/references, the selected Honeywell FMAMSDXX025WC2C3, a two-layer sensor
+PCB, four-file Pico firmware, raw recording and physical static-calibration
+tools. The complete goal remains unfinished: F1, K1, pneumatic and optical
+integration, fabrication and all physical comparisons remain.
+
+The current FB1.1 uses 0.50 mm 301 spring-steel guides. CAD run
+`build/engineering/prototypes/force_button/cad_runs/20261011T194618.636721Z`
+passes 1,519 declared checks in `fit_checks/20261011T194806.883664Z`,
+including actual sphere/plunger contact. The first sphere envelope had
+accidentally used CadQuery's default upper hemisphere. That failure is
+preserved; the corrected full sphere includes a documented removal of one
+collapsed zero-area STL pole facet, without changing STEP geometry.
+
+The native board is `pcb/routed-01` beneath the same prototype work root.
+Its final independent check is `checks/20261011T192405.135835Z`: four
+components, sixteen electrical pads, 46 tracks, three vias, zero violations
+and zero missing connections. The original shared PCB checker remains
+unchanged; FB1's separate wrapper exports its two designed copper layers.
+Nineteen focused software checks cover raw statuses, supply/configuration
+faults, timestamps, restarts, geometry/PCB correspondence and held-out
+physical-trial handling. No synthetic data are presented as physical evidence.
+
+The structural review is
+`structural_reviews/20261011T200303.184054Z`. A 109,803-node fine model and
+73,187-node coarse model pass the declared 1% displacement/gain comparison.
+At 20 N, the fine model gives 0.0876360 mm added contact motion for an assumed
+0.0001 mm/N sensor compliance and 0.0924378 mm for 0.0005 mm/N. Including
+the observed mesh difference gives 0.0930659 mm against the provisional
+0.1 mm screen. This is a linear model with bonded clamps and a rigid original
+finger, not physical accuracy, strength or fatigue qualification.
+
+The earlier 0.40 mm guide design is retained in `history/`. Its corresponding
+models gave 0.0981779 and 0.1041905 mm; the latter lacked precision margin.
+The first unbounded meshing attempt was intentionally stopped through owned
+session 67979 after over eight minutes. Its inputs and stop record remain;
+later jobs use a scoped parent process, saved PID/log and explicit timeout.
+
+The separate FB1 page, build guide, test guide, CAD viewer and download links
+pass local verification: 188 software/clean-reproduction tests, 5,019 local
+links, 43 main-page browser checks and 110 separate-page checks. Screenshots
+are retained in `build/engineering/browser/20261011T201059.509007Z`.
+Publication uses the existing GitHub Actions/Pages pipeline; exact-commit
+workflow, release and live-page evidence is collected by `check_publication.py`.
+
+The paragraphs below retain earlier milestones as written.
+
 K1 capacitive development is now at `engineering/development/capacitive/k1/`.
 It contains 49 current CAD parts, seven post-sheet patterns (reference tooling
 used twice), corrected conforming supports, a checked readout PCB and raw

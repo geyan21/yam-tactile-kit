@@ -1,0 +1,1912 @@
+{
+  "schema": "yam-fb1-mechanical-screen/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/force_button_fb1.json": "b38a07483a67505658c4762b64dd84caa66acfb8fafaca2814a316577ef1ae79",
+    "engineering/scripts/screen_force_button_fb1.py": "0250ceb177d0e22075cc3db18ba731e1577699692a82f9e168e83906b7420c4d",
+    "engineering/scripts/force_button_mechanics.py": "3426c0196d7de3ecb5de7a87b87096482734fab8930dd8f4f1629126c6bbf91c",
+    "engineering/release/l1/root_interface.json": "a89fa0a30d767fc9837256d3274107343212f5495830c644ef652adf8eb09d39",
+    "engineering/release/l1/contact_sites.json": "119ac2383fca7711deac3451243ede121805b773ee1b461b6da8ddcc24f3eaa5",
+    "engineering/designs/l1.json": "ec6160ef4ee9bffc582f0c6df2cd6e1e40ac474bf7ae0f28d003cbd5b81959c9"
+  },
+  "reference_native_mm": [
+    -7.5,
+    -33.769999999999996,
+    18.0
+  ],
+  "guide_stiffness": [
+    [
+      17075.77374599786,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      160000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      99.80537950995559,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      16003333.333333334,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1726875.63155726,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      23893333.333333332
+    ]
+  ],
+  "assumed_unloaded_preload_displacement": [
+    0.0,
+    0.0,
+    -0.020039,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "checks": {
+    "symmetry": 0.0,
+    "smallest_eigenvalue": 99.80537950995559,
+    "normal_to_torque_coupling": 0.0,
+    "backup_compliance_mm_per_n": 0.0023279590200327364,
+    "maximum_reaction_error_n": 2.2737367544323206e-13
+  },
+  "cases": [
+    {
+      "site": "nail_1",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        4.52475665138304e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.05950673058688874,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03806156397006496,
+        0.03676206299154956,
+        0.03851946021142311
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.08298416644987,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.2701130678432,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.08298416644987,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.2701130678432,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_2",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        -3.582370314891362e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.059437735285304875,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03755892209815594,
+        0.03701338392750407,
+        0.038770781147377614
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 32.600451402615974,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.24402309449725,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 32.600451402615974,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.24402309449725,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_3",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        8.578320134520241e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.05697890139047483,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.038312884906019466,
+        0.036700070228736566,
+        0.0383301320382816
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.47627187186711,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.93517937801647,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.47627187186711,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.93517937801647,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_4",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        -7.635933798028562e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.056840930192596305,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.037307601162201436,
+        0.037202712100645574,
+        0.03883277391019061
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.26551771278925,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.637310799914495,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.26551771278925,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.637310799914495,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_1",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00012405566257029787,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.050146531371421416,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 2.2737367544323206e-13,
+      "stop_displacements_mm": [
+        0.03778102905767921,
+        0.03711492985501024,
+        0.03844712826034818
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 25.996329988793036,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 25.996329988793036,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 25.996329988793036,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 25.996329988793036,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_2",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -0.00010281008873151428,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.046288993176274336,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03778102905767921,
+        0.0372290049363169,
+        0.03833305317904152
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 23.818658670317717,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 23.818658670317717,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 23.818658670317717,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 23.818658670317717,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_3",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -8.156451489273069e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.04310728938639257,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03778102905767921,
+        0.03734308001762356,
+        0.038218978097734856
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.640987351842398,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.640987351842398,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.640987351842398,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.640987351842398,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_4",
+      "sensor_compliance_mm_per_n": 0,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.229250056621666,
+      "modeled_preloaded_sensor_n": 18.229250056621666,
+      "ideal_gain": 0.8114625028310833,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.03778102905767921
+      ],
+      "rotation_radians": [
+        -5.90692014163716e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.040585567225236735,
+      "backup_pitch_deg": 0.1626773680360329,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03778102905767921,
+        0.037463865397830615,
+        0.038098192717527804
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 19.335217720515594,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 19.335217720515594,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 19.335217720515594,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 19.335217720515594,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_1",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        4.52475665138304e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06081053171243198,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.039367926744030474,
+        0.03806842576551508,
+        0.03982582298538862
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.060849409699664,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.24797831109299,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.060849409699664,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.24797831109299,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_2",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        -3.582370314891362e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06074159862955614,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03886528487212146,
+        0.038319746701469586,
+        0.04007714392134313
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.57831664586577,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.221888337747046,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 33.57831664586577,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 34.221888337747046,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_3",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        8.578320134520241e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.058282445486647454,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03961924767998498,
+        0.03800643300270208,
+        0.03963649481224712
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.45413711511691,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.91304462126627,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.45413711511691,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.91304462126627,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_4",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        -7.635933798028562e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.05814460323914982,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.03861396393616695,
+        0.03850907487461109,
+        0.040139136684156126
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.24338295603904,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.6151760431643,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.24338295603904,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.6151760431643,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_1",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00012405566257029787,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.051451596944077,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 2.2737367544323206e-13,
+      "stop_displacements_mm": [
+        0.039087391831644724,
+        0.038421292628975756,
+        0.03975349103431369
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.97419523204283,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.97419523204283,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.97419523204283,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.97419523204283,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_2",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -0.00010281008873151428,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.047593976128598114,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.039087391831644724,
+        0.03853536771028242,
+        0.03963941595300703
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.796523913567512,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.796523913567512,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.796523913567512,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.796523913567512,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_3",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -8.156451489273069e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.044413565817944076,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.039087391831644724,
+        0.03864944279158908,
+        0.03952534087170037
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 22.618852595092193,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 22.618852595092193,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 22.618852595092193,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 22.618852595092193,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_4",
+      "sensor_compliance_mm_per_n": 0.0001,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 16.09886802418836,
+      "modeled_preloaded_sensor_n": 18.09886802418836,
+      "ideal_gain": 0.8049434012094181,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.039087391831644724
+      ],
+      "rotation_radians": [
+        -5.90692014163716e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.04189153644775809,
+      "backup_pitch_deg": 0.16137045577567338,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.039087391831644724,
+        0.03877022817179613,
+        0.03940455549149332
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 20.31308296376539,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 20.31308296376539,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 20.31308296376539,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 20.31308296376539,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_1",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        4.52475665138304e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06272761553213756,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04128858321822716,
+        0.039989082239711767,
+        0.04174647945958531
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.49853827206557,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.6856671734589,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.49853827206557,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.6856671734589,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_2",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        -3.582370314891362e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06265876943584586,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04078594134631815,
+        0.040240403175666274,
+        0.04199780039553982
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.01600550823167,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.65957720011295,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.01600550823167,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 35.65957720011295,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_3",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        8.578320134520241e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06019917975899783,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04153990415418167,
+        0.03992708947689877,
+        0.04155715128644381
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.89182597748281,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.350733483632176,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.89182597748281,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.350733483632176,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_4",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        -7.635933798028562e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06006151744231166,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04053462041036364,
+        0.04042973134880778,
+        0.042059793158352815
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.68107181840495,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.0528649055302,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 36.68107181840495,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.0528649055302,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_1",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00012405566257029787,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.053370461491291266,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 2.2737367544323206e-13,
+      "stop_displacements_mm": [
+        0.04100804830584141,
+        0.040341949103172445,
+        0.04167414750851038
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.41188409440873,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.41188409440873,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.41188409440873,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.41188409440873,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_2",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -0.00010281008873151428,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.0495127360939671,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04100804830584141,
+        0.040456024184479106,
+        0.04156007242720372
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.234212775933415,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.234212775933415,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.234212775933415,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.234212775933415,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_3",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -8.156451489273069e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.04633410418965443,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04100804830584141,
+        0.04057009926578577,
+        0.04144599734589706
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.056541457458096,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.056541457458096,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.056541457458096,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.056541457458096,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_4",
+      "sensor_compliance_mm_per_n": 0.00025,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.907176175872909,
+      "modeled_preloaded_sensor_n": 17.90717617587291,
+      "ideal_gain": 0.7953588087936454,
+      "modeled_normal_force_n": 20.0,
+      "ideal_change_of_contact_location_error_n": 0.0,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04100804830584141
+      ],
+      "rotation_radians": [
+        -5.90692014163716e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.04381165692220333,
+      "backup_pitch_deg": 0.1594489914289461,
+      "reaction_error_n": 3.552713678800501e-15,
+      "stop_displacements_mm": [
+        0.04100804830584141,
+        0.04069088464599282,
+        0.04132521196569001
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.75077182613129,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.75077182613129,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.75077182613129,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 21.75077182613129,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_1",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        4.52475665138304e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06582371570533932,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04439001268076987,
+        0.043090511702254475,
+        0.04484790892212802
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.82008335605881,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.00721225745214,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.82008335605881,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 38.00721225745214,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_2",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00016365060612372423,
+        -3.582370314891362e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06575499982403839,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.043887370808860855,
+        0.04334183263820898,
+        0.045099229858082526
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.337550592224915,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.98112228410619,
+          "axial_force_n": 65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.337550592224915,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 37.98112228410619,
+          "axial_force_n": -65.4602424494897,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_3",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        8.578320134520241e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06329477775992759,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04464133361672438,
+        0.04302851893944148,
+        0.044658580748986515
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 41.21337106147605,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 39.67227856762541,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 41.21337106147605,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 39.67227856762541,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "nail_4",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00015179300395750886,
+        -7.635933798028562e-05,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.06315738402566919,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04363604987290635,
+        0.043531160811350486,
+        0.04516122262089552
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 39.00261690239819,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 40.374409989523436,
+          "axial_force_n": 60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 39.00261690239819,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 40.374409989523436,
+          "axial_force_n": -60.71720158300354,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_1",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00012405566257029787,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.056469254612577756,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 2.2737367544323206e-13,
+      "stop_displacements_mm": [
+        0.04410947776838412,
+        0.04344337856571515,
+        0.04477557697105309
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 30.733429178401977,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 30.733429178401977,
+          "axial_force_n": 49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 30.733429178401977,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 30.733429178401977,
+          "axial_force_n": -49.622265028119145,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_2",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -0.00010281008873151428,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.052611395305229895,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04410947776838412,
+        0.043557453647021814,
+        0.04466150188974643
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.555757859926658,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.555757859926658,
+          "axial_force_n": 41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.555757859926658,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 28.555757859926658,
+          "axial_force_n": -41.124035492605714,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_3",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -8.156451489273069e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.04943536231650416,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04410947776838412,
+        0.043671528728328475,
+        0.04454742680843977
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.37808654145134,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.37808654145134,
+          "axial_force_n": 32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.37808654145134,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 26.37808654145134,
+          "axial_force_n": -32.625805957092275,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    },
+    {
+      "site": "tpu_4",
+      "sensor_compliance_mm_per_n": 0.0005,
+      "force_model_input_n": 20.0,
+      "sensor_increment_n": 15.597636831340473,
+      "modeled_preloaded_sensor_n": 17.597636831340473,
+      "ideal_gain": 0.7798818415670238,
+      "modeled_normal_force_n": 19.999999999999996,
+      "ideal_change_of_contact_location_error_n": 3.552713678800501e-15,
+      "translation_mm": [
+        0.0,
+        0.0,
+        0.04410947776838412
+      ],
+      "rotation_radians": [
+        -5.90692014163716e-05,
+        0.0,
+        0.0
+      ],
+      "additional_motion_at_contact_mm": 0.046912313508634056,
+      "backup_pitch_deg": 0.15634625743344704,
+      "reaction_error_n": 0.0,
+      "stop_displacements_mm": [
+        0.04410947776838412,
+        0.04379231410853553,
+        0.044426641428232716
+      ],
+      "would_reach_minimum_stop_gap": false,
+      "ideal_stress_check": [
+        {
+          "leaf": 0,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.072316910124535,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 1,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.072316910124535,
+          "axial_force_n": 23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 2,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.072316910124535,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        },
+        {
+          "leaf": 3,
+          "root_axial_plus_bending_mpa_with_assumed_preload": 24.072316910124535,
+          "axial_force_n": -23.62768056654864,
+          "pinned_euler_load_n": 411.2335167120566
+        }
+      ]
+    }
+  ],
+  "sensitivity": [
+    {
+      "one_leaf_thickness_scale": 0.95,
+      "sensor_offset_mm": [
+        0.25,
+        0,
+        0
+      ],
+      "apparent_normal_n": 20.000852291155336,
+      "error_n": 0.0008522911553363599
+    },
+    {
+      "one_leaf_thickness_scale": 1.05,
+      "sensor_offset_mm": [
+        0.25,
+        0,
+        0
+      ],
+      "apparent_normal_n": 19.996735540574658,
+      "error_n": 0.0032644594253419257
+    },
+    {
+      "one_leaf_thickness_scale": 0.95,
+      "sensor_offset_mm": [
+        0,
+        0.25,
+        0
+      ],
+      "apparent_normal_n": 19.99796634161907,
+      "error_n": 0.0020336583809310582
+    },
+    {
+      "one_leaf_thickness_scale": 1.05,
+      "sensor_offset_mm": [
+        0,
+        0.25,
+        0
+      ],
+      "apparent_normal_n": 19.993701531303824,
+      "error_n": 0.006298468696176229
+    },
+    {
+      "one_leaf_thickness_scale": 0.95,
+      "sensor_offset_mm": [
+        0,
+        -0.25,
+        0
+      ],
+      "apparent_normal_n": 20.0059442742981,
+      "error_n": 0.0059442742980984065
+    },
+    {
+      "one_leaf_thickness_scale": 1.05,
+      "sensor_offset_mm": [
+        0,
+        -0.25,
+        0
+      ],
+      "apparent_normal_n": 20.002087022025048,
+      "error_n": 0.0020870220250479576
+    }
+  ],
+  "limits": [
+    "Small-deflection, ideal-clamp beam model; carriers, fasteners, slip, contact and original finger deformation are omitted.",
+    "The backing and sensor displacement cases are assumptions, not a measured assembly law.",
+    "Stops, preload, guide buckling, fatigue and sensor alignment require complete geometry and independent structural/physical checks.",
+    "No factory-error, noise, contact reliability or 20 N installed qualification follows from this ideal force-recovery model."
+  ]
+}

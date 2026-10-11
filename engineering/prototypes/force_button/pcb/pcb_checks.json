@@ -1,0 +1,26 @@
+{
+  "schema": "yam-prototype-pcb-check/1",
+  "violations": 0,
+  "unconnected": 0,
+  "tool": "10.0.7",
+  "source_sha256": "3ced4dedd8104e4521b5ba77abfe1223b0a9382e6d7c9aee4beaeca82fc6a69d",
+  "physical_boards_tested": 0,
+  "checked_pcb_sha256": "733404a96b9e7fbeba007bedbacc24ad77d74edde9484a1cbbcb83bbbf7a1a79",
+  "export_copper_layers": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "files": {
+    "fb1_sensor-B_Cu.gbl": "b039237706ce5aed50625666f1326caf91eb635691043bdcff271a1c379aa002",
+    "fb1_sensor-B_Mask.gbs": "fddc6433ae1115f330f60d09fde7493c33802dfcb5e0d8a6bd5816ec59576058",
+    "fb1_sensor-Edge_Cuts.gm1": "91c99915b544df5c9d795e6a7bc05ef9f28e78e069a703496b4946cde940f5e2",
+    "fb1_sensor-F_Cu.gtl": "b8fc185a6c79b3f872250d5aeee179d8e494fe789640afb690c69275d1ef8bca",
+    "fb1_sensor-F_Mask.gts": "e8c70e9b645c4db8fd23b2167750a9e183688dbffcc9dd4f152a9f4dd75206cc",
+    "fb1_sensor-F_Paste.gtp": "46c564f6ed327b8ba1f984ffe578a3dfe8ca6bf8a30e20dbd92677de83d89e95",
+    "fb1_sensor-F_Silkscreen.gto": "2a8a058e1bd51b62996503a9b2337454bac2010fa153a8d76b350bcb5aad8055",
+    "fb1_sensor-job.gbrjob": "01593fc5fbd8c2d4b6a671f6f12321a7479338e43dbff7d934b7142f5ad96354",
+    "fb1_sensor.drl": "50856e0cbccbb61f41b85da43a58b0413be1d88d36e9d75b89abfc0722366d64"
+  },
+  "checker_sha256": "35655bba78e5cd4e1f45daf1b242439435a40eb518cdb964edaec0b3e03567b8",
+  "limits": "Copper/connectivity and manufacturing export only; physical PCB assembly, force and contact remain untested."
+}

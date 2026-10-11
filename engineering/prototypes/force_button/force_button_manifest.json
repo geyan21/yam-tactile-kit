@@ -1,0 +1,1743 @@
+{
+  "schema": "yam-fb1-cad/1",
+  "physical_specimens_tested": 0,
+  "integrated_prototype_complete": false,
+  "input_sha256": {
+    "engineering/designs/force_button_fb1.json": "b38a07483a67505658c4762b64dd84caa66acfb8fafaca2814a316577ef1ae79",
+    "engineering/designs/force_button_electronics.json": "6f67d97f0a00988c07f1795ecea40579b5bb01d2c1bd9b6afd5e19f1e3105d05",
+    "engineering/scripts/build_force_button_fb1.py": "4eb10739d4e6d9d7a292036b855667716407471530da3fc890d058d1978be027",
+    "engineering/release/l1/root_interface.json": "a89fa0a30d767fc9837256d3274107343212f5495830c644ef652adf8eb09d39",
+    "engineering/scripts/force_button_mechanics.py": "3426c0196d7de3ecb5de7a87b87096482734fab8930dd8f4f1629126c6bbf91c",
+    "engineering/scripts/build_c1_parts.py": "5388a604aad731fc97e544041ff369a93daaa4b045b4cbdb6d4b8eb008fe7ccd",
+    "engineering/scripts/build_l1_parts.py": "6a6fe5b6891807ffadb1b1b3e0481999bc05bd61cbb8b1705d5395052cb856de",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/scripts/export_force_button_reference.py": "ecaf29ea90c27e671967faae74466158d0787ea769f01bc89e008cfabb4319ee",
+    "engineering/prototypes/c1/cad/c1_bench_receiver.step": "c5490be9e95ea3943da5c511337f57e0c28aedffd06b645231295b34d1c80927"
+  },
+  "parts": [
+    {
+      "id": "fb1_fixed_carrier",
+      "purpose": "Fixed root carrier, guide anchors, independent stop frame and sensor-beam anchor",
+      "material": "6061-T6 aluminum; tap designated holes after machining",
+      "kind": "fabricate",
+      "step": "cad/fb1_fixed_carrier.step",
+      "stl": "cad/fb1_fixed_carrier.stl",
+      "sha256_step": "5fd2b80d654ba7232457efe7c9242dc572ddf09b89c9a546b58e48aa5a7ea4a2",
+      "sha256_stl": "e4d61c2d743b34fb904f787c0197d5af5a4738bcf466d1f5e883f74a7a9101e5",
+      "volume_mm3": 11133.82780353501,
+      "bounds_mm": [
+        [
+          -29.5,
+          -41.77000045776367,
+          -2.060746431350708
+        ],
+        [
+          14.5,
+          -2.7699999809265137,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_floating_carrier",
+      "purpose": "Original-finger carrier, guide anchors, plunger tongue and adjustable-stop supports",
+      "material": "6061-T6 aluminum; tap M3/M4 threads as documented",
+      "kind": "fabricate",
+      "step": "cad/fb1_floating_carrier.step",
+      "stl": "cad/fb1_floating_carrier.stl",
+      "sha256_step": "09f72c690056d2cf82892a54c07501b051432b167b8b871775d94e41ab8bd163",
+      "sha256_stl": "5e38894055c7c4fd8095b694f76b64854471311168b00ae582c7daf09462f442",
+      "volume_mm3": 10042.224912748392,
+      "bounds_mm": [
+        [
+          -25.5,
+          -57.77000045776367,
+          -3.0
+        ],
+        [
+          10.5,
+          -24.770000457763672,
+          28.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_sensor_backing_beam",
+      "purpose": "Compliant backing beam and fully supported sensor-PCB seat with open vent",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_sensor_backing_beam.step",
+      "stl": "cad/fb1_sensor_backing_beam.stl",
+      "sha256_step": "5f18c66c98af946f905b448630500259f74f978d6766379875a47ae505a69731",
+      "sha256_stl": "de81bdfb0679145c40ebdc0e13aab63e69f98ffb8b1fc2e4de82310109fda3ee",
+      "volume_mm3": 1608.0132807546295,
+      "bounds_mm": [
+        [
+          -14.5,
+          -40.77000045776367,
+          21.0
+        ],
+        [
+          -0.5,
+          -7.96999979019165,
+          27.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_sensor_backing_clamp",
+      "purpose": "Clamp for the sensor-support beam root",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_sensor_backing_clamp.step",
+      "stl": "cad/fb1_sensor_backing_clamp.stl",
+      "sha256_step": "039d8f891d5e0c69c70d8b709f8ce3eecf8f556066db0c82930a7c66241a5531",
+      "sha256_stl": "2ff066a20c9c38e03645d1b90f5a397c8d6004cc52358ffc9c983c9a1b9239ca",
+      "volume_mm3": 249.72478338675285,
+      "bounds_mm": [
+        [
+          -14.0,
+          -15.770000457763672,
+          27.0
+        ],
+        [
+          -1.0,
+          -7.96999979019165,
+          30.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_sensor_pcb_reference",
+      "purpose": "Sensor PCB mechanical reference, not fabrication artwork",
+      "material": "1 mm FR4 reference; electrical design remains separate",
+      "kind": "reference_only",
+      "step": "cad/fb1_sensor_pcb_reference.step",
+      "stl": "cad/fb1_sensor_pcb_reference.stl",
+      "sha256_step": "cbed658d19e45f31039ac7c8eaf6a901af95c6639e48823e4e8f949a900ce403",
+      "sha256_stl": "a13845dba73265148dd488d04c7a5c067427cf78e0bfcfb8de39cb7ee18addd4",
+      "volume_mm3": 272.23830265022474,
+      "bounds_mm": [
+        [
+          -14.5,
+          -40.77000045776367,
+          19.950000762939453
+        ],
+        [
+          -0.5,
+          -20.770000457763672,
+          20.950000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_pcb_insulating_film",
+      "purpose": "Flat 50 \u00b5m polyimide film between supported PCB back and metal; keep vent and mounting holes open",
+      "material": "Polyimide film, 0.05 mm; no adhesive or folds under the sensor",
+      "kind": "fabricate",
+      "step": "cad/fb1_pcb_insulating_film.step",
+      "stl": "cad/fb1_pcb_insulating_film.stl",
+      "sha256_step": "b43b7386754f7a3bb1d555d991b42bc980fe3cfc2b79ea7595e574fc556c83a0",
+      "sha256_stl": "a1368e9dfdf15a1c2d0746c7984cf4baa02dc7d5b1baf5058a17507fe5f90d2d",
+      "volume_mm3": 9.259253364500989,
+      "bounds_mm": [
+        [
+          -14.5,
+          -40.77000045776367,
+          20.950000762939453
+        ],
+        [
+          -0.5,
+          -26.770000457763672,
+          21.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_c1_body_reference",
+      "purpose": "Maximum selected 0603 capacitor body; verify purchased component envelope",
+      "material": "100nF 16V X7R",
+      "kind": "reference_only",
+      "step": "cad/fb1_c1_body_reference.step",
+      "stl": "cad/fb1_c1_body_reference.stl",
+      "sha256_step": "433fe3c9a1138683f9bb3a9ecd19cafc6de5ed1630277efbb4fbb12c4698a122",
+      "sha256_stl": "1dc02cf30cbdd65af7c53311ff112e493304a97e19a986adc8bab5e8848a39e2",
+      "volume_mm3": 1.619999999999998,
+      "bounds_mm": [
+        [
+          -11.899999618530273,
+          -35.970001220703125,
+          19.049999237060547
+        ],
+        [
+          -10.100000381469727,
+          -34.970001220703125,
+          19.950000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_c2_body_reference",
+      "purpose": "Maximum selected 0603 capacitor body; verify purchased component envelope",
+      "material": "1uF 16V X7R; effective capacitance to be verified",
+      "kind": "reference_only",
+      "step": "cad/fb1_c2_body_reference.step",
+      "stl": "cad/fb1_c2_body_reference.stl",
+      "sha256_step": "91907fedfdd124dc051c42610d2ce348fd31dd3cf99a34cb9fa1f93564146476",
+      "sha256_stl": "5cedfadac06840de785217c292f6e32eb27211f1cda1f0c97e137dffd81a1dc4",
+      "volume_mm3": 1.619999999999998,
+      "bounds_mm": [
+        [
+          -11.899999618530273,
+          -33.27000045776367,
+          19.049999237060547
+        ],
+        [
+          -10.100000381469727,
+          -32.27000045776367,
+          19.950000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_0_0",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_0_0.step",
+      "stl": "cad/fb1_leaf_clamp_0_0.stl",
+      "sha256_step": "6bce7774fb4d24e39148581793e88b1eadf7630f75fd05c7498a4894e6072719",
+      "sha256_stl": "45866b8822231b594b2643d2b933bf3a1d0244c71b07495dfd87d7f5fb209d67",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -24.5,
+          -51.77000045776367,
+          8.5
+        ],
+        [
+          -14.5,
+          -43.77000045776367,
+          10.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_0_1",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_0_1.step",
+      "stl": "cad/fb1_leaf_clamp_0_1.stl",
+      "sha256_step": "d690ce87ed920a27e8afae81cd2ff3bef9559ea2e2ea3fed8ff7bd6afa0ca07b",
+      "sha256_stl": "88ace83948f9684eeb2ea5a7d4b04c866785d4be9d91df9a1b4a3969362cff55",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -24.5,
+          -23.770000457763672,
+          8.5
+        ],
+        [
+          -14.5,
+          -15.770000457763672,
+          10.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_guide_leaf_0",
+      "purpose": "Flat spring strip, active span between two clamped ends",
+      "material": "0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",
+      "kind": "fabricate",
+      "step": "cad/fb1_guide_leaf_0.step",
+      "stl": "cad/fb1_guide_leaf_0.stl",
+      "sha256_step": "a2fde9c08e1218f49b83c633d91968e32654bb317dd5bfe82398b16cf4f504c8",
+      "sha256_stl": "850fdaedfd162564efdf0c2b65f75430c89ee6b10ced2a5846d38ec4b6ad4ce0",
+      "volume_mm3": 134.9522131576614,
+      "bounds_mm": [
+        [
+          -23.5,
+          -51.77000045776367,
+          8.0
+        ],
+        [
+          -15.5,
+          -15.770000457763672,
+          8.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_1_0",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_1_0.step",
+      "stl": "cad/fb1_leaf_clamp_1_0.stl",
+      "sha256_step": "49582cfa8a48da425ef2aac827f6e5b8fe75066c11515629e4e0284790ecb4e3",
+      "sha256_stl": "55dfdb45fb479003a7a560ce7d79ad1c3f9d9bd1fce50922e282c9e11c9bbefd",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -0.5,
+          -51.77000045776367,
+          8.5
+        ],
+        [
+          9.5,
+          -43.77000045776367,
+          10.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_1_1",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_1_1.step",
+      "stl": "cad/fb1_leaf_clamp_1_1.stl",
+      "sha256_step": "ae8070e1f222eedc7fb5e078d26252d6f5b9e85b3ff352dd212a10412b724697",
+      "sha256_stl": "c49d5fd9d91126faee32e5376674ecd53fa0011b49850c761856e9ac32635109",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -0.5,
+          -23.770000457763672,
+          8.5
+        ],
+        [
+          9.5,
+          -15.770000457763672,
+          10.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_guide_leaf_1",
+      "purpose": "Flat spring strip, active span between two clamped ends",
+      "material": "0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",
+      "kind": "fabricate",
+      "step": "cad/fb1_guide_leaf_1.step",
+      "stl": "cad/fb1_guide_leaf_1.stl",
+      "sha256_step": "ae4564af206e8b77f71b38b8e8af62f6b63cc044e2472b9cbb2607f4ac76cf3b",
+      "sha256_stl": "edce9135fc102e38f88e7f94e582f267f672fee6f3235f434e9be122717d5230",
+      "volume_mm3": 134.9522131576614,
+      "bounds_mm": [
+        [
+          0.5,
+          -51.77000045776367,
+          8.0
+        ],
+        [
+          8.5,
+          -15.770000457763672,
+          8.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_2_0",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_2_0.step",
+      "stl": "cad/fb1_leaf_clamp_2_0.stl",
+      "sha256_step": "2410d8bff08823c59a99374a930dfbcc098d157c262533382ed2a8ca5123e30a",
+      "sha256_stl": "f015ca8be47b63ba235644b6ba6b50261384389cc25fa693a14fe0a87b9d1eb0",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -24.5,
+          -51.77000045776367,
+          28.5
+        ],
+        [
+          -14.5,
+          -43.77000045776367,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_2_1",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_2_1.step",
+      "stl": "cad/fb1_leaf_clamp_2_1.stl",
+      "sha256_step": "13054860c5fb6eac198fde8c9a07be29ae5bd8423f7fa838637a980d89a301d0",
+      "sha256_stl": "a7478de48b87b819cc84bc83c2abbc692c71697d60b520e3b72bb0c44f7e6630",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -24.5,
+          -23.770000457763672,
+          28.5
+        ],
+        [
+          -14.5,
+          -15.770000457763672,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_guide_leaf_2",
+      "purpose": "Flat spring strip, active span between two clamped ends",
+      "material": "0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",
+      "kind": "fabricate",
+      "step": "cad/fb1_guide_leaf_2.step",
+      "stl": "cad/fb1_guide_leaf_2.stl",
+      "sha256_step": "f71487f1e607b7b98dafbae5edf10eeba5412cc109344a1e9493e0cffa6492dd",
+      "sha256_stl": "6d55dce5c0df4af7a7f626d264bd88e5fa4045984af38b338f0646fd443102ae",
+      "volume_mm3": 134.9522131576614,
+      "bounds_mm": [
+        [
+          -23.5,
+          -51.77000045776367,
+          28.0
+        ],
+        [
+          -15.5,
+          -15.770000457763672,
+          28.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_3_0",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_3_0.step",
+      "stl": "cad/fb1_leaf_clamp_3_0.stl",
+      "sha256_step": "46e19fa8e0c04282cccdd5fa1c6fa83d9c38b8e1cad7f9f44b35e202ec42c2cb",
+      "sha256_stl": "4432b7fe5debfeb661cf53971eba6566df9704b1b67d135556af1822b5a07bbb",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -0.5,
+          -51.77000045776367,
+          28.5
+        ],
+        [
+          9.5,
+          -43.77000045776367,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_clamp_3_1",
+      "purpose": "Metal leaf clamp; assembled on the specified deck",
+      "material": "6061-T6 aluminum",
+      "kind": "fabricate",
+      "step": "cad/fb1_leaf_clamp_3_1.step",
+      "stl": "cad/fb1_leaf_clamp_3_1.stl",
+      "sha256_step": "ddf848ef6b26e1851fa3d136728c7430e90739b2f8453f4d7fcb2d68bfab72d0",
+      "sha256_stl": "1ec4772c41bda2a765e7f8d356f0c797bd5cf0188b11a9a375bc0ce87f16679d",
+      "volume_mm3": 141.9044263153228,
+      "bounds_mm": [
+        [
+          -0.5,
+          -23.770000457763672,
+          28.5
+        ],
+        [
+          9.5,
+          -15.770000457763672,
+          30.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_guide_leaf_3",
+      "purpose": "Flat spring strip, active span between two clamped ends",
+      "material": "0.50 mm AISI 301 full-hard spring stainless strip; verify supplier temper, measured thickness and flatness",
+      "kind": "fabricate",
+      "step": "cad/fb1_guide_leaf_3.step",
+      "stl": "cad/fb1_guide_leaf_3.stl",
+      "sha256_step": "f8af85eaca86162f966c7bcc9716aad6bee57a802035b379eb8dce8a2d5efbcb",
+      "sha256_stl": "07af485d773a09340d0fb41f144fa7defbb04d10530c4e0e4d2994037195efaf",
+      "volume_mm3": 134.9522131576614,
+      "bounds_mm": [
+        [
+          0.5,
+          -51.77000045776367,
+          28.0
+        ],
+        [
+          8.5,
+          -15.770000457763672,
+          28.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_fma25_envelope",
+      "purpose": "Own conservative package/sphere envelope based on manufacturer dimensions; not the vendor CAD",
+      "material": "Purchased FMAMSDXX025WC2C3 reference",
+      "kind": "reference_only",
+      "step": "cad/fb1_fma25_envelope.step",
+      "stl": "cad/fb1_fma25_envelope.stl",
+      "sha256_step": "caf2ceaa69303b25bfaf3ffea8d921924745c3999a91ac20427e07bed3afeabc",
+      "sha256_stl": "69711ba942040f60a7cdd3d7cc4353f17bc31f2439f921849c0a41c952517e19",
+      "volume_mm3": 54.155177348637814,
+      "bounds_mm": [
+        [
+          -9.109999656677246,
+          -36.27000045776367,
+          17.267499923706055
+        ],
+        [
+          -4.110000133514404,
+          -31.270000457763672,
+          19.899999618530273
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "tessellation_cleanup": {
+        "collapsed_zero_area_facets_removed": 1,
+        "raw_file": "reference_tessellation/fb1_fma25_envelope_raw.stl",
+        "raw_sha256": "742e9ea682e9303d23dd62ae1a61945c54aa78036fbad47b7db2b1422c08d026",
+        "scope": "No vertex moved, hole filled or positive-area face removed; native STEP is unchanged"
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_adjustable_plunger_reference",
+      "purpose": "M4\u00d70.7 adjustable plunger with flat 5 mm contact face and 1 mm wide \u00d7 1.5 mm deep bottom drive slot; helical threads not modeled",
+      "material": "Polished hardened steel flat pad; inspect contact wear in the pilot",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_adjustable_plunger_reference.step",
+      "stl": "cad/fb1_adjustable_plunger_reference.stl",
+      "sha256_step": "a14b0d099a79b35e23d8379d077d5abba6a7f13d97e3f695e105d95792f9f463",
+      "sha256_stl": "fc9f27d4d913524473ba8e00d21486b72fd4d7d0adac6d901fed69fbc200837e",
+      "volume_mm3": 279.53962386034397,
+      "bounds_mm": [
+        [
+          -10.0,
+          -36.269222259521484,
+          -5.0
+        ],
+        [
+          -5.0,
+          -31.270776748657227,
+          17.267499923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_plunger_locknut_reference",
+      "purpose": "M4 thin locknut below the floating tongue",
+      "material": "Steel; reference only",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_plunger_locknut_reference.step",
+      "stl": "cad/fb1_plunger_locknut_reference.stl",
+      "sha256_step": "a791c7485ad307556ab5d514cd6ffad7f6915037bba279f1c6238400144e2223",
+      "sha256_stl": "eb9840006e35bef7cf983c0e02d5d3ae53b4fac43e48559ef85bde481eef1e24",
+      "volume_mm3": 64.31194364919808,
+      "bounds_mm": [
+        [
+          -11.541451454162598,
+          -37.27000045776367,
+          -2.200000047683716
+        ],
+        [
+          -3.458548069000244,
+          -30.270000457763672,
+          0.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_screw_0_reference",
+      "purpose": "Inverted M3\u00d78 flat-point stop; establish gap by measurement",
+      "material": "Hardened steel; thread/socket details omitted",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_screw_0_reference.step",
+      "stl": "cad/fb1_stop_screw_0_reference.stl",
+      "sha256_step": "8eaa510bc20a8ee0d0afac26d16ed1a56b9ffa59d2dc99efc6d4257f2deb8928",
+      "sha256_stl": "b26977f6b21e45388c89604949a61b3e828524c5fe79916091caff9deddd8670",
+      "volume_mm3": 54.977871437821385,
+      "bounds_mm": [
+        [
+          -15.199999809265137,
+          -35.269535064697266,
+          6.920000076293945
+        ],
+        [
+          -12.199999809265137,
+          -32.27046585083008,
+          14.920000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_locknut_0_reference",
+      "purpose": "M3 thin locknut below the upper flange",
+      "material": "Steel; reference only",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_locknut_0_reference.step",
+      "stl": "cad/fb1_stop_locknut_0_reference.stl",
+      "sha256_step": "e4aa383fe5c8b79e5cd74d9686dc0f7435a9f40a1cf4eb6198a0b5fb1a7f232b",
+      "sha256_stl": "b2e295af755801c436c0b0ac0bfd7bf3c0baddf48cef4c0fdf04175d36f3237b",
+      "volume_mm3": 44.75902107415151,
+      "bounds_mm": [
+        [
+          -16.87542724609375,
+          -36.52000045776367,
+          9.600000381469727
+        ],
+        [
+          -10.52457332611084,
+          -31.020000457763672,
+          12.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_screw_1_reference",
+      "purpose": "Inverted M3\u00d78 flat-point stop; establish gap by measurement",
+      "material": "Hardened steel; thread/socket details omitted",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_screw_1_reference.step",
+      "stl": "cad/fb1_stop_screw_1_reference.stl",
+      "sha256_step": "5d97aefd49af2741eb159f9447d0ba359c710774f1b2a915881a9ae7d79e642f",
+      "sha256_stl": "e79244068b6cc4493a488d481f6762bd7424b3a68b672e4a340abd578fa82608",
+      "volume_mm3": 54.97787143782136,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          -29.900177001953125,
+          6.920000076293945
+        ],
+        [
+          -2.9000000953674316,
+          -26.901107788085938,
+          14.920000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_locknut_1_reference",
+      "purpose": "M3 thin locknut below the upper flange",
+      "material": "Steel; reference only",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_locknut_1_reference.step",
+      "stl": "cad/fb1_stop_locknut_1_reference.stl",
+      "sha256_step": "1367be1e38060056df12aeb91f88c4d970bda6864085318beb02c3a57578c571",
+      "sha256_stl": "fd3406032dbd53817b569f5ce95b989cddc21fe3f920b4596ed74b9dfd27d58a",
+      "volume_mm3": 44.759021074151505,
+      "bounds_mm": [
+        [
+          -7.5754265785217285,
+          -31.15064239501953,
+          9.600000381469727
+        ],
+        [
+          -1.2245734930038452,
+          -25.65064239501953,
+          12.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_screw_2_reference",
+      "purpose": "Inverted M3\u00d78 flat-point stop; establish gap by measurement",
+      "material": "Hardened steel; thread/socket details omitted",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_screw_2_reference.step",
+      "stl": "cad/fb1_stop_screw_2_reference.stl",
+      "sha256_step": "1acc28bf220dadb904d75e60772cd7d56399b68b0e5605c6b7318e555d557bde",
+      "sha256_stl": "66e74a8434eaae114788d014caa3e57b627e8a10e15f23c239e9ec3d8f6112f4",
+      "volume_mm3": 54.977871437821385,
+      "bounds_mm": [
+        [
+          -5.900000095367432,
+          -40.638893127441406,
+          6.920000076293945
+        ],
+        [
+          -2.9000000953674316,
+          -37.63982391357422,
+          14.920000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_stop_locknut_2_reference",
+      "purpose": "M3 thin locknut below the upper flange",
+      "material": "Steel; reference only",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_stop_locknut_2_reference.step",
+      "stl": "cad/fb1_stop_locknut_2_reference.stl",
+      "sha256_step": "af43caf7db50b504e6db66ff8deca815477fbcf67b45eca0b96b0738f1f28e41",
+      "sha256_stl": "cc8bbf81cec7c61878bd5bc744a2803bc75e9734cdbb2f985d23ef2ff73a7cce",
+      "volume_mm3": 44.7590210741515,
+      "bounds_mm": [
+        [
+          -7.5754265785217285,
+          -41.88935852050781,
+          9.600000381469727
+        ],
+        [
+          -1.2245734930038452,
+          -36.38935852050781,
+          12.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_beam_clamp_screw_0",
+      "purpose": "M3\u00d710 sensor-support clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_beam_clamp_screw_0.step",
+      "stl": "cad/fb1_beam_clamp_screw_0.stl",
+      "sha256_step": "9541b6bcc5513d9e600c7f2ba19f4c04922d2337160f0e658e8389154df4a8e5",
+      "sha256_stl": "cabe1dde5f7ae3fc66e28768219eeb72e93328d0b5021508a7414cb0f4b38248",
+      "volume_mm3": 141.96071803408879,
+      "bounds_mm": [
+        [
+          -13.25,
+          -14.519145011901855,
+          20.0
+        ],
+        [
+          -7.75,
+          -9.020854949951172,
+          33.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_beam_clamp_screw_1",
+      "purpose": "M3\u00d710 sensor-support clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_beam_clamp_screw_1.step",
+      "stl": "cad/fb1_beam_clamp_screw_1.stl",
+      "sha256_step": "7f70921557cfe8cd2dd91dbaa2122c841343ccacd20c4f300b974fbc66633973",
+      "sha256_stl": "909674e3100d2b48f41558c7f1039d84758e3afc02322d0ecbc01a98c098d785",
+      "volume_mm3": 141.96071803408879,
+      "bounds_mm": [
+        [
+          -7.25,
+          -14.519145011901855,
+          20.0
+        ],
+        [
+          -1.75,
+          -9.020854949951172,
+          33.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_pcb_screw_0",
+      "purpose": "PCB M2\u00d76 screw reference; unmodeled threads",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_pcb_screw_0.step",
+      "stl": "cad/fb1_pcb_screw_0.stl",
+      "sha256_step": "7501d2de45d375306dbd94099b66084284f1d58691209638da5ac806cebe7545",
+      "sha256_stl": "f356c4765aebac0f5d98b1ce04f41956f98a1aa0192696615880ea529910e461",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          -14.399999618530273,
+          -40.669410705566406,
+          17.950000762939453
+        ],
+        [
+          -10.600000381469727,
+          -36.87059020996094,
+          25.950000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_pcb_screw_1",
+      "purpose": "PCB M2\u00d76 screw reference; unmodeled threads",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_pcb_screw_1.step",
+      "stl": "cad/fb1_pcb_screw_1.stl",
+      "sha256_step": "dd19d0f560cdc15081b9feb968d8735a70323f54f644b8fdc8582164b8448b4f",
+      "sha256_stl": "9f18a1ab46cd70a46b222900b357d460e4a4b7ffc338e6615d8febbb5a630e00",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          -4.400000095367432,
+          -30.669408798217773,
+          17.950000762939453
+        ],
+        [
+          -0.6000000238418579,
+          -26.870590209960938,
+          25.950000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_0_0_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_0_0_-2.step",
+      "stl": "cad/fb1_leaf_screw_0_0_-2.stl",
+      "sha256_step": "138cc4b9dbcb24c4b83cd3930b94ff5816a69333295662ffacb51b63dca2ccef",
+      "sha256_stl": "66fe1070f9f24ee5be756df6df92165b24b94088bdc40e045380908109e34699",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          -23.399999618530273,
+          -48.419410705566406,
+          4.5
+        ],
+        [
+          -19.600000381469727,
+          -44.62059020996094,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_0_0_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_0_0_2.step",
+      "stl": "cad/fb1_leaf_screw_0_0_2.stl",
+      "sha256_step": "5b0680ee8cf12e4d16e587585a5fb639345531b51ffa723fb56391a0ad2230c1",
+      "sha256_stl": "f651151588cf42c88a267dddb5810e50fcd50fc8f88a2229e2a189403667449b",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          -19.399999618530273,
+          -48.419410705566406,
+          4.5
+        ],
+        [
+          -15.600000381469727,
+          -44.62059020996094,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_0_1_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_0_1_-2.step",
+      "stl": "cad/fb1_leaf_screw_0_1_-2.stl",
+      "sha256_step": "caf1ea269b0beaac7712f2999dcfd53701e92c0a8311f9bd43f3f1ee90c66e61",
+      "sha256_stl": "3438300729431363d5549b94ba98505302c876e008884700ac999efd8381d04d",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          -23.399999618530273,
+          -21.669408798217773,
+          4.5
+        ],
+        [
+          -19.600000381469727,
+          -17.870590209960938,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_0_1_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_0_1_2.step",
+      "stl": "cad/fb1_leaf_screw_0_1_2.stl",
+      "sha256_step": "bca025d2a57a428f788ad4621f662a67a8f35ecbfc911726ab97a340e0ca1ac0",
+      "sha256_stl": "ba73d4d55a2724e8eed56229bc032823d5d978fef1c8b8db35883d6d431dfd53",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          -19.399999618530273,
+          -21.669408798217773,
+          4.5
+        ],
+        [
+          -15.600000381469727,
+          -17.870590209960938,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_1_0_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_1_0_-2.step",
+      "stl": "cad/fb1_leaf_screw_1_0_-2.stl",
+      "sha256_step": "72efd3e1e7eb1117d08e5b4e9dbde359e0c3ca9c01f6bcc017ef61caa38e1090",
+      "sha256_stl": "b2cfa379c8bce38f8b4d45ce8889e6db60e4662a5d9d4138f625a9e792d8077a",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          0.6000000238418579,
+          -48.419410705566406,
+          4.5
+        ],
+        [
+          4.400000095367432,
+          -44.62059020996094,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_1_0_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_1_0_2.step",
+      "stl": "cad/fb1_leaf_screw_1_0_2.stl",
+      "sha256_step": "2ff1be6d49cbb409b38e9ad1100dcea8e4b700423deec178e002f908c4cc0cdb",
+      "sha256_stl": "a7f0855808e9015ae1dedb75a1951e391d1160b9167d11424c10b2416cf8105d",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          4.599999904632568,
+          -48.419410705566406,
+          4.5
+        ],
+        [
+          8.399999618530273,
+          -44.62059020996094,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_1_1_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_1_1_-2.step",
+      "stl": "cad/fb1_leaf_screw_1_1_-2.stl",
+      "sha256_step": "93833f8d9f8ff3e4d8069541202d82102595981876602215a6ab3cece6f5d644",
+      "sha256_stl": "ef409556bfa7e8f7c558a78bd259e3ae2cf44bb290f03799cf060bc8eeac7df4",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          0.6000000238418579,
+          -21.669408798217773,
+          4.5
+        ],
+        [
+          4.400000095367432,
+          -17.870590209960938,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_1_1_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_1_1_2.step",
+      "stl": "cad/fb1_leaf_screw_1_1_2.stl",
+      "sha256_step": "32e5570047b95c871e5fd08b7754635599796c1fd87a6d449ff9fcbcda703829",
+      "sha256_stl": "aaaea22c7655db41bb76d8fce3b6e5f5715a81b52554c4307120be0945d66adb",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          4.599999904632568,
+          -21.669408798217773,
+          4.5
+        ],
+        [
+          8.399999618530273,
+          -17.870590209960938,
+          12.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_2_0_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_2_0_-2.step",
+      "stl": "cad/fb1_leaf_screw_2_0_-2.stl",
+      "sha256_step": "3b4d9330d2a8e81f76e572b18037f594487482937282353b7ef7a1f5e1e3132e",
+      "sha256_stl": "60f11191dbfd332c6f5bc7e418a21cd7352bf97eca66f8e0c74b88a0639caede",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          -23.399999618530273,
+          -48.419410705566406,
+          24.5
+        ],
+        [
+          -19.600000381469727,
+          -44.62059020996094,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_2_0_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_2_0_2.step",
+      "stl": "cad/fb1_leaf_screw_2_0_2.stl",
+      "sha256_step": "a24a2a2deb9fc9fde2ae7cb305f04f8fba4dcc0b71e3b784699296c458d202c3",
+      "sha256_stl": "2f488910418cb2c6ec3de70404494218ba77440d53bae8e7e29c252fe1f5470a",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          -19.399999618530273,
+          -48.419410705566406,
+          24.5
+        ],
+        [
+          -15.600000381469727,
+          -44.62059020996094,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_2_1_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_2_1_-2.step",
+      "stl": "cad/fb1_leaf_screw_2_1_-2.stl",
+      "sha256_step": "7c256d3362755b6d920321f443096cbb9970701c5d3b0c5db4e9217bd8183699",
+      "sha256_stl": "10684bfd8f38c99a494f728560f027e9263616ccbd60ebdc32bf5fb784705b03",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          -23.399999618530273,
+          -21.669408798217773,
+          24.5
+        ],
+        [
+          -19.600000381469727,
+          -17.870590209960938,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_2_1_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_2_1_2.step",
+      "stl": "cad/fb1_leaf_screw_2_1_2.stl",
+      "sha256_step": "a11fa7e9aa1f10c4a35d065e6e23efff3f1f529acc05a97c0d077af86007c81e",
+      "sha256_stl": "7f4c6d61d367aade72b57897b10096c574d02358e2a2b4c27372cae9d3959345",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          -19.399999618530273,
+          -21.669408798217773,
+          24.5
+        ],
+        [
+          -15.600000381469727,
+          -17.870590209960938,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_3_0_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_3_0_-2.step",
+      "stl": "cad/fb1_leaf_screw_3_0_-2.stl",
+      "sha256_step": "2f4abaf3c1872953fa8e6420233a0088d84a7f6ed12b6ac1f7ec3bcf840a89de",
+      "sha256_stl": "5d28aa5f6b5c535a274371456266a421c1f1146fb3356a768ae627b52620b9c0",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          0.6000000238418579,
+          -48.419410705566406,
+          24.5
+        ],
+        [
+          4.400000095367432,
+          -44.62059020996094,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_3_0_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_3_0_2.step",
+      "stl": "cad/fb1_leaf_screw_3_0_2.stl",
+      "sha256_step": "44a3fec32a2f0f6641f6f35e43f6fbc2e217b4dd44fc714430e7347e534bd6e3",
+      "sha256_stl": "5b220518c4f084413f1db879401c1ef23b8b08232a2d0eacc4cfe729425637ed",
+      "volume_mm3": 41.53185488045705,
+      "bounds_mm": [
+        [
+          4.599999904632568,
+          -48.419410705566406,
+          24.5
+        ],
+        [
+          8.399999618530273,
+          -44.62059020996094,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_3_1_-2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_3_1_-2.step",
+      "stl": "cad/fb1_leaf_screw_3_1_-2.stl",
+      "sha256_step": "299a94e80f3617b00439fb01d188a334f033c8e79b65d15f7380f64bb0d08d3d",
+      "sha256_stl": "164b8d0d9a913572be3fea0adaec13c4351dffcc3b28bac90d90abf0391821f7",
+      "volume_mm3": 41.53185488045706,
+      "bounds_mm": [
+        [
+          0.6000000238418579,
+          -21.669408798217773,
+          24.5
+        ],
+        [
+          4.400000095367432,
+          -17.870590209960938,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_leaf_screw_3_1_2",
+      "purpose": "M2\u00d76 clamp screw reference",
+      "material": "Steel hardware reference; actual part dimensions must be checked",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_leaf_screw_3_1_2.step",
+      "stl": "cad/fb1_leaf_screw_3_1_2.stl",
+      "sha256_step": "43735ec0510e82dd57ab56c9cbc2349b850f549bc7cea05869eed314c80b8e12",
+      "sha256_stl": "6482d82336be5ecd0cbf08f72abc4ad01ee1ebf03098f0fdefa7f7fd102edbbd",
+      "volume_mm3": 41.531854880457054,
+      "bounds_mm": [
+        [
+          4.599999904632568,
+          -21.669408798217773,
+          24.5
+        ],
+        [
+          8.399999618530273,
+          -17.870590209960938,
+          32.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_fixed_root_m3x12_0_reference",
+      "purpose": "M3\u00d712 countersunk reference for the independent bench receiver; installed-drive length remains conditional",
+      "material": "Steel hardware reference",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_fixed_root_m3x12_0_reference.step",
+      "stl": "cad/fb1_fixed_root_m3x12_0_reference.stl",
+      "sha256_step": "342eb844c327da5bc91e794838fca51cf19f9cfa1d8f4f7c66c23dadc552cf42",
+      "sha256_stl": "3dbae3e3014724b820fe156a825d77986f3a32d8ee58b38ac8800334b55df4d9",
+      "volume_mm3": 98.96016858807846,
+      "bounds_mm": [
+        [
+          -23.709880828857422,
+          -13.619999885559082,
+          11.283239364624023
+        ],
+        [
+          -17.711746215820312,
+          -1.6200000047683716,
+          17.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_finger_m3_retention_0_reference",
+      "purpose": "Rear M3 washer and nut envelope; retain a compatible original-finger head and choose the measured through-bolt length",
+      "material": "Steel hardware reference",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_finger_m3_retention_0_reference.step",
+      "stl": "cad/fb1_finger_m3_retention_0_reference.stl",
+      "sha256_step": "3a7cadae38bb8e042628573e5df66b805575b25f4a41fa325e5c077042c5a4fa",
+      "sha256_stl": "30b79d86392ac48171ea438286f2af7d186a6edffbb4d26ac859c349d25933f7",
+      "volume_mm3": 59.980037480794046,
+      "bounds_mm": [
+        [
+          -24.209726333618164,
+          -51.77000045776367,
+          10.783239364624023
+        ],
+        [
+          -17.21190071105957,
+          -48.869998931884766,
+          17.783239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_fixed_root_m3x12_1_reference",
+      "purpose": "M3\u00d712 countersunk reference for the independent bench receiver; installed-drive length remains conditional",
+      "material": "Steel hardware reference",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_fixed_root_m3x12_1_reference.step",
+      "stl": "cad/fb1_fixed_root_m3x12_1_reference.stl",
+      "sha256_step": "4517c009e5f573e9ba1448fefa39b8a070af7a2eab45e15cae88ccc2625569bb",
+      "sha256_stl": "8615d28a9ab8a98a5ed634beeec950f69700cc3da0c9bc0bb312967bb548bd2e",
+      "volume_mm3": 98.96016858807849,
+      "bounds_mm": [
+        [
+          -2.709881067276001,
+          -13.619999885559082,
+          11.283239364624023
+        ],
+        [
+          3.2882540225982666,
+          -1.6200000047683716,
+          17.283239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_finger_m3_retention_1_reference",
+      "purpose": "Rear M3 washer and nut envelope; retain a compatible original-finger head and choose the measured through-bolt length",
+      "material": "Steel hardware reference",
+      "kind": "hardware_reference",
+      "step": "cad/fb1_finger_m3_retention_1_reference.step",
+      "stl": "cad/fb1_finger_m3_retention_1_reference.stl",
+      "sha256_step": "1e927af7ca1f5554e32a94134f5abde7c5aa457df2633a4b9caa1ac29b9bec84",
+      "sha256_stl": "ed0740b7b3f2eb25ef929a7ec4aedc8ea16602da9c3127b53731fb591b4a67a6",
+      "volume_mm3": 59.98003748079406,
+      "bounds_mm": [
+        [
+          -3.2097256183624268,
+          -51.77000045776367,
+          10.783239364624023
+        ],
+        [
+          3.7880985736846924,
+          -48.869998931884766,
+          17.783239364624023
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "fb1_bench_receiver",
+      "purpose": "Common ENPIRE root bench receiver; M3 tapped interface and 50 mm square M6 stand pattern",
+      "material": "6061-T6 aluminum; tap M3 pilot bores",
+      "kind": "fabricate",
+      "step": "cad/fb1_bench_receiver.step",
+      "stl": "cad/fb1_bench_receiver.stl",
+      "sha256_step": "65a33250cb69164eb8b6a8be4c1397de87a7f362a396867fdda209da15a13691",
+      "sha256_stl": "189b0712e3c47591128eb203d9f86c93836f5ff324987c71ba6e1d189ac24ede",
+      "volume_mm3": 54882.267859389416,
+      "bounds_mm": [
+        [
+          -45.2108154296875,
+          -7.769999980926514,
+          -20.716760635375977
+        ],
+        [
+          24.789186477661133,
+          4.230000019073486,
+          49.283241271972656
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "geometry": {
+    "root_plane_y": -7.77,
+    "fixed_guide_boundary_y": -23.77,
+    "moving_guide_boundary_y": -43.769999999999996,
+    "reference_native_mm": [
+      -7.5,
+      -33.769999999999996,
+      18.0
+    ]
+  },
+  "finger_translation_native_mm": [
+    0,
+    -50,
+    0
+  ],
+  "sensor_contact_native_mm": [
+    -7.5,
+    -33.769999999999996,
+    17.2675
+  ],
+  "sensor_package_plane_z_mm": 19.9,
+  "pcb_component_face_z_mm": 19.95,
+  "pcb_back_face_z_mm": 20.95,
+  "insulation_top_z_mm": 21,
+  "stop_points_xy_mm": [
+    [
+      -13.7,
+      -33.769999999999996
+    ],
+    [
+      -4.399999999999999,
+      -28.400642496536477
+    ],
+    [
+      -4.399999999999999,
+      -39.139357503463515
+    ]
+  ],
+  "leaf_clamp_holes": [
+    {
+      "end": "fixed",
+      "x": -21.5,
+      "y": -19.77,
+      "blade_z": 8.0
+    },
+    {
+      "end": "fixed",
+      "x": -17.5,
+      "y": -19.77,
+      "blade_z": 8.0
+    },
+    {
+      "end": "floating",
+      "x": -21.5,
+      "y": -46.519999999999996,
+      "blade_z": 8.0
+    },
+    {
+      "end": "floating",
+      "x": -17.5,
+      "y": -46.519999999999996,
+      "blade_z": 8.0
+    },
+    {
+      "end": "fixed",
+      "x": -21.5,
+      "y": -19.77,
+      "blade_z": 28.0
+    },
+    {
+      "end": "fixed",
+      "x": -17.5,
+      "y": -19.77,
+      "blade_z": 28.0
+    },
+    {
+      "end": "floating",
+      "x": -21.5,
+      "y": -46.519999999999996,
+      "blade_z": 28.0
+    },
+    {
+      "end": "floating",
+      "x": -17.5,
+      "y": -46.519999999999996,
+      "blade_z": 28.0
+    },
+    {
+      "end": "fixed",
+      "x": 2.5,
+      "y": -19.77,
+      "blade_z": 8.0
+    },
+    {
+      "end": "fixed",
+      "x": 6.5,
+      "y": -19.77,
+      "blade_z": 8.0
+    },
+    {
+      "end": "floating",
+      "x": 2.5,
+      "y": -46.519999999999996,
+      "blade_z": 8.0
+    },
+    {
+      "end": "floating",
+      "x": 6.5,
+      "y": -46.519999999999996,
+      "blade_z": 8.0
+    },
+    {
+      "end": "fixed",
+      "x": 2.5,
+      "y": -19.77,
+      "blade_z": 28.0
+    },
+    {
+      "end": "fixed",
+      "x": 6.5,
+      "y": -19.77,
+      "blade_z": 28.0
+    },
+    {
+      "end": "floating",
+      "x": 2.5,
+      "y": -46.519999999999996,
+      "blade_z": 28.0
+    },
+    {
+      "end": "floating",
+      "x": 6.5,
+      "y": -46.519999999999996,
+      "blade_z": 28.0
+    }
+  ],
+  "beam_clamp_xy_mm": [
+    [
+      -10.5,
+      -11.769999999999998
+    ],
+    [
+      -4.5,
+      -11.769999999999998
+    ]
+  ],
+  "limits": [
+    "Nominal just-contact geometry; actual preload is not represented by rigid interpenetration.",
+    "Threaded engagements and selected fastener references need separate mating/clearance checks.",
+    "The source finger, moving clearances, vent path, loaded frame stiffness and stops remain to be checked.",
+    "Printed force-path parts are fit witnesses only; metal fabrication and physical qualification remain."
+  ]
+}

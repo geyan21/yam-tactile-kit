@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "FB1") (type "KiCad") (uri "${KIPRJMOD}/FB1.pretty") (options "") (descr "FB1 sensor lands, native passives and wire port")))

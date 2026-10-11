@@ -1,0 +1,13 @@
+{
+  "protocol": "yam-fb1/1",
+  "part": "FMAMSDXX025WC2C3",
+  "i2c_id": 0,
+  "sda_gpio": 4,
+  "scl_gpio": 5,
+  "bus_hz": 100000,
+  "sensor_address": 40,
+  "health_address": 72,
+  "minimum_frame_us": 10000,
+  "health_timeout_us": 6000,
+  "hello_period_frames": 100
+}

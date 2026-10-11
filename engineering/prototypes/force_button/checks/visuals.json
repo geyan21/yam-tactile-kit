@@ -1,0 +1,34 @@
+{
+  "schema": "yam-fb1-visuals/1",
+  "physical_specimens_tested": 0,
+  "assembly_bounds_native_mm": [
+    [
+      -29.5,
+      -167.6471,
+      -5.0
+    ],
+    [
+      14.5,
+      -1.62,
+      33.0
+    ]
+  ],
+  "input_sha256": {
+    "engineering/designs/force_button_fb1.json": "b38a07483a67505658c4762b64dd84caa66acfb8fafaca2814a316577ef1ae79",
+    "build/engineering/prototypes/force_button/cad_runs/20261011T194618.636721Z/manifest.json": "a54c42b2c562f315ab02bad8c33d5df718a0483a1992d19ec85ff4ef01e9d115",
+    "build/engineering/prototypes/force_button/cad_runs/20261011T194618.636721Z/models.json": "3a504a84444d3010af40ff8e51d761f23f4f791e0c7af68b1256bd21c49f558c",
+    "build/engineering/prototypes/force_button/fit_checks/20261011T194806.883664Z/report.json": "523d950fb2ac3dc88c3f4ccd6ed7a633b3f9c644173343485bf11922c911195b",
+    "build/engineering/prototypes/force_button/pcb/routed-01/fb1_sensor.json": "15013c42b8454453a4337fd3167cf8a9e4e1db62851cf9e43bdb9c4d14d44052",
+    "engineering/web/fb1_stack.svg": "95adeff0f80a54ae1ee9726034c0f352f51b01ea3990e8ececbd28800c0026b6",
+    "engineering/web/fb1_wiring.svg": "4ae96a6a110c2bb0d2742d6c26ede565744e92df9fd44a2f8d90d001007b975e"
+  },
+  "files_sha256": {
+    "fb1_pcb.png": "8f48ea89f64fc5f2052950a72cafc936e5d1af52bf2ce68f7dda6606a102f956",
+    "fb1_wiring.svg": "4ae96a6a110c2bb0d2742d6c26ede565744e92df9fd44a2f8d90d001007b975e",
+    "fb1_section.png": "a3e370eb6a855e18cfb2baf8e527e94275a9624df0f8b9cf3d2901e5f325d989",
+    "fb1_review_drawings.pdf": "412d8a1bd1d30e0960f2410f085c92dee48e1464b10a29ceecc89e66804378e0",
+    "models.json": "34bb1460c4f56964079dc1ea8f260299a0fd61e78af0929c60473bb540b3d0c1",
+    "fb1_stack.svg": "95adeff0f80a54ae1ee9726034c0f352f51b01ea3990e8ececbd28800c0026b6",
+    "fb1_assembly.png": "4a298bfd394261a7fcd4c63eb1d4b8b0914a06df26708cd137341652ec00911d"
+  }
+}

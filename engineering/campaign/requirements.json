@@ -54,6 +54,6 @@
     {"id": "CAPACITIVE", "slug": "capacitive", "development": "K1 cell tooling, corrected conforming supports, checked readout and raw code available; finish electrodes, ground joints, stops/retention, venting, guarded cables, enclosure and physical comparison", "physical_evidence": "missing"},
     {"id": "PNEUMATIC", "slug": "pneumatic", "development": "design chambers, sealing, pressure readout and nail coverage", "physical_evidence": "missing"},
     {"id": "O1", "slug": "optical", "development": "design optical path, sensing surface, camera processing and nail coverage", "physical_evidence": "missing"},
-    {"id": "FORCE_BUTTON", "slug": "force-button", "development": "design controlled load coupling, readout and installed-finger interface", "physical_evidence": "missing"}
+    {"id": "FORCE_BUTTON", "slug": "force-button", "development": "FB1.1 digital prototype: guided root adapter, checked FMA PCB, raw acquisition, static calibration and structural comparison; physical assembly, actual drive fit, preload/stops, contact and force tests remain", "physical_evidence": "missing"}
   ]
 }

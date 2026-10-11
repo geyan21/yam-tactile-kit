@@ -108,7 +108,8 @@ def cad_table(item):
         prefix="" if group=="r1" else group+"/"
     rows=[]
     for part in plan["parts"]:
-        kind="Reference envelope only" if part.get("kind")=="reference_only" else "Prototype part/tooling"
+        kind={"reference_only":"Reference envelope only", "hardware_reference":"Hardware / machining reference"}.get(
+            part.get("kind"),"Prototype part/tooling")
         rows.append('<tr><td data-label="Part">'+esc(part["id"])+'</td><td data-label="Purpose">'+esc(part["purpose"])+"<small>"+kind+'</small></td><td data-label="Files">'+
                     link("STEP ↓","downloads/"+prefix+part["step"])+link("STL ↓","downloads/"+prefix+part["stl"])+"</td></tr>")
     return '<details class="design-cad-list"><summary>Individual CAD files for '+esc(item["id"])+'</summary><div class="table-scroll"><table><thead><tr><th>Part</th><th>Purpose</th><th>Files</th></tr></thead><tbody>'+"".join(rows)+"</tbody></table></div></details>"

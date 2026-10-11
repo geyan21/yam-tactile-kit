@@ -50,6 +50,8 @@ DOCS=[
     ("BUILD_F1","build-f1","F1 development & fit packet"),
     ("F1_WRIST_CAPTURE","f1-capture","F1 wiring & raw capture"),
     ("BUILD_CAPACITIVE","build-capacitive","K1 capacitive development"),
+    ("BUILD_FORCE_BUTTON","build-force-button","Build FB1 force button"),
+    ("FORCE_BUTTON_TESTING","force-button-testing","FB1 calibration & tests"),
 ]
 
 
@@ -151,6 +153,34 @@ for source-file checksums. The generated index is separate from that immutable s
 {"".join(blocks)}</main></body></html>'''
         (folder/"file-index.html").write_text(body)
 
+
+def prototype_indexes(assets):
+    """Readable indexes for prototypes that declare their separate design page."""
+    for snapshot_path in sorted((assets/"prototypes").glob("*/prototype_snapshot.json")):
+        snapshot=json.loads(snapshot_path.read_text())
+        if "design_page" not in snapshot:
+            continue
+        folder=snapshot_path.parent
+        prefix=posixpath.relpath(".",str(folder.relative_to(SITE)))
+        groups={}
+        for name in snapshot["files"]:
+            groups.setdefault(name.split("/")[0] if "/" in name else "Overview",[]).append(name)
+        sections=[]
+        for group,names in groups.items():
+            rows="".join(f'<tr><td><a href="{html.escape(name,quote=True)}">{html.escape(name)}</a></td>'
+                         f'<td>{(folder/name).stat().st_size:,} bytes</td></tr>' for name in sorted(names))
+            sections.append(f'<details open><summary>{html.escape(group)}</summary><table><tbody>{rows}</tbody></table></details>')
+        label=html.escape(snapshot["design_label"])
+        (folder/"file-index.html").write_text(f'''<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{label} prototype files</title><link rel="stylesheet" href="{prefix}/assets/style.css"></head><body>
+<main class="doc-body" style="max-width:1100px;margin:2rem auto;padding:1rem">
+<p><a href="{prefix}/{html.escape(snapshot['design_page'],quote=True)}">← {label} sensors, placement and build guide</a></p>
+<h1>{label} prototype files</h1><p><strong>{html.escape(snapshot['status'])}</strong></p>
+<p>Physical specimens tested: {snapshot['physical_specimens_tested']}. Use <a href="README.md">README.md</a>
+for scope and <a href="prototype_snapshot.json">prototype_snapshot.json</a> for file checksums.</p>
+{"".join(sections)}</main></body></html>''')
+
 def chapter(source):
     text=(ROOT/"engineering/docs"/f"{source}.md").read_text()
     for name,slug,_ in DOCS:
@@ -202,6 +232,7 @@ def main():
         shutil.copytree(ROOT/"engineering/prototypes",assets/"prototypes")
         shutil.copytree(ROOT/"engineering/development",assets/"development")
         development_indexes(assets)
+        prototype_indexes(assets)
         shutil.copyfile(ROOT/"engineering/campaign/requirements.json",downloads/"campaign_requirements.json")
         for folder in sorted((ROOT/"engineering/prototypes").iterdir()):
             if folder.is_dir() and (folder/"cad").exists():
@@ -246,6 +277,7 @@ def main():
             (ROOT/"engineering/prototypes/recessed/recessed_review_drawings.pdf","recessed_review_drawings.pdf"),
             (ROOT/"engineering/prototypes/recessed/recessed_firmware.zip","recessed_firmware.zip"),
             (ROOT/"engineering/templates/recessed_specimen.json","recessed_specimen.json"),
+            (ROOT/"engineering/templates/force_button_force_trials.json","force_button_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
@@ -296,6 +328,9 @@ def main():
         k1=ROOT/"engineering/development/capacitive/k1"
         write_zip(downloads/"k1-development.zip",
                   {str(p.relative_to(k1)):p.read_bytes() for p in k1.rglob("*") if p.is_file()})
+        fb1=ROOT/"engineering/prototypes/force_button"
+        write_zip(downloads/"fb1-prototype.zip",
+                  {str(p.relative_to(fb1)):p.read_bytes() for p in fb1.rglob("*") if p.is_file()})
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
         offline={}
@@ -311,7 +346,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile engineering packet: seven digital prototype packages; physical tests pending\n\n"
+            "ENPIRE tactile engineering packet: eight digital prototype packages; physical tests pending\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
@@ -323,6 +358,7 @@ def main():
             "All twelve designs and planned comparisons: website/build-all.html.\n"
             "F1 development modules and fit patterns: website/flexible-matrix.html and source/engineering/development/f1.\n"
             "K1 capacitive tooling/readout modules: website/capacitive.html and source/engineering/development/capacitive/k1.\n"
+            "FB1.1 force-button root prototype: website/force-button.html and source/engineering/prototypes/force_button.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()

@@ -1,0 +1,48 @@
+{
+  "schema": "yam-fb1-numerics/1",
+  "physical_specimens_tested": 0,
+  "passed": true,
+  "cantilever_relative_error": 7.771561172376096e-16,
+  "backup_energy_relative_error": 1.212407951811656e-11,
+  "spring_displacement_mm": 0.002,
+  "spring_reaction_n": -20.0,
+  "tools": {
+    "schema": "yam-structural-tools/1",
+    "downloads": [
+      {
+        "url": "https://www.dhondt.de/ccx_2.23.tar.bz2",
+        "archive": "ccx_2.23.tar.bz2",
+        "sha256": "35d426fed5eb164fbbaaafa20819d13d22e30bc2b9bc9c6c4ed957e9468355dd",
+        "bytes": 2502788
+      },
+      {
+        "url": "https://gmsh.info/bin/Linux/gmsh-4.15.2-Linux64-sdk.tgz",
+        "archive": "gmsh-4.15.2-Linux64-sdk.tgz",
+        "sha256": "2dbd68d033f99b05789554bf4db6d47f4108dd36b0b36d4a50935df0ceb9e772",
+        "bytes": 40160535
+      },
+      {
+        "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/gcc-7/libgfortran4_7.5.0-3ubuntu1~18.04_amd64.deb",
+        "archive": "libgfortran4_7.5.0-3ubuntu1~18.04_amd64.deb",
+        "sha256": "f89b2473bc251ba0c8eb9479ad31d5f96019e2ea1f8be466beea3a68b11b19fc",
+        "bytes": 492148
+      }
+    ],
+    "calculix": "build/engineering/tools/fea/calculix/CalculiX/ccx_2.23/src/ccx_2.23",
+    "gmsh_python_directory": "build/engineering/tools/fea/gmsh/gmsh-4.15.2-Linux64-sdk/lib",
+    "runtime_library_directory": "build/engineering/tools/fea/runtime/usr/lib/x86_64-linux-gnu",
+    "calculix_sha256": "31be21fc2f0902bd9a05acc2651dbac6dc2a2573dabbf235e39a38cb6f458862",
+    "versions": {
+      "calculix": "2.23",
+      "gmsh": "4.15.2"
+    },
+    "note": "Official downloads, pinned versions and local content hashes. No physical sensor result."
+  },
+  "source_sha256": {
+    "engineering/scripts/check_force_button_numerics.py": "12f0bbbd12cf223bc571bf7d473629fd32545d915689019263d561f33ba0196b",
+    "engineering/designs/force_button_fb1.json": "b38a07483a67505658c4762b64dd84caa66acfb8fafaca2814a316577ef1ae79",
+    "engineering/scripts/force_button_mechanics.py": "3426c0196d7de3ecb5de7a87b87096482734fab8930dd8f4f1629126c6bbf91c",
+    "engineering/scripts/structural_tools.py": "8dda820d2ac43057ba59b6b9680007298443269d86ed5f5f2d87a6ae63bba1be"
+  },
+  "limits": "Checks formulas and solver conventions. Does not validate the assembled gripper or real sensor."
+}

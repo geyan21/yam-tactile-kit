@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="820" viewBox="0 0 1140 820" role="img" aria-labelledby="title desc">
+<title id="title">FB1 per-finger wiring and sensor pinout</title>
+<desc id="desc">One Pico RP2040 reads a Honeywell FMA at address 0x28 and an Adafruit ADS1115 breakout at 0x48. Six conductors connect the small FMA board, including separate remote supply and ground sense wires. The ADC monitors those returns, local supply and ground.</desc>
+<rect width="1140" height="820" fill="#f7f8f2"/>
+<g font-family="sans-serif" fill="#24434b">
+<text x="30" y="40" font-size="27" font-weight="bold">FB1 · one Pico and one FMA sensor per finger</text>
+<text x="30" y="72" font-size="17">All power and logic are 3.3 V. I²C0 runs at 100 kHz. No actuator output is used.</text>
+<rect x="35" y="108" width="300" height="285" rx="8" fill="#deebe1" stroke="#7f9d8f"/>
+<rect x="665" y="108" width="435" height="285" rx="8" fill="#e7ddd0" stroke="#b29577"/>
+<text x="55" y="138" font-size="21" font-weight="bold">Raspberry Pi Pico RP2040</text>
+<text x="685" y="138" font-size="21" font-weight="bold">FB1 sensor PCB · JW wire port</text>
+<text x="55" y="183" font-size="18">3V3 OUT · physical pin 36</text>
+<text x="55" y="224" font-size="18">GND · physical pin 38</text>
+<text x="55" y="265" font-size="18">GP4 / SDA · physical pin 6</text>
+<text x="55" y="306" font-size="18">GP5 / SCL · physical pin 7</text>
+<text x="685" y="183" font-size="18">1 · VDD drive → U1 pin 1</text>
+<text x="685" y="224" font-size="18">2 · GND drive → U1 pin 3</text>
+<text x="685" y="265" font-size="18">3 · SDA → U1 pin 5</text>
+<text x="685" y="306" font-size="18">4 · SCL → U1 pin 4</text>
+<text x="685" y="340" font-size="18">5 · remote VDD sense → ADC A0</text>
+<text x="685" y="373" font-size="18">6 · remote GND sense → ADC A1</text>
+<g fill="none" stroke-width="3">
+<path d="M335 179H665" stroke="#b8644d"/><path d="M335 220H665" stroke="#658578"/>
+<path d="M335 261H665" stroke="#8d669f"/><path d="M335 302H665" stroke="#587daf"/>
+</g>
+<text x="400" y="156" font-size="16">Four bus/power wires</text>
+<text x="55" y="358" font-size="16">USB → raw JSON recording on host</text>
+<rect x="35" y="422" width="560" height="255" rx="8" fill="#e0e7ef" stroke="#7d96af"/>
+<text x="55" y="454" font-size="21" font-weight="bold">Adafruit ADS1115 breakout · product 1085</text>
+<text x="55" y="484" font-size="18">VIN=3.3 V · GND=controller GND · address 0x48</text>
+<text x="55" y="513" font-size="18">SDA/SCL share GP4/GP5; use the on-board 10 kΩ pullups</text>
+<text x="55" y="548" font-size="18">A0 ← JW5; add 100 kΩ from A0 to controller GND</text>
+<text x="55" y="578" font-size="18">A1 ← JW6; add 100 kΩ from A1 to controller 3V3</text>
+<text x="55" y="608" font-size="18">A2 ← controller 3V3 · A3 ← controller GND</text>
+<text x="55" y="645" font-size="16">Do not confuse A0 input with the back-side I²C address jumper.</text>
+<path d="M1050 338H1110V538H600" fill="none" stroke="#b8644d" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M1050 370H1122V568H600" fill="none" stroke="#658578" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="665" y="602" width="435" height="75" rx="8" fill="#ede9df" stroke="#a1a293"/>
+<text x="682" y="630" font-size="18">FMA U1 pins 2 and 6: leave unconnected.</text>
+<text x="682" y="656" font-size="16">C1=100 nF and C2=1 µF across local VDD/GND.</text>
+<text x="30" y="718" font-size="18">Solder the six leads from the PCB back. Keep them loose around the backing beam, then strain-relieve at the fixed carrier.</text>
+<text x="30" y="750" font-size="18">Verify actual cable rise time and fault response. The ADC channels are supply checks, not extra force sensors.</text>
+<text x="30" y="783" font-size="17">FMA count/status → raw sensor observation → independent calibration → finger force. No physical calibration is bundled.</text>
+</g></svg>

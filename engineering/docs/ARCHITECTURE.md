@@ -145,7 +145,7 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 | Shielded capacitive cells on rigid islands, with compliant interconnects | Thin shaped arrays; no permanent magnets; suitable for PCB/FPC processes | Gap, dielectric creep, moisture, parasitics and bending artifacts need control; custom stack and sealing |
 | Pneumatic channels in the soft finger | Passive soft interface; sensing electronics can stay at the wrist | Leaks, tubing, volume/temperature effects and limited demonstrated force range in the referenced design |
 | Camera-based compliant tactile finger | Dense contact geometry and texture | Optical path, gel, illumination, processing and finger geometry must be redesigned |
-| Packaged MEMS force button | Factory digital interface and defined range | Needs a controlled mechanical load path; force range and digital resolution do not guarantee low-force accuracy |
+| Packaged MEMS force button | Factory digital interface and defined range; FB1.1 now supplies a guided root mechanism | Preload, stops, actual joints and calibration need measurements; force range and digital resolution do not guarantee low-force accuracy |
 | Printed resistive film / R1 | Thin, shapeable, inexpensive prototype materials | Hysteresis, contact-area dependence, creep and handmade stack variability remain |
 
 [TI's FDC1004](https://www.ti.com/lit/ds/symlink/fdc1004.pdf) provides four capacitance channels and active shielding, but its capacitance resolution does not specify the performance of a tactile stack. A capacitive fork-shaped skin is a plausible longer-term alternative if electrical shielding and FPC fatigue can be engineered.
@@ -154,7 +154,7 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 
 [Baby Fin Ray](https://arxiv.org/html/2303.14883v1) is a relevant optical redesign. It is more compelling when dense contact shape is essential than when the first priority is a narrow finger with reliable low-dimensional force feedback.
 
-[Honeywell's FMA](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf) offers a 25 N digital force sensor. Its maximum ±8% full-scale total error band corresponds to ±2 N under the specified conditions, including 5 V and 20–80% of force range. It does not establish a 0.2 N contact threshold or performance outside those conditions. It remains an integration option, not an automatic precision upgrade.
+[Honeywell's FMA](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf) offers a 25 N digital force sensor. Its maximum ±8% full-scale total error band corresponds to ±2 N under the specified conditions, including 5 V and 20–80% of force range. It does not establish a 0.2 N contact threshold or performance outside those conditions. The [FB1.1 build guide](BUILD_FORCE_BUTTON.md) now supplies a selected ordering code, guided load path, PCB and raw code. Its 50 mm reach extension and force/contact performance still need comparison with L1 and C1.
 
 ## Build and compare the full set
 

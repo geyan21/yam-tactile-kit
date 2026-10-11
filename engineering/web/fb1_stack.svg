@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-labelledby="title desc">
+<title id="title">FB1: exact sensor and force path</title>
+<desc id="desc">The original finger moves on four metal leaf guides. An adjustable flat plunger loads a downward-facing Honeywell FMAMSDXX025WC2C3 sensor. Its small PCB is fully supported by an insulated metal backing with an open vent.</desc>
+<rect width="1120" height="680" fill="#f7f8f2"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#375e66"/></marker></defs>
+<g font-family="sans-serif" fill="#24434b">
+<text x="35" y="42" font-size="27" font-weight="bold">FB1 · one force sensor at the root of each finger</text>
+<text x="35" y="74" font-size="18">Honeywell FMAMSDXX025WC2C3 · 25 N · 3.3 V · I²C 0x28</text>
+<text x="35" y="104" font-size="16">Functional section, not to scale. This is a digital design; no physical force result is supplied.</text>
+<path d="M250 162H450V213H320V235H160V195H250Z" fill="#7faba8" stroke="#416c73" stroke-width="2"/>
+<path d="M239 190v46" stroke="#f7f8f2" stroke-width="10"/>
+<text x="500" y="178" font-size="19" font-weight="bold">Compliant 6061-T6 metal backing</text>
+<text x="500" y="205" font-size="17">11 mm active length × 12 mm width × 2.25 mm thickness</text>
+<text x="500" y="231" font-size="17">Fully supports the PCB under the FMA; Ø1.5 mm vent passage</text>
+<path d="M155 247H234M244 247H328" stroke="#c5a955" stroke-width="7"/>
+<path d="M150 264H235M243 264H330" stroke="#7e9e76" stroke-width="20"/>
+<text x="500" y="272" font-size="18">50 µm polyimide insulation, then 1 mm FR4 PCB</text>
+<text x="500" y="298" font-size="17">PCB vent Ø0.45 mm; do not fill it with solder or adhesive</text>
+<path d="M188 281H292V339H188Z" fill="#d2916d" stroke="#9c593d" stroke-width="2"/>
+<path d="M239 271v23" stroke="#f7f8f2" stroke-width="6"/>
+<circle cx="239" cy="337" r="15" fill="#bac4c6" stroke="#65767c" stroke-width="2"/>
+<text x="500" y="341" font-size="19" font-weight="bold">FMA package faces down (native −Z)</text>
+<text x="500" y="368" font-size="17">Only its 440C stainless sphere contacts the flat plunger</text>
+<path d="M210 354H268V367H249V464H229V367H210Z" fill="#bcc5c4" stroke="#697b7c" stroke-width="2"/>
+<text x="500" y="411" font-size="18">Ø5 mm flat contact face on adjustable M4 × 0.7 plunger</text>
+<text x="500" y="438" font-size="17">Center: native X −7.50, Y −33.77, Z 17.2675 mm, before preload</text>
+<path d="M158 453H315V490H158Z" fill="#729eb3" stroke="#416d85" stroke-width="2"/>
+<path d="M239 552V498" fill="none" stroke="#375e66" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="35" y="582" font-size="18">Original nail / TPU → floating carrier → plunger → FMA → backing → fixed jaw</text>
+<text x="500" y="480" font-size="18">Four clamped leaf guides react side loads and moments</text>
+<text x="500" y="507" font-size="17">Three separate stops: set 0.08 ± 0.01 mm gap after preload</text>
+<text x="35" y="620" font-size="18">The force path adds 50 mm reach at the root. No added tactile layer covers the leading nail.</text>
+<text x="35" y="650" font-size="17">Catalog sensor force includes preload. Installed finger force and contact require measured calibration.</text>
+</g></svg>

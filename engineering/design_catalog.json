@@ -393,25 +393,49 @@
       "related": ["PNEUMATIC", "B1", "NAIL"]
     },
     {
-      "id": "FORCE_BUTTON", "slug": "force-button", "title": "MEMS force button · Controlled point loading", "group": "research",
-      "status": "Reference component only", "status_detail": "A commercial force-sensor family was reviewed. No controlled-load mechanism or ENPIRE integration has been designed.",
-      "summary": "Route a known compressive load through a packaged digital force sensor instead of inferring force from a magnetic skin.",
-      "signal": "Force applied to the sensor's mechanical contact element; gripper force requires a controlled load path.",
-      "best_for": "An integration study when a compact packaged force element is useful.",
-      "tradeoff": "Range alone does not establish low-force accuracy. Preload, side loading, moments and temperature remain important.",
+      "id": "FORCE_BUTTON", "slug": "force-button", "title": "FB1 · Packaged force button at the root", "group": "prototype",
+      "status": "Prototype build files", "status_detail": "FB1.1 supplies 54 CAD parts/references, a checked two-layer PCB, raw Pico acquisition, calibration tools and an independent structural screen. Physical specimens tested: 0.",
+      "summary": "Mount the complete original finger on four metal leaf guides. A flat adjustable plunger loads one Honeywell FMA sensor at the root, preserving the thin nail and compliant TPU contact surfaces.",
+      "signal": "Raw coupled sensor load. External finger force requires specimen-specific calibration; no contact-location map is produced.",
+      "best_for": "Testing a purchased digital force element without a tactile film on the leading nail, and comparing its setup and accuracy with L1 and C1.",
+      "tradeoff": "Adds 50 mm reach and several clamps. Alignment, preload, cable forces and stop settings need care. The factory error specification does not guarantee the project's 0.5 N force or 0.2 N contact targets.",
       "sensors": [
-        ["Reference device", "Honeywell FMA family, 25 N option; not a selected production part", "Under a designed load button/plunger on fixed electronics"],
-        ["Mechanical coupling", "Not designed", "Between the finger's force path and the sensor contact element"]
+        ["U1 · one per finger", "Honeywell FMAMSDXX025WC2C3, 25 N, 3.3 V, I²C 0x28", "On the downward-facing 14 × 20 × 1 mm FB1 PCB at the root; its sphere faces the plunger"],
+        ["Force interface", "Polished Ø5 mm flat head on an adjustable M4 × 0.7 plunger", "Native X −7.50, Y −33.77 mm; nominal sphere contact Z 17.2675 mm before preload"],
+        ["Support and guidance", "Four 0.50 mm AISI 301 spring-steel leaves; separate compliant 6061 backing beam", "Leaves connect the fixed and floating carriers. The backing supports the PCB through 50 µm polyimide with the vent open"],
+        ["Controller", "Raspberry Pi Pico RP2040, one per finger for this pilot", "At the fixed base; GP4/GP5 read the FMA over I²C0"],
+        ["Supply checks", "Adafruit ADS1115 breakout 1085, I²C address 0x48", "At the fixed base; four ADC inputs monitor remote supply, remote ground, local supply and ground reference"]
       ],
-      "placement": "The intended force must reach the sensor through its specified contact interface. It is not a flexible pressure sheet to glue across the TPU or nail.",
-      "schematic": ["Finger load", "Controlled load button", "Packaged force sensor", "Force readout + checks"],
+      "placement": "The original finger bolts to the floating carrier. Its load reaches the FMA through the flat plunger and sphere, while the leaf guide reacts moments and side loads. Keep the FMA package fully supported, its bottom vent open and its housing clear of the plunger. Set the three 0.08 ± 0.01 mm stop gaps after measuring preload.",
+      "visual": {"path": "assets/prototypes/force_button/visuals/fb1_assembly.png", "alt": "FB1 original finger on four steel guides with the Honeywell force sensor at its root", "caption": "Actual CAD assembly, with the fixed carrier translucent. The root extension is visible; the leading contact geometry is retained. This is not a physical specimen."},
+      "placement_visual": {"path": "assets/prototypes/force_button/visuals/fb1_stack.svg", "alt": "FMA ordering code, PCB, open vent, sphere, flat plunger, metal backing and original-finger force path", "caption": "Exact component choice and functional placement. Use the dimensional section and CAD for manufacturing; the schematic is not to scale."},
+      "detail_visuals": [
+        {"path": "assets/prototypes/force_button/visuals/fb1_section.png", "alt": "Actual FB1 center section and the three overload-stop positions", "caption": "The center section shows real sphere/plunger contact, the open vent and backing. The stop plan is a separate view."},
+        {"path": "assets/prototypes/force_button/visuals/fb1_wiring.svg", "alt": "Pico pins, six sensor-board wires and ADS1115 supply-monitoring connections", "caption": "Wiring for one finger. The FMA measures coupled force; the ADS1115 checks supply wiring."}
+      ],
+      "schematic": ["Original nail + TPU", "Guided carrier + plunger", "Honeywell FMA at root", "Measured finger calibration"],
+      "viewer_model": "fb1_assembly_reference",
+      "prototype_cad_group": "force_button",
       "resources": [
-        ["Reference", "Honeywell FMA data sheet", "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf"],
-        ["Review", "Accuracy/range conditions in the architecture study", "architecture.html"],
-        ["Existing baseline", "L1 purchased load-cell experiment", "l1.html"]
+        ["Assembly", "Complete FB1.1 manufacturing, assembly and wiring guide", "build-force-button.html"],
+        ["Tests", "Direct sensor checks, static calibration and held-out validation", "force-button-testing.html"],
+        ["Complete FB1 package", "CAD, PCB, firmware, software and checked reports", "downloads/fb1-prototype.zip"],
+        ["Browse files", "Every FB1 package file, grouped by purpose", "assets/prototypes/force_button/file-index.html"],
+        ["Materials", "Per-finger bill of materials and shared bench equipment", "assets/prototypes/force_button/bom.csv"],
+        ["Drawings", "Assembly, center section and actual PCB review PDF", "assets/prototypes/force_button/visuals/fb1_review_drawings.pdf"],
+        ["PCB", "Checked two-layer Gerbers and drill files", "assets/prototypes/force_button/pcb/fb1_sensor_fabrication.zip"],
+        ["PCB source", "Editable checked KiCad board", "assets/prototypes/force_button/pcb/fb1_sensor.kicad_pcb"],
+        ["PCB check", "Independent native DRC and manufacturing receipt", "assets/prototypes/force_button/pcb/pcb_checks.json"],
+        ["Firmware", "Four-file Pico firmware ZIP", "assets/prototypes/force_button/fb1_firmware.zip"],
+        ["Calibration", "Unmeasured physical-trial manifest template", "downloads/force_button_force_trials.json"],
+        ["Structural review", "Mesh comparison, force-location behavior and material assumptions", "assets/prototypes/force_button/checks/structure.json"],
+        ["Structural inputs", "Meshes, solver decks, parameters and result summaries", "assets/prototypes/force_button/fb1_structural_inputs.zip"],
+        ["Earlier version", "Preserved 0.40 mm guide study and reason for revision", "assets/prototypes/force_button/history/force_button_fb1_040_history.md"],
+        ["Source", "Complete runnable repository, shared helpers and editable generators", "downloads/enpire-source.zip"],
+        ["Reference", "Honeywell FMA data sheet", "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/fr-ca/products/sensors/force-sensors/microforce-fma-series/documents/hon-ia-hss-force-fma-series-datasheet-32347833-ciid-181799.pdf"]
       ],
-      "missing": ["A selected ordering code and mechanically valid coupling", "Gripper mounting, side-load/moment protection and overload design", "Low-force and 20 N installed measurements"],
-      "next_steps": ["Check the exact part's specified conditions against the task.", "Build and test its mechanical coupling with an independent force reference.", "Compare installed force behavior with L1 before choosing this route."],
+      "missing": ["Physical manufacturing, installed-drive fit and actual fastener/leaf tolerances", "Measured preload, loaded stop gaps, clamp slip, cable forces and alignment", "Calibrated finger force, 0.2 N contact reliability and precision-task results", "Temperature, repeated loading, wear and moving-robot qualification"],
+      "next_steps": ["Print fit witnesses, verify the actual jaw and then fabricate the metal load path and PCB.", "Check the supported FMA directly against a force reference before completing the guided finger and setting preload/stops.", "Run the shared force/contact tests on independent specimens and compare with L1 and C1."],
       "related": ["L1", "C1", "CAPACITIVE"]
     }
   ]
