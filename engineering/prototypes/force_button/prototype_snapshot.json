@@ -33,7 +33,7 @@
     "engineering/scripts/run_force_button_fea.py": "b5288f10f679ceb4f3e14f43becd9ef801be5a42014760eab94962298994e205",
     "engineering/scripts/screen_force_button_fb1.py": "0250ceb177d0e22075cc3db18ba731e1577699692a82f9e168e83906b7420c4d",
     "engineering/scripts/write_force_button_board.py": "1b919996cf1c022bf5df2ca8522aac6c335e0021aeef5485bed4cfc642b95b97",
-    "engineering/software/force_button_force.py": "9b5920c91acc6b8bddaa3c39de87433b40ad2a8d5c413b3c9eb7f07e76e6ce2a",
+    "engineering/software/force_button_force.py": "3ea61f2813dac7644d4b3425a4920cb6c95ac86ae2a004bb46864e169816f78d",
     "engineering/software/force_button_protocol.py": "7f7cefe5c0030d41cea914be853e457117a128dfd340f042e89ea7bf9a12a4af",
     "engineering/software/force_button_record.py": "580dcb5961176a4af17046e600e7f238004af373334b26f9394d72c040c0aa22",
     "engineering/web/fb1_stack.svg": "95adeff0f80a54ae1ee9726034c0f352f51b01ea3990e8ececbd28800c0026b6",
@@ -202,7 +202,7 @@
     "provenance/force_button_fb1.json": "b38a07483a67505658c4762b64dd84caa66acfb8fafaca2814a316577ef1ae79",
     "provenance/source_runs.json": "91588414dbf543b58507906c0ae0001427df82bc91d216a9d6804b00e11772d0",
     "reference_tessellation/fb1_fma25_envelope_raw.stl": "742e9ea682e9303d23dd62ae1a61945c54aa78036fbad47b7db2b1422c08d026",
-    "software/force_button_force.py": "9b5920c91acc6b8bddaa3c39de87433b40ad2a8d5c413b3c9eb7f07e76e6ce2a",
+    "software/force_button_force.py": "3ea61f2813dac7644d4b3425a4920cb6c95ac86ae2a004bb46864e169816f78d",
     "software/force_button_protocol.py": "7f7cefe5c0030d41cea914be853e457117a128dfd340f042e89ea7bf9a12a4af",
     "software/force_button_record.py": "580dcb5961176a4af17046e600e7f238004af373334b26f9394d72c040c0aa22",
     "visuals/fb1_assembly.png": "4a298bfd394261a7fcd4c63eb1d4b8b0914a06df26708cd137341652ec00911d",
@@ -225,5 +225,15 @@
     "structural_convergence": true,
     "motion_screen_with_mesh_allowance_mm": 0.09306592773454955,
     "physical_qualification": false
-  }
+  },
+  "software_updates": [
+    {
+      "created_utc": "2026-10-11T20:30:08.252343+00:00",
+      "previous_snapshot_sha256": "3d4daa1fe19e30904786dd4f2eea500e71f516cc5988c17cc6b38f35d5721204",
+      "reason": "General force-level tolerance must not qualify an actual load below 20 N as a 20 N endpoint.",
+      "source": "engineering/software/force_button_force.py",
+      "source_sha256": "3ea61f2813dac7644d4b3425a4920cb6c95ac86ae2a004bb46864e169816f78d",
+      "geometry_electronics_firmware_unchanged": true
+    }
+  ]
 }

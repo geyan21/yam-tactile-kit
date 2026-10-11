@@ -13,6 +13,30 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+FB1.1 was published in commit `1a7a2a4115413f9534924990d2b3cbc1e68f5a2d`.
+Workflow 38171635196 completed successfully; all four public Release archive
+checksums matched the prepared files. The separate live FB1, F1 and K1 pages
+served that release. The hosted payload was 884,991,448 bytes.
+
+The subsequent host-evaluator correction closes a coverage edge case:
+the general force-level tolerance must not count a measured 19.8 N hold as
+the required 20 N endpoint. Twenty focused FB1 software tests now pass.
+The prototype snapshot was refreshed only for the evaluator; CAD, PCB,
+firmware and structural evidence are unchanged. Use the stable CAD manifest
+as the recording's geometry identity. The pre-correction snapshot is retained
+in `build/engineering/prototypes/force_button/software_updates/20261011T203008.252128Z`.
+
+K1 integration has resumed on `design/k1-integration`. The first electrode
+window check is
+`build/engineering/prototypes/capacitive/electrode_windows/20261011T202300.332311Z`.
+All six existing cell envelopes lack space for the simultaneously specified
+0.30 mm edge clearance, 0.20 mm guard and 0.20 mm isolation. The protected
+reference footprint fits. A proposed 0.80 mm inset retains at least 79.37%
+of each original active area. This is a planning result, not fabrication
+artwork: matched post tooling, capacitance/shield-load estimates, actual
+copper routing, retention, stops, vents, plate bonds and physical tests remain.
+The existing K1 module has not been changed by this inspection.
+
 FB1.1 is now packaged at `engineering/prototypes/force_button/`, bringing the
 digital prototype count to **eight**. Its 174-file snapshot includes 54 CAD
 parts/references, the selected Honeywell FMAMSDXX025WC2C3, a two-layer sensor

@@ -262,6 +262,16 @@ class ForceCalibrationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             force.load_trials(ROOT / "engineering/templates/force_button_force_trials.json", "train")
 
+    def test_nominal_twenty_newton_label_cannot_qualify_a_lower_actual_load(self):
+        rows = [{"reference_n": value, "available": True} for value in force.LEVELS for _ in range(3)]
+        self.assertTrue(force.coverage(rows, 3)[1])
+        for row in rows:
+            if row["reference_n"] == 20:
+                row["reference_n"] = 19.8
+        coverage, passed = force.coverage(rows, 3)
+        self.assertFalse(passed)
+        self.assertEqual(coverage[-1]["independent_holds"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

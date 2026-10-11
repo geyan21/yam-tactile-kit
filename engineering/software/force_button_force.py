@@ -61,7 +61,8 @@ def predict(model, counts):
 def coverage(rows, repetitions):
     result = []
     for level in sorted(LEVELS):
-        selected = [r for r in rows if r["available"] and abs(r["reference_n"]-level) <= max(.05, .03*level)]
+        selected = [r for r in rows if r["available"] and abs(r["reference_n"]-level) <= max(.05, .03*level)
+                    and (level != 20 or r["reference_n"] >= 20)]
         result.append({"target_n": level, "independent_holds": len(selected), "required": repetitions})
     return result, all(r["independent_holds"] >= repetitions for r in result)
 

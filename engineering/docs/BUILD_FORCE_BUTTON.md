@@ -178,7 +178,7 @@ From the **complete source repository**, create an isolated capture environment:
 ./build/fb1-capture-venv/bin/python engineering/software/force_button_record.py \
   --port /dev/ttyACM0 --specimen FB1-A --session bench-A \
   --condition left_nail_axial \
-  --geometry engineering/prototypes/force_button/prototype_snapshot.json \
+  --geometry engineering/prototypes/force_button/force_button_manifest.json \
   --seconds 15 --output measurements/fb1-a/recordings/hold-001.jsonl
 ```
 

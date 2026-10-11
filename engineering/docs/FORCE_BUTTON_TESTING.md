@@ -53,6 +53,9 @@ Use the
 Record independent stationary holds at **0, 0.2, 0.5, 1, 2, 5, 10, 15 and
 20 N**, with at least three separate holds per level. Approach the high
 levels only after the lower stages and the mechanism checks pass.
+The high-level holds must have an actual reference mean of **at least 20 N**;
+a nominal target label or the general force-level tolerance cannot qualify
+a lower measured load.
 
 Hold the force steady before recording. Capture 15 seconds and use the
 declared 2–12 second interval as the initial stationary window. Record the
