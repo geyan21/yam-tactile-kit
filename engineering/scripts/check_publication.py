@@ -73,6 +73,8 @@ def main():
                 summary["fit_viewer_models"] = [name for name in models if f'data-model-id="{name}"' in page["body"]]
                 summary["pages_contains_fit_viewer"] = bool(summary["fit_viewer_models"])
                 summary["pages_contains_rejected_r2_link"] = "r2-routing-study/file-index.html" in page["body"]
+                summary["pages_contains_fitted_foil_packet"] = "fitted-foils-r3/file-index.html" in page["body"]
+                summary["pages_contains_fitted_contact_map"] = "fitted-foils-r3/review/fitted_contact_map.png" in page["body"]
         (folder / "summary.json").write_text(json.dumps(summary, indent=2)+"\n")
         record["result"] = summary
         print(json.dumps(summary, indent=2))

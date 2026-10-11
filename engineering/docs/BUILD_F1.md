@@ -6,8 +6,9 @@ electrodes. The converter chips are on fixed electronics, not inside the
 contact pads. No physical F1 finger has been built or measured here.
 
 Use this page to reproduce the completed modules and the mechanical fit
-experiment. Do not order the fitted sensor foils from the paper patterns:
-they contain no electrode routing.
+experiment. The separate R3 fitted-foil module now contains routed copper.
+The paper patterns remain mechanical fit tools. Finish the mating,
+stiffener/adhesive and surface-finish drawing before ordering finished foils.
 
 ## Exactly what goes where
 
@@ -41,6 +42,7 @@ thicknesses or a wear qualification.
 | --- | --- | --- |
 | Flat electrode witnesses | Reproduce the twelve routed electrical coupons and their independent checks | Straight tails are not installed finger geometry |
 | Current R3 fanout and fit packet | Build the checked interface PCB; print its carrier, tools and fit patterns | The complete fitted sensor and physical qualification remain unfinished |
+| R3 fitted sensing foils | Inspect/reproduce twelve routed foils, native checks, development artwork and the 64-location map | Finished mating/lamination, full resistance budget and loaded assembly remain unqualified |
 | Original fanout / R2 history | Review preserved earlier boards, fit work and the rejected R2 route | Their placements differ from R3; do not mix revisions |
 | Wrist readout | Reproduce the checked PCB, candidate circuit and raw acquisition code | No assembled electronics or calibrated force result |
 | Forming mandrels and layer bodies | Print forming tools and inspect the separate nominal layer cuts | Layer bodies are material references, not copper artwork |
@@ -57,6 +59,18 @@ checking reports **zero violations and zero missing connections**. In1.Cu
 is reserved for ground, with no signal tracks on that layer. All sixteen
 local sensor pickoffs and both short bypass supply/ground paths are checked.
 These findings establish PCB properties, not sensor accuracy or force capacity.
+
+The separate fitted-foil module has twelve passing copper/connectivity
+checks. Both the unsuppressed and reviewed shared-coverlay reports are
+included. Its 64-location map comes from the actual routed copper after
+separate layer unrolling. CH2's columns run C6, C5, C4 in increasing source U;
+CH4 uses C13–C15, and CH5 uses C10–C12. Use the supplied `taxels.csv` mapping.
+
+The longest nominal trace estimate is **0.1642 Ω**. The declared 50 °C,
+31.5 µm minimum-copper and 20% negative-width scenario reaches **0.2549 Ω**,
+before electrode spreading, plated barrels, connector contacts, PCBs or
+the cable. Complete that budget and the coupled-array review; the earlier
+0.25 Ω path assumptions are not established by this partial calculation.
 
 The earlier **R2 route remains rejected** with 95 findings. It is retained
 as failure evidence and must not be fabricated or powered.
@@ -135,9 +149,19 @@ Recheck the distributed PCB without changing its source:
 /usr/bin/python3 engineering/scripts/verify_f1_checkpoint.py engineering/development/f1/r3
 ```
 
-The R3 checkpoint, native board, complete routing and fabrication targets are
-included. The generation scripts retain the earlier route attempts and the
-specific repairs; their checks do not waive the board's clearance or width rules.
+Reproduce the fitted electrode module separately:
+
+```sh
+build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_fitted_artwork.py
+/usr/bin/python3 engineering/scripts/check_f1_flex.py ARTWORK_RUN --export
+build/engineering/tools/cad-venv/bin/python engineering/scripts/review_f1_fitted_artwork.py ARTWORK_RUN
+/usr/bin/python3 engineering/scripts/verify_f1_checkpoint.py engineering/development/f1/fitted-foils-r3
+```
+
+The R3 checkpoints, native files, routing and fabrication targets are included.
+The generation scripts retain earlier attempts and specific repairs. The
+foils' shared coverlay allowance applies only to unsoldered windows; copper
+clearances and missing connections are still independently checked.
 
 The fit generator exports a separate developed pattern for every foil.
 Curved row and column reference surfaces have different developed lengths;
@@ -150,7 +174,7 @@ custom flex manufacture and the extra electronics. Its current packaging is
 more involved than the simpler six-zone designs. A dense map does not itself
 establish reliable contact or accurate grip force.
 
-Complete the fitted copper, mating/stiffener details, sealing, object-access
+Complete the manufacturing and mating/stiffener details, sealing, object-access
 and motion envelopes, inextensible tail slack, resistance budget and full-array/reference review. Then build
 independent specimens and use the [common campaign](BUILD_ALL.md) to measure
 contact errors, held-out force error through 20 N, drift, hysteresis, bending

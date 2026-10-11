@@ -50,8 +50,13 @@ The current [R3 interface and fit packet](development/f1/r3/README.md) adds a
 checked 42-component fanout with 959 tracks, 155 vias, zero native DRC findings
 and a reserved inner ground plane. Its local bypass/sense paths and fifty-pin
 correspondence are checked. It includes 44 matching CAD solids and twelve
-fit patterns; sensor copper, mating details, object/motion clearance and
-physical qualification remain unfinished.
+fit patterns.
+
+The separate [R3 fitted-foil module](development/f1/fitted-foils-r3/README.md)
+adds twelve routed electrode foils with independent copper/connectivity
+checks, a 64-location contact map and forty trace-resistance estimates.
+Mating/lamination details, the complete resistance budget, object/motion
+clearance and physical qualification remain unfinished.
 
 The earlier [R2 fit module](development/f1/mechanics/README.md) contains 44 checked
 CAD solids, twelve printable tail patterns, a sensor-placement drawing,

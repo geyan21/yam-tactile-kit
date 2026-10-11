@@ -13,6 +13,37 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+The latest separate F1 module is
+`engineering/development/f1/fitted-foils-r3/`. Its twelve fitted foils pass
+independent KiCad copper/connectivity checks. All 286 unsuppressed
+shared-coverlay findings are retained; only the explicitly unsoldered
+coverlay rule is permitted. There are zero unreviewed findings and zero
+missing connections. The module has 291 files and checksum
+`ab2beab85f3e87f1b3a98afc6f37d98274aed7c79745129593a6b741e328a71a`.
+An unpublished archive attempt is preserved at
+`build/engineering/prototypes/f1/fitted-archive-before-input-name-fix`.
+Captured checkpoint inputs now use a distinct filename plus a path/hash
+index, so the site does not mistake a provenance copy for a nested release.
+
+The generator retains failures from `20261011T155317.884475Z`,
+`155532.004847Z`, `155656.723105Z` and `155913.090000Z` under the same date.
+Those exposed trace-clearance pinches, clipped inner offsets near the upper
+connector turns and numerical polygon seams. The successful run is
+`build/engineering/prototypes/f1/artwork_runs/20261011T160007.723397Z`;
+its independent check is `independent_checks/20261011T160104.706906Z`.
+The cut outlines use recorded 10 nm coordinate quantization; the original
+R3 fit packet remains unchanged. Narrow trace sections and the staggered
+pin-1 plated transition are explicit in the generated paths.
+
+The matching `fitted_reviews/20261011T160342.338936Z` identifies all 64
+row/column locations, with minimum nominal source-surface overlap
+4.1243 mm². Forty one-dimensional trace estimates reach 0.1642 Ω nominal
+and 0.2549 Ω in the declared 50 °C / minimum-copper / negative-width case.
+Those estimates exclude electrode spreading, barrels, contacts, boards and
+cable; the earlier 0.25 Ω complete-path assumptions are not qualified.
+Mating/finished lamination, sealing, object/motion access, slack, full
+resistance/array/reference checks and every physical experiment remain.
+
 The latest F1 interface/fit module is `engineering/development/f1/r3/`.
 Its native R3 board has 42 components, 232 pads, 959 track segments and
 155 vias. Independent KiCad checking at
@@ -32,7 +63,7 @@ suppressed. The rejected R2 study and intermediate R3 attempts are retained.
 
 R3's matching 44 CAD solids and twelve fit patterns have 654 passing nominal
 hardware-to-hardware comparisons. Their source/configuration chain is checked
-against the PCB placement. Twelve connector cavities/mating interfaces,
+against the PCB placement. At that checkpoint, twelve connector cavities/mating interfaces,
 fitted electrode copper, finished stiffeners, sealing, own-layer joins,
 object-approach envelopes, inextensible motion slack, full resistance/
 coupled-array/reference checks and every physical experiment remain.

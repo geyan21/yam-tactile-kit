@@ -124,9 +124,9 @@ def design_content(item,catalog,viewer=True):
     else:
         visual_html=f'<figure class="design-main-figure"><a href="assets/design-schematics/{key}.svg"><img src="assets/design-schematics/{key}.svg" alt="{esc(item["title"])} functional diagram"></a><figcaption>Conceptual sensing path. No ENPIRE placement dimensions are finalized for this approach. {link("Open full size ↗","assets/design-schematics/"+key+".svg")}</figcaption></figure>'
     placement_html=""
-    placement=item.get("placement_visual")
-    if placement:
-        placement_html=f'<figure class="design-main-figure"><a href="{esc(placement["path"])}"><img src="{esc(placement["path"])}" alt="{esc(placement["alt"])}" loading="lazy"></a><figcaption>{esc(placement["caption"])} {link("Open full size ↗",placement["path"])}</figcaption></figure>'
+    for placement in [item.get("placement_visual"),*item.get("detail_visuals",[])]:
+        if placement:
+            placement_html+=f'<figure class="design-main-figure"><a href="{esc(placement["path"])}"><img src="{esc(placement["path"])}" alt="{esc(placement["alt"])}" loading="lazy"></a><figcaption>{esc(placement["caption"])} {link("Open full size ↗",placement["path"])}</figcaption></figure>'
     sensors="".join("<tr>"+"".join(f'<td data-label="{label}">{esc(cell)}</td>' for label,cell in zip(("Part / quantity","Sensor choice","Placement"),row))+"</tr>" for row in item["sensors"])
     resources="".join(f'<tr><td>{esc(kind)}</td><td>{link(label,href)}</td></tr>' for kind,label,href in item["resources"])
     missing="".join(f"<li>{esc(value)}</li>" for value in item["missing"])

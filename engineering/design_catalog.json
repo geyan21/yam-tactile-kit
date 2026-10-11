@@ -267,8 +267,8 @@
     },
     {
       "id": "F1", "slug": "flexible-matrix", "title": "F1 · Dense resistive contact matrix", "group": "development",
-      "status": "R3 interface and fit files",
-      "status_detail": "R3 now has a checked routed fanout, a reserved ground layer and matching carrier/tail fit files. The wrist readout and raw code are available. Fitted sensor copper, mating details, object/motion clearance and the complete physical finger remain unfinished.",
+      "status": "R3 interface and electrode files",
+      "status_detail": "R3 has a checked fanout, twelve routed sensing foils, a 64-location map and matching carrier/fit files. Wrist readout and raw code are available. Finished mating/lamination, the full resistance budget, object/motion clearance and the complete physical finger remain unfinished.",
       "summary": "Place a custom pressure-film matrix on each nail prong and each of four TPU contact regions: 64 intended electrical contact locations, with rigid readout electronics at the wrist.",
       "signal": "Raw electrical response at a 4 × 16 allocation. Force, contact thresholds and crosstalk behavior require physical calibration.",
       "best_for": "Denser contact location when it justifies custom flex manufacture and additional electronics.",
@@ -280,8 +280,11 @@
         ["Wrist readout", "Pico, OPA392 amplifiers, ADG706 current/sense multiplexers, switched gains, ADS8866 ADC and reference circuit", "At the wrist/base, connected to the fanout by a 50-conductor cable"]
       ],
       "placement": "The tactile sensor is the film/electrode laminate at the contact surface. Nominal layer-reference additions are 0.455 mm at the nail and 0.72 mm at the TPU. The PCB, ADC and connectors stay off the flexible contact faces. Paper patterns are mechanical fit tools, not routed sensor foils.",
-      "visual": {"path": "assets/development/f1/r3/visuals/nominal_assembly.png", "alt": "F1 source finger with six sensing stacks, twelve reference tails, R3 fanout and carrier", "caption": "R3 nominal hardware fit references. Connector cavities, finished sensor copper, stiffeners, object/motion envelopes and physical qualification remain."},
+      "visual": {"path": "assets/development/f1/r3/visuals/nominal_assembly.png", "alt": "F1 source finger with six sensing stacks, twelve reference tails, R3 fanout and carrier", "caption": "R3 nominal fit references; matching copper is supplied separately. Connector cavities, finished lamination, object/motion envelopes and physical qualification remain."},
       "placement_visual": {"path": "assets/development/f1/r3/visuals/sensor_placement.png", "alt": "The two nail matrices and four TPU matrices with an explicit film/electrode stack and remote readout", "caption": "Proposed sensing allocation on the actual source geometry. The diagram identifies the sensor and its location; it is not fabrication copper."},
+      "detail_visuals": [
+        {"path": "assets/development/f1/fitted-foils-r3/review/fitted_contact_map.png", "alt": "All 64 row and column locations on the two nail prongs and four TPU regions, extracted from the fitted electrode copper", "caption": "Actual routed-copper overlaps mapped onto the source surfaces. CH2's columns are reversed for its distal exit. This is a nominal electrical allocation; pressure independence and force accuracy require measurements."}
+      ],
       "viewer_model": "f1_r3_assembly_reference",
       "viewer_label": "Inspect F1 R3 nominal fit geometry in 3D",
       "schematic": ["Object contact", "Patterned resistive matrix", "Multiplexed readout", "Calibrated contact map"],
@@ -289,6 +292,9 @@
         ["Start here", "Exact sensor stack, placement and student fit procedure", "build-f1.html"],
         ["Electronics and code", "F1 wiring, GPIO, ADC timing and raw recorder", "f1-capture.html"],
         ["Current R3 packet", "Checked PCB/artwork, carrier, forming tools, CAD, fit patterns and evidence", "assets/development/f1/r3/file-index.html"],
+        ["Fitted electrode foils", "Twelve native boards, copper/coverlay checks, artwork and drawings", "assets/development/f1/fitted-foils-r3/file-index.html"],
+        ["Contact map", "64 row/column locations and native surface coordinates (CSV)", "assets/development/f1/fitted-foils-r3/review/taxels.csv"],
+        ["Trace estimates", "Forty partial conductor-resistance estimates and their scope (CSV)", "assets/development/f1/fitted-foils-r3/review/foil_resistance.csv"],
         ["Board drawing", "R3 copper and component placement on both faces", "assets/development/f1/r3/visuals/fanout_faces.png"],
         ["Ground layer", "R3 reserved-ground plot and its checked copper", "assets/development/f1/r3/visuals/inner_ground.png"],
         ["Wrist module", "Native PCB, pins, component list, artwork and firmware", "assets/development/f1/wrist/file-index.html"],
@@ -303,8 +309,8 @@
         ["Reference", "HiPi paper", "https://arxiv.org/abs/2606.11372"],
         ["Baseline", "R1 independent film cells", "r1.html"]
       ],
-      "missing": ["Fitted electrode copper and its complete resistance budget", "Verified connector mating, stiffeners, sealing, inextensible slack, object-access envelopes and loaded fit", "Full coupled-array/reference and physical electronics validation", "Independent specimens, contact reliability, held-out force error through 20 N and precision-task results"],
-      "next_steps": ["Build the carrier and paper/polyester tail fit mockup, recording the actual connector and drive clearances.", "Complete matching fitted copper and whole-system electrical checks, then populate and bring up the electronics.", "Measure independent specimens against the simpler designs before selecting F1 for force feedback."],
+      "missing": ["Finished flex manufacturing/lamination drawing and complete foil/contact/cable/PCB resistance budget", "Verified connector mating, stiffeners, sealing, inextensible slack, object-access envelopes and loaded fit", "Full coupled-array/reference and physical electronics validation", "Independent specimens, contact reliability, held-out force error through 20 N and precision-task results"],
+      "next_steps": ["Build the carrier and paper/polyester tail fit mockup, recording the actual connector and drive clearances.", "Finish the mating/lamination specification and whole-system electrical checks, then fabricate and bring up the complete sensor.", "Measure independent specimens against the simpler designs before selecting F1 for force feedback."],
       "related": ["R1", "B1", "CAPACITIVE"]
     },
     {

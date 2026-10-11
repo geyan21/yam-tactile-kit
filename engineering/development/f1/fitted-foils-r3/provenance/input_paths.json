@@ -1,0 +1,54 @@
+{
+  "engineering/designs/f1_fitted_artwork_r3.json": {
+    "archived_path": "provenance/inputs/engineering/designs/f1_fitted_artwork_r3.json",
+    "sha256": "552cc34fc1a8ff2d7f171c340b11ab3a4d00095d6b3a0966398808719138aead"
+  },
+  "engineering/development/f1/r3/checkpoint.json": {
+    "archived_path": "provenance/inputs/engineering/development/f1/r3/checkpoint.input.json",
+    "sha256": "4c4645a2220a3e9013aca1ca2d63e1b17e6ec1d79c4fd29eef1576f7112cfa9f"
+  },
+  "engineering/development/f1/r3/checks/fit_patterns.json": {
+    "archived_path": "provenance/inputs/engineering/development/f1/r3/checks/fit_patterns.json",
+    "sha256": "d3d7adb6e07cfee31a2d8648840f0217771d5fcc0764d7be58f2b23b30d06ef5"
+  },
+  "engineering/development/f1/r3/checks/tail_routes.json": {
+    "archived_path": "provenance/inputs/engineering/development/f1/r3/checks/tail_routes.json",
+    "sha256": "009d24afdad9384443c4c40cf4904eb2fcde218381ff1e6b8741220191d726f0"
+  },
+  "engineering/development/f1/r3/configuration/f1_formed_stack.json": {
+    "archived_path": "provenance/inputs/engineering/development/f1/r3/configuration/f1_formed_stack.json",
+    "sha256": "195271cdb3dbc5f0406709ca153e41764aec08215c161fc84fe4e2afc1422e72"
+  },
+  "engineering/development/f1/r3/pcb/f1_fanout_r3.json": {
+    "archived_path": "provenance/inputs/engineering/development/f1/r3/pcb/f1_fanout_r3.json",
+    "sha256": "2b972d8d2642a18f0061ccedfeca39c0917f86da90fc2f07a79b62221787ba61"
+  },
+  "engineering/release/contact_regions/contact_report.json": {
+    "archived_path": "provenance/inputs/engineering/release/contact_regions/contact_report.json",
+    "sha256": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5"
+  },
+  "engineering/release/r1/r1_manifest.json": {
+    "archived_path": "provenance/inputs/engineering/release/r1/r1_manifest.json",
+    "sha256": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14"
+  },
+  "engineering/scripts/develop_f1_artwork.py": {
+    "archived_path": "provenance/inputs/engineering/scripts/develop_f1_artwork.py",
+    "sha256": "90df256d109a090d53a9f6937c47e4e33b461d58efba9841e7ff02de264318b6"
+  },
+  "engineering/scripts/develop_f1_fitted_artwork.py": {
+    "archived_path": "provenance/inputs/engineering/scripts/develop_f1_fitted_artwork.py",
+    "sha256": "0b151b41996672431ef0c34f4a6643463aadd4cff1eda492bcaf30429da98d94"
+  },
+  "engineering/scripts/f1_surfaces.py": {
+    "archived_path": "provenance/inputs/engineering/scripts/f1_surfaces.py",
+    "sha256": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9"
+  },
+  "engineering/scripts/flex_artwork.py": {
+    "archived_path": "provenance/inputs/engineering/scripts/flex_artwork.py",
+    "sha256": "fac348daf9ad3d555d2e8bb3aed9414af9ece292e4ccd00f77065be2e267a46d"
+  },
+  "engineering/scripts/layout_f1_cells.py": {
+    "archived_path": "provenance/inputs/engineering/scripts/layout_f1_cells.py",
+    "sha256": "b5d202f636516111fa6e057c08a4ebb259f17a973f870c0fecebf9ebacc522f8"
+  }
+}

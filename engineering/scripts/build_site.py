@@ -253,6 +253,8 @@ def main():
             prototype_models.extend(json.loads(path.read_text()))
             prototype_plans[path.parent.name]=json.loads((path.parent/f"{path.parent.name}_manifest.json").read_text())
         development_models=json.loads((ROOT/"engineering/development/f1/r3/models.json").read_text())
+        for model in development_models:
+            model["note"]="Partial integration references for R3. Matching fitted copper is supplied separately; finished mating/lamination, sealing, object access, motion slack and physical qualification remain."
         payload={
             "models":[r1_models[0],b1_models[0],*prototype_models,*development_models,*l1_models[:2],*r1_models[1:],*l1_models[2:],*b1_models[1:]],
             "r1":json.loads((RELEASE/"r1/r1_manifest.json").read_text()),

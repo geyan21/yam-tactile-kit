@@ -1,0 +1,15 @@
+{
+  "name": "f1_ch5_rows",
+  "source_pcb_sha256": "44df25d5435c01c052ec15f833c9b2d5e22bee7089c92b11e5069cbcb985af5a",
+  "source_rules_sha256": "c23c213229caa824ceec3bcb1ed09fdae84eae25e93167667a68f5610476c585",
+  "source_metadata_sha256": "3b571575d87c373dcf9a0861ce65977f6403f8455f5a43d2a5975e8c2c3a80bf",
+  "physical_copper_layers": 1,
+  "unsuppressed_coverlay_findings": 30,
+  "unsuppressed_other_findings": 0,
+  "manufacturing_intent_findings": 0,
+  "unconnected": 0,
+  "scope": "Copper/connectivity plus explicitly reviewed, unsoldered shared coverlay windows",
+  "physical_specimens_tested": 0,
+  "installed_finger_qualified": false,
+  "passed": true
+}

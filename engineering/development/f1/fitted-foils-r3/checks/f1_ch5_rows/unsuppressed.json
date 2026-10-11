@@ -1,0 +1,727 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-11T09:01:20",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.7",
+    "schematic_parity": [],
+    "source": "f1_ch5_rows.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R1_COPPER [R1] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.860543,
+                        "y": 19.82547
+                    },
+                    "uuid": "8bf06ac0-566b-488b-9e04-a6d58288802f"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_2 [R2] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -15.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "1c79ce77-89f3-4875-a422-e69e5d335ef5"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_1 [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -16.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "9eb64b7b-3cb3-44bd-9ceb-d6271ef21f1d"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R2_COPPER [R2] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -23.459893,
+                        "y": 19.94301
+                    },
+                    "uuid": "ef726ad2-528f-4e5a-92d2-91c582a38f4e"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_1 [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -16.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "9eb64b7b-3cb3-44bd-9ceb-d6271ef21f1d"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R1_COPPER [R1] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.860543,
+                        "y": 19.82547
+                    },
+                    "uuid": "8bf06ac0-566b-488b-9e04-a6d58288802f"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -1.010933,
+                        "y": -5.89444
+                    },
+                    "uuid": "a2c8db92-4f7d-4ebe-8dc6-7179b85c6ef2"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R2_COPPER [R2] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -23.459893,
+                        "y": 19.94301
+                    },
+                    "uuid": "ef726ad2-528f-4e5a-92d2-91c582a38f4e"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R1_COPPER [R1] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.860543,
+                        "y": 19.82547
+                    },
+                    "uuid": "8bf06ac0-566b-488b-9e04-a6d58288802f"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R1_COPPER [R1] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.860543,
+                        "y": 19.82547
+                    },
+                    "uuid": "8bf06ac0-566b-488b-9e04-a6d58288802f"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R3_COPPER [R3] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -24.059883,
+                        "y": 19.94636
+                    },
+                    "uuid": "af3c0179-875f-4be4-b5e9-d4cf839c2b40"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad J1_4 [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -13.658975,
+                        "y": 39.878647
+                    },
+                    "uuid": "5a49fa93-4727-4da6-8c23-64e7dd16c237"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Polygon of FOIL on F.Mask",
+                    "pos": {
+                        "x": -17.65897,
+                        "y": 36.678647
+                    },
+                    "uuid": "01c43a4d-1f6d-45d9-a0ff-99d8ad281a83"
+                },
+                {
+                    "description": "Pad ELECTRODE_R0_COPPER [R0] of FOIL on F.Cu",
+                    "pos": {
+                        "x": -22.261298,
+                        "y": 19.688805
+                    },
+                    "uuid": "d19065fb-03a8-4852-a6f1-1cfc1b72d1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

@@ -31,6 +31,12 @@ def main():
     if not source_run.is_relative_to(ROOT / "build/engineering/prototypes/f1/artwork_runs"):
         parser.error("Select an owned F1 artwork run")
     plan = json.loads((source_run / "artwork.json").read_text())
+    if plan.get("failed_boards"):
+        raise ValueError("The source run contains unresolved board-generation failures")
+    requested = plan.get("requested_boards", [board["name"] for board in plan["boards"]])
+    names = [board["name"] for board in plan["boards"]]
+    if not names or len(names) != len(set(names)) or sorted(requested) != sorted(names):
+        raise ValueError("The artwork does not contain each requested foil exactly once")
     for name, expected in plan["source_hashes"].items():
         if digest(ROOT / name) != expected:
             raise ValueError("Artwork inputs have changed; regenerate before checking: " + name)

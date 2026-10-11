@@ -1,0 +1,16 @@
+{
+  "files": {
+    "DEVELOPMENT_ONLY.txt": "55bf3fa2a7fd3c7d9a085fc652510cc59f62ab4a93357d333aee803e353d574e",
+    "FPC_STACK.json": "00082bb80f6d6c61bb38f255ced0fd0a2947a89f9016616cf2271e97fe2ab5cb",
+    "f1_ch5_columns-B_Fab.gbr": "73e0dc03443e9b38d37e0b2f78d0fa01c4386100c14d07c5ed9ed41038fc8a5c",
+    "f1_ch5_columns-Edge_Cuts.gm1": "1f9a938ec0efdc2c742de3e6a5cdc4614f0069979ba19c2f59a78672b691fba2",
+    "f1_ch5_columns-F_Cu.gtl": "4f7b6164fcd7e300a06902e9c635553e6f6ac5a8b14d27e092debbeaa951f64a",
+    "f1_ch5_columns-F_Fab.gbr": "204ba81a935be2e68858e984cc625b545313ded74c5ad6f8169df377dd24e832",
+    "f1_ch5_columns-F_Mask.gts": "cc99526f60fbbda4d3dd995f702fb42e232288aac5630e7b74b8e8270de2e9b6",
+    "f1_ch5_columns-F_Silkscreen.gto": "9fcf74200ddde8a69b26bf6017fc4fe0e049923dd19a1381a9979fa4356fe084",
+    "f1_ch5_columns-User_Drawings.gbr": "158bd87638954a26ed6724bf66cd74ad8e21ff77e5d94c640ae82ee4857cb04a",
+    "f1_ch5_columns.drl": "3ce0bc29473ba2875a3aa9a3b62fdd397677d80bcada839e16020cb38fc6c41f"
+  },
+  "physical_layers": 1,
+  "release_ready": false
+}

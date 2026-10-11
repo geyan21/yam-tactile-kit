@@ -32,10 +32,11 @@ Use [B2's build guide](engineering/docs/BUILD_B2.md) for consolidated magnetic s
 
 The [F1 development and fit guide](engineering/docs/BUILD_F1.md) identifies
 the pressure-film stack, six sensing sites, checked R3 interface PCB, wrist
-readout/code and twelve printable tail-fit patterns. The R3 packet has 44
-matching CAD solids and a reserved ground layer. Fitted sensor copper,
-connector/object/motion details and physical performance remain unfinished;
-F1 is not yet an eighth integrated prototype.
+readout/code and twelve printable tail-fit patterns. Twelve matching routed
+electrode foils now have independent copper checks and a 64-location map.
+The complete resistance budget, finished mating/lamination, object/motion
+details and physical performance remain unfinished; F1 is not yet an eighth
+integrated prototype.
 
 ## Start here
 

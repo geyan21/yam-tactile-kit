@@ -173,6 +173,11 @@ def main():
                 "source/engineering/development/f1/r3/patterns/f1_ch0_rows_fit.pdf",
                 "website/assets/development/f1/r3/file-index.html",
                 "website/assets/development/f1/r3/visuals/inner_ground.png",
+                "source/engineering/development/f1/fitted-foils-r3/checkpoint.json",
+                "source/engineering/development/f1/fitted-foils-r3/foils/f1_ch1_rows/f1_ch1_rows.kicad_pcb",
+                "website/assets/development/f1/fitted-foils-r3/file-index.html",
+                "website/assets/development/f1/fitted-foils-r3/review/fitted_contact_map.png",
+                "website/assets/development/f1/fitted-foils-r3/review/taxels.csv",
             ]
             for name in required:
                 if name not in archive.namelist():raise ValueError(f"Complete packet missing {name}")
