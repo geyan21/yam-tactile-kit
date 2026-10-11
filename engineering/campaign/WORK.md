@@ -123,8 +123,11 @@ courtyard geometry is now included in the placement check, with line stroke
 excluded from the actual courtyard boundary. The revised placement at
 `build/engineering/prototypes/f1/wrist_runs/20261011T112432.874863Z`
 passes body, pad, courtyard, mount and bypass-distance checks. Its fresh
-routing run is
-`routing_runs/20261011T112505.865842Z`; independent DRC/export remains next.
+routing run at `routing_runs/20261011T112505.865842Z` completes 2,561 segments
+and 412 vias. Independent KiCad checking at
+`build/engineering/prototypes/f1/wrist_checks/20261011T113253.067479Z`
+reports zero violations and zero missing connections. Both populated faces'
+fabrication and assembly files were exported.
 
 The wrist router can resume an unchanged saved placement, preserving the
 original partial run. A checked mask optimization returns identical track
@@ -132,6 +135,19 @@ and via masks for the tested actual-board cases. Restricted inner-ground-layer
 crossings are used only after normal layers cannot route a connection; their
 lengths are recorded for ground-plane review. Keep the failed routes and
 the first DRC report. Do not count the wrist module as a finished F1 finger.
+
+The downloadable wrist development module is now
+`engineering/development/f1/wrist/`. Its 187 files include native PCB/library,
+Gerbers/drills, full DRC, drawings, native cable correspondence, a blank
+continuity checklist and four-file firmware. The verifier finds no missing,
+extra or changed files. The actual inner-plane plot is retained with eleven
+signal-net crossover inventories totaling 47.625 mm; ground connectivity
+passes DRC, while analog return behavior and EMC remain unmeasured.
+
+Next: complete reference/bias and full-array electrical checks, actual
+board/cable/flex resistance, formed flex and neutral-plane unrolls, carrier
+and strain relief, and the complete F1 assembly. The other four unfinished
+designs and every physical build/comparison remain in scope.
 
 ## Work sequence
 

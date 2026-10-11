@@ -43,6 +43,9 @@ now preserve their current model checks and unsuccessful earlier runs.
 The [wrist capture guide](docs/F1_WRIST_CAPTURE.md) gives exact components,
 Pico connections, firmware and raw recording. None is a complete F1 finger
 or a physical performance result.
+The [checked wrist-board module](development/f1/wrist/README.md) now includes
+its native PCB, fabrication files, drawings, cable checklist and firmware.
+Its 135-component board passes independent copper/connectivity DRC.
 The remaining integration work is recorded in [F1 development](docs/F1_DEVELOPMENT.md).
 
 ## File map

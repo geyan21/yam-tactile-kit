@@ -21,11 +21,13 @@ def main():
     parser.add_argument("--check", type=Path, required=True)
     parser.add_argument("--visuals", type=Path, required=True)
     parser.add_argument("--mating", type=Path, required=True)
+    parser.add_argument("--ground-review", type=Path, required=True)
     parser.add_argument("--destination", type=Path, default=ROOT / "engineering/development/f1/wrist")
     args = parser.parse_args()
     board, checked, visuals, mating, destination = (p.resolve() for p in
         (args.board, args.check, args.visuals, args.mating, args.destination))
-    if not all(path.is_relative_to(ROOT) for path in (board, checked, visuals, mating, destination)):
+    ground = args.ground_review.resolve()
+    if not all(path.is_relative_to(ROOT) for path in (board, checked, visuals, mating, ground, destination)):
         parser.error("Use repository-owned inputs and destination")
     if destination.exists():
         parser.error("Preserve checkpoints; choose a new destination for a revision")
@@ -33,6 +35,7 @@ def main():
     data = json.loads((board / "f1_wrist.json").read_text())
     view = json.loads((visuals / "visual_review.json").read_text())
     cable = json.loads((mating / "report.json").read_text())
+    ground_report = json.loads((ground / "report.json").read_text())
     if not summary["passed"] or summary["violations"] or summary["unconnected"]:
         raise ValueError("Every independent DRC/connectivity finding must be resolved")
     if digest(board / "f1_wrist.kicad_pcb") != summary["source_pcb_sha256"]:
@@ -46,6 +49,11 @@ def main():
             raise ValueError("A reviewed visual changed")
     if not cable["passed"] or cable["wrist_source_sha256"] != data["pcb_sha256"]:
         raise ValueError("Mating correspondence uses another wrist board")
+    if ground_report["checked_pcb_sha256"] != summary["checked_pcb_sha256"]:
+        raise ValueError("Inner plane review uses another checked board")
+    for name, expected in ground_report["files_sha256"].items():
+        if digest(ground / name) != expected:
+            raise ValueError("Changed inner-plane review artifact")
     source_spec = board / "generation_inputs/specification.json"
     specification = json.loads(source_spec.read_text())
     config_path = ROOT / "engineering/designs/f1_wrist_development.json"
@@ -79,6 +87,9 @@ def main():
                 shutil.copyfile(path, images / path.name)
         for name in ("front_assembly.svg", "rear_assembly.svg", "inner_ground.svg"):
             shutil.copyfile(checked / name, images / name)
+        for name in ("inner_ground.pdf", "inner_ground.png"):
+            shutil.copyfile(ground / name, images / name)
+        shutil.copyfile(ground / "report.json", check_dir / "inner_ground_review.json")
         for path in mating.iterdir():
             if path.is_file():
                 shutil.copyfile(path, cables / path.name)
@@ -102,6 +113,8 @@ def main():
             f"{len(data['tracks'])} track segments and {len(data['vias'])} vias. "
             "Independent KiCad checking reports zero rule violations and zero missing connections.\n\n"
             "![Checked wrist copper and component envelopes](visuals/wrist_faces.png)\n\n"
+            "The [inner-plane drawing](visuals/inner_ground.png) and its crossover inventory are retained. "
+            "The ground layer also carries the explicitly recorded short signal crossings; analog return behavior remains unmeasured.\n\n"
             "The sensor film and flexible electrodes remain on the two nail and four TPU patches. "
             "This wrist board contains the row drivers, separate column current/sense multiplexers, "
             "gain/parking circuit, ADC, reference and Pico sockets. No rigid ADC package goes in a flexible contact pad.\n\n"

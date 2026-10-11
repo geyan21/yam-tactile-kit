@@ -1,0 +1,413 @@
+{
+  "schema": "yam-f1-wrist-link-correspondence/1",
+  "physical_continuity_measured": false,
+  "installed_cable_geometry_verified": false,
+  "contract": "Identical bottom-contact connectors, same-side exposed FFC contacts, parallel board faces and opposing mouths in a straight inspection pose",
+  "fanout_source_sha256": "5c3ced1e2e3414d28f74382fb62e60508ac479b191e88dafa7a492b81ca584ae",
+  "wrist_source_sha256": "f16cf0fa4756018d72027c821af482929aa6f4ea089cfab4d92f73c038d35b43",
+  "results": [
+    {
+      "fanout_pin": 1,
+      "wrist_pin": 50,
+      "fanout_net": "GND",
+      "wrist_net": "GND",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 2,
+      "wrist_pin": 49,
+      "fanout_net": "+3V3",
+      "wrist_net": "+3V3",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 3,
+      "wrist_pin": 48,
+      "fanout_net": "GND",
+      "wrist_net": "GND",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 4,
+      "wrist_pin": 47,
+      "fanout_net": "A0",
+      "wrist_net": "A0",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 5,
+      "wrist_pin": 46,
+      "fanout_net": "GND",
+      "wrist_net": "GND",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 6,
+      "wrist_pin": 45,
+      "fanout_net": "A1",
+      "wrist_net": "A1",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 7,
+      "wrist_pin": 44,
+      "fanout_net": "GND",
+      "wrist_net": "GND",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 8,
+      "wrist_pin": 43,
+      "fanout_net": "A2",
+      "wrist_net": "A2",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 9,
+      "wrist_pin": 42,
+      "fanout_net": "A3",
+      "wrist_net": "A3",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 10,
+      "wrist_pin": 41,
+      "fanout_net": "TEST_EN",
+      "wrist_net": "TEST_EN",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 11,
+      "wrist_pin": 40,
+      "fanout_net": "R0_I",
+      "wrist_net": "R0_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 12,
+      "wrist_pin": 39,
+      "fanout_net": "R0_S",
+      "wrist_net": "R0_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 13,
+      "wrist_pin": 38,
+      "fanout_net": "R1_I",
+      "wrist_net": "R1_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 14,
+      "wrist_pin": 37,
+      "fanout_net": "R1_S",
+      "wrist_net": "R1_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 15,
+      "wrist_pin": 36,
+      "fanout_net": "R2_I",
+      "wrist_net": "R2_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 16,
+      "wrist_pin": 35,
+      "fanout_net": "R2_S",
+      "wrist_net": "R2_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 17,
+      "wrist_pin": 34,
+      "fanout_net": "R3_I",
+      "wrist_net": "R3_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 18,
+      "wrist_pin": 33,
+      "fanout_net": "R3_S",
+      "wrist_net": "R3_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 19,
+      "wrist_pin": 32,
+      "fanout_net": "C0_I",
+      "wrist_net": "C0_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 20,
+      "wrist_pin": 31,
+      "fanout_net": "C0_S",
+      "wrist_net": "C0_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 21,
+      "wrist_pin": 30,
+      "fanout_net": "C1_I",
+      "wrist_net": "C1_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 22,
+      "wrist_pin": 29,
+      "fanout_net": "C1_S",
+      "wrist_net": "C1_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 23,
+      "wrist_pin": 28,
+      "fanout_net": "C2_I",
+      "wrist_net": "C2_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 24,
+      "wrist_pin": 27,
+      "fanout_net": "C2_S",
+      "wrist_net": "C2_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 25,
+      "wrist_pin": 26,
+      "fanout_net": "C3_I",
+      "wrist_net": "C3_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 26,
+      "wrist_pin": 25,
+      "fanout_net": "C3_S",
+      "wrist_net": "C3_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 27,
+      "wrist_pin": 24,
+      "fanout_net": "C4_I",
+      "wrist_net": "C4_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 28,
+      "wrist_pin": 23,
+      "fanout_net": "C4_S",
+      "wrist_net": "C4_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 29,
+      "wrist_pin": 22,
+      "fanout_net": "C5_I",
+      "wrist_net": "C5_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 30,
+      "wrist_pin": 21,
+      "fanout_net": "C5_S",
+      "wrist_net": "C5_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 31,
+      "wrist_pin": 20,
+      "fanout_net": "C6_I",
+      "wrist_net": "C6_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 32,
+      "wrist_pin": 19,
+      "fanout_net": "C6_S",
+      "wrist_net": "C6_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 33,
+      "wrist_pin": 18,
+      "fanout_net": "C7_I",
+      "wrist_net": "C7_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 34,
+      "wrist_pin": 17,
+      "fanout_net": "C7_S",
+      "wrist_net": "C7_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 35,
+      "wrist_pin": 16,
+      "fanout_net": "C8_I",
+      "wrist_net": "C8_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 36,
+      "wrist_pin": 15,
+      "fanout_net": "C8_S",
+      "wrist_net": "C8_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 37,
+      "wrist_pin": 14,
+      "fanout_net": "C9_I",
+      "wrist_net": "C9_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 38,
+      "wrist_pin": 13,
+      "fanout_net": "C9_S",
+      "wrist_net": "C9_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 39,
+      "wrist_pin": 12,
+      "fanout_net": "C10_I",
+      "wrist_net": "C10_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 40,
+      "wrist_pin": 11,
+      "fanout_net": "C10_S",
+      "wrist_net": "C10_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 41,
+      "wrist_pin": 10,
+      "fanout_net": "C11_I",
+      "wrist_net": "C11_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 42,
+      "wrist_pin": 9,
+      "fanout_net": "C11_S",
+      "wrist_net": "C11_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 43,
+      "wrist_pin": 8,
+      "fanout_net": "C12_I",
+      "wrist_net": "C12_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 44,
+      "wrist_pin": 7,
+      "fanout_net": "C12_S",
+      "wrist_net": "C12_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 45,
+      "wrist_pin": 6,
+      "fanout_net": "C13_I",
+      "wrist_net": "C13_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 46,
+      "wrist_pin": 5,
+      "fanout_net": "C13_S",
+      "wrist_net": "C13_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 47,
+      "wrist_pin": 4,
+      "fanout_net": "C14_I",
+      "wrist_net": "C14_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 48,
+      "wrist_pin": 3,
+      "fanout_net": "C14_S",
+      "wrist_net": "C14_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 49,
+      "wrist_pin": 2,
+      "fanout_net": "C15_I",
+      "wrist_net": "C15_I",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    },
+    {
+      "fanout_pin": 50,
+      "wrist_pin": 1,
+      "fanout_net": "C15_S",
+      "wrist_net": "C15_S",
+      "transverse_error_mm": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "maximum_transverse_error_mm": 0.0,
+  "limits": "Checks connector numbering in the stated pose. Actual cable style, exposed-contact side, seating, continuity, shorts, strain relief and installed robot clearance require physical/geometry checks."
+}

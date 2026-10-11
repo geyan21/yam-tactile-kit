@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "F1") (type "KiCad") (uri "${KIPRJMOD}/F1.pretty") (options "") (descr "F1 embedded footprints; see source hashes and attribution")))

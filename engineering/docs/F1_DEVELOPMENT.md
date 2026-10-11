@@ -241,8 +241,19 @@ isolated-stage models, not full-array or physical measurements.
 
 The wrist layout and [capture guide](F1_WRIST_CAPTURE.md) now define the
 complete candidate component/pin map. The board contains 135 components and
-498 pads; its placement screens pass. Routing/DRC, reference implementation,
-complete array dynamics, installed flex geometry and physical tests remain.
+498 pads. The [checked wrist module](../development/f1/wrist/README.md)
+now includes the 2,561-segment, 412-via native board, both populated faces'
+fabrication files, drawings and full DRC evidence. Independent KiCad checking
+reports zero violations and zero missing connections. The distributed
+187-file checkpoint also passes its documented recheck.
+
+The original complete route's eight courtyard overlaps and two label
+findings were retained, then corrected. The actual filled ground-plane
+drawing and eleven signal-net crossing inventories are included; return
+impedance and EMC remain unmeasured.
+
+Reference implementation, complete array dynamics, installed flex geometry,
+carrier, actual YAM fit and physical tests remain.
 The code provides a declared fixed-gain bench scan, separate electrical
 column tests, raw per-sample times and a recorder that retains partial frames.
 No physical Pico or sensor was accessed during the software checks.

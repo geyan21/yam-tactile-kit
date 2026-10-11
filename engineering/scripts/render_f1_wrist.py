@@ -89,7 +89,7 @@ def main():
             ax.set_title("Front • F.Cu" if side == "F" else "Rear • B.Cu, viewed from the back")
         fig.suptitle(f"F1 wrist-board development • four copper layers • {len(board['parts'])} components\n"
                      "Independent DRC: 0 violations, 0 unconnected • no physical prototype tested", fontsize=13)
-        fig.text(.5, .02, "Actual routed outer-layer copper; rectangular part envelopes. "
+        fig.text(.5, -.025, "Actual routed outer-layer copper; rectangular part envelopes. "
                  "KiCad assembly SVGs provide pad numbers and silkscreen. The inner ground pour is not pictured.",
                  ha="center", fontsize=9)
         for suffix in ("png", "svg", "pdf"):

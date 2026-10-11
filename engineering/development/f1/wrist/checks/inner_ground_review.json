@@ -1,0 +1,29 @@
+{
+  "schema": "yam-f1-inner-plane-review/1",
+  "physical_evidence": false,
+  "checked_pcb_sha256": "9e814aa22f2d790d5228a1c246274ee7a0cfb0df8c4635d8e5dda3ce97f2d9ae",
+  "independent_check_sha256": "5626c8ce9174ce4303c270b85d9696e83ddb93995ecdda18faee00f42368b8b8",
+  "routing_sha256": "9ae0e81aa8e33a83fe88b82306a5adc741bcfeeb5de198f04ed2c9d6fc20d0c6",
+  "signal_length_by_net_mm": {
+    "C7_S": 2.3999999999999915,
+    "R1_I": 4.931370849898482,
+    "R3_I": 9.042640687119293,
+    "R0_I": 4.165685424949239,
+    "R2_I": 5.0,
+    "C5_I": 2.54558441227158,
+    "C8_S": 2.6828427124746144,
+    "C4_S": 1.8828427124746172,
+    "C7_I": 3.9597979746446748,
+    "SNS_EN": 3.1656854249492445,
+    "C9_S": 7.848528137423854
+  },
+  "total_signal_length_mm": 47.62497833620559,
+  "unconnected_items_in_native_drc": 0,
+  "limits": "The plot shows actual filled copper. Connectivity DRC and visual inspection do not establish analog return impedance, EMC, force accuracy or physical reliability.",
+  "files_sha256": {
+    "inner_ground.png": "65bcaa713e70e4aa19d8683a70de0f5681fcae784a38172e1b0e941879e93f18",
+    "export_0.log": "675b32e14c248b60e1b0d860c8a6e3148c530dfd628dd4050a85ea6f473522c1",
+    "inner_ground.pdf": "bdc4fc124b06389a4f711adbac1514a5f81c2b5aa9bbd4d0d2c9d3e59d8a82b3",
+    "export_1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
