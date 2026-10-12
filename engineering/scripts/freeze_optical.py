@@ -179,10 +179,17 @@ def main():
         sources += [ROOT/"engineering/scripts"/name for name in shared]
         snapshot = {"schema": "yam-prototype-snapshot/1", "id": "O1", "revision": "O1.0", "design_label": "O1",
                     "design_page": "optical.html", "physical_specimens_tested": 0,
+                    "status": manifest["status"],
                     "created_utc": datetime.now(timezone.utc).isoformat(),
                     "shared_release_sha256": digest(ROOT/"engineering/release/release_manifest.json"),
                     "source_hashes": {str(p.relative_to(ROOT)): digest(p) for p in sorted(set(sources))},
-                    "files": {str(p.relative_to(stage)): digest(p) for p in sorted(stage.rglob("*")) if p.is_file()}}
+                    "files": {str(p.relative_to(stage)): digest(p) for p in sorted(stage.rglob("*")) if p.is_file()},
+                    "checks": {"cad_parts": len(parts), "pcb_components": len(reports["board"]["parts"]),
+                               "drc_violations": 0, "unconnected_items": 0,
+                               "assembly_material_comparisons": len(reports["assembly"]["checks"]),
+                               "mold_material_comparisons": len(reports["tools"]["checks"]),
+                               "neutral_refraction_edge_exits_retained": len(reports["refraction"]["edge_exits"]),
+                               "physical_qualification": False}}
         (stage/"prototype_snapshot.json").write_text(json.dumps(snapshot, indent=2)+"\n")
         shutil.copytree(stage, target)
         record["result"] = {"destination": str(target.relative_to(ROOT)), "files": len(snapshot["files"]),
