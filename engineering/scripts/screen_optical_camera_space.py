@@ -76,8 +76,12 @@ def main():
         back = back.cut(keepout)
     local = [("o1_camera_pcb_reference", pcb, "PCB outline and mounting holes", "#426f5e"),
              ("o1_camera_focus_housing_reference", housing, "Nominal autofocus-housing envelope", "#3d535e"),
-             ("o1_camera_lens_reference", barrel, "Nominal lens barrel; actual aperture and pupil require acceptance", "#5483a0"),
-             ("o1_camera_rear_clearance_reference", back, "Conservative full-board rear-electronics clearance box", "#9cadad")]
+             ("o1_camera_lens_reference", barrel, "Nominal lens barrel; actual aperture and pupil require acceptance", "#5483a0")]
+    rear_regions = sorted(back.Solids(), key=lambda shape: (-shape.Volume(), shape.Center().x))
+    for index, region in enumerate(rear_regions):
+        local.append((f"o1_camera_rear_clearance_reference_{index}", region,
+                      "Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part",
+                      "#9cadad"))
     shapes = [(name, shape.moved(plane.location), purpose, color) for name, shape, purpose, color in local]
     frame_part = next(part for part in core_plan["parts"] if part["id"] == "o1_frame_core_witness")
     frame_path = core/frame_part["step"]
