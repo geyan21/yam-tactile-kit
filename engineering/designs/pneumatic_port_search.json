@@ -1,0 +1,18 @@
+{
+  "schema": "yam-pneumatic-port-pose-search/1",
+  "port_dimensions": "engineering/designs/pneumatic_ports.json",
+  "inside_distance_from_x_end_mm": [3.0, 4.0, 5.0],
+  "elevation_from_x_deg": [45, 30, 60],
+  "yaw_deg": [0, 15, -15, 30, -30],
+  "holder_embed_mm": [1.25, 2.0],
+  "minimum_branch_wall_mm": 0.6,
+  "outlet_x_clearance_mm": 1.8,
+  "ray_step_mm": 0.025,
+  "maximum_branch_length_mm": 10.0,
+  "limits": [
+    "Nominal fittings and branch-wall geometry only; actual hose bends, seal quality and loaded motion remain.",
+    "Angled ports branch from the channel into an existing open rib region and require flush plugs at both transverse ends.",
+    "The hard frame is an obstacle, not a volume to remove or waive.",
+    "Selected poses still require complete material assembly and air-path closure checks."
+  ]
+}

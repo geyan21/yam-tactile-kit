@@ -7,6 +7,7 @@ directory. The explicit CAD interpreter is the canonical kit's
 `build/repo/build/engineering/tools/cad-venv/bin/python`.
 
 No P1 physical specimen, completed assembly or force calibration exists.
+The user confirmed that no new builds or measurements are available yet.
 
 F1 was published and verified at commit
 `e8f794c3d4b0af61a1cb4bcfeb16a2d3b2357d4e`, release `kit-e8f794c3d4b0`.
@@ -91,3 +92,19 @@ reference subtraction. A single differential transducer connected across
 two sealed channels needs its own differential/common-pressure review.
 Its back channel is not automatically an unloaded reference. Mechanical
 coupling, thermal gradients, leakage, tube movement and calibration remain.
+
+The first bounded port-pose search is
+`build/engineering/prototypes/pneumatic/port_pose_searches/20261012T041355.514427Z`.
+It finds seven frame-clear candidates: five straight and two angled.
+CH4 front remains unresolved; its full holder intersects the hard frame by
+3.5808 mm³ on either straight side. The angled candidates in the first grid
+do not solve that interface.
+
+The narrower direct-stem probe,
+`build/engineering/prototypes/pneumatic/slim_port_probes/20261012T042430.369886Z`,
+shows that a 1.2 mm OD metal stem clears the insert/frame with the declared
+0.15 mm radial guard on both sides. The standard hose sleeve is still too
+close to the frame: its guard overlaps by about 1.58 mm³ when placed over
+the last 3 mm of an 8 mm external stem. Move only that sleeve farther out
+and recheck; do not waive the hose collision. The prototype retains the
+original rigid frame. Loaded motion and bond performance remain untested.
