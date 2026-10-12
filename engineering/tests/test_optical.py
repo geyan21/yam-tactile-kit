@@ -9,8 +9,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/"engineering/software"))
-from optical_core import establish_reference, observe, pgm_bytes, read_pgm, nail_signals, metadata_faults, validate_config
+from optical_core import establish_reference, observe, pgm_bytes, read_pgm, nail_signals, metadata_faults, validate_config, digest, config_hash, SCHEMA
 from optical_adc import conversion
+from optical_process import recording_rows
 
 
 DETECTION = {"threshold": 80, "area_min_px": 8, "area_max_px": 80, "minimum_contrast": 30,
@@ -132,6 +133,55 @@ class OpticalRawChecks(unittest.TestCase):
         cfg = camera_config(); cfg["analogue_gain"] = math.nan
         with self.assertRaises(ValueError):
             validate_config(cfg)
+
+
+class OpticalCaptureIntegrity(unittest.TestCase):
+    """Synthetic files mimic a capture solely to exercise replay rejection."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.path = Path(self.tmp.name)
+        cfg = camera_config(); cfg["size"] = [100, 75]; cfg["save_roi"] = [0, 0, 100, 75]
+        common = {"specimen": "TEST-ONLY", "device_id": "SYNTHETIC", "geometry_sha256": "a"*64,
+                  "camera_config_sha256": config_hash(cfg), "camera_model": "SYNTHETIC"}
+        self.reference = {**common, "camera_config": cfg, "detection": DETECTION,
+                          "markers": establish_reference(image(), DETECTION), "scaler_crop": [0, 0, 100, 75]}
+        self.header = {**common, "schema": SCHEMA, "evidence_kind": "physical_recording_unreviewed",
+                       "camera_config": cfg, "session_id": "TEST-ONLY-session", "condition": "TEST"}
+        (self.path/"blue.pgm").write_bytes(pgm_bytes(*image()))
+        (self.path/"colour.ppm.gz").write_bytes(b"synthetic-colour-identity-fixture")
+        meta = metadata(); meta["ScalerCrop"] = [0, 0, 100, 75]
+        count = lambda volts: round(volts*32768/4.096)
+        self.row = {"index": 0, "host_elapsed_s": 1., "host_monotonic_ns": 1050000000, "metadata": meta,
+                    "blue_path": "blue.pgm", "blue_sha256": digest(self.path/"blue.pgm"),
+                    "colour_path": "colour.ppm.gz", "colour_sha256": digest(self.path/"colour.ppm.gz"),
+                    "adc": {"raw": [count(.3), count(.3), count(3.3)], "start_monotonic_ns": 1051000000,
+                            "end_monotonic_ns": 1055000000},
+                    "validation": {"available": True}}
+        self.save_index()
+
+    def save_index(self):
+        (self.path/"session.json").write_text(json.dumps(self.header))
+        (self.path/"frames.jsonl").write_text(json.dumps(self.row)+"\n")
+        (self.path/"receipt.json").write_text(json.dumps({"capture_complete": True, "frames": 1,
+            "files_sha256": {name: digest(self.path/name) for name in ("session.json", "frames.jsonl")}}))
+
+    def test_replay_recomputes_and_rejects_changed_image(self):
+        self.assertTrue(list(recording_rows(self.path, self.reference))[0][1]["available"])
+        with (self.path/"blue.pgm").open("ab") as stream:
+            stream.write(b"changed")
+        result = list(recording_rows(self.path, self.reference))[0][1]
+        self.assertFalse(result["available"])
+        self.assertIsNone(result["features"])
+        self.assertTrue(any("image_error" in reason for reason in result["faults"]))
+
+    def test_camera_crop_change_is_not_hidden_by_claimed_validation(self):
+        self.row["metadata"]["ScalerCrop"] = [5, 0, 100, 75]
+        self.save_index()
+        result = list(recording_rows(self.path, self.reference))[0][1]
+        self.assertFalse(result["available"])
+        self.assertIn("camera_scaler_crop_changed", result["faults"])
 
 
 if __name__ == "__main__":
