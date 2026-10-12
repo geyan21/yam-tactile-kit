@@ -2,6 +2,18 @@
 
 ## Current checkpoint — 2026-10-12
 
+Follow-up commit `ffa6cc233a4a3a3ab6826b1a1e21bf4f29c96d04` passed the local
+213-test runner and clean rebuild, but Actions run 38198456529 exposed an
+import-path error in the new wrapper. Its public annotation identifies
+`test_capacitive_force` importing `engineering.tests.test_capacitive` when
+the repository root is absent from `sys.path`. The same failure was
+reproduced locally with `python -I` and the focused test pattern. The fix
+adds the explicit repository root and runs CI in isolated mode, preventing
+the local environment from masking that dependency.
+The focused seven-test module and the full 213-test suite now pass under
+isolated mode; the full suite took 184.371 seconds locally.
+The F1 geometry/snapshot remain unchanged. Deployment is still pending.
+
 The first F1 publication commit is
 `111d09afd71834b508ec83b92a9bfb72be2f897b`, pushed successfully to public main.
 Its local final suite passed 213 tests, including clean reproduction.
