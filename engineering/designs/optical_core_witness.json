@@ -1,0 +1,28 @@
+{
+  "schema": "yam-o1-fixed-optics-core/1",
+  "status": "Core geometry witness; retention, camera mounting, lighting and physical qualification remain",
+  "optics": "Fixed camera and rigidly backed PET mirror; compliant front gel/cartridge",
+  "window_x_mm": [-15.2, 0.2],
+  "window_y_mm": [-95, 1],
+  "window_body_floor_inset_mm": 0.2,
+  "root_floor_z_mm": 20,
+  "root_floor_starts_y_mm": -17.5,
+  "nail_protection_y_max_mm": -96,
+  "mount_guard_xz_centers_mm": [[-20.71081355639414, 14.283239662486217], [0.28918646941219, 14.283239662486217]],
+  "mount_guard_radius_mm": 5.2,
+  "mount_guard_y_mm": [-16, -2.5],
+  "mirror_thickness_mm": 0.2,
+  "mirror_bond_thickness_mm": 0.05,
+  "rigid_backing_thickness_mm": 2.0,
+  "rigid_backing_x_mm": [-18.3, 3.3],
+  "side_web_x_mm": [[-18.3, -15.2], [0.2, 3.3]],
+  "side_web_source_overlap_mm": 0.8,
+  "gel_frame_clearance_mm": 0.15,
+  "limits": [
+    "This core witness does not provide a complete assembled optical gripper.",
+    "Preserved mounting/nail material is checked geometrically; real drive fit and stiffness are not qualified.",
+    "The original TPU is replaced by the optical front-cartridge concept; its former bending behavior is not assumed.",
+    "The mirror is rigidly supported here. This differs from the paper's freely bending reflective sheet.",
+    "The camera entrance pupil, focus, refraction, lighting, gel chemistry and 20 N force performance remain unverified."
+  ]
+}
