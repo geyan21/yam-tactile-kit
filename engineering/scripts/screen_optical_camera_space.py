@@ -94,7 +94,7 @@ def main():
         for reach in cfg["reach_extension_candidates_mm"]:
             gap = cfg["retained_root_cap_front_y_mm"]-(maximum[1]-reach)
             cases.append({"added_reach_mm": reach, "camera_to_root_cap_y_gap_mm": float(gap),
-                          "passed": gap >= cfg["camera_to_root_cap_clearance_mm"]})
+                          "passed": bool(gap >= cfg["camera_to_root_cap_clearance_mm"])})
         passing = [row for row in cases if row["passed"]]
         selected = passing[0] if passing else None
         report = {"schema": "yam-o1-camera-space-result/1", "physical_specimens_tested": 0,
