@@ -129,12 +129,18 @@ def evaluate(camera, slope, intercept, target, normals, inner, cfg):
 
 def main():
     cfg = json.loads(CONFIG.read_text())
-    _, profile, _ = original_profile()
-    outer, inner, gel, target, normals = surfaces(profile, cfg)
     folder = ROOT/"build/engineering/prototypes/optical/path_searches"/datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     with execution(ROOT/"build/records", "Search bounded neutral camera/PET-mirror poses over the real smoothed contact profile; distinguish geometric visibility from frame integration and optical/force qualification") as record:
         folder.mkdir(parents=True)
         record["run_directory"] = str(folder.relative_to(ROOT))
+        inputs = [CONFIG, ROOT/cfg["source_review"], Path(__file__), PARTS["hard_frame"], PARTS["soft_insert"],
+                  ROOT/"engineering/scripts/analyze_b1_interfaces.py", ROOT/"engineering/scripts/build_b1_parts.py"]
+        for path in inputs:
+            copied = folder/"inputs"/path.relative_to(ROOT)
+            copied.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(path, copied)
+        _, profile, _ = original_profile()
+        outer, inner, gel, target, normals = surfaces(profile, cfg)
         trials, passing = [], []
         for y, z, slope, intercept in itertools.product(cfg["camera_pupil_y_candidates_mm"],
                 cfg["camera_pupil_z_candidates_mm"], cfg["mirror_slope_candidates"], cfg["mirror_intercept_candidates_mm"]):
@@ -149,12 +155,17 @@ def main():
         for trial in trials:
             if trial["failed"]:
                 failures[trial["failed"]] = failures.get(trial["failed"], 0)+1
+        (folder/"geometry_result.json").write_text(json.dumps({
+            "cases": len(trials), "passing_candidates": len(passing), "failure_counts": failures,
+            "selected": chosen, "trials": trials, "physical_specimens_tested": 0,
+            "input_sha256": {str(path.relative_to(ROOT)): digest(path) for path in inputs}
+        }, indent=2)+"\n")
         fig, axis = plt.subplots(figsize=(13, 6), layout="constrained")
         hard = side_outline(trimesh.load_mesh(PARTS["hard_frame"], process=True))
         axis.add_patch(PatchPolygon(np.asarray(hard.exterior.coords), fill=False, ec="#9da9a1", lw=1, label="Original frame outline"))
         axis.add_patch(PatchPolygon(np.asarray(profile.exterior.coords), fc="#d9e2d5", ec="#96ac94", alpha=.45))
         for ring in profile.interiors:
-            axis.add_patch(PatchPolygon(np.asarray(ring), fc="white", ec="#b2c2ad", alpha=.7))
+            axis.add_patch(PatchPolygon(np.asarray(ring.coords), fc="white", ec="#b2c2ad", alpha=.7))
         axis.add_patch(PatchPolygon(np.asarray(gel.exterior.coords), fc="#82bfb7", ec="#377d77", label="Candidate gel section"))
         if chosen:
             c = np.array(chosen["camera_yz_mm"])
@@ -174,12 +185,6 @@ def main():
         for extension in ("png", "svg", "pdf"):
             fig.savefig(folder/("optical_path."+extension), dpi=170)
         plt.close(fig)
-        inputs = [CONFIG, ROOT/cfg["source_review"], Path(__file__), PARTS["hard_frame"], PARTS["soft_insert"],
-                  ROOT/"engineering/scripts/analyze_b1_interfaces.py", ROOT/"engineering/scripts/build_b1_parts.py"]
-        for path in inputs:
-            copied = folder/"inputs"/path.relative_to(ROOT)
-            copied.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(path, copied)
         report = {"schema": "yam-o1-neutral-path-result/1", "physical_specimens_tested": 0,
                   "cases": len(trials), "passing_candidates": len(passing), "failure_counts": failures, "selected": chosen,
                   "source_frame_and_ribs_cleared": False, "physical_optics_validated": False,
