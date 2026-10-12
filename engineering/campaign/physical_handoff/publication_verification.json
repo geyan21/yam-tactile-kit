@@ -1,0 +1,157 @@
+{
+  "expected_commit": "7593de44878dce1305d4bcdd6dafb18d4c1c778d",
+  "remote_main": "7593de44878dce1305d4bcdd6dafb18d4c1c778d",
+  "main_matches": true,
+  "runs": [
+    {
+      "id": 38231267537,
+      "head_sha": "7593de44878dce1305d4bcdd6dafb18d4c1c778d",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "published_verified": true,
+  "release_assets": {
+    "enpire-source.zip": {
+      "published_bytes": 431989725,
+      "published_sha256": "adb2cbe5cc5479083dd463e4a604375b83d13b9b38aa0591b12fb1e19d9989be",
+      "provider_or_stream_sha256": "adb2cbe5cc5479083dd463e4a604375b83d13b9b38aa0591b12fb1e19d9989be",
+      "published_checksum_matches": true,
+      "local_compressed_hash_matches": true,
+      "verification_method": "GitHub asset digest"
+    },
+    "enpire-designs.zip": {
+      "published_bytes": 419603734,
+      "published_sha256": "2283198027d9a9294113c6f669d04f9b51ecd11762f54cf41c0528a0e14044eb",
+      "provider_or_stream_sha256": "2283198027d9a9294113c6f669d04f9b51ecd11762f54cf41c0528a0e14044eb",
+      "published_checksum_matches": true,
+      "local_compressed_hash_matches": true,
+      "verification_method": "GitHub asset digest"
+    },
+    "enpire-site.zip": {
+      "published_bytes": 1679299322,
+      "published_sha256": "e70d570a5234f07e46fec45789be2b124af19988e9a974bd34fdb199b9eff509",
+      "provider_or_stream_sha256": "e70d570a5234f07e46fec45789be2b124af19988e9a974bd34fdb199b9eff509",
+      "published_checksum_matches": true,
+      "local_compressed_hash_matches": true,
+      "verification_method": "GitHub asset digest"
+    },
+    "enpire-engineering-kit.zip": {
+      "published_bytes": 2111454951,
+      "published_sha256": "fe35ad93db87328e16b9da75f9cd5bc44031b561720d8de0f8a8a4ba52c3fde6",
+      "provider_or_stream_sha256": "fe35ad93db87328e16b9da75f9cd5bc44031b561720d8de0f8a8a4ba52c3fde6",
+      "published_checksum_matches": true,
+      "local_compressed_hash_matches": true,
+      "verification_method": "GitHub asset digest"
+    },
+    "SHA256SUMS.txt": {
+      "published_bytes": 344,
+      "published_sha256": "e9c0f98dd8f77c9d04d0f7ac08f60d42b0a8068c4db067147a031e991f1540d5",
+      "provider_or_stream_sha256": "e9c0f98dd8f77c9d04d0f7ac08f60d42b0a8068c4db067147a031e991f1540d5",
+      "published_checksum_matches": true,
+      "local_compressed_hash_matches": true,
+      "verification_method": "GitHub asset digest"
+    }
+  },
+  "pages": {
+    "index.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "designs.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "build-all.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "r1.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "l1.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "b1.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "b2.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "c1.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "rigid-nail.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "recessed-magnetic.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "flexible-matrix.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "capacitive.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "pneumatic.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "optical.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "force-button.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "build-optical.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "optical-electronics.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "optical-testing.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    },
+    "optical-reproduce.html": {
+      "matches_prepared_hosted_page": true,
+      "expected_release_link_visible": true
+    }
+  },
+  "prototype_assets_match": {
+    "prototype_snapshot.json": true,
+    "optical_manifest.json": true,
+    "models.json": true,
+    "bom.csv": true,
+    "parts.csv": true,
+    "visuals/o1_assembly.svg": true,
+    "visuals/o1_led_assembly.svg": true,
+    "visuals/o1_marker_pattern.svg": true,
+    "visuals/o1_mirror_cut.svg": true,
+    "visuals/o1_molds.svg": true,
+    "visuals/o1_refraction.svg": true,
+    "visuals/o1_sensor_placement.svg": true,
+    "visuals/o1_wiring.svg": true
+  },
+  "prototype_zip_content_matches": true,
+  "prototype_zip_bytes": 25349555,
+  "limits": [
+    "Release archive bytes are checked against published SHA-256 values using provider digests or streamed bytes.",
+    "Local compressed hashes are reported separately because CI zlib versions may encode identical entries differently.",
+    "Selected live pages and prototype files match locally prepared content; the prototype ZIP is compared by all nested file contents.",
+    "Publication verification is not physical hardware qualification."
+  ]
+}

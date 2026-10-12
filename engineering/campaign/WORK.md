@@ -30,6 +30,15 @@ archive. Its outputs belong under `build/physical_campaign/`, separate
 from frozen designs and actual future measurements. This is a handoff plan,
 not evidence of fabrication or test success.
 
+The prepared handoff is in
+`engineering/campaign/physical_handoff/HANDOFF.md`, with 36 unique planned
+IDs in `specimen_queue.csv`, an evidence audit and the publication
+verification it references. Every measurement is blank and every design
+remains `not_evaluated`. It is shared on branch
+`campaign/physical-build-handoff`; the tested design release remains
+`7593de4`. No fabrication order, message to a student, sensor capture or
+physical performance claim was made.
+
 Do not rerun completed publication or invent more design changes merely
 to keep the goal active. After the handoff is prepared, the next required
 state change is real fabrication/assembly and physical measurement

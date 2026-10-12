@@ -1,0 +1,91 @@
+{
+  "schema": "yam-physical-campaign-handoff/1",
+  "created_utc": "2026-10-12T10:10:29.351360+00:00",
+  "objective": "Build all twelve designs and determine which are suitable for thin-tip precision grasping with reliable contact and normal-force feedback through 20 N per finger.",
+  "goal_complete": false,
+  "previous_goal_turn_classification": "progress: twelve-design publication completed and verified",
+  "evidence_scope": "Published source, recorded campaign state and supplied publication verification; no lab-storage or hardware discovery is inferred.",
+  "requirements": [
+    {
+      "requirement": "Separate design pages, CAD, BOMs, code, documentation and visuals",
+      "state": "digital_delivery_verified",
+      "evidence": {
+        "publication_report_sha256": "28d4743631538d2f22c9ac1defed5207c65cebc6fe26337ff5e8d8a74a0884bf",
+        "source_archive_sha256": "adb2cbe5cc5479083dd463e4a604375b83d13b9b38aa0591b12fb1e19d9989be",
+        "source_commit": "7593de44878dce1305d4bcdd6dafb18d4c1c778d"
+      },
+      "scope_limit": "Delivered design files do not prove that the parts have been fabricated or assembled."
+    },
+    {
+      "requirement": "Build all twelve designs with three independent specimens each",
+      "state": "physical_evidence_missing",
+      "planned_specimens": 36,
+      "reported_tested_specimens": 0,
+      "needed": "Dated assembly records, material/component identities, actual fit checks and specimen photographs."
+    },
+    {
+      "requirement": "Reliable contact at 0.2 N and false-contact probability <=1%",
+      "state": "physical_evidence_missing",
+      "needed": "Raw independent labelled presentations, frozen thresholds, held-out outcomes and per-condition confidence bounds."
+    },
+    {
+      "requirement": "Force feedback through 20 N per finger",
+      "state": "physical_evidence_missing",
+      "needed": "Calibrated force reference, complete loading/unloading and mixed-contact coverage, held-out errors and unavailable readings."
+    },
+    {
+      "requirement": "Thin-tip access, added motion, recovery and precision tasks",
+      "state": "physical_evidence_missing",
+      "needed": "Measured installed thickness/opening loss, reference-relative tip motion and fixed-protocol task trials."
+    },
+    {
+      "requirement": "Interference, drift, long holds, wear and replacement",
+      "state": "physical_evidence_missing",
+      "needed": "Identified no-contact motion/pose/cable/temperature conditions, repeated-load and surface-replacement records."
+    },
+    {
+      "requirement": "Determine which designs are good",
+      "state": "not_decidable_from_current_evidence",
+      "needed": "Complete physical gates plus actual assembly/rework/calibration time and failed-build counts. Do not rank missing measurements."
+    }
+  ],
+  "required_test_categories": [
+    "part identity, power, raw acquisition and fault behavior",
+    "installed fit and preservation of leading-tip access",
+    "contact threshold and false-contact events",
+    "held-out loading/unloading at different contact positions and contact areas",
+    "zero return, hysteresis, drift and long holds",
+    "added tip motion and recovery",
+    "no-contact jaw/motor motion and gravity poses",
+    "steel proximity, cable movement and temperature changes",
+    "repeated loading, surface wear and replacement",
+    "timed independent assembly, rework, calibration and replacement",
+    "representative precision tasks using a fixed task protocol"
+  ],
+  "per_design_physical_state": {
+    "R1": "not_evaluated",
+    "L1": "not_evaluated",
+    "B1": "not_evaluated",
+    "B2": "not_evaluated",
+    "C1": "not_evaluated",
+    "NAIL": "not_evaluated",
+    "RECESSED": "not_evaluated",
+    "F1": "not_evaluated",
+    "CAPACITIVE": "not_evaluated",
+    "PNEUMATIC": "not_evaluated",
+    "O1": "not_evaluated",
+    "FORCE_BUTTON": "not_evaluated"
+  },
+  "planned_specimens": 36,
+  "operator": null,
+  "measurement_location": null,
+  "next_required_action": "Assign the student/operator, fabricate and assemble identified specimens, and record physical measurements using the published protocols.",
+  "blocking_dependency": "Physical fabrication/assembly and test evidence are not available in the reported campaign.",
+  "inputs": {
+    "publication_report": "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/optical-clean-8452519/build/engineering/publication_checks/20261012T100046.199584Z/report.json",
+    "publication_report_sha256": "28d4743631538d2f22c9ac1defed5207c65cebc6fe26337ff5e8d8a74a0884bf",
+    "source_archive": "/home/geyan/projects/flex-pi_release/yam-tactile-kit/build/optical-clean-8452519/build/download-distribution/enpire-source.zip",
+    "source_archive_sha256": "adb2cbe5cc5479083dd463e4a604375b83d13b9b38aa0591b12fb1e19d9989be",
+    "generator_sha256": "a99be14bf8b9f800da142c4bbd3a5e2f408b36914ad280826a43624e05d996aa"
+  }
+}
