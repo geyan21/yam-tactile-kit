@@ -221,7 +221,20 @@ def main():
                 if "website/"+name not in archive.namelist():raise ValueError(f"Complete packet missing design page: {name}")
             if "source/engineering/design_catalog.json" not in archive.namelist():
                 raise ValueError("Portable source missing design catalog")
-        result={"passed":True,"local_links":local_links,"design_pages_verified":len(catalog["designs"]),"archives":archives,"hardware_validation":False}
+            # Every frozen prototype must be present in both halves of the
+            # complete packet, including new designs not in the older list.
+            packaged=set(archive.namelist())
+            prototype_members=0
+            for snapshot_path in sorted((ROOT/"engineering/prototypes").glob("*/prototype_snapshot.json")):
+                snapshot=json.loads(snapshot_path.read_text())
+                for name in (*snapshot["files"], "prototype_snapshot.json"):
+                    for prefix in ("source/engineering/prototypes/", "website/assets/prototypes/"):
+                        member=prefix+snapshot_path.parent.name+"/"+name
+                        if member not in packaged:
+                            raise ValueError("Complete packet missing frozen prototype member: "+member)
+                        prototype_members+=1
+        result={"passed":True,"local_links":local_links,"design_pages_verified":len(catalog["designs"]),
+                "frozen_prototype_members_verified":prototype_members,"archives":archives,"hardware_validation":False}
         (ROOT/"build/engineering/site_checks.json").write_text(json.dumps(result,indent=2)+"\n")
         record["checks"]=result
         print(json.dumps(result,indent=2))
