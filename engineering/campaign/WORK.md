@@ -1,5 +1,43 @@
 # Build and compare all twelve designs
 
+## Physical execution checkpoint — 2026-10-12
+
+The previous goal turn made concrete progress: all twelve digital design
+packages were published and verified at commit
+`7593de44878dce1305d4bcdd6dafb18d4c1c778d`, release
+`kit-7593de44878d`, successful Actions run `38231267537`.
+The publication report is in the sibling `optical-clean-8452519` checkout at
+`build/engineering/publication_checks/20261012T100046.199584Z/report.json`.
+It verifies all twelve live design pages, O1's four additional instruction
+pages, every O1 ZIP member and the release asset hashes.
+
+The goal is **not complete**. The user reported no builds or data, and the
+campaign still records zero physical specimens and missing evidence for
+every design. Do not manufacture a ranking from CAD, nominal circuit
+checks, simulations or synthetic tests.
+
+This first post-publication continuation checks the physical execution
+dependency. No physical results were found in the versioned kit's data/
+measurement/result locations; the specimen and trial files are templates.
+An optional plugin search for fabrication/lab capabilities failed with
+HTTP 401 `token_expired`; it did not establish whether such integrations
+exist. The working GitHub SSH publication is unaffected.
+
+The student/operator and shared measurement location have been requested.
+`scripts/prepare_physical_campaign.py` creates a 36-specimen queue and
+requirement-by-requirement evidence audit from the verified published
+archive. Its outputs belong under `build/physical_campaign/`, separate
+from frozen designs and actual future measurements. This is a handoff plan,
+not evidence of fabrication or test success.
+
+Do not rerun completed publication or invent more design changes merely
+to keep the goal active. After the handoff is prepared, the next required
+state change is real fabrication/assembly and physical measurement
+evidence. Keep the goal active until completion is proven or the repeated
+physical-dependency blocker satisfies the goal's three-turn blocked audit.
+
+The older checkpoints below are retained history.
+
 ## Current checkpoint — 2026-10-12
 
 P1.0 now has complete local nominal CAD/readout, 112 parts/references,
