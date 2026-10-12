@@ -17,8 +17,44 @@ ignore to `/build/`, and adds a Git-inclusion/hash check before CI tests.
 A fresh Git worktree passed all 4,411 expected frozen/source paths.
 P1's 112-part, 414-file snapshot remains unchanged:
 `68aa9caa300bee7cf82fb73cb3e32a1d44e7107f4208bb24aa212d1ba20331fb`.
-The P1 parent worktree has its exact deployment reports. Do not call that
-Pages release live until its workflow and asset verification succeed.
+P1 is published and verified live at
+https://geyan21.github.io/yam-tactile-kit/pneumatic.html from `2ebb6df`.
+Workflow 38214213124 passed. The parent worktree's publication check
+`20261012T071112.099676Z` verifies all five pages, release assets, and every
+member of the P1 ZIP. Eleven digital designs are published; none is
+physically qualified. Do not repeat the completed P1 publication work.
+
+## Current O1 checkpoint, 2026-10-12
+
+The refined path `path_searches/20261012T065149.643835Z` is now the basis:
+gel Y = -94…-23, camera (-7.5, 0, 22), mirror Z = 0.55Y + 60,
+16.539° camera pitch, 63.892 mm mirror, 210 nominal ray segments.
+`core_witnesses/20261012T071941.242797Z` passes frame/gel checks with the
+window X = -13…-2, Y = -85…1. Wider earlier windows disconnected the nail.
+`camera_space_screens/20261012T074327.049703Z` reserves the official
+Camera Module 3 Wide envelope, rotated 180°, and a 32 mm root extension.
+`root_bays/20261012T080302.568971Z` passes 595 nominal material comparisons,
+ray-centre checks, and nail/drive/both mount-region preservation.
+
+Solaris gel, Psycho Paint / Silc Pig coatings, and four Kingbright
+APT2012QBC/D LEDs with individual 220 ohm resistors are selected in
+`optical_materials.json`. Supplier facts and hashes are retained in
+`material_sources/20261012T080411.702240Z`. The selected prototype uses
+blue illumination and marker tracking, without the paper's fluorescent
+paints or yellow filter. It is not a calibrated photometric normal map.
+
+The first retained cartridge at `gel_cartridges/20261012T081832.857213Z`
+had a valid single STEP solid but two microscopic nonmanifold STL edges.
+The unchanged STEP was reviewed at `mesh_export_reviews/20261012T082559.487955Z`;
+finer tessellation does not cure it. The seat edges were adjusted 0.05 mm
+into the adjoining walls to avoid a coincident edge; recheck before use.
+The failed CAD and all diagnostic results are preserved.
+
+Remaining: pass the retained cartridge, gel molds/patterns, light board
+and retention, N0 nail integration, local image acquisition and measured
+analysis, final checks, separate O1 pages, frozen packet and publication.
+No optical force/contact model or physical comparison result exists.
+The older search notes below are history, not instructions to restart.
 
 ## Verified primary sources
 

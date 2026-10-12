@@ -7,7 +7,7 @@
   "frame_pocket_clearance_mm": 0.15,
   "side_wall_x_mm": [[-16.5, -15.5], [0.5, 1.5]],
   "side_wall_front_recess_z_mm": 0.4,
-  "seat_x_mm": [[-16.0, -14.0], [-1.0, 1.0]],
+  "seat_x_mm": [[-16.05, -14.0], [-1.0, 1.05]],
   "seat_vertical_offsets_from_inner_mm": [-2.0, -0.8],
   "clip_lip_x_mm": [[-16.0, -13.8], [-1.2, 1.0]],
   "clip_lip_vertical_offsets_mm": [0.05, 1.55],
