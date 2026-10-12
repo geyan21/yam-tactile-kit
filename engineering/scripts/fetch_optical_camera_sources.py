@@ -4,6 +4,8 @@
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import hashlib
+import gzip
+import io
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -50,8 +52,16 @@ def fetch(name, url, folder):
     with urlopen(Request(url, headers={"User-Agent": "yam-tactile-kit-research/1.0"}), timeout=30) as response:
         data = response.read(24*1024*1024+1)
         resolved = response.url
+        content_encoding = response.headers.get("Content-Encoding")
     if len(data) > 24*1024*1024:
         raise ValueError("Document exceeds the review size bound")
+    wire_sha256 = hashlib.sha256(data).hexdigest()
+    if data.startswith(b"\x1f\x8b"):
+        (folder/(name+".wire.gz")).write_bytes(data)
+        with gzip.GzipFile(fileobj=io.BytesIO(data)) as stream:
+            data = stream.read(24*1024*1024+1)
+        if len(data) > 24*1024*1024:
+            raise ValueError("Decoded document exceeds the review size bound")
     is_pdf = data.startswith(b"%PDF")
     source = folder/(name+(".pdf" if is_pdf else ".html"))
     source.write_bytes(data)
@@ -70,7 +80,8 @@ def fetch(name, url, folder):
         (folder/(name+".links.json")).write_text(json.dumps(sorted(set(parser.links)), indent=2)+"\n")
         conversion = None
     return {"name": name, "url": url, "resolved_url": resolved, "bytes": len(data),
-            "sha256": hashlib.sha256(data).hexdigest(), "file": source.name, "conversion": conversion}
+            "sha256": hashlib.sha256(data).hexdigest(), "file": source.name, "conversion": conversion,
+            "wire_sha256": wire_sha256, "content_encoding": content_encoding}
 
 
 def main():
