@@ -1,0 +1,21 @@
+{
+  "schema": "yam-pneumatic-separate-wall-pairs/1",
+  "surface_basis": "engineering/development/f1/r3/configuration/f1_formed_stack.json",
+  "sites": [2, 3, 4, 5],
+  "channel_diameter_mm": 1.5,
+  "minimum_wall_mm": 0.6,
+  "front_normal_depth_mm": [0.25, 8.0],
+  "back_vertical_depth_mm": [0.25, 40.0],
+  "sample_step_mm": 0.025,
+  "minimum_center_separation_mm": 4.0,
+  "minimum_original_material_overlap_fraction": 0.5,
+  "source_width_mm": 15.0,
+  "allow_local_fill_inside_existing_holes": true,
+  "limits": [
+    "Separate front/back material members may enclose the channels; a solid straight web between them is not required.",
+    "Any added support material must stay inside the original exterior outline and overlap the original TPU substantially.",
+    "This is a geometric layout, not a force, stiffness, printing, leak or fatigue qualification.",
+    "The back channel is mechanically active; it is not an unloaded reference.",
+    "Port, plug and actual hard-frame checks remain."
+  ]
+}
