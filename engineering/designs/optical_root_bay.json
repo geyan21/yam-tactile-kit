@@ -1,6 +1,6 @@
 {
   "schema": "yam-o1-root-bay/1",
-  "root_cap_source_y_min_mm": -16.2,
+  "root_cap_source_y_min_mm": -16.6,
   "protected_interface_y_min_mm": -13.0,
   "mount_guard_xz_centers_mm": [[-20.71081355639414, 14.283239662486217], [0.2891864694121907, 14.283239662486217]],
   "mount_guard_radius_mm": 5.2,
@@ -26,7 +26,7 @@
   "fastener": {"shaft_diameter_mm": 2.0, "length_mm": 8.0, "head_diameter_mm": 3.8, "head_height_mm": 2.0, "clear_hole_mm": 2.2, "washer_od_mm": 4.5, "washer_id_mm": 2.2, "washer_thickness_mm": 0.5, "nut_af_mm": 4.0, "nut_thickness_mm": 1.6, "nut_pocket_af_mm": 4.4},
   "cable_slot_x_mm": [-15.5, 0.5],
   "cable_slot_y_mm": [-24.0, -17.8],
-  "rear_lid_baffle_y_mm": [-17.2, -16.5],
+  "rear_lid_baffle_y_mm": [-17.4, -16.8],
   "rear_lid_baffle_z_min_mm": 25.0,
   "limits": [
     "A source-matched root cap is retained while the sensing core moves distally by the camera-space screen's selected reach extension.",
