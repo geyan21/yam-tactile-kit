@@ -1,7 +1,7 @@
-# F1 wrist capture — development instructions
+# F1 wrist capture — wiring and raw acquisition
 
-This is the code and wiring contract for the planned F1 wrist board.
-**The integrated F1 finger is unfinished and no physical F1 measurements
+This is the code and wiring contract for the checked F1 wrist PCB.
+**F1 is an unbuilt digital bench design; no physical F1 measurements
 exist.** Circuit simulations and synthetic software checks do not establish
 contact reliability, force accuracy or a 20 N rating.
 
@@ -10,7 +10,9 @@ between patterned flexible electrodes. It belongs on the two nail patches
 and four TPU patches. The film/electrodes form four rows and sixteen columns.
 The amplifiers, ADC and Pico described here belong on the **separate wrist
 board**. The finger's fixed fanout board connects the twelve foils to that
-readout. Installed foil shapes, tails and the carrier are still being completed.
+readout. Use the current R4 foils, retained covers and carrier described in
+[Build F1](BUILD_F1.md); actual seating, seals, strain relief and loaded motion
+remain physical acceptance tasks.
 
 ## Circuit identities
 
@@ -141,8 +143,9 @@ the sensor foils unplugged.** It does not prove foil continuity, row-wire
 continuity, correct film assembly, force accuracy or arbitrary fault coverage.
 The code marks these records `tactile_observation: false`.
 
-Pixel fields `force_n` and `contact` remain null until a separate measured
-calibration/validation method exists.
+Pixel fields `force_n` and `contact` deliberately remain null in this raw
+protocol. The host stationary-force tool writes a separate report from
+measured calibration/evaluation holds; do not insert estimates into raw packets.
 
 ## Record a real bench session
 
@@ -153,6 +156,7 @@ identifier and that build's assembly manifest:
 /usr/bin/python3 engineering/software/f1_record.py \
   --port ACTUAL_SENSOR_PORT \
   --specimen ACTUAL_SPECIMEN_ID \
+  --session-id ACTUAL_SESSION_ID \
   --condition ACTUAL_TEST_CONDITION \
   --geometry ACTUAL_ASSEMBLY_MANIFEST.json \
   --seconds 30 \
@@ -171,6 +175,11 @@ column check. Duplicates, stale sample times, wrong gains and mislabeled
 electrical tests are rejected or flagged. Host backpressure changes timing;
 retain per-sample times and frame duration when analyzing motion trials.
 
+The current host recording format is version 2, with session identity and
+relative host time. Use [F1 physical testing](F1_TESTING.md) for the separate
+stationary-force fit/evaluation workflow. Its outputs require actual physical
+trials and do not qualify contact detection or robot operation.
+
 ## Checks performed and remaining
 
 Nine checks using synthetic I/O cover configuration bounds, switching
@@ -179,9 +188,9 @@ complete matrix membership, stream synchronization and exclusion of
 electrical tests from tactile data. These checks do not exercise a physical
 Pico, ADC, sensor film or gripper.
 
-Finish and independently check the routed PCB, complete circuit/reference
-and array models, fitted flexible electrodes, carrier and cable geometry.
-Then verify supplies, actual waveforms, continuity and controlled faults
+The wrist and fitted-flex artwork have independent native checks. Full
+coupled-array behavior, actual reference/supply performance and physical
+interfaces remain unqualified. Verify supplies, actual waveforms, continuity and controlled faults
 before collecting the common contact/force experiments through 20 N per
 finger. Preserve missing, saturated and failed measurements.
 

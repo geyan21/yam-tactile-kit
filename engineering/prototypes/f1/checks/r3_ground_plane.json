@@ -1,0 +1,17 @@
+{
+  "schema": "yam-f1-inner-plane-review/1",
+  "physical_evidence": false,
+  "checked_pcb_sha256": "5f9d5d104d0f57939ae8fe3add5947faf186f179520449bebda1584fc782afd0",
+  "independent_check_sha256": "4081a6b7fab2f3a3e2a72196d5956f0c220aa0465d5a384e881b25c5ff83e7c4",
+  "routing_sha256": "921679f87f5d0c3b83a5e2f7298a1ef05973d1dcafd53677202316a99dda4c20",
+  "signal_length_by_net_mm": {},
+  "total_signal_length_mm": 0,
+  "unconnected_items_in_native_drc": 0,
+  "limits": "The plot shows actual filled copper. Connectivity DRC and visual inspection do not establish analog return impedance, EMC, force accuracy or physical reliability.",
+  "files_sha256": {
+    "inner_ground.png": "a052f027873e4cc284412db5821f609d6447c6a3b462d88b00b53e81dcc2ee77",
+    "export_0.log": "989b79f4cddd6193fbd114e435c37fb7b193668e3e83bbcf79a8692ffd6e1698",
+    "inner_ground.pdf": "5282240138068ca7fc50d2840abad6c5b91a92f37f99a8ed5b9f2c4fbb68447b",
+    "export_1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

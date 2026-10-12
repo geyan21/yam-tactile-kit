@@ -1,5 +1,60 @@
 # Build and compare all twelve designs
 
+## Current checkpoint — 2026-10-12
+
+F1.1 R4 is frozen locally at `engineering/prototypes/f1`: 1,072 files plus
+its snapshot, 96 CAD parts/references, twelve independently checked flexes,
+matching fanout/wrist electronics, twenty mold halves, film/terminal cut
+patterns, manufacturing instructions and stationary-force tools. Snapshot
+SHA-256: `7523d39b578c1ec15b8d457d209726725dbd2f785b8919684a09a5727a1e15b8`.
+There are now ten local digital packages and zero physical specimens.
+Public main remains the verified K1 release `a4c2179` until the final
+website/distribution checks and publication finish. The full goal is active:
+pneumatic, optical and every physical comparison remain.
+
+The completed full F1 assembly check is
+`build/engineering/prototypes/f1/complete_assembly_common_checks/20261012T021223.326465Z`:
+68 material parts, 5,638 comparisons, zero findings. Forty explicitly
+unqualified part/connector pairs represent twelve real connector cavities.
+It uses the same 0.001 mm³ overlap criterion, conservative coordinate bounds
+and direct native solid intersection, with four analytical controls.
+No minimum-clearance or physical-fit claim follows.
+
+The old distance-based checkers were intentionally stopped after separate
+identity inspection. The review is
+`build/engineering/prototypes/f1/process_reviews/20261012T021426.355770Z/review.json`.
+The saved controller verifies UID, command and process start time; it issued
+five scoped SIGTERM requests for the two superseded jobs and their inspected
+workers. Both parent sessions, 87009 and 74402, returned exit 143. No artifact
+was removed. Their partial results remain interrupted evidence.
+The direct-common check in session 54254 completed successfully.
+No automatic approval review rejected these actions.
+
+All current molds pass: F1 working runs `skin_molds/20261012T014609.371996Z`,
+`skin_molds/20261012T015206.479694Z` and `skin_molds/20261012T015206.490725Z`.
+Current visuals are `r4_visuals/20261012T020734.682716Z`.
+`diagram_reviews/20261012T020736.851429Z` passes both SVG canvas-bound checks;
+the actual assembly and full wiring rendering were visually inspected.
+The initial preview's viewport cropped the bottom; the corrected review
+adds canvas height without removing any diagram content.
+
+The freezer proves the older terminal-CAD artwork basis and current export
+have identical per-foil geometry and terminal metadata. Actual mating,
+cable acceptance, adhesion, cured seals, strain relief, motion slack,
+full-array dynamics and physical performance remain unqualified.
+The preceding working checkpoint passed 213 software/clean-source checks;
+final packaged-site/browser verification is still required.
+
+Pneumatic volume sensitivity is now in
+`build/engineering/prototypes/pneumatic/volume_screens/20261012T020734.085177Z`:
+1,296 assumed cases, with explicit raw-sensor and reference-pair range checks.
+The remote-reference thermal artifact reaches 1.1729 kPa in magnitude.
+These are gas-law scenarios, with unknown dead-volume assumptions and no
+force/deformation mapping. They do not establish a 20 N rating or a
+detectable contact threshold.
+
+## Earlier work log — retained history
+
 The requested end state is twelve physically built designs, a common measured
 comparison, and a defensible choice for reliable contact and 20 N per-finger
 normal-force feedback while preserving thin-tip precision access.
@@ -116,18 +171,82 @@ The first attempt used a pattern name instead of the actual
 component checks. All twelve real mating cavities remain excluded and
 explicitly unqualified, rather than being replaced with invented holes.
 
-Retained skin CAD is
-`retained_skin_cad/20261012T011152.010251Z`: 58 parts/references across six
-cells, including four compliant R1-derived fitting bases. All declared
-base-to-source checks pass. It includes plated-stack allowances, peripheral
-covers and explicit bond/foil-exit interfaces. The nominal top heights are
-0.4614 mm on the nails and 0.7264 mm above the R1 TPU datum; the variable
-fitting base below that datum is additional geometry.
-The first cover-mold test (CH0) is running in owned session 79752.
-Complete body/finish/tail envelope joining is running in owned session 71233.
-Inspect those terminal results before starting the remaining mold shapes
-or claiming joined-foil completion. Complete assembly checks, manufacturing
-drawings, seal/strain-relief installation and physical testing remain.
+The first retained skin,
+`retained_skin_cad/20261012T011152.010251Z`, has a real geometry defect:
+its TPU cover was the same 13 mm width as the foil and lacked lateral
+retention skirts. The old CH0 mold passed, but the multi-site mold run
+`skin_molds/20261012T012505.712527Z` failed on CH2's cover overflow.
+The gate review in that old skin run's
+`gate_reviews/20261012T012858.618126Z` exposed the missing walls.
+Do not fix it by moving the gate up into the roof or freeze this old skin.
+
+The corrected retained skin is
+`retained_skin_cad/20261012T013443.013063Z`: 58 parts/references across six
+sites. Its TPU covers and matching compliant bases are now 14 mm wide,
+around 13 mm foils and within the 15 mm source TPU. Constant-section
+base widening and all declared source-fit checks pass. Nominal top heights
+remain 0.4614 mm on the nails and 0.7264 mm above the R1 TPU datum;
+the variable fitting base below that datum is additional geometry.
+
+Current twelve joined body/finish/tail envelopes are
+`joined_foil_cad/20261012T014609.247735Z`. They all export as valid connected
+solids. The earlier complete join at `20261012T012241.162297Z` references
+the obsolete skin report and is retained as history.
+
+Corrected CH2 base/cover molds pass in
+`skin_molds/20261012T014609.371996Z` (four halves).
+CH0/CH1 covers and CH3 base/cover pass in
+`skin_molds/20261012T015206.479694Z` (eight halves).
+The CH4/CH5 run is still in owned session 30597; at its latest output,
+CH4 base/cover and CH5 base exported. Inspect its final report.
+The full corrected assembly check runs in owned session 74402 using
+`check_f1_assembly_parallel.py` with two isolated workers and the unchanged
+native overlap criterion. First two parts pass 231 comparisons. All 68
+physical material parts, source/carrier/hardware and peers remain in scope.
+The old serial check in owned session 87009 uses obsolete 13 mm skin;
+retain it only as old-revision evidence. Do not modify either running
+checker or its direct source/report inputs.
+
+The coherent R4 artwork rerun is `artwork_runs/20261012T014423.009552Z`.
+Its `independent_checks/20261012T014426.398341Z/summary.json` passes all
+twelve foils with unchanged copper and the two rear windows. This run
+references the corrected annulus-aware terminal review.
+
+`film_patterns/20261012T015305.672194Z` supplies six 1:1 film cuts developed
+at the plated stack's nominal mid-surface, with volume comparisons and
+50 mm scale bars. `r4_visuals/20261012T015641.249275Z` supplies the actual
+assembly rendering, model, stack and wiring diagrams. The assembly image
+was visually inspected: all six film sites and the open nail notch are clear.
+
+`F1_MANUFACTURING.md` specifies materials, finished flex construction,
+assembly, and coupon/cable acceptance. `F1_TESTING.md` supplies the new
+physical stationary-force workflow. The host recorder accepts an explicit
+session ID for version-2 recordings; old commands remain version-1 raw
+captures and are excluded from the new calibration workflow. Firmware and
+the on-device raw protocol are unchanged.
+`f1_holds.py` independently revalidates complete frames, phase headroom,
+receipts, timing and fixed configuration. `f1_force.py` fits six site-current
+curves and evaluates independent sessions, all six sites and mixed contacts.
+Nineteen F1 software checks pass, including ten new force-workflow tests.
+All test inputs are explicitly synthetic fixtures, not physical results.
+
+F1 has not been frozen or published as a complete bench package. Finish the
+remaining mold and complete-assembly checks, review diagrams, package
+materials/files/provenance, link the new separate pages and verify the site.
+Real seating, seals, strain relief, moving-TPU slack and physical performance
+remain unqualified. Public main is still the verified K1 release at `a4c2179`.
+
+Pneumatic development has begun with `research/pneumatic_source_review.json`.
+The current working direction is four compliant air-channel TPU regions
+with separate retained R1 nail sensing and pressure electronics at the wrist.
+The All Sensors DS-0375 Rev C PDF is cached only for local review at
+`build/engineering/prototypes/pneumatic/sources/20261012T020101.365776Z`;
+SHA-256 `de6a7604548f251a688ec5934903a7d2b08ce2ae8a1df2719632900950ae4671`.
+The first default-sandbox fetch failed DNS; the authorized network retry
+succeeded. No approval review rejected it. The proposed L30D/I3H range is
+only a screening candidate. Finish chamber/tube/dead-volume sensitivity,
+mechanics, pin/package review and readout before selecting it. Optical
+integration and all physical builds/comparisons remain.
 
 At this prepublication checkpoint, K1.2 is frozen at `engineering/prototypes/capacitive` on
 `design/k1-integration`, but has not been published. The public site still

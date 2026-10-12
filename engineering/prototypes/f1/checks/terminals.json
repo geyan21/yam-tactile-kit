@@ -1,0 +1,1364 @@
+{
+  "schema": "yam-f1-finished-terminals/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "f1_ch0_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_finished_tail.step",
+      "stl": "cad/f1_ch0_columns_finished_tail.stl",
+      "sha256_step": "9047a0ffa90ab65158bbeedde174718acb848a1705284efa233d5508153a020f",
+      "sha256_stl": "7b36102d5b63056c0bd294e66d1b72675549f7f93c429ec42fe756e360c78822",
+      "volume_mm3": 28.546756393855702,
+      "bounds_mm": [
+        [
+          -18.862550735473633,
+          -101.2621841430664,
+          -3.6608829498291016
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch0_columns_full_stiffener_bond.stl",
+      "sha256_step": "edf2242559bdb155a11f2a2f51432a3fa3ba6766b8f15ba6fdb475574622c7a1",
+      "sha256_stl": "5bda96c4fae0ad6878631cb0e6a6416fded5400166cad847d3905209a7c3da1f",
+      "volume_mm3": 2.8000000000000176,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          10.807499885559082,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch0_columns_full_stiffener_pi.stl",
+      "sha256_step": "77b58bd045327fc3bb73f742604ece163255797c1f0e9108f27b334c17517c45",
+      "sha256_stl": "c3165a8be3e35ed8cab151703fef4222cbc51bfc283d178b9138be43732008d4",
+      "volume_mm3": 11.200000000000005,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          10.757499694824219,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_finished_tail.step",
+      "stl": "cad/f1_ch0_rows_finished_tail.stl",
+      "sha256_step": "03c8cd22525c298d7d3abd52af6ff9f4c0f54dd96dc75891ac7d1d2132e952a7",
+      "sha256_stl": "bfb6868bd1963fee9c8339435cec1ec9028b61b0792f6698f3294869da2d2893",
+      "volume_mm3": 49.955834662844474,
+      "bounds_mm": [
+        [
+          -18.862550735473633,
+          -101.25667572021484,
+          -3.855637788772583
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_tip_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_tip_stiffener_bond.step",
+      "stl": "cad/f1_ch0_rows_tip_stiffener_bond.stl",
+      "sha256_step": "c8338f36a78f2ba05ee4baa92c42ccf1f8a0c7dd6554bc02ba0ca8ec6bb7e6a1",
+      "sha256_stl": "f52205531c6b4cb81178d0459bd59cb7d8c1c6de0b6609dc4936cc43d6df8cb3",
+      "volume_mm3": 2.240000000000011,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -70.5,
+          12.050000190734863
+        ],
+        [
+          13.642499923706055,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_tip_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_rows_tip_stiffener_pi.step",
+      "stl": "cad/f1_ch0_rows_tip_stiffener_pi.stl",
+      "sha256_step": "e09894861d41df1461532e33e1e375da2a5751aa68ac47d088e0efe068299453",
+      "sha256_stl": "a713fccc276e24de99ecfc61c6a10a81e56150477e7fdd93937832291dba29c4",
+      "volume_mm3": 8.95999999999999,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -70.5,
+          12.050000190734863
+        ],
+        [
+          13.842499732971191,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_transition_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_transition_stiffener_bond.step",
+      "stl": "cad/f1_ch0_rows_transition_stiffener_bond.stl",
+      "sha256_step": "83aeec5df1352733b6fce735cbc98a50171f5adabc166c3f44f6808730d6fe26",
+      "sha256_stl": "2315230c627ec5ee460a03af2b19430cd0c8dc9310548e44387e3fe854e1023d",
+      "volume_mm3": 0.5250000000000009,
+      "bounds_mm": [
+        [
+          13.677499771118164,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          13.727499961853027,
+          -63.5,
+          11.949999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_transition_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_rows_transition_stiffener_pi.step",
+      "stl": "cad/f1_ch0_rows_transition_stiffener_pi.stl",
+      "sha256_step": "9bc853466eb9466c724b639ef323277de73ee9a6eb05a7027c89e9f9c9206188",
+      "sha256_stl": "cf22b6e7a41d6fc36b10b360b1ccc8242cba5fb7db04e0e5d37925916f661ef4",
+      "volume_mm3": 2.099999999999991,
+      "bounds_mm": [
+        [
+          13.727499961853027,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          13.927499771118164,
+          -63.5,
+          11.949999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_finished_tail.step",
+      "stl": "cad/f1_ch1_columns_finished_tail.stl",
+      "sha256_step": "6e862f566fcdbd47be3549169404bf0740cc98938a4c2f83a8813757997ec118",
+      "sha256_stl": "fa126b2ba3ea1b701bff4535394f0d46b74f650850a5318e3868cab62341d06e",
+      "volume_mm3": 28.840185448505505,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -101.2621841430664,
+          -3.6608829498291016
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch1_columns_full_stiffener_bond.stl",
+      "sha256_step": "cc971d95e7c404ebb25f198aaaf32520848eeb826cf819676dad9dd1c36953ee",
+      "sha256_stl": "1704b550a310f6861a22507a07d64c15543994f43f0f71e6852fb48c8316c309",
+      "volume_mm3": 2.8000000000000087,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch1_columns_full_stiffener_pi.stl",
+      "sha256_step": "d38502c38a0f240cd4ccc2d25ce4d066f868187d78c6b9f981fc6d0f549f53d1",
+      "sha256_stl": "e0e780f7d87a8950b8313e35a74ea898ee346da6264daf5eff5e781c90d1f034",
+      "volume_mm3": 11.199999999999969,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_finished_tail.step",
+      "stl": "cad/f1_ch1_rows_finished_tail.stl",
+      "sha256_step": "33bea6e8b178a794f22fb161b3848b23af0cbd48a241e5333dfb857cd949e7e5",
+      "sha256_stl": "2a9d359504db1fc86eee4a06a66762923969b816423d0a391cf5984cff97d6a6",
+      "volume_mm3": 50.53534666214412,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -101.25667572021484,
+          -3.855637788772583
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_tip_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_tip_stiffener_bond.step",
+      "stl": "cad/f1_ch1_rows_tip_stiffener_bond.stl",
+      "sha256_step": "6e567593835c2b7f157b1cb758d76fb08129e43868edf18c0201cb1dcc91dae5",
+      "sha256_stl": "0c3914720cf710a2fd1ab2ae336bebec3ddc3615e02fff04234fe9951298194e",
+      "volume_mm3": 2.2400000000000087,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -63.5,
+          37.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_tip_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_rows_tip_stiffener_pi.step",
+      "stl": "cad/f1_ch1_rows_tip_stiffener_pi.stl",
+      "sha256_step": "f0711fa56a1ac235e56ec31d6e4ead633f2ac3bca59e72ce6246d1266af9e8b4",
+      "sha256_stl": "895c5886ff83f74d27a3e6550e54a55943c35fd2f86c3ccbb13627180ae78108",
+      "volume_mm3": 8.959999999999983,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -63.5,
+          37.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_transition_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_transition_stiffener_bond.step",
+      "stl": "cad/f1_ch1_rows_transition_stiffener_bond.stl",
+      "sha256_step": "7aa06e2b80ab2111df3650baf9bb0b1e2f06a7f6d1b7d7372a16e95839407912",
+      "sha256_stl": "5ef313b1d6f7ff4a895959bc6327dfcbf65b6d55301d63592b7ac6e61b0db2ef",
+      "volume_mm3": 0.5250000000000055,
+      "bounds_mm": [
+        [
+          13.677499771118164,
+          -70.5,
+          38.04999923706055
+        ],
+        [
+          13.727499961853027,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_transition_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_rows_transition_stiffener_pi.step",
+      "stl": "cad/f1_ch1_rows_transition_stiffener_pi.stl",
+      "sha256_step": "ca160e97e4b4d85a5d5184d83275a0fcddba0deee788e82d413c2d750a286382",
+      "sha256_stl": "1765ffe3f2d76745312535ea221755e8890141c4f67705a60ea6bd134f6ab98f",
+      "volume_mm3": 2.10000000000001,
+      "bounds_mm": [
+        [
+          13.727499961853027,
+          -70.5,
+          38.04999923706055
+        ],
+        [
+          13.927499771118164,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_finished_tail.step",
+      "stl": "cad/f1_ch2_columns_finished_tail.stl",
+      "sha256_step": "3d8247e771c7e7b9ccdb50b582840d69f9fd9986798181d9f849fd100e4f8155",
+      "sha256_stl": "f76cbea36b5442578407c1bea844a8825c45ecffef2d03111ea1bacb6510d879",
+      "volume_mm3": 29.425012547361995,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -93.96240234375,
+          -6.175000190734863
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch2_columns_full_stiffener_bond.stl",
+      "sha256_step": "55f7514b8e062df879152f4372de87d64c3361d629cca35fdd6df8000f395195",
+      "sha256_stl": "002ae0ffd24236af479268dca4737430cf3f89dbf3952d3db86e51effe9569af",
+      "volume_mm3": 2.8000000000000167,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          10.807499885559082,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch2_columns_full_stiffener_pi.stl",
+      "sha256_step": "0addabd0aa0bd115e826ec260f9f3da3731ca3f4f2aa10f1b14b52d685f2c571",
+      "sha256_stl": "7201072092c068a51d6b00ebcc5899113f6db9aee374b8b71a8caf909606a060",
+      "volume_mm3": 11.200000000000001,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          10.757499694824219,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_finished_tail.step",
+      "stl": "cad/f1_ch2_rows_finished_tail.stl",
+      "sha256_step": "ba7c01860ff5f1996728354f2563a56d059b17101a4b5db86ba24dbd6548abb0",
+      "sha256_stl": "c3be5c2f95b8dcd2ee750359aed6930b53cf418060693ddd17461c2e5ff1b267",
+      "volume_mm3": 29.60210595010127,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -93.96247863769531,
+          -5.242032051086426
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch2_rows_full_stiffener_bond.stl",
+      "sha256_step": "f884066f2df7964a3d846450006dccf58226bbab15dcc3223ffbacfc885e6f27",
+      "sha256_stl": "1a06169027fbf0a542aacd045526e2ff016d1483d15e9b1519276e5ed235f586",
+      "volume_mm3": 2.80000000000001,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          13.642499923706055,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch2_rows_full_stiffener_pi.stl",
+      "sha256_step": "b4407c4a2a8b21e3b697213018fae1c4f42020aac89d4969b5dee75026fd6124",
+      "sha256_stl": "b3eedcb3de030b8a8e87a126e1b6d1ad02557979c2184a2953012973296543bd",
+      "volume_mm3": 11.199999999999974,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          13.842499732971191,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_finished_tail.step",
+      "stl": "cad/f1_ch3_columns_finished_tail.stl",
+      "sha256_step": "cbb15b68f8d5eefd73893b9516e07792807426b24905fcfc831f533b32efed21",
+      "sha256_stl": "b748641a7115eb36b6787873f56b6c2cfc51a72cd6412e88c3f00d1530416dae",
+      "volume_mm3": 27.889166056782262,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -61.159828186035156,
+          2.059166669845581
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch3_columns_full_stiffener_bond.stl",
+      "sha256_step": "c131aa0ce8cd9ce7a3358eebb034c8327c24424d2d8248a9752912b9a8146537",
+      "sha256_stl": "fb0ebcbe7804314909e767e40d432bf87a0d231bdf8af81ced4f4023c5ce0c44",
+      "volume_mm3": 2.800000000000012,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch3_columns_full_stiffener_pi.stl",
+      "sha256_step": "a5f1f3f39c8a35924740f96545c92ac01b0271424427a66a4de0dee71af041dd",
+      "sha256_stl": "4498d403d390f610be3d1985c1052fc211fcf9a6fb88c7a09e18ddaff3e26058",
+      "volume_mm3": 11.19999999999998,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_finished_tail.step",
+      "stl": "cad/f1_ch3_rows_finished_tail.stl",
+      "sha256_step": "8f66f5905a138df2911672d9df1c338ca975498722c1ff48426993ce4328e10f",
+      "sha256_stl": "bec3c686db2f6e4ea092d78243da5886d827f6f19aef11c8566d303e2edef575",
+      "volume_mm3": 28.798428596894052,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -61.15962219238281,
+          1.992917537689209
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch3_rows_full_stiffener_bond.stl",
+      "sha256_step": "daadd73598a004a70acd259d5efb176d62f278d6c18652835fa3ea293610ce9d",
+      "sha256_stl": "834f1458ec8f62be8dcc4b83505653b9072aad23b8ff6d1645802c6e166b598e",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch3_rows_full_stiffener_pi.stl",
+      "sha256_step": "bd81799a5567bfed76c949ee258e01ef687de08a5626e59dbe091c8c80a494a8",
+      "sha256_stl": "00cb3873a153e152b0ea190f3bf429390c2c7dd935b5857519725ca3d304df1a",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_finished_tail.step",
+      "stl": "cad/f1_ch4_columns_finished_tail.stl",
+      "sha256_step": "c064aa552011b8cf9ef80df4a1b7a9a242dca9b2f61d538dcfda4b8ef8b9c757",
+      "sha256_stl": "12b7c36fe9198fe2426f2e23a1f2171f4d29de5a7e9a7c4e2e8c6197aee888c0",
+      "volume_mm3": 27.287903672046706,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -42.64374923706055,
+          10.301290512084961
+        ],
+        [
+          10.917499542236328,
+          -22.325695037841797,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch4_columns_full_stiffener_bond.stl",
+      "sha256_step": "eedc3ea09847ea43ac6553a88bc3eb100f4113caff9143d4b7806e39b6dfdd30",
+      "sha256_stl": "19d763d13cbbf61c24e4dcfcdd31af569de6da7d8bc4710011319b7887ae9fa2",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch4_columns_full_stiffener_pi.stl",
+      "sha256_step": "7593a9b0eb2ba97dd5f1991825d2e0d567c1d9c62d2e755285e6dd152bd697bb",
+      "sha256_stl": "429fd0f56308901dde5503f7709aef2aacd859e68b69ab60f58c4006024065a5",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_finished_tail.step",
+      "stl": "cad/f1_ch4_rows_finished_tail.stl",
+      "sha256_step": "ce0ad241254a58e28e1044e43975ab94689f259ec5a7be5ccd7b66d41cfa75f6",
+      "sha256_stl": "dae770f4201c3146831f5b47d9881bc2231795f22b1620bca9ec3769a2e196f8",
+      "volume_mm3": 40.85929416297762,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -42.665889739990234,
+          -6.924967288970947
+        ],
+        [
+          13.592499732971191,
+          -17.325695037841797,
+          45.224815368652344
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch4_rows_full_stiffener_bond.stl",
+      "sha256_step": "4cd2b02aafc24649141cba0e85b68aa0c4206405357402db714f4bc1f59a5bbe",
+      "sha256_stl": "3a1ff1542892035343a0007695a115de11b40e8e302e6295c076dfbedbaa5598",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch4_rows_full_stiffener_pi.stl",
+      "sha256_step": "03347e3a8710851122acb12c96724553fed8e1258f54a6c95614ac6bf23b9acc",
+      "sha256_stl": "24319150a26b2ac7a83990cacf5c28a4a263ba2273ba091a722d02aba758a09e",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_finished_tail.step",
+      "stl": "cad/f1_ch5_columns_finished_tail.stl",
+      "sha256_step": "318cf81d791ab9905661144f233280e7bd0d33d20278fc05d6092fa23b8513a4",
+      "sha256_stl": "ab6be2043173e25e50927365701d2907f4cd6a45fd8247efb81e94b2442a8e46",
+      "volume_mm3": 17.553914763692283,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -34.5,
+          -4.563379764556885
+        ],
+        [
+          10.917499542236328,
+          -20.574644088745117,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch5_columns_full_stiffener_bond.stl",
+      "sha256_step": "4c2cb434e1a8aa1cfafa18156edf78728141b43e3d974cb1387ad5581d1e4b19",
+      "sha256_stl": "58fbfdbf642c611a7f83bd601d0a10920848602d4781d0e1c67ac3891c666f47",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          10.807499885559082,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch5_columns_full_stiffener_pi.stl",
+      "sha256_step": "bd0cc7ce54376da575543a59a445402efc69ac31fb16412060c6e6f851c5f428",
+      "sha256_stl": "3b73db18312e5ddeb7c9cf6c9ba4c5b41883c15a5003cfc5629f4a8f20e4ceb7",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          10.757499694824219,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_finished_tail",
+      "purpose": "Nominal connector-end material envelope, corrected for exposed contacts and rear relief",
+      "material": "Layer envelope only; order the matching physical FPC",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_finished_tail.step",
+      "stl": "cad/f1_ch5_rows_finished_tail.stl",
+      "sha256_step": "7c3eaa28ee19b8e1a8958e1744874aa3dfa1a2f57d089ffffbf925f4f7f75439",
+      "sha256_stl": "9d35d49ad1d19c3aec3c6cf6d22dc856fc362cb67ad7f162854b6c0e19fd1061",
+      "volume_mm3": 18.41536566031114,
+      "bounds_mm": [
+        [
+          -13.699999809265137,
+          -34.5,
+          -4.673377990722656
+        ],
+        [
+          13.592499732971191,
+          -20.574785232543945,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch5_rows_full_stiffener_bond.stl",
+      "sha256_step": "35c746462340bfbba273b5b18d88af18c837508f53746d4831e0eb1062bc5936",
+      "sha256_stl": "86c7062e9c62c99ca7cb09e42b386c842945fc902d0ebf7c5f0ac74441576655",
+      "volume_mm3": 2.8000000000000136,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          13.642499923706055,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch5_rows_full_stiffener_pi.stl",
+      "sha256_step": "b279d4826d9592a1be24835bd50fcdb292520302eb352e0681d70236bdd48220",
+      "sha256_stl": "83c16001bdcae8a65ed35c1b53011c548b673f73d0f2a29b4d896f13f34d93f4",
+      "volume_mm3": 11.199999999999989,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          13.842499732971191,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cases": [
+    {
+      "foil": "f1_ch0_columns",
+      "connector": "J0C",
+      "site": 0,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch0_rows",
+      "connector": "J0R",
+      "site": 0,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 2,
+      "terminal_via_support": [
+        {
+          "via": "VTAIL_R0",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R1",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R2",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R3",
+          "copper_edge_to_support_edge_mm": 0.14999999999999858
+        }
+      ],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch1_columns",
+      "connector": "J1C",
+      "site": 1,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch1_rows",
+      "connector": "J1R",
+      "site": 1,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 2,
+      "terminal_via_support": [
+        {
+          "via": "VTAIL_R0",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R1",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R2",
+          "copper_edge_to_support_edge_mm": 0.10000000000000142
+        },
+        {
+          "via": "VTAIL_R3",
+          "copper_edge_to_support_edge_mm": 0.14999999999999858
+        }
+      ],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch2_columns",
+      "connector": "J2C",
+      "site": 2,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch2_rows",
+      "connector": "J2R",
+      "site": 2,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch3_columns",
+      "connector": "J3C",
+      "site": 3,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch3_rows",
+      "connector": "J3R",
+      "site": 3,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch4_columns",
+      "connector": "J5C",
+      "site": 4,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch4_rows",
+      "connector": "J5R",
+      "site": 4,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch5_columns",
+      "connector": "J4C",
+      "site": 5,
+      "role": "columns",
+      "nominal_conductor_plane_native_x_mm": 10.85,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    },
+    {
+      "foil": "f1_ch5_rows",
+      "connector": "J4R",
+      "site": 5,
+      "role": "rows",
+      "nominal_conductor_plane_native_x_mm": 13.549999999999999,
+      "nominal_contact_tongue_thickness_mm": 0.3132,
+      "reinforcement_piece_count": 1,
+      "terminal_via_support": [],
+      "nominal_supported_region_length_mm": 8.0,
+      "connector_cavity_qualified": false
+    }
+  ],
+  "input_sha256": {
+    "engineering/designs/f1_terminal_mechanics_r4.json": "1968f1bdd381096f9d6bde92d6a9b52472f2c7278b13a76e9f14b5817afc2368",
+    "engineering/designs/f1_finished_tip_r4.json": "000b570a5f165196224d74e0d07b3e4c83dee56c6da94a417cd08d8dd05d5400",
+    "build/engineering/prototypes/f1/artwork_runs/20261012T002149.845595Z/artwork.json": "bcbbe3cd0658afe3b71e21d970607bad8aa38033fc8a0c54c1d7d6e26f32d6d7",
+    "build/engineering/prototypes/f1/finished_tip_reviews/20261012T005629.615428Z/report.json": "b77f756c9be546619b46d58034146dfafa7dba3938446a0112b14f49734cf923",
+    "engineering/development/f1/r3/checks/fit_patterns.json": "d3d7adb6e07cfee31a2d8648840f0217771d5fcc0764d7be58f2b23b30d06ef5",
+    "engineering/development/f1/r3/checks/tail_routes.json": "009d24afdad9384443c4c40cf4904eb2fcde218381ff1e6b8741220191d726f0",
+    "engineering/scripts/build_f1_finished_terminals.py": "36ed47584a49e82a3c25bdcc9b867a3506aeccbcd1ebe571edf40f2267a1b9a7"
+  },
+  "limits": [
+    "Nominal material envelopes; incoming thickness and the actual seated connector position require measurement.",
+    "The short nail transition piece supports the static via region. Provide board-side strain relief so the narrow gap is not a cyclic flex hinge.",
+    "Do not put adhesive into the exposed gold-contact face.",
+    "The native R4 drawing's 8 mm rectangle is the overall reinforcement region; these separate cutting patterns define the two nail-row pieces.",
+    "The actual Hirose internal contact/cavity datum remains unverified. Do not report that interface as a passed collision check.",
+    "These parts still require source/peer and complete entry-lane checks.",
+    "Active sensing-body plating, sealing and dynamic slack are separate integration work."
+  ]
+}

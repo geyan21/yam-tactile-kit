@@ -1,0 +1,55 @@
+{
+  "schema": "yam-f1-gold-wrist-link-review/1",
+  "reviewed_utc_date": "2026-10-12",
+  "status": "Gold-finished comparison candidate; the complete mated pair and installed cable remain unqualified",
+  "part": "Molex 150200545 / 0150200545",
+  "product_url": "https://www.molex.com/en-us/products/part-detail/150200545",
+  "drawing": {
+    "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/150/15020/150200545_sd.pdf",
+    "document": "SD-15020-001, revision F",
+    "approval_date": "2026-02-16",
+    "circuits": 50,
+    "pitch_mm": 0.5,
+    "length_mm": 152,
+    "length_tolerance_mm": 4,
+    "contact_layout": "Type A, same-side contacts",
+    "end_thickness_mm": 0.3,
+    "end_thickness_tolerance_mm": 0.05,
+    "strip_length_mm": 4,
+    "strip_length_tolerance_mm": 0.8,
+    "reinforcement_length_mm": 6,
+    "reinforcement_length_tolerance_mm": 2
+  },
+  "specification": {
+    "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/150/15020/PS-15020-001-001.pdf",
+    "document": "PS-15020-001, revision F",
+    "date": "2023-12-06",
+    "conductor_thickness_nominal_mm": 0.1,
+    "conductor_width_mm": 0.3,
+    "conductor_width_tolerance_mm": 0.03,
+    "body_thickness_mm": 0.27,
+    "body_thickness_tolerance_mm": 0.05,
+    "gold_minimum_um": 0.05,
+    "nickel_minimum_um": 0.3,
+    "conductor_resistance_maximum_ohm_per_m": 0.73,
+    "resistance_test_method": "ASTM B 193; do not silently assign an unstated reference temperature",
+    "balanced_pair_capacitance_pf_per_m_listed": 62,
+    "capacitance_test_frequency_hz": 1000,
+    "flex_life_test": {"cycles_minimum": 50000, "radius_mm": 10, "cycles_per_minute": 100, "temperature_c": 23}
+  },
+  "derived_maximum_length_values": {
+    "length_m": 0.156,
+    "one_conductor_resistance_ohm_excluding_contacts": 0.11388,
+    "balanced_pair_capacitance_pf_using_listed_value": 9.672
+  },
+  "limits": [
+    "This cable has matching nominal pitch, circuit count and end thickness and replaces tin with gold as a candidate; that is not a manufacturer approval of the Hirose/Molex pair.",
+    "Its 0.05 µm minimum gold and 0.3 µm minimum nickel are below the 0.2 µm gold / 1–5 µm nickel example in Hirose's FPC construction guidance. Do not claim the example's exact surface stack.",
+    "The drawing permits strip length down to 3.2 mm and reinforcement down to 4 mm. Incoming parts must be measured against the chosen connector's minimum contact/support requirements.",
+    "The specification gives reinforcement tolerance ±1 mm while the newer drawing gives ±2 mm; use the wider case until the supplier resolves the discrepancy.",
+    "The 0.27 mm insulated section is thicker than the earlier 0.12 mm 15166 cable and needs a new bend/clearance check.",
+    "The flex-life result applies only to its stated manufacturer test; it is not a robot cable-life claim.",
+    "Pin mapping remains the actual installed wrist n to fanout 51−n contract and requires unpowered continuity verification.",
+    "No physical specimen or new purchasing order is represented."
+  ]
+}

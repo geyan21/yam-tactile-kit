@@ -1,0 +1,46 @@
+{
+  "schema": "yam-pneumatic-source-review/1",
+  "reviewed_utc_date": "2026-10-12",
+  "physical_specimens_tested": 0,
+  "status": "Primary-source review; no completed ENPIRE pneumatic prototype or selected force calibration",
+  "reference": {
+    "name": "FORTE",
+    "hardware": "https://merge-lab.github.io/FORTE-Finger/",
+    "paper": "https://arxiv.org/html/2506.18960v3",
+    "reference_transducer": "ELVR-L01D-F1RD-C-NA3F",
+    "reference_force_range_n": [0, 8],
+    "reference_tube_id_mm": 1.5875,
+    "reference_tube_od_mm": 3.175,
+    "note": "Its trained force/slip performance is not an ENPIRE or 20 N result."
+  },
+  "manufacturer": {
+    "document": "All Sensors DS-0375 Rev C",
+    "url": "https://428059.fs1.hubspotusercontent-na1.net/hubfs/428059/Product-Data-Sheets/DS-0375.pdf",
+    "supply_option_3_nominal_v": 3.0,
+    "supply_option_3_range_v": [2.7, 3.3],
+    "differential_ranges_in_h2o": [1, 5, 10, 20, 30],
+    "digital_i2c_option": "I",
+    "digital_i2c_address_hex": "0x78",
+    "digital_transfer": "Two bytes, high byte first, 15-bit pressure word. This is not the Honeywell 14-bit pressure/status format.",
+    "digital_3v_min_max_codes": [2731, 24576],
+    "digital_3v_nominal_zero_differential_code": 13653,
+    "fast_mode": {"resolution_bits": 12, "update_ms": 0.5},
+    "high_resolution_mode": {"resolution_bits": 14, "update_ms": 1.0},
+    "i2c_clock_khz": [100, 400],
+    "startup_max_ms": 25,
+    "internal_dead_volume_mm3": null,
+    "pin_mapping_status": "Read the actual F1RD package drawing before layout; text extraction is insufficient.",
+    "range_candidate": "ELVR-L30D-F1RD-C-NI3H",
+    "candidate_status": "Ordering-table combination for range screening; availability and suitable chamber sensitivity are unconfirmed."
+  },
+  "design_direction": {
+    "contact_locations": "Four compliant air-channel regions over the original TPU; preserve separate thin nail sensing using the existing R1 nail construction unless a better pneumatic nail interface is demonstrated.",
+    "fixed_electronics": "Pressure transducers at the wrist/bench; short measured tubes connect to the contact chambers.",
+    "next": [
+      "Calculate chamber/tube/dead-volume and pressure-range sensitivity without assuming force equals pressure times area.",
+      "Develop source-matched soft chambers, seal and tube ports with accessible molds.",
+      "Select the transducer range after the volume/deformation screen, then finish readout and acquisition.",
+      "Measure pressure/force, leakage, tube motion, temperature and contact-shape effects through 20 N."
+    ]
+  }
+}

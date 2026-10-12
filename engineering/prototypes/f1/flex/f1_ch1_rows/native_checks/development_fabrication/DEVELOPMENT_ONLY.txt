@@ -1,0 +1,4 @@
+Flat F1 routing-development output; not the completed installed-finger package.
+No solder paste is used on this flex. Shared coverlay windows expose separate sensing/connector nets.
+Copper clearances and connectivity are independently checked; both DRC reports are preserved.
+Tail routing, physical stack, resistance, assembly and sensor performance still require completion/validation.

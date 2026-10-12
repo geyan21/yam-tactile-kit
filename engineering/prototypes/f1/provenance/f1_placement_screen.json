@@ -1,0 +1,20 @@
+{
+  "schema": "yam-f1-placement-screen/1",
+  "status": "Prescribed travel/access screen; not a force or installed-drive qualification",
+  "normal_travel_native_z_mm_assumed": 3,
+  "additional_contact_access_clearance_mm": 1,
+  "sampling_step_mm": 0.1,
+  "connector_body_y_half_span_mm": 5.3,
+  "connector_land_y_half_span_mm": 6,
+  "connector_body_z_from_library_datum_mm": [-4.4, 2],
+  "connector_closed_height_mm": 2,
+  "connector_open_height_mm_reference": 4.8,
+  "component_to_contoured_board_front_mm": 0.3,
+  "notes": [
+    "Three millimeters is an assumed inward-travel scenario, not a prediction at 20 N.",
+    "Use the R1 saddle front where a patch exists and the original TPU profile elsewhere.",
+    "The additional FPC/cover layers are omitted from the contact reference here, making the access screen conservative for outward-mounted layers.",
+    "The screen covers the candidate PCB and connector envelopes; carrier, formed flex, readout cable and real drive still need checks.",
+    "The board remains removable for inner-face connector access."
+  ]
+}

@@ -1,183 +1,118 @@
-# F1: dense resistive matrix, with a separate fit and electronics packet
+# F1.1 R4: build the dense resistive matrix
 
-**F1 is still an integrated prototype in development.** Its sensor is a
-0.10 mm pressure-sensitive conductive film between custom row and column
-electrodes. The converter chips are on fixed electronics, not inside the
-contact pads. No physical F1 finger has been built or measured here.
+**F1 is a digital bench-assembly design; no physical specimen has been tested.**
+The tactile sensor is a 0.10 mm pressure-sensitive conductive film between
+two custom flexible electrode sheets. The film and electrodes belong on the
+contact surfaces. The amplifiers, ADC and Pico belong on separate fixed
+electronics.
 
-Use this page to reproduce the completed modules and the mechanical fit
-experiment. The separate R3 fitted-foil module now contains routed copper.
-The paper patterns remain mechanical fit tools. Finish the mating,
-stiffener/adhesive and surface-finish drawing before ordering finished foils.
+Use the current R4 parts together. The earlier development modules remain
+available for history; their terminal assumptions and 13 mm cover attempt
+are not the current assembly.
 
-## Exactly what goes where
+## Which sensor, and where
 
-| Location | Sensor construction | What it provides |
-| --- | --- | --- |
-| Left nail prong, CH0 | Separate film island, four row electrodes and two column electrodes | Eight proposed electrical contact locations |
-| Right nail prong, CH1 | Same construction on the second thin prong | Eight proposed locations |
-| Four TPU regions, CH2–CH5 | Four separate film islands, each between four rows and three columns | Twelve proposed locations per region |
-| Fixed finger side | Removable fanout with twelve Hirose FH12-6S-1SH(1)(98) connectors | Connects the twelve separate electrode foils |
-| Wrist/base | Pico, OPA392 row/readout amplifiers, ADG706 current/sense multiplexers, switched gain/parking, ADS8866 ADC and reference circuit | Raw electrical acquisition |
+| Location | Exact sensing construction | Electrical locations |
+|---|---|---:|
+| CH0, one nail prong | One film island between four row and two column electrodes | 8 |
+| CH1, other nail prong | A second independent film island and flex pair | 8 |
+| CH2–CH5, four TPU regions | Four separate film islands, each between four rows and three columns | 12 each |
+| Fixed finger side | R3 fanout PCB with twelve Hirose FH12-6S-1SH(1)(98) connectors | Connects the twelve foils |
+| Wrist or fixed bench | OPA392 amplifiers, ADG706 current/sense multiplexers, switched gains, ADS8866 ADC, reference and Pico | Reads the 64-location allocation |
 
-The nail notch stays open. The two nail row foils use backside feeds;
-the other ten foils use one copper layer. Nominal material targets are
-25 µm polyimide, 35 µm rolled-annealed copper and 50 µm coverlay in covered
-regions. Use a separate film island at each of the six sites.
-
-The film reference is the same material class used by R1, exemplified by
+The film reference is the R1 material class, exemplified by
 [Adafruit 1361](https://www.adafruit.com/product/1361). Record the actual
-supplier, lot and measured thickness. A generic conductive bag is not an
-identified equivalent. Its force response, creep and lateral conduction
-must be measured.
+supplier, lot and thickness. A generic conductive bag is not an identified
+equivalent. The pressure response and lateral conduction remain to be measured.
 
-The current layer-reference geometry adds **0.455 mm at the nail** and
-**0.72 mm at the TPU**, including the proposed mounting and protective
-layers. Those are nominal CAD thicknesses, not measured compressed
-thicknesses or a wear qualification.
+![F1 R4 film, electrode faces, retained covers and nominal thicknesses](../web/f1_stack.svg)
 
-## Which files are ready for which use
+The two nail row foils use rear feeds; the other ten foils have one physical
+copper layer. Both F.Cu sensing faces point toward the film. The notch stays
+open. TPU foils are 13 mm wide, with 14 mm covers and fitting bases inside
+the 15 mm source insert.
 
-| Module | Ready use | Remaining limitation |
-| --- | --- | --- |
-| Flat electrode witnesses | Reproduce the twelve routed electrical coupons and their independent checks | Straight tails are not installed finger geometry |
-| Current R3 fanout and fit packet | Build the checked interface PCB; print its carrier, tools and fit patterns | The complete fitted sensor and physical qualification remain unfinished |
-| R3 fitted sensing foils | Inspect/reproduce twelve routed foils, native checks, development artwork and the 64-location map | Finished mating/lamination, full resistance budget and loaded assembly remain unqualified |
-| Original fanout / R2 history | Review preserved earlier boards, fit work and the rejected R2 route | Their placements differ from R3; do not mix revisions |
-| Wrist readout | Reproduce the checked PCB, candidate circuit and raw acquisition code | No assembled electronics or calibrated force result |
-| Forming mandrels and layer bodies | Print forming tools and inspect the separate nominal layer cuts | Layer bodies are material references, not copper artwork |
-| Tail fit patterns | Print at 100%, cut paper or approximately 0.1 mm polyester, and check access and routing | Connector seating, stiffeners, copper, slack and motion are unqualified |
-| Circuit studies | Inspect the stated calculations and all saved failed attempts | Isolated models do not qualify the full coupled array |
+Nominal nail addition is **0.4614 mm**. The TPU top is **0.7264 mm above the
+R1 smoothed fitting datum**; the variable base below it is additional.
+These are uncompressed geometry values, not measured tip deflection or wear
+ratings. The original TPU remains compliant; actual tail slack during its
+motion requires inspection.
 
-Use the **R3** packet for current interface-board and fit work. Its three
-upper connector pairs face toward the back, and its test circuit has moved
-to provide proper courtyard and bypass spacing. Use R3's own carrier and
-fit files with that board.
+![F1 sensor locations, twelve tails, fixed fanout and separate wrist readout](../web/f1_wiring.svg)
 
-R3 has 42 components, 959 track segments and 155 vias. Independent KiCad
-checking reports **zero violations and zero missing connections**. In1.Cu
-is reserved for ground, with no signal tracks on that layer. All sixteen
-local sensor pickoffs and both short bypass supply/ground paths are checked.
-These findings establish PCB properties, not sensor accuracy or force capacity.
+## Get the matching files
 
-The separate fitted-foil module has twelve passing copper/connectivity
-checks. Both the unsuppressed and reviewed shared-coverlay reports are
-included. Its 64-location map comes from the actual routed copper after
-separate layer unrolling. CH2's columns run C6, C5, C4 in increasing source U;
-CH4 uses C13–C15, and CH5 uses C10–C12. Use the supplied `taxels.csv` mapping.
+| File or guide | Use |
+|---|---|
+| [Manufacturing and assembly](F1_MANUFACTURING.md) | Film/flex construction, materials, terminal coupons, covers, molds, bonds and cable acceptance |
+| [Wiring and raw capture](F1_WRIST_CAPTURE.md) | Exact parts, GPIO, ADC sequencing, gain selection and recorder |
+| [Physical testing](F1_TESTING.md) | Stationary-force training/evaluation and the remaining contact experiments |
+| [Digital reproduction](F1_REPRODUCE.md) | Rebuild geometry, native foil checks, diagrams and packaged evidence |
+| [Current package overview](../prototypes/f1/README.md) | Scope, directories and remaining physical work |
+| [Per-finger materials](../prototypes/f1/bom.csv) | Mechanical/material purchasing list; use both full electronics component lists too |
+| [Part index](../prototypes/f1/parts.csv) | Distinguishes fabricated parts, tools and reference envelopes |
+| [Taxel map](../prototypes/f1/taxels.csv) | All 64 row/column locations and source coordinates |
 
-The longest nominal trace estimate is **0.1642 Ω**. The declared 50 °C,
-31.5 µm minimum-copper and 20% negative-width scenario reaches **0.2549 Ω**,
-before electrode spreading, plated barrels, connector contacts, PCBs or
-the cable. Complete that budget and the coupled-array review; the earlier
-0.25 Ω path assumptions are not established by this partial calculation.
+`cad/` contains retained covers and bases, complete foil envelopes, PI/adhesive
+terminal pieces, forming tools, twenty mold halves and the carrier/PCB fit
+reference. `patterns/` contains the six developed film cuts and terminal
+piece outlines. A printed electrode or connector envelope is not a working
+electrical component.
 
-The earlier **R2 route remains rejected** with 95 findings. It is retained
-as failure evidence and must not be fabricated or powered.
+`flex/` contains twelve distinct native designs, independent copper/
+connectivity checks and development Gerber/drill sets. Use the complete
+manufacturing contract and terminal coupons before a larger order.
+`electronics/fanout/` and `electronics/wrist/` contain the matching checked
+boards and their full component lists. Use the package's four-file firmware;
+run host tools from the complete repository.
 
-## First student build: mechanical fit
+## What the digital checks establish
 
-1. Print the carrier, PCB fit reference and six forming mandrels from the
-   R3 module. Keep the nominal layer and tail bodies as viewing
-   references; they are not functional printed sensors.
-2. Verify the original frame's two side-fastener axes. Fit the carrier to the
-   rigid frame, then check the actual installed drive, housing and jaw travel.
-   The exact installed drive has not been identified in this project.
-3. Print each tail pattern at 100%. Measure its 50 mm scale bar before cutting.
-   Mark **R3**, the channel, row/column role and F.Cu side. The two foil faces point
-   toward the film at the sensing patch.
-4. Form each marked quarter bend smoothly. The current conductor-reference
-   radius is 2.5 mm; the inner material surface is slightly smaller.
-   Do not put a sharp crease at the dashed bend boundaries.
-5. Fit actual FH12 connectors to a removable board or the corresponding
-   placement fixture. Measure the seated tip position, contact-side
-   orientation and height. The current drawings explicitly use midpoint
-   assumptions for the unresolved mating datum.
-6. Check all twelve tails together. Photograph the nail, both PCB faces and
-   each crossing. Record rubbing, buckling, pinching and restricted access.
-   A separately clear side view does not prove a clear 3D assembly.
-7. Measure passive TPU displacement and tail motion before applying the
-   campaign loads. The 3 mm motion allowance in the design work is an
-   assumption, not a prediction at 20 N.
+All twelve R4 flex designs pass the declared native copper/connectivity
+checks. The two rear-coverlay windows retain at least 0.200 mm nominal
+clearance to back copper including plated annuli; delivered registration and
+material thickness still require acceptance checks.
 
-The 654 nominal fit comparisons cover hardware-to-hardware intersections.
-They do not qualify broad-object approach envelopes, tail preload, loaded
-TPU deformation or bending life. Those checks remain part of the integrated
-sensor development.
+The full static assembly screen covers **5,638 comparisons across 68
+material parts**, against the source finger, carrier, board, component and
+fastener envelopes, and one another. It finds no overlap above the declared
+0.001 mm³ tolerance. It checks nonpenetration, not a minimum clearance.
+**The twelve actual connector mating cavities remain unqualified**, represented
+by forty explicit part-to-connector exclusions. No invented clearance holes
+are used.
 
-The carrier uses two M2 screws at the board's back edge so front standoffs do
-not close the tail corridors. Support the removed board during connector
-mating. Screw engagement, captive-nut fit, printed shrinkage, retention and
-board bending need physical checks.
+All ten cover/base mold pairs have passing cavity, registration and overflow
+geometry checks. The original 13 mm TPU cover attempt failed because it
+lacked side skirts; current covers and bases are 14 mm wide.
 
-## Electronics and code
+The actual routed-network DC model passes its provisional 1% electrical
+interaction screen; its worst modeled interaction is **0.9253%**. It assumes
+ideal feedback, independent resistor taxels and stated contact/spreading
+allowances. It omits continuous-film lateral conduction, physical material
+response, offsets/leakage and complete coupled dynamics. This is not a
+force-accuracy or contact-reliability result.
 
-Read [F1 wiring and raw capture](F1_WRIST_CAPTURE.md) for the exact GPIO
-assignment, gain/parking sequence, ADC timing and recorder commands.
-The module includes `main.py`, `hardware.py`, `scan.py` and `config.json`.
-The host source includes `f1_record.py` and `f1_protocol.py`.
+The proposed 0.3132 mm connector tongue includes PI, copper, nominal finish,
+200 µm stiffener and 50 µm adhesive. The two nail-row reinforcements use
+separate tip/transition pieces to accommodate the backing step.
+Actual seating, cable compatibility, adhesion, cured neck seals, strain
+relief, drive clearance and loaded motion remain physical acceptance tasks.
 
-The fifty-conductor cable contract is wrist pin **n** to fanout pin **51−n**
-for the documented mating pose. Check every conductor with power off before
-powering a board. The electrical test resistor checks the cable/readout at
-the fanout pickup; it can pass with the tactile foils unplugged.
+## First build and comparison
 
-Firmware records raw matrix values, timestamps and separate electrical-test
-observations. It leaves force and contact estimates unset. Do not substitute
-the synthetic I/O checks or simulated resistance cases for physical data.
+Start with the carrier, one nail-row terminal coupon and one single-layer
+terminal coupon. Check the actual Hirose seating and the installed drive.
+Cast a bond/cover coupon before making all six sensors. Then assemble the
+full finger following the manufacturing guide.
 
-## Reproduce the digital work
+Bring up the electronics with known loads, choose a fixed gain map, and
+record physical holds through 20 N. The new force tool requires a new
+evaluation session, all six sites and mixed contacts. It preserves missing
+and saturated trials. No measured model or qualified contact detector is
+included.
 
-Prepare the pinned source meshes and isolated CAD/KiCad tools using
-`engineering/README.md`. Use the actual run directories printed by these
-commands; generated results stay under `build/`.
-
-```sh
-build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_stack_surfaces.py
-build/engineering/tools/cad-venv/bin/python engineering/scripts/build_f1_stack_parts.py
-build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_fanout_r3.py
-build/engineering/tools/cad-venv/bin/python engineering/scripts/build_f1_carrier.py PLACEMENT_RUN --config engineering/designs/f1_carrier_r3.json
-build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_tail_routes.py PLACEMENT_RUN --config engineering/designs/f1_tail_r3.json
-build/engineering/tools/cad-venv/bin/python engineering/scripts/build_f1_tail_fit.py TAIL_RUN --route-config engineering/designs/f1_tail_r3.json
-build/engineering/tools/cad-venv/bin/python engineering/scripts/check_f1_tail_fit.py FIT_RUN CARRIER_RUN STACK_RUN
-```
-
-Recheck the distributed PCB without changing its source:
-
-```sh
-/usr/bin/python3 engineering/scripts/check_f1_fanout_r3.py engineering/development/f1/r3/pcb --export
-/usr/bin/python3 engineering/scripts/verify_f1_checkpoint.py engineering/development/f1/r3
-```
-
-Reproduce the fitted electrode module separately:
-
-```sh
-build/engineering/tools/cad-venv/bin/python engineering/scripts/develop_f1_fitted_artwork.py
-/usr/bin/python3 engineering/scripts/check_f1_flex.py ARTWORK_RUN --export
-build/engineering/tools/cad-venv/bin/python engineering/scripts/review_f1_fitted_artwork.py ARTWORK_RUN
-/usr/bin/python3 engineering/scripts/verify_f1_checkpoint.py engineering/development/f1/fitted-foils-r3
-```
-
-The R3 checkpoints, native files, routing and fabrication targets are included.
-The generation scripts retain earlier attempts and specific repairs. The
-foils' shared coverlay allowance applies only to unsoldered windows; copper
-clearances and missing connections are still independently checked.
-
-The fit generator exports a separate developed pattern for every foil.
-Curved row and column reference surfaces have different developed lengths;
-copying one cut outline onto both layers is not the modeled construction.
-
-## What would make F1 a good choice
-
-F1 is worth comparing when dense contact location is useful enough to justify
-custom flex manufacture and the extra electronics. Its current packaging is
-more involved than the simpler six-zone designs. A dense map does not itself
-establish reliable contact or accurate grip force.
-
-Complete the manufacturing and mating/stiffener details, sealing, object-access
-and motion envelopes, inextensible tail slack, resistance budget and full-array/reference review. Then build
-independent specimens and use the [common campaign](BUILD_ALL.md) to measure
-contact errors, held-out force error through 20 N, drift, hysteresis, bending
-artifacts, wear, assembly effort and precision-task access.
-
-No measured ranking or physical winner is available yet.
+F1 is useful to compare when dense contact location justifies custom flex
+manufacture, a side board and more assembly work. Check false contacts during
+no-contact bending, contact-shape dependence, drift, hysteresis and wear,
+then compare the same thin-tip precision tasks with the simpler designs.
+No physical winner has been established.

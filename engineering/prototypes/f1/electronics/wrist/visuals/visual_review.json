@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "3c2b54c60d602b8682f168bdc3d7bb27a07ab60d15a6cfd7f625172b50447648",
+  "independent_check_sha256": "5626c8ce9174ce4303c270b85d9696e83ddb93995ecdda18faee00f42368b8b8",
+  "renderer_sha256": "9c967bdb1a08903485ac31c0d1107f337a2cbb2954e4aadbdd2718c015a1855c",
+  "physical_evidence": false,
+  "files": {
+    "wrist_faces.pdf": "24cc1f74ba831c6eeb2a44918d7d4a9d82cf5b5f80f8e5ce7c451134eb539275",
+    "wrist_faces.png": "5ca9bd3e5acd7cd49cee76d9b192a6fce69778af2e9df05cd3121aa5aa868405",
+    "wrist_faces.svg": "26706ba4bb52098ca860e164ce2a02407a20efda536789d7b1573ab591fd943d"
+  }
+}

@@ -25,23 +25,23 @@ Eight separate digital prototype packages are supplied:
 
 The package contains checked STEP/STL parts and component/hardware references; R1 electrode patterns; carrier/fixture drawings; editable PCBs and checked fabrication files; BOMs and wiring; Pico firmware; raw recorders; material recipes; and staged tests through 20 N. FB1.1 adds 54 CAD parts/references and a two-layer FMA PCB. N1 reuses the C1 bridge board; B3 reuses the B2 board with its own gain-5 firmware. R1/L1/B1 and the earlier concept snapshots remain preserved. The later packages are separate under `engineering/prototypes/`.
 
-**Status: eight packages have passed their stated digital checks; four designs remain in development. Physical assembly and validation are pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
+**Status: ten packages have passed their stated digital checks; pneumatic and optical designs remain in development. Physical assembly and validation are pending.** No sensor/material winner, measured force accuracy, endurance, or robot-task success is claimed.
 
 For the new bending-aware option, use [B1 assembly](engineering/docs/BUILD_B1.md), [PCB/wiring/code](engineering/docs/B1_ELECTRONICS.md), and [bending and force tests](engineering/docs/B1_TESTING.md). B1 raw magnetic data are not calibrated force; optional R1 nail cells supply hard-tip contact coverage.
 
-Use [B2's build guide](engineering/docs/BUILD_B2.md) for consolidated magnetic sensing, [C1 assembly](engineering/docs/BUILD_C1.md) for the strain-root alternative, [N1 assembly](engineering/docs/BUILD_NAIL.md) for the bare sensing nail, [B3 assembly](engineering/docs/BUILD_RECESSED.md) for the narrower recessed board, and [FB1 assembly](engineering/docs/BUILD_FORCE_BUTTON.md) for the packaged force button. Each has its own test instructions and evidence limits. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the four remaining designs and the physical evidence still required.
+Use [B2's build guide](engineering/docs/BUILD_B2.md) for consolidated magnetic sensing, [C1 assembly](engineering/docs/BUILD_C1.md) for the strain-root alternative, [N1 assembly](engineering/docs/BUILD_NAIL.md) for the bare sensing nail, [B3 assembly](engineering/docs/BUILD_RECESSED.md) for the narrower recessed board, and [FB1 assembly](engineering/docs/BUILD_FORCE_BUTTON.md) for the packaged force button. Each has its own test instructions and evidence limits. The [all-design campaign](engineering/docs/BUILD_ALL.md) identifies the two remaining designs and the physical evidence still required.
 
-The [F1 development and fit guide](engineering/docs/BUILD_F1.md) identifies
-the pressure-film stack, six sensing sites, checked R3 interface PCB, wrist
-readout/code and twelve printable tail-fit patterns. Twelve matching routed
-electrode foils now have independent copper checks and a 64-location map.
-The complete resistance budget, finished mating/lamination, object/motion
-details and physical performance remain unfinished; F1 is not yet a complete
-integrated prototype.
+The [F1 R4 guide](engineering/docs/BUILD_F1.md) identifies the pressure-film
+stack, six sensing sites, twelve checked flexes, retained covers and molds,
+fixed fanout and wrist readout. Its bench package includes 96 CAD
+parts/references, manufacturing instructions, raw acquisition and physical
+stationary-force tools. Actual mating, adhesion, sealing, slack, full-array
+behavior and contact/force performance remain unmeasured.
 
-The [K1 capacitive guide](engineering/docs/BUILD_CAPACITIVE.md) adds 49 current
-tooling/reference parts, conforming supports, a checked readout PCB and raw
-acquisition code. Whole-finger interfaces and physical validation remain.
+The [K1 capacitive guide](engineering/docs/BUILD_CAPACITIVE.md) covers the
+complete K1.2 bench package: checked flexes, retained plates/stops, molds,
+bank cases, readout and static-force tools. Physical fabrication, installed
+bracket/harness fit and validation remain.
 
 ## Start here
 

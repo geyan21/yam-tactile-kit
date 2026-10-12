@@ -1,0 +1,592 @@
+{
+  "schema": "yam-f1-finished-tip-review/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/designs/f1_finished_tip_r4.json": "000b570a5f165196224d74e0d07b3e4c83dee56c6da94a417cd08d8dd05d5400",
+    "engineering/development/f1/r3/configuration/f1_formed_stack.json": "195271cdb3dbc5f0406709ca153e41764aec08215c161fc84fe4e2afc1422e72",
+    "engineering/scripts/screen_f1_finished_tips.py": "96e6969e1765a088c1d14410cd02f6c4075fc6da36a105d44fd627d152d81c48",
+    "engineering/development/f1/fitted-foils-r3/checkpoint.json": "ab2beab85f3e87f1b3a98afc6f37d98274aed7c79745129593a6b741e328a71a",
+    "engineering/development/f1/fitted-foils-r3/provenance/artwork.json": "83770d7a826f837e60ff686d762da98973a9e1187697112c551880964407a828"
+  },
+  "cases": [
+    {
+      "foil": "f1_ch0_columns",
+      "site": "CH0",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        49.10545514587273,
+        46.430350819518736
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        45.60545514587273,
+        38.430350819518736,
+        52.60545514587273,
+        46.430350819518736
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          52.60545514587273,
+          40.03035081951874
+        ],
+        [
+          52.60545514587273,
+          46.430350819518736
+        ],
+        [
+          45.60545514587273,
+          46.430350819518736
+        ],
+        [
+          45.60545514587273,
+          40.03035081951874
+        ],
+        [
+          52.60545514587273,
+          40.03035081951874
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "cb528f231906cd5e192f2e2e9f1f93b33f8817ab8328b9b9890fdcbaaf32b97f"
+    },
+    {
+      "foil": "f1_ch0_rows",
+      "site": "CH0",
+      "role": "rows",
+      "physical_copper_layers": 2,
+      "terminal_tip_flat_mm": [
+        -48.963350919717,
+        49.26178709620037
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -52.463350919717,
+        41.26178709620037,
+        -45.463350919717,
+        49.26178709620037
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -45.463350919717,
+          42.86178709620037
+        ],
+        [
+          -45.463350919717,
+          49.26178709620037
+        ],
+        [
+          -52.463350919717,
+          49.26178709620037
+        ],
+        [
+          -52.463350919717,
+          42.86178709620037
+        ],
+        [
+          -45.463350919717,
+          42.86178709620037
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": 0.20000000000000284,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": true,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.36319999999999997,
+      "nominal_covered_transition_with_stiffener_mm": 0.445,
+      "findings": [],
+      "geometry_source_sha256": "3306b504a439a1e9c14bca0205e10227c0f6e885644ea05eca7351d89b157cb7"
+    },
+    {
+      "foil": "f1_ch1_columns",
+      "site": "CH1",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        -49.700295839940125,
+        -47.67810992850126
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -53.200295839940125,
+        -55.67810992850126,
+        -46.200295839940125,
+        -47.67810992850126
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -46.200295839940125,
+          -54.078109928501256
+        ],
+        [
+          -46.200295839940125,
+          -47.67810992850126
+        ],
+        [
+          -53.200295839940125,
+          -47.67810992850126
+        ],
+        [
+          -53.200295839940125,
+          -54.078109928501256
+        ],
+        [
+          -46.200295839940125,
+          -54.078109928501256
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "fd419584945143a175bfc740ae1dca15c97462e58668334b9d1af383bd2e790f"
+    },
+    {
+      "foil": "f1_ch1_rows",
+      "site": "CH1",
+      "role": "rows",
+      "physical_copper_layers": 2,
+      "terminal_tip_flat_mm": [
+        49.55819161378449,
+        -50.50954620518281
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        46.05819161378449,
+        -58.50954620518281,
+        53.05819161378449,
+        -50.50954620518281
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          53.05819161378449,
+          -56.90954620518281
+        ],
+        [
+          53.05819161378449,
+          -50.50954620518281
+        ],
+        [
+          46.05819161378449,
+          -50.50954620518281
+        ],
+        [
+          46.05819161378449,
+          -56.90954620518281
+        ],
+        [
+          53.05819161378449,
+          -56.90954620518281
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": 0.20000000000000284,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": true,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.36319999999999997,
+      "nominal_covered_transition_with_stiffener_mm": 0.445,
+      "findings": [],
+      "geometry_source_sha256": "ae9971da097e357e55bfcc5ecce4cca73c575027e9bdfb928c64bc615b32218b"
+    },
+    {
+      "foil": "f1_ch2_columns",
+      "site": "CH2",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        32.66461582040657,
+        39.430671424915516
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        29.164615820406567,
+        31.430671424915516,
+        36.16461582040657,
+        39.430671424915516
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          36.16461582040657,
+          33.03067142491552
+        ],
+        [
+          36.16461582040657,
+          39.430671424915516
+        ],
+        [
+          29.164615820406567,
+          39.430671424915516
+        ],
+        [
+          29.164615820406567,
+          33.03067142491552
+        ],
+        [
+          36.16461582040657,
+          33.03067142491552
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "64f561d3a3591e7cd05b916b828ecfa1d52c07125e1fed52042b7fe817135c7c"
+    },
+    {
+      "foil": "f1_ch2_rows",
+      "site": "CH2",
+      "role": "rows",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        -31.316628288682075,
+        41.924705682869856
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -34.816628288682075,
+        33.924705682869856,
+        -27.816628288682075,
+        41.924705682869856
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -27.816628288682075,
+          35.52470568286986
+        ],
+        [
+          -27.816628288682075,
+          41.924705682869856
+        ],
+        [
+          -34.816628288682075,
+          41.924705682869856
+        ],
+        [
+          -34.816628288682075,
+          35.52470568286986
+        ],
+        [
+          -27.816628288682075,
+          35.52470568286986
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "00dfe76c8a35ecc7c4b50f4f76edfa93fcca3099419d58e9ff36865d257646d3"
+    },
+    {
+      "foil": "f1_ch3_columns",
+      "site": "CH3",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        -6.268662087631093,
+        -52.806393932688096
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -9.768662087631093,
+        -60.806393932688096,
+        -2.7686620876310926,
+        -52.806393932688096
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -2.7686620876310926,
+          -59.206393932688094
+        ],
+        [
+          -2.7686620876310926,
+          -52.806393932688096
+        ],
+        [
+          -9.768662087631093,
+          -52.806393932688096
+        ],
+        [
+          -9.768662087631093,
+          -59.206393932688094
+        ],
+        [
+          -2.7686620876310926,
+          -59.206393932688094
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "011331931e4593ad57817c86a76596d57a96cd8be31e22eff9ef9c282a4ac024"
+    },
+    {
+      "foil": "f1_ch3_rows",
+      "site": "CH3",
+      "role": "rows",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        4.080659961839515,
+        -54.61344964458745
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        0.5806599618395154,
+        -62.61344964458745,
+        7.580659961839515,
+        -54.61344964458745
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          7.580659961839515,
+          -61.013449644587446
+        ],
+        [
+          7.580659961839515,
+          -54.61344964458745
+        ],
+        [
+          0.5806599618395154,
+          -54.61344964458745
+        ],
+        [
+          0.5806599618395154,
+          -61.013449644587446
+        ],
+        [
+          7.580659961839515,
+          -61.013449644587446
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "3eb64da34934b331a2c6ce75e41ceb67cc3d4feeb502b70f02cc91faaaae372c"
+    },
+    {
+      "foil": "f1_ch4_columns",
+      "site": "CH4",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        -29.366973877050334,
+        -34.45148032941421
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -32.866973877050334,
+        -42.45148032941421,
+        -25.866973877050334,
+        -34.45148032941421
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -25.866973877050334,
+          -40.85148032941421
+        ],
+        [
+          -25.866973877050334,
+          -34.45148032941421
+        ],
+        [
+          -32.866973877050334,
+          -34.45148032941421
+        ],
+        [
+          -32.866973877050334,
+          -40.85148032941421
+        ],
+        [
+          -25.866973877050334,
+          -40.85148032941421
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "cc6109b8f18f4cdd4a55c8dedb7d55d19767e877fb650f8e520b214544a46f56"
+    },
+    {
+      "foil": "f1_ch4_rows",
+      "site": "CH4",
+      "role": "rows",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        29.80688711421118,
+        -37.25531781347787
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        26.30688711421118,
+        -45.25531781347787,
+        33.30688711421118,
+        -37.25531781347787
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          33.30688711421118,
+          -43.65531781347787
+        ],
+        [
+          33.30688711421118,
+          -37.25531781347787
+        ],
+        [
+          26.30688711421118,
+          -37.25531781347787
+        ],
+        [
+          26.30688711421118,
+          -43.65531781347787
+        ],
+        [
+          33.30688711421118,
+          -43.65531781347787
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "d6def8c6fc2b30b572ad6f069aa0c6cab18094573bdc5a2e1ac1872341990e0c"
+    },
+    {
+      "foil": "f1_ch5_columns",
+      "site": "CH5",
+      "role": "columns",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        14.098110396798845,
+        40.34326259585578
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        10.598110396798845,
+        32.34326259585578,
+        17.598110396798845,
+        40.34326259585578
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          17.598110396798845,
+          33.94326259585578
+        ],
+        [
+          17.598110396798845,
+          40.34326259585578
+        ],
+        [
+          10.598110396798845,
+          40.34326259585578
+        ],
+        [
+          10.598110396798845,
+          33.94326259585578
+        ],
+        [
+          17.598110396798845,
+          33.94326259585578
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "5c05172b59c24d7545c31f668e246d096e9072420340ceee2409b6b131690a2f"
+    },
+    {
+      "foil": "f1_ch5_rows",
+      "site": "CH5",
+      "role": "rows",
+      "physical_copper_layers": 1,
+      "terminal_tip_flat_mm": [
+        -14.158974758801794,
+        43.17864721757972
+      ],
+      "tip_inward_y_sign": -1,
+      "stiffener_bounds_mm": [
+        -17.658974758801794,
+        35.17864721757972,
+        -10.658974758801794,
+        43.17864721757972
+      ],
+      "proposed_back_relief_polygon_mm": [
+        [
+          -10.658974758801794,
+          36.778647217579724
+        ],
+        [
+          -10.658974758801794,
+          43.17864721757972
+        ],
+        [
+          -17.658974758801794,
+          43.17864721757972
+        ],
+        [
+          -17.658974758801794,
+          36.778647217579724
+        ],
+        [
+          -10.658974758801794,
+          36.778647217579724
+        ]
+      ],
+      "minimum_relief_to_back_copper_mm": null,
+      "plated_annuli_included_in_clearance": true,
+      "existing_back_window_covers_proposal": false,
+      "needs_back_coverlay_change": false,
+      "proposed_tip_nominal_mm": 0.3132,
+      "tip_with_unrelieved_back_coverlay_mm": 0.3132,
+      "nominal_covered_transition_with_stiffener_mm": 0.36000000000000004,
+      "findings": [],
+      "geometry_source_sha256": "3b571575d87c373dcf9a0861ce65977f6403f8455f5a43d2a5975e8c2c3a80bf"
+    }
+  ],
+  "proposed_contract_checks_pass": true,
+  "requires_new_artwork": true,
+  "scope": "Stack and nominal window planning only. No new copper/mask manufacturing set or physical connector fit is qualified."
+}

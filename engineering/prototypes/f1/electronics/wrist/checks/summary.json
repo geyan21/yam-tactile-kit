@@ -1,0 +1,31 @@
+{
+  "schema": "yam-f1-wrist-check/1",
+  "tool": "10.0.7",
+  "violations": 0,
+  "unconnected": 0,
+  "source_pcb_sha256": "f16cf0fa4756018d72027c821af482929aa6f4ea089cfab4d92f73c038d35b43",
+  "source_manifest_sha256": "3c2b54c60d602b8682f168bdc3d7bb27a07ab60d15a6cfd7f625172b50447648",
+  "rules_sha256": "65c977444f16edfef5ddfe697687c446207d62645d46f0dfab9be3d00b7537cc",
+  "targets_sha256": "d98b3695b9b11f520dec07f31891c9ac9bc5b28457abeb99cd7593fad8a06877",
+  "library_license_sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef",
+  "checked_pcb_sha256": "9e814aa22f2d790d5228a1c246274ee7a0cfb0df8c4635d8e5dda3ce97f2d9ae",
+  "physical_boards_tested": 0,
+  "passed": true,
+  "scope": "Native copper/outline/drill/silkscreen rules and PCB connectivity. Circuit operation, cable mating, carrier/tail fit, sensor behavior and force performance are outside this result.",
+  "development_exports_sha256": {
+    "DEVELOPMENT_ONLY.txt": "f5268e32245cf6a278bd3d8863d96442d404773b09b0ac51b0e0b63d58c4aec6",
+    "f1_wrist-B_Cu.gbl": "24920f0180b605533ab425c50bbf3f23acfc3aea825c7690e140853e3e2de105",
+    "f1_wrist-B_Mask.gbs": "58a1dbaee0f3d69aac403ce0094f2276f4118737d7051f1c768a506d225bc670",
+    "f1_wrist-B_Paste.gbp": "592af61722275dd3c72e902d5c7b14e19179e76388fe47440c673b59b5103346",
+    "f1_wrist-B_Silkscreen.gbo": "da340ba0f39695aa8cf99a8c2d4a6d24b032091f02eeb9096f1ee0f3d61086e9",
+    "f1_wrist-Edge_Cuts.gm1": "fbcc0647c4772b84184e199ca2f7c92918d3fd1a0f7dd77348fb1f02b0c4e459",
+    "f1_wrist-F_Cu.gtl": "e08cb4d31b174c19931398b982433bc7b8c2af26dad8c67948da44a1664b8434",
+    "f1_wrist-F_Mask.gts": "cc0817e4994850111af6fb3784db61ca87b35dd1766e2f37953116062cba4738",
+    "f1_wrist-F_Paste.gtp": "a06304737bcb1ad71d452ed7cb5aaee0bbc78c329d5c4b9e06b26ec328657654",
+    "f1_wrist-F_Silkscreen.gto": "6206dc549a16f344ca7e9c3c1f37ad40391e27baa9092a1b5d96664a134aeaea",
+    "f1_wrist-In1_Cu.g1": "14f824d877ca4dbc24f1de33b78fcce9a9de20926df5d1e6eca4d91655486abd",
+    "f1_wrist-In2_Cu.g2": "7a2b1dae232376966a85487e59d967b2519581b7a63aa03b7ebc64bc2c0f36e4",
+    "f1_wrist.drl": "e38bd43d73e6df0eb841a877b3b2f4316d0466f287c9e07ec8ff4b35a1813200",
+    "f1_wrist_manufacturing_targets.json": "d98b3695b9b11f520dec07f31891c9ac9bc5b28457abeb99cd7593fad8a06877"
+  }
+}

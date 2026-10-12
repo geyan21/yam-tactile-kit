@@ -1,0 +1,21 @@
+{
+  "schema": "yam-f1-r4-visuals/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/scripts/draw_f1_r4.py": "af0b69de3a1f6503b90a8d411333417eb9647be35b563219bc55e96ecc8c0c37",
+    "engineering/development/f1/r3/models.json": "7fbd2bd039c47288887827775ab53addee1be17d78180ad2920e2a570f5bf330",
+    "build/engineering/prototypes/f1/retained_skin_cad/20261012T013443.013063Z/models.json": "493d56f87054c7646c695304be9733f2dcf2c02622bcca1d88eb971664fba1c0",
+    "build/engineering/prototypes/f1/joined_foil_cad/20261012T014609.247735Z/models.json": "91f612acdfa6df568c1e7a6deba05cc0465d3bc7ab3fbe8c4fb50c34be7bbbee",
+    "build/engineering/prototypes/f1/finished_terminal_cad/20261012T005754.311962Z/models.json": "3ee30ce8eba2fa512b4e598a4731e1afb412514adb3210d430ec6d3040fbb803",
+    "build/engineering/prototypes/f1/retained_skin_cad/20261012T013443.013063Z/report.json": "254bbf9971bdb0e665e7bb7fefba01fee21100891560f90c6f8c3cf5f08f0be7",
+    "engineering/web/f1_stack.svg": "e1c84a323014ed2ed1a1424f2ca7d8d8c7025dea98dad76cbc507f07c9f34f98",
+    "engineering/web/f1_wiring.svg": "fe2e7dbaa0699e823412133ac8e0d6aa9fd8e471d298ef0f6f203aa2da03b36d"
+  },
+  "files_sha256": {
+    "f1_wiring.svg": "fe2e7dbaa0699e823412133ac8e0d6aa9fd8e471d298ef0f6f203aa2da03b36d",
+    "f1_r4_review_drawings.pdf": "4e2c9e99a89911d1453daeea43f5e111619939d03a9ef46b55f2257a19aa3943",
+    "models.json": "b6184d9b3e282a294085523b758739ca93686b52b6f50e0ee64259b692d649a8",
+    "f1_r4_assembly.png": "f1ce0179c59bb2460cd0e06ab035d41443d047d8828329e358133c9d61cd2a63",
+    "f1_stack.svg": "e1c84a323014ed2ed1a1424f2ca7d8d8c7025dea98dad76cbc507f07c9f34f98"
+  }
+}

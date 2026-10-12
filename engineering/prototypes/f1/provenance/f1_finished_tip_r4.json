@@ -1,0 +1,34 @@
+{
+  "schema": "yam-f1-finished-tip-plan/1",
+  "revision": "R4 manufacturing integration",
+  "connector": "Hirose FH12-6S-1SH(1)(98)",
+  "required_finished_thickness_mm": [0.25, 0.35],
+  "nominal_tongue_width_mm": 7.0,
+  "allowed_tongue_width_mm": [6.88, 7.07],
+  "contact_pitch_mm": 1.0,
+  "contact_width_mm": 0.65,
+  "minimum_exposed_contact_length_mm": 3.5,
+  "minimum_supported_length_mm": 4.5,
+  "minimum_stiffener_mm": 0.188,
+  "selected_stiffener_mm": 0.2,
+  "selected_stiffener_bond_mm": 0.05,
+  "nickel_nominal_mm": 0.003,
+  "nickel_range_mm": [0.001, 0.005],
+  "gold_minimum_mm": 0.0002,
+  "back_coverlay_relief_from_tip_mm": 6.4,
+  "minimum_relief_to_back_copper_mm": 0.15,
+  "notes": [
+    "The 25 µm core is the existing adhesiveless F1 core target; do not add an unaccounted copper-to-core adhesive.",
+    "The selected 200 µm PI stiffener and 50 µm bond give 0.3132 mm nominal at an exposed single-copper contact, including the 3.2 µm nominal Ni/Au finish.",
+    "Back copper must be absent in the relieved contact zone. A local back-coverlay opening is proposed for the two nail row foils; it is not yet fabrication artwork.",
+    "Hirose's FPC construction example uses a thinner stiffener, but this plan follows the >=0.188 mm callout on its dimensioned terminal drawing.",
+    "Finished thickness and surface finish need fabricator confirmation and measured coupons. Adding the finish changes the nominal active stack and must be included in the final assembly drawing.",
+    "This contract does not resolve the source-frame mating plane, dynamic slack, sealing or physical qualification."
+  ],
+  "sources": [
+    "https://www.hirose.com/en/product/p/CL0528-0030-8-98",
+    "https://www.hirose.com/en/product/series/FH12/documents?path=%2Fapi%2Fv1%2Fseries%2FFH12%2Fdocuments%2Fproduct_series_catalog%2Fcontent%3Flang%3DEN"
+  ],
+  "source_pages": {"terminal_and_land_dimensions": 11, "construction_and_finish": 14},
+  "physical_specimens_tested": 0
+}

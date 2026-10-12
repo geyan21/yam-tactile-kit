@@ -1,0 +1,1716 @@
+{
+  "schema": "yam-f1-r3-carrier/1",
+  "board_revision": "r3",
+  "passed_declared_static_checks": true,
+  "physical_specimens_tested": 0,
+  "complete_f1_assembly": false,
+  "input_sha256": {
+    "engineering/designs/f1_carrier_r3.json": "a3659619007b6be92c40b43f58b84fb014f14b3e80701af69f17ad21c163e66e",
+    "engineering/designs/f1_formed_stack.json": "195271cdb3dbc5f0406709ca153e41764aec08215c161fc84fe4e2afc1422e72",
+    "build/engineering/prototypes/f1/fanout_r3_runs/20261011T144352.523928Z/specification.json": "710f349f7758c6ddc24e09a0f255f207a139eb9bd7467638cddca13d49cd5b8b",
+    "engineering/scripts/build_f1_carrier.py": "041dd2a90780f666c0dc592353553c5ee18ced42402f55c4f83e8835cf681245",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/scripts/build_b1_parts.py": "d9928e64f3d04ee5efd950371a039fb21d109ff199f93c020b22704b21abfcf5",
+    "engineering/scripts/develop_f1_fanout.py": "1df05779e3bb752e9b7f081552e5dbc9f8933d83248afbdeee183125ffc6b784",
+    "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/i2rt_UCG_Hard.stl": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df"
+  },
+  "parts": [
+    {
+      "id": "f1_r3_carrier",
+      "purpose": "f1 r3 carrier",
+      "material": "PETG or machined insulating plastic for a bench prototype; shrinkage, strength and creep unqualified",
+      "kind": "fabricate",
+      "step": "cad/f1_r3_carrier.step",
+      "stl": "cad/f1_r3_carrier.stl",
+      "sha256_step": "d9ded8c35b3474d1f5e8a2fa6f4c97c393c2dcc2a8ae2da3a56bdb03b1a81c4f",
+      "sha256_stl": "900e8befbc9ac2de1abf15fd4b492e3793fbb6e4de7b175e478dfc83e7eabc24",
+      "volume_mm3": 1661.4192057685475,
+      "bounds_mm": [
+        [
+          4.0,
+          -78.76416778564453,
+          -3.5
+        ],
+        [
+          11.699999809265137,
+          -15.059447288513184,
+          44.400001525878906
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_r3_pcb_fit_reference",
+      "purpose": "f1 r3 pcb fit reference",
+      "material": "1 mm FR4 reference; use independently checked PCB artwork for electronics",
+      "kind": "reference_only",
+      "step": "cad/f1_r3_pcb_fit_reference.step",
+      "stl": "cad/f1_r3_pcb_fit_reference.stl",
+      "sha256_step": "7af6e4b6991281ff953a08e3a536a5276298059f0810e0ea83348c4d2387ce98",
+      "sha256_stl": "8328bc3b0626ffa5f8c2a39c5b60bc4fcf2de8e590c8b9e8b1f577c6a37f36c5",
+      "volume_mm3": 1974.63250277504,
+      "bounds_mm": [
+        [
+          11.699999809265137,
+          -73.94999694824219,
+          8.050000190734863
+        ],
+        [
+          12.699999809265137,
+          -15.050000190734863,
+          43.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "source_supports": [
+    {
+      "center_yz_mm": [
+        -75.26417028511005,
+        0.0
+      ],
+      "support_native_x_mm": 4.0,
+      "distance_to_outer_carrier_mm": 5.300000000000001,
+      "basis": "Maximum source-frame X over the complete annular footprint; nominal nonpenetration, seating fraction unmeasured"
+    },
+    {
+      "center_yz_mm": [
+        -18.559447378460487,
+        1.7714835093
+      ],
+      "support_native_x_mm": 6.889186382293702,
+      "distance_to_outer_carrier_mm": 2.4108136177062987,
+      "basis": "Maximum source-frame X over the complete annular footprint; nominal nonpenetration, seating fraction unmeasured"
+    }
+  ],
+  "pcb_native_x_interval_mm": [
+    11.7,
+    12.7
+  ],
+  "active_board_mount_indices": [
+    0,
+    1
+  ],
+  "backplate_global_frame_x_separation_lower_bound_mm": 0.41081361770629865,
+  "board_carrier_overlap_mm3": 0.0,
+  "fastener_envelopes": [
+    {
+      "name": "board_M20",
+      "center_yz_mm": [
+        -58,
+        41.5
+      ],
+      "start_x_mm": 12.7,
+      "diameter_mm": 4.0,
+      "height_mm": 2.0,
+      "reference_envelope_only": true
+    },
+    {
+      "name": "board_M21",
+      "center_yz_mm": [
+        -40,
+        41.5
+      ],
+      "start_x_mm": 12.7,
+      "diameter_mm": 4.0,
+      "height_mm": 2.0,
+      "reference_envelope_only": true
+    },
+    {
+      "name": "frame_M30",
+      "center_yz_mm": [
+        -75.26417028511005,
+        0.0
+      ],
+      "start_x_mm": 9.3,
+      "diameter_mm": 6.0,
+      "height_mm": 2.4,
+      "reference_envelope_only": true
+    },
+    {
+      "name": "frame_M31",
+      "center_yz_mm": [
+        -18.559447378460487,
+        1.7714835093
+      ],
+      "start_x_mm": 9.3,
+      "diameter_mm": 6.0,
+      "height_mm": 2.4,
+      "reference_envelope_only": true
+    }
+  ],
+  "components": [
+    {
+      "reference": "J0R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -72.3,
+          20.0
+        ],
+        [
+          -72.3,
+          13.600000000000001
+        ],
+        [
+          -61.7,
+          13.600000000000001
+        ],
+        [
+          -61.7,
+          20.0
+        ],
+        [
+          -72.3,
+          20.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J0C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -61.7,
+          20.0
+        ],
+        [
+          -61.7,
+          13.600000000000001
+        ],
+        [
+          -72.3,
+          13.600000000000001
+        ],
+        [
+          -72.3,
+          20.0
+        ],
+        [
+          -61.7,
+          20.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC1",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -69.75,
+          22.2
+        ],
+        [
+          -69.25,
+          22.2
+        ],
+        [
+          -69.25,
+          21.2
+        ],
+        [
+          -69.75,
+          21.2
+        ],
+        [
+          -69.75,
+          22.2
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC0",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -67.75,
+          22.2
+        ],
+        [
+          -67.25,
+          22.2
+        ],
+        [
+          -67.25,
+          21.2
+        ],
+        [
+          -67.75,
+          21.2
+        ],
+        [
+          -67.75,
+          22.2
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J1R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -61.7,
+          30.0
+        ],
+        [
+          -61.7,
+          36.4
+        ],
+        [
+          -72.3,
+          36.4
+        ],
+        [
+          -72.3,
+          30.0
+        ],
+        [
+          -61.7,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J1C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -72.3,
+          30.0
+        ],
+        [
+          -72.3,
+          36.4
+        ],
+        [
+          -61.7,
+          36.4
+        ],
+        [
+          -61.7,
+          30.0
+        ],
+        [
+          -72.3,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC3",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -64.25,
+          27.8
+        ],
+        [
+          -64.75,
+          27.8
+        ],
+        [
+          -64.75,
+          28.8
+        ],
+        [
+          -64.25,
+          28.8
+        ],
+        [
+          -64.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC2",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -66.25,
+          27.8
+        ],
+        [
+          -66.75,
+          27.8
+        ],
+        [
+          -66.75,
+          28.8
+        ],
+        [
+          -66.25,
+          28.8
+        ],
+        [
+          -66.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J2R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -54.3,
+          22.129384890530012
+        ],
+        [
+          -54.3,
+          15.729384890530014
+        ],
+        [
+          -43.7,
+          15.729384890530014
+        ],
+        [
+          -43.7,
+          22.129384890530012
+        ],
+        [
+          -54.3,
+          22.129384890530012
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J2C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -43.7,
+          22.129384890530012
+        ],
+        [
+          -43.7,
+          15.729384890530014
+        ],
+        [
+          -54.3,
+          15.729384890530014
+        ],
+        [
+          -54.3,
+          22.129384890530012
+        ],
+        [
+          -43.7,
+          22.129384890530012
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC6",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -51.75,
+          24.32938489053001
+        ],
+        [
+          -51.25,
+          24.32938489053001
+        ],
+        [
+          -51.25,
+          23.32938489053001
+        ],
+        [
+          -51.75,
+          23.32938489053001
+        ],
+        [
+          -51.75,
+          24.32938489053001
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC5",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -49.75,
+          24.32938489053001
+        ],
+        [
+          -49.25,
+          24.32938489053001
+        ],
+        [
+          -49.25,
+          23.32938489053001
+        ],
+        [
+          -49.75,
+          23.32938489053001
+        ],
+        [
+          -49.75,
+          24.32938489053001
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC4",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -47.75,
+          24.32938489053001
+        ],
+        [
+          -47.25,
+          24.32938489053001
+        ],
+        [
+          -47.25,
+          23.32938489053001
+        ],
+        [
+          -47.75,
+          23.32938489053001
+        ],
+        [
+          -47.75,
+          24.32938489053001
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J3R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -43.7,
+          30.0
+        ],
+        [
+          -43.7,
+          36.4
+        ],
+        [
+          -54.3,
+          36.4
+        ],
+        [
+          -54.3,
+          30.0
+        ],
+        [
+          -43.7,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J3C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -54.3,
+          30.0
+        ],
+        [
+          -54.3,
+          36.4
+        ],
+        [
+          -43.7,
+          36.4
+        ],
+        [
+          -43.7,
+          30.0
+        ],
+        [
+          -54.3,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC9",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -46.25,
+          27.8
+        ],
+        [
+          -46.75,
+          27.8
+        ],
+        [
+          -46.75,
+          28.8
+        ],
+        [
+          -46.25,
+          28.8
+        ],
+        [
+          -46.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC8",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -48.25,
+          27.8
+        ],
+        [
+          -48.75,
+          27.8
+        ],
+        [
+          -48.75,
+          28.8
+        ],
+        [
+          -48.25,
+          28.8
+        ],
+        [
+          -48.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC7",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -50.25,
+          27.8
+        ],
+        [
+          -50.75,
+          27.8
+        ],
+        [
+          -50.75,
+          28.8
+        ],
+        [
+          -50.25,
+          28.8
+        ],
+        [
+          -50.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J4R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -36.3,
+          20.0
+        ],
+        [
+          -36.3,
+          13.600000000000001
+        ],
+        [
+          -25.7,
+          13.600000000000001
+        ],
+        [
+          -25.7,
+          20.0
+        ],
+        [
+          -36.3,
+          20.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J4C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -25.7,
+          20.0
+        ],
+        [
+          -25.7,
+          13.600000000000001
+        ],
+        [
+          -36.3,
+          13.600000000000001
+        ],
+        [
+          -36.3,
+          20.0
+        ],
+        [
+          -25.7,
+          20.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC12",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -33.75,
+          22.2
+        ],
+        [
+          -33.25,
+          22.2
+        ],
+        [
+          -33.25,
+          21.2
+        ],
+        [
+          -33.75,
+          21.2
+        ],
+        [
+          -33.75,
+          22.2
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC11",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -31.75,
+          22.2
+        ],
+        [
+          -31.25,
+          22.2
+        ],
+        [
+          -31.25,
+          21.2
+        ],
+        [
+          -31.75,
+          21.2
+        ],
+        [
+          -31.75,
+          22.2
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC10",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -29.75,
+          22.2
+        ],
+        [
+          -29.25,
+          22.2
+        ],
+        [
+          -29.25,
+          21.2
+        ],
+        [
+          -29.75,
+          21.2
+        ],
+        [
+          -29.75,
+          22.2
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J5R",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -25.7,
+          30.0
+        ],
+        [
+          -25.7,
+          36.4
+        ],
+        [
+          -36.3,
+          36.4
+        ],
+        [
+          -36.3,
+          30.0
+        ],
+        [
+          -25.7,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "J5C",
+      "side": "B",
+      "native_x_interval_mm": [
+        9.7,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -36.3,
+          30.0
+        ],
+        [
+          -36.3,
+          36.4
+        ],
+        [
+          -25.7,
+          36.4
+        ],
+        [
+          -25.7,
+          30.0
+        ],
+        [
+          -36.3,
+          30.0
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC15",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -28.25,
+          27.8
+        ],
+        [
+          -28.75,
+          27.8
+        ],
+        [
+          -28.75,
+          28.8
+        ],
+        [
+          -28.25,
+          28.8
+        ],
+        [
+          -28.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC14",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -30.25,
+          27.8
+        ],
+        [
+          -30.75,
+          27.8
+        ],
+        [
+          -30.75,
+          28.8
+        ],
+        [
+          -30.25,
+          28.8
+        ],
+        [
+          -30.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKC13",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -32.25,
+          27.8
+        ],
+        [
+          -32.75,
+          27.8
+        ],
+        [
+          -32.75,
+          28.8
+        ],
+        [
+          -32.25,
+          28.8
+        ],
+        [
+          -32.25,
+          27.8
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "JW",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        14.7
+      ],
+      "body_yz_mm": [
+        [
+          -21.9,
+          11.450000000000003
+        ],
+        [
+          -15.499999999999998,
+          11.450000000000003
+        ],
+        [
+          -15.499999999999998,
+          40.55
+        ],
+        [
+          -21.9,
+          40.55
+        ],
+        [
+          -21.9,
+          11.450000000000003
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "UT",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.899999999999999
+      ],
+      "body_yz_mm": [
+        [
+          -32.6,
+          27.5
+        ],
+        [
+          -42.4,
+          27.5
+        ],
+        [
+          -42.4,
+          23.0
+        ],
+        [
+          -32.6,
+          23.0
+        ],
+        [
+          -32.6,
+          27.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKR0",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -56.75,
+          26.5
+        ],
+        [
+          -57.25,
+          26.5
+        ],
+        [
+          -57.25,
+          25.5
+        ],
+        [
+          -56.75,
+          25.5
+        ],
+        [
+          -56.75,
+          26.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKR1",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -58.25,
+          26.5
+        ],
+        [
+          -58.75,
+          26.5
+        ],
+        [
+          -58.75,
+          25.5
+        ],
+        [
+          -58.25,
+          25.5
+        ],
+        [
+          -58.25,
+          26.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKR2",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -59.75,
+          26.5
+        ],
+        [
+          -60.25,
+          26.5
+        ],
+        [
+          -60.25,
+          25.5
+        ],
+        [
+          -59.75,
+          25.5
+        ],
+        [
+          -59.75,
+          26.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RKR3",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -61.25,
+          26.5
+        ],
+        [
+          -61.75,
+          26.5
+        ],
+        [
+          -61.75,
+          25.5
+        ],
+        [
+          -61.25,
+          25.5
+        ],
+        [
+          -61.25,
+          26.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "CT1",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -30.7,
+          22.35
+        ],
+        [
+          -30.7,
+          22.85
+        ],
+        [
+          -31.7,
+          22.85
+        ],
+        [
+          -31.7,
+          22.35
+        ],
+        [
+          -30.7,
+          22.35
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "CT2",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -30.7,
+          23.85
+        ],
+        [
+          -30.7,
+          24.35
+        ],
+        [
+          -31.7,
+          24.35
+        ],
+        [
+          -31.7,
+          23.85
+        ],
+        [
+          -30.7,
+          23.85
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RT",
+      "side": "F",
+      "native_x_interval_mm": [
+        12.7,
+        13.25
+      ],
+      "body_yz_mm": [
+        [
+          -30.95,
+          28.1
+        ],
+        [
+          -31.45,
+          28.1
+        ],
+        [
+          -31.45,
+          27.1
+        ],
+        [
+          -30.95,
+          27.1
+        ],
+        [
+          -30.95,
+          28.1
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RP0",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -39.75,
+          37.5
+        ],
+        [
+          -40.25,
+          37.5
+        ],
+        [
+          -40.25,
+          38.5
+        ],
+        [
+          -39.75,
+          38.5
+        ],
+        [
+          -39.75,
+          37.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RP1",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -39.75,
+          35.5
+        ],
+        [
+          -40.25,
+          35.5
+        ],
+        [
+          -40.25,
+          36.5
+        ],
+        [
+          -39.75,
+          36.5
+        ],
+        [
+          -39.75,
+          35.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RP2",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -39.75,
+          33.5
+        ],
+        [
+          -40.25,
+          33.5
+        ],
+        [
+          -40.25,
+          34.5
+        ],
+        [
+          -39.75,
+          34.5
+        ],
+        [
+          -39.75,
+          33.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RP3",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -39.75,
+          31.5
+        ],
+        [
+          -40.25,
+          31.5
+        ],
+        [
+          -40.25,
+          32.5
+        ],
+        [
+          -39.75,
+          32.5
+        ],
+        [
+          -39.75,
+          31.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    },
+    {
+      "reference": "RP4",
+      "side": "B",
+      "native_x_interval_mm": [
+        11.149999999999999,
+        11.7
+      ],
+      "body_yz_mm": [
+        [
+          -39.75,
+          29.5
+        ],
+        [
+          -40.25,
+          29.5
+        ],
+        [
+          -40.25,
+          30.5
+        ],
+        [
+          -39.75,
+          30.5
+        ],
+        [
+          -39.75,
+          29.5
+        ]
+      ],
+      "carrier_overlap_mm3": 0.0,
+      "head_overlap_mm3": {
+        "board_M20": 0.0,
+        "board_M21": 0.0,
+        "frame_M30": 0.0,
+        "frame_M31": 0.0
+      }
+    }
+  ],
+  "failures": [],
+  "limits": [
+    "Closed component bodies, nominal carrier and head envelopes only.",
+    "Source seating uses exact projected triangle maxima; actual print seating and clamping remain.",
+    "Tails, open latches, cable, nut sourcing, screw engagement, installed drive and loaded motion remain.",
+    "No strength, creep, contact accuracy or 20 N result follows from static CAD."
+  ]
+}

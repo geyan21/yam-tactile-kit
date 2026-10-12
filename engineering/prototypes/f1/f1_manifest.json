@@ -1,0 +1,2810 @@
+{
+  "schema": "yam-f1-prototype-cad/1",
+  "revision": "F1.1 R4",
+  "parts": [
+    {
+      "id": "f1_ch0_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_complete_envelope.step",
+      "stl": "cad/f1_ch0_columns_complete_envelope.stl",
+      "sha256_step": "2906fe675afd4e5f6693561520825c488b0e6b07b973bfce18afe025f77fbd7f",
+      "sha256_stl": "3b2f9972dce7861a991d0a402736a6b071adb459beb2ba1fae8ea857e5ec7500",
+      "volume_mm3": 35.97899071010975,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.4653449058532715
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_complete_envelope.step",
+      "stl": "cad/f1_ch0_rows_complete_envelope.stl",
+      "sha256_step": "d8221edfa269e21bf21833811b6d8d45974dd63460ced70deb434f12bd44f086",
+      "sha256_stl": "cfe69615a2607d4671c0e1766cb6ddfc9c4cfa948bf06707224dbc8ea99ecc9b",
+      "volume_mm3": 66.61959956880793,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_complete_envelope.step",
+      "stl": "cad/f1_ch1_columns_complete_envelope.stl",
+      "sha256_step": "36942a993e2e178ad50bb16b4dfb2168cc23f544132f05d918e4571f9a07fa9c",
+      "sha256_stl": "8cf0d9505de2ad4f6d83a58bd72d963b28b72520fcbc38e337ebfa45c15608da",
+      "volume_mm3": 36.236394479586934,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2911376953125,
+          -4.465344429016113
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_complete_envelope.step",
+      "stl": "cad/f1_ch1_rows_complete_envelope.stl",
+      "sha256_step": "de20505f14c4944e78668b4052474fa23b473736e2888f68611e65ab1c42f626",
+      "sha256_stl": "fc83a1adddd95d677e5ab0b2c4a5fc726df750c3b427a4267fcf18841c2ac281",
+      "volume_mm3": 67.11454367881919,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_complete_envelope.step",
+      "stl": "cad/f1_ch2_columns_complete_envelope.stl",
+      "sha256_step": "9fec6579ef872e29735cd8c2120e3addbbbcf1541ae3a5cd566684266d26e7cc",
+      "sha256_stl": "ef8aed990271314baffe764ff5af4f7f0f52aca9cde839b50052d6d5c0255f4f",
+      "volume_mm3": 43.05395258995156,
+      "bounds_mm": [
+        [
+          -14.0,
+          -93.96240234375,
+          -6.175000190734863
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_complete_envelope.step",
+      "stl": "cad/f1_ch2_rows_complete_envelope.stl",
+      "sha256_step": "66a087c7419ea108c27cd10d1eac56326fee850de9bebcd5e71d6cb0d85dacb8",
+      "sha256_stl": "88ed17c157d3ca2815931dbdf74c0528a1f07dacd07592fa559a6d49bb887b15",
+      "volume_mm3": 43.13812217019148,
+      "bounds_mm": [
+        [
+          -14.0,
+          -93.96247863769531,
+          -5.242032051086426
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_complete_envelope.step",
+      "stl": "cad/f1_ch3_columns_complete_envelope.stl",
+      "sha256_step": "592e2885d9a95703207ae047eb3d5fb5a8aebf9a210fa7b486143769bc354d86",
+      "sha256_stl": "129c952ba25e574c39cfd84f4ec1b2b2b36e7190fab0990e51edfa02a6a05c18",
+      "volume_mm3": 43.226766999925616,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.507702350616455
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_complete_envelope.step",
+      "stl": "cad/f1_ch3_rows_complete_envelope.stl",
+      "sha256_step": "f743b7c3aa1d73feea838af462b8a3d16fc535dc5d36b1143d44add98f665157",
+      "sha256_stl": "a6e5a3a96bd2d2c4ce4813eb6e72cf4b0cd52610e53daa78fae6942231535499",
+      "volume_mm3": 44.2686548775402,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.624102592468262
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_complete_envelope.step",
+      "stl": "cad/f1_ch4_columns_complete_envelope.stl",
+      "sha256_step": "0955e10d9c1585bfb9ec8aa2ee313286b8d1be2bb625f5b6009b6434aefc79ef",
+      "sha256_stl": "dbe05b348d882fdad1f68085f8527130254c30b1ecbe2c72513bc313bf363cc6",
+      "volume_mm3": 41.05185176704819,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.558345794677734,
+          6.847860813140869
+        ],
+        [
+          10.917499542236328,
+          -22.325695037841797,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_complete_envelope.step",
+      "stl": "cad/f1_ch4_rows_complete_envelope.stl",
+      "sha256_step": "59c0765df85288f36db183d4e3f59ee5b57273176d084cb97488fb626e4a4781",
+      "sha256_stl": "250d973ad99064440ef9ace68ba18b23e859e55e8a4e35858dfea5e67a7758dd",
+      "volume_mm3": 54.48831901945198,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.47818374633789,
+          -6.924967288970947
+        ],
+        [
+          13.592499732971191,
+          -17.325695037841797,
+          45.224815368652344
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_complete_envelope.step",
+      "stl": "cad/f1_ch5_columns_complete_envelope.stl",
+      "sha256_step": "4c2b93b187f7c7bf7bdd5937ab012ad5a181299bf39988cfbc494b575521aba3",
+      "sha256_stl": "ae1dc59a730a98f3a142da59732035d646266a7fc0e5193b434a943b3c28c4d1",
+      "volume_mm3": 37.96354315427976,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.685726165771484,
+          -4.564206123352051
+        ],
+        [
+          10.917499542236328,
+          -20.574644088745117,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_complete_envelope.step",
+      "stl": "cad/f1_ch5_rows_complete_envelope.stl",
+      "sha256_step": "04df2204ad2cdc9be18b04b0619f9c2757f184e830d33799a3b4027c0ce5b9a4",
+      "sha256_stl": "3ba2ef61eada2d141bc30e2087dcf68df2cb63ca24c8086f66596f155c89712c",
+      "volume_mm3": 38.91180336960639,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.75137710571289,
+          -4.680605888366699
+        ],
+        [
+          13.592499732971191,
+          -20.574785232543945,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_pressure_film.step",
+      "stl": "cad/f1_ch0_pressure_film.stl",
+      "sha256_step": "cbdd27c32e37ba24627d03bfbd5cb7c719e95f5629da045939a302836c6385ee",
+      "sha256_stl": "82628cc4ffc44463b4c16c342612faec09b8d19a84f62210badb83b38b8b391e",
+      "volume_mm3": 9.149216667509252,
+      "bounds_mm": [
+        [
+          -18.786453247070312,
+          -116.88847351074219,
+          -4.498427867889404
+        ],
+        [
+          -8.806846618652344,
+          -101.52366638183594,
+          -3.6276755332946777
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch0_retained_cover.step",
+      "stl": "cad/f1_ch0_retained_cover.stl",
+      "sha256_step": "ff2e85e9579bee7bc1e998eb95f602fecbab62853acd7ab7c831002e25391dff",
+      "sha256_stl": "211cd8b6fd3f6a45f256e6d72e75c42c8c134724ec1b9f9952f9fe4bc771c2cb",
+      "volume_mm3": 12.013812413540162,
+      "bounds_mm": [
+        [
+          -19.28700065612793,
+          -117.3910140991211,
+          -4.771378517150879
+        ],
+        [
+          -8.356846809387207,
+          -101.0617904663086,
+          -3.5620486736297607
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_foil_mount_bond.step",
+      "stl": "cad/f1_ch0_foil_mount_bond.stl",
+      "sha256_step": "48ad3ef60d20239bc7d868f91fd40cbc00252478e60d733c75dbd9ed707a364a",
+      "sha256_stl": "cc7bb0aa360ab52eb3dadc2722643f56b8e19d3baec94b88a23a490f92dcf677",
+      "volume_mm3": 5.444676084649676,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.29364776611328,
+          -4.355483055114746
+        ],
+        [
+          -8.50684642791748,
+          -101.23222351074219,
+          -3.4995803833007812
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch0_cover_foot_bond_0.stl",
+      "sha256_step": "b85ea34e4853ac411f5a5d1871f1d0319712fdb3c2e6a3e7e74d3fe4ef3cf0b1",
+      "sha256_stl": "43fcb4fe9a84537d67ed965bfee76a0ad501ba921090b724d556cdbde540b12a",
+      "volume_mm3": 0.10392685394546299,
+      "bounds_mm": [
+        [
+          -19.28700065612793,
+          -117.39352416992188,
+          -4.360495567321777
+        ],
+        [
+          -8.356846809387207,
+          -101.4819107055664,
+          -3.5121114253997803
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch0_layer_assembly_form.step",
+      "stl": "cad/f1_ch0_layer_assembly_form.stl",
+      "sha256_step": "1effa168044c5032694a97262f3445fbca2d9612bc86d7748920465e501df4a4",
+      "sha256_stl": "4d286eb18ee55fc1946035ae301fb239cc9006f43ccffb96b0334656aa63aa2b",
+      "volume_mm3": 1123.988007290151,
+      "bounds_mm": [
+        [
+          -22.185199737548828,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          -5.5068464279174805,
+          -98.23599243164062,
+          0.5958292484283447
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_pressure_film.step",
+      "stl": "cad/f1_ch1_pressure_film.stl",
+      "sha256_step": "eec2bf690f0284ce2ca1b653bba5cbc5109e6958d91bbcdbe0b606d591fdeb76",
+      "sha256_stl": "19f45d9a9fe0c670eda8aee4b88ad6d5a5fe150e06f7da08d76fbbb5115bddbc",
+      "volume_mm3": 9.091750841900737,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -116.88847351074219,
+          -4.498427867889404
+        ],
+        [
+          2.9871068000793457,
+          -101.52366638183594,
+          -3.6276752948760986
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch1_retained_cover.step",
+      "stl": "cad/f1_ch1_retained_cover.stl",
+      "sha256_step": "3fff85d8f20b3695cf13aa95ba4481b46c238b00141fb4b826bb13527af6266b",
+      "sha256_stl": "7c8a6ebf5a4a3a6b580bfdf0bff7354710cf071cd2b92056f38c338320b29dee",
+      "volume_mm3": 11.956848639242523,
+      "bounds_mm": [
+        [
+          -7.456846237182617,
+          -117.3910140991211,
+          -4.771378517150879
+        ],
+        [
+          3.4877424240112305,
+          -101.0617904663086,
+          -3.5620486736297607
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_foil_mount_bond.step",
+      "stl": "cad/f1_ch1_foil_mount_bond.stl",
+      "sha256_step": "d34243ea57288bf475f199ceae5371e2faa89ccc7b51e127ee808c7a40b6ddfd",
+      "sha256_stl": "805da97ae6983f73004b86e93d7a21c23c2db3127b630ea31c1dd6ff73e5c67c",
+      "volume_mm3": 5.416150178208886,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.29364776611328,
+          -4.355483055114746
+        ],
+        [
+          3.3876330852508545,
+          -101.23222351074219,
+          -3.499580144882202
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch1_cover_foot_bond_0.stl",
+      "sha256_step": "7acc22ba31f578469053978b8575cf3bd93d6e5b7ecdc870e95ccce0242639ab",
+      "sha256_stl": "ff05617cb196fba82fa84cf0b110fbd80bd2c475f09afb4904d8e45771079bf3",
+      "volume_mm3": 0.10391737781513327,
+      "bounds_mm": [
+        [
+          -7.456846237182617,
+          -117.39352416992188,
+          -4.360495567321777
+        ],
+        [
+          3.4877424240112305,
+          -101.4819107055664,
+          -3.5121114253997803
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch1_layer_assembly_form.step",
+      "stl": "cad/f1_ch1_layer_assembly_form.stl",
+      "sha256_step": "ecb99d4187dacaae85c0ab5ceba6c83fc6e8cc71b5dc251938a551b15475afc3",
+      "sha256_stl": "fc162e0edd4a4f6756bc6c1ffe9512583944e4491337b0e261d31974a5f23244",
+      "volume_mm3": 1121.867821284555,
+      "bounds_mm": [
+        [
+          -10.306846618652344,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          6.385941028594971,
+          -98.23599243164062,
+          0.5958293080329895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch2_compliant_fit_base.step",
+      "stl": "cad/f1_ch2_compliant_fit_base.stl",
+      "sha256_step": "fde0aeb6bf7e47a45c44b65bdbfd1eba639a1f68f34c704ddeaa87c3d61756b2",
+      "sha256_stl": "33f218cab09705eebbc8256952bc0dff79af7b884d96ef3a657ef2fe2c65a099",
+      "volume_mm3": 161.22272104044887,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.99810791015625,
+          -4.106931686401367
+        ],
+        [
+          -0.5,
+          -76.08174133300781,
+          -0.3732931613922119
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_pressure_film.step",
+      "stl": "cad/f1_ch2_pressure_film.stl",
+      "sha256_step": "b913ed2f1414620815d9d2008cc3ba35088c64852bab3a9a41d1cde344b75317",
+      "sha256_stl": "061c7fcb62bfbb40a6e96753c19f5e43664d0a3cb3b8f65d06ca77297f571386",
+      "volume_mm3": 12.804831649361628,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -88.93621826171875,
+          -4.070559978485107
+        ],
+        [
+          -3.2750000953674316,
+          -77.21021270751953,
+          -1.3890635967254639
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch2_retained_cover.step",
+      "stl": "cad/f1_ch2_retained_cover.stl",
+      "sha256_step": "eb5c4d19a1ed7e7b4d57aaf2a4c31a5791dc082d5d082b0f5aa9eb62e30f80d4",
+      "sha256_stl": "4dc5e1ab0dd41c4c38c218a5a9165cff3fdc5f1808cb383252d5e97263649960",
+      "volume_mm3": 86.56237191528847,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.83625030517578,
+          -4.778812408447266
+        ],
+        [
+          -0.5,
+          -76.09674835205078,
+          -1.3258635997772217
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_foil_mount_bond.step",
+      "stl": "cad/f1_ch2_foil_mount_bond.stl",
+      "sha256_step": "7fba1a7d4fec3fd5dc90f6a6e25d105519aa1d14aa7d1b96d2365ac574fd8298",
+      "sha256_stl": "aa38885d0e70f818f04ae3dfe86f0417a3a46c182261ae209e0bcb246e30ee90",
+      "volume_mm3": 9.084884757735605,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.51642608642578,
+          -4.076893329620361
+        ],
+        [
+          -1.0,
+          -76.58895874023438,
+          -1.2758636474609375
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch2_cover_foot_bond_0.stl",
+      "sha256_step": "f4cc96bd039fc6695607d42a4ef1565769fa304272c1a81c46c603d708ffae7e",
+      "sha256_stl": "1c14532186dd9d5958aee9b256458300350e06735d0798530ab9b291bf50d88a",
+      "volume_mm3": 0.9390106008963996,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.29713439941406,
+          -4.15659761428833
+        ],
+        [
+          -0.5,
+          -76.09098052978516,
+          -1.2758636474609375
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_layer_assembly_form.step",
+      "stl": "cad/f1_ch2_layer_assembly_form.stl",
+      "sha256_step": "08602abc07e489dba66b682485129f986f5421ace2f7e9452c16521bd5353148",
+      "sha256_stl": "fdc7141a9993bcf822bc49a6bfcbf8f62f291290d0a768d874188f0affeded4b",
+      "volume_mm3": 2078.6860546070234,
+      "bounds_mm": [
+        [
+          -17.0,
+          -92.94220733642578,
+          -4.15659761428833
+        ],
+        [
+          2.0,
+          -73.09674835205078,
+          2.674117088317871
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch3_compliant_fit_base.step",
+      "stl": "cad/f1_ch3_compliant_fit_base.stl",
+      "sha256_step": "de367a184d9ef8b9ba8fe485a6dae783cc6263c8456df7381f7c9c1f6d15653a",
+      "sha256_stl": "e7be57b40e1af90f55f241a4d7e5022b05732933807ccb35b5552e4109c876d0",
+      "volume_mm3": 171.14864978529522,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98521423339844,
+          -4.347702503204346
+        ],
+        [
+          -0.5,
+          -59.04524612426758,
+          3.153228521347046
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_pressure_film.step",
+      "stl": "cad/f1_ch3_pressure_film.stl",
+      "sha256_step": "a28f123c8c23bc57e41c9d751d50f9804d0b1b59149e3e1ab993e475dc16d3a2",
+      "sha256_stl": "5514586e7b0f21d900d9e61978471a1c8e17c782763f69e6e924b1734c0fd259",
+      "volume_mm3": 14.799705053229733,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -71.88520812988281,
+          -4.5609025955200195
+        ],
+        [
+          -3.2750000953674316,
+          -59.53974151611328,
+          1.6325044631958008
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch3_retained_cover.step",
+      "stl": "cad/f1_ch3_retained_cover.stl",
+      "sha256_step": "0108dc7039891bb9b53a0ac451231d1fbd6967898faa18fcefcfa1d379143ff2",
+      "sha256_stl": "8f3fad26641bfb75d2c4c05a6ae9e8ca2420f2c7266e9b0130ebc2e865f52b42",
+      "volume_mm3": 100.20817282501525,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98526763916016,
+          -5.024102210998535
+        ],
+        [
+          -0.5,
+          -58.50465774536133,
+          2.400860548019409
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_foil_mount_bond.step",
+      "stl": "cad/f1_ch3_foil_mount_bond.stl",
+      "sha256_step": "45c3dff6a415829ccb2e888db381caab0bb9f803c17e08a83939add206489a3d",
+      "sha256_stl": "ca5f04fbbbe734d765a498b7aef1b3c322cc3a7266aaf71f565384c3c5a1a049",
+      "volume_mm3": 10.198984207677821,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.397702217102051
+        ],
+        [
+          -1.0,
+          -59.30607986450195,
+          2.1794776916503906
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch3_cover_foot_bond_0.stl",
+      "sha256_step": "26f5d7a10afff3bb9dbb11cdebbe7abc32c855142e68195c5fedd20558011233",
+      "sha256_stl": "9f5a89ae357a55f6dd6e1b7a2323b607a0ed1fdee3e94b030ef8e047c0f5f2ea",
+      "volume_mm3": 1.012080514812552,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98521423339844,
+          -4.397702217102051
+        ],
+        [
+          -0.5,
+          -59.45698547363281,
+          1.9799695014953613
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_layer_assembly_form.step",
+      "stl": "cad/f1_ch3_layer_assembly_form.stl",
+      "sha256_step": "51bbdc64ea27894d10b97219b6c3b1c3dd7110e263077ea826e2f0eacd72ac82",
+      "sha256_stl": "0e72b37fdfb5b17f3d2aa3d80c2825046c310e30c6985386e6b123fd059fc67f",
+      "volume_mm3": 3338.097087165478,
+      "bounds_mm": [
+        [
+          -17.0,
+          -75.98521423339844,
+          -4.397702217102051
+        ],
+        [
+          2.0,
+          -56.00528335571289,
+          6.5489583015441895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch4_compliant_fit_base.step",
+      "stl": "cad/f1_ch4_compliant_fit_base.stl",
+      "sha256_step": "1289ce311699e38b82b3ccb501b934824a7c6e27f22fd84098a31170ff08957b",
+      "sha256_stl": "15c3c5ce9437eb9c272042cfa45836d6af74c07a166743e0805b603d5b0959a5",
+      "volume_mm3": 126.48420446684342,
+      "bounds_mm": [
+        [
+          -14.5,
+          -56.00642776489258,
+          6.615732669830322
+        ],
+        [
+          -0.5,
+          -42.0776252746582,
+          12.37673282623291
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_pressure_film.step",
+      "stl": "cad/f1_ch4_pressure_film.stl",
+      "sha256_step": "9f03b08279bd6bc7622bc9495621aa9ca7c83c320e070d8c52a185b19e758c14",
+      "sha256_stl": "1a95d730e7b7d2a96014bccb7b9e2e5ac0319c2c5bb3ce3e9364d666fb18289d",
+      "volume_mm3": 13.003719893551095,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -55.07709884643555,
+          7.20965576171875
+        ],
+        [
+          -3.2750000953674316,
+          -43.18603515625,
+          11.266283988952637
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch4_retained_cover.step",
+      "stl": "cad/f1_ch4_retained_cover.stl",
+      "sha256_step": "1e091174c8f912d7586230416214ad579a80ede4cc988256b8ad42fc7af636a7",
+      "sha256_stl": "2976f9132f9672252ce9570f177421d1a425398f7b09c90cb1405a73ee0c7a2d",
+      "volume_mm3": 86.23415585787329,
+      "bounds_mm": [
+        [
+          -14.5,
+          -55.91447448730469,
+          6.137592315673828
+        ],
+        [
+          -0.5,
+          -42.172725677490234,
+          11.329483985900879
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_foil_mount_bond.step",
+      "stl": "cad/f1_ch4_foil_mount_bond.stl",
+      "sha256_step": "25d75a46746f1e5b419145de0e50bb56283635888351e312541a173cf5830f62",
+      "sha256_stl": "27b64f62cd3f21d5397878c213e35f07f8daeb5ff61ae8658634e980f19bd55e",
+      "volume_mm3": 9.201382547735179,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.59278106689453,
+          6.927618503570557
+        ],
+        [
+          -1.0,
+          -42.582157135009766,
+          11.379483222961426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch4_cover_foot_bond_0.stl",
+      "sha256_step": "82a168168dc8738e16662f38d0d36b4feeb800f92257ad21ccc9a36c73ba63f3",
+      "sha256_stl": "b8dff00836f06a28d5d7fc7a0178db4953f46b314ece0520caff5fc7942623a6",
+      "volume_mm3": 0.941872652479109,
+      "bounds_mm": [
+        [
+          -14.5,
+          -55.9498405456543,
+          6.580388069152832
+        ],
+        [
+          -0.5,
+          -42.826385498046875,
+          11.379483222961426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_layer_assembly_form.step",
+      "stl": "cad/f1_ch4_layer_assembly_form.stl",
+      "sha256_step": "286e78dfeef9f60a5a97103e3b715151c5746f611f799dd2cf743f73923e3ef7",
+      "sha256_stl": "391d0ae66661711f4255575f6595332bacdf5d23257cddf30010ffd20f3a8b8b",
+      "volume_mm3": 2113.2261266173814,
+      "bounds_mm": [
+        [
+          -17.0,
+          -58.91447448730469,
+          6.580388069152832
+        ],
+        [
+          2.0,
+          -39.110469818115234,
+          15.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch5_compliant_fit_base.step",
+      "stl": "cad/f1_ch5_compliant_fit_base.stl",
+      "sha256_step": "ce5ffb32187f7e2b033efb4680c5bb9fc48e3bb0aea7305101638dae71ef9923",
+      "sha256_stl": "0377a37f64eca1ca3881d3e68f08535ddd0ce5abae9c910b4087934569c04bd1",
+      "volume_mm3": 211.11874133423325,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.011878967285156,
+          -4.404205799102783
+        ],
+        [
+          -0.5,
+          -23.084306716918945,
+          10.445815086364746
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_pressure_film.step",
+      "stl": "cad/f1_ch5_pressure_film.stl",
+      "sha256_step": "e87fefe4789a1b9eb8527c7c94894fa13f50d6aaaf22a64fc3bc5f415efac70a",
+      "sha256_stl": "640c84a634d5bb521db3c8e8c6005cc63e84883250ba528137c40ac0676fb168",
+      "volume_mm3": 20.215385685177452,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -38.23688888549805,
+          -4.617001056671143
+        ],
+        [
+          -3.2750000953674316,
+          -24.18575096130371,
+          8.592713356018066
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch5_retained_cover.step",
+      "stl": "cad/f1_ch5_retained_cover.stl",
+      "sha256_step": "3c947ba756f1e2551924c4de18dabed458f071b93e1ff2d1e089e26e5693e2be",
+      "sha256_stl": "e662bed4ea38452da55a7ee91bc155fa4ecdede4fc16ecb61f0afc4d363ad118",
+      "volume_mm3": 130.54061724572205,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.37270736694336,
+          -5.080605983734131
+        ],
+        [
+          -0.5,
+          -23.072134017944336,
+          9.262223243713379
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_foil_mount_bond.step",
+      "stl": "cad/f1_ch5_foil_mount_bond.stl",
+      "sha256_step": "b15cd087413a67b4de7bb9dc32321e3eaf70e6484814d6167698e8dee21a7a94",
+      "sha256_stl": "9135c85045638c85adf880181341a3e2896403e6453077cc26b7ff8b76fffa9a",
+      "volume_mm3": 13.698774496435453,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.623687744140625,
+          -4.4542059898376465
+        ],
+        [
+          -1.0,
+          -23.584613800048828,
+          9.031087875366211
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch5_cover_foot_bond_0.stl",
+      "sha256_step": "13b05184544c5a7b269b5b30690c7214c59a2773d769e8559ebdc99bec009158",
+      "sha256_stl": "1541b419c7decfb4563773fcae2e7347b9325234ee75789aea512e3066fdeabe",
+      "volume_mm3": 1.2526211137002043,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.038551330566406,
+          -4.4542059898376465
+        ],
+        [
+          -0.5,
+          -23.835002899169922,
+          9.30451488494873
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_layer_assembly_form.step",
+      "stl": "cad/f1_ch5_layer_assembly_form.stl",
+      "sha256_step": "a3dc36c32ff99b9e5e0607c53c9aa5e382a30f540d2493df6a31b3e167769365",
+      "sha256_stl": "c04155bb9ddb1dfa4be2a66d7e5534565a0dbc92339e122630d1d1e459b8b6d6",
+      "volume_mm3": 4970.055021593342,
+      "bounds_mm": [
+        [
+          -17.0,
+          -42.038551330566406,
+          -4.454204559326172
+        ],
+        [
+          2.0,
+          -20.083406448364258,
+          13.262223243713379
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch0_columns_full_stiffener_bond.stl",
+      "sha256_step": "edf2242559bdb155a11f2a2f51432a3fa3ba6766b8f15ba6fdb475574622c7a1",
+      "sha256_stl": "5bda96c4fae0ad6878631cb0e6a6416fded5400166cad847d3905209a7c3da1f",
+      "volume_mm3": 2.8000000000000176,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          10.807499885559082,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch0_columns_full_stiffener_pi.stl",
+      "sha256_step": "77b58bd045327fc3bb73f742604ece163255797c1f0e9108f27b334c17517c45",
+      "sha256_stl": "c3165a8be3e35ed8cab151703fef4222cbc51bfc283d178b9138be43732008d4",
+      "volume_mm3": 11.200000000000005,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          10.757499694824219,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_tip_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_tip_stiffener_bond.step",
+      "stl": "cad/f1_ch0_rows_tip_stiffener_bond.stl",
+      "sha256_step": "c8338f36a78f2ba05ee4baa92c42ccf1f8a0c7dd6554bc02ba0ca8ec6bb7e6a1",
+      "sha256_stl": "f52205531c6b4cb81178d0459bd59cb7d8c1c6de0b6609dc4936cc43d6df8cb3",
+      "volume_mm3": 2.240000000000011,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -70.5,
+          12.050000190734863
+        ],
+        [
+          13.642499923706055,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_tip_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_rows_tip_stiffener_pi.step",
+      "stl": "cad/f1_ch0_rows_tip_stiffener_pi.stl",
+      "sha256_step": "e09894861d41df1461532e33e1e375da2a5751aa68ac47d088e0efe068299453",
+      "sha256_stl": "a713fccc276e24de99ecfc61c6a10a81e56150477e7fdd93937832291dba29c4",
+      "volume_mm3": 8.95999999999999,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -70.5,
+          12.050000190734863
+        ],
+        [
+          13.842499732971191,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_transition_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_transition_stiffener_bond.step",
+      "stl": "cad/f1_ch0_rows_transition_stiffener_bond.stl",
+      "sha256_step": "83aeec5df1352733b6fce735cbc98a50171f5adabc166c3f44f6808730d6fe26",
+      "sha256_stl": "2315230c627ec5ee460a03af2b19430cd0c8dc9310548e44387e3fe854e1023d",
+      "volume_mm3": 0.5250000000000009,
+      "bounds_mm": [
+        [
+          13.677499771118164,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          13.727499961853027,
+          -63.5,
+          11.949999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_transition_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_rows_transition_stiffener_pi.step",
+      "stl": "cad/f1_ch0_rows_transition_stiffener_pi.stl",
+      "sha256_step": "9bc853466eb9466c724b639ef323277de73ee9a6eb05a7027c89e9f9c9206188",
+      "sha256_stl": "cf22b6e7a41d6fc36b10b360b1ccc8242cba5fb7db04e0e5d37925916f661ef4",
+      "volume_mm3": 2.099999999999991,
+      "bounds_mm": [
+        [
+          13.727499961853027,
+          -70.5,
+          10.449999809265137
+        ],
+        [
+          13.927499771118164,
+          -63.5,
+          11.949999809265137
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch1_columns_full_stiffener_bond.stl",
+      "sha256_step": "cc971d95e7c404ebb25f198aaaf32520848eeb826cf819676dad9dd1c36953ee",
+      "sha256_stl": "1704b550a310f6861a22507a07d64c15543994f43f0f71e6852fb48c8316c309",
+      "volume_mm3": 2.8000000000000087,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch1_columns_full_stiffener_pi.stl",
+      "sha256_step": "d38502c38a0f240cd4ccc2d25ce4d066f868187d78c6b9f981fc6d0f549f53d1",
+      "sha256_stl": "e0e780f7d87a8950b8313e35a74ea898ee346da6264daf5eff5e781c90d1f034",
+      "volume_mm3": 11.199999999999969,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_tip_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_tip_stiffener_bond.step",
+      "stl": "cad/f1_ch1_rows_tip_stiffener_bond.stl",
+      "sha256_step": "6e567593835c2b7f157b1cb758d76fb08129e43868edf18c0201cb1dcc91dae5",
+      "sha256_stl": "0c3914720cf710a2fd1ab2ae336bebec3ddc3615e02fff04234fe9951298194e",
+      "volume_mm3": 2.2400000000000087,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -63.5,
+          37.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_tip_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_rows_tip_stiffener_pi.step",
+      "stl": "cad/f1_ch1_rows_tip_stiffener_pi.stl",
+      "sha256_step": "f0711fa56a1ac235e56ec31d6e4ead633f2ac3bca59e72ce6246d1266af9e8b4",
+      "sha256_stl": "895c5886ff83f74d27a3e6550e54a55943c35fd2f86c3ccbb13627180ae78108",
+      "volume_mm3": 8.959999999999983,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -70.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -63.5,
+          37.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_transition_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_transition_stiffener_bond.step",
+      "stl": "cad/f1_ch1_rows_transition_stiffener_bond.stl",
+      "sha256_step": "7aa06e2b80ab2111df3650baf9bb0b1e2f06a7f6d1b7d7372a16e95839407912",
+      "sha256_stl": "5ef313b1d6f7ff4a895959bc6327dfcbf65b6d55301d63592b7ac6e61b0db2ef",
+      "volume_mm3": 0.5250000000000055,
+      "bounds_mm": [
+        [
+          13.677499771118164,
+          -70.5,
+          38.04999923706055
+        ],
+        [
+          13.727499961853027,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_transition_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_rows_transition_stiffener_pi.step",
+      "stl": "cad/f1_ch1_rows_transition_stiffener_pi.stl",
+      "sha256_step": "ca160e97e4b4d85a5d5184d83275a0fcddba0deee788e82d413c2d750a286382",
+      "sha256_stl": "1765ffe3f2d76745312535ea221755e8890141c4f67705a60ea6bd134f6ab98f",
+      "volume_mm3": 2.10000000000001,
+      "bounds_mm": [
+        [
+          13.727499961853027,
+          -70.5,
+          38.04999923706055
+        ],
+        [
+          13.927499771118164,
+          -63.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch2_columns_full_stiffener_bond.stl",
+      "sha256_step": "55f7514b8e062df879152f4372de87d64c3361d629cca35fdd6df8000f395195",
+      "sha256_stl": "002ae0ffd24236af479268dca4737430cf3f89dbf3952d3db86e51effe9569af",
+      "volume_mm3": 2.8000000000000167,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          10.807499885559082,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch2_columns_full_stiffener_pi.stl",
+      "sha256_step": "0addabd0aa0bd115e826ec260f9f3da3731ca3f4f2aa10f1b14b52d685f2c571",
+      "sha256_stl": "7201072092c068a51d6b00ebcc5899113f6db9aee374b8b71a8caf909606a060",
+      "volume_mm3": 11.200000000000001,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          10.757499694824219,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch2_rows_full_stiffener_bond.stl",
+      "sha256_step": "f884066f2df7964a3d846450006dccf58226bbab15dcc3223ffbacfc885e6f27",
+      "sha256_stl": "1a06169027fbf0a542aacd045526e2ff016d1483d15e9b1519276e5ed235f586",
+      "volume_mm3": 2.80000000000001,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          13.642499923706055,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch2_rows_full_stiffener_pi.stl",
+      "sha256_step": "b4407c4a2a8b21e3b697213018fae1c4f42020aac89d4969b5dee75026fd6124",
+      "sha256_stl": "b3eedcb3de030b8a8e87a126e1b6d1ad02557979c2184a2953012973296543bd",
+      "volume_mm3": 11.199999999999974,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -52.5,
+          12.579384803771973
+        ],
+        [
+          13.842499732971191,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch3_columns_full_stiffener_bond.stl",
+      "sha256_step": "c131aa0ce8cd9ce7a3358eebb034c8327c24424d2d8248a9752912b9a8146537",
+      "sha256_stl": "fb0ebcbe7804314909e767e40d432bf87a0d231bdf8af81ced4f4023c5ce0c44",
+      "volume_mm3": 2.800000000000012,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch3_columns_full_stiffener_pi.stl",
+      "sha256_step": "a5f1f3f39c8a35924740f96545c92ac01b0271424427a66a4de0dee71af041dd",
+      "sha256_stl": "4498d403d390f610be3d1985c1052fc211fcf9a6fb88c7a09e18ddaff3e26058",
+      "volume_mm3": 11.19999999999998,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch3_rows_full_stiffener_bond.stl",
+      "sha256_step": "daadd73598a004a70acd259d5efb176d62f278d6c18652835fa3ea293610ce9d",
+      "sha256_stl": "834f1458ec8f62be8dcc4b83505653b9072aad23b8ff6d1645802c6e166b598e",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch3_rows_full_stiffener_pi.stl",
+      "sha256_step": "bd81799a5567bfed76c949ee258e01ef687de08a5626e59dbe091c8c80a494a8",
+      "sha256_stl": "00cb3873a153e152b0ea190f3bf429390c2c7dd935b5857519725ca3d304df1a",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -52.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -45.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch4_columns_full_stiffener_bond.stl",
+      "sha256_step": "eedc3ea09847ea43ac6553a88bc3eb100f4113caff9143d4b7806e39b6dfdd30",
+      "sha256_stl": "19d763d13cbbf61c24e4dcfcdd31af569de6da7d8bc4710011319b7887ae9fa2",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          10.807499885559082,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch4_columns_full_stiffener_pi.stl",
+      "sha256_step": "7593a9b0eb2ba97dd5f1991825d2e0d567c1d9c62d2e755285e6dd152bd697bb",
+      "sha256_stl": "429fd0f56308901dde5503f7709aef2aacd859e68b69ab60f58c4006024065a5",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          10.757499694824219,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch4_rows_full_stiffener_bond.stl",
+      "sha256_step": "4cd2b02aafc24649141cba0e85b68aa0c4206405357402db714f4bc1f59a5bbe",
+      "sha256_stl": "3a1ff1542892035343a0007695a115de11b40e8e302e6295c076dfbedbaa5598",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          13.642499923706055,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch4_rows_full_stiffener_pi.stl",
+      "sha256_step": "03347e3a8710851122acb12c96724553fed8e1258f54a6c95614ac6bf23b9acc",
+      "sha256_stl": "24319150a26b2ac7a83990cacf5c28a4a263ba2273ba091a722d02aba758a09e",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -34.5,
+          31.549999237060547
+        ],
+        [
+          13.842499732971191,
+          -27.5,
+          39.54999923706055
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_full_stiffener_bond.step",
+      "stl": "cad/f1_ch5_columns_full_stiffener_bond.stl",
+      "sha256_step": "4c2cb434e1a8aa1cfafa18156edf78728141b43e3d974cb1387ad5581d1e4b19",
+      "sha256_stl": "58fbfdbf642c611a7f83bd601d0a10920848602d4781d0e1c67ac3891c666f47",
+      "volume_mm3": 2.8000000000000105,
+      "bounds_mm": [
+        [
+          10.757499694824219,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          10.807499885559082,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_columns_full_stiffener_pi.step",
+      "stl": "cad/f1_ch5_columns_full_stiffener_pi.stl",
+      "sha256_step": "bd0cc7ce54376da575543a59a445402efc69ac31fb16412060c6e6f851c5f428",
+      "sha256_stl": "3b73db18312e5ddeb7c9cf6c9ba4c5b41883c15a5003cfc5629f4a8f20e4ceb7",
+      "volume_mm3": 11.199999999999976,
+      "bounds_mm": [
+        [
+          10.557499885559082,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          10.757499694824219,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_full_stiffener_bond",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "50 \u00b5m qualified FPC stiffener bond",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_full_stiffener_bond.step",
+      "stl": "cad/f1_ch5_rows_full_stiffener_bond.stl",
+      "sha256_step": "35c746462340bfbba273b5b18d88af18c837508f53746d4831e0eb1062bc5936",
+      "sha256_stl": "86c7062e9c62c99ca7cb09e42b386c842945fc902d0ebf7c5f0ac74441576655",
+      "volume_mm3": 2.8000000000000136,
+      "bounds_mm": [
+        [
+          13.592499732971191,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          13.642499923706055,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_full_stiffener_pi",
+      "purpose": "Static terminal reinforcement; keep the transition region strain-relieved",
+      "material": "0.20 mm polyimide reinforcement",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_rows_full_stiffener_pi.step",
+      "stl": "cad/f1_ch5_rows_full_stiffener_pi.stl",
+      "sha256_step": "b279d4826d9592a1be24835bd50fcdb292520302eb352e0681d70236bdd48220",
+      "sha256_stl": "83c16001bdcae8a65ed35c1b53011c548b673f73d0f2a29b4d896f13f34d93f4",
+      "volume_mm3": 11.199999999999989,
+      "bounds_mm": [
+        [
+          13.642499923706055,
+          -34.5,
+          10.449999809265137
+        ],
+        [
+          13.842499732971191,
+          -27.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_r3_carrier",
+      "purpose": "f1 r3 carrier",
+      "material": "PETG or machined insulating plastic for a bench prototype; shrinkage, strength and creep unqualified",
+      "kind": "fabricate",
+      "step": "cad/f1_r3_carrier.step",
+      "stl": "cad/f1_r3_carrier.stl",
+      "sha256_step": "d9ded8c35b3474d1f5e8a2fa6f4c97c393c2dcc2a8ae2da3a56bdb03b1a81c4f",
+      "sha256_stl": "900e8befbc9ac2de1abf15fd4b492e3793fbb6e4de7b175e478dfc83e7eabc24",
+      "volume_mm3": 1661.4192057685475,
+      "bounds_mm": [
+        [
+          4.0,
+          -78.76416778564453,
+          -3.5
+        ],
+        [
+          11.699999809265137,
+          -15.059447288513184,
+          44.400001525878906
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_r3_pcb_fit_reference",
+      "purpose": "f1 r3 pcb fit reference",
+      "material": "1 mm FR4 reference; use independently checked PCB artwork for electronics",
+      "kind": "reference_only",
+      "step": "cad/f1_r3_pcb_fit_reference.step",
+      "stl": "cad/f1_r3_pcb_fit_reference.stl",
+      "sha256_step": "7af6e4b6991281ff953a08e3a536a5276298059f0810e0ea83348c4d2387ce98",
+      "sha256_stl": "8328bc3b0626ffa5f8c2a39c5b60bc4fcf2de8e590c8b9e8b1f577c6a37f36c5",
+      "volume_mm3": 1974.63250277504,
+      "bounds_mm": [
+        [
+          11.699999809265137,
+          -73.94999694824219,
+          8.050000190734863
+        ],
+        [
+          12.699999809265137,
+          -15.050000190734863,
+          43.95000076293945
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch2_compliant_fit_base_mold_a.stl",
+      "sha256_step": "562d4fa47abb16e019e1b8dc34f9c4fcfd84f75281c46d888584004e5833041c",
+      "sha256_stl": "cdb9bfc235e74457b49e9b21854df6f5e8e13f913bf79a0821613e45612fa218",
+      "volume_mm3": 8172.199645159602,
+      "bounds_mm": [
+        [
+          -22.5,
+          -97.99810791015625,
+          -12.106931686401367
+        ],
+        [
+          -7.5,
+          -68.08174133300781,
+          7.626707077026367
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch2_compliant_fit_base_mold_b.stl",
+      "sha256_step": "d50d7633a153016a39fa47a4a983578c7a3e10eced4a1442f7e7e39039cce2d1",
+      "sha256_stl": "49186598f15847949ba7dc212774fca6d8faf5abb2fa132fdd75434809c5a387",
+      "volume_mm3": 8172.1996451595915,
+      "bounds_mm": [
+        [
+          -7.5,
+          -97.99810791015625,
+          -12.106931686401367
+        ],
+        [
+          7.5,
+          -68.08174133300781,
+          7.626707077026367
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch2_retained_cover_mold_a.stl",
+      "sha256_step": "6c98e554c88b5e3373d27d7f6fbde30dde2bed7a5834f05f01ca332c68f4ad9f",
+      "sha256_stl": "4571c3858bedaea96b2a87b07fd29fcd7119bfe694a94dbaf47debe280a36605",
+      "volume_mm3": 8031.965419156124,
+      "bounds_mm": [
+        [
+          -22.5,
+          -97.83625030517578,
+          -12.778812408447266
+        ],
+        [
+          -7.5,
+          -68.09674835205078,
+          6.674136161804199
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch2_retained_cover_mold_b.stl",
+      "sha256_step": "f56cb6c4709176781b648ed6a044b0183c0475c2f95ad08977d71a4b1aedd7c9",
+      "sha256_stl": "4f9f9e5cb168d4fb33a06d62fa7ce5958b1e7965b1551d0b7048efee831e1300",
+      "volume_mm3": 8031.965419156116,
+      "bounds_mm": [
+        [
+          -7.5,
+          -97.83625030517578,
+          -12.778812408447266
+        ],
+        [
+          7.5,
+          -68.09674835205078,
+          6.674136161804199
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch0_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch0_retained_cover_mold_a.stl",
+      "sha256_step": "5dc8d2e5050ab6d4658998f8af6a08adfb8a188bef89d590063fedda5032b482",
+      "sha256_stl": "ec5e500ba4de5b2cc28ce19621f0f92832509b864a3714875c0a541f40a3e9fe",
+      "volume_mm3": 6939.933495511066,
+      "bounds_mm": [
+        [
+          -27.28700065612793,
+          -125.3910140991211,
+          -12.771378517150879
+        ],
+        [
+          -13.82192325592041,
+          -93.0617904663086,
+          4.437951564788818
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch0_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch0_retained_cover_mold_b.stl",
+      "sha256_step": "d09b7af2162f6f1914b19e5b335a45b894ac2d991a021ea3dd9342fead499c37",
+      "sha256_stl": "23485b3daeb72f56e13e7e5066580a4a928ca5a0a9bd31e557ca32576f99a082",
+      "volume_mm3": 6937.1023245459255,
+      "bounds_mm": [
+        [
+          -13.82192325592041,
+          -125.3910140991211,
+          -12.771378517150879
+        ],
+        [
+          -0.3568464517593384,
+          -93.0617904663086,
+          4.437951564788818
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch1_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch1_retained_cover_mold_a.stl",
+      "sha256_step": "9e8574f5c45b8eca464dedc6815988287651876c70d5155f54153f119bd2a0a9",
+      "sha256_stl": "9ff3fafcfdc111bdeb5efe8658d4a7a08e144a3fcc3602801e767a59cf979209",
+      "volume_mm3": 6940.889808878695,
+      "bounds_mm": [
+        [
+          -15.456846237182617,
+          -125.3910140991211,
+          -12.771378517150879
+        ],
+        [
+          -1.984552025794983,
+          -93.0617904663086,
+          4.437951564788818
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch1_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch1_retained_cover_mold_b.stl",
+      "sha256_step": "b4c69b6ed5d9f7a2dcf05edf337dd230050243c19158e8b2f8532f2e0b3b5c37",
+      "sha256_stl": "ac0a639d009fde2008e93e4e42967c8bae9efddcac94d2b8cc952279426c5fb0",
+      "volume_mm3": 6943.705933593537,
+      "bounds_mm": [
+        [
+          -1.984552025794983,
+          -125.3910140991211,
+          -12.771378517150879
+        ],
+        [
+          11.48774242401123,
+          -93.0617904663086,
+          4.437951564788818
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch3_compliant_fit_base_mold_a.stl",
+      "sha256_step": "c3d5c10fda0e19f5f7fc62e983b03fee3a040ac7c534dbb365f2691e87374cb9",
+      "sha256_stl": "adf37fd78beb85c0934a975be4df139f4d39285e5f9338236298e9ccd3249d7a",
+      "volume_mm3": 9866.112152612035,
+      "bounds_mm": [
+        [
+          -22.5,
+          -80.98521423339844,
+          -12.347702026367188
+        ],
+        [
+          -7.5,
+          -51.04524612426758,
+          11.153228759765625
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch3_compliant_fit_base_mold_b.stl",
+      "sha256_step": "437e162de704a20ff4c9e27101db1d09dbcee0d65767831c8cf0dc05f2435cad",
+      "sha256_stl": "100b6915249cad674cae7433aaa7691162e28188f92503263bd9d9836668c014",
+      "volume_mm3": 9866.112152612037,
+      "bounds_mm": [
+        [
+          -7.5,
+          -80.98521423339844,
+          -12.347702026367188
+        ],
+        [
+          7.5,
+          -51.04524612426758,
+          11.153228759765625
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch3_retained_cover_mold_a.stl",
+      "sha256_step": "a31f2dea980890d492076c9dfef0781b61ce55e3d053613145492d3ebe9892d8",
+      "sha256_stl": "effbde88d9867154599c066866cd221c39dd194fdfd4d7576303bc95a48be93f",
+      "volume_mm3": 10057.43549439209,
+      "bounds_mm": [
+        [
+          -22.5,
+          -80.98526763916016,
+          -13.024102210998535
+        ],
+        [
+          -7.5,
+          -50.50465774536133,
+          10.400860786437988
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch3_retained_cover_mold_b.stl",
+      "sha256_step": "cc5d3b63b8a9d935d4d9762655056d0ea0df52d521fa10e1159465cd0cc2c053",
+      "sha256_stl": "3b70cecfadcb94beb0835fa86072cf23082772d249479c5082e08141e8c255fd",
+      "volume_mm3": 10057.435494392086,
+      "bounds_mm": [
+        [
+          -7.5,
+          -80.98526763916016,
+          -13.024102210998535
+        ],
+        [
+          7.5,
+          -50.50465774536133,
+          10.400860786437988
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch4_compliant_fit_base_mold_a.stl",
+      "sha256_step": "ab31b808709e0327377dbd47bdd567d5a5a8ce0e568e4cbfbcb736230e96191b",
+      "sha256_stl": "d3fec15e40509b3a3b9d3a69034cf1a1c388cf5e61d05bcac3dfb798c20adae5",
+      "volume_mm3": 9103.397603265468,
+      "bounds_mm": [
+        [
+          -22.5,
+          -64.00642395019531,
+          -1.3842673301696777
+        ],
+        [
+          -7.5,
+          -34.0776252746582,
+          20.376731872558594
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch4_compliant_fit_base_mold_b.stl",
+      "sha256_step": "bbdab1da3ed5378ec086362ef652758a7fe3ca5804b226ce163324c692526947",
+      "sha256_stl": "c1a5979d44923c2cf17634850390c6c30cb9a7c0573f6a026d6a77118bee5731",
+      "volume_mm3": 9103.397603265505,
+      "bounds_mm": [
+        [
+          -7.5,
+          -64.00642395019531,
+          -1.3842673301696777
+        ],
+        [
+          7.5,
+          -34.0776252746582,
+          20.376731872558594
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch4_retained_cover_mold_a.stl",
+      "sha256_step": "8a595011720765f160f4f6cd01785fcc9496d99c237162b88c43360911686b9e",
+      "sha256_stl": "c7dfd31f146f49d8e2c248ae6368f804ddc6d3773106e9e617346b48b461825d",
+      "volume_mm3": 8808.572574314572,
+      "bounds_mm": [
+        [
+          -22.5,
+          -63.91447448730469,
+          -1.8624078035354614
+        ],
+        [
+          -7.5,
+          -34.172725677490234,
+          19.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch4_retained_cover_mold_b.stl",
+      "sha256_step": "37b8f9591de5147e7a0e91323f697955b1bdef14b4f1c7783c06c74144630c45",
+      "sha256_stl": "c6e0d1c5a71c629c4415557aa79fc2443be30e2c8e57355838f3a8bcbb6627d3",
+      "volume_mm3": 8808.572574314572,
+      "bounds_mm": [
+        [
+          -7.5,
+          -63.91447448730469,
+          -1.8624078035354614
+        ],
+        [
+          7.5,
+          -34.172725677490234,
+          19.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch5_compliant_fit_base_mold_a.stl",
+      "sha256_step": "32b73ef11bd58eaa5ae64bd8c99c5018080502b9d051494fac26d21460720398",
+      "sha256_stl": "c5aafc400d9570d2856ade9388dc280bb443dece1728a57d0d50289269e175b7",
+      "volume_mm3": 14066.365601084166,
+      "bounds_mm": [
+        [
+          -22.5,
+          -47.011878967285156,
+          -12.404206275939941
+        ],
+        [
+          -7.5,
+          -15.084306716918945,
+          18.445816040039062
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch5_compliant_fit_base_mold_b.stl",
+      "sha256_step": "031a45662c36e98e1dae7648fa22e5bd6acdc68ce4615a822d0a887b223370a1",
+      "sha256_stl": "3fb436d0c970d43bef940b0a0894e1f5b56867be2f0f254f62c7619a173dbaba",
+      "volume_mm3": 14066.365601084166,
+      "bounds_mm": [
+        [
+          -7.5,
+          -47.011878967285156,
+          -12.404206275939941
+        ],
+        [
+          7.5,
+          -15.084306716918945,
+          18.445816040039062
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch5_retained_cover_mold_a.stl",
+      "sha256_step": "a66631cd2e5f9e70403ba1e7abac62b3b7e92e0ba85f8b584ab3c15fb4e74ada",
+      "sha256_stl": "ec95525f8573f493a4304111b72a2d360f32fda5b681e42c33596b89a674fbf9",
+      "volume_mm3": 14033.522639786406,
+      "bounds_mm": [
+        [
+          -22.5,
+          -47.37270736694336,
+          -13.080605506896973
+        ],
+        [
+          -7.5,
+          -15.072134017944336,
+          17.262224197387695
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch5_retained_cover_mold_b.stl",
+      "sha256_step": "6e2df5e4197fde86fe3148b35dec80584fbe11398d068119b5541b6a78694b28",
+      "sha256_stl": "870228a2cf0be2097b44db34fc65eec0535798117089d3320bb2c9fea62484d2",
+      "volume_mm3": 14033.522639786399,
+      "bounds_mm": [
+        [
+          -7.5,
+          -47.37270736694336,
+          -13.080605506896973
+        ],
+        [
+          7.5,
+          -15.072134017944336,
+          17.262224197387695
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "physical_specimens_tested": 0,
+  "physical_qualification": false,
+  "status": "Digital bench-assembly package; terminal/cable acceptance and physical qualification remain",
+  "nominal_nail_addition_mm": 0.4614,
+  "nominal_stack_above_r1_tpu_datum_mm": 0.7264,
+  "unqualified_connector_count": 12,
+  "unqualified_part_connector_pairs": 40,
+  "inputs": {
+    "skin": "254bbf9971bdb0e665e7bb7fefba01fee21100891560f90c6f8c3cf5f08f0be7",
+    "terminals": "3403ede1e7bef6a070f9ab4fbb567474655579cf22e4379bbb6704a48416db87",
+    "foils": "18ff94f6ca2811a98276121642a6b670b581969e3df634dbe98864d632103930",
+    "patterns": "8a44604ae8327a7a77b35ca27aa13eac739e7cfcb300379ce1e781bc63cfcb9b",
+    "assembly": "3e1ece92fd96b30564898c0973fd2baf424d8031e1622a528b832355ca35abe3",
+    "visuals": "a4e4a534fceb3707719dece0307d4a158488cf18d6f4db2f5d464f690962d172",
+    "artwork": "50e9b79fb70abc8036f60950584072f1145d1e457abc82d1e467d2cc6af8adfb",
+    "native_check": "ecebea647ae7087f9337e4356538b8b745c56b5c525e9d343884f55d61549b54",
+    "tip_review": "b77f756c9be546619b46d58034146dfafa7dba3938446a0112b14f49734cf923",
+    "dc": "002b9cc89ac4d957e863973bf244ed0889afb51ed255a38a4c9638fe3100a58e",
+    "network": "5a616885bd33b8932694efca8c10b27a34d20f1374ddc419168049ba87563357"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "physical_copper_layers": 2,
+  "covered_nominal_thickness_mm": 0.195,
+  "polyimide_core_nominal_mm": 0.025,
+  "copper_nominal_mm_per_layer": 0.035,
+  "coverlay_nominal_mm_where_present": 0.05,
+  "note": "Development target only. Exposed and stiffened regions have different thickness. Do not use a generic FR4/even-layer job stack; finish the complete manufacturing drawing before ordering."
+}

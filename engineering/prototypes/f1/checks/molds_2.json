@@ -1,0 +1,606 @@
+{
+  "schema": "yam-f1-skin-molds/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "f1_ch4_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch4_compliant_fit_base_mold_a.stl",
+      "sha256_step": "ab31b808709e0327377dbd47bdd567d5a5a8ce0e568e4cbfbcb736230e96191b",
+      "sha256_stl": "d3fec15e40509b3a3b9d3a69034cf1a1c388cf5e61d05bcac3dfb798c20adae5",
+      "volume_mm3": 9103.397603265468,
+      "bounds_mm": [
+        [
+          -22.5,
+          -64.00642395019531,
+          -1.3842673301696777
+        ],
+        [
+          -7.5,
+          -34.0776252746582,
+          20.376731872558594
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch4_compliant_fit_base_mold_b.stl",
+      "sha256_step": "bbdab1da3ed5378ec086362ef652758a7fe3ca5804b226ce163324c692526947",
+      "sha256_stl": "c1a5979d44923c2cf17634850390c6c30cb9a7c0573f6a026d6a77118bee5731",
+      "volume_mm3": 9103.397603265505,
+      "bounds_mm": [
+        [
+          -7.5,
+          -64.00642395019531,
+          -1.3842673301696777
+        ],
+        [
+          7.5,
+          -34.0776252746582,
+          20.376731872558594
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch4_retained_cover_mold_a.stl",
+      "sha256_step": "8a595011720765f160f4f6cd01785fcc9496d99c237162b88c43360911686b9e",
+      "sha256_stl": "c7dfd31f146f49d8e2c248ae6368f804ddc6d3773106e9e617346b48b461825d",
+      "volume_mm3": 8808.572574314572,
+      "bounds_mm": [
+        [
+          -22.5,
+          -63.91447448730469,
+          -1.8624078035354614
+        ],
+        [
+          -7.5,
+          -34.172725677490234,
+          19.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch4_retained_cover_mold_b.stl",
+      "sha256_step": "37b8f9591de5147e7a0e91323f697955b1bdef14b4f1c7783c06c74144630c45",
+      "sha256_stl": "c6e0d1c5a71c629c4415557aa79fc2443be30e2c8e57355838f3a8bcbb6627d3",
+      "volume_mm3": 8808.572574314572,
+      "bounds_mm": [
+        [
+          -7.5,
+          -63.91447448730469,
+          -1.8624078035354614
+        ],
+        [
+          7.5,
+          -34.172725677490234,
+          19.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_compliant_fit_base_mold_a.step",
+      "stl": "cad/f1_ch5_compliant_fit_base_mold_a.stl",
+      "sha256_step": "32b73ef11bd58eaa5ae64bd8c99c5018080502b9d051494fac26d21460720398",
+      "sha256_stl": "c5aafc400d9570d2856ade9388dc280bb443dece1728a57d0d50289269e175b7",
+      "volume_mm3": 14066.365601084166,
+      "bounds_mm": [
+        [
+          -22.5,
+          -47.011878967285156,
+          -12.404206275939941
+        ],
+        [
+          -7.5,
+          -15.084306716918945,
+          18.445816040039062
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_compliant_fit_base_mold_b.step",
+      "stl": "cad/f1_ch5_compliant_fit_base_mold_b.stl",
+      "sha256_step": "031a45662c36e98e1dae7648fa22e5bd6acdc68ce4615a822d0a887b223370a1",
+      "sha256_stl": "3fb436d0c970d43bef940b0a0894e1f5b56867be2f0f254f62c7619a173dbaba",
+      "volume_mm3": 14066.365601084166,
+      "bounds_mm": [
+        [
+          -7.5,
+          -47.011878967285156,
+          -12.404206275939941
+        ],
+        [
+          7.5,
+          -15.084306716918945,
+          18.445816040039062
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover_mold_a",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_retained_cover_mold_a.step",
+      "stl": "cad/f1_ch5_retained_cover_mold_a.stl",
+      "sha256_step": "a66631cd2e5f9e70403ba1e7abac62b3b7e92e0ba85f8b584ab3c15fb4e74ada",
+      "sha256_stl": "ec95525f8573f493a4304111b72a2d360f32fda5b681e42c33596b89a674fbf9",
+      "volume_mm3": 14033.522639786406,
+      "bounds_mm": [
+        [
+          -22.5,
+          -47.37270736694336,
+          -13.080605506896973
+        ],
+        [
+          -7.5,
+          -15.072134017944336,
+          17.262224197387695
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover_mold_b",
+      "purpose": "Registered split mold with two side overflow paths",
+      "material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_retained_cover_mold_b.step",
+      "stl": "cad/f1_ch5_retained_cover_mold_b.stl",
+      "sha256_step": "6e2df5e4197fde86fe3148b35dec80584fbe11398d068119b5541b6a78694b28",
+      "sha256_stl": "870228a2cf0be2097b44db34fc65eec0535798117089d3320bb2c9fea62484d2",
+      "volume_mm3": 14033.522639786399,
+      "bounds_mm": [
+        [
+          -7.5,
+          -47.37270736694336,
+          -13.080605506896973
+        ],
+        [
+          7.5,
+          -15.072134017944336,
+          17.262224197387695
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "molds": [
+    {
+      "part": "f1_ch4_compliant_fit_base",
+      "checks": [
+        {
+          "a": "mold_a",
+          "b": "mold_b",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_a",
+          "b": "f1_ch4_compliant_fit_base",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_b",
+          "b": "f1_ch4_compliant_fit_base",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "split_native_x_mm": -7.5,
+      "bolts_native_yz_mm": [
+        [
+          -60.00642599687,
+          2.615732724253
+        ],
+        [
+          -60.00642599687,
+          16.376732821732006
+        ],
+        [
+          -38.07762679601977,
+          2.615732724253
+        ],
+        [
+          -38.07762679601977,
+          16.376732821732006
+        ]
+      ],
+      "dowels_native_yz_mm": [
+        [
+          -62.00642599687,
+          9.496232772992503
+        ],
+        [
+          -36.07762679601977,
+          9.496232772992503
+        ]
+      ],
+      "suggested_m3_length_mm_min": 35,
+      "overflow": [
+        {
+          "point_native_mm": [
+            -14.5,
+            -49.59047591247918,
+            10.635471745047607
+          ],
+          "direction": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "target_overlap_mm3": 0.0012799999999999678
+        },
+        {
+          "point_native_mm": [
+            -0.5,
+            -49.59047591247918,
+            10.635471745047607
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "target_overlap_mm3": 0.0012800000000000003
+        }
+      ]
+    },
+    {
+      "part": "f1_ch4_retained_cover",
+      "checks": [
+        {
+          "a": "mold_a",
+          "b": "mold_b",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_a",
+          "b": "f1_ch4_retained_cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_b",
+          "b": "f1_ch4_retained_cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "split_native_x_mm": -7.5,
+      "bolts_native_yz_mm": [
+        [
+          -59.91447397202,
+          2.137592174047585
+        ],
+        [
+          -59.91447397202,
+          15.329483669152387
+        ],
+        [
+          -38.17272429121857,
+          2.137592174047585
+        ],
+        [
+          -38.17272429121857,
+          15.329483669152387
+        ]
+      ],
+      "dowels_native_yz_mm": [
+        [
+          -61.91447397202,
+          8.733537921599986
+        ],
+        [
+          -36.17272429121857,
+          8.733537921599986
+        ]
+      ],
+      "suggested_m3_length_mm_min": 35,
+      "overflow": [
+        {
+          "point_native_mm": [
+            -14.5,
+            -49.546131928156946,
+            10.492176207592914
+          ],
+          "direction": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "target_overlap_mm3": 0.0012799999999999628
+        },
+        {
+          "point_native_mm": [
+            -0.5,
+            -49.546131928156946,
+            10.492176207592914
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "target_overlap_mm3": 0.0012800000000000044
+        }
+      ]
+    },
+    {
+      "part": "f1_ch5_compliant_fit_base",
+      "checks": [
+        {
+          "a": "mold_a",
+          "b": "mold_b",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 8.881784197001252e-16,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_a",
+          "b": "f1_ch5_compliant_fit_base",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_b",
+          "b": "f1_ch5_compliant_fit_base",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "split_native_x_mm": -7.500000000000001,
+      "bolts_native_yz_mm": [
+        [
+          -43.01187905421,
+          -8.4042059353121
+        ],
+        [
+          -43.01187905421,
+          14.445815156456204
+        ],
+        [
+          -19.08430648726643,
+          -8.4042059353121
+        ],
+        [
+          -19.08430648726643,
+          14.445815156456204
+        ]
+      ],
+      "dowels_native_yz_mm": [
+        [
+          -45.01187905421,
+          3.0208046105720516
+        ],
+        [
+          -17.08430648726643,
+          3.0208046105720516
+        ]
+      ],
+      "suggested_m3_length_mm_min": 35,
+      "overflow": [
+        {
+          "point_native_mm": [
+            -14.5,
+            -31.76542122954682,
+            1.145350922645593
+          ],
+          "direction": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "target_overlap_mm3": 0.0012746712550749137
+        },
+        {
+          "point_native_mm": [
+            -0.5,
+            -31.76542122954682,
+            1.145350922645593
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "target_overlap_mm3": 0.0012746712550749145
+        }
+      ]
+    },
+    {
+      "part": "f1_ch5_retained_cover",
+      "checks": [
+        {
+          "a": "mold_a",
+          "b": "mold_b",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_a",
+          "b": "f1_ch5_retained_cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "a": "mold_b",
+          "b": "f1_ch5_retained_cover",
+          "method": "OpenCascade_distance_and_common",
+          "distance_mm": 0.0,
+          "overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "split_native_x_mm": -7.5,
+      "bolts_native_yz_mm": [
+        [
+          -43.37270808897,
+          -9.080605929196
+        ],
+        [
+          -43.37270808897,
+          13.262223608776383
+        ],
+        [
+          -19.0721338365054,
+          -9.080605929196
+        ],
+        [
+          -19.0721338365054,
+          13.262223608776383
+        ]
+      ],
+      "dowels_native_yz_mm": [
+        [
+          -45.37270808897,
+          2.090808839790191
+        ],
+        [
+          -17.0721338365054,
+          2.090808839790191
+        ]
+      ],
+      "suggested_m3_length_mm_min": 35,
+      "overflow": [
+        {
+          "point_native_mm": [
+            -14.5,
+            -31.88924455400412,
+            1.060688154439356
+          ],
+          "direction": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "target_overlap_mm3": 0.0012799999999999715
+        },
+        {
+          "point_native_mm": [
+            -0.5,
+            -31.88924455400412,
+            1.060688154439356
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "target_overlap_mm3": 0.0012800000000000027
+        }
+      ]
+    }
+  ],
+  "source_skin_sha256": "254bbf9971bdb0e665e7bb7fefba01fee21100891560f90c6f8c3cf5f08f0be7",
+  "input_sha256": {
+    "engineering/designs/f1_skin_molds_r4.json": "998e696a5f9e12b1c7f34dcb8e5d2a34bb68fbdd9b6e2d9ef73aeb959634333a",
+    "engineering/designs/f1_skin_r4.json": "b2e5f009d0c27b1bf44cfb749cea07a6887a790128417fb63133652060c00b01",
+    "build/engineering/prototypes/f1/retained_skin_cad/20261012T013443.013063Z/report.json": "254bbf9971bdb0e665e7bb7fefba01fee21100891560f90c6f8c3cf5f08f0be7",
+    "engineering/scripts/build_f1_skin_molds.py": "29df193cc499ca97e8511a7062dbc2384aec9afedc43a823b67c14f70261e5ba"
+  },
+  "process": [
+    "Use two 3 mm x 8 mm registration pins and four M3 clamp fasteners per mold.",
+    "Wet the open cavities with degassed Dragon Skin 10 Slow, close the registered halves evenly and let surplus material escape through the side channels.",
+    "Follow the current material mixing and cure instructions; first check inhibition and release on a small coupon.",
+    "Trim side flash without cutting the sealing foot or foil-neck port; measure the finished cover and fitting-base dimensions."
+  ],
+  "limits": [
+    "Nominal tooling geometry does not establish cure, shrinkage, demolding, adhesion or skin life.",
+    "The 0.10 mm nail cover and 0.08 mm overflow features require a qualified precision process.",
+    "Actual M3 bolt length depends on the exported blank width and the chosen washers/nuts."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "yam-f1-exit-development/1",
+  "status": "Alternative CH2 distal exit to move its flexible neck away from the middle side-fastener axis",
+  "exit_native_y_mm_by_site": [-95.5, -98.5, -92.5, -57.5, -40.5, -21.0],
+  "edge_by_site": ["proximal", "proximal", "distal", "proximal", "proximal", "proximal"],
+  "site_to_connector_id": ["J0", "J1", "J2", "J3", "J5", "J4"],
+  "global_columns_by_site": [[0, 1], [2, 3], [4, 5, 6], [7, 8, 9], [13, 14, 15], [10, 11, 12]],
+  "notes": [
+    "This is a separate routing candidate; it is not an accepted revision until frame and tail checks pass.",
+    "A distal CH2 exit needs matching electrode-feed artwork. Do not bend the old proximal-tail foil into this pose.",
+    "The original proximal candidate and its sampled section results remain preserved."
+  ]
+}

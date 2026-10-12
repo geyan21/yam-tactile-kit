@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import cadquery as cq
 import numpy as np
 from shapely import affinity
-from shapely.geometry import Polygon, box
+from shapely.geometry import Point, Polygon, box
 from tactile_kit.records import execution
 from f1_surfaces import load_surfaces, layer_offsets
 from build_f1_stack_parts import slab, mandrel
@@ -68,7 +68,11 @@ def main():
                     raise ValueError(f"CH{site}: the cover cannot enclose the foil within the available nail face")
                 frame_top = 0.
             else:
-                cover_domain = box(-surface.width/2, 0, surface.width/2, surface.length)
+                side_margin = config["tpu_cover_margin_beyond_foil_mm_each_side"]
+                cover_domain = box(body.bounds[0]-side_margin, 0, body.bounds[2]+side_margin, surface.length)
+                raw_width = max(nail["tpu_width_coordinates_mm"])-min(nail["tpu_width_coordinates_mm"])
+                if not cover_domain.bounds[2]-cover_domain.bounds[0] < raw_width:
+                    raise ValueError("The cover must retain clearance within the source TPU width")
                 frame_top = mount-config["foil_mount_bond_nominal_mm"]
                 witness = next(p for p in r1["parts"] if p["id"] == f"pad_{site}_saddle_witness")
                 path = ROOT / "engineering/release/r1" / witness["step"]
@@ -78,6 +82,20 @@ def main():
                 base = cq.importers.importStep(str(path)).val()
                 x0 = r1["pads"][site-2]["assembly_native_x_limits_mm"][0]
                 base = base.rotate((0, 0, 0), (1, 1, 1), 120).translate((x0, 0, 0))
+                # The retained R1 witness is a constant-section extrusion.
+                # Extend that same fit section laterally to support the
+                # cover foot; do not leave a floating side skirt.
+                width_before = base.BoundingBox().xlen
+                volume_before = base.Volume()
+                width_after = cover_domain.bounds[2]-cover_domain.bounds[0]
+                extra = (width_after-width_before)/2
+                if extra < -1e-6:
+                    raise ValueError("Unexpected fitting-base width reduction")
+                if extra > 1e-6:
+                    base = base.translate((-extra, 0, 0)).fuse(base.translate((extra, 0, 0))).clean()
+                    expected_volume = volume_before*width_after/width_before
+                    if abs(base.Volume()-expected_volume) > max(.001, expected_volume*1e-5):
+                        raise ValueError("The fit witness is not the assumed constant transverse section")
                 a, _, _ = surface.frame(0); b, _, _ = surface.frame(surface.length)
                 bb = base.BoundingBox()
                 base = base.intersect(block(bb.xmin-1, bb.xmax+1, a[1], b[1], bb.zmin-2, bb.zmax+2))
@@ -91,6 +109,11 @@ def main():
                     base_checks.append(check_pair(identifier, base, other_name, other))
                 bases.append((identifier, base))
             wall = cover_domain.difference(body.buffer(config["side_clearance_to_foil_mm"], join_style="mitre"))
+            if site >= 2:
+                side_mid = (body.bounds[1]+body.bounds[3])/2
+                for side_u in (cover_domain.bounds[0]+.1, cover_domain.bounds[2]-.1):
+                    if not wall.covers(Point(side_u, side_mid)):
+                        raise ValueError("TPU cover requires both lateral retention walls")
             foot_height = frame_top+config["frame_bond_nominal_mm"]
             edge = exits["edge_by_site"][site]
             if edge == "distal":

@@ -266,9 +266,9 @@
       "related": ["B2", "B1", "NAIL", "C1"]
     },
     {
-      "id": "F1", "slug": "flexible-matrix", "title": "F1 · Dense resistive contact matrix", "group": "development",
-      "status": "R3 interface and electrode files",
-      "status_detail": "R3 has a checked fanout, twelve routed sensing foils, a 64-location map and matching carrier/fit files. Wrist readout and raw code are available. Finished mating/lamination, the full resistance budget, object/motion clearance and the complete physical finger remain unfinished.",
+      "id": "F1", "slug": "flexible-matrix", "title": "F1.1 R4 · Dense resistive contact matrix", "group": "prototype",
+      "status": "Digital bench prototype · unbuilt",
+      "status_detail": "The R4 package supplies 96 CAD parts/references, twelve checked flexes, matching fanout/wrist electronics, retained covers and molds, manufacturing instructions and stationary-force software. Physical specimens tested: 0; actual connector seating, seals, slack and performance remain unqualified.",
       "summary": "Place a custom pressure-film matrix on each nail prong and each of four TPU contact regions: 64 intended electrical contact locations, with rigid readout electronics at the wrist.",
       "signal": "Raw electrical response at a 4 × 16 allocation. Force, contact thresholds and crosstalk behavior require physical calibration.",
       "best_for": "Denser contact location when it justifies custom flex manufacture and additional electronics.",
@@ -279,19 +279,31 @@
         ["Twelve foil connectors", "Hirose FH12-6S-1SH(1)(98), bottom contact, 1 mm pitch", "On the checked R3 fanout at the fixed finger side; its upper connector pairs face toward the back"],
         ["Wrist readout", "Pico, OPA392 amplifiers, ADG706 current/sense multiplexers, switched gains, ADS8866 ADC and reference circuit", "At the wrist/base, connected to the fanout by a 50-conductor cable"]
       ],
-      "placement": "The tactile sensor is the film/electrode laminate at the contact surface. Nominal layer-reference additions are 0.455 mm at the nail and 0.72 mm at the TPU. The PCB, ADC and connectors stay off the flexible contact faces. Paper patterns are mechanical fit tools, not routed sensor foils.",
-      "visual": {"path": "assets/development/f1/r3/visuals/nominal_assembly.png", "alt": "F1 source finger with six sensing stacks, twelve reference tails, R3 fanout and carrier", "caption": "R3 nominal fit references; matching copper is supplied separately. Connector cavities, finished lamination, object/motion envelopes and physical qualification remain."},
-      "placement_visual": {"path": "assets/development/f1/r3/visuals/sensor_placement.png", "alt": "The two nail matrices and four TPU matrices with an explicit film/electrode stack and remote readout", "caption": "Proposed sensing allocation on the actual source geometry. The diagram identifies the sensor and its location; it is not fabrication copper."},
+      "placement": "The tactile sensor is the film/electrode laminate at the contact surface. R4's plated-stack targets are 0.4614 mm at the nail and 0.7264 mm above the R1 TPU datum, with the variable fitting base below it. The PCB, ADC and connectors stay off the flexible contact faces. The current 3D viewer shows six retained film islands, complete flex envelopes and reinforced terminals.",
+      "visual": {"path": "assets/prototypes/f1/visuals/f1_r4_assembly.png", "alt": "F1 R4 source finger with six pressure-film islands, retained covers, twelve complete flex envelopes and the fixed R3 fanout", "caption": "Actual R4 CAD, with source and covers transparent so the purple film islands remain visible. The nail notch is open. No physical sensor performance is shown."},
+      "placement_visual": {"path": "assets/prototypes/f1/visuals/f1_stack.svg", "alt": "F1 R4 film, electrode faces, protective covers, bonds and nominal nail/TPU stack dimensions", "caption": "The selected sensing material and layer order. TPU covers and fitting bases are 14 mm wide around 13 mm foils; actual cured dimensions and loaded behavior require measurement."},
       "detail_visuals": [
-        {"path": "assets/development/f1/fitted-foils-r3/review/fitted_contact_map.png", "alt": "All 64 row and column locations on the two nail prongs and four TPU regions, extracted from the fitted electrode copper", "caption": "Actual routed-copper overlaps mapped onto the source surfaces. CH2's columns are reversed for its distal exit. This is a nominal electrical allocation; pressure independence and force accuracy require measurements."}
+        {"path": "assets/prototypes/f1/visuals/f1_wiring.svg", "alt": "F1's six sensor locations, twelve flex tails, R3 fanout and separate wrist readout", "caption": "Which parts sense contact and which parts read the signal. The fifty-conductor cable requires physical continuity and seating checks."},
+        {"path": "assets/prototypes/f1/visuals/f1_contact_map.png", "alt": "All 64 row and column locations on the two nail prongs and four TPU regions, extracted from the fitted electrode copper", "caption": "Actual routed-copper overlaps mapped onto the source surfaces. CH2's columns are reversed for its distal exit. This is a nominal electrical allocation; pressure independence and force accuracy require measurements."},
+        {"path": "assets/prototypes/f1/visuals/routed_dc_screen.png", "alt": "F1 routed ideal-feedback electrical interaction model across three resistance assumptions", "caption": "All stated cases meet the provisional 1% electrical interaction screen, with a worst value of 0.9253%. This model omits continuous-film conduction and full dynamics; it is not force or contact qualification."}
       ],
-      "viewer_model": "f1_r3_assembly_reference",
-      "viewer_label": "Inspect F1 R3 nominal fit geometry in 3D",
+      "viewer_model": "f1_r4_assembly_reference",
+      "viewer_label": "Inspect the F1 R4 material assembly in 3D",
+      "prototype_cad_group": "f1",
       "schematic": ["Object contact", "Patterned resistive matrix", "Multiplexed readout", "Calibrated contact map"],
       "resources": [
         ["Start here", "Exact sensor stack, placement and student fit procedure", "build-f1.html"],
         ["Electronics and code", "F1 wiring, GPIO, ADC timing and raw recorder", "f1-capture.html"],
-        ["Current R3 packet", "Checked PCB/artwork, carrier, forming tools, CAD, fit patterns and evidence", "assets/development/f1/r3/file-index.html"],
+        ["R4 materials", "Proposed finished flex, covers, bonds, assembly and incoming checks", "f1-manufacturing.html"],
+        ["Physical tests", "Stationary-force training and independent evaluation workflow", "f1-testing.html"],
+        ["Trial template", "Unmeasured physical force-trial manifest", "downloads/f1_force_trials.json"],
+        ["Current prototype", "All R4 CAD, flex/readout files, patterns, code and checks", "assets/prototypes/f1/file-index.html"],
+        ["Prototype download", "Complete F1.1 R4 bench package (ZIP)", "downloads/f1-prototype.zip"],
+        ["Materials", "Per-finger materials and hardware list", "assets/prototypes/f1/bom.csv"],
+        ["Part index", "All 96 parts, tools and reference envelopes", "assets/prototypes/f1/parts.csv"],
+        ["Digital reproduction", "Exact generator and checker commands", "f1-reproduce.html"],
+        ["Assembly check", "All 5,638 comparisons and explicitly unqualified mating interfaces", "assets/prototypes/f1/checks/assembly.json"],
+        ["Preserved R3 packet", "Earlier PCB/artwork, carrier, forming tools and fit evidence", "assets/development/f1/r3/file-index.html"],
         ["Fitted electrode foils", "Twelve native boards, copper/coverlay checks, artwork and drawings", "assets/development/f1/fitted-foils-r3/file-index.html"],
         ["Contact map", "64 row/column locations and native surface coordinates (CSV)", "assets/development/f1/fitted-foils-r3/review/taxels.csv"],
         ["Trace estimates", "Forty partial conductor-resistance estimates and their scope (CSV)", "assets/development/f1/fitted-foils-r3/review/foil_resistance.csv"],
@@ -309,8 +321,8 @@
         ["Reference", "HiPi paper", "https://arxiv.org/abs/2606.11372"],
         ["Baseline", "R1 independent film cells", "r1.html"]
       ],
-      "missing": ["Finished flex manufacturing/lamination drawing and complete foil/contact/cable/PCB resistance budget", "Verified connector mating, stiffeners, sealing, inextensible slack, object-access envelopes and loaded fit", "Full coupled-array/reference and physical electronics validation", "Independent specimens, contact reliability, held-out force error through 20 N and precision-task results"],
-      "next_steps": ["Build the carrier and paper/polyester tail fit mockup, recording the actual connector and drive clearances.", "Finish the mating/lamination specification and whole-system electrical checks, then fabricate and bring up the complete sensor.", "Measure independent specimens against the simpler designs before selecting F1 for force feedback."],
+      "missing": ["Physical fabrication and complete terminal/cable acceptance", "Measured adhesion, cured seals, strain relief, inextensible slack and loaded drive/object fit", "Full coupled-array dynamics, continuous-film interactions and physical electronics validation", "Independent specimens, contact reliability, held-out force error through 20 N and precision-task results"],
+      "next_steps": ["Build the carrier and terminal coupons, recording the actual connector and drive clearances.", "Use the R4 manufacturing and physical-test guides to assemble first specimens and freeze a measured gain/timing configuration.", "Measure independent specimens against the simpler designs before selecting F1 for force feedback."],
       "related": ["R1", "B1", "CAPACITIVE"]
     },
     {

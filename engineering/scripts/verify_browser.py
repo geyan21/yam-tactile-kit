@@ -27,7 +27,7 @@ def main():
     parser.add_argument("--checks-only",action="store_true")
     parser.add_argument("--site",type=Path,default=ROOT/"build/site")
     parser.add_argument("--expect-hosted-links",action="store_true")
-    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis","f1-page","f1-mobile","f1-placement","f1-guide","f1-files","k1-page","k1-mobile","k1-guide","k1-stack","k1-files","fb1-page","fb1-mobile","fb1-guide","fb1-stack","fb1-files","fb1-pcb"),
+    parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis","f1-page","f1-mobile","f1-placement","f1-guide","f1-files","f1-stack","f1-wiring","f1-tests","k1-page","k1-mobile","k1-guide","k1-stack","k1-files","fb1-page","fb1-mobile","fb1-guide","fb1-stack","fb1-files","fb1-pcb"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
@@ -164,9 +164,12 @@ def main():
                     ("recessed-analysis","1440,1800","recessed-analysis.html"),
                     ("f1-page","1440,1700","flexible-matrix.html"),
                     ("f1-mobile","500,3200","f1-mobile.html"),
-                    ("f1-placement","1440,1100","assets/development/f1/r3/visuals/sensor_placement.png"),
+                    ("f1-placement","1440,1100","assets/prototypes/f1/visuals/f1_r4_assembly.png"),
                     ("f1-guide","1440,1800","build-f1.html"),
-                    ("f1-files","1440,1600","assets/development/f1/r3/file-index.html"),
+                    ("f1-files","1440,1600","assets/prototypes/f1/file-index.html"),
+                    ("f1-stack","1160,950","assets/prototypes/f1/visuals/f1_stack.svg"),
+                    ("f1-wiring","1160,930","assets/prototypes/f1/visuals/f1_wiring.svg"),
+                    ("f1-tests","1440,1800","f1-testing.html"),
                     ("k1-page","1440,1800","capacitive.html"),
                     ("k1-mobile","500,3200","k1-mobile.html"),
                     ("k1-guide","1440,1800","build-capacitive.html"),

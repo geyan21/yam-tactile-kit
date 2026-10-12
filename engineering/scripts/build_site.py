@@ -49,6 +49,9 @@ DOCS=[
     ("RECESSED_ANALYSIS","recessed-analysis","B3 digital results"),
     ("BUILD_F1","build-f1","F1 development & fit packet"),
     ("F1_WRIST_CAPTURE","f1-capture","F1 wiring & raw capture"),
+    ("F1_MANUFACTURING","f1-manufacturing","F1 R4 materials & assembly"),
+    ("F1_TESTING","f1-testing","F1 stationary-force tests"),
+    ("F1_REPRODUCE","f1-reproduce","Reproduce F1 R4"),
     ("BUILD_CAPACITIVE","build-capacitive","Build K1 capacitive cells"),
     ("CAPACITIVE_TESTING","capacitive-testing","K1 calibration & tests"),
     ("BUILD_FORCE_BUTTON","build-force-button","Build FB1 force button"),
@@ -225,7 +228,7 @@ def main():
         assets.mkdir();downloads.mkdir()
         for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg","b1-wiring.svg",
                      "sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg",
-                     "design-pages.css","design-viewer.js","r1-placement.svg"):
+                     "design-pages.css","design-viewer.js","r1-placement.svg","f1_stack.svg","f1_wiring.svg"):
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
@@ -280,6 +283,7 @@ def main():
             (ROOT/"engineering/templates/recessed_specimen.json","recessed_specimen.json"),
             (ROOT/"engineering/templates/force_button_force_trials.json","force_button_force_trials.json"),
             (ROOT/"engineering/templates/capacitive_force_trials.json","capacitive_force_trials.json"),
+            (ROOT/"engineering/templates/f1_force_trials.json","f1_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
@@ -336,6 +340,9 @@ def main():
         fb1=ROOT/"engineering/prototypes/force_button"
         write_zip(downloads/"fb1-prototype.zip",
                   {str(p.relative_to(fb1)):p.read_bytes() for p in fb1.rglob("*") if p.is_file()})
+        f1=ROOT/"engineering/prototypes/f1"
+        write_zip(downloads/"f1-prototype.zip",
+                  {str(p.relative_to(f1)):p.read_bytes() for p in f1.rglob("*") if p.is_file()})
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
         offline={}
@@ -351,7 +358,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile engineering packet: nine digital prototype packages; physical tests pending\n\n"
+            "ENPIRE tactile engineering packet: ten digital prototype packages; physical tests pending\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
@@ -361,7 +368,7 @@ def main():
             "B1 files: source/engineering/release/b1; electronics source: source/engineering/electronics/b1.\n"
             "B2.1 files: source/engineering/prototypes/b2; instructions: website/build-b2.html.\n"
             "All twelve designs and planned comparisons: website/build-all.html.\n"
-            "F1 development modules and fit patterns: website/flexible-matrix.html and source/engineering/development/f1.\n"
+            "F1.1 R4 matrix: website/flexible-matrix.html and source/engineering/prototypes/f1; earlier modules remain in engineering/development/f1.\n"
             "K1 capacitive tooling/readout modules: website/capacitive.html and source/engineering/development/capacitive/k1.\n"
             "K1.2 capacitive bench prototype: source/engineering/prototypes/capacitive; tests: website/capacitive-testing.html.\n"
             "FB1.1 force-button root prototype: website/force-button.html and source/engineering/prototypes/force_button.\n"

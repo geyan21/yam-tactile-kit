@@ -1,0 +1,55 @@
+{
+  "terminal_basis_artwork_sha256": "bcbbe3cd0658afe3b71e21d970607bad8aa38033fc8a0c54c1d7d6e26f32d6d7",
+  "final_artwork_sha256": "50e9b79fb70abc8036f60950584072f1145d1e457abc82d1e467d2cc6af8adfb",
+  "foils": [
+    {
+      "foil": "f1_ch0_columns",
+      "identical_geometry_sha256": "3758c10cd10f1a260bdeebf923d08c88ef89eca41f6251179c5bbd3cef860f37"
+    },
+    {
+      "foil": "f1_ch0_rows",
+      "identical_geometry_sha256": "828b8cc36af2412f934c20589552f5e552de45fb122d6490390d5e3eb97fdab0"
+    },
+    {
+      "foil": "f1_ch1_columns",
+      "identical_geometry_sha256": "bfee8a35ac3681bcf8a2cb9405ccc0e02d6c6a32525104e7316e3be773f0ebe2"
+    },
+    {
+      "foil": "f1_ch1_rows",
+      "identical_geometry_sha256": "c9db2bcb9deb378827f935fe96bb045a624f71156007e2c72144ebb9e37fbb42"
+    },
+    {
+      "foil": "f1_ch2_columns",
+      "identical_geometry_sha256": "62284426684016bfa0c356fb712db8f793befbdb1b8dcdb3fb1787e2ace3a174"
+    },
+    {
+      "foil": "f1_ch2_rows",
+      "identical_geometry_sha256": "8e60170035b41b155b35b7adf76e544a29f8b1fdfb2f2d0a9282ee32b4a47f87"
+    },
+    {
+      "foil": "f1_ch3_columns",
+      "identical_geometry_sha256": "70a6778db7e710d45a35d9c5c3d727c221ba7b0ab7c4c7f32015be33f83d8512"
+    },
+    {
+      "foil": "f1_ch3_rows",
+      "identical_geometry_sha256": "e4f6616fcdd8605270a2f41605e225632631f10ed52790af41858b6a08b0a39e"
+    },
+    {
+      "foil": "f1_ch4_columns",
+      "identical_geometry_sha256": "340765f84c904a8b469e398a233eec309936bc34ab24cdd7d3a7cdc93e289eb8"
+    },
+    {
+      "foil": "f1_ch4_rows",
+      "identical_geometry_sha256": "153985008f1e99a3b1a68c9ec5b2e1475c67f0c8dea4817e9c5fb291e868dbd6"
+    },
+    {
+      "foil": "f1_ch5_columns",
+      "identical_geometry_sha256": "0eaab21b4a121e660043fc5bffbf50948593eb4ae1c4bc036cceed24dc1a05d5"
+    },
+    {
+      "foil": "f1_ch5_rows",
+      "identical_geometry_sha256": "b977840a779a899b5fd366f0bf231962aafb1c63b4c8b8411094ab9ba8705130"
+    }
+  ],
+  "note": "The rerun updates review provenance. All twelve per-foil geometry files and terminal metadata are identical."
+}

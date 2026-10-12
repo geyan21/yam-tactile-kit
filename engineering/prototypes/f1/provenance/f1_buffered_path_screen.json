@@ -1,0 +1,28 @@
+{
+  "schema": "yam-f1-electrical-assumptions/1",
+  "status": "Target DC path budget for a buffered/sensed candidate; component, stability and flex-route checks pending",
+  "excitation_above_bias_v": 0.05,
+  "unloaded_taxel_resistance_ohm_assumed": 1000000.0,
+  "pressed_taxel_resistance_ohm_cases": [100.0, 1000.0, 10000.0],
+  "row_driver_resistance_ohm_assumed": 0.02,
+  "row_branch_trace_resistance_ohm_assumed": 0.25,
+  "selected_column_path_resistance_ohm_assumed": 0.25,
+  "patch_columns": [[0, 1], [2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]],
+  "rows": 4,
+  "model_interaction_screen_fraction": 0.01,
+  "notes": [
+    "These are target DC equivalent path budgets, not verified component or routed-FPC values.",
+    "Candidate: place a unity-gain row buffer after each row-selection switch so the switch does not carry array load current.",
+    "Return each row buffer's feedback from its connector distribution land. The 0.02 ohm target includes residual load regulation after fixed offset calibration; it must be checked under the full array current.",
+    "Candidate: use separate current and high-impedance sense multiplexers in the selected-column feedback loop. Sense at the connector; FPC column trace resistance remains.",
+    "The proposed 0.25 ohm column budget includes the FPC current trace and residual feedback-sense error, excluding a fully compensated current-mux resistance.",
+    "The preceding 0.35 ohm case failed at 100 ohm with all pixels pressed. The tighter budget requires wider copper traces, verified conductor thickness and measured connector/path resistance; it is not assumed to be met by an arbitrary flex cable.",
+    "A local row branch runs to each of six patches. Its complete current path must satisfy the 0.25 ohm target before this case represents hardware.",
+    "Nonselected columns float; inactive rows in the candidate are held at bias.",
+    "The active/readout bias is shifted to zero for the linear calculation; the physical circuit would use a positive common-mode voltage.",
+    "The resistance cases have no assigned force; there is no R-versus-newtons measurement.",
+    "The model omits in-plane film spreading, amplifier offset and finite gain, leakage, loop stability, switching transients, ADC behavior and temperature.",
+    "A complete sensed-feedback circuit needs a defined parked state, gain-change sequence and stability/settling checks.",
+    "The 1% electrical-interaction criterion is separate from physical contact-error probability."
+  ]
+}

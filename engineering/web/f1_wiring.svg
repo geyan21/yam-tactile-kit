@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="800" viewBox="0 0 1160 800" role="img" aria-labelledby="title desc">
+<title id="title">F1 R4 sensor placement and readout chain</title>
+<desc id="desc">Six conductive-film sandwiches on the finger connect by twelve flex tails to a fixed fanout board, then by a checked 50-way cable to the wrist ADC board and Pico. The ADC chips are not placed in the thin contact tip.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#28727c"/></marker></defs>
+<rect width="1160" height="800" rx="18" fill="#f4f7f6"/>
+<g font-family="Arial,sans-serif" fill="#17323a">
+<text x="36" y="47" font-size="31" font-weight="700">F1 R4 · where each sensor and electronic part goes</text>
+<text x="36" y="82" font-size="20">64 proposed electrical locations · six separate film islands · schematic, not a dimensional cable route</text>
+<rect x="35" y="120" width="325" height="364" rx="12" fill="#e0ecdf" stroke="#7b9d83"/>
+<text x="56" y="157" font-size="25" font-weight="700">CONTACT SURFACES</text>
+<g font-size="21">
+<text x="59" y="205">CH0 · left nail · 4 × 2</text>
+<text x="59" y="246">CH1 · right nail · 4 × 2</text>
+<text x="59" y="287">CH2 · TPU region · 4 × 3</text>
+<text x="59" y="328">CH3 · TPU region · 4 × 3</text>
+<text x="59" y="369">CH4 · TPU region · 4 × 3</text>
+<text x="59" y="410">CH5 · TPU region · 4 × 3</text>
+</g>
+<text x="59" y="451" font-size="17">Each: column flex + film + row flex.</text>
+<path d="M361 306H408" stroke="#28727c" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="425" y="120" width="300" height="364" rx="12" fill="#dcebf1" stroke="#769ba9"/>
+<text x="444" y="157" font-size="25" font-weight="700">FIXED FINGER SIDE</text>
+<text x="447" y="209" font-size="22">Twelve separate flex tails</text>
+<text x="447" y="241" font-size="19">One ROW + one COLUMN / site</text>
+<text x="447" y="292" font-size="21">12 × Hirose 6-position ZIF</text>
+<text x="447" y="322" font-size="17">FH12-6S-1SH(1)(98)</text>
+<text x="447" y="369" font-size="21">Checked R3 fanout PCB</text>
+<text x="447" y="400" font-size="18">Removable carrier on hard frame</text>
+<text x="447" y="449" font-size="17">Support the PCB while seating tails.</text>
+<path d="M727 306H773" stroke="#28727c" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="790" y="120" width="335" height="364" rx="12" fill="#e9e4f2" stroke="#a293b5"/>
+<text x="812" y="157" font-size="25" font-weight="700">WRIST / BENCH</text>
+<text x="812" y="206" font-size="21">OPA392 row/readout amplifiers</text>
+<text x="812" y="247" font-size="21">ADG706 current + sense muxes</text>
+<text x="812" y="288" font-size="21">Four gains + parking switches</text>
+<text x="812" y="329" font-size="21">ADS8866 main ADC</text>
+<text x="812" y="360" font-size="18">REF6033 + MCP3208 monitors</text>
+<text x="812" y="406" font-size="22" font-weight="700">Pico RP2040 → USB raw data</text>
+<text x="812" y="448" font-size="17">Use the full wrist BOM and pin tables.</text>
+<rect x="35" y="515" width="1090" height="101" rx="10" fill="white" stroke="#b6c6c8"/>
+<text x="57" y="548" font-size="22" font-weight="700">The 50-way wrist cable is a measured assembly interface</text>
+<text x="57" y="581" font-size="20">Inspection pose: wrist pin n → fanout pin 51−n. Verify all conductors with power off, then verify rails.</text>
+<text x="38" y="659" font-size="20">Each frame preserves 64 raw pixel observations and 16 separate electrical link checks.</text>
+<text x="38" y="693" font-size="20">The link resistor checks the readout path; it can pass with the tactile foils unplugged.</text>
+<text x="38" y="727" font-size="20">Freeze one gain map and timing configuration. Train force curves on physical data, then test a new session.</text>
+<text x="38" y="766" font-size="20" font-weight="700">No measured force calibration, contact detector, 20 N rating or motion qualification is supplied.</text>
+</g>
+</svg>

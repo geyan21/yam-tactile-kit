@@ -1,0 +1,33 @@
+{
+  "schema": "yam-f1-skin-retention/1",
+  "basis_stack": "engineering/development/f1/r3/configuration/f1_formed_stack.json",
+  "finish_nominal_mm_each_contact_face": 0.0032,
+  "material": "Smooth-On Dragon Skin 10 Slow",
+  "mix_ratio": "1A:1B by mass or volume; follow current cure instructions",
+  "frame_bond_material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+  "frame_bond_nominal_mm": 0.05,
+  "foil_mount_bond_nominal_mm": 0.05,
+  "nail_cover_expand_mm": 0.15,
+  "nail_available_face_edge_margin_mm": 0.05,
+  "side_clearance_to_foil_mm": 0.05,
+  "tpu_cover_margin_beyond_foil_mm_each_side": 0.5,
+  "exit_port_inside_body_length_mm": 0.25,
+  "exit_port_above_row_mm": 0.02,
+  "minimum_foot_piece_area_mm2": 0.2,
+  "assembly": [
+    "Cast the four compliant fitting bases from the retained R1 fit geometry; finish their upper surface on the supplied form.",
+    "Mount each lower column foil on its base or nail with the declared 50 µm insulating bond.",
+    "Register the measured pressure-film island and row foil on the forming mandrel; keep adhesive out of the active electrical contacts.",
+    "Install the separately cast cover and bond its peripheral foot to the fitting base or nail face.",
+    "The end port admits both foil necks. Seal around the static neck edges after assembly with a small qualified flexible bead, without wicking into the pressure film or bracing a free bend."
+  ],
+  "limits": [
+    "Nominal plating allowance adds 6.4 µm to the active layer stack; delivered film and finish thicknesses require measurement.",
+    "TPU-layer heights are above the R1 smoothed datum. The variable fitting base below it is part of the assembly and is not included in that number.",
+    "The silicone foot and side wall are parallel mechanical load paths; edge response and force calibration must be measured.",
+    "The TPU cover is 14 mm wide around a 13 mm foil. Its fitting base is widened from the verified constant-section R1 witness, inside the 15 mm source insert width.",
+    "The nominal geometry does not qualify adhesion, sealed-cavity effects, moisture, wear, dynamic bending or 20 N performance.",
+    "Static foil exits must be sealed and strain-relieved before moving-jaw tests."
+  ],
+  "physical_specimens_tested": 0
+}

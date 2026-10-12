@@ -1,0 +1,451 @@
+{
+  "schema": "yam-f1-complete-foil-envelopes/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "f1_ch0_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_complete_envelope.step",
+      "stl": "cad/f1_ch0_columns_complete_envelope.stl",
+      "sha256_step": "2906fe675afd4e5f6693561520825c488b0e6b07b973bfce18afe025f77fbd7f",
+      "sha256_stl": "3b2f9972dce7861a991d0a402736a6b071adb459beb2ba1fae8ea857e5ec7500",
+      "volume_mm3": 35.97899071010975,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.4653449058532715
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_complete_envelope.step",
+      "stl": "cad/f1_ch0_rows_complete_envelope.stl",
+      "sha256_step": "d8221edfa269e21bf21833811b6d8d45974dd63460ced70deb434f12bd44f086",
+      "sha256_stl": "cfe69615a2607d4671c0e1766cb6ddfc9c4cfa948bf06707224dbc8ea99ecc9b",
+      "volume_mm3": 66.61959956880793,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_complete_envelope.step",
+      "stl": "cad/f1_ch1_columns_complete_envelope.stl",
+      "sha256_step": "36942a993e2e178ad50bb16b4dfb2168cc23f544132f05d918e4571f9a07fa9c",
+      "sha256_stl": "8cf0d9505de2ad4f6d83a58bd72d963b28b72520fcbc38e337ebfa45c15608da",
+      "volume_mm3": 36.236394479586934,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2911376953125,
+          -4.465344429016113
+        ],
+        [
+          10.917499542236328,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_complete_envelope.step",
+      "stl": "cad/f1_ch1_rows_complete_envelope.stl",
+      "sha256_step": "de20505f14c4944e78668b4052474fa23b473736e2888f68611e65ab1c42f626",
+      "sha256_stl": "fc83a1adddd95d677e5ab0b2c4a5fc726df750c3b427a4267fcf18841c2ac281",
+      "volume_mm3": 67.11454367881919,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          13.677499771118164,
+          -63.5,
+          45.224544525146484
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_complete_envelope.step",
+      "stl": "cad/f1_ch2_columns_complete_envelope.stl",
+      "sha256_step": "9fec6579ef872e29735cd8c2120e3addbbbcf1541ae3a5cd566684266d26e7cc",
+      "sha256_stl": "ef8aed990271314baffe764ff5af4f7f0f52aca9cde839b50052d6d5c0255f4f",
+      "volume_mm3": 43.05395258995156,
+      "bounds_mm": [
+        [
+          -14.0,
+          -93.96240234375,
+          -6.175000190734863
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_complete_envelope.step",
+      "stl": "cad/f1_ch2_rows_complete_envelope.stl",
+      "sha256_step": "66a087c7419ea108c27cd10d1eac56326fee850de9bebcd5e71d6cb0d85dacb8",
+      "sha256_stl": "88ed17c157d3ca2815931dbdf74c0528a1f07dacd07592fa559a6d49bb887b15",
+      "volume_mm3": 43.13812217019148,
+      "bounds_mm": [
+        [
+          -14.0,
+          -93.96247863769531,
+          -5.242032051086426
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          20.57938575744629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_complete_envelope.step",
+      "stl": "cad/f1_ch3_columns_complete_envelope.stl",
+      "sha256_step": "592e2885d9a95703207ae047eb3d5fb5a8aebf9a210fa7b486143769bc354d86",
+      "sha256_stl": "129c952ba25e574c39cfd84f4ec1b2b2b36e7190fab0990e51edfa02a6a05c18",
+      "volume_mm3": 43.226766999925616,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.507702350616455
+        ],
+        [
+          10.917499542236328,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_complete_envelope.step",
+      "stl": "cad/f1_ch3_rows_complete_envelope.stl",
+      "sha256_step": "f743b7c3aa1d73feea838af462b8a3d16fc535dc5d36b1143d44add98f665157",
+      "sha256_stl": "a6e5a3a96bd2d2c4ce4813eb6e72cf4b0cd52610e53daa78fae6942231535499",
+      "volume_mm3": 44.2686548775402,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.624102592468262
+        ],
+        [
+          13.592499732971191,
+          -45.5,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_complete_envelope.step",
+      "stl": "cad/f1_ch4_columns_complete_envelope.stl",
+      "sha256_step": "0955e10d9c1585bfb9ec8aa2ee313286b8d1be2bb625f5b6009b6434aefc79ef",
+      "sha256_stl": "dbe05b348d882fdad1f68085f8527130254c30b1ecbe2c72513bc313bf363cc6",
+      "volume_mm3": 41.05185176704819,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.558345794677734,
+          6.847860813140869
+        ],
+        [
+          10.917499542236328,
+          -22.325695037841797,
+          45.22428512573242
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_complete_envelope.step",
+      "stl": "cad/f1_ch4_rows_complete_envelope.stl",
+      "sha256_step": "59c0765df85288f36db183d4e3f59ee5b57273176d084cb97488fb626e4a4781",
+      "sha256_stl": "250d973ad99064440ef9ace68ba18b23e859e55e8a4e35858dfea5e67a7758dd",
+      "volume_mm3": 54.48831901945198,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.47818374633789,
+          -6.924967288970947
+        ],
+        [
+          13.592499732971191,
+          -17.325695037841797,
+          45.224815368652344
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_complete_envelope.step",
+      "stl": "cad/f1_ch5_columns_complete_envelope.stl",
+      "sha256_step": "4c2b93b187f7c7bf7bdd5937ab012ad5a181299bf39988cfbc494b575521aba3",
+      "sha256_stl": "ae1dc59a730a98f3a142da59732035d646266a7fc0e5193b434a943b3c28c4d1",
+      "volume_mm3": 37.96354315427976,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.685726165771484,
+          -4.564206123352051
+        ],
+        [
+          10.917499542236328,
+          -20.574644088745117,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_complete_envelope",
+      "purpose": "Complete formed FPC material envelope; native copper and mask artwork remain authoritative",
+      "material": "PI/Cu/coverlay/finish envelope, not a printable functional sensor",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_complete_envelope.step",
+      "stl": "cad/f1_ch5_rows_complete_envelope.stl",
+      "sha256_step": "04df2204ad2cdc9be18b04b0619f9c2757f184e830d33799a3b4027c0ce5b9a4",
+      "sha256_stl": "3ba2ef61eada2d141bc30e2087dcf68df2cb63ca24c8086f66596f155c89712c",
+      "volume_mm3": 38.91180336960639,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.75137710571289,
+          -4.680605888366699
+        ],
+        [
+          13.592499732971191,
+          -20.574785232543945,
+          18.450000762939453
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "joins": [
+    {
+      "foil": "f1_ch0_columns",
+      "body_tail_distance_mm": 4.32146265460917e-13,
+      "shared_envelope_volume_mm3": 0.03417382518449461,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch0_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.05859257655364429,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch1_columns",
+      "body_tail_distance_mm": 3.162417229518036e-13,
+      "shared_envelope_volume_mm3": 0.03424179928456896,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch1_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.058709121245883435,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch2_columns",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.041903834431549734,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch2_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.03947776419486847,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch3_columns",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.041909157611156746,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch3_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.03947244238123791,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch4_columns",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.04190235163198583,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch4_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.03946387721527172,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch5_columns",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.04190870826228464,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    },
+    {
+      "foil": "f1_ch5_rows",
+      "body_tail_distance_mm": 0.0,
+      "shared_envelope_volume_mm3": 0.03947289234686337,
+      "valid_connected_envelope": true,
+      "physical_continuity_tested": false
+    }
+  ],
+  "input_sha256": {
+    "engineering/scripts/join_f1_finished_foils.py": "2d7a66fe4ce96cac1c6792a8f5df2fca6eb61291310d1878f149c65f9d3c4252",
+    "build/engineering/prototypes/f1/retained_skin_cad/20261012T013443.013063Z/report.json": "254bbf9971bdb0e665e7bb7fefba01fee21100891560f90c6f8c3cf5f08f0be7",
+    "build/engineering/prototypes/f1/finished_terminal_cad/20261012T005754.311962Z/report.json": "3403ede1e7bef6a070f9ab4fbb567474655579cf22e4379bbb6704a48416db87"
+  },
+  "limits": [
+    "Homogenized material envelopes, not an electrical copper model or a measured neutral axis.",
+    "The 6.4 \u00b5m nominal active-stack finish allowance is within the earlier 20 \u00b5m forming-axis sensitivity, but real forming and strain remain unqualified.",
+    "Body/neck overlap represents a continuous foil envelope; manufacture from the checked flat copper, mask and cutting files.",
+    "Connector mating, loaded motion, fatigue and physical force/contact performance remain separate requirements."
+  ]
+}

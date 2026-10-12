@@ -1,0 +1,468 @@
+{
+  "schema": "yam-f1-r3-copper-review/1",
+  "physical_boards_tested": 0,
+  "source_pcb_sha256": "a68e55460b087eb512d532d4a7631a95b31a74e1de6afece9e4bfa65ca140785",
+  "independent_check_sha256": "4081a6b7fab2f3a3e2a72196d5956f0c220aa0465d5a384e881b25c5ff83e7c4",
+  "seed_sha256": "9bf7773511f8393a25b6a54b0030f49527b22afa9933c8e9b03b63bf4ed54073",
+  "local_paths": [
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C0_I",
+      "a": [
+        "J0C",
+        "3"
+      ],
+      "b": [
+        "RKC0",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C1_I",
+      "a": [
+        "J0C",
+        "1"
+      ],
+      "b": [
+        "RKC1",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C2_I",
+      "a": [
+        "J1C",
+        "3"
+      ],
+      "b": [
+        "RKC2",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C3_I",
+      "a": [
+        "J1C",
+        "1"
+      ],
+      "b": [
+        "RKC3",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C4_I",
+      "a": [
+        "J2C",
+        "5"
+      ],
+      "b": [
+        "RKC4",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C5_I",
+      "a": [
+        "J2C",
+        "3"
+      ],
+      "b": [
+        "RKC5",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C6_I",
+      "a": [
+        "J2C",
+        "1"
+      ],
+      "b": [
+        "RKC6",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C7_I",
+      "a": [
+        "J3C",
+        "5"
+      ],
+      "b": [
+        "RKC7",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C8_I",
+      "a": [
+        "J3C",
+        "3"
+      ],
+      "b": [
+        "RKC8",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C9_I",
+      "a": [
+        "J3C",
+        "1"
+      ],
+      "b": [
+        "RKC9",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C10_I",
+      "a": [
+        "J4C",
+        "5"
+      ],
+      "b": [
+        "RKC10",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C11_I",
+      "a": [
+        "J4C",
+        "3"
+      ],
+      "b": [
+        "RKC11",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C12_I",
+      "a": [
+        "J4C",
+        "1"
+      ],
+      "b": [
+        "RKC12",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C13_I",
+      "a": [
+        "J5C",
+        "5"
+      ],
+      "b": [
+        "RKC13",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C14_I",
+      "a": [
+        "J5C",
+        "3"
+      ],
+      "b": [
+        "RKC14",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "sense pickup at the sensor connector land",
+      "net": "C15_I",
+      "a": [
+        "J5C",
+        "1"
+      ],
+      "b": [
+        "RKC15",
+        "1"
+      ],
+      "layer": "B.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.3399999999999999,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "short VDD bypass connection",
+      "net": "+3V3",
+      "a": [
+        "UT",
+        "1"
+      ],
+      "b": [
+        "CT1",
+        "1"
+      ],
+      "layer": "F.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 1.6090933005888743,
+      "original_direct_copper_preserved": true
+    },
+    {
+      "reason": "short VDD bypass connection",
+      "net": "+3V3",
+      "a": [
+        "UT",
+        "1"
+      ],
+      "b": [
+        "CT2",
+        "1"
+      ],
+      "layer": "F.Cu",
+      "nominal_width_mm": 0.2,
+      "straight_length_mm": 2.3402310249204037,
+      "original_direct_copper_preserved": true
+    }
+  ],
+  "ground_paths": [
+    {
+      "capacitor": "CT1",
+      "nearby_direct_ground_vias": [
+        {
+          "center_mm": [
+            30.1,
+            21.2
+          ],
+          "length_mm": 0.6514598989960906
+        }
+      ]
+    },
+    {
+      "capacitor": "CT2",
+      "nearby_direct_ground_vias": [
+        {
+          "center_mm": [
+            30.1,
+            19.9
+          ],
+          "length_mm": 0.6199999999999974
+        }
+      ]
+    }
+  ],
+  "minimum_paste_gap_mm": 0.1149999999999963,
+  "near_paste": [
+    {
+      "net": "GND",
+      "via": [
+        30.1,
+        21.2
+      ],
+      "nearest_pad": [
+        "CT1",
+        "2"
+      ],
+      "copper_to_paste_mm": 0.1149999999999963
+    },
+    {
+      "net": "GND",
+      "via": [
+        30.1,
+        19.9
+      ],
+      "nearest_pad": [
+        "CT2",
+        "2"
+      ],
+      "copper_to_paste_mm": 0.1149999999999963
+    },
+    {
+      "net": "GND",
+      "via": [
+        21.7,
+        5.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "1"
+      ],
+      "copper_to_paste_mm": 0.1749999999999994
+    },
+    {
+      "net": "C14_S",
+      "via": [
+        20.7,
+        29.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "48"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C13_S",
+      "via": [
+        20.7,
+        28.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "46"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C12_S",
+      "via": [
+        20.7,
+        27.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "44"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C11_S",
+      "via": [
+        20.7,
+        26.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "42"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C10_S",
+      "via": [
+        20.7,
+        25.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "40"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C8_S",
+      "via": [
+        20.7,
+        23.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "36"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    },
+    {
+      "net": "C7_S",
+      "via": [
+        20.7,
+        22.2
+      ],
+      "nearest_pad": [
+        "JW",
+        "34"
+      ],
+      "copper_to_paste_mm": 0.17500000000000213
+    }
+  ],
+  "row_current_trace_length_by_width_mm": {
+    "R0_I": {
+      "0.5": 95.55443962896325,
+      "0.15": 1.0511898020814328
+    },
+    "R1_I": {
+      "0.5": 91.36157788868096,
+      "0.15": 1.0511898020814328
+    },
+    "R3_I": {
+      "0.5": 103.80486554563873,
+      "0.15": 1.0511898020814328
+    },
+    "R2_I": {
+      "0.5": 92.41892948203586,
+      "0.15": 1.0511898020814328
+    }
+  },
+  "geometry_tolerance_mm": 0.0001,
+  "passed": true,
+  "failures": [],
+  "limits": "Checks nominal copper paths and assembly spacing. It does not establish regulator stability, full-array resistance, EMC, current-sharing accuracy or physical force/contact performance."
+}

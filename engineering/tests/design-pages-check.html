@@ -49,12 +49,13 @@
         check(item.id+": matching 3D model renders",w.DesignPageViewer?.model.id===item.viewer_model&&Number(d.querySelector(".design-canvas").dataset.faces)>1000);
         if(item.id==="F1"){
           const model=w.DesignPageViewer?.model;
-          check("F1: partial fit geometry is explicitly labeled",
-            item.group==="development"&&model.note.includes("Partial integration")&&
-            model.components.filter(part=>part.group==="f1_stacks").length===24&&
-            model.components.filter(part=>part.group==="f1_tails").length===12);
+          check("F1: complete film and foil envelopes preserve unqualified interfaces",
+            item.group==="prototype"&&model.note.includes("unqualified")&&
+            model.components.filter(part=>part.group==="f1_film").length===6&&
+            model.components.filter(part=>part.group==="f1_foils").length===12&&
+            model.components.filter(part=>part.group==="f1_covers").length===6);
           check("F1: current R3 interface is identified",
-            model.id==="f1_r3_assembly_reference"&&
+            model.id==="f1_r4_assembly_reference"&&
             d.querySelector('[data-design-layer="f1_board"]').parentElement.textContent==="R3 PCB fit reference");
         }
         if(item.id==="FORCE_BUTTON"){

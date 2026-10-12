@@ -1,0 +1,13 @@
+(version 1)
+(rule "flex copper clearance" (constraint clearance (min 0.15mm)))
+(rule "flex copper to outline" (constraint edge_clearance (min 0.3mm)))
+(rule "flex trace width" (constraint track_width (min 0.125mm)))
+(rule "plated drill" (constraint hole_size (min 0.3mm)))
+# BEGIN_FPC_SHARED_COVERLAY
+# FOIL is an unsoldered flex: sensing electrodes and cable contacts
+# intentionally share coverlay windows. No paste is generated.
+# This permits only mask bridging, never copper shorts or missing connections.
+(rule "FOIL unsoldered shared coverlay"
+ (condition "A.memberOfFootprint('FOIL')")
+ (constraint bridged_mask) (severity ignore))
+# END_FPC_SHARED_COVERLAY

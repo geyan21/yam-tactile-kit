@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", required=True)
     parser.add_argument("--specimen", required=True)
+    parser.add_argument("--session-id", help="Required for version-2 force-study recordings; omitted only for legacy raw capture")
     parser.add_argument("--condition", required=True)
     parser.add_argument("--geometry", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
@@ -33,8 +34,10 @@ def main():
         parser.error("Use a bounded 1-3600 second capture")
     if not args.geometry.is_file():
         parser.error("Select the actual build's geometry/assembly manifest")
-    if any(not value.strip() or "REPLACE" in value.upper() for value in (args.specimen, args.condition)):
-        parser.error("Supply actual specimen and condition identifiers")
+    identities = (args.specimen, args.condition)+(tuple([args.session_id]) if args.session_id is not None else ())
+    if any(not value.strip() or "REPLACE" in value.upper() for value in identities):
+        parser.error("Supply actual specimen, session and condition identifiers")
+    recording_version = 2 if args.session_id is not None else 1
     geometry_hash = hashlib.sha256(args.geometry.read_bytes()).hexdigest()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     import serial
@@ -46,17 +49,19 @@ def main():
         record["port"] = args.port
         try:
             with serial.Serial(args.port, 115200, timeout=.25) as port, args.output.open("x") as stream:
+                start = last_report = time.monotonic()
                 stream.write(json.dumps({
-                    "type": "session", "schema": "yam-f1-recording/1", "protocol": PROTOCOL,
-                    "specimen": args.specimen, "condition": args.condition, "geometry_sha256": geometry_hash,
+                    "type": "session", "schema": "yam-f1-recording/"+str(recording_version), "protocol": PROTOCOL,
+                    "specimen": args.specimen, "session_id": args.session_id,
+                    "condition": args.condition, "geometry_sha256": geometry_hash,
                     "evidence_kind": "physical_recording_unreviewed" if args.source_kind == "physical" else "electrical_dummy_recording",
                     "created_utc": datetime.now(timezone.utc).isoformat(),
                     "force_calibrated": False,
                 })+"\n")
-                start = last_report = time.monotonic()
                 while time.monotonic()-start < args.seconds:
                     raw = port.readline(8193)
-                    stamp = {"received_utc": datetime.now(timezone.utc).isoformat(), "host_monotonic_ns": time.monotonic_ns()}
+                    stamp = {"received_utc": datetime.now(timezone.utc).isoformat(),
+                             "host_monotonic_ns": time.monotonic_ns(), "host_elapsed_s": time.monotonic()-start}
                     if not raw:
                         stream.write(json.dumps({**stamp, "error": "serial_timeout"})+"\n")
                         faults += 1
@@ -84,8 +89,10 @@ def main():
             stop_reason = type(error).__name__+": "+str(error)
             raise
         finally:
-            result = {"schema": "yam-f1-recording-receipt/1", **decoder.finish(),
-                      "specimen": args.specimen, "condition": args.condition, "geometry_sha256": geometry_hash,
+            result = {"schema": "yam-f1-recording-receipt/"+str(recording_version), **decoder.finish(),
+                      "specimen": args.specimen, "session_id": args.session_id,
+                      "condition": args.condition, "geometry_sha256": geometry_hash,
+                      "requested_duration_s": args.seconds,
                       "messages": count, "review_events": faults, "capture_complete": completed, "stop_reason": stop_reason}
             if args.output.exists():
                 result["sha256"] = hashlib.sha256(args.output.read_bytes()).hexdigest()

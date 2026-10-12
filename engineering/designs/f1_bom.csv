@@ -1,0 +1,20 @@
+item,quantity_per_finger,specification,purpose,source,notes
+Fitted sensing flexes,12 distinct,R4 native artwork and F1_MANUFACTURING.md,Two electrode sheets at each of six sites,Custom flex fabrication,Make terminal coupons before a larger batch; ten physical one-layer and two two-layer foils
+Pressure-film islands,6 distinct,Identified nominal 0.10 mm conductive pressure film,Tactile sensing material,Adafruit 1361 reference material,Record actual lot and thickness; use the supplied separate cutting patterns
+Wear covers,6 distinct,Dragon Skin 10 Slow,Retained contact covers,Smooth-On,Nominal nail roof 0.10 mm and TPU roof 0.40 mm; use the individual molds
+Compliant fitting bases,4 distinct,Dragon Skin 10 Slow,Source-matched TPU supports,Smooth-On,Current 14 mm width; the obsolete 13 mm skin does not have complete side skirts
+Terminal PI pieces,14,0.200 mm polyimide,Connector stiffeners,PI sheet supplier,Two nail-row foils each need separate tip and transition pieces
+Terminal adhesive pieces,14,3M 467MP nominal 0.050 mm,Stiffener lamination,3M,Measure the finished 0.25–0.35 mm tongue; keep adhesive off the contact face
+Flexible mounting and foot bond,As required,Sil-Poxy with nominal 0.050 mm cured bond at modeled interfaces,Cover and foil retention,Smooth-On,Qualify actual silicone/frame/TPU/PI coupons and thin-bond process
+Finger interface PCB,1,Checked R3 PCB and complete components.csv,Connect twelve fitted flexes,Custom PCB assembly,Use the matching two populated faces and 42-component purchasing list
+Finger carrier,1,PETG or machined insulating plastic,Removable R3 PCB support,Local fabrication,Actual drive fit and print shrinkage remain unmeasured
+PCB fasteners,2 screws plus 2 nuts,M2 captive nuts and length selected from actual stack,Retain removable PCB,Standard hardware,Measure screw engagement and clearance; support the board during connector seating
+Frame fasteners,2,M3 matching the original side-fastener axes,Attach carrier to hard frame,Standard hardware,Select length after measuring the original frame and complete carrier stack
+Layer forms,6 distinct,Finished rigid tooling,Register curved electrode/film layers,Local fabrication,Forms are assembly tools used away from the robot
+Cover and base molds,10 pairs,Current registered split-mold CAD,Cast six covers and four bases,Local fabrication,Use compatible surface finish and release agent; all twenty halves belong to the same skin revision
+Mold hardware,Reusable set,M3 bolts plus 3 mm registration dowels,Close and register one mold pair at a time,Standard hardware,Use each mold report's bolt length and dowel depth
+Wrist readout PCB,1,Checked F1 wrist board and complete components.csv,Row drive and current/ADC acquisition,Custom PCB assembly,Use the full wrist purchasing list and pin tables
+Controller,1,Raspberry Pi Pico RP2040 non-W,Raw acquisition,Raspberry Pi,Fit to the two 1×20 sockets on the wrist board
+Wrist cable,1 inspected candidate,Molex 150200545 same-side 50-way 0.5 mm pitch 152 mm,Connect wrist to finger interface,Molex,Incoming strip/support dimensions and actual Hirose mating must pass; see the documented alternative custom-cable contract if rejected
+Wrist mounting,Measured for bench,Insulating support and compatible standoffs,Keep the wrist electronics stationary,Local fabrication,No installed YAM bracket is qualified by this package
+Bench reference,Shared,Calibrated 0–20 N force reference with documented uncertainty at most 0.05 N,Physical calibration and evaluation,Laboratory equipment,Same force axis for single-site and mixed contacts; no synthetic measurements

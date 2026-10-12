@@ -1,0 +1,25 @@
+{
+  "schema": "yam-f1-tail-route-development/1",
+  "status": "Nominal installed R3 tail development with revised test-circuit placement; flex artwork and motion qualification remain",
+  "exit_configuration": "engineering/designs/f1_exit_spaced_candidate.json",
+  "carrier_configuration": "engineering/designs/f1_carrier_r3.json",
+  "conductor_plane_above_board_assumed_mm": 0.85,
+  "conductor_plane_above_board_interval_mm": [0.0, 1.7],
+  "connector_tip_local_y_assumed_mm": -0.45,
+  "connector_tip_local_y_interval_mm": [-1.8, 0.9],
+  "lateral_bend_start_x_mm": {"rows": 11.05, "columns": 8.35},
+  "required_entry_lead_mm": 0.3,
+  "route_grid_mm": 0.25,
+  "tail_to_other_body_clearance_mm": 0.3,
+  "tail_to_tail_clearance_mm": 0.35,
+  "future_entry_reservation_extra_mm": 0.05,
+  "native_yz_route_bounds_mm": [-108, -12, -9, 52],
+  "connector_approach_distance_mm": 11.5,
+  "routing_order": [0, 2, 5, 1, 3, 4],
+  "notes": [
+    "The midpoint of the unresolved connector-height interval is an explicit geometric assumption, not a manufacturer mating datum.",
+    "All tail lanes are initially planar after one quarter-circle formed bend. A failed lane is retained as evidence that this restricted routing architecture needs revision.",
+    "The planar route is a precut foil outline, not an in-plane bending operation.",
+    "These nominal routes do not establish motion compliance, fatigue life, electrical continuity or 20 N performance."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "yam-pneumatic-volume-screen/1",
+  "status": "Design sensitivity assumptions; no force-to-volume model or physical results",
+  "reference_pressure_pa": 101325.0,
+  "initial_temperature_c": 23.0,
+  "tube_id_mm": 1.5875,
+  "tube_lengths_mm": [50, 100, 200],
+  "chamber_volumes_mm3": [10, 30, 60],
+  "unknown_sensor_and_fitting_volumes_mm3": [20, 100, 500],
+  "chamber_volume_changes_mm3": [-2, 0, 0.02, 0.1, 1, 5],
+  "chamber_temperature_changes_c": [-5, 0, 5, 10],
+  "remote_temperature_changes_c": [0, 5],
+  "candidate_differential_ranges_in_h2o": [1, 5, 10, 20, 30],
+  "pascal_per_in_h2o": 249.088846,
+  "digital_min_code_3v": 2731,
+  "digital_max_code_3v": 24576,
+  "nominal_high_resolution_bits": 14,
+  "source_review": "engineering/research/pneumatic_source_review.json",
+  "limits": [
+    "Gas-law sensitivity only. The channel wall, contact area, bulk elastomer and TPU share mechanical loads.",
+    "Do not equate external finger force with pressure times channel area.",
+    "Internal sensor/fitting volume is unknown; the listed values are deliberately varied assumptions, not measured dimensions.",
+    "No leakage, tube-wall compliance, pneumatic flow resistance, transient gas heating, viscoelasticity or sensor error/noise is modeled.",
+    "A remote unloaded reference may be at a different temperature from the finger chamber.",
+    "A 20 N force rating or 0.2 N contact threshold cannot be inferred without a measured or validated deformation model."
+  ]
+}

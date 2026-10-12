@@ -1,0 +1,48 @@
+{
+  "revision": "F1.1-development",
+  "design_id": "F1",
+  "status": "Integrated matrix design development; not a fabrication release",
+  "physical_specimens_tested": 0,
+  "requested_force_n_per_finger": 20,
+  "basis": {
+    "contact_geometry": "engineering/release/r1/r1_manifest.json",
+    "frame": "Retained original ENPIRE hard frame",
+    "soft_supports": "Retained R1 conformal saddle geometry on the original TPU",
+    "notes": [
+      "Use the actual fork outlines and each saddle's developed surface, not a generic rectangular fingertip.",
+      "The six local matrices are new electrode layouts; no measured F1 force or contact performance exists."
+    ]
+  },
+  "array": {
+    "rows": 4,
+    "columns_total": 16,
+    "nail_columns_per_prong": 2,
+    "tpu_columns_per_region": 3,
+    "nominal_taxels": 64,
+    "electrode_gap_mm": 0.2,
+    "minimum_taxel_area_mm2_for_layout": 1.0,
+    "development_sampling_mm": 0.1,
+    "row_order": "Distal to proximal within each local patch",
+    "column_order": "Increasing native X within each patch; patches follow R1 CH0 through CH5"
+  },
+  "material_development": {
+    "piezoresistive_layer_candidate": "Same 0.10 mm conductive pressure film used by R1",
+    "electrodes_candidate": "Two patterned single-conductor-layer polyimide flex circuits per patch",
+    "fabrication_stack_selected": false,
+    "notes": [
+      "Select and check the complete active, perimeter-seal, coverlay and tail stack before generating fabrication files.",
+      "Keep feed traces insulated from unintended film contact.",
+      "The original TPU remains compliant; flex strain, bending artifacts and wear require physical tests."
+    ]
+  },
+  "readout_development": {
+    "architecture_candidate": "Row buffers after the selection switches, actively biased inactive rows, and separate current/sense column multiplexers in the transimpedance feedback loop",
+    "parts_selected": false,
+    "notes": [
+      "A simple floating-row voltage divider is not the selected architecture.",
+      "Check finite switch/wire resistance, amplifier offsets, leakage, settling, simultaneous contacts and open connections.",
+      "The buffered-path study gives target DC resistances only. Verify actual op-amp load regulation, tail resistance, parked feedback, gain changes and loop stability before calling it a circuit.",
+      "Select gain/range using electrical resistance cases; do not label them as force without physical calibration."
+    ]
+  }
+}

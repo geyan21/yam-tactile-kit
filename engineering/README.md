@@ -4,9 +4,9 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Eight have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, and **FB1.1** a packaged force button at the root. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Ten have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, **FB1.1** a packaged force button, **K1.2** capacitive cells and **F1.1 R4** a dense resistive matrix. All require physical assembly and testing.
 
-**Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans. F1 adds a separately labeled development and mechanical-fit packet.
+**Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
 
@@ -34,15 +34,21 @@ spacers, the retained B2 PCB and B1 TPU/magnets, and two N0 nail cells.
 [BUILD_RECESSED.md](docs/BUILD_RECESSED.md) gives exact sensor locations,
 gain-5 wiring/readout, fabrication and the paired B2/B3 experiment.
 
-F1 development modules include the
+The current [F1 R4 package](prototypes/f1/README.md) contains 96 CAD
+parts/references, twelve checked flexes, retained covers and molds, matching
+electronics, manufacturing instructions and stationary-force tools.
+[Build F1](docs/BUILD_F1.md) is the current starting point. Its physical
+mating, seals, slack and performance remain unqualified.
+
+Preserved F1 development modules include the
 [checked connector board](development/f1/fanout/README.md) and the
 [selected-column readout study](development/f1/readout-study/README.md).
 The latter includes its exact circuit, plots, replayable cases and unresolved
 simulation failures. The [ADC and row support studies](development/f1/support-studies/README.md)
 now preserve their current model checks and unsuccessful earlier runs.
 The [wrist capture guide](docs/F1_WRIST_CAPTURE.md) gives exact components,
-Pico connections, firmware and raw recording. None is a complete F1 finger
-or a physical performance result.
+Pico connections, firmware and raw recording. These individual historical
+modules are not physical performance results.
 The [checked wrist-board module](development/f1/wrist/README.md) now includes
 its native PCB, fabrication files, drawings, cable checklist and firmware.
 Its 135-component board passes independent copper/connectivity DRC.
@@ -55,15 +61,18 @@ fit patterns.
 The separate [R3 fitted-foil module](development/f1/fitted-foils-r3/README.md)
 adds twelve routed electrode foils with independent copper/connectivity
 checks, a 64-location contact map and forty trace-resistance estimates.
-Mating/lamination details, the complete resistance budget, object/motion
-clearance and physical qualification remain unfinished.
+Use the later R4 package for proposed manufacturing and routed-DC updates.
+Physical mating, object/motion behavior and qualification remain unfinished.
 
-The separate [K1 capacitive development module](development/capacitive/k1/README.md)
+The earlier [K1 capacitive development module](development/capacitive/k1/README.md)
 contains 49 current CAD parts, post-sheet tooling, corrected conforming supports,
 a checked 23-component readout board and raw firmware/recording code. Its
 eighteen declared support-fit comparisons pass. Electrode fabrication,
 retention, vents, cables, enclosure and physical force/contact testing remain.
-Use [the K1 guide](docs/BUILD_CAPACITIVE.md) for exact scope and next steps.
+The later [K1.2 package](prototypes/capacitive/README.md) adds the checked
+electrode foils, retained plates/stops, molds, terminal tools, bank enclosures
+and static-force workflow. Use [the K1 guide](docs/BUILD_CAPACITIVE.md) for
+the current scope and next steps.
 
 The [FB1.1 force-button prototype](prototypes/force_button/README.md) supplies
 54 CAD parts/references, a checked two-layer FMA board, raw Pico acquisition,
@@ -80,7 +89,7 @@ Its connector cavities, stiffeners, fitted copper, tail slack and physical
 performance remain unqualified. The earlier crossing is retained with its
 two exact involved solids.
 
-Use [the current F1 build and fit guide](docs/BUILD_F1.md) for the R3 student
+Use [the current F1 build guide](docs/BUILD_F1.md) for the R4 student
 procedure. [F1 development](docs/F1_DEVELOPMENT.md) retains the historical
 circuit and layout checkpoints.
 

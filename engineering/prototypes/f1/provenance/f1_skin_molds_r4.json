@@ -1,0 +1,24 @@
+{
+  "schema": "yam-f1-skin-mold-plan/1",
+  "blank_margin_mm": 8,
+  "bolt_diameter_mm": 3.4,
+  "bolt_offset_mm": 4,
+  "dowel_diameter_mm": 3.02,
+  "dowel_offset_mm": 6,
+  "dowel_embed_each_half_mm": 4,
+  "overflow_width_mm": 0.8,
+  "overflow_height_mm": 0.08,
+  "overflow_overlap_mm": 0.02,
+  "tool_material": "Machined smooth tooling or validated precision-printed/sealed tooling with a compatible release agent",
+  "process": [
+    "Use two 3 mm x 8 mm registration pins and four M3 clamp fasteners per mold.",
+    "Wet the open cavities with degassed Dragon Skin 10 Slow, close the registered halves evenly and let surplus material escape through the side channels.",
+    "Follow the current material mixing and cure instructions; first check inhibition and release on a small coupon.",
+    "Trim side flash without cutting the sealing foot or foil-neck port; measure the finished cover and fitting-base dimensions."
+  ],
+  "limits": [
+    "Nominal tooling geometry does not establish cure, shrinkage, demolding, adhesion or skin life.",
+    "The 0.10 mm nail cover and 0.08 mm overflow features require a qualified precision process.",
+    "Actual M3 bolt length depends on the exported blank width and the chosen washers/nuts."
+  ]
+}

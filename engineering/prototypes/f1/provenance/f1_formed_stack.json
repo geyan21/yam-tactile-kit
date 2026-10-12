@@ -1,0 +1,78 @@
+{
+  "schema": "yam-f1-formed-stack-development/1",
+  "status": "Mounted laminate and tail development; fabrication and physical qualification pending",
+  "physical_specimens_tested": 0,
+  "basis": {
+    "r1_manifest": "engineering/release/r1/r1_manifest.json",
+    "nail_coordinates": "engineering/release/contact_regions/contact_report.json",
+    "fanout": "engineering/development/f1/fanout/pcb/f1_fanout.json",
+    "hard_frame": "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/i2rt_UCG_Hard.stl",
+    "soft_insert": "build/engineering/sources/pgeedh__Open-ENPIRE-Gripper/grippers-stl/enpire_i2rt_yam_stl/I2RT_UCG_Soft.stl"
+  },
+  "materials_mm": {
+    "polyimide": 0.025,
+    "copper": 0.035,
+    "coverlay": 0.05,
+    "pressure_film": 0.1,
+    "tpu_mounting_layer": 0.1,
+    "nail_mounting_layer": 0.05,
+    "tpu_outer_cover": 0.4,
+    "nail_outer_cover": 0.1
+  },
+  "body": {
+    "tpu_foil_width_mm": 13,
+    "tpu_foil_arc_trim_each_end_mm": 0.5,
+    "tpu_cover_width_source": "Retained R1 saddle width",
+    "film_edge_clearance_mm": 0.1,
+    "sample_spacing_mm": 0.025,
+    "unroll_reference": "Each foil's active conductor center plane. This is a geometric cut/reference surface, not a measured mechanical neutral axis.",
+    "neutral_axis_sensitivity_offset_mm": 0.02,
+    "notes": [
+      "Column copper faces outward toward the film; row copper faces inward toward the film.",
+      "Separate coverlay openings occupy the active region. Outside the opening, the two 0.05 mm facing coverlays nominally replace the 0.10 mm film gap.",
+      "Keep adhesive out of active film/copper interfaces. Edge retention, sealing and unloaded contact preload remain to be verified on the complete assembly.",
+      "The nail row foil retains backside feeds and static interlayer connections. Other foils have one conductor layer.",
+      "The 0.1 mm nail cover is a thin prototype process target. Wear, friction, low-force response and 20 N durability are not established."
+    ]
+  },
+  "tails": {
+    "neck_trace_width_mm": 0.3,
+    "long_trace_width_mm": 0.45,
+    "trace_clearance_mm": 0.15,
+    "edge_clearance_mm": 0.3,
+    "row_neck_width_mm": 2.25,
+    "long_tail_width_mm": 2.85,
+    "tab_width_mm": 7,
+    "stiffener_length_mm": 8,
+    "termination_via_distance_from_tip_mm": 7,
+    "rear_copper_free_tip_length_mm": 6.5,
+    "gold_contact_length_mm": 6,
+    "gold_contact_tip_setback_mm": 0.3,
+    "gold_opening_depth_mm": 6.5,
+    "finished_contact_thickness_mm": 0.3,
+    "nominal_minimum_form_radius_mm": 2.5,
+    "assumed_contact_motion_mm": [0, 3],
+    "notes": [
+      "The existing 8 mm straight witnesses do not fit across the 3 mm patch gaps. New narrow sections must be routed and resistance-checked.",
+      "Long sections widen after leaving the contact region; the earlier 1.5 mm conductor target is not automatically met by these routes.",
+      "Shorter stiffened ends are proposed to avoid the adjacent lower connector. Keep interlayer transitions inside a supported static region.",
+      "Provide bending slack between the moving TPU and fixed connector board. A straight taut strip is not accepted as a 3 mm motion solution.",
+      "The 3 mm motion is an integration assumption, not a predicted deflection at 20 N."
+    ]
+  },
+  "connector": {
+    "part": "FH12-6S-1SH(1)(98)",
+    "source": "https://www.hirose.com/en/product/p/CL0528-0030-8-98",
+    "mating_plane_selected": false,
+    "note": "Direct vendor downloads returned HTTP 403 in this workspace; the official 2D drawings remain visible through web review. The exact mating datum is still open, so no installed fit is claimed.",
+    "candidate_revision": "Rotate the three upper connector pairs 180 degrees so their tails leave toward the back of the board; move the test mux between upper tails. Preserve the published original fanout module."
+  },
+  "remaining": [
+    "Verified connector mating datum and contact orientation",
+    "Installed, inextensible tail paths and motion envelopes",
+    "Routed artwork corresponding to the new layer cuts and neck widths",
+    "Complete resistance, copper clearance and assembly collision checks",
+    "Carrier, strain relief, sealing tools and fabrication instructions",
+    "Physical assembly, calibration, contact reliability and 20 N comparison"
+  ]
+}

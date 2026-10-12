@@ -110,7 +110,8 @@ document.getElementById("page").addEventListener("load",async()=>{
       "software test fixture — no hardware evidence");
     check("N1 static preview preserves unavailable holds and scope",d.getElementById("result-plot").dataset.reportKind==="nail-static"&&d.getElementById("result-metrics").textContent.includes("1 unavailable")&&d.getElementById("result-metrics").textContent.includes("N1 static means only"));
     for(const [schema,prediction,kind] of [["yam-fb1-static-validation/1","predicted_n","fb1-static"],
-                                         ["yam-k1-static-validation/1","total_force_n","k1-static"]]){
+                                         ["yam-k1-static-validation/1","total_force_n","k1-static"],
+                                         ["yam-f1-static-validation/1","total_force_n","f1-static"]]){
       let rejected=false;
       try{w.EngineeringUI.renderReport({schema,evidence_kind:"simulation_scenarios",trials:[]});}catch(_){rejected=true;}
       check(kind+": simulated force report is rejected",rejected);
@@ -123,10 +124,12 @@ document.getElementById("page").addEventListener("load",async()=>{
         d.getElementById("result-plot").dataset.reportKind===kind&&d.querySelectorAll("#result-plot circle").length===1&&
         d.getElementById("result-metrics").textContent.includes("1 unavailable"));
     }
-    let missingAxisRejected=false;
-    try{w.EngineeringUI.renderReport({schema:"yam-k1-static-validation/1",evidence_kind:"physical",trials:[]});}
-    catch(_){missingAxisRejected=true;}
-    check("K1 preview rejects an undeclared force axis",missingAxisRejected);
+    for(const label of ["k1","f1"]){
+      let missingAxisRejected=false;
+      try{w.EngineeringUI.renderReport({schema:`yam-${label}-static-validation/1`,evidence_kind:"physical",trials:[]});}
+      catch(_){missingAxisRejected=true;}
+      check(label.toUpperCase()+" preview rejects an undeclared force axis",missingAxisRejected);
+    }
     let contactRejected=false;
     try{w.EngineeringUI.renderReport({schema:"yam-contact-validation/1",evidence_kind:"synthetic",regions:[]});}catch(_){contactRejected=true;}
     check("synthetic contact report is rejected",contactRejected);

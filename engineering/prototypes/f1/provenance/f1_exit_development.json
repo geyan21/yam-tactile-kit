@@ -1,0 +1,14 @@
+{
+  "schema": "yam-f1-exit-development/1",
+  "status": "Static corridor and revised connector-arrangement study; complete motion/fit checks pending",
+  "exit_native_y_mm_by_site": [-95.5, -98.5, -74.5, -57.5, -40.5, -21.0],
+  "site_to_connector_id": ["J0", "J1", "J2", "J3", "J5", "J4"],
+  "global_columns_by_site": [[0, 1], [2, 3], [4, 5, 6], [7, 8, 9], [13, 14, 15], [10, 11, 12]],
+  "neck_x_end_mm_for_screen": 8,
+  "notes": [
+    "Move the left-nail corridor from Y=-94.5 to -95.5 after its first sampled envelope intersected the TPU.",
+    "The high CH4 contact surface is assigned to the upper J5 pair; low CH5 uses J4. Numeric column identities remain those of the connector wiring and are explicitly mapped to the physical sites.",
+    "Upper connector pairs are being turned toward the back of the board to keep their stiffened ends clear of the lower connectors.",
+    "This candidate does not change any existing R1/L1/B1/B2/C1/N1/B3 package."
+  ]
+}

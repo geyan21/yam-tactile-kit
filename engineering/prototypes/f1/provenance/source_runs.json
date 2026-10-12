@@ -1,0 +1,25 @@
+{
+  "source_runs": {
+    "skin": "build/engineering/prototypes/f1/retained_skin_cad/20261012T013443.013063Z",
+    "terminals": "build/engineering/prototypes/f1/finished_terminal_cad/20261012T005754.311962Z",
+    "foils": "build/engineering/prototypes/f1/joined_foil_cad/20261012T014609.247735Z",
+    "patterns": "build/engineering/prototypes/f1/film_patterns/20261012T015305.672194Z",
+    "assembly": "build/engineering/prototypes/f1/complete_assembly_common_checks/20261012T021223.326465Z",
+    "visuals": "build/engineering/prototypes/f1/r4_visuals/20261012T020734.682716Z",
+    "artwork": "build/engineering/prototypes/f1/artwork_runs/20261012T014423.009552Z",
+    "native_check": "build/engineering/prototypes/f1/artwork_runs/20261012T014423.009552Z/independent_checks/20261012T014426.398341Z",
+    "tip_review": "build/engineering/prototypes/f1/finished_tip_reviews/20261012T005629.615428Z",
+    "dc": "build/engineering/prototypes/f1/routed_matrix_screens/20261012T004244.848426Z",
+    "network": "build/engineering/prototypes/f1/routed_network_reviews/20261012T004010.736105Z"
+  },
+  "mold_runs": [
+    "build/engineering/prototypes/f1/skin_molds/20261012T014609.371996Z",
+    "build/engineering/prototypes/f1/skin_molds/20261012T015206.479694Z",
+    "build/engineering/prototypes/f1/skin_molds/20261012T015206.490725Z"
+  ],
+  "retained_module_sha256": {
+    "r3": "4c4645a2220a3e9013aca1ca2d63e1b17e6ec1d79c4fd29eef1576f7112cfa9f",
+    "fitted_foils": "ab2beab85f3e87f1b3a98afc6f37d98274aed7c79745129593a6b741e328a71a",
+    "wrist": "82f1e2c8df925ddcdbb29404f66e1f8dfea1be1e65fac36bf3a0104b0e958e24"
+  }
+}

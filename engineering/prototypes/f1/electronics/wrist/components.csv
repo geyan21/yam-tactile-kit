@@ -1,0 +1,136 @@
+reference,part_or_value,library_footprint,face,source,selection_status
+JP1,1x20 female socket 2.54 mm; Pico header,Connector_PinSocket_2.54mm.pretty/PinSocket_1x20_P2.54mm_Vertical.kicad_mod,F,https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf,candidate device/connector
+JP2,1x20 female socket 2.54 mm; Pico header,Connector_PinSocket_2.54mm.pretty/PinSocket_1x20_P2.54mm_Vertical.kicad_mod,F,https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf,candidate device/connector
+JW,FH12-50S-0.5SH(55),Connector_FFC-FPC.pretty/Hirose_FH12-50S-0.5SH_1x50-1MP_P0.50mm_Horizontal.kicad_mod,F,https://www.hirose.com/en/product/p/CL0586-0529-2-55,candidate device/connector
+UCI,ADG706BRUZ,Package_SO.pretty/TSSOP-28_4.4x9.7mm_P0.65mm.kicad_mod,F,https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf,candidate device/connector
+CUCI,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UCS,ADG706BRUZ,Package_SO.pretty/TSSOP-28_4.4x9.7mm_P0.65mm.kicad_mod,F,https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf,candidate device/connector
+CUCS,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+URSEL,TMUX1134PWR,Package_SO.pretty/TSSOP-20_4.4x6.5mm_P0.65mm.kicad_mod,F,https://www.ti.com/lit/ds/symlink/tmux1134.pdf,candidate device/connector
+CRSEL,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UR0,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDR0,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RBIAS0,1M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RISO0,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RSNS0,4700,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CFB0,100p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RFB0,100M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RMON0,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CMON0,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UR1,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDR1,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RBIAS1,1M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RISO1,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RSNS1,4700,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CFB1,100p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RFB1,100M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RMON1,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CMON1,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UR2,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDR2,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RBIAS2,1M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RISO2,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RSNS2,4700,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CFB2,100p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RFB2,100M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RMON2,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CMON2,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UR3,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDR3,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RBIAS3,1M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RISO3,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RSNS3,4700,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CFB3,100p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RFB3,100M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RMON3,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CMON3,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UTIA,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDTIA,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UGAIN,TMUX1112PWR,Package_SO.pretty/TSSOP-16_4.4x5mm_P0.65mm.kicad_mod,F,https://www.ti.com/lit/ds/symlink/tmux1112.pdf,candidate device/connector
+CDGAIN,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RTIA0,499 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CTIA0,470p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RTIA1,4990 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CTIA1,150p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RTIA2,24900 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CTIA2,68p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RTIA3,39200 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CTIA3,56p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+ROUT,0.1,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RPARK,100M,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CLOCAL,15p C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RBOOST,680,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RINPUT,300,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CCURRENT,3.3n C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UBYP,TMUX1102DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/tmux1101.pdf,candidate device/connector
+UPARK,TMUX1101DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/tmux1101.pdf,candidate device/connector
+RACTIVEPARK,1k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CDBYP,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CDPARK,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UAB,OPA320AQDBVRQ1,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,F,https://www.ti.com/lit/ds/symlink/opa320-q1.pdf,candidate device/connector
+CDAB,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+UADC,ADS8866IDGSR,Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod,F,https://www.ti.com/lit/ds/symlink/ads8866.pdf,candidate device/connector
+RADCP,22 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RADCN,22 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CADCD,2.2n C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CADCP,2.2n C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CADCN,2.2n C0G,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RAVDD,2.2,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CAVDD,1u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CDVDD,1u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CREF,22u X7R 25V; effective 10-47u verified,Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RREFESR,0.047 1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+RREFS,0 sense pickup,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RGNDS,0 sense pickup,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+UREF,REF6033IDGKR,Package_SO.pretty/MSOP-8_3x3mm_P0.65mm.kicad_mod,B,https://www.ti.com/lit/ds/symlink/ref60.pdf,candidate device/connector
+CFILT,2.2u X7R 10V; effective >=1u,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CREFIN1,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CREFIN2,1u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RBIAST,10000 0.01% 10ppm/K,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RBIASB,10000 0.01% 10ppm/K,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CBIASIN,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+UBIAS,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,B,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDBIAS,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RBIASOUT,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CBIASOUT,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+REXCT,16000 0.01% 10ppm/K,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+REXCB,17000 0.01% 10ppm/K,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CEXCIN,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+UEXC,OPA392DBVR,Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod,B,https://www.ti.com/lit/ds/symlink/opa392.pdf,candidate device/connector
+CDEXC,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+REXCOUT,47,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CEXCOUT,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+UMON,MCP3208-B/SL,Package_SO.pretty/SOIC-16_3.9x9.9mm_P1.27mm.kicad_mod,B,https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/21298e.pdf,candidate device/connector
+CDMON,100n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CBMON,1u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RMB,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CMB,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RME,4.7k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CME,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RV5T,10k 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RV5B,10k 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CV5,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RV3T,10k 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+RV3B,10k 0.1%,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CV3,10n X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_ROW0,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_ROW1,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_ROW2,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_ROW3,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_A0,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_A1,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_A2,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_A3,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_CUR_EN,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_SNS_EN,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_TEST_EN,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_GAIN0,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_GAIN1,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_GAIN2,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_GAIN3,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PU_PARK,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PU_MON_CS,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PU_ADC_CONV,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+PD_MISO,100k,Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod,B,,value/package; purchasing MPN and derating still require review
+CBULK3,10u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review
+CBULK5,4.7u X7R 10V,Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod,F,,value/package; purchasing MPN and derating still require review

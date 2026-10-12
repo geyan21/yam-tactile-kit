@@ -1,0 +1,2522 @@
+{
+  "schema": "yam-f1-retained-skin-cad/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "f1_ch0_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_columns_body.step",
+      "stl": "cad/f1_ch0_columns_body.stl",
+      "sha256_step": "6a85ef031374bbf9e91b107984c553dc1689572d613bbfbe46dac75923f4517e",
+      "sha256_stl": "027580a0aa27ac33cb80fd3ce4332142c9de06f5dad326e0843dfd196366e6fb",
+      "volume_mm3": 7.173633212721785,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.2911376953125,
+          -4.4653449058532715
+        ],
+        [
+          -8.50684642791748,
+          -101.2267074584961,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_rows_body.step",
+      "stl": "cad/f1_ch0_rows_body.stl",
+      "sha256_step": "5180b153a082f8cb5cb026755f64c565854203a999b5d964dd493ebfa2fc3590",
+      "sha256_stl": "b55bdfb575febe9d9b18e59dd8866f2d17d721332ecd7d4b46d257e6476e0925",
+      "volume_mm3": 16.429582556626222,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          -8.50684642791748,
+          -101.21661376953125,
+          -3.665771007537842
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_column_finish_envelope.step",
+      "stl": "cad/f1_ch0_column_finish_envelope.stl",
+      "sha256_step": "9207b14aa8c40f625ed2234cf0b7ea46a2601c7617c90cfdfe2cf617a25142d0",
+      "sha256_stl": "e5f8c4b16a291a5990ece238caae590ffd443f2215327fd497016520459057cc",
+      "volume_mm3": 0.2927749333603098,
+      "bounds_mm": [
+        [
+          -18.786453247070312,
+          -116.88863372802734,
+          -4.398553371429443
+        ],
+        [
+          -8.806846618652344,
+          -101.52867889404297,
+          -3.6244795322418213
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_row_finish_envelope.step",
+      "stl": "cad/f1_ch0_row_finish_envelope.stl",
+      "sha256_step": "8a329f6fa07155cc33fe711a7b3dbb96c44e32f9977b96dc99692143a10ccfe0",
+      "sha256_stl": "947c5de2ed9b44dad5e6f102a30d9745a191a24c4747b30077aa6a120d22627a",
+      "volume_mm3": 0.29277493336031024,
+      "bounds_mm": [
+        [
+          -18.786453247070312,
+          -116.88346099853516,
+          -4.501623630523682
+        ],
+        [
+          -8.806846618652344,
+          -101.52350616455078,
+          -3.7275497913360596
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch0_pressure_film.step",
+      "stl": "cad/f1_ch0_pressure_film.stl",
+      "sha256_step": "cbdd27c32e37ba24627d03bfbd5cb7c719e95f5629da045939a302836c6385ee",
+      "sha256_stl": "82628cc4ffc44463b4c16c342612faec09b8d19a84f62210badb83b38b8b391e",
+      "volume_mm3": 9.149216667509252,
+      "bounds_mm": [
+        [
+          -18.786453247070312,
+          -116.88847351074219,
+          -4.498427867889404
+        ],
+        [
+          -8.806846618652344,
+          -101.52366638183594,
+          -3.6276755332946777
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch0_retained_cover.step",
+      "stl": "cad/f1_ch0_retained_cover.stl",
+      "sha256_step": "ff2e85e9579bee7bc1e998eb95f602fecbab62853acd7ab7c831002e25391dff",
+      "sha256_stl": "211cd8b6fd3f6a45f256e6d72e75c42c8c134724ec1b9f9952f9fe4bc771c2cb",
+      "volume_mm3": 12.013812413540162,
+      "bounds_mm": [
+        [
+          -19.28700065612793,
+          -117.3910140991211,
+          -4.771378517150879
+        ],
+        [
+          -8.356846809387207,
+          -101.0617904663086,
+          -3.5620486736297607
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_foil_mount_bond.step",
+      "stl": "cad/f1_ch0_foil_mount_bond.stl",
+      "sha256_step": "48ad3ef60d20239bc7d868f91fd40cbc00252478e60d733c75dbd9ed707a364a",
+      "sha256_stl": "cc7bb0aa360ab52eb3dadc2722643f56b8e19d3baec94b88a23a490f92dcf677",
+      "volume_mm3": 5.444676084649676,
+      "bounds_mm": [
+        [
+          -19.186891555786133,
+          -117.29364776611328,
+          -4.355483055114746
+        ],
+        [
+          -8.50684642791748,
+          -101.23222351074219,
+          -3.4995803833007812
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch0_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch0_cover_foot_bond_0.stl",
+      "sha256_step": "b85ea34e4853ac411f5a5d1871f1d0319712fdb3c2e6a3e7e74d3fe4ef3cf0b1",
+      "sha256_stl": "43fcb4fe9a84537d67ed965bfee76a0ad501ba921090b724d556cdbde540b12a",
+      "volume_mm3": 0.10392685394546299,
+      "bounds_mm": [
+        [
+          -19.28700065612793,
+          -117.39352416992188,
+          -4.360495567321777
+        ],
+        [
+          -8.356846809387207,
+          -101.4819107055664,
+          -3.5121114253997803
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch0_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch0_layer_assembly_form.step",
+      "stl": "cad/f1_ch0_layer_assembly_form.stl",
+      "sha256_step": "1effa168044c5032694a97262f3445fbca2d9612bc86d7748920465e501df4a4",
+      "sha256_stl": "4d286eb18ee55fc1946035ae301fb239cc9006f43ccffb96b0334656aa63aa2b",
+      "volume_mm3": 1123.988007290151,
+      "bounds_mm": [
+        [
+          -22.185199737548828,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          -5.5068464279174805,
+          -98.23599243164062,
+          0.5958292484283447
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_columns_body.step",
+      "stl": "cad/f1_ch1_columns_body.stl",
+      "sha256_step": "2c0e809077d10c120d6d3122f8f95c056458ed9cca382169643e0b3ae3db5f50",
+      "sha256_stl": "2598a89dcafc79593bb3cb094cb22f1a8a868a983a751d814717048280d8f125",
+      "volume_mm3": 7.139514811795749,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.2911376953125,
+          -4.465344429016113
+        ],
+        [
+          3.3876330852508545,
+          -101.2267074584961,
+          -3.5495173931121826
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_rows_body.step",
+      "stl": "cad/f1_ch1_rows_body.stl",
+      "sha256_step": "31618113d15ee9ae6c9527320b8f2e99b38d1157dfb5ff697999a1fce78740ed",
+      "sha256_stl": "a75c324d9e4c9d5a8248570f514fdfec3632864774d76e60b1d0520f20800438",
+      "volume_mm3": 16.346970114750793,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.28530883789062,
+          -4.666491508483887
+        ],
+        [
+          3.3876330852508545,
+          -101.21661376953125,
+          -3.665771007537842
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_column_finish_envelope.step",
+      "stl": "cad/f1_ch1_column_finish_envelope.stl",
+      "sha256_step": "867ee8bceac32bc6fc1623741c0b899c634703b523f572f4a5fa8c5a66e02636",
+      "sha256_stl": "c79969fb2cc3f7a786fb3cb42a532c3964ee56b195d5675989ed9356677ca410",
+      "volume_mm3": 0.29093602694083737,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -116.88863372802734,
+          -4.398553371429443
+        ],
+        [
+          2.9871068000793457,
+          -101.52867889404297,
+          -3.6244795322418213
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_row_finish_envelope.step",
+      "stl": "cad/f1_ch1_row_finish_envelope.stl",
+      "sha256_step": "ea4e8481f4236821f44129bed1a7b30c6abae441621fe2d40761d3825e03a8fc",
+      "sha256_stl": "815a08858289b11c0c2f88e0c81cfa5ecfdc916078540d547a62075112a33b52",
+      "volume_mm3": 0.29093602694083687,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -116.88346099853516,
+          -4.501623630523682
+        ],
+        [
+          2.9871068000793457,
+          -101.52350616455078,
+          -3.7275497913360596
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch1_pressure_film.step",
+      "stl": "cad/f1_ch1_pressure_film.stl",
+      "sha256_step": "eec2bf690f0284ce2ca1b653bba5cbc5109e6958d91bbcdbe0b606d591fdeb76",
+      "sha256_stl": "19f45d9a9fe0c670eda8aee4b88ad6d5a5fe150e06f7da08d76fbbb5115bddbc",
+      "volume_mm3": 9.091750841900737,
+      "bounds_mm": [
+        [
+          -7.0068464279174805,
+          -116.88847351074219,
+          -4.498427867889404
+        ],
+        [
+          2.9871068000793457,
+          -101.52366638183594,
+          -3.6276752948760986
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch1_retained_cover.step",
+      "stl": "cad/f1_ch1_retained_cover.stl",
+      "sha256_step": "3fff85d8f20b3695cf13aa95ba4481b46c238b00141fb4b826bb13527af6266b",
+      "sha256_stl": "7c8a6ebf5a4a3a6b580bfdf0bff7354710cf071cd2b92056f38c338320b29dee",
+      "volume_mm3": 11.956848639242523,
+      "bounds_mm": [
+        [
+          -7.456846237182617,
+          -117.3910140991211,
+          -4.771378517150879
+        ],
+        [
+          3.4877424240112305,
+          -101.0617904663086,
+          -3.5620486736297607
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_foil_mount_bond.step",
+      "stl": "cad/f1_ch1_foil_mount_bond.stl",
+      "sha256_step": "d34243ea57288bf475f199ceae5371e2faa89ccc7b51e127ee808c7a40b6ddfd",
+      "sha256_stl": "805da97ae6983f73004b86e93d7a21c23c2db3127b630ea31c1dd6ff73e5c67c",
+      "volume_mm3": 5.416150178208886,
+      "bounds_mm": [
+        [
+          -7.306846618652344,
+          -117.29364776611328,
+          -4.355483055114746
+        ],
+        [
+          3.3876330852508545,
+          -101.23222351074219,
+          -3.499580144882202
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch1_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch1_cover_foot_bond_0.stl",
+      "sha256_step": "7acc22ba31f578469053978b8575cf3bd93d6e5b7ecdc870e95ccce0242639ab",
+      "sha256_stl": "ff05617cb196fba82fa84cf0b110fbd80bd2c475f09afb4904d8e45771079bf3",
+      "volume_mm3": 0.10391737781513327,
+      "bounds_mm": [
+        [
+          -7.456846237182617,
+          -117.39352416992188,
+          -4.360495567321777
+        ],
+        [
+          3.4877424240112305,
+          -101.4819107055664,
+          -3.5121114253997803
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch1_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch1_layer_assembly_form.step",
+      "stl": "cad/f1_ch1_layer_assembly_form.stl",
+      "sha256_step": "ecb99d4187dacaae85c0ab5ceba6c83fc6e8cc71b5dc251938a551b15475afc3",
+      "sha256_stl": "fc162e0edd4a4f6756bc6c1ffe9512583944e4491337b0e261d31974a5f23244",
+      "volume_mm3": 1121.867821284555,
+      "bounds_mm": [
+        [
+          -10.306846618652344,
+          -120.48786926269531,
+          -4.505857944488525
+        ],
+        [
+          6.385941028594971,
+          -98.23599243164062,
+          0.5958293080329895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch2_compliant_fit_base.step",
+      "stl": "cad/f1_ch2_compliant_fit_base.stl",
+      "sha256_step": "fde0aeb6bf7e47a45c44b65bdbfd1eba639a1f68f34c704ddeaa87c3d61756b2",
+      "sha256_stl": "33f218cab09705eebbc8256952bc0dff79af7b884d96ef3a657ef2fe2c65a099",
+      "volume_mm3": 161.22272104044887,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.99810791015625,
+          -4.106931686401367
+        ],
+        [
+          -0.5,
+          -76.08174133300781,
+          -0.3732931613922119
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_columns_body.step",
+      "stl": "cad/f1_ch2_columns_body.stl",
+      "sha256_step": "cea9eb1081e59ab0a85ef34e60cc612d7c35528929bda99f586039927d553de8",
+      "sha256_stl": "d94df0c67041dc173abeadf763701947b1c3a3a64945948ad9e2aca72ace8e4e",
+      "volume_mm3": 13.259657389383378,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.49253845214844,
+          -4.184628963470459
+        ],
+        [
+          -1.0,
+          -76.59905242919922,
+          -1.3258635997772217
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_rows_body.step",
+      "stl": "cad/f1_ch2_rows_body.stl",
+      "sha256_step": "369fa2e12fd40cfe31f9287b41f781a610ef794e6bb901fc7c86a0ea540129f2",
+      "sha256_stl": "43081b320f0f4ab410aa0cf3535bf832c71bc0b034ebe45618f2d14b6ce03f42",
+      "volume_mm3": 13.167171253341461,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.43693542480469,
+          -4.298632621765137
+        ],
+        [
+          -1.0,
+          -76.62255096435547,
+          -1.4422636032104492
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_column_finish_envelope.step",
+      "stl": "cad/f1_ch2_column_finish_envelope.stl",
+      "sha256_step": "c6259a7b8b377fa6efee5c41b2245cf25b78febe80f178c5bde879cf7d174625",
+      "sha256_stl": "360d506f9d286fbbb8ce873ad13f8962699ab12dad158afc78180c86ee849c6c",
+      "volume_mm3": 0.41118649109774974,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -88.93782806396484,
+          -3.975935459136963
+        ],
+        [
+          -3.2750000953674316,
+          -77.20917510986328,
+          -1.3858636617660522
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_row_finish_envelope.step",
+      "stl": "cad/f1_ch2_row_finish_envelope.stl",
+      "sha256_step": "b9f7eb406a40b6fd0ceee40928db0cf2a5faf8665c833fa7923c354817f90fb4",
+      "sha256_stl": "3ee44cd5ce29dba97d646053953e46b2bf28e87328b98b8ca2c4e48a6365bfbb",
+      "volume_mm3": 0.40832273446142925,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -88.88591766357422,
+          -4.073587894439697
+        ],
+        [
+          -3.2750000953674316,
+          -77.24256134033203,
+          -1.4890635013580322
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch2_pressure_film.step",
+      "stl": "cad/f1_ch2_pressure_film.stl",
+      "sha256_step": "b913ed2f1414620815d9d2008cc3ba35088c64852bab3a9a41d1cde344b75317",
+      "sha256_stl": "061c7fcb62bfbb40a6e96753c19f5e43664d0a3cb3b8f65d06ca77297f571386",
+      "volume_mm3": 12.804831649361628,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -88.93621826171875,
+          -4.070559978485107
+        ],
+        [
+          -3.2750000953674316,
+          -77.21021270751953,
+          -1.3890635967254639
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch2_retained_cover.step",
+      "stl": "cad/f1_ch2_retained_cover.stl",
+      "sha256_step": "eb5c4d19a1ed7e7b4d57aaf2a4c31a5791dc082d5d082b0f5aa9eb62e30f80d4",
+      "sha256_stl": "4dc5e1ab0dd41c4c38c218a5a9165cff3fdc5f1808cb383252d5e97263649960",
+      "volume_mm3": 86.56237191528847,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.83625030517578,
+          -4.778812408447266
+        ],
+        [
+          -0.5,
+          -76.09674835205078,
+          -1.3258635997772217
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_foil_mount_bond.step",
+      "stl": "cad/f1_ch2_foil_mount_bond.stl",
+      "sha256_step": "7fba1a7d4fec3fd5dc90f6a6e25d105519aa1d14aa7d1b96d2365ac574fd8298",
+      "sha256_stl": "aa38885d0e70f818f04ae3dfe86f0417a3a46c182261ae209e0bcb246e30ee90",
+      "volume_mm3": 9.084884757735605,
+      "bounds_mm": [
+        [
+          -14.0,
+          -89.51642608642578,
+          -4.076893329620361
+        ],
+        [
+          -1.0,
+          -76.58895874023438,
+          -1.2758636474609375
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch2_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch2_cover_foot_bond_0.stl",
+      "sha256_step": "f4cc96bd039fc6695607d42a4ef1565769fa304272c1a81c46c603d708ffae7e",
+      "sha256_stl": "1c14532186dd9d5958aee9b256458300350e06735d0798530ab9b291bf50d88a",
+      "volume_mm3": 0.9390106008963996,
+      "bounds_mm": [
+        [
+          -14.5,
+          -89.29713439941406,
+          -4.15659761428833
+        ],
+        [
+          -0.5,
+          -76.09098052978516,
+          -1.2758636474609375
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch2_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch2_layer_assembly_form.step",
+      "stl": "cad/f1_ch2_layer_assembly_form.stl",
+      "sha256_step": "08602abc07e489dba66b682485129f986f5421ace2f7e9452c16521bd5353148",
+      "sha256_stl": "fdc7141a9993bcf822bc49a6bfcbf8f62f291290d0a768d874188f0affeded4b",
+      "volume_mm3": 2078.6860546070234,
+      "bounds_mm": [
+        [
+          -17.0,
+          -92.94220733642578,
+          -4.15659761428833
+        ],
+        [
+          2.0,
+          -73.09674835205078,
+          2.674117088317871
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch3_compliant_fit_base.step",
+      "stl": "cad/f1_ch3_compliant_fit_base.stl",
+      "sha256_step": "de367a184d9ef8b9ba8fe485a6dae783cc6263c8456df7381f7c9c1f6d15653a",
+      "sha256_stl": "e7be57b40e1af90f55f241a4d7e5022b05732933807ccb35b5552e4109c876d0",
+      "volume_mm3": 171.14864978529522,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98521423339844,
+          -4.347702503204346
+        ],
+        [
+          -0.5,
+          -59.04524612426758,
+          3.153228521347046
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_columns_body.step",
+      "stl": "cad/f1_ch3_columns_body.stl",
+      "sha256_step": "cf3449b68ba39ee01e7a51d2c5aaecf72e95e07d2b62a2f53ab4dea047324c8a",
+      "sha256_stl": "54b9cf62c9bf21d2f233e749495b95d66f71ca99892e5a2fa8018648e8fc1061",
+      "volume_mm3": 14.907453263854192,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.507702350616455
+        ],
+        [
+          -1.0,
+          -59.218265533447266,
+          2.149364471435547
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_rows_body.step",
+      "stl": "cad/f1_ch3_rows_body.stl",
+      "sha256_step": "72400b665e2715f4500335652fc68519ddddd5f2879fc45bbaedc6054a1ced0c",
+      "sha256_stl": "7464aaf907c8aafa93963264089b54a105fc8e30a1ae34a4fb58ae9e02a513d6",
+      "volume_mm3": 15.03457443991955,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.624102592468262
+        ],
+        [
+          -1.0,
+          -59.125343322753906,
+          2.079261064529419
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_column_finish_envelope.step",
+      "stl": "cad/f1_ch3_column_finish_envelope.stl",
+      "sha256_step": "7872ae1862287de0905063e8fad503b9e617a64350a84ae743377d9af53cab73",
+      "sha256_stl": "58ffcf1f8e28567b7c2ac6e4f03582305130f59ff905d784bfd109071edea5a8",
+      "volume_mm3": 0.4720568374957439,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -71.88520812988281,
+          -4.460902214050293
+        ],
+        [
+          -3.2750000953674316,
+          -59.619144439697266,
+          1.6344497203826904
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_row_finish_envelope.step",
+      "stl": "cad/f1_ch3_row_finish_envelope.stl",
+      "sha256_step": "d6845ba4e93cae323402094c1408ac7a7ea4a99ff3f4fac146b7af94b9ebebbe",
+      "sha256_stl": "905d5767a3ae4f7073ab747fb9962e452baee96922bbf928ca3c2903a68f17a4",
+      "volume_mm3": 0.4751242859107539,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -71.88520812988281,
+          -4.5641021728515625
+        ],
+        [
+          -3.2750000953674316,
+          -59.537200927734375,
+          1.5717148780822754
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch3_pressure_film.step",
+      "stl": "cad/f1_ch3_pressure_film.stl",
+      "sha256_step": "a28f123c8c23bc57e41c9d751d50f9804d0b1b59149e3e1ab993e475dc16d3a2",
+      "sha256_stl": "5514586e7b0f21d900d9e61978471a1c8e17c782763f69e6e924b1734c0fd259",
+      "volume_mm3": 14.799705053229733,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -71.88520812988281,
+          -4.5609025955200195
+        ],
+        [
+          -3.2750000953674316,
+          -59.53974151611328,
+          1.6325044631958008
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch3_retained_cover.step",
+      "stl": "cad/f1_ch3_retained_cover.stl",
+      "sha256_step": "0108dc7039891bb9b53a0ac451231d1fbd6967898faa18fcefcfa1d379143ff2",
+      "sha256_stl": "8f3fad26641bfb75d2c4c05a6ae9e8ca2420f2c7266e9b0130ebc2e865f52b42",
+      "volume_mm3": 100.20817282501525,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98526763916016,
+          -5.024102210998535
+        ],
+        [
+          -0.5,
+          -58.50465774536133,
+          2.400860548019409
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_foil_mount_bond.step",
+      "stl": "cad/f1_ch3_foil_mount_bond.stl",
+      "sha256_step": "45c3dff6a415829ccb2e888db381caab0bb9f803c17e08a83939add206489a3d",
+      "sha256_stl": "ca5f04fbbbe734d765a498b7aef1b3c322cc3a7266aaf71f565384c3c5a1a049",
+      "volume_mm3": 10.198984207677821,
+      "bounds_mm": [
+        [
+          -14.0,
+          -72.4852066040039,
+          -4.397702217102051
+        ],
+        [
+          -1.0,
+          -59.30607986450195,
+          2.1794776916503906
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch3_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch3_cover_foot_bond_0.stl",
+      "sha256_step": "26f5d7a10afff3bb9dbb11cdebbe7abc32c855142e68195c5fedd20558011233",
+      "sha256_stl": "9f5a89ae357a55f6dd6e1b7a2323b607a0ed1fdee3e94b030ef8e047c0f5f2ea",
+      "volume_mm3": 1.012080514812552,
+      "bounds_mm": [
+        [
+          -14.5,
+          -72.98521423339844,
+          -4.397702217102051
+        ],
+        [
+          -0.5,
+          -59.45698547363281,
+          1.9799695014953613
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch3_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch3_layer_assembly_form.step",
+      "stl": "cad/f1_ch3_layer_assembly_form.stl",
+      "sha256_step": "51bbdc64ea27894d10b97219b6c3b1c3dd7110e263077ea826e2f0eacd72ac82",
+      "sha256_stl": "0e72b37fdfb5b17f3d2aa3d80c2825046c310e30c6985386e6b123fd059fc67f",
+      "volume_mm3": 3338.097087165478,
+      "bounds_mm": [
+        [
+          -17.0,
+          -75.98521423339844,
+          -4.397702217102051
+        ],
+        [
+          2.0,
+          -56.00528335571289,
+          6.5489583015441895
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch4_compliant_fit_base.step",
+      "stl": "cad/f1_ch4_compliant_fit_base.stl",
+      "sha256_step": "1289ce311699e38b82b3ccb501b934824a7c6e27f22fd84098a31170ff08957b",
+      "sha256_stl": "15c3c5ce9437eb9c272042cfa45836d6af74c07a166743e0805b603d5b0959a5",
+      "volume_mm3": 126.48420446684342,
+      "bounds_mm": [
+        [
+          -14.5,
+          -56.00642776489258,
+          6.615732669830322
+        ],
+        [
+          -0.5,
+          -42.0776252746582,
+          12.37673282623291
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_columns_body.step",
+      "stl": "cad/f1_ch4_columns_body.stl",
+      "sha256_step": "d6f2b77ce36bdbb0fe8b7b81a8114dfb19a0c867502c15617a1185be96d0fd65",
+      "sha256_stl": "ca3bd8a198b4634510bf1a429367c5965112edbcfc04e2b3c8453b2cadb7af3c",
+      "volume_mm3": 13.388280908992604,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.558345794677734,
+          6.847860813140869
+        ],
+        [
+          -1.0,
+          -42.592220306396484,
+          11.329483985900879
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_rows_body.step",
+      "stl": "cad/f1_ch4_rows_body.stl",
+      "sha256_step": "0e6d252212c7b4619bc0baf85203ca20fb9c9a7bc900c3f87727862e163b45be",
+      "sha256_stl": "ee37180e36cf0a2d69520c4f7da343e14056cf29800f4af4868d2c34ea614aca",
+      "volume_mm3": 13.253820202576069,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.47818374633789,
+          6.763463020324707
+        ],
+        [
+          -1.0,
+          -42.61565017700195,
+          11.213083267211914
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_column_finish_envelope.step",
+      "stl": "cad/f1_ch4_column_finish_envelope.stl",
+      "sha256_step": "bce5f05c2116262b8b7492259fff6314a1a1f7b3020d03e4e38bf8b269189e42",
+      "sha256_stl": "2dee09246f7b2f8282748f0b022dc59cda4db6dfe0515196bdc19a2641182c91",
+      "volume_mm3": 0.4175695375657967,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -55.079227447509766,
+          7.284352779388428
+        ],
+        [
+          -3.2750000953674316,
+          -43.18558883666992,
+          11.26948356628418
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_row_finish_envelope.step",
+      "stl": "cad/f1_ch4_row_finish_envelope.stl",
+      "sha256_step": "3828988cf132f55fb53042e1aa9ed0852457c26cc8619a887083d9f2ed7aa686",
+      "sha256_stl": "fe642f4db115f565c2d3db99cb0c525418199c496b2330684dbd64515bb0fca1",
+      "volume_mm3": 0.4146685356215342,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -55.01061248779297,
+          7.207265377044678
+        ],
+        [
+          -3.2750000953674316,
+          -43.20001983642578,
+          11.16628360748291
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch4_pressure_film.step",
+      "stl": "cad/f1_ch4_pressure_film.stl",
+      "sha256_step": "9f03b08279bd6bc7622bc9495621aa9ca7c83c320e070d8c52a185b19e758c14",
+      "sha256_stl": "1a95d730e7b7d2a96014bccb7b9e2e5ac0319c2c5bb3ce3e9364d666fb18289d",
+      "volume_mm3": 13.003719893551095,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -55.07709884643555,
+          7.20965576171875
+        ],
+        [
+          -3.2750000953674316,
+          -43.18603515625,
+          11.266283988952637
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch4_retained_cover.step",
+      "stl": "cad/f1_ch4_retained_cover.stl",
+      "sha256_step": "1e091174c8f912d7586230416214ad579a80ede4cc988256b8ad42fc7af636a7",
+      "sha256_stl": "2976f9132f9672252ce9570f177421d1a425398f7b09c90cb1405a73ee0c7a2d",
+      "volume_mm3": 86.23415585787329,
+      "bounds_mm": [
+        [
+          -14.5,
+          -55.91447448730469,
+          6.137592315673828
+        ],
+        [
+          -0.5,
+          -42.172725677490234,
+          11.329483985900879
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_foil_mount_bond.step",
+      "stl": "cad/f1_ch4_foil_mount_bond.stl",
+      "sha256_step": "25d75a46746f1e5b419145de0e50bb56283635888351e312541a173cf5830f62",
+      "sha256_stl": "27b64f62cd3f21d5397878c213e35f07f8daeb5ff61ae8658634e980f19bd55e",
+      "volume_mm3": 9.201382547735179,
+      "bounds_mm": [
+        [
+          -14.0,
+          -55.59278106689453,
+          6.927618503570557
+        ],
+        [
+          -1.0,
+          -42.582157135009766,
+          11.379483222961426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch4_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch4_cover_foot_bond_0.stl",
+      "sha256_step": "82a168168dc8738e16662f38d0d36b4feeb800f92257ad21ccc9a36c73ba63f3",
+      "sha256_stl": "b8dff00836f06a28d5d7fc7a0178db4953f46b314ece0520caff5fc7942623a6",
+      "volume_mm3": 0.941872652479109,
+      "bounds_mm": [
+        [
+          -14.5,
+          -55.9498405456543,
+          6.580388069152832
+        ],
+        [
+          -0.5,
+          -42.826385498046875,
+          11.379483222961426
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch4_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch4_layer_assembly_form.step",
+      "stl": "cad/f1_ch4_layer_assembly_form.stl",
+      "sha256_step": "286e78dfeef9f60a5a97103e3b715151c5746f611f799dd2cf743f73923e3ef7",
+      "sha256_stl": "391d0ae66661711f4255575f6595332bacdf5d23257cddf30010ffd20f3a8b8b",
+      "volume_mm3": 2113.2261266173814,
+      "bounds_mm": [
+        [
+          -17.0,
+          -58.91447448730469,
+          6.580388069152832
+        ],
+        [
+          2.0,
+          -39.110469818115234,
+          15.329483032226562
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_compliant_fit_base",
+      "purpose": "Variable-thickness compliant fitting base from the source TPU to the FPC mount",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch5_compliant_fit_base.step",
+      "stl": "cad/f1_ch5_compliant_fit_base.stl",
+      "sha256_step": "ce5ffb32187f7e2b033efb4680c5bb9fc48e3bb0aea7305101638dae71ef9923",
+      "sha256_stl": "0377a37f64eca1ca3881d3e68f08535ddd0ce5abae9c910b4087934569c04bd1",
+      "volume_mm3": 211.11874133423325,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.011878967285156,
+          -4.404205799102783
+        ],
+        [
+          -0.5,
+          -23.084306716918945,
+          10.445815086364746
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_columns_body",
+      "purpose": "Lower FPC body envelope with its active coverlay opening",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_columns_body.step",
+      "stl": "cad/f1_ch5_columns_body.stl",
+      "sha256_step": "4f20af20ca16e99fde02e3e63ee9bd614fbd0ba41f6e957cd6be212b8009fe06",
+      "sha256_stl": "d026e483e05b96df0e82df546cdf98ecfac06b207f44c5e0b2963b6fa50174fa",
+      "volume_mm3": 19.805712477388774,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.685726165771484,
+          -4.564206123352051
+        ],
+        [
+          -1.0,
+          -23.58399772644043,
+          8.989798545837402
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_rows_body",
+      "purpose": "Upper FPC body envelope with the plated-stack allowance",
+      "material": "PI/Cu/coverlay envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_rows_body.step",
+      "stl": "cad/f1_ch5_rows_body.stl",
+      "sha256_step": "b57ab90985b6e4a5b36462a35fb7825aabe7e09569b1e0e9344303742d58423e",
+      "sha256_stl": "440b13fad31641a22584aee2c8cd52cbf5a533c7edf80edc8fb69a045b3b209b",
+      "volume_mm3": 19.887950728596177,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.75137710571289,
+          -4.680605888366699
+        ],
+        [
+          -1.0,
+          -23.58334732055664,
+          8.893678665161133
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_column_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_column_finish_envelope.step",
+      "stl": "cad/f1_ch5_column_finish_envelope.stl",
+      "sha256_step": "ec090cdc0027c2e38f533933274e0c9bfd5664b18f244fdaca40038376267e73",
+      "sha256_stl": "d4605ce3a95b0577827718fe9dcbafe71e5c673c3444a61131533f333ca1b843",
+      "volume_mm3": 0.645824808927251,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -38.177001953125,
+          -4.517001628875732
+        ],
+        [
+          -3.2750000953674316,
+          -24.185739517211914,
+          8.59527587890625
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_row_finish_envelope",
+      "purpose": "Maximum-height envelope over active exposed copper; real plated area follows artwork",
+      "material": "Nominal Ni/Au finish envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_row_finish_envelope.step",
+      "stl": "cad/f1_ch5_row_finish_envelope.stl",
+      "sha256_step": "8a5ef9ee9389ca5826349e14221b949d5c6cf454abbe5d8e544481abe5178155",
+      "sha256_stl": "f71ae81fed2b1c3fa9649f1955fc0fc5cb0a2b4a92d430021f822283e10667bd",
+      "volume_mm3": 0.6479598749238773,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -38.23880386352539,
+          -4.620201110839844
+        ],
+        [
+          -3.2750000953674316,
+          -24.186107635498047,
+          8.512629508972168
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_pressure_film",
+      "purpose": "Measured conductive-film island; register to the row/column contact map",
+      "material": "0.10 mm pressure-sensitive conductive film",
+      "kind": "cut_film",
+      "step": "cad/f1_ch5_pressure_film.step",
+      "stl": "cad/f1_ch5_pressure_film.stl",
+      "sha256_step": "e87fefe4789a1b9eb8527c7c94894fa13f50d6aaaf22a64fc3bc5f415efac70a",
+      "sha256_stl": "640c84a634d5bb521db3c8e8c6005cc63e84883250ba528137c40ac0676fb168",
+      "volume_mm3": 20.215385685177452,
+      "bounds_mm": [
+        [
+          -13.399999618530273,
+          -38.23688888549805,
+          -4.617001056671143
+        ],
+        [
+          -3.2750000953674316,
+          -24.18575096130371,
+          8.592713356018066
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_retained_cover",
+      "purpose": "Cast wear cover and peripheral skirt with a shared end port for both foil necks",
+      "material": "Smooth-On Dragon Skin 10 Slow",
+      "kind": "cast",
+      "step": "cad/f1_ch5_retained_cover.step",
+      "stl": "cad/f1_ch5_retained_cover.stl",
+      "sha256_step": "3c947ba756f1e2551924c4de18dabed458f071b93e1ff2d1e089e26e5693e2be",
+      "sha256_stl": "e662bed4ea38452da55a7ee91bc155fa4ecdede4fc16ecb61f0afc4d363ad118",
+      "volume_mm3": 130.54061724572205,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.37270736694336,
+          -5.080605983734131
+        ],
+        [
+          -0.5,
+          -23.072134017944336,
+          9.262223243713379
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_foil_mount_bond",
+      "purpose": "Lower-foil mounting bond; keep adhesive out of the active conductive film",
+      "material": "50 \u00b5m insulating adhesive envelope",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_foil_mount_bond.step",
+      "stl": "cad/f1_ch5_foil_mount_bond.stl",
+      "sha256_step": "b15cd087413a67b4de7bb9dc32321e3eaf70e6484814d6167698e8dee21a7a94",
+      "sha256_stl": "9135c85045638c85adf880181341a3e2896403e6453077cc26b7ff8b76fffa9a",
+      "volume_mm3": 13.698774496435453,
+      "bounds_mm": [
+        [
+          -14.0,
+          -38.623687744140625,
+          -4.4542059898376465
+        ],
+        [
+          -1.0,
+          -23.584613800048828,
+          9.031087875366211
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_cover_foot_bond_0",
+      "purpose": "Peripheral flexible bond to the nail face or compliant fitting base",
+      "material": "Smooth-On Sil-Poxy; qualify the actual cured silicone, printed frame and TPU joints",
+      "kind": "reference_only",
+      "step": "cad/f1_ch5_cover_foot_bond_0.step",
+      "stl": "cad/f1_ch5_cover_foot_bond_0.stl",
+      "sha256_step": "13b05184544c5a7b269b5b30690c7214c59a2773d769e8559ebdc99bec009158",
+      "sha256_stl": "1541b419c7decfb4563773fcae2e7347b9325234ee75789aea512e3066fdeabe",
+      "volume_mm3": 1.2526211137002043,
+      "bounds_mm": [
+        [
+          -14.5,
+          -39.038551330566406,
+          -4.4542059898376465
+        ],
+        [
+          -0.5,
+          -23.835002899169922,
+          9.30451488494873
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "f1_ch5_layer_assembly_form",
+      "purpose": "Backing form for registering layers away from the robot",
+      "material": "Smooth finished tool with compatible release agent",
+      "kind": "fabricate_tool",
+      "step": "cad/f1_ch5_layer_assembly_form.step",
+      "stl": "cad/f1_ch5_layer_assembly_form.stl",
+      "sha256_step": "a3dc36c32ff99b9e5e0607c53c9aa5e382a30f540d2493df6a31b3e167769365",
+      "sha256_stl": "c04155bb9ddb1dfa4be2a66d7e5534565a0dbc92339e122630d1d1e459b8b6d6",
+      "volume_mm3": 4970.055021593342,
+      "bounds_mm": [
+        [
+          -17.0,
+          -42.038551330566406,
+          -4.454204559326172
+        ],
+        [
+          2.0,
+          -20.083406448364258,
+          13.262223243713379
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "cases": [
+    {
+      "site": 0,
+      "foil_body_native_us": [
+        [
+          -5.351779092047373,
+          15.731903716917515
+        ],
+        [
+          -5.342333626329696,
+          15.450784633422565
+        ],
+        [
+          -5.305234899731145,
+          15.171966307208573
+        ],
+        [
+          -5.240845602553891,
+          14.898178256414713
+        ],
+        [
+          -5.148590801097017,
+          14.628561205486907
+        ],
+        [
+          0.6779345320967929,
+          0.0
+        ],
+        [
+          3.858033389886992,
+          0.0
+        ],
+        [
+          3.8650649137921578,
+          3.2181552901615547
+        ],
+        [
+          3.8650683039553355,
+          3.218887948654668
+        ],
+        [
+          3.8937672251589515,
+          7.278419089299396
+        ],
+        [
+          3.8937753539497786,
+          7.27924626892678
+        ],
+        [
+          3.9437135558540746,
+          11.247361497944716
+        ],
+        [
+          3.943720534396299,
+          11.247852216896687
+        ],
+        [
+          3.952565863680967,
+          11.805659424123663
+        ],
+        [
+          3.9535043372268364,
+          11.82020100194119
+        ],
+        [
+          3.955849364334896,
+          11.83458290257643
+        ],
+        [
+          3.959578814388376,
+          11.84866940037816
+        ],
+        [
+          3.96465749161934,
+          11.862327557486758
+        ],
+        [
+          3.9710374672600945,
+          11.87542847840259
+        ],
+        [
+          3.978658531859147,
+          11.887848526405579
+        ],
+        [
+          3.987448763493104,
+          11.899470490346362
+        ],
+        [
+          3.997325206512137,
+          11.910184690797692
+        ],
+        [
+          4.008194654413534,
+          11.919890015127065
+        ],
+        [
+          4.019954529455149,
+          11.928494871722329
+        ],
+        [
+          4.03249385070763,
+          11.935918054365008
+        ],
+        [
+          4.045694281409647,
+          11.942089508594016
+        ],
+        [
+          4.059431245741982,
+          11.946950992827418
+        ],
+        [
+          4.0735751044812005,
+          11.950456628003034
+        ],
+        [
+          4.087992378437942,
+          11.952573330550809
+        ],
+        [
+          4.1025470081339535,
+          11.953281124610875
+        ],
+        [
+          5.328265467728883,
+          11.953281124610875
+        ],
+        [
+          5.328265467728883,
+          16.079129509631315
+        ],
+        [
+          -5.322481055447886,
+          16.079129509631315
+        ],
+        [
+          -5.333476919264454,
+          16.01259634863167
+        ],
+        [
+          -5.351779092047373,
+          15.731903716917515
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          5.478265467728884,
+          16.229129509631314
+        ],
+        [
+          5.478265467728884,
+          11.853281124610868
+        ],
+        [
+          4.053333588331879,
+          11.853281124610868
+        ],
+        [
+          4.043706667146939,
+          11.246184899298628
+        ],
+        [
+          3.993765701002685,
+          7.27785002235072
+        ],
+        [
+          3.965064941898934,
+          3.218058906330087
+        ],
+        [
+          3.957815133106321,
+          -0.10000000000000746
+        ],
+        [
+          0.610124124886216,
+          -0.10000000000000746
+        ],
+        [
+          -5.242406236219083,
+          14.593851600825335
+        ],
+        [
+          -5.337059102166942,
+          14.870477057448923
+        ],
+        [
+          -5.403709833468865,
+          15.153880893289907
+        ],
+        [
+          -5.442111384506273,
+          15.44249069653554
+        ],
+        [
+          -5.451888545360732,
+          15.733481800705684
+        ],
+        [
+          -5.432943735406399,
+          16.02403028511126
+        ],
+        [
+          -5.399047207602492,
+          16.229129509631314
+        ],
+        [
+          5.478265467728884,
+          16.229129509631314
+        ]
+      ],
+      "tail_exit": "proximal",
+      "cover_top_above_source_datum_mm": 0.4614000000000001,
+      "column_contact_mm": 0.11320000000000001,
+      "row_contact_mm": 0.2132,
+      "film_thickness_mm": 0.09999999999999999,
+      "base_upper_datum_mm": 0.0,
+      "foot_bond_top_mm": 0.05,
+      "row_outer_mm": 0.36140000000000005,
+      "minimum_skirt_foot_area_mm2": 2.078537078909272
+    },
+    {
+      "site": 1,
+      "foil_body_native_us": [
+        [
+          -4.074294222327202,
+          11.953281124610875
+        ],
+        [
+          -4.05973960857984,
+          11.952573332105656
+        ],
+        [
+          -4.045322350119502,
+          11.950456634193076
+        ],
+        [
+          -4.031178505979305,
+          11.946951006645376
+        ],
+        [
+          -4.017441554917618,
+          11.94208953288795
+        ],
+        [
+          -4.0042411357478525,
+          11.935918091783327
+        ],
+        [
+          -3.991701823906731,
+          11.928494924661644
+        ],
+        [
+          -3.979941955806808,
+          11.919890085683617
+        ],
+        [
+          -3.9690725120681316,
+          11.910184780723078
+        ],
+        [
+          -3.9591960701682227,
+          11.899470601008183
+        ],
+        [
+          -3.9504058363944807,
+          11.887848658753624
+        ],
+        [
+          -3.942784766234695,
+          11.875428632941052
+        ],
+        [
+          -3.9364047815067433,
+          11.86232773425293
+        ],
+        [
+          -3.9313260916156105,
+          11.848669598927964
+        ],
+        [
+          -3.9275966253431793,
+          11.834583121977069
+        ],
+        [
+          -3.925251578533132,
+          11.82020124077105
+        ],
+        [
+          -3.924313081939555,
+          11.805659680479623
+        ],
+        [
+          -3.9154667989805705,
+          11.247852473252648
+        ],
+        [
+          -3.915459815919433,
+          11.247361461903129
+        ],
+        [
+          -3.865522567689452,
+          7.2792462328851935
+        ],
+        [
+          -3.8655144394767498,
+          7.278419106917246
+        ],
+        [
+          -3.836815041435981,
+          3.2188879662725185
+        ],
+        [
+          -3.8368116511482526,
+          3.2181552901615547
+        ],
+        [
+          -3.8297801272430827,
+          0.0
+        ],
+        [
+          -0.6964964113474421,
+          0.0
+        ],
+        [
+          5.152400356772256,
+          14.684722929906668
+        ],
+        [
+          5.24465408948757,
+          14.95433951694391
+        ],
+        [
+          5.309043482568207,
+          15.228135225357201
+        ],
+        [
+          5.346141571620793,
+          15.506953866614104
+        ],
+        [
+          5.3555866106847105,
+          15.78807374492502
+        ],
+        [
+          5.337286695423725,
+          16.068766489748324
+        ],
+        [
+          5.335574010295742,
+          16.079129509631315
+        ],
+        [
+          -5.338892916662937,
+          16.079129509631315
+        ],
+        [
+          -5.338892916662937,
+          11.953281124610875
+        ],
+        [
+          -4.074294222327202,
+          11.953281124610875
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          -5.488892916662937,
+          16.229129509631314
+        ],
+        [
+          5.412140162450351,
+          16.229129509631314
+        ],
+        [
+          5.436753577231945,
+          16.080200028898073
+        ],
+        [
+          5.455696045221772,
+          15.789651506789463
+        ],
+        [
+          5.4459193444766685,
+          15.498660129713501
+        ],
+        [
+          5.407518482791744,
+          15.210050221453578
+        ],
+        [
+          5.3408677195220235,
+          14.926638745236273
+        ],
+        [
+          5.246215845604225,
+          14.650013459177144
+        ],
+        [
+          -0.6286860141649224,
+          -0.10000000000000923
+        ],
+        [
+          -3.9295618704624107,
+          -0.10000000000000923
+        ],
+        [
+          -3.936811679261444,
+          3.218058909266455
+        ],
+        [
+          -3.965512915190414,
+          7.277850019279625
+        ],
+        [
+          -4.015452928108341,
+          11.246184936020283
+        ],
+        [
+          -4.025080886653896,
+          11.853281124610866
+        ],
+        [
+          -5.488892916662937,
+          11.853281124610866
+        ],
+        [
+          -5.488892916662937,
+          16.229129509631314
+        ]
+      ],
+      "tail_exit": "proximal",
+      "cover_top_above_source_datum_mm": 0.4614000000000001,
+      "column_contact_mm": 0.11320000000000001,
+      "row_contact_mm": 0.2132,
+      "film_thickness_mm": 0.09999999999999999,
+      "base_upper_datum_mm": 0.0,
+      "foot_bond_top_mm": 0.05,
+      "row_outer_mm": 0.36140000000000005,
+      "minimum_skirt_foot_area_mm2": 2.0783475563027016
+    },
+    {
+      "site": 2,
+      "foil_body_native_us": [
+        [
+          6.5,
+          0.5
+        ],
+        [
+          6.5,
+          14.529360636290933
+        ],
+        [
+          -6.5,
+          14.529360636290933
+        ],
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          6.5,
+          0.5
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          15.029360636290933
+        ],
+        [
+          -7.0,
+          15.029360636290933
+        ],
+        [
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ]
+      ],
+      "tail_exit": "distal",
+      "cover_top_above_source_datum_mm": 0.7264,
+      "column_contact_mm": 0.1632,
+      "row_contact_mm": 0.26320000000000005,
+      "film_thickness_mm": 0.10000000000000002,
+      "base_upper_datum_mm": 0.05,
+      "foot_bond_top_mm": 0.1,
+      "row_outer_mm": 0.3264000000000001,
+      "minimum_skirt_foot_area_mm2": 18.746424572661827
+    },
+    {
+      "site": 3,
+      "foil_body_native_us": [
+        [
+          6.5,
+          0.5
+        ],
+        [
+          6.5,
+          16.121423709997355
+        ],
+        [
+          -6.5,
+          16.121423709997355
+        ],
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          6.5,
+          0.5
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          16.621423709997355
+        ],
+        [
+          -7.0,
+          16.621423709997355
+        ],
+        [
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ]
+      ],
+      "tail_exit": "proximal",
+      "cover_top_above_source_datum_mm": 0.7264,
+      "column_contact_mm": 0.1632,
+      "row_contact_mm": 0.26320000000000005,
+      "film_thickness_mm": 0.10000000000000002,
+      "base_upper_datum_mm": 0.05,
+      "foot_bond_top_mm": 0.1,
+      "row_outer_mm": 0.3264000000000001,
+      "minimum_skirt_foot_area_mm2": 20.179281338997583
+    },
+    {
+      "site": 4,
+      "foil_body_native_us": [
+        [
+          6.5,
+          0.5
+        ],
+        [
+          6.5,
+          14.728163445138318
+        ],
+        [
+          -6.5,
+          14.728163445138318
+        ],
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          6.5,
+          0.5
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          15.228163445138318
+        ],
+        [
+          -7.0,
+          15.228163445138318
+        ],
+        [
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ]
+      ],
+      "tail_exit": "proximal",
+      "cover_top_above_source_datum_mm": 0.7264,
+      "column_contact_mm": 0.1632,
+      "row_contact_mm": 0.26320000000000005,
+      "film_thickness_mm": 0.10000000000000002,
+      "base_upper_datum_mm": 0.05,
+      "foot_bond_top_mm": 0.1,
+      "row_outer_mm": 0.3264000000000001,
+      "minimum_skirt_foot_area_mm2": 18.925347100624464
+    },
+    {
+      "site": 5,
+      "foil_body_native_us": [
+        [
+          6.5,
+          0.5
+        ],
+        [
+          6.5,
+          21.52969928877434
+        ],
+        [
+          -6.5,
+          21.52969928877434
+        ],
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          6.5,
+          0.5
+        ]
+      ],
+      "cover_domain_native_us": [
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          22.02969928877434
+        ],
+        [
+          -7.0,
+          22.02969928877434
+        ],
+        [
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ]
+      ],
+      "tail_exit": "proximal",
+      "cover_top_above_source_datum_mm": 0.7264,
+      "column_contact_mm": 0.1632,
+      "row_contact_mm": 0.26320000000000005,
+      "film_thickness_mm": 0.10000000000000002,
+      "base_upper_datum_mm": 0.05,
+      "foot_bond_top_mm": 0.1,
+      "row_outer_mm": 0.3264000000000001,
+      "minimum_skirt_foot_area_mm2": 25.046729359896858
+    }
+  ],
+  "base_checks": [
+    {
+      "a": "f1_ch2_compliant_fit_base",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.0331688055840322,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch2_compliant_fit_base",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.15278567681329103,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch3_compliant_fit_base",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.3408096753765206,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch3_compliant_fit_base",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14959768623493985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch3_compliant_fit_base",
+      "b": "f1_ch2_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.096533060928678,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch4_compliant_fit_base",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.9560730178364153,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch4_compliant_fit_base",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14885242436637353,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch4_compliant_fit_base",
+      "b": "f1_ch2_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.075317815164752,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch4_compliant_fit_base",
+      "b": "f1_ch3_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.4625038843086537,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch5_compliant_fit_base",
+      "b": "source_hard",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 1.4744004329233706,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch5_compliant_fit_base",
+      "b": "source_TPU",
+      "method": "OpenCascade_minimum_distance",
+      "distance_mm": 0.14887514208961378,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch5_compliant_fit_base",
+      "b": "f1_ch2_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 37.06986475782704,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch5_compliant_fit_base",
+      "b": "f1_ch3_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 20.033366306418664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "f1_ch5_compliant_fit_base",
+      "b": "f1_ch4_compliant_fit_base",
+      "method": "separating_coordinate_bounds",
+      "separation_lower_bound_mm": 3.065747541815014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "base_source_checks_pass": true,
+  "source_hard_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "input_sha256": {
+    "engineering/designs/f1_skin_r4.json": "b2e5f009d0c27b1bf44cfb749cea07a6887a790128417fb63133652060c00b01",
+    "engineering/designs/f1_exit_spaced_candidate.json": "32a8f4553f9c4f683b6b60f3b76fe493f6cd2908ad8954f0a6eeb9bbfc264ff3",
+    "engineering/development/f1/r3/configuration/f1_formed_stack.json": "195271cdb3dbc5f0406709ca153e41764aec08215c161fc84fe4e2afc1422e72",
+    "engineering/scripts/build_f1_skin_r4.py": "62b48ccd713eb0f77e24ef5b0821fb4cb0472a104816fcb9020423d8315f4ee4",
+    "engineering/scripts/f1_surfaces.py": "1fbd4e481d813360348e63c9232bd5bd1eaa8ea22ec6c8ceebbfad3b2e8f2ff9",
+    "engineering/scripts/build_f1_stack_parts.py": "589eba9809c1f769d5f7b547b91b5d6721cbd89a5c9367ef2dbb02827ffcc72a",
+    "engineering/scripts/capacitive_cell_geometry.py": "991928e0709e31e4f7dab5427d9fe62705c10276ec6942dcabb2f1f8567aeaaf",
+    "engineering/release/r1/r1_manifest.json": "b5c062caf309351c1f2ef3dc2d34fe692cbed032e688082e97ae7cc4219e0e14",
+    "engineering/release/contact_regions/contact_report.json": "a5f3aec6f1d3fa48bd20d291cf50d384ea8c7f72dc496f6c22823507c3bebea5",
+    "engineering/release/r1/cad/pad_2_saddle_witness.step": "561b4b83820522a0474e4c9e2e9cd5e8d25fe900bd6b7a16c4bb0d26313f0dbf",
+    "engineering/release/r1/cad/pad_3_saddle_witness.step": "db0740b7bc143f792fb6fa92baf452a881dcb1500eca9439b428147d9ca70e4c",
+    "engineering/release/r1/cad/pad_4_saddle_witness.step": "9453763f54a9dd574ff75f8fe4e1c29b9e203c88ddf75587a4fd2be48bcf8f6e",
+    "engineering/release/r1/cad/pad_5_saddle_witness.step": "4289a798acda26da7b197935d6f1fad2a07fd0c199c464fa535d4455a18ff841"
+  },
+  "limits": [
+    "Nominal plating allowance adds 6.4 \u00b5m to the active layer stack; delivered film and finish thicknesses require measurement.",
+    "TPU-layer heights are above the R1 smoothed datum. The variable fitting base below it is part of the assembly and is not included in that number.",
+    "The silicone foot and side wall are parallel mechanical load paths; edge response and force calibration must be measured.",
+    "The TPU cover is 14 mm wide around a 13 mm foil. Its fitting base is widened from the verified constant-section R1 witness, inside the 15 mm source insert width.",
+    "The nominal geometry does not qualify adhesion, sealed-cavity effects, moisture, wear, dynamic bending or 20 N performance.",
+    "Static foil exits must be sealed and strain-relieved before moving-jaw tests.",
+    "Cover/base molds, complete source/peer checks and the foil-neck joins remain."
+  ]
+}

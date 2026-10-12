@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<g font-family="sans-serif" fill="#16232b">
+<text x="20" y="18" font-size="6">F1 R4 · CH1 conductive film</text>
+<text x="20" y="28" font-size="3.8">Cut one; 0.100 mm nominal identified pressure film.</text>
+<text x="20" y="35" font-size="3.8">Print 100%; no page fitting. Outside outline is the cut.</text>
+<text x="20" y="42" font-size="3.8">Width 9.994 mm · developed length 15.379 mm</text>
+<path d="M 25.96459869,66.95328112 L 26.01796561,66.95068589 L 26.07082889,66.94292466 L 26.12268965,66.93007069 L 26.17305847,66.91224529 L 26.22146001,66.88961667 L 26.26743749,66.86239839 L 26.31055700,66.83084732 L 26.35041163,66.79526120 L 26.38662525,66.75597587 L 26.41885611,66.71336208 L 26.44680003,66.66782199 L 26.47019331,66.61978536 L 26.48881517,66.56970553 L 26.50248988,66.51805511 L 26.51108839,66.46532155 L 26.51452954,66.41200250 L 26.52337583,65.85419529 L 26.52340143,65.85239491 L 26.57333868,61.88427968 L 26.57336848,61.88124689 L 26.60206788,57.82171575 L 26.60208031,57.81902927 L 26.60823976,55.00000000 L 29.07115492,55.00000000 L 34.81603132,69.42356081 L 34.89869249,69.66514260 L 34.95403640,69.90047524 L 34.98592340,70.14012881 L 34.99395332,70.37912951 L 25.00000000,70.37912951 L 25.00000000,66.95328112 L 25.96459869,66.95328112 Z " fill="#eeeeee" fill-rule="evenodd" stroke="#111111" stroke-width=".08"/>
+<text x="25" y="50" font-size="3.5">Distal edge</text>
+<text x="25" y="80.379" font-size="3.5">Toward root (increasing source S)</text>
+<path d="M20 250H70 M20 247V253 M70 247V253" stroke="#111111" fill="none" stroke-width=".25"/>
+<text x="20" y="260" font-size="4">50.000 mm scale bar</text>
+<text x="20" y="273" font-size="3.5">Mid-surface reference; actual forming and thickness unmeasured.</text>
+<text x="20" y="280" font-size="3.5">Keep adhesive out of the active film-to-metal contacts.</text>
+</g></svg>

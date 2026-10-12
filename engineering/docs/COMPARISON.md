@@ -3,8 +3,8 @@
 [Open the design directory for a separate page on every design and alternative](https://geyan21.github.io/yam-tactile-kit/designs.html). Each page states the exact sensor choice, placement, available files and build status.
 
 The decision is driven by reliable contact and grip-force feedback through
-20 N per finger with a thin, precise leading tip. Nine digital prototype
-packages are available. F1, pneumatic and optical integration remain in
+20 N per finger with a thin, precise leading tip. Ten digital prototype
+packages are available. Pneumatic and optical integration remain in
 development. **Physical specimens tested: 0; no measured winner.**
 
 The root-sensing designs preserve the bare contact surfaces and measure an
@@ -23,7 +23,7 @@ their practical value must be measured on the same precision tasks.
 | C1 differential strain | Aggregate normal force from two calibrated strain bridges | Transverse metal root adapter; bare nail retained, larger root | Real clamp motion, gauge placement, thermal drift, cross-axis and lever response | C1.1 checked CAD/PCB and acquisition; numerical screen passed, physical tests pending |
 | N1 bare sensing nail | Calibrated nail normal force and four local TPU force proxies | Steel fork with two shear webs, revised frame and side carriers | Whole-finger motion, frame-contact bypass, force calibration, mixed contacts and wear | Four checked CAD parts, selected gauges and combined readout; physical tests pending |
 | B3 recessed magnetic | Magnetic deformation observations and separate nail signals | Recesses the B2 electronics into a revised frame | Frame stiffness, real magnetic headroom, bending, contact and paired B2/B3 performance | B3.1 build package and field/clearance screens; unbuilt |
-| F1 flexible matrix | 64 proposed contact locations from routed row/column electrodes | Twelve shaped foils, fixed fanout and wrist electronics | Mating/lamination, resistance budget, full-array crosstalk, slack, wear and force calibration | Checked modules; complete integrated build remains |
+| F1 flexible matrix | 64 proposed contact locations from routed row/column electrodes | Twelve shaped foils, fixed fanout, retained covers and wrist electronics | Physical mating/lamination, continuous-film interaction, dynamics, slack, wear and force calibration | F1.1 R4 digital bench package; no physical results |
 | K1 capacitive | Six local capacitance signals for physical contact/force calibration | Two nail cells and four curved cells; nominal 0.836 mm nail addition | Stop height, low-force signal, finite plate loading, cable/bending artifacts and wear | K1.2 bench build package; model findings retained; unbuilt |
 | Pneumatic | Pressure response to compliant chamber deformation | Needs ENPIRE chambers, tube paths and nail coverage | Leakage, temperature, pressure/force range, hysteresis and loading rate | Published references; ENPIRE integration remains |
 | Optical | Dense surface deformation or texture images | Needs a camera, illumination and clear optical path within a redesigned finger | Occlusion, depth/force calibration, timing, gel wear and nail coverage | Published references; ENPIRE integration remains |

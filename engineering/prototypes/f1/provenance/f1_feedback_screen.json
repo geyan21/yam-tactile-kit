@@ -1,0 +1,133 @@
+{
+  "schema": "yam-f1-feedback-candidate/1",
+  "status": "Single selected-column analog study; full readout and hardware validation pending",
+  "physical_specimens_tested": 0,
+  "supply_v": 3.3,
+  "bias_v": 1.65,
+  "temperature_c": 25,
+  "matrix_solver": "klu",
+  "spice_voltage_datum_v": 0,
+  "ac_voltage_datum_v": 1.65,
+  "voltage_datum_note": "Frequency-domain calculations use a centered numerical reference to avoid cold-bias failures in the vendor macromodel. Step and independent sine-wave checks use physical 0 V ground and start with PARK closed. These coordinates do not change hardware voltages.",
+  "operating_point_initial_guess": {
+    "enabled": false,
+    "model_offset_v_for_initial_guess": -0.00000505,
+    "note": "NODESET aids the nonlinear initial solve and is released by ngspice. It does not force the completed operating point or change circuit elements."
+  },
+  "amplifier": {
+    "part": "OPA392DBVR",
+    "ordering_source": "https://www.ti.com/product/OPA392/part-details/OPA392DBVR",
+    "ordering_note": "The original saved simulation configuration included an extra I in this ordering code. Correcting that label does not change the OPAx392 model or any circuit element.",
+    "package": "DBV, SOT-23, five leads",
+    "source": "https://www.ti.com/lit/ds/symlink/opa2392.pdf",
+    "model": "TI OPAx392 PSpice model Final 1.1, August 2022",
+    "model_source": "https://www.ti.com/lit/zip/SBOMBK2",
+    "selection_reason": "The reviewed model reproduces approximately 45 degrees with a 100 pF load, matching the single DBV package's listed typical case. The quad package's current datasheet lists 35 degrees.",
+    "limits": "A typical, older manufacturer model is not a bound on component variation or a qualification of the finished circuit."
+  },
+  "gain_selection": {
+    "part": "TMUX1112PWR",
+    "source": "https://www.ti.com/lit/ds/symlink/tmux1112.pdf",
+    "topology": "Four independently controlled SPST switches; one selected switch connects the op-amp output to its resistor/capacitor branch.",
+    "logic": "Active high; four physical pull-downs and firmware one-hot control",
+    "on_resistance_ohm_for_screen": 9.8,
+    "off_resistance_ohm_assumed": 1000000000000,
+    "source_capacitance_pf_assumed": 7,
+    "drain_capacitance_pf_assumed": 10,
+    "capacitance_note": "The 17 pF typical on value is split into the cited 7 pF source and 10 pF drain off values for this lumped approximation; not a measured two-port model.",
+    "branches": [
+      {"id": 0, "resistance_ohm": 499, "feedback_capacitance_pf": 470},
+      {"id": 1, "resistance_ohm": 4990, "feedback_capacitance_pf": 150},
+      {"id": 2, "resistance_ohm": 24900, "feedback_capacitance_pf": 68},
+      {"id": 3, "resistance_ohm": 39200, "feedback_capacitance_pf": 56}
+    ]
+  },
+  "column_multiplexers": {
+    "parts": ["ADG706BRUZ current path", "ADG706BRUZ sense path"],
+    "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf",
+    "on_resistance_ohm_for_screen": 12,
+    "drain_capacitance_pf_assumed": 180,
+    "source_capacitance_pf_assumed": 20,
+    "capacitance_note": "The listed typical drain-off/source-off/on values are 180/13/200 pF. This study uses an explicit 180+20 pF split; it is not a transistor-level mux model.",
+    "off_resistance_ohm_assumed": 1000000000000
+  },
+  "interconnect": {
+    "current_path_ohm_assumed": 1,
+    "sense_path_ohm_assumed": 1,
+    "limits": "Placeholder series paths for feedback dynamics; calculate the complete routed board/cable/flex network separately."
+  },
+  "local_park_feedback": {
+    "resistance_ohm": 100000000,
+    "capacitance_pf": 15,
+    "connection": "Resistor: amplifier output to sense-mux drain, before RINPUT. Capacitor: amplifier output to the summing node, after RINPUT.",
+    "limits": "The resistor carries DC current and changes effective transimpedance. Returning it before RINPUT avoids adding the input compensation resistor to that DC sense-current drop."
+  },
+  "output_buffer_input_load_pf_assumed": 10,
+  "current_drain_shunt_capacitance_pf": 3300,
+  "current_drain_shunt_note": "A fixed C0G capacitor on the wrist board establishes a controlled minimum current-node capacitance while retaining the full declared range of sensor capacitance.",
+  "output_isolation_ohm": 0.1,
+  "sense_input_resistance_ohm": 300,
+  "low_gain_compensation": {
+    "additional_series_resistance_ohm": 680,
+    "bypass_switch": "TMUX1102DBVR",
+    "source": "https://www.ti.com/lit/ds/symlink/tmux1101.pdf",
+    "on_resistance_ohm_assumed": 9.8,
+    "off_resistance_ohm_assumed": 1000000000000,
+    "drain_capacitance_pf_assumed": 10,
+    "source_capacitance_pf_assumed": 7,
+    "control": "Connect SEL to GAIN0. Active-low TMUX1102 bypasses the added resistor in gains 1-3; gain 0 retains the resistor.",
+    "reason": "Gain 0 needs stronger local compensation with lightly loaded sensor nodes. Keeping the extra resistance out of higher gains preserves their settling time.",
+    "limits": "The switch is modeled as a selected resistance plus stated capacitances. Gain-transition charge injection remains to be checked."
+  },
+  "output_isolation_note": "The amplifier pin drives the gain-bank/ADC-input bus through this resistor. Local parked feedback returns from the amplifier pin; the measured output is the bus after the resistor.",
+  "active_park_feedback": {
+    "part": "TMUX1101DBVR",
+    "source": "https://www.ti.com/lit/ds/symlink/tmux1101.pdf",
+    "series_resistance_ohm": 1000,
+    "switch_on_resistance_ohm_assumed": 10,
+    "switch_off_resistance_ohm_assumed": 1000000000000,
+    "switch_capacitance_pf_per_terminal_assumed": 10,
+    "logic": "High closes a local feedback path; hardware pull-up parks the amplifier during controller reset",
+    "release_s": 0.00001,
+    "note": "TMUX1101 closes for logic high. Its 3.3 V table lists 9.8 ohm maximum on resistance through 125 C and 6/10/17 pF typical source-off/drain-off/on capacitances. This lumped model uses 10 ohm and 10 pF at each terminal; charge injection and component variation remain to be checked.",
+    "dc_initialization": "Continue PARK from closed to open for each DC endpoint. Transient sources specify the true parked initial DC value, then release PARK before excitation. AC calculations use the solved centered-reference bias."
+  },
+  "main_adc_candidate": {
+    "part": "ADS8866IDGSR",
+    "source": "https://www.ti.com/lit/ds/symlink/ads8866.pdf",
+    "resolution_bits": 16,
+    "reference_v_for_scale_calculation": 3.3,
+    "previous_main_adc_candidate": "MCP3208, 12 bits; still a candidate for row/reference monitoring",
+    "reason": "At a nominal 3.3 V reference, 16 bits with 39.2 kohm corresponds to about 1.28 nA per code, versus 1.61 nA per code for 12 bits with 499 kohm. Lower feedback resistance reduces the strong-load noise gain and settling burden.",
+    "limits": "Nominal code spacing is not achieved resolution or force accuracy. ADC noise, INL, reference drive, input settling, interface timing and physical calibration still need validation."
+  },
+  "sensing_node_capacitance_nf_cases": [0.1, 1, 3],
+  "sensing_node_resistance_ohm_cases": [25, 100, 2500, 250000],
+  "capacitance_scales": [1, 2],
+  "voltage_return_ratio_screen": {
+    "minimum_margin_deg": 45,
+    "frequency_hz": [1, 100000000],
+    "points_per_decade": 120,
+    "limits": "Voltage injection at the high-impedance amplifier input is a development screen, not a formal multi-loop stability guarantee. Check closed-loop transients as well."
+  },
+  "transient": {
+    "selected_loads_ohm": [25, 250000],
+    "selected_capacitance_nf": 3,
+    "capacitance_scale": 2,
+    "nominal_output_step_v": 0.5,
+    "step_start_s": 0.00036,
+    "rise_s": 0.0000002,
+    "stop_s": 0.001,
+    "maximum_step_s": 0.00000005,
+    "settling_error_v": 0.000025,
+    "settling_time_limit_s": 0.0003,
+    "limits": "The current step exercises a linear-range readout response. It has no associated force or contact probability."
+  },
+  "remaining": [
+    "Row-buffer loops and the complete coupled array",
+    "Gain/channel changes, charge injection, overload recovery and wire faults",
+    "Reference ladder, ADC buffer/acquisition and raw scan protocol",
+    "Component tolerances, leakage, temperature and actual layout parasitics",
+    "Physical fabrication and force/contact experiments"
+  ]
+}

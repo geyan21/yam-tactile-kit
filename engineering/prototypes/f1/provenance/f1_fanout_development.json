@@ -1,0 +1,117 @@
+{
+  "schema": "yam-f1-fanout-development/1",
+  "status": "Connector-board implementation study; not an assembled or qualified F1",
+  "physical_specimens_tested": 0,
+  "placement_result": "build/engineering/prototypes/f1/f1_placement_development.json",
+  "placement_result_sha256": "e4ad6ae0b89071162a6dafac5ae97cdeeedb488535d22c17859d16c170a960fd",
+  "name": "f1_fanout",
+  "pcb_thickness_mm": 1.0,
+  "copper_layers": 4,
+  "clearance_mm": 0.15,
+  "copper_to_edge_mm": 0.25,
+  "signal_trace_mm": 0.15,
+  "row_distribution_trace_mm": 0.5,
+  "via_diameter_mm": 0.45,
+  "via_drill_mm": 0.2,
+  "routing_grid_mm": 0.1,
+  "coordinate_transform": "PCB x = -native Y; PCB y = 44 - native Z; F.Cu faces native +X",
+  "patch_to_connector_pair": [0, 3, 1, 4, 2, 5],
+  "sensor_connector": {
+    "part": "FH12-6S-1SH(1)(98)",
+    "source": "https://www.hirose.com/en/product/p/CL0528-0030-8-98",
+    "footprint_basis": "Hirose FH12 catalog, 1 mm pitch bottom-contact recommended land pattern, page 11",
+    "signal_pad_size_mm": [0.6, 1.3],
+    "signal_pad_y_mm": -1.85,
+    "signal_pitch_mm": 1.0,
+    "mount_pad_centers_mm": [[-4.9, 1.4], [4.9, 1.4]],
+    "mount_pad_size_mm": [1.8, 2.2],
+    "body_envelope_mm": [-5.3, -2.0, 5.3, 4.4],
+    "closed_height_mm": 2.0,
+    "row_pins": {"1": "R3_I", "2": "R2_I", "3": "R1_I", "4": "R0_I"},
+    "column_pins_by_patch": [
+      {"1": "C1_I", "3": "C0_I"},
+      {"1": "C3_I", "3": "C2_I"},
+      {"1": "C6_I", "3": "C5_I", "5": "C4_I"},
+      {"1": "C9_I", "3": "C8_I", "5": "C7_I"},
+      {"1": "C12_I", "3": "C11_I", "5": "C10_I"},
+      {"1": "C15_I", "3": "C14_I", "5": "C13_I"}
+    ]
+  },
+  "wrist_link": {
+    "part": "FH12-50S-0.5SH(55)",
+    "source": "https://www.hirose.com/en/product/p/CL0586-0529-2-55",
+    "library": "Connector_FFC-FPC.pretty/Hirose_FH12-50S-0.5SH_1x50-1MP_P0.50mm_Horizontal.kicad_mod",
+    "center_pcb_mm": [19.9, 18.0],
+    "rotation_deg": -90,
+    "side": "F",
+    "closed_height_mm": 2.0,
+    "body_envelope_mm": [-14.55, -2.0, 14.55, 4.4],
+    "cable_candidate": {
+      "part": "0151660545",
+      "manufacturer": "Molex",
+      "source": "https://www.molex.com/en-us/products/part-detail/0151660545",
+      "circuits": 50,
+      "pitch_mm": 0.5,
+      "length_mm": 152,
+      "contact_layout": "A, exposed contacts on the same side",
+      "limits": "Cable contact thickness, complete mated geometry, resistance, capacitance, installed routing and pin-1 orientation still require checking."
+    },
+    "pins": [
+      "GND", "+3V3", "GND", "A0", "GND", "A1", "GND", "A2", "A3", "TEST_EN",
+      "R0_I", "R0_S", "R1_I", "R1_S", "R2_I", "R2_S", "R3_I", "R3_S",
+      "C0_I", "C0_S", "C1_I", "C1_S", "C2_I", "C2_S", "C3_I", "C3_S",
+      "C4_I", "C4_S", "C5_I", "C5_S", "C6_I", "C6_S", "C7_I", "C7_S",
+      "C8_I", "C8_S", "C9_I", "C9_S", "C10_I", "C10_S", "C11_I", "C11_S",
+      "C12_I", "C12_S", "C13_I", "C13_S", "C14_I", "C14_S", "C15_I", "C15_S"
+    ]
+  },
+  "test_mux": {
+    "part": "ADG706BRUZ",
+    "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg706_707.pdf",
+    "library": "Package_SO.pretty/TSSOP-28_4.4x9.7mm_P0.65mm.kicad_mod",
+    "center_pcb_mm": [43, 4.5],
+    "rotation_deg": 90,
+    "body_envelope_mm": [-2.25, -4.9, 2.25, 4.9],
+    "height_mm": 1.2,
+    "pins": {
+      "1": "+3V3", "2": "", "3": "",
+      "4": "C15_I", "5": "C14_I", "6": "C13_I", "7": "C12_I",
+      "8": "C11_I", "9": "C10_I", "10": "C9_I", "11": "C8_I",
+      "12": "GND", "13": "A3", "14": "A2", "15": "A1", "16": "A0",
+      "17": "TEST_EN", "18": "C0_I", "19": "C1_I", "20": "C2_I", "21": "C3_I",
+      "22": "C4_I", "23": "C5_I", "24": "C6_I", "25": "C7_I",
+      "26": "GND", "27": "TEST_D", "28": ""
+    },
+    "supply_v": 3.3,
+    "enable_active_high": true,
+    "source_test_resistor_ohm": 10000,
+    "source_test_resistor_tolerance_fraction": 0.001,
+    "enable_pull_down_ohm": 100000,
+    "address_pull_down_ohm": 100000,
+    "on_resistance_limit_ohm_at_3v_pm10percent_full_temperature": 12,
+    "source_off_leakage_limit_a_full_temperature": 3e-10,
+    "channel_on_leakage_limit_a_full_temperature": 1.5e-9,
+    "source_off_capacitance_pf_typical": 13,
+    "drain_off_capacitance_pf_typical": 180,
+    "notes": [
+      "Datasheet Rev B, pages 3, 5, 6 and 11: 3 V specifications, physical pinout, active-high truth table and RU-28 body dimensions.",
+      "TEST_EN is pulled low on the finger board. Firmware must park every row at bias before enabling the selected test path.",
+      "The test path checks the current/sense cable loop at the fanout; it does not prove continuity through each flexible sensor foil.",
+      "Test phases must be preserved as electrical checks and excluded from physical contact/force observations."
+    ]
+  },
+  "sense_pickoff": {
+    "part": "0 ohm 0402 link, one per row or column",
+    "column_pickoff": "Current trace ends at the sensor-connector copper pad; a short branch connects that pad to the adjacent 0 ohm sense link.",
+    "row_pickoff": "A separate sense link at the declared row-distribution land; all six row branches start at that land.",
+    "column_link_center_offset_pcb_mm": [0, -1.85],
+    "row_link_centers_pcb_mm": [[57, 18], [58.5, 18], [60, 18], [61.5, 18]],
+    "limits": "Uncompensated distribution, connector and flex resistance must be calculated from the final routing. The 0.25 ohm target is not yet demonstrated."
+  },
+  "mount_holes": [
+    {"center_mm": [71, 2.5], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8},
+    {"center_mm": [28, 2.5], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8},
+    {"center_mm": [71, 33], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8},
+    {"center_mm": [28, 33], "diameter_mm": 2.2, "copper_keepout_diameter_mm": 4.8}
+  ]
+}

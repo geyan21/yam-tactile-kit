@@ -1,0 +1,6 @@
+F1 fanout revision 3 development artwork. Independent copper/connectivity DRC passed.
+This is one board of an unfinished tactile finger, not a complete fabrication release.
+Request 1 oz copper on ALL FOUR layers; default 0.5 oz inner copper is not this target.
+The physical dielectric stack and finished copper minima require supplier review.
+Carrier, formed flex, cable mating, analog loop stability, firmware and force/contact tests remain.
+No physical specimen or measured performance result exists in this package.
