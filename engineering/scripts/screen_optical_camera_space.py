@@ -47,7 +47,10 @@ def main():
     axis = np.array([0, -np.cos(angle), np.sin(angle)])
     optical_origin = np.r_[path_cfg["camera_x_mm"], pose["camera_yz_mm"]]
     pcb_origin = optical_origin-cfg["ray_origin_in_front_of_pcb_mm"]*axis
-    plane = cq.Plane(origin=tuple(pcb_origin), xDir=(1, 0, 0), normal=tuple(axis))
+    rotation = cfg["rotation_about_optical_axis_deg"]
+    if rotation not in (0, 180):
+        raise ValueError("This prototype supports the two explicitly modeled camera orientations")
+    plane = cq.Plane(origin=tuple(pcb_origin), xDir=(1 if rotation == 0 else -1, 0, 0), normal=tuple(axis))
     width, height, _ = review["drawing_board_dimensions_mm"]
     lens_u, lens_v = review["drawing_lens_axis_from_top_left_mm"]
     def slab(z0, z1):
@@ -63,6 +66,14 @@ def main():
                                    cfg["lens_front_height_mm"]-cfg["front_housing_height_mm"],
                                    cq.Vector(0, 0, cfg["front_housing_height_mm"]), cq.Vector(0, 0, 1))
     back = slab(-cfg["pcb_thickness_mm"]-cfg["rear_electronics_envelope_mm"], -cfg["pcb_thickness_mm"])
+    # The drawing's mounting lands are reserved for the standoffs.
+    # Actual component clearance under these lands is an incoming check.
+    for u, v in review["drawing_holes_from_top_left_mm"]:
+        keepout = cq.Solid.makeCylinder(cfg["rear_mount_land_clearance_diameter_mm"]/2,
+                                        cfg["rear_electronics_envelope_mm"]+.2,
+                                        cq.Vector(u-lens_u, v-lens_v, -cfg["pcb_thickness_mm"]-cfg["rear_electronics_envelope_mm"]-.1),
+                                        cq.Vector(0, 0, 1))
+        back = back.cut(keepout)
     local = [("o1_camera_pcb_reference", pcb, "PCB outline and mounting holes", "#426f5e"),
              ("o1_camera_focus_housing_reference", housing, "Nominal autofocus-housing envelope", "#3d535e"),
              ("o1_camera_lens_reference", barrel, "Nominal lens barrel; actual aperture and pupil require acceptance", "#5483a0"),
@@ -100,6 +111,7 @@ def main():
         report = {"schema": "yam-o1-camera-space-result/1", "physical_specimens_tested": 0,
                   "parts": parts, "optical_ray_origin_native_mm": optical_origin.tolist(),
                   "pcb_front_lens_axis_native_mm": pcb_origin.tolist(), "camera_axis_native": axis.tolist(),
+                  "camera_rotation_about_optical_axis_deg": rotation,
                   "camera_envelope_bounds_native_mm": [minimum.tolist(), maximum.tolist()],
                   "camera_core_checks": checks, "cases": cases, "selected_root_bay": selected,
                   "passed_space_screen": selected is not None and all(row["core_overlap_mm3"] <= .001 for row in checks),
