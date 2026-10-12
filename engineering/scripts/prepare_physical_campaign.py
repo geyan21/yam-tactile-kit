@@ -138,6 +138,8 @@ def main():
             "",
             "Operator: unassigned. Shared measurement location: unassigned.",
             "",
+            "[Download the specimen queue](specimen_queue.csv) · [Read the completion audit](completion_audit.json)",
+            "",
             "## Start the build campaign",
             "",
             "1. Assign the student/operator and the experiment directory. Use the exact published revision below.",
