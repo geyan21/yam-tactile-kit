@@ -16,7 +16,8 @@ import cadquery as cq
 import numpy as np
 from shapely.geometry import Polygon
 import trimesh
-from prototype_cad import block, yz_prism, export_part, packed
+from prototype_cad import block, yz_prism, packed
+from optical_cad import export_part
 from source_brep import load as source_solid
 from build_pneumatic_ported_assembly import cyl, overlap
 from build_optical_root_bay import hex_prism
@@ -66,7 +67,8 @@ def main():
         record["run_directory"] = str(folder.relative_to(ROOT))
         inputs = [CONFIG, MATERIALS, Path(__file__), source/"report.json", search_path, ROOT/plan["configuration"],
                   ROOT/"engineering/designs/optical_root_bay.json", ROOT/"engineering/designs/optical_core_witness.json",
-                  ROOT/"engineering/scripts/prototype_cad.py", ROOT/"engineering/scripts/build_optical_root_bay.py",
+                  ROOT/"engineering/scripts/prototype_cad.py", ROOT/"engineering/scripts/optical_cad.py",
+                  ROOT/"engineering/scripts/build_optical_root_bay.py",
                   ROOT/"engineering/scripts/inspect_optical_obstructions.py"]
         for path in inputs:
             target = folder/"inputs"/path.relative_to(ROOT)
