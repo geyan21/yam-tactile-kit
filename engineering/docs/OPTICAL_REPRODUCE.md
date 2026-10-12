@@ -60,6 +60,8 @@ build/engineering/tools/cad-venv/bin/python engineering/scripts/draw_optical_pro
 /usr/bin/python3 -I engineering/scripts/check_tracked_prototypes.py
 /usr/bin/python3 engineering/scripts/build_site.py
 /usr/bin/python3 engineering/scripts/check_site.py
+/usr/bin/python3 engineering/scripts/verify_browser.py \
+  --browser /ABSOLUTE/PATH/TO/CHROME --optical-views
 ```
 
 The frozen packet retains selected-run reports, input hashes, original mesh-cleanup evidence, CAD, molds, cut patterns, PCB/fabrication files, BOM, source software and build/test documents. The website uses `engineering/prototypes/optical/`; the separate reproduction destination above preserves the published snapshot.

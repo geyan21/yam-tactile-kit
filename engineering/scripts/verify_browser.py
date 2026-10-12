@@ -27,9 +27,13 @@ def main():
     parser.add_argument("--checks-only",action="store_true")
     parser.add_argument("--site",type=Path,default=ROOT/"build/site")
     parser.add_argument("--expect-hosted-links",action="store_true")
+    parser.add_argument("--optical-views",action="store_true",
+                        help="After all functional checks, capture O1 desktop/mobile, build, wiring and file pages")
     parser.add_argument("--views",nargs="+",choices=("desktop","design","build","mobile","root","guide","l1-assembly","l1-bench","contact","b1-assembly","b1-guide","sensors","sensor-map","architecture","b2-concept","c1-concept","magnetic-scaling","magnetic-gap","design-directory","r1-page","b1-page","b2-page","c1-page","nail-page","design-mobile","b2-assembly","b2-guide","b2-wiring","build-all","c1-assembly","c1-wiring","c1-gauges","c1-guide","c1-analysis","nail-assembly","nail-wiring","nail-gauges","nail-guide","nail-analysis","nail-mobile","recessed-page","recessed-mobile","recessed-assembly","recessed-wiring","recessed-placement","recessed-guide","recessed-analysis","f1-page","f1-mobile","f1-placement","f1-guide","f1-files","f1-stack","f1-wiring","f1-tests","k1-page","k1-mobile","k1-guide","k1-stack","k1-files","fb1-page","fb1-mobile","fb1-guide","fb1-stack","fb1-files","fb1-pcb"),
                         help="Capture only selected views after the functional checks")
     args=parser.parse_args()
+    if args.optical_views:
+        args.views=list(args.views or [])+["o1-page","o1-mobile","o1-guide","o1-wiring","o1-files"]
     if not args.browser.is_file():parser.error("Select an explicit browser executable")
     if not args.site.resolve().is_relative_to(ROOT/"build") or not (args.site/"index.html").is_file():
         parser.error("Select a generated kit website under build/")
@@ -51,6 +55,7 @@ def main():
             (site/"f1-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="flexible-matrix.html" title="390px F1 design page" style="width:390px;height:3100px;border:0"></iframe></body></html>')
             (site/"k1-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="capacitive.html" title="390px K1 design page" style="width:390px;height:3100px;border:0"></iframe></body></html>')
             (site/"fb1-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="force-button.html" title="390px FB1 design page" style="width:390px;height:3100px;border:0"></iframe></body></html>')
+            (site/"o1-mobile.html").write_text('<!doctype html><html><body style="margin:0;background:#eef2ed"><iframe src="optical.html" title="390px O1 design page" style="width:390px;height:3400px;border:0"></iframe></body></html>')
             index=(site/"index.html").read_text()
             for name,style in (
                 ("design",".hero,.brief{display:none} #design{padding-top:25px}"),
@@ -181,6 +186,11 @@ def main():
                     ("fb1-stack","1440,1000","assets/prototypes/force_button/visuals/fb1_stack.svg"),
                     ("fb1-files","1440,1600","assets/prototypes/force_button/file-index.html"),
                     ("fb1-pcb","1440,1150","assets/prototypes/force_button/visuals/fb1_pcb.png"),
+                    ("o1-page","1440,1800","optical.html"),
+                    ("o1-mobile","500,3500","o1-mobile.html"),
+                    ("o1-guide","1440,1800","build-optical.html"),
+                    ("o1-wiring","1440,1800","optical-electronics.html"),
+                    ("o1-files","1440,1600","assets/prototypes/optical/file-index.html"),
                 ):
                     if args.views and name not in args.views:continue
                     browser(name,[f"--window-size={size}","--virtual-time-budget=1800",f"--screenshot={output/f'{name}.png'}",base+page])
