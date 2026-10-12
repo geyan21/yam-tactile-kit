@@ -232,7 +232,7 @@ def main():
         assets.mkdir();downloads.mkdir()
         for name in ("style.css","l1.css","viewer.js","app.js","stack.svg","wiring.svg","l1-wiring.svg","contact-flow.svg","b1-wiring.svg",
                      "sensor-placement.svg","sensor-placement.csv","sensor-placement.json","n0-tip-stack.svg",
-                     "design-pages.css","design-viewer.js","r1-placement.svg","f1_stack.svg","f1_wiring.svg"):
+                     "design-pages.css","design-viewer.js","r1-placement.svg","f1_stack.svg","f1_wiring.svg","p1_wiring.svg"):
             shutil.copyfile(WEB/name,assets/name)
         for name in ("baseline","contact_regions","interfaces","r1","l1","b1"):
             shutil.copytree(RELEASE/name,assets/name)
@@ -325,6 +325,16 @@ def main():
             all_chapters.append(f'<section id="{slug}">{content}</section>')
         overviews=[f'<section id="design-{item["slug"]}">{design_content(item,catalog,viewer=False)}</section>' for item in catalog["designs"]]
         (SITE/"guide.html").write_text(document_page("Complete build and test guide",'<div class="all-guide">'+"".join(overviews+all_chapters)+"</div>"))
+        # Resolve page/assets before spending time on the large portable
+        # archives. Only the explicitly scheduled ZIPs may be absent here.
+        from check_site import verify_entries
+        preflight={str(path.relative_to(SITE)):path.read_bytes() if path.suffix==".html" else b""
+                   for path in SITE.rglob("*") if path.is_file()}
+        for name in ("enpire-source.zip","enpire-designs.zip","enpire-site.zip","enpire-engineering-kit.zip",
+                     "k1-development.zip","k1-prototype.zip","fb1-prototype.zip","f1-prototype.zip","p1-prototype.zip"):
+            preflight["downloads/"+name]=b""
+        record["page_links_before_archiving"]=verify_entries(preflight)
+        print(f"Checked {record['page_links_before_archiving']} page links before building archives.",flush=True)
         source=source_entries()
         write_zip(downloads/"enpire-source.zip",source)
         designs={str(path.relative_to(RELEASE)):path.read_bytes() for path in RELEASE.rglob("*") if path.is_file() and path.name!="models.json"}
