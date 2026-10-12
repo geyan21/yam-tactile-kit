@@ -123,6 +123,10 @@ def main():
                                   cfg["gel_rear_flange_width_mm"]+2*clearance)).clean()
         clips, clip_pockets, stations = [], [], []
         fast = cfg["clip_fastener"]
+        front_guard = Polygon(np.vstack((
+            np.column_stack((y, np.full(len(y), -20.))),
+            np.column_stack((y, z+cfg["clip_lip_vertical_offsets_mm"][0]))[::-1])))
+        front_guard_solid = yz_prism(front_guard, -26, 38)
         for side in range(2):
             limits = cfg["clip_lip_x_mm"][side]
             lip = yz_prism(profile_band(y, z, *cfg["clip_lip_vertical_offsets_mm"]), limits[0], limits[1]-limits[0])
@@ -152,6 +156,11 @@ def main():
                 bore = cyl(fast["clear_hole_mm"]/2, 8, [x, station, level-1.1], [0, 0, 1])
                 lip = lip.cut(bore).clean()
                 frame = frame.cut(bore).clean()
+                # Some source webs rise beside the raised tab. Reserve the
+                # real washer/head envelope, not only the screw shaft.
+                pockets.append(cyl(max(fast["washer_od_mm"], fast["head_diameter_mm"])/2+clearance,
+                                   fast["washer_thickness_mm"]+fast["head_height_mm"]+clearance,
+                                   [x, station, tab_high], [0, 0, 1]))
                 p0, p1 = [level+value for value in cfg["clip_nut_pocket_vertical_offsets_mm"]]
                 frame = frame.cut(hex_prism(x, station, p0, p1, fast["nut_pocket_af_mm"]))
                 radius = cfg["clip_boss_diameter_mm"]/2
@@ -159,7 +168,10 @@ def main():
                 frame = frame.cut(block(a, c, station-fast["nut_pocket_af_mm"]/2,
                                         station+fast["nut_pocket_af_mm"]/2, p0, p1)).clean()
                 stations.append({"id": f"o1_gel_clip_{side}_{index}", "x": x, "y": station, "inner_z": level, "tab_top": tab_high})
-            clips.append(lip)
+            # Flat station bridges must follow the curved gel rear face at
+            # their lower boundary. Otherwise they can enter the flange at
+            # a station's edges even when the station-centre clearance is OK.
+            clips.append(lip.cut(front_guard_solid).clean())
             clip_pockets.extend(pockets)
         for pocket in clip_pockets:
             frame = frame.cut(pocket).clean()
