@@ -13,7 +13,7 @@
     {"center_mm": [8, 14.4], "rotation_deg": 0},
     {"center_mm": [1.6, 8], "rotation_deg": 90}
   ],
-  "connector_center_mm": [2.4, 1.4],
+  "connector_center_mm": [2.4, 1.8],
   "connector_pin_pitch_mm": 2.0,
   "connector_drill_mm": 0.6,
   "connector_pad_diameter_mm": 1.2,

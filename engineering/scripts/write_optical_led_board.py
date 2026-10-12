@@ -134,9 +134,9 @@ def main():
         add_polygon_zone(board, points, LAYERS, keepout=True)
         for a, b in zip(cfg["outline_mm"], cfg["outline_mm"][1:]):
             shape_line(board, a, b, pcb.Edge_Cuts)
-        for text, xy in (("O1", [8, 15.5]), ("1+", [1.4, .42]), ("2-", [3.4, .42])):
+        for text, xy in (("1+", [1.4, .52]), ("2-", [3.4, .52])):
             label = pcb.PCB_TEXT(board); label.SetText(text); label.SetPosition(vector(xy))
-            label.SetLayer(pcb.F_SilkS); label.SetTextSize(vector([.5, .5])); label.SetTextThickness(pcb.FromMM(.1)); board.Add(label)
+            label.SetLayer(pcb.F_SilkS); label.SetTextSize(vector([.8, .8])); label.SetTextThickness(pcb.FromMM(.12)); board.Add(label)
         for item in route["tracks"]:
             track = pcb.PCB_TRACK(board); track.SetStart(vector(item["start"])); track.SetEnd(vector(item["end"]))
             track.SetWidth(pcb.FromMM(item["width"])); track.SetLayer(board.GetLayerID(item["layer"]))
