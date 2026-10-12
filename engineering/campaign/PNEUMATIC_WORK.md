@@ -56,6 +56,17 @@ The next search will test angled exits from the rear channel into the
 existing open rib space, with explicit checks for the frame and free metal
 tube. No port route or complete P1 assembly is claimed yet.
 
+Next routing work is not implemented yet: retain the straight front ports
+where they pass, and search rear branch bores from a point inside each rear
+channel toward an existing hollow region. Test outlet directions toward
+either X side with a downward Z component and modest Y offsets. Reserve
+enough distance from the flush end plugs. Require the full fitting envelope
+to clear the source hard frame, the free metal tube to clear the insert,
+and a material wall around the branch bore/embedded holder.
+Do not waive the 9.811 mm³ frame collision or count a reference cavity as
+clearance. A later assembled-air-volume/closure check must distinguish the
+intended open tube outlets from unintended leaks or merged channels.
+
 The next layout will evaluate those separate wall channels. Keep the first
 survey and its assumptions as history. Its `single_depth_interval_mm` field
 contains the minimum and maximum sampled valid depths; it does not certify
