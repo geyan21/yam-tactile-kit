@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">O1: camera, blue light, and two thin nail sensors</title>
+<desc id="desc">A Raspberry Pi 4 captures the Camera Module 3 Wide over CSI, powers a resistor-limited blue LED ring from five volts, and reads two N0 nail cells through a three-point-three-volt ADS1115 breakout.</desc>
+<rect width="1200" height="820" fill="#f5f8f4"/>
+<g font-family="sans-serif" fill="#203f46">
+<text x="32" y="42" font-size="28" font-weight="bold">O1 • exact sensors and connections</text>
+<text x="32" y="74" font-size="18">One finger · local Raspberry Pi capture · no force coefficients supplied before calibration</text>
+<rect x="32" y="109" width="318" height="271" rx="12" fill="#dcebe5" stroke="#75978e"/>
+<text x="52" y="144" font-size="23" font-weight="bold">Raspberry Pi 4 Model B</text>
+<text x="52" y="175" font-size="17">Use physical header pin numbers:</text>
+<text x="52" y="211" font-size="19">Pin 1   3.3 V</text>
+<text x="52" y="245" font-size="19">Pin 3   GPIO2 / SDA</text>
+<text x="52" y="279" font-size="19">Pin 5   GPIO3 / SCL</text>
+<text x="52" y="313" font-size="19">Pin 6   GND</text>
+<text x="52" y="347" font-size="19">Pin 2   5 V → LED ring only</text>
+<rect x="454" y="109" width="347" height="271" rx="12" fill="#e4eaf1" stroke="#7893aa"/>
+<text x="474" y="144" font-size="23" font-weight="bold">Adafruit ADS1115 #1085</text>
+<text x="474" y="175" font-size="17">Address 0x48 · ADDR → GND</text>
+<text x="474" y="211" font-size="19">VDD → 3.3 V</text>
+<text x="474" y="245" font-size="19">SDA → physical pin 3</text>
+<text x="474" y="279" font-size="19">SCL → physical pin 5</text>
+<text x="474" y="313" font-size="19">GND → common ground</text>
+<text x="474" y="347" font-size="18">A2 → 3.3 V monitor; A3 → GND</text>
+<g fill="none" stroke-width="2">
+<path d="M350 205H454" stroke="#b66549"/><path d="M350 239H454" stroke="#507eaf"/>
+<path d="M350 273H454" stroke="#597d67"/><path d="M350 307H454" stroke="#45616b"/>
+</g>
+<rect x="848" y="109" width="320" height="271" rx="12" fill="#f0e4cc" stroke="#ac925e"/>
+<text x="868" y="144" font-size="22" font-weight="bold">Two thin N0 nail cells</text>
+<text x="868" y="178" font-size="18">Left prong → A0</text>
+<text x="868" y="209" font-size="18">Right prong → A1</text>
+<text x="868" y="242" font-size="17">Each cell:</text>
+<text x="868" y="269" font-size="17">3.3 V — cell — A0 or A1</text>
+<text x="868" y="297" font-size="17">100 kΩ across the cell at nail</text>
+<text x="868" y="325" font-size="17">10 kΩ from ADC node to GND</text>
+<text x="868" y="353" font-size="16">~0.4 mm added stack; measure it</text>
+<text x="807" y="184" font-size="15">A0</text>
+<text x="807" y="216" font-size="15">A1</text>
+<path d="M801 190H848M801 222H848" fill="none" stroke="#af8744" stroke-width="2"/>
+<rect x="32" y="421" width="534" height="184" rx="12" fill="#e6dff0" stroke="#927faa"/>
+<text x="52" y="457" font-size="23" font-weight="bold">Camera Module 3 Wide · visible-light version</text>
+<text x="52" y="492" font-size="18">15-pin ribbon → Pi 4 CSI camera port</text>
+<text x="52" y="524" font-size="18">Camera sits in the added 32 mm root bay.</text>
+<text x="52" y="556" font-size="18">View: fixed PET mirror → clear gel → black dots</text>
+<text x="52" y="585" font-size="16">Manual focus/exposure; white silicone coating behind the dots</text>
+<rect x="608" y="421" width="560" height="184" rx="12" fill="#dce8f4" stroke="#7593b1"/>
+<text x="628" y="457" font-size="23" font-weight="bold">Four Kingbright APT2012QBC/D blue LEDs</text>
+<text x="628" y="492" font-size="18">Ring J1 pin 1 → Pi physical pin 2 / 5 V</text>
+<text x="628" y="524" font-size="18">Ring J1 pin 2 → common GND</text>
+<text x="628" y="556" font-size="18">Each: 5 V → 220 Ω → LED pin 2 / anode</text>
+<text x="628" y="585" font-size="17">LED pin 1 / cathode → GND · four separate resistors</text>
+<rect x="32" y="644" width="1136" height="140" rx="12" fill="white" stroke="#a4b3ac"/>
+<text x="52" y="675" font-size="20" font-weight="bold">Signal and assembly checks</text>
+<text x="52" y="706" font-size="18">ADS1115 at 3.3 V; keep every analog/I²C signal within its supply limits. ALERT/RDY is unused.</text>
+<text x="52" y="736" font-size="18">Mount the LED carrier on the camera screw holes; keep the autofocus barrel clear.</text>
+<text x="52" y="766" font-size="18">Nail conductance and marker motion need physical calibration. Missing or stale data is unavailable.</text>
+</g></svg>

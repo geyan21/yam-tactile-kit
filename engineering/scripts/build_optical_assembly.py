@@ -86,18 +86,16 @@ def main():
         holder = block(-half, half, -half, half, floor0, floor1).cut(
             cyl(cfg["carrier_aperture_diameter_mm"]/2, floor1-floor0+.2, [0, 0, floor0-.1], [0, 0, 1]))
         for sign in (-1, 1):
-            lower, upper = sorted((sign*(8+cfg["pcb_edge_clearance_mm"]), sign*half))
-            holder = holder.fuse(block(lower, upper, *cfg["clip_v_mm"], floor1, cfg["clip_lip_n_mm"][1]))
-            lower, upper = sorted((sign*cfg["clip_lip_inner_abs_u_mm"], sign*half))
-            holder = holder.fuse(block(lower, upper, *cfg["clip_v_mm"], *cfg["clip_lip_n_mm"]))
+            for limits in cfg["clip_v_segments_mm"]:
+                lower, upper = sorted((sign*(8+cfg["pcb_edge_clearance_mm"]), sign*half))
+                holder = holder.fuse(block(lower, upper, *limits, floor1, cfg["clip_lip_n_mm"][1]))
+                lower, upper = sorted((sign*cfg["clip_lip_inner_abs_u_mm"], sign*half))
+                holder = holder.fuse(block(lower, upper, *limits, *cfg["clip_lip_n_mm"]))
         for index, (u, v) in enumerate(cfg["camera_front_mount_uv_mm"]):
             holder = holder.fuse(cyl(cfg["post_diameter_mm"]/2, cfg["post_n_mm"][1]-cfg["post_n_mm"][0],
                                      [u, v, cfg["post_n_mm"][0]], [0, 0, 1]),
                                  block(min(u, 0), max(u, 0), *cfg["bridge_v_mm"], floor0, floor1))
             holder = holder.cut(cyl(cfg["mount_clear_hole_mm"]/2, 7, [u, v, -.1], [0, 0, 1]))
-            holder = holder.cut(cyl(2.25+cfg["washer_radial_clearance_mm"],
-                                   cfg["clip_lip_n_mm"][1]-floor1+.2,
-                                   [u, v, floor1], [0, 0, 1]))
             washer_total = cfg["washer_count_per_light_mount"]*cfg["washer_thickness_mm"]
             seat = floor1+washer_total
             screw = cyl(1, cfg["replacement_screw_length_mm"], [u, v, seat-cfg["replacement_screw_length_mm"]], [0, 0, 1]).fuse(
@@ -112,7 +110,7 @@ def main():
         # The bridges must also leave the barrel's independent aperture clear.
         holder = holder.cut(cyl(cfg["carrier_aperture_diameter_mm"]/2, 7, [0, 0, -.1], [0, 0, 1]))
         holder = holder.cut(block(*cfg["lead_exit_u_mm"], *cfg["lead_exit_v_mm"], floor0-.1, floor1+.1)).clean()
-        add("o1_led_carrier", holder, "Rigid carrier on existing camera screws, lens aperture and two PCB edge lips",
+        add("o1_led_carrier", holder, "Rigid carrier on existing camera screws, lens aperture and four short PCB edge lips",
             "Opaque PETG/PA12 print; actual snap retention unqualified", "fabricate", color="#b19879")
         face = led_cfg["camera_local_component_face_n_mm"]
         pcb_shape = block(-8, 8, -8, 8, face-board["thickness_mm"], face)
