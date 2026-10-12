@@ -95,11 +95,16 @@ def main():
                                      [u, v, cfg["post_n_mm"][0]], [0, 0, 1]),
                                  block(min(u, 0), max(u, 0), *cfg["bridge_v_mm"], floor0, floor1))
             holder = holder.cut(cyl(cfg["mount_clear_hole_mm"]/2, 7, [u, v, -.1], [0, 0, 1]))
-            washer = cyl(2.25, .5, [u, v, floor1], [0, 0, 1]).cut(cyl(1.1, .5, [u, v, floor1], [0, 0, 1]))
-            seat = floor1+.5
+            washer_total = cfg["washer_count_per_light_mount"]*cfg["washer_thickness_mm"]
+            seat = floor1+washer_total
             screw = cyl(1, cfg["replacement_screw_length_mm"], [u, v, seat-cfg["replacement_screw_length_mm"]], [0, 0, 1]).fuse(
                 cyl(1.9, 2, [u, v, seat], [0, 0, 1]))
-            add(f"o1_light_mount_{index}_washer", washer, "Relocated M2 washer on carrier, OD4.5/ID2.2/0.5 mm", "Measured M2 washer")
+            for washer_index in range(cfg["washer_count_per_light_mount"]):
+                base = floor1+washer_index*cfg["washer_thickness_mm"]
+                washer = cyl(2.25, cfg["washer_thickness_mm"], [u, v, base], [0, 0, 1]).cut(
+                    cyl(1.1, cfg["washer_thickness_mm"], [u, v, base], [0, 0, 1]))
+                add(f"o1_light_mount_{index}_washer_{washer_index}", washer,
+                    "One of three M2 washers on the carrier; stack provides screw-tip clearance", "Measured M2 washer, 0.5 mm")
             add(f"o1_light_mount_{index}_screw", screw, "M2x14 replaces the front camera M2x8; original nut remains", "Measured M2x14 screw")
         # The bridges must also leave the barrel's independent aperture clear.
         holder = holder.cut(cyl(cfg["carrier_aperture_diameter_mm"]/2, 7, [0, 0, -.1], [0, 0, 1]))
