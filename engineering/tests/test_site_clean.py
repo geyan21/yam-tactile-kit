@@ -9,6 +9,9 @@ import time
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
+# The complete offline packet now approaches 1.9 GB. Shared CI runners
+# need more time for compression than the earlier, smaller package.
+CLEAN_STEP_TIMEOUT_SECONDS=360
 sys.path.insert(0,str(ROOT/"src"))
 from tactile_kit.records import execution
 
@@ -33,14 +36,16 @@ class CleanSiteTests(unittest.TestCase):
                     started=time.monotonic()
                     while True:
                         try:
-                            stdout,stderr=process.communicate(timeout=min(30,max(1,180-(time.monotonic()-started))))
+                            stdout,stderr=process.communicate(timeout=min(30,max(1,CLEAN_STEP_TIMEOUT_SECONDS-(time.monotonic()-started))))
                             break
                         except subprocess.TimeoutExpired:
-                            if time.monotonic()-started<180:
+                            if time.monotonic()-started<CLEAN_STEP_TIMEOUT_SECONDS:
                                 continue
-                            record["intentional_stop_requests"].append(f"Stop owned clean-build PID {process.pid}: 180 second packet-build bound")
+                            record["intentional_stop_requests"].append(f"Stop owned clean-build PID {process.pid}: {CLEAN_STEP_TIMEOUT_SECONDS} second packet-build bound")
                             process.kill();process.communicate()
-                            self.fail("Clean reproduction exceeded its 180 second bound")
+                            message=f"{script}: clean reproduction exceeded its {CLEAN_STEP_TIMEOUT_SECONDS} second bound"
+                            print("::error file=engineering/tests/test_site_clean.py,title=Clean reproduction timeout::"+message,flush=True)
+                            self.fail(message)
                     entry["elapsed_s"]=time.monotonic()-started
                     entry.update({"exit_code":process.returncode,"stdout":stdout[-2000:],"stderr":stderr[-4000:]})
                     self.assertEqual(process.returncode,0,f"{script} failed from a clean tree:\n{stderr[-4000:]}")

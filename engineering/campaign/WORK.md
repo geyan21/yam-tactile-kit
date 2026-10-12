@@ -2,6 +2,27 @@
 
 ## Current checkpoint — 2026-10-12
 
+The first F1 publication commit is
+`111d09afd71834b508ec83b92a9bfb72be2f897b`, pushed successfully to public main.
+Its local final suite passed 213 tests, including clean reproduction.
+The packet has 8,659 checked local links and is 1,893,409,361 bytes.
+The hosted site is 609,306,040 bytes with 5,814 checked local links.
+Offline browser checks passed 55 main and 131 design checks; hosted checks
+passed 56 and 131, covering all twelve IDs. F1 desktop/mobile screenshots
+in `build/engineering/browser/20261012T023956.763575Z` were inspected.
+
+Actions run 38197149766 failed in the software/clean-reproduction step after
+186 seconds. Public annotations only state exit code 1; the log endpoint
+returned HTTP 403. The timing strongly suggests the 180-second clean-build
+bound, but the inaccessible detailed log prevents claiming that as verified.
+The follow-up increases the bounded per-step allowance to 360 seconds for
+the now 1.89 GB packet and emits an explicit public timeout annotation.
+The CI runner also publishes bounded traceback annotations for any failed
+test and rejects empty discovery, so future diagnosis does not require
+authenticated log access. Every file/checksum/link assertion remains. Verify the new run before
+marking F1 Pages or its release assets published. Public Pages still needs
+successful deployment of F1.
+
 F1.1 R4 is frozen locally at `engineering/prototypes/f1`: 1,072 files plus
 its snapshot, 96 CAD parts/references, twelve independently checked flexes,
 matching fanout/wrist electronics, twenty mold halves, film/terminal cut
