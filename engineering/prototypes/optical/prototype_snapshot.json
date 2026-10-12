@@ -5,7 +5,8 @@
   "design_label": "O1",
   "design_page": "optical.html",
   "physical_specimens_tested": 0,
-  "created_utc": "2026-10-12T09:13:23.773827+00:00",
+  "status": "Digital bench package; no physical specimens or performance qualification",
+  "created_utc": "2026-10-12T09:21:31.774879+00:00",
   "shared_release_sha256": "7dd97d2aa3e6332401e36d16a8ab318407460f0c2415e82f8b2e77d62043ae35",
   "source_hashes": {
     "engineering/designs/optical_bom.csv": "3265519093643cb9f83c69e2f78395b9d153c2d9e12c590e83e1ed7b8985db01",
@@ -47,7 +48,7 @@
     "engineering/scripts/fetch_optical_mini_camera.py": "37274fa97c868b39cfc8287d18ea8b6ee79f40a735ebb2087e02fb4e61a60206",
     "engineering/scripts/fetch_optical_readout_sources.py": "9e1d70e2dc354ad315f9a79d5d9fe7f83ccb871021f2d858c75470dc47d90271",
     "engineering/scripts/fetch_optical_reference.py": "9b73a3b2f7798a3a8a4af28c1a3fbecfa9ac4b0769a6f303ae369f6e667e375b",
-    "engineering/scripts/freeze_optical.py": "011b604e79cedf5780de6674aa0754dd131f0166a9cbcf7d12725085f793e7d8",
+    "engineering/scripts/freeze_optical.py": "57fde34a1ec32478f4ea5c77fe40893bf7d5f72c76bb7aeab92b83e325dfe561",
     "engineering/scripts/inspect_optical_obstructions.py": "2aecfb012f30a87ace54ecae8ebbe84c7feda43c1cc70817189b416dbaac7d71",
     "engineering/scripts/optical_cad.py": "946672a786238ec53cf775b10c445a63ad7124866e33b1db2e3bbbbab7e2ccce",
     "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
@@ -386,5 +387,15 @@
     "visuals/o1_sensor_placement.svg": "5291a6a452b0e4cc0169796606935bec5ceb4d3dc44f102d8e3d5e5658e21c27",
     "visuals/o1_wiring.png": "85e5daa118214ebd400a8c385309cebe954fcda51cde92648260ac7f9a76228c",
     "visuals/o1_wiring.svg": "e5952960e522934f98fc077ba568ae66eda5222359870e957301e4b605355e4c"
+  },
+  "checks": {
+    "cad_parts": 87,
+    "pcb_components": 9,
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "assembly_material_comparisons": 3403,
+    "mold_material_comparisons": 3,
+    "neutral_refraction_edge_exits_retained": 3,
+    "physical_qualification": false
   }
 }

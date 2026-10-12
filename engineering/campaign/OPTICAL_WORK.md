@@ -70,8 +70,15 @@ frame/mold images were also inspected.
 
 `engineering/prototypes/optical/` is now frozen: **304 files plus its
 snapshot, 87 CAD entries**, snapshot SHA256
-`4fc0774dd64467768ed51038a9876e369238c1c544ac1823a43e146fa7b75acb`.
-Commit `a7a23325a0caa1a4458551d0420edad5e539ac51` adds that packet.
+`ec638be3305931e1f5badd82689ab6397caaa32357d18d6dcb9270a997c7273f`.
+Commit `a7a23325a0caa1a4458551d0420edad5e539ac51` added the first packet.
+The fresh Git checkout at `build/optical-clean-8452519` then passed 253
+tests and failed the clean site build because the snapshot lacked its
+required `status` field. `5a61eaa` adds status/check metadata to the
+freezer. The matching replacement snapshot was regenerated at
+`build/engineering/prototypes/optical/package-status-fix`; all 304
+content files are unchanged. Retain the first package and failed test
+records; no CAD or electronics rerun is needed for this schema correction.
 Git inclusion check `build/engineering/tracked_snapshot_checks/20261012T091415.394730Z`
 passes all 20 manifests and 4,774 expected paths. The frame STEP is about
 40 MB; final distribution sizes still need checking.
