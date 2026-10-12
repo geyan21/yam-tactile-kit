@@ -1,0 +1,28 @@
+item,quantity_per_finger,selection,placement_or_process,source
+Original rigid finger,1,Retain the pinned ENPIRE YAM hard frame,No frame recess or cut for P1,engineering/release/baseline
+P1 soft insert,1,Print p1_ported_insert in Formlabs Flexible 80A reference resin,Use the actual printer/resin workflow; qualify channel cleaning and bending,https://merge-lab.github.io/FORTE-Finger/
+Flush plugs,10,Nominal diameter 1.45 mm x length 2 mm flexible plugs,Fit to measured printed holes and seal with qualified adhesive,Prototype CAD and port_cut_and_hose_map.csv
+Standard metal stems,6,304/316 stainless tube OD1.6 ID1.0 length6 mm,Deburr both ends and preserve the bore,Measured cut stock
+Long rear stem,1,304/316 stainless tube OD1.6 ID1.0 length8 mm,CH5 back only,Measured cut stock
+Slim front stem,1,304/316 stainless tube OD1.2 ID0.8 length15 mm,CH4 front; 3 mm embedded and 12 mm external,Measured cut stock
+Slim-port sleeve,1,Stainless sleeve OD1.6 ID1.3 length3 mm,Last 3 mm of the CH4 front stem; seal the annular bond,Measured cut stock
+Hoses,8,PVC tube 1/16 inch ID x 1/8 inch OD,Measure actual cut and free-air lengths; include slack and inspect sensor-end fit,https://merge-lab.github.io/FORTE-Finger/
+Bond/seal adhesive,As required,Sil-Poxy reference adhesive,Qualify resin-to-plug and resin-to-metal bonds; keep all bores clear,https://merge-lab.github.io/FORTE-Finger/
+Pressure transducers,4,ELVR-L30D-F1RD-C-NI3H,PS0..PS3 on remote board; confirm exact option and stock,https://428059.fs1.hubspotusercontent-na1.net/hubfs/428059/Product-Data-Sheets/DS-0375.pdf
+Readout PCB,1,P1 readout 80x86x1.6 mm four-layer board,Order only from the checked fabrication ZIP,See electronics/readout
+I2C multiplexer,1,TCA9548APWR TSSOP-24,U1 at 3.0 V; one branch at a time,https://www.ti.com/lit/ds/symlink/tca9548a.pdf
+Nail and supply ADC,1,ADS1115IDGSR MSOP-10,U2 at 3.3 V,https://www.ti.com/lit/ds/symlink/ads1115.pdf
+Pressure-rail regulator,1,LP5907MFX-3.0/NOPB SOT-23-5,U3 from Pico USB VBUS,https://www.ti.com/lit/ds/symlink/lp5907.pdf
+Board passives,See components.csv,0603 resistors and capacitors,Use the complete generated component list including effective capacitor requirements,electronics/readout/components.csv
+Controller,1,Original Raspberry Pi Pico RP2040 non-W,USB power and raw capture,https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+Pico sockets,2,1x20 female 2.54 mm sockets nominal body height8.5 mm,JP1 and JP2; inspect actual header stack height,Measured socket stock
+N0 nail cells,2,Retained R1 separate copper/pressure-film/insulating laminates,CH0 and CH1 on the two nail prongs; nominal total addition0.4 mm,engineering/release/r1/r1_cut_sheet.svg
+Pressure film,2 nail islands,Adafruit 1361 Velostat reference or qualified equivalent,Cut separate islands; measure the actual thickness,https://www.adafruit.com/product/1361
+Nail continuity resistors,2,100k 1% small resistors,Across each cell at the nail joint outside contact; not at the wrist for a physical build,Measured component stock
+Nail leads,4,Thin flexible insulated leads,One pair per nail with protected joints and slack,Retained R1 construction
+Bench carrier,1,Print p1_bench_carrier in rigid insulating PETG,Open bench fixture; not a qualified wrist mount,Prototype CAD
+Board screws,4,M2x12; head within modeled diameter3.8 mm envelope,Check supplied stock and assembled clearance,Measured fastener stock
+Board washers,4,M2 washer OD4.5 ID2.2 thickness0.5 mm,Above board mounting holes,Measured fastener stock
+Board nuts,4,M2 nut within AF4.0 x thickness1.6 mm envelope,Underside pockets AF4.4 x depth1.9 mm,Measured fastener stock
+Hose ties,As required,Small loose cable ties or lacing,Use carrier slots; do not flatten or preload the hoses,Measured consumable stock
+Test equipment,Shared,Calibrated force reference and low-pressure manometer,Record uncertainties and fixture geometry; no test hardware is controlled by this kit,Student bench resources

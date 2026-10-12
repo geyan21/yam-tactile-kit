@@ -4,11 +4,16 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Ten have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, **FB1.1** a packaged force button, **K1.2** capacitive cells and **F1.1 R4** a dense resistive matrix. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Eleven have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, **FB1.1** a packaged force button, **K1.2** capacitive cells, **F1.1 R4** a dense resistive matrix and **P1.0** paired air channels. All require physical assembly and testing.
 
 **Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans.
 
 **Not yet available:** assembled prototype photographs, measured contact threshold, force accuracy, lifetime, or robot-task results. No sensor or material has won the comparison yet.
+
+[P1](docs/BUILD_PNEUMATIC.md) supplies 112 CAD parts/references, four remote
+ELVR transducers, a checked 40-component readout, eight labeled hoses and two
+thin N0 nail cells. Its separate electrical, physical-test and reproduction
+guides retain the gas model's range failures and common-pressure ambiguity.
 
 1. Read [the student starting packet](docs/START.md).
 2. Inspect [the measured geometry and provenance](docs/GEOMETRY.md).

@@ -368,26 +368,44 @@
       "related": ["F1", "B1", "C1"]
     },
     {
-      "id": "PNEUMATIC", "slug": "pneumatic", "title": "Pneumatic finger · Internal air channels", "group": "research",
-      "status": "Reference approach only", "status_detail": "FORTE is a relevant published reference. No ENPIRE adaptation or 20 N version has been designed here.",
-      "summary": "Sense deformation of a compliant finger through changes in internal air pressure, with pressure transducers located away from the contact surface.",
-      "signal": "Pressure measurements interpreted as force/slip through a validated mechanical model.",
-      "best_for": "A passive soft interface with electronics at the wrist.",
-      "tradeoff": "Sealing, tubing, temperature/volume effects and the demonstrated force range require attention.",
+      "id": "PNEUMATIC", "slug": "pneumatic", "title": "P1 pneumatic · Internal air channels", "group": "prototype",
+      "status": "Digital bench package · unbuilt", "status_detail": "112 CAD parts/references, a checked 40-component readout, explicit hose map, firmware and stationary-force tools. No physical build or 20 N qualification. The gas study retains out-of-range scenarios and common-pressure ambiguity.",
+      "summary": "Four pairs of air channels are built into a source-matched soft insert. Four differential pressure chips sit at the wrist or bench; two thin R1 N0 cells cover the nail.",
+      "signal": "Four signed pressure differences and two nail conductances; actual force/contact calibration is required.",
+      "best_for": "A compliant sensing surface with the pressure electronics kept off the finger.",
+      "tradeoff": "Eight hoses, sealing and thermal/volume sensitivity. Equal pressure changes can cancel; pressure is not a direct force measurement.",
       "sensors": [
-        ["Soft interface", "FORTE-style internal air channels are the reference", "Within a redesigned compliant finger"],
-        ["Reference transducers", "FORTE's hardware guide lists ELVR-L01D-F1RD-C-NA3F transducers", "At the wrist/base, connected by tubes; this is not a selected ENPIRE BOM"]
+        ["Pressure chips ×4", "All Sensors ELVR-L30D-F1RD-C-NI3H; confirm exact option/stock", "PS0–PS3 on the remote PCB. Each B high port connects to its front channel, A low to its back channel."],
+        ["Soft sensing interface", "Eight nominal Ø1.5 mm air channels in Flexible 80A reference resin", "Four front/back pairs inside the replacement insert at CH2–CH5. The original hard frame is retained."],
+        ["Thin nail cells ×2", "Retained R1 N0 copper/pressure-film laminates with continuity resistors", "CH0 and CH1 on the two hard nail prongs; nominal total addition 0.4 mm, measured after assembly."],
+        ["Remote readout", "TCA9548APWR + ADS1115IDGSR + LP5907MFX-3.0/NOPB + RP2040 Pico", "80 × 86 mm PCB on an insulating bench carrier. Pressure rail 3.0 V; Pico/nail ADC 3.3 V."]
       ],
-      "placement": "The compliant chamber is the contact element. Tubes connect it to fixed pressure sensors. The published reference reports a 0–8 N experiment; a 20 N ENPIRE design still needs new range and mechanical work.",
-      "schematic": ["Finger deforms", "Air pressure changes", "Tubes to fixed sensors", "Force / slip model"],
+      "placement": "The chips stay away from the bending insert. PS0/1/2/3 read CH2/3/4/5 respectively. Every transducer measures front minus back pressure; the back channel is mechanically active. Ten flush plugs close cleaning openings. CH4 front uses the specified slim 15 mm stem; CH5 back uses an 8 mm stem. Follow the cut/hose table and pin-one card.",
+      "schematic": ["Front/back channels deform", "Eight labeled hoses", "Four remote differential sensors", "Physical force calibration"],
+      "visual": {"path": "assets/prototypes/pneumatic/visuals/p1_assembly.png", "alt": "Source-matched P1 side section with four front/back channel pairs and two thin nail cells", "caption": "Actual nominal channel layout. Blue is front, purple is back; both deform. The side view overlaps the two nail prongs, which separate in 3D."},
+      "placement_visual": {"path": "assets/p1_wiring.svg", "alt": "Exact P1 sensor selection and eight-hose wiring map", "caption": "Front → B high; back → A low of the same transducer. Separate nail cells use the ADS1115."},
+      "detail_visuals": [
+        {"path": "assets/prototypes/pneumatic/visuals/p1_pcb_orientation.svg", "alt": "Actual P1 PCB footprint positions and pin-one marks", "caption": "PS0/PS1 ports face left; PS2/PS3 face right. Both Pico socket pin-one positions are at the USB end."},
+        {"path": "assets/prototypes/pneumatic/visuals/p1_readout.png", "alt": "P1 remote board and insulating carrier CAD", "caption": "The four blue blocks are pressure-sensor body references on the remote PCB. This is CAD, not assembled hardware."},
+        {"path": "assets/prototypes/pneumatic/visuals/p1_pressure_sensitivity.png", "alt": "Ideal-gas sensitivity and common-pressure cancellation scenarios", "caption": "Model-only study with declared volume/temperature assumptions. It does not predict force or establish contact reliability."}
+      ],
+      "prototype_cad_group": "pneumatic", "viewer_model": "p1_assembly_reference",
+      "viewer_label": "Inspect P1 channels, fittings and thin nail in 3D",
       "resources": [
-        ["Reference", "FORTE project and reported experiments", "https://merge-lab.github.io/FORTE/"],
+        ["Build", "P1 material, tube, plug and nail assembly", "build-pneumatic.html"],
+        ["Electronics", "Exact chip pins, hose map and raw capture", "pneumatic-electronics.html"],
+        ["Tests", "Leak, bending, contact and 20 N stationary-force plan", "pneumatic-testing.html"],
+        ["Reproduce", "Regenerate the CAD, PCB and checks", "pneumatic-reproduce.html"],
+        ["Download", "Complete P1 prototype files", "downloads/p1-prototype.zip"],
+        ["Files", "Every P1 CAD, circuit, code and evidence file", "assets/prototypes/pneumatic/file-index.html"],
+        ["Cut / connect", "Per-port metal lengths and sensor hose map", "assets/prototypes/pneumatic/port_cut_and_hose_map.csv"],
+        ["Materials", "P1 BOM", "assets/prototypes/pneumatic/bom.csv"],
         ["Reference", "FORTE finger hardware manual", "https://merge-lab.github.io/FORTE-Finger/"],
-        ["Review", "Comparison with the current kit", "architecture.html"]
+        ["Manufacturer", "ELVR sensor datasheet and F1RD package", "https://428059.fs1.hubspotusercontent-na1.net/hubfs/428059/Product-Data-Sheets/DS-0375.pdf"]
       ],
-      "missing": ["ENPIRE-specific chambers and tubing route", "Verified sealing, range and overload behavior", "A 20 N calibration and hard-nail contact strategy"],
-      "next_steps": ["Reproduce a reference pressure chamber before modifying the finger.", "Measure leaks, drift and response over the intended force range.", "Design a separate hard-nail sensing path if nail-only contacts must be covered."],
-      "related": ["B1", "C1", "O1"]
+      "missing": ["Actual printed-channel, plug/bond and transducer-port acceptance", "Full moving hose route and installed drive/wrist fit", "Measured deformation, common-pressure cancellation, thermal drift and sensor headroom", "Physical contact detector, force calibration, durability and precision-task comparison"],
+      "next_steps": ["Fabricate the insert and checked readout; inspect all channel openings and pin orientations.", "Test each air line for leaks before connecting front/back pairs and retaining the thin nail.", "Run low-load holds, then progress to 20 N with the reference, preserving unavailable and failed cases.", "Compare independent builds against the other designs; no measured winner exists."],
+      "related": ["B1", "R1", "FORCE_BUTTON", "O1"]
     },
     {
       "id": "O1", "slug": "optical", "title": "Optical finger · Observe contact deformation", "group": "research",

@@ -40,6 +40,12 @@ def overlap(a, b):
     return common_volume(a, b)
 
 
+def hose_guard(outlet, direction, cfg):
+    return cyl(cfg["hose_outer_diameter_mm"]/2+cfg["hose_radial_guard_mm"],
+               cfg["hose_engagement_mm"]+cfg["straight_hose_beyond_outlet_mm"],
+               np.asarray(outlet)-cfg["hose_engagement_mm"]*np.asarray(direction), direction)
+
+
 def internal_exit(profile, exterior, start, direction, cfg):
     previous = 0.
     for distance in np.arange(cfg["ray_step_mm"], cfg["maximum_branch_length_mm"], cfg["ray_step_mm"]):
@@ -107,21 +113,29 @@ def main():
                 trials, accepted = [], None
                 for sign in (port["preferred_exit_sign"], -port["preferred_exit_sign"]):
                     pieces = hardware(y, z, sign, port)
+                    direction = np.array([sign, 0., 0.])
+                    end = np.array([pieces["face"]+sign*(pieces["seat"]+port["metal_tube_length_mm"]), y, z])
+                    hose = hose_guard(end, direction, cfg)
+                    envelope = pieces["envelope"].fuse(hose).clean()
                     frame = overlap(pieces["envelope"], hard)
-                    peer = max([overlap(pieces["envelope"], other) for other in peer_envelopes] or [0.])
-                    trials.append({"kind": "straight", "sign": sign, "frame_overlap_mm3": frame, "peer_overlap_mm3": peer})
-                    if max(frame, peer) <= .001:
+                    hose_frame, hose_body = overlap(hose, hard), overlap(hose, body)
+                    peer = max([overlap(envelope, other) for other in peer_envelopes] or [0.])
+                    trials.append({"kind": "straight", "sign": sign, "frame_overlap_mm3": frame,
+                                   "hose_guard_frame_overlap_mm3": hose_frame,
+                                   "hose_guard_insert_overlap_mm3": hose_body, "peer_overlap_mm3": peer})
+                    if max(frame, peer, hose_frame, hose_body) <= .001:
                         accepted = {"id": identifier, "site": entry["site"], "role": role, "kind": "straight",
                                     "direction_native": [sign, 0, 0], "anchor_native_mm": [pieces["face"], y, z],
                                     "holder_embed_mm": 0., "branch_start_native_mm": None,
-                                    "plug_faces_x_mm": [pieces["opposite"]], "sign": sign}
-                        envelope = pieces["envelope"]
+                                    "plug_faces_x_mm": [pieces["opposite"]], "sign": sign,
+                                    "metal_tube_length_mm": port["metal_tube_length_mm"],
+                                    "outlet_native_mm": end.tolist()}
                         break
                 if accepted is None:
                     grid = itertools.product((port["preferred_exit_sign"], -port["preferred_exit_sign"]),
                                              cfg["inside_distance_from_x_end_mm"], cfg["elevation_from_x_deg"],
-                                             cfg["yaw_deg"], cfg["holder_embed_mm"])
-                    for sign, inset, elevation, yaw, embed in grid:
+                                             cfg["yaw_deg"], cfg["holder_embed_mm"], cfg["angled_metal_tube_lengths_mm"])
+                    for sign, inset, elevation, yaw, embed, tube_length in grid:
                         a, b = math.radians(elevation), math.radians(yaw)
                         direction = np.array([sign*math.cos(a)*math.cos(b), math.sin(b),
                                               (1 if role == "front" else -1)*math.sin(a)*math.cos(b)])
@@ -131,23 +145,46 @@ def main():
                             continue
                         anchor, distance = found
                         seat = port["holder_length_mm"]-port["socket_depth_mm"]
-                        end = anchor+(seat+port["metal_tube_length_mm"])*direction
+                        end = anchor+(seat+tube_length)*direction
                         if ((sign < 0 and end[0] > -15-cfg["outlet_x_clearance_mm"])
                                 or (sign > 0 and end[0] < cfg["outlet_x_clearance_mm"])):
                             continue
                         holder = cyl(port["holder_outer_diameter_mm"]/2, port["holder_length_mm"]+embed,
                                      anchor-embed*direction, direction)
-                        tube = cyl(port["metal_tube_outer_diameter_mm"]/2, port["metal_tube_length_mm"],
+                        tube = cyl(port["metal_tube_outer_diameter_mm"]/2, tube_length,
                                    anchor+seat*direction, direction)
-                        envelope = holder.fuse(tube).clean()
+                        hose = hose_guard(end, direction, cfg)
+                        envelope = holder.fuse(tube, hose).clean()
                         frame = overlap(envelope, hard)
                         trial = {"kind": "angled", "sign": sign, "inset_mm": inset, "elevation_deg": elevation,
-                                 "yaw_deg": yaw, "embed_mm": embed, "frame_overlap_mm3": frame}
+                                 "yaw_deg": yaw, "embed_mm": embed, "metal_tube_length_mm": tube_length,
+                                 "frame_overlap_mm3": frame}
                         trials.append(trial)
                         if frame > .001:
                             continue
+                        trial["hose_guard_insert_overlap_mm3"] = overlap(hose, body)
+                        if trial["hose_guard_insert_overlap_mm3"] > .001:
+                            continue
+                        # Include each end plug and its bond, with an axial
+                        # reserve. Frame clearance alone can accept a branch
+                        # that cuts through the closure at the channel end.
+                        plug_depth = port["plug_length_mm"]+cfg["minimum_branch_to_plug_axial_margin_mm"]
+                        plug_guards = [
+                            yz_prism(air_disks[next(index for index, (name, _) in enumerate(all_channels)
+                                                   if name == identifier)], face, plug_depth)
+                            for face in (-15., -plug_depth)]
+                        branch = cyl(port["holder_throat_diameter_mm"]/2,
+                                     distance+seat, start, direction)
+                        socket_and_tube = cyl(port["socket_diameter_mm"]/2,
+                                              tube_length,
+                                              anchor+seat*direction, direction)
+                        trial["branch_plug_guard_overlap_mm3"] = max(
+                            overlap(shape, plug) for shape in (branch, socket_and_tube)
+                            for plug in plug_guards)
+                        if trial["branch_plug_guard_overlap_mm3"] > .001:
+                            continue
                         free_tube = cyl(port["metal_tube_outer_diameter_mm"]/2,
-                                        port["metal_tube_length_mm"]-port["socket_depth_mm"],
+                                        tube_length-port["socket_depth_mm"],
                                         anchor+port["holder_length_mm"]*direction, direction)
                         trial["free_tube_insert_overlap_mm3"] = overlap(free_tube, body)
                         trial["peer_overlap_mm3"] = max([overlap(envelope, other) for other in peer_envelopes] or [0.])
@@ -167,6 +204,7 @@ def main():
                                     "direction_native": direction.tolist(), "anchor_native_mm": anchor.tolist(),
                                     "branch_start_native_mm": start.tolist(), "branch_to_surface_length_mm": distance,
                                     "holder_embed_mm": embed, "plug_faces_x_mm": [-15., 0.],
+                                    "metal_tube_length_mm": tube_length,
                                     "outlet_native_mm": end.tolist(), "sign": sign}
                         break
                 if accepted is None:
@@ -174,8 +212,8 @@ def main():
                 else:
                     peer_envelopes.append(envelope)
                     mesh = export_part(envelope, identifier+"_fitting_envelope", folder, parts,
-                                       "Conservative fitting clearance reference; not the printable socket or tube",
-                                       "Combined outside envelope", "reference_only")
+                                       "Conservative fitting and first hose-segment clearance reference; not a printable part",
+                                       "Fitting envelope plus guarded hose engagement and straight departure", "reference_only")
                     models.append(packed(mesh, identifier+"_fitting_envelope", "p1_port_envelopes", "#779ba7"))
                     selected.append({**accepted, "trials": trials})
                 (folder/(identifier+"_trials.json")).write_text(json.dumps(trials, indent=2)+"\n")

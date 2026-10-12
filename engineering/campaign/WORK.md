@@ -2,6 +2,24 @@
 
 ## Current checkpoint — 2026-10-12
 
+P1.0 now has complete local nominal CAD/readout, 112 parts/references,
+an explicit tube/hose map, raw firmware, recording/receipt handling,
+stationary-force tools and separate visual build pages. The 23 new P1
+software tests use synthetic fixtures. No physical builds or data exist.
+See `PNEUMATIC_WORK.md` for the exact runs, guarded port changes,
+3,514 nominal geometry comparisons, native PCB check and model limits.
+P1 is frozen as 414 files plus its snapshot
+`68aa9caa300bee7cf82fb73cb3e32a1d44e7107f4208bb24aa212d1ba20331fb`.
+Website/publication checks are next; optical integration and every
+physical comparison remain in the active goal.
+
+F1 publication is complete at `e8f794c3d4b0af61a1cb4bcfeb16a2d3b2357d4e`,
+release `kit-e8f794c3d4b0`, successful Actions run 38199610904. The canonical
+checkout's `build/engineering/publication_checks/20261012T034634.437400Z/report.json`
+verifies the live pages, prototype ZIP and all release-asset hashes.
+
+### Earlier F1 publication work
+
 Follow-up commit `ffa6cc233a4a3a3ab6826b1a1e21bf4f29c96d04` passed the local
 213-test runner and clean rebuild, but Actions run 38198456529 exposed an
 import-path error in the new wrapper. Its public annotation identifies

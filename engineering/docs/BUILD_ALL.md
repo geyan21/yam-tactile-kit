@@ -4,9 +4,9 @@ The goal is a measured comparison of all twelve designs for reliable contact
 and grip-force feedback through **20 N per finger**, while retaining thin-tip
 access for precision manipulation.
 
-**Current evidence:** ten digital prototype packages are available. Physical
+**Current evidence:** eleven digital prototype packages are available. Physical
 specimens tested: **0**. No measured winner has been selected. The remaining
-three designs still need the development listed below.
+optical design still needs the development listed below.
 
 ## Status of every design
 
@@ -21,7 +21,7 @@ three designs still need the development listed below.
 | [B3 recessed magnetic](https://geyan21.github.io/yam-tactile-kit/recessed-magnetic.html) | Revised frame, tapered spacers, retained B2 board, gain-5 firmware and sampled field/clearance checks | Print and fit; measure frame stiffness, actual motion/headroom, then paired B2/B3 force/contact and task performance |
 | [F1 flexible matrix](https://geyan21.github.io/yam-tactile-kit/flexible-matrix.html) | F1.1 R4: twelve checked flexes, 96 CAD parts/references, retained covers/molds, fanout/wrist electronics, manufacturing and static-force tools; 5,638 assembly comparisons pass | Fabricate and accept real terminals/cable, bonds, seals and slack; measure full-array behavior, contact and held-out 20 N force |
 | [K1 capacitive](https://geyan21.github.io/yam-tactile-kit/capacitive.html) | Seven checked flex designs, six retained cells, protected references, cover molds, stops, terminal tools, bank cases and raw/static-force software | Fabricate and measure posts, bonds and gaps; verify installed bracket and moving harness; test early bottoming, low-force signal, contact reliability and precision |
-| [Pneumatic](https://geyan21.github.io/yam-tactile-kit/pneumatic.html) | Published reference hardware | Develop ENPIRE chambers, sealing, range and nail-contact coverage |
+| [P1 pneumatic](https://geyan21.github.io/yam-tactile-kit/pneumatic.html) | Eight channels, 112 CAD parts/references, four remote ELVR transducers, checked readout, two N0 nail cells, hose map, firmware and static-force tools | Fabricate and inspect seals/ports; test bending, hose/temperature effects, common-pressure cancellation, contact and held-out force through 20 N |
 | [Optical](https://geyan21.github.io/yam-tactile-kit/optical.html) | Published optical approaches | Design the optical path, camera, surface, image processing and nail coverage |
 | [FB1 force button](https://geyan21.github.io/yam-tactile-kit/force-button.html) | Guided root adapter, selected Honeywell FMA, checked sensor PCB, firmware, calibration tools and structural screen | Machine and assemble; measure preload, stop gaps, actual drive fit, contact reliability and held-out finger-force accuracy |
 
@@ -42,7 +42,7 @@ until its installed finger has been designed and evaluated.
 R1/L1 already have their dedicated force/contact workflows. B1/B2 have raw
 magnetic acquisition and bench conditions; force/contact models for those
 designs still require measured training and held-out validation data.
-C1, N1, FB1, K1 and F1 have separate stationary-hold fitters and evaluators; dynamic force and
+C1, N1, FB1, K1, F1 and P1 have separate stationary-hold fitters and evaluators; dynamic force and
 contact reliability still need their own measured evidence.
 
 ## Proposed comparison targets

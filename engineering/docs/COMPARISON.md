@@ -3,8 +3,8 @@
 [Open the design directory for a separate page on every design and alternative](https://geyan21.github.io/yam-tactile-kit/designs.html). Each page states the exact sensor choice, placement, available files and build status.
 
 The decision is driven by reliable contact and grip-force feedback through
-20 N per finger with a thin, precise leading tip. Ten digital prototype
-packages are available. Pneumatic and optical integration remain in
+20 N per finger with a thin, precise leading tip. Eleven digital prototype
+packages are available. Optical integration remains in
 development. **Physical specimens tested: 0; no measured winner.**
 
 The root-sensing designs preserve the bare contact surfaces and measure an
@@ -25,7 +25,7 @@ their practical value must be measured on the same precision tasks.
 | B3 recessed magnetic | Magnetic deformation observations and separate nail signals | Recesses the B2 electronics into a revised frame | Frame stiffness, real magnetic headroom, bending, contact and paired B2/B3 performance | B3.1 build package and field/clearance screens; unbuilt |
 | F1 flexible matrix | 64 proposed contact locations from routed row/column electrodes | Twelve shaped foils, fixed fanout, retained covers and wrist electronics | Physical mating/lamination, continuous-film interaction, dynamics, slack, wear and force calibration | F1.1 R4 digital bench package; no physical results |
 | K1 capacitive | Six local capacitance signals for physical contact/force calibration | Two nail cells and four curved cells; nominal 0.836 mm nail addition | Stop height, low-force signal, finite plate loading, cable/bending artifacts and wear | K1.2 bench build package; model findings retained; unbuilt |
-| Pneumatic | Pressure response to compliant chamber deformation | Needs ENPIRE chambers, tube paths and nail coverage | Leakage, temperature, pressure/force range, hysteresis and loading rate | Published references; ENPIRE integration remains |
+| P1 pneumatic | Four signed front/back pressure differences and two nail signals | Source-matched internal channels, eight hoses, remote PCB and 0.4 mm nominal N0 nail addition | Seals, common-pressure cancellation, hose/temperature effects, bending and pressure/force range | P1.0 bench package; model range failures retained; unbuilt |
 | Optical | Dense surface deformation or texture images | Needs a camera, illumination and clear optical path within a redesigned finger | Occlusion, depth/force calibration, timing, gel wear and nail coverage | Published references; ENPIRE integration remains |
 | FB1 packaged force button | Aggregate normal-force signal through a guided root adapter | Bare original nail/TPU; 50 mm added reach | Preload, stop gaps, real-joint motion, calibrated accuracy and contact reliability | FB1.1 CAD/PCB, code and structural screen; unbuilt |
 

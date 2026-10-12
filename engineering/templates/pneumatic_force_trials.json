@@ -1,0 +1,35 @@
+{
+  "schema": "yam-p1-force-trials/1",
+  "evidence_kind": "physical",
+  "phase": "train",
+  "specimen": "REPLACE_WITH_ACTUAL_SPECIMEN",
+  "session_id": "REPLACE_WITH_ACTUAL_SESSION",
+  "geometry_sha256": "REPLACE_WITH_AS_BUILT_MANIFEST_SHA256",
+  "reference_id": "REPLACE_WITH_CALIBRATED_REFERENCE",
+  "reference_uncertainty_n": null,
+  "force_axis": {"frame": "source_finger_native", "unit_vector": [0, 0, 1]},
+  "minimum_holds_per_level": 3,
+  "calibration_context": {
+    "hose_set_id": "REPLACE_WITH_HOSE_SET",
+    "finger_pose_id": "REPLACE_WITH_POSE",
+    "electronics_id": "REPLACE_WITH_BOARD_AND_SENSOR_IDENTITIES",
+    "material_process_id": "REPLACE_WITH_RESIN_PRINT_CURE_AND_NAIL_STACK",
+    "tube_lengths_mm": [null, null, null, null, null, null, null, null],
+    "temperature_band_c": [20, 25]
+  },
+  "trials": [
+    {
+      "id": "REPLACE_WITH_UNIQUE_HOLD",
+      "condition_id": "REPLACE_WITH_CAPTURE_CONDITION",
+      "sites": ["CH2"],
+      "region": "distal_tpu",
+      "temperature_c": null,
+      "recording": "REPLACE_WITH_SEPARATE_RECORDING.jsonl",
+      "recording_sha256": "REPLACE_WITH_RAW_RECORDING_SHA256",
+      "window_host_s": [5, 20],
+      "reference_before_n": null,
+      "reference_after_n": null
+    }
+  ],
+  "instructions": "This is an empty template, not physical evidence. Train CH0..CH5 separately at 0,0.2,0.5,1,2,5,10,15,20 N with >=3 separate holds each. Test in a new session with new files, all required regions, and nail/nail, pad/pad and nail/pad mixtures. Total requested force is 20 N per finger."
+}

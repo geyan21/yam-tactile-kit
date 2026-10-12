@@ -1,0 +1,24 @@
+{
+  "schema": "yam-pneumatic-insert-ports/1",
+  "preferred_exit_sign": -1,
+  "holder_outer_diameter_mm": 3.0,
+  "holder_length_mm": 3.0,
+  "holder_throat_diameter_mm": 1.0,
+  "socket_diameter_mm": 1.7,
+  "socket_depth_mm": 2.5,
+  "metal_tube_outer_diameter_mm": 1.6,
+  "metal_tube_inner_diameter_mm": 1.0,
+  "metal_tube_length_mm": 6.0,
+  "plug_diameter_mm": 1.45,
+  "plug_length_mm": 2.0,
+  "insert_material": "Formlabs Flexible 80A reference material; process and physical performance require qualification",
+  "tube_material": "Deburred 304/316 stainless tube, measured to the stated dimensions",
+  "bond_material": "Sil-Poxy reference adhesive; qualify the actual resin/metal/plug bonds and leak rate",
+  "limits": [
+    "Printed channel ends remain open for cleaning before tubes and flush plugs are bonded.",
+    "The metal tubes reinforce external fittings only; they do not bridge the deforming sensing channel.",
+    "Choose the tested actual stock dimensions and adjust socket/plug clearances before fabrication.",
+    "Holder-to-frame checks use conservative full envelopes; actual drive, hoses and clamps remain.",
+    "Bond and seal geometry does not demonstrate adhesion, leak resistance or 20 N performance."
+  ]
+}

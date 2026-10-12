@@ -56,6 +56,10 @@ DOCS=[
     ("CAPACITIVE_TESTING","capacitive-testing","K1 calibration & tests"),
     ("BUILD_FORCE_BUTTON","build-force-button","Build FB1 force button"),
     ("FORCE_BUTTON_TESTING","force-button-testing","FB1 calibration & tests"),
+    ("BUILD_PNEUMATIC","build-pneumatic","Build P1 pneumatic"),
+    ("PNEUMATIC_ELECTRONICS","pneumatic-electronics","P1 sensors, hoses & capture"),
+    ("PNEUMATIC_TESTING","pneumatic-testing","P1 physical comparison"),
+    ("PNEUMATIC_REPRODUCE","pneumatic-reproduce","Reproduce P1"),
 ]
 
 
@@ -284,6 +288,7 @@ def main():
             (ROOT/"engineering/templates/force_button_force_trials.json","force_button_force_trials.json"),
             (ROOT/"engineering/templates/capacitive_force_trials.json","capacitive_force_trials.json"),
             (ROOT/"engineering/templates/f1_force_trials.json","f1_force_trials.json"),
+            (ROOT/"engineering/templates/pneumatic_force_trials.json","pneumatic_force_trials.json"),
         ):
             shutil.copyfile(source,downloads/target)
         r1_models=json.loads((RELEASE/"models.json").read_text())
@@ -343,6 +348,9 @@ def main():
         f1=ROOT/"engineering/prototypes/f1"
         write_zip(downloads/"f1-prototype.zip",
                   {str(p.relative_to(f1)):p.read_bytes() for p in f1.rglob("*") if p.is_file()})
+        p1=ROOT/"engineering/prototypes/pneumatic"
+        write_zip(downloads/"p1-prototype.zip",
+                  {str(p.relative_to(p1)):p.read_bytes() for p in p1.rglob("*") if p.is_file()})
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
         offline={}

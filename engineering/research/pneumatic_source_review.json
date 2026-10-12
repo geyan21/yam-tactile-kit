@@ -2,7 +2,7 @@
   "schema": "yam-pneumatic-source-review/1",
   "reviewed_utc_date": "2026-10-12",
   "physical_specimens_tested": 0,
-  "status": "Primary-source review; no completed ENPIRE pneumatic prototype or selected force calibration",
+  "status": "Primary-source basis for the P1.0 digital bench design; no physical specimen or force calibration",
   "reference": {
     "name": "FORTE",
     "hardware": "https://merge-lab.github.io/FORTE-Finger/",
@@ -40,13 +40,13 @@
     "candidate_status": "Ordering-table combination for range screening; availability and suitable chamber sensitivity are unconfirmed."
   },
   "design_direction": {
-    "contact_locations": "Four compliant air-channel regions over the original TPU; preserve separate thin nail sensing using the existing R1 nail construction unless a better pneumatic nail interface is demonstrated.",
+    "contact_locations": "Four front/back channel pairs inside the replacement soft insert, plus the retained two thin R1 N0 nail cells.",
     "fixed_electronics": "Pressure transducers at the wrist/bench; short measured tubes connect to the contact chambers.",
     "next": [
-      "Calculate chamber/tube/dead-volume and pressure-range sensitivity without assuming force equals pressure times area.",
-      "Develop source-matched soft chambers, seal and tube ports with accessible molds.",
-      "Select the transducer range after the volume/deformation screen, then finish readout and acquisition.",
-      "Measure pressure/force, leakage, tube motion, temperature and contact-shape effects through 20 N."
+      "Fabricate and inspect the selected printed channels, plugs, metal fittings and actual transducer-port connections.",
+      "Verify the checked readout and raw acquisition on physical hardware.",
+      "Measure common/differential pressure behavior, leakage, bending, hose motion and temperature effects.",
+      "Evaluate independent contact and force data through 20 N; the selected range and linear baseline remain unqualified."
     ]
   }
 }

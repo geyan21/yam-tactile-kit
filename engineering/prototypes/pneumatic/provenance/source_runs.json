@@ -1,0 +1,30 @@
+{
+  "assembly": {
+    "directory": "build/engineering/prototypes/pneumatic/ported_assemblies/20261012T045727.167175Z",
+    "report_sha256": "755fb4df0c1dc616e93e2aab4e40c85453a6ac921b050d50bd1d248a61c4a8b4"
+  },
+  "bench": {
+    "directory": "build/engineering/prototypes/pneumatic/bench_parts/20261012T050454.589293Z",
+    "report_sha256": "32e70107767ce14ec5f3409bd14b6e7e694c8b4d0c7b8356ef76d2f507aaea87"
+  },
+  "board": {
+    "directory": "build/engineering/prototypes/pneumatic/boards/20261012T044642.938727Z",
+    "report_sha256": "aefccd88f673ea5b2ee8c330a98e79d046ae9d97852d24cb7ced89ff4fc76377"
+  },
+  "pairs": {
+    "directory": "build/engineering/prototypes/pneumatic/pair_screens/20261012T050406.520333Z",
+    "report_sha256": "c89145aedc283341724758c3127ced598272d29a97b4233690f27e5e9661bfba"
+  },
+  "integration": {
+    "directory": "build/engineering/prototypes/pneumatic/integration_reviews/20261012T051804.471388Z",
+    "report_sha256": "14f64b9bb3deb7f8670ec800d96307869a1df62243a6589d1dc3d9f1108472a3"
+  },
+  "visuals": {
+    "directory": "build/engineering/prototypes/pneumatic/visuals/20261012T052214.617429Z",
+    "report_sha256": "27dfd30503f1698add4faa87a188f86865feca79cff3a754d2eab701845c3e79"
+  },
+  "diagrams": {
+    "directory": "build/engineering/prototypes/pneumatic/diagram_reviews/20261012T053300.700772Z",
+    "report_sha256": "abb48ad58ff98bd9fd2cfe44308788f33afb1b11938b44113b8b956565576779"
+  }
+}

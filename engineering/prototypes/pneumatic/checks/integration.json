@@ -1,0 +1,1309 @@
+{
+  "schema": "yam-p1-integration-review/1",
+  "physical_specimens_tested": 0,
+  "passed": true,
+  "cross_module_checks": [
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ported_insert",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_slim_stem",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_embedded_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_hose_sleeve",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_sleeve_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch2_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch3_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch4_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_mount",
+      "b": "p1_ch5_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ported_insert",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_slim_stem",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_embedded_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_hose_sleeve",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_sleeve_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch2_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch3_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch4_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch0_n0_laminate",
+      "b": "p1_ch5_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ported_insert",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_slim_stem",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_embedded_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_hose_sleeve",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_sleeve_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch2_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch3_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch4_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_mount",
+      "b": "p1_ch5_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ported_insert",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_slim_stem",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_embedded_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_hose_sleeve",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_sleeve_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_plug_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_plug_bond_xm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_plug_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_plug_bond_xp",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_metal_tube",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_socket_bond",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_local_hose",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch2_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch3_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch4_front_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_back_air_space",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "p1_ch1_n0_laminate",
+      "b": "p1_ch5_front_air_space",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "electrical_contracts": [
+    {
+      "reference": "PS0",
+      "expected_pin_nets": {
+        "1": "3V0",
+        "2": "GND",
+        "3": "",
+        "4": "",
+        "5": "SC0",
+        "6": "",
+        "7": "",
+        "8": "SD0"
+      },
+      "source": "DS-0375 Rev C F1RD page14",
+      "passed": true
+    },
+    {
+      "reference": "PS1",
+      "expected_pin_nets": {
+        "1": "3V0",
+        "2": "GND",
+        "3": "",
+        "4": "",
+        "5": "SC1",
+        "6": "",
+        "7": "",
+        "8": "SD1"
+      },
+      "source": "DS-0375 Rev C F1RD page14",
+      "passed": true
+    },
+    {
+      "reference": "PS2",
+      "expected_pin_nets": {
+        "1": "3V0",
+        "2": "GND",
+        "3": "",
+        "4": "",
+        "5": "SC2",
+        "6": "",
+        "7": "",
+        "8": "SD2"
+      },
+      "source": "DS-0375 Rev C F1RD page14",
+      "passed": true
+    },
+    {
+      "reference": "PS3",
+      "expected_pin_nets": {
+        "1": "3V0",
+        "2": "GND",
+        "3": "",
+        "4": "",
+        "5": "SC3",
+        "6": "",
+        "7": "",
+        "8": "SD3"
+      },
+      "source": "DS-0375 Rev C F1RD page14",
+      "passed": true
+    },
+    {
+      "reference": "U1",
+      "expected_pin_nets": {
+        "1": "GND",
+        "2": "GND",
+        "3": "MUX_RST",
+        "4": "SD0",
+        "5": "SC0",
+        "6": "SD1",
+        "7": "SC1",
+        "8": "SD2",
+        "9": "SC2",
+        "10": "SD3",
+        "11": "SC3",
+        "12": "GND",
+        "13": "",
+        "14": "",
+        "15": "",
+        "16": "",
+        "17": "",
+        "18": "",
+        "19": "",
+        "20": "",
+        "21": "GND",
+        "22": "P_SCL",
+        "23": "P_SDA",
+        "24": "3V0"
+      },
+      "source": "TI SCPS207H Table4-1 PW/TSSOP column; A0/A1/A2 grounded",
+      "passed": true
+    },
+    {
+      "reference": "U2",
+      "expected_pin_nets": {
+        "1": "GND",
+        "2": "",
+        "3": "GND",
+        "4": "NAIL0",
+        "5": "NAIL1",
+        "6": "MON_3V0",
+        "7": "MON_3V3",
+        "8": "3V3",
+        "9": "N_SDA",
+        "10": "N_SCL"
+      },
+      "source": "TI ADS1115 MSOP-10",
+      "passed": true
+    },
+    {
+      "reference": "U3",
+      "expected_pin_nets": {
+        "1": "5V_USB",
+        "2": "GND",
+        "3": "5V_USB",
+        "4": "",
+        "5": "3V0"
+      },
+      "source": "TI SNVS798Q Table4-2 SOT-23",
+      "passed": true
+    },
+    {
+      "reference": "JN",
+      "expected_pin_nets": {
+        "1": "3V3",
+        "2": "NAIL0",
+        "3": "3V3",
+        "4": "NAIL1"
+      },
+      "source": "P1 nail harness",
+      "passed": true
+    },
+    {
+      "reference": "JT",
+      "expected_pin_nets": {
+        "1": "GND",
+        "2": "3V0",
+        "3": "3V3",
+        "4": "5V_USB"
+      },
+      "source": "P1 supply test points",
+      "passed": true
+    }
+  ],
+  "land_checks": [
+    {
+      "sensor": "PS0",
+      "pitch_mm": 2.5399999999999974,
+      "row_spacing_mm": 16.260000000000005,
+      "passed": true
+    },
+    {
+      "sensor": "PS1",
+      "pitch_mm": 2.5399999999999974,
+      "row_spacing_mm": 16.260000000000005,
+      "passed": true
+    },
+    {
+      "sensor": "PS2",
+      "pitch_mm": 2.5400000000000063,
+      "row_spacing_mm": 16.260000000000005,
+      "passed": true
+    },
+    {
+      "sensor": "PS3",
+      "pitch_mm": 2.5400000000000063,
+      "row_spacing_mm": 16.260000000000005,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "native_pcb_check": {
+    "directory": "checks/20261012T044854.471552Z",
+    "violations": 0,
+    "unconnected": 0,
+    "tool": "10.0.7",
+    "source_sha256": "4533b971447d034502f744ea5470ba5a2c26487f1f913589d7056472f74979d7",
+    "physical_boards_tested": 0
+  },
+  "module_comparisons": {
+    "air_module_material_source_and_gas": 1540,
+    "local_hose_guards": 366,
+    "bench_and_nail_module": 1388,
+    "nail_to_air_module": 220
+  },
+  "input_sha256": {
+    "engineering/scripts/review_pneumatic_integration.py": "c56076b5dd03060befa60a0b560741a211e37037eb0aef575463bc3a94715000",
+    "engineering/scripts/build_pneumatic_ported_assembly.py": "5c7e181db2047c26f4dfb64e5cb16e707ab47682229a0a5e1b7580568548a533",
+    "build/engineering/prototypes/pneumatic/ported_assemblies/20261012T045727.167175Z/report.json": "755fb4df0c1dc616e93e2aab4e40c85453a6ac921b050d50bd1d248a61c4a8b4",
+    "build/engineering/prototypes/pneumatic/bench_parts/20261012T050454.589293Z/report.json": "32e70107767ce14ec5f3409bd14b6e7e694c8b4d0c7b8356ef76d2f507aaea87",
+    "build/engineering/prototypes/pneumatic/boards/20261012T044642.938727Z/report.json": "aefccd88f673ea5b2ee8c330a98e79d046ae9d97852d24cb7ced89ff4fc76377",
+    "build/engineering/prototypes/pneumatic/boards/20261012T044642.938727Z/p1_readout.json": "2d47acfb0f5d2f4e1c19a1bbace8568f48deaa63166d045e5b72671f9e09c58b",
+    "build/engineering/prototypes/pneumatic/boards/20261012T044642.938727Z/latest_check.json": "cb1465cedd2c7f47dc39496bbdfe5973c12408ce2669eb12e49551b52d09cc6f",
+    "build/engineering/prototypes/pneumatic/boards/20261012T044642.938727Z/p1_readout.kicad_pcb": "4533b971447d034502f744ea5470ba5a2c26487f1f913589d7056472f74979d7"
+  },
+  "files_sha256": {
+    "p1_pcb_orientation.svg": "7237d27a4ac79a498b7f31ef24dc0463409f62452d0e7dbca885eb09c9bc7f3a"
+  },
+  "limits": [
+    "Nominal CAD and explicit pin nets; no fitted hardware, actual port mating, leak, loaded clearance or tactile performance test.",
+    "The PCB review checks the declared connectivity, not a physical continuity measurement or circuit certification."
+  ]
+}

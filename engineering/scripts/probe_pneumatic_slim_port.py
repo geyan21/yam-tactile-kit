@@ -4,10 +4,13 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
+import shutil
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
+os.environ.setdefault("XDG_CACHE_HOME", str(ROOT/"build/engineering/tools/pneumatic-cad-cache"))
 sys.path.insert(0, str(ROOT/"src"))
 import cadquery as cq
 from tactile_kit.records import execution
@@ -45,6 +48,12 @@ def main():
     with execution(ROOT/"build/records", "Check one narrow bonded stem with its hose connection moved beyond the frame, including a declared radial clearance guard; do not infer loaded fit or seal performance") as record:
         folder.mkdir(parents=True)
         record["run_directory"] = str(folder.relative_to(ROOT))
+        inputs = [CONFIG, Path(__file__), layout/"report.json", witness/"report.json",
+                  ROOT/"engineering/scripts/build_pneumatic_ports.py", ROOT/"engineering/scripts/source_brep.py"]
+        for source in inputs:
+            destination = folder/"inputs"/source.relative_to(ROOT)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, destination)
         cases, parts, models = [], [], []
         for sign in (-1, 1):
             face = -15. if sign < 0 else 0.
@@ -73,8 +82,6 @@ def main():
                 identifier = f"p1_ch{cfg['site']}_{cfg['role']}_slim_{sign:+d}_{name}"
                 display = export_part(shape, identifier, folder, parts, "Slim-port fit reference", material, "reference_only")
                 models.append(packed(display, identifier, "p1_slim_port", "#7194a6"))
-        inputs = [CONFIG, Path(__file__), layout/"report.json", witness/"report.json",
-                  ROOT/"engineering/scripts/build_pneumatic_ports.py", ROOT/"engineering/scripts/source_brep.py"]
         report = {"schema": "yam-pneumatic-slim-port-probe/1", "physical_specimens_tested": 0,
                   "cases": cases, "parts": parts, "radial_clearance_guard_mm": cfg["radial_clearance_guard_mm"],
                   "source_hard_conversion": receipt,

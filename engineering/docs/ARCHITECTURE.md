@@ -152,6 +152,13 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 
 [FORTE](https://merge-lab.github.io/FORTE/) demonstrates pneumatic force/slip sensing on compliant fingers over **0–8 N**, reporting **0.2 N average error**. Its [published hardware BOM](https://merge-lab.github.io/FORTE-Finger/) uses six pressure transducers per finger pair, tubing and flexible 80A resin. Obtain current quotes for that complete assembly; a passive-looking finger still requires the external sensing hardware. It is a good delicate-grasping benchmark, but a 20 N version needs a new mechanical/range evaluation.
 
+[P1.0](BUILD_PNEUMATIC.md) now supplies a separate ENPIRE bench design: four
+front/back channel pairs, four remote ELVR differential transducers, two
+thin N0 nail cells, checked CAD/PCB and raw/static-force tools. Its ideal-gas
+study retains range failures and shows a common-compression mode that can
+cancel in the measured difference. Physical sealing, bending, contact and
+20 N force performance still determine whether this approach is useful here.
+
 [Baby Fin Ray](https://arxiv.org/html/2303.14883v1) is a relevant optical redesign. It is more compelling when dense contact shape is essential than when the first priority is a narrow finger with reliable low-dimensional force feedback.
 
 [Honeywell's FMA](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/force-sensors/microforce-fma-series/documents/sps-siot-force-fma-series-datasheet-32347833-ciid-181799.pdf) offers a 25 N digital force sensor. Its maximum ±8% full-scale total error band corresponds to ±2 N under the specified conditions, including 5 V and 20–80% of force range. It does not establish a 0.2 N contact threshold or performance outside those conditions. The [FB1.1 build guide](BUILD_FORCE_BUTTON.md) now supplies a selected ordering code, guided load path, PCB and raw code. Its 50 mm reach extension and force/contact performance still need comparison with L1 and C1.
@@ -160,8 +167,8 @@ Each alternative also has a separate page: [flexible resistive matrix](https://g
 
 The active request is to build all twelve designs and find which are good for
 the actual tasks. Follow [the common campaign](BUILD_ALL.md). R1, L1, B1,
-B2.1, C1.1 and N1.1 have prototype files; the remaining six approaches need the listed
-development work. Each will keep its own design page, build package and
+B2.1, C1.1, N1.1, B3.1, FB1.1, K1.2, F1.1 R4 and P1.0 have prototype files;
+optical integration remains in development. Each keeps its own design page, build package and
 physical evidence.
 
 Use the actual motor, steel objects, jaw openings and task contacts. Keep an

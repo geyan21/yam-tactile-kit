@@ -1,0 +1,35 @@
+{
+  "schema": "yam-p1-readout-contract/1",
+  "revision": "P1.0 bench",
+  "physical_boards_tested": 0,
+  "pressure_sensor": "ELVR-L30D-F1RD-C-NI3H",
+  "sensor_status": "Manufacturer ordering-table combination; confirm this exact option and stock before ordering.",
+  "sensor_supply_v": 3.0,
+  "sensor_address": 120,
+  "sensor_range_in_h2o": 30,
+  "sensor_update_ms": 1,
+  "sensor_counts_at_range_ends": [2731, 24576],
+  "pressure_bus": {"sda_gpio": 0, "scl_gpio": 1, "hz": 100000, "mux_address": 112, "reset_gpio": 6},
+  "nail_bus": {"sda_gpio": 2, "scl_gpio": 3, "hz": 100000, "adc_address": 72},
+  "adc_inputs": ["NAIL0", "NAIL1", "filtered_3V0", "filtered_3V3"],
+  "nail_pull_down_ohm": [10000, 10000],
+  "nail_parallel_continuity_ohm": 100000,
+  "channels": [
+    {"site": 2, "sensor": "PS0", "mux_branch": 0, "B_high": "p1_ch2_front", "A_low": "p1_ch2_back", "center_mm": [14, 15], "rotation_deg": 180},
+    {"site": 3, "sensor": "PS1", "mux_branch": 1, "B_high": "p1_ch3_front", "A_low": "p1_ch3_back", "center_mm": [14, 43], "rotation_deg": 180},
+    {"site": 4, "sensor": "PS2", "mux_branch": 2, "B_high": "p1_ch4_front", "A_low": "p1_ch4_back", "center_mm": [66, 15], "rotation_deg": 0},
+    {"site": 5, "sensor": "PS3", "mux_branch": 3, "B_high": "p1_ch5_front", "A_low": "p1_ch5_back", "center_mm": [66, 43], "rotation_deg": 0}
+  ],
+  "mux": {"part": "TCA9548APWR", "package": "PW TSSOP-24", "supply": "3V0", "host_pullup": "4.7k to 3V3", "branch_pullups": "2.2k to 3V0", "reset": "10k to 3V0; GP6 drives low for reset, then releases as input"},
+  "regulator": {"part": "LP5907MFX-3.0/NOPB", "package": "DBV SOT-23-5", "input": "Pico USB VBUS", "enable": "tied to input", "input_capacitor": "2.2uF 16V X7R 0603, effective >=1uF at 5V", "output_capacitor": "2.2uF 16V X7R 0603, effective >=1uF at 3V"},
+  "adc": {"part": "ADS1115IDGSR", "supply": "3V3", "pga_v": 4.096, "lsb_v": 0.000125, "single_shot_sps": 860},
+  "controller": "Original Raspberry Pi Pico RP2040, two 1x20 female sockets, USB power only",
+  "board": {"width_mm": 80, "height_mm": 86, "thickness_mm": 1.6, "copper_layers": 4, "nominal_copper_um": 35},
+  "limits": [
+    "The rear air channel is mechanically active. Differential pressure is not force and can cancel some load modes.",
+    "One mux branch is enabled at a time. Explicit reads are used because generic I2C scans may skip address 0x78.",
+    "The 3V0 rail powers the pressure sensors and mux; the Pico and nail ADC use 3V3. No 5V pullups.",
+    "Measure I2C rise time at the actual transducer; target <=300 ns per its datasheet, even at 100 kHz.",
+    "No actual assembled board, pressure span, leak test, bending response or force calibration has been measured."
+  ]
+}

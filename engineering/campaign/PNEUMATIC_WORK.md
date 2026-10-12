@@ -6,8 +6,60 @@ The checkout shares only the pinned public source-geometry cache via
 directory. The explicit CAD interpreter is the canonical kit's
 `build/repo/build/engineering/tools/cad-venv/bin/python`.
 
-No P1 physical specimen, completed assembly or force calibration exists.
+The P1 nominal bench assembly and readout are complete locally. No P1
+physical specimen or force calibration exists.
 The user confirmed that no new builds or measurements are available yet.
+
+The P1.0 package is frozen at `engineering/prototypes/pneumatic/`: 414 files
+plus its snapshot, 112 CAD parts/references, 40 PCB components and 3,514
+declared nominal geometry comparisons. Snapshot SHA256:
+`68aa9caa300bee7cf82fb73cb3e32a1d44e7107f4208bb24aa212d1ba20331fb`.
+The final wiring/card review is
+`diagram_reviews/20261012T053300.700772Z`, with both canvas checks passing.
+P1's own assembly, electrical, test and reproduction pages are integrated;
+complete website, clean-source and publication validation follow this freeze.
+
+The current selected runs are:
+
+- Channel layout: `wall_pair_layouts/20261012T033428.385609Z`.
+- Final guarded poses: `port_pose_searches/20261012T045018.079417Z`.
+- Slim CH4 front: `slim_port_probes/20261012T042933.871931Z`.
+- Complete insert: `ported_assemblies/20261012T045727.167175Z`, 55 parts,
+  1,540 material/source/air checks, 366 hose-guard checks, eight isolated
+  capped cavities and no nominal findings.
+- Routed board: `boards/20261012T044642.938727Z`, 40 components, 412 tracks,
+  63 vias, native KiCad 10.0.7 DRC with zero violations/unconnected items.
+- Carrier and N0 nail references: `bench_parts/20261012T050454.589293Z`,
+  57 parts, 1,388 checks.
+- Cross-module/pin review: `integration_reviews/20261012T051804.471388Z`,
+  220 additional nail/air-module comparisons and passing pin/land checks.
+- Paired gas model: `pair_screens/20261012T050406.520333Z`, 3,888 scenarios;
+  26 are outside the nominal ±30 inH2O range. Common-pressure cancellation
+  and thermal false signals remain modeled limitations.
+- Final side/3D drawings: `visuals/20261012T052214.617429Z`.
+
+Paths above are beneath this worktree's
+`build/engineering/prototypes/pneumatic/`. The current source includes
+raw firmware, recorder/receipt handling, a signed linear stationary-force
+baseline and 23 passing synthetic protocol/hold tests. No physical
+contact detector or measured force model is supplied.
+
+Six standard tubes are OD1.6/ID1.0/L6 mm; CH5 back is L8. CH4 front uses
+OD1.2/ID0.8/L15 mm and an OD1.6/ID1.3/L3 sleeve at its outer end.
+The local hose model covers 3 mm engagement and 5 mm straight departure.
+All eight actual slack routes and transducer-port mates still need inspection.
+The selected pressure device is ELVR-L30D-F1RD-C-NI3H. The board has a
+3.0 V LP5907 rail for the ELVRs and TCA9548A; Pico/nail ADS1115 use 3.3 V.
+
+Preserve the earlier failures below. The first end-plug/branch overlap
+was corrected with a plug guard in the pose search. Including the actual
+hose envelope required revised CH2 back orientation and the longer CH5
+back tube. The initial carrier run at `bench_parts/20261012T050212.470819Z`
+hit a CAD-kernel error subtracting a nearly planar frame from an adhesive
+envelope. The current run retains the R1 nominal envelope and independently
+checks its common volume instead.
+
+## Published basis and earlier development
 
 F1 was published and verified at commit
 `e8f794c3d4b0af61a1cb4bcfeb16a2d3b2357d4e`, release `kit-e8f794c3d4b0`.

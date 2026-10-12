@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 1160" role="img" aria-labelledby="title desc">
+<title id="title">P1 exact sensor placement, eight hoses and two nail cells</title>
+<desc id="desc">Four front/back air-channel pairs in the soft insert connect to four remote ELVR differential sensors. Front goes to B high, back to A low. A TCA9548A multiplexer connects them to Pico GP0 and GP1. Two thin R1 nail cells connect to an ADS1115 on GP2 and GP3. Pressure electronics use 3 volts; Pico and nail ADC use 3.3 volts.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#416776"/></marker></defs>
+<rect width="1320" height="1160" fill="#f7f9f5"/>
+<g font-family="sans-serif" fill="#203e47">
+<text x="36" y="44" font-size="30" font-weight="700">P1 · the soft finger contains air channels; the pressure chips stay at the wrist</text>
+<text x="36" y="78" font-size="18">4 × ELVR-L30D-F1RD-C-NI3H + 2 × retained R1 N0 nail cells · experimental bench design</text>
+<rect x="24" y="112" width="426" height="578" rx="14" fill="#e7eee1" stroke="#91a48a"/>
+<rect x="530" y="112" width="448" height="578" rx="14" fill="#e4edf2" stroke="#829aa7"/>
+<rect x="1010" y="112" width="286" height="578" rx="14" fill="#e9edf0" stroke="#829aa7"/>
+<text x="44" y="146" font-size="21" font-weight="700">IN THE REPLACEMENT SOFT INSERT</text>
+<text x="550" y="146" font-size="21" font-weight="700">ON THE REMOTE READOUT PCB</text>
+<text x="1032" y="146" font-size="21" font-weight="700">DIGITAL READOUT</text>
+<text x="44" y="177" font-size="16">No rigid pressure chip on the contact face.</text>
+<text x="550" y="177" font-size="16">All four sensors: 3.0 V · I²C 0x78</text>
+<g font-size="18">
+<text x="44" y="210" font-weight="700">CH2 · distal soft region</text>
+<text x="66" y="240" fill="#286f91">Front channel</text><text x="66" y="269" fill="#7a5895">Back channel</text>
+<path d="M236 234H544" stroke="#286f91" stroke-width="4"/><path d="M236 263H544" stroke="#7a5895" stroke-width="4"/>
+<rect x="546" y="202" width="414" height="80" rx="8" fill="white" stroke="#809aaa"/>
+<text x="560" y="239" fill="#286f91">B high</text><text x="560" y="269" fill="#7a5895">A low</text><text x="690" y="234" font-size="23" font-weight="700">PS0 → CH2</text><text x="690" y="262" font-size="16">Mux branch 0</text>
+<text x="44" y="315" font-weight="700">CH3 · middle-distal</text>
+<text x="66" y="345" fill="#286f91">Front channel</text><text x="66" y="374" fill="#7a5895">Back channel</text>
+<path d="M236 339H544" stroke="#286f91" stroke-width="4"/><path d="M236 368H544" stroke="#7a5895" stroke-width="4"/>
+<rect x="546" y="307" width="414" height="80" rx="8" fill="white" stroke="#809aaa"/>
+<text x="560" y="344" fill="#286f91">B high</text><text x="560" y="374" fill="#7a5895">A low</text><text x="690" y="339" font-size="23" font-weight="700">PS1 → CH3</text><text x="690" y="367" font-size="16">Mux branch 1</text>
+<text x="44" y="420" font-weight="700">CH4 · middle-proximal</text>
+<text x="66" y="450" fill="#286f91">Front channel</text><text x="66" y="479" fill="#7a5895">Back channel</text>
+<path d="M236 444H544" stroke="#286f91" stroke-width="4"/><path d="M236 473H544" stroke="#7a5895" stroke-width="4"/>
+<rect x="546" y="412" width="414" height="80" rx="8" fill="white" stroke="#809aaa"/>
+<text x="560" y="449" fill="#286f91">B high</text><text x="560" y="479" fill="#7a5895">A low</text><text x="690" y="444" font-size="23" font-weight="700">PS2 → CH4</text><text x="690" y="472" font-size="16">Mux branch 2</text>
+<text x="44" y="525" font-weight="700">CH5 · proximal soft region</text>
+<text x="66" y="555" fill="#286f91">Front channel</text><text x="66" y="584" fill="#7a5895">Back channel</text>
+<path d="M236 549H544" stroke="#286f91" stroke-width="4"/><path d="M236 578H544" stroke="#7a5895" stroke-width="4"/>
+<rect x="546" y="517" width="414" height="80" rx="8" fill="white" stroke="#809aaa"/>
+<text x="560" y="554" fill="#286f91">B high</text><text x="560" y="584" fill="#7a5895">A low</text><text x="690" y="549" font-size="23" font-weight="700">PS3 → CH5</text><text x="690" y="577" font-size="16">Mux branch 3</text>
+</g>
+<g stroke="#416776" fill="none" stroke-width="2.5">
+<path d="M960 242H995M960 347H995M960 452H995M960 557H995M995 242V557M995 380H1028" marker-end="url(#arrow)"/>
+<path d="M1154 450V518" marker-end="url(#arrow)"/>
+</g>
+<rect x="1028" y="302" width="250" height="148" rx="9" fill="white" stroke="#829aa7"/>
+<text x="1044" y="333" font-size="21" font-weight="700">U1 · TCA9548APWR</text>
+<text x="1044" y="363" font-size="17">TSSOP-24 · address 0x70</text>
+<text x="1044" y="391" font-size="17">Enable one branch at a time.</text>
+<text x="1044" y="419" font-size="17">RESET → GP6 / physical 9</text>
+<text x="1032" y="482" font-size="17">SDA GP0 / 1 · SCL GP1 / 2</text>
+<rect x="1028" y="520" width="250" height="128" rx="9" fill="#e0eddf" stroke="#829aa7"/>
+<text x="1044" y="554" font-size="23" font-weight="700">RP2040 Pico</text>
+<text x="1044" y="584" font-size="17">USB capture · I²C 100 kHz</text>
+<text x="1044" y="614" font-size="17">No actuator commands</text>
+<text x="44" y="631" font-size="17">8 separate hoses. Label both ends.</text>
+<text x="44" y="660" font-size="17" font-weight="700">The back channel also bends.</text>
+<text x="550" y="631" font-size="17">F1RD pins: 1 Vs · 2 GND · 5 SCL · 8 SDA</text>
+<text x="550" y="660" font-size="16">3 analog out unused · 4 / 6 / 7 unconnected</text>
+<rect x="24" y="740" width="426" height="204" rx="14" fill="#f0e5d1" stroke="#b2986e"/>
+<text x="44" y="775" font-size="22" font-weight="700">ON THE TWO THIN NAIL PRONGS</text>
+<text x="44" y="809" font-size="19">CH0 + CH1 · R1 N0 laminates</text>
+<text x="44" y="840" font-size="17">Nominal addition: 0.4 mm; measure actual.</text>
+<text x="44" y="873" font-size="17">100 kΩ across each cell at the nail joint.</text>
+<text x="44" y="906" font-size="17">Keep joints off contact; retain the notch.</text>
+<rect x="530" y="740" width="448" height="204" rx="14" fill="#e4edf2" stroke="#829aa7"/>
+<text x="550" y="775" font-size="22" font-weight="700">JN → U2 ADS1115IDGSR · 3.3 V</text>
+<text x="550" y="809" font-size="18">JN pins: 1 +3V3 · 2 CH0 · 3 +3V3 · 4 CH1</text>
+<text x="550" y="840" font-size="17">A0 / A1: nail signals; 10 kΩ pulldowns.</text>
+<text x="550" y="873" font-size="17">A2 / A3: filtered 3V0 / 3V3 supply checks.</text>
+<text x="550" y="906" font-size="17">SDA GP2 / physical 4 · SCL GP3 / physical 5</text>
+<path d="M450 835H525" stroke="#a57d40" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M978 835H990V632H1025" stroke="#416776" fill="none" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1010" y="740" width="286" height="204" rx="14" fill="#e8eee2" stroke="#8eaa8b"/>
+<text x="1032" y="775" font-size="22" font-weight="700">U3 · 3.0 V regulator</text>
+<text x="1032" y="809" font-size="17">LP5907MFX-3.0/NOPB</text>
+<text x="1032" y="840" font-size="17">USB VBUS → U3 → PS0–3 / U1</text>
+<text x="1032" y="873" font-size="17">Pico 3V3 → nail cells / U2</text>
+<text x="1032" y="906" font-size="17" font-weight="700">No 5 V bus pullups.</text>
+<text x="36" y="990" font-size="20" font-weight="700">Pressure is a deformation signal. Calibrate with actual force; do not infer force as pressure × area.</text>
+<text x="36" y="1028" font-size="18">Two bytes / 15-bit ELVR word · preserve signed pressure · keep missing data unavailable.</text>
+<text x="36" y="1063" font-size="18">A common pressure rise can cancel in the differential signal. Verify contact, bending, temperature and hose effects.</text>
+<text x="36" y="1110" font-size="18">Functional wiring illustration; use checked CAD/PCB files and the assembly guide. 0 physical specimens · 20 N is a target.</text>
+</g></svg>

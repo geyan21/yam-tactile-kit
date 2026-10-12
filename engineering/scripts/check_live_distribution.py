@@ -50,6 +50,7 @@ def main():
     parser.add_argument("--distribution", type=Path, required=True)
     parser.add_argument("--hosted", type=Path, required=True)
     parser.add_argument("--prototype", default="f1")
+    parser.add_argument("--prototype-zip", help="Archive basename when it differs from the prototype directory")
     parser.add_argument("--pages", nargs="+", default=["flexible-matrix.html", "build-f1.html", "f1-manufacturing.html",
                                                      "f1-testing.html", "f1-reproduce.html"])
     parser.add_argument("--status-only", action="store_true")
@@ -59,6 +60,8 @@ def main():
         parser.error("Use the prepared local distributions")
     if not re.fullmatch(r"[a-z0-9_]+", args.prototype) or any(not re.fullmatch(r"[a-z0-9-]+\.html", name) for name in args.pages):
         parser.error("Select plain prototype and page names")
+    if args.prototype_zip and not re.fullmatch(r"[a-z0-9_-]+\.zip", args.prototype_zip):
+        parser.error("Select a plain prototype ZIP basename")
     manifest = json.loads((distribution/"distribution.json").read_text())
     commit, tag = manifest["commit"], manifest["release_tag"]
     if (manifest["repository"] != "geyan21/yam-tactile-kit"
@@ -116,7 +119,7 @@ def main():
                 local = (prototype/name).read_bytes()
                 remote = read(SITE+"assets/prototypes/"+args.prototype+"/"+name, max(16*1024*1024, len(local)+1024))
                 asset_pages[name] = hashlib.sha256(remote).hexdigest() == hashlib.sha256(local).hexdigest()
-            zip_name = args.prototype+"-prototype.zip"
+            zip_name = args.prototype_zip or args.prototype+"-prototype.zip"
             local_zip = (hosted/"downloads"/zip_name).read_bytes()
             remote_zip = read(SITE+"downloads/"+zip_name, len(local_zip)+4*1024*1024)
             zip_matches = content_hash(local_zip, zip_name) == content_hash(remote_zip, zip_name)

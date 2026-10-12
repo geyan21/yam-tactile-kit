@@ -1,0 +1,22 @@
+{
+  "schema": "yam-p1-diagram-review/1",
+  "physical_specimens_tested": 0,
+  "diagrams": [
+    {
+      "source": "engineering/web/p1_wiring.svg",
+      "source_sha256": "ffc0c39b5fde7c32dbce3e77e54b5fe4dcbae4c1a207715010158fd291d8e514",
+      "passed": true,
+      "outside": []
+    },
+    {
+      "source": "build/engineering/prototypes/pneumatic/integration_reviews/20261012T051804.471388Z/p1_pcb_orientation.svg",
+      "source_sha256": "7237d27a4ac79a498b7f31ef24dc0463409f62452d0e7dbca885eb09c9bc7f3a",
+      "passed": true,
+      "outside": []
+    }
+  ],
+  "passed_canvas_bounds": true,
+  "limits": [
+    "Check the retained images for internal spacing; canvas bounds alone do not establish readability."
+  ]
+}

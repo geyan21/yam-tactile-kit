@@ -179,10 +179,11 @@
     const r1=report.schema==="yam-calibration/1",l1=["yam-l1-calibration/1","yam-l1-finger-validation/1"].includes(report.schema);
     const c1=report.schema==="yam-c1-static-validation/1";
     const n1=report.schema==="yam-nail-static-validation/1",fb1=report.schema==="yam-fb1-static-validation/1";
-    const k1=report.schema==="yam-k1-static-validation/1",f1=report.schema==="yam-f1-static-validation/1",holds=c1||n1||fb1||k1||f1;
-    const holdLabel=f1?"F1":k1?"K1":fb1?"FB1":n1?"N1":"C1";
-    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!holds))throw Error("Expected a physical R1, L1, C1, N1, FB1, K1 or F1 force report from the bench analyzer.");
-    if(k1||f1){
+    const k1=report.schema==="yam-k1-static-validation/1",f1=report.schema==="yam-f1-static-validation/1";
+    const p1=report.schema==="yam-p1-static-validation/1",holds=c1||n1||fb1||k1||f1||p1;
+    const holdLabel=p1?"P1":f1?"F1":k1?"K1":fb1?"FB1":n1?"N1":"C1";
+    if(report.evidence_kind!=="physical"||(!r1&&!l1&&!holds))throw Error("Expected a physical R1, L1, C1, N1, FB1, K1, F1 or P1 force report from the bench analyzer.");
+    if(k1||f1||p1){
       const axis=report.force_axis;
       if(axis?.frame!=="source_finger_native"||!Array.isArray(axis.unit_vector)||axis.unit_vector.length!==3||
          axis.unit_vector.some(v=>!Number.isFinite(v))||Math.abs(axis.unit_vector.reduce((s,v)=>s+v*v,0)-1)>1e-6)
@@ -192,7 +193,7 @@
     let predictions=report.predictions;
     if(holds){
       if(!Array.isArray(report.trials)||report.trials.some(row=>typeof row.available!=="boolean"))throw Error("Static report is missing explicit hold availability.");
-      predictions=report.trials.map(row=>({...row,predicted_n:row.available?((k1||f1)?row.total_force_n:row.predicted_n):null,
+      predictions=report.trials.map(row=>({...row,predicted_n:row.available?((k1||f1||p1)?row.total_force_n:row.predicted_n):null,
         contact_id:row.condition_id||row.id}));
     }
     const groups=r1?report.channels:[{channel:0,predictions}];

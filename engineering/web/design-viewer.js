@@ -32,7 +32,9 @@
       pcb_components:"Bypass capacitors",root_hardware:"Root fasteners",stops:"Adjustable overload stops",
       k1_plates:"Grounded steel plates",k1_covers:"Vented silicone retainers",k1_plate_bonds:"Two plate-ground bond envelopes",
       k1_stops:"Polyimide stop quadrants",k1_flex:"Guarded flexible electrodes",k1_terminals:"Stiffeners and solder envelopes",
-      k1_saddles:"Conforming rigid TPU supports"};
+      k1_saddles:"Conforming rigid TPU supports",
+      p1_insert:"P1 soft insert",p1_front_air:"Front gas spaces (references)",p1_back_air:"Back gas spaces (references)",
+      p1_hardware:"Metal fittings and plugs",p1_seals:"Bond/seal envelopes",p1_hoses:"Local hose segments",p1_nails:"Two thin N0 nail cells"};
     const controls=details.querySelector(".design-viewer-layers");
     for(const group of viewer.visible){
       const label=document.createElement("label"),input=document.createElement("input");

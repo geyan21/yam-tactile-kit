@@ -1,5 +1,5 @@
 {
-  "revision": "R1.0 + L1.0 + B1.0 + B2.1 + C1.1 + N1.1",
+  "revision": "R1.0 + L1.0 + B1.0 + B2.1 + C1.1 + N1.1 + B3.1 + FB1.1 + K1.2 + F1.1 R4 + P1.0",
   "objective": "Reliable contact and grip-force feedback on thin ENPIRE/YAM fingers",
   "requested_per_finger_force_n": 20,
   "contact_detection_target_n": 0.2,
@@ -7,9 +7,9 @@
   "physical_specimens_tested": 0,
   "selected_sensor": null,
   "selected_material": null,
-  "architecture_review": "Ten digital build packages exist: R1, L1, B1, B2.1, C1.1, N1.1, B3.1, FB1.1, K1.2 and F1.1 R4. Pneumatic and optical integration remain in development. All twelve designs remain in the build-and-compare campaign; no physical winner has been established.",
+  "architecture_review": "Eleven digital build packages exist: R1, L1, B1, B2.1, C1.1, N1.1, B3.1, FB1.1, K1.2, F1.1 R4 and P1.0. Optical integration remains in development. All twelve designs remain in the build-and-compare campaign; no physical winner has been established.",
   "physical_results": [],
-  "next_experiment": "Build the ten available packages while completing pneumatic and optical integration. Use common contact, force, precision, interference and repeatability tests through 20 N per finger; retain raw evidence and failed builds.",
+  "next_experiment": "Build the eleven available packages while completing optical integration. Use common contact, force, precision, interference and repeatability tests through 20 N per finger; retain raw evidence and failed builds.",
   "candidates": [
     {"id": "R1", "name": "Independent resistive cells", "status": "designed; unbuilt", "coverage": "two nail regions and four TPU regions", "next": "Fit, saturation, drift, edge coverage, and wear"},
     {"id": "B1", "name": "B1 magnetic bending insert", "status": "separate CAD, PCB and raw readout designed; unbuilt", "coverage": "four compliant regions; optional R1 nail cells", "next": "Original-vs-B1 compliance, retention, interference, physical force calibration through 20 N"},
@@ -21,7 +21,7 @@
     {"id": "NAIL", "name": "N1 bare sensing nail", "status": "checked steel nail, frame, readout and numerical screen; unbuilt", "coverage": "nail normal-force candidate plus four local TPU cells", "next": "Fit, bonding, whole-finger motion, calibrated mixed contacts, wear and precision tasks"},
     {"id": "RECESSED", "name": "Recessed magnetic frame", "status": "B3.1 revised frame, retained B2 board and field/clearance checks; unbuilt", "coverage": "magnetic soft region with separate nail pads", "next": "Actual frame stiffness, moving clearances, interference and paired B2/B3 contact/force tests"},
     {"id": "CAPACITIVE", "name": "Shielded capacitive cells", "status": "K1.2 checked bench assembly, flex/readout, tooling and raw/static-force software; unbuilt", "coverage": "six contact cells and two protected reference capacitors", "next": "Measure posts, stop gaps and low-force signal; fit actual bracket/harness; calibrate independent specimens"},
-    {"id": "PNEUMATIC", "name": "Air-channel finger", "status": "reference approach; ENPIRE design unfinished", "coverage": "soft chambers; separate nail strategy needed", "next": "Chambers, sealing, range and 20 N reference-force tests"},
+    {"id": "PNEUMATIC", "name": "P1 paired air-channel finger", "status": "P1.0 checked bench geometry/readout and raw/static-force tools; unbuilt", "coverage": "four front/back air-channel pairs and two thin N0 nail cells", "next": "Actual seals, sensor-port mating, hose motion, common-pressure cancellation, contact and 20 N reference-force tests"},
     {"id": "FORCE_BUTTON", "name": "Packaged force button", "status": "FB1.1 guided root adapter, FMA PCB and static-force software; unbuilt", "coverage": "aggregate force through the original finger with a bare tip", "next": "Actual drive fit, measured preload/stops, real-joint motion and independent contact/force tests"}
   ]
 }

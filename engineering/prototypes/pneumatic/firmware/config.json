@@ -1,0 +1,19 @@
+{
+  "revision": "P1.0",
+  "sensor_part": "ELVR-L30D-F1RD-C-NI3H",
+  "sensor_address": 120,
+  "sensor_range_in_h2o": 30,
+  "pressure_supply_v": 3.0,
+  "mux_address": 112,
+  "pressure_sda_gpio": 0,
+  "pressure_scl_gpio": 1,
+  "mux_reset_gpio": 6,
+  "nail_sda_gpio": 2,
+  "nail_scl_gpio": 3,
+  "nail_adc_address": 72,
+  "i2c_hz": 100000,
+  "frame_us": 20000,
+  "pressure_sites": [2, 3, 4, 5],
+  "nail_pull_down_ohm": [10000, 10000],
+  "nail_continuity_ohm": 100000
+}

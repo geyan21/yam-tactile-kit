@@ -1,0 +1,41 @@
+reference,value,x_mm,y_mm,rotation_deg,source,note
+JP1,1x20 2.54mm female socket for original Pico,31.11,30.13,0,"Raspberry Pi Pico datasheet, original RP2040 40-pin top view",Pin 1 on both sockets is at the USB end; right socket maps Pico 40 down to 21.
+JP2,1x20 2.54mm female socket for original Pico,48.89,30.13,0,"Raspberry Pi Pico datasheet, original RP2040 40-pin top view",Pin 1 on both sockets is at the USB end; right socket maps Pico 40 down to 21.
+PS0,ELVR-L30D-F1RD-C-NI3H,14,15,180,"All Sensors DS-0375 Rev C pp14,21, F1RD/PAD-27","F1RD top view: pins 1..4 on bottom row, 8..5 on top, ports right before rotation. Pins 3/4/6/7 unconnected."
+CP0,100nF 16V X7R 0603,23,6.869999999999999,0,0603 metric 1608 prototype land pattern,
+RD0,2.2k 1% 0603,23,16,0,0603 metric 1608 prototype land pattern,
+RC0,2.2k 1% 0603,23,19,0,0603 metric 1608 prototype land pattern,
+PS1,ELVR-L30D-F1RD-C-NI3H,14,43,180,"All Sensors DS-0375 Rev C pp14,21, F1RD/PAD-27","F1RD top view: pins 1..4 on bottom row, 8..5 on top, ports right before rotation. Pins 3/4/6/7 unconnected."
+CP1,100nF 16V X7R 0603,23,34.87,0,0603 metric 1608 prototype land pattern,
+RD1,2.2k 1% 0603,23,44,0,0603 metric 1608 prototype land pattern,
+RC1,2.2k 1% 0603,23,47,0,0603 metric 1608 prototype land pattern,
+PS2,ELVR-L30D-F1RD-C-NI3H,66,15,0,"All Sensors DS-0375 Rev C pp14,21, F1RD/PAD-27","F1RD top view: pins 1..4 on bottom row, 8..5 on top, ports right before rotation. Pins 3/4/6/7 unconnected."
+CP2,100nF 16V X7R 0603,57,23.130000000000003,0,0603 metric 1608 prototype land pattern,
+RD2,2.2k 1% 0603,57,16,0,0603 metric 1608 prototype land pattern,
+RC2,2.2k 1% 0603,57,19,0,0603 metric 1608 prototype land pattern,
+PS3,ELVR-L30D-F1RD-C-NI3H,66,43,0,"All Sensors DS-0375 Rev C pp14,21, F1RD/PAD-27","F1RD top view: pins 1..4 on bottom row, 8..5 on top, ports right before rotation. Pins 3/4/6/7 unconnected."
+CP3,100nF 16V X7R 0603,57,51.13,0,0603 metric 1608 prototype land pattern,
+RD3,2.2k 1% 0603,57,44,0,0603 metric 1608 prototype land pattern,
+RC3,2.2k 1% 0603,57,47,0,0603 metric 1608 prototype land pattern,
+U1,TCA9548APWR,22,66,0,"TI SCPS207H Table 4-1, PW0024A 0.65mm land pattern",
+U2,ADS1115IDGSR,45,66,0,"TI SBAS444E DGS0010A, 0.5mm pitch",
+U3,LP5907MFX-3.0/NOPB,63,66,0,"TI SNVS798Q Table 4-2, DBV0005A land pattern",
+CM1,100nF 16V X7R 0603,28,61.5,0,0603 metric 1608 prototype land pattern,
+CM2,1uF 16V X7R 0603,28,58.5,0,0603 metric 1608 prototype land pattern,
+RM,10k 1% 0603,17,59,0,0603 metric 1608 prototype land pattern,
+RPD,4.7k 1% 0603,17,75,0,0603 metric 1608 prototype land pattern,
+RPC,4.7k 1% 0603,22,75,0,0603 metric 1608 prototype land pattern,
+RND,4.7k 1% 0603,41,58.5,0,0603 metric 1608 prototype land pattern,
+RNC,4.7k 1% 0603,45,58.5,0,0603 metric 1608 prototype land pattern,
+CA,100nF 16V X7R 0603,50.5,64,0,0603 metric 1608 prototype land pattern,
+RN0,10k 1% 0603,37,71,0,0603 metric 1608 prototype land pattern,
+RN1,10k 1% 0603,37,74,0,0603 metric 1608 prototype land pattern,
+RM0,1k 1% 0603,52,72,0,0603 metric 1608 prototype land pattern,
+RM1,1k 1% 0603,57,72,0,0603 metric 1608 prototype land pattern,
+CH0,10nF 50V C0G 0603,52,75,0,0603 metric 1608 prototype land pattern,
+CH1,10nF 50V C0G 0603,57,75,0,0603 metric 1608 prototype land pattern,
+CI,2.2uF 16V X7R 0603 effective >=1uF at 5V,58,65.05,0,0603 metric 1608 prototype land pattern,
+CO,2.2uF 16V X7R 0603 effective >=1uF at 3V,68,65.05,0,0603 metric 1608 prototype land pattern,
+CB,2.2uF 16V X7R 0603,64,58,0,0603 metric 1608 prototype land pattern,
+JN,Rear-exit solder wires,42,79,0,,0.6 mm finished plated holes; solder insulated wires from the back
+JT,Rear-exit solder wires,68,78,0,,0.6 mm finished plated holes; solder insulated wires from the back

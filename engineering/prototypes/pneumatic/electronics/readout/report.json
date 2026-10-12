@@ -1,0 +1,38 @@
+{
+  "schema": "yam-p1-board-development/1",
+  "physical_boards_tested": 0,
+  "components": 40,
+  "tracks": 412,
+  "vias": 63,
+  "routed_nets": [
+    "MON_3V0",
+    "MON_3V3",
+    "MUX_RST",
+    "NAIL0",
+    "NAIL1",
+    "N_SCL",
+    "N_SDA",
+    "P_SCL",
+    "P_SDA",
+    "SC0",
+    "SC1",
+    "SC2",
+    "SC3",
+    "SD0",
+    "SD1",
+    "SD2",
+    "SD3",
+    "5V_USB",
+    "3V3",
+    "3V0"
+  ],
+  "pcb_sha256": "4533b971447d034502f744ea5470ba5a2c26487f1f913589d7056472f74979d7",
+  "error": null,
+  "input_sha256": {
+    "engineering/designs/pneumatic_electronics.json": "7203276f108df16145d32e3cc7f342fd9a1ea468912a3ca6cce8f675ff513b92",
+    "engineering/scripts/build_pneumatic_board.py": "db1ac493e2400edf6d2ffb378671fda00bf940ce123fd66b518ed9f4fdaf8eaf",
+    "engineering/scripts/prototype_pcb.py": "c36c198d47e886544dbd5c1559d5fcacba6ff8f2a0c95d38a911493f3ffc2bce",
+    "engineering/scripts/prototype_route.py": "2ff8a79529c598d86dc1e27a6150c48faef9fb0501be000017cbf253d62701cf"
+  },
+  "status": "Independent native DRC and physical bring-up required"
+}

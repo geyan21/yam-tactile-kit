@@ -1,0 +1,20 @@
+{
+  "schema": "yam-p1-paired-volume-screen/1",
+  "initial_pressure_pa": 101325,
+  "initial_temperature_c": 20,
+  "tube_inner_diameter_mm": 1.5875,
+  "free_tube_air_lengths_mm": [50, 100, 200],
+  "unknown_sensor_fitting_volume_each_mm3": [20, 100, 500],
+  "remote_back_volume_multiplier": [1, 1.1],
+  "front_back_volume_changes_mm3": [[0, 0], [2, 0], [2, 2], [2, -2], [5, 0], [5, 5], [5, -5], [10, 0], [10, 10]],
+  "front_back_remote_temperature_changes_c": [[0, 0, 0], [5, 5, 5], [5, 0, 0], [0, 5, 0], [0, 0, 5], [-5, 5, 0]],
+  "selected_range_plus_minus_pa": 7472.64,
+  "equal_total_volume_compression_fraction": 0.02,
+  "limits": [
+    "Each differential transducer joins two mechanically active sealed channels. Neither port is an unloaded reference.",
+    "Chamber volumes come from nominal CAD. Sensor/fitting dead volume and free hose air lengths are declared assumptions.",
+    "Ideal sealed gas with fixed gas mass and two temperature compartments; no leakage, compliance, diaphragm coupling, dynamics or noise.",
+    "Deformation changes are scenario inputs. No force-to-volume law or 20 N force prediction is supplied.",
+    "Equal fractional total-volume compression can raise both pressures while leaving their difference unchanged; the physical force response must be tested."
+  ]
+}
