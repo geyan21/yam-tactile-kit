@@ -60,6 +60,10 @@ DOCS=[
     ("PNEUMATIC_ELECTRONICS","pneumatic-electronics","P1 sensors, hoses & capture"),
     ("PNEUMATIC_TESTING","pneumatic-testing","P1 physical comparison"),
     ("PNEUMATIC_REPRODUCE","pneumatic-reproduce","Reproduce P1"),
+    ("BUILD_OPTICAL","build-optical","Build O1 optical"),
+    ("OPTICAL_ELECTRONICS","optical-electronics","O1 wiring & camera capture"),
+    ("OPTICAL_TESTING","optical-testing","O1 physical comparison"),
+    ("OPTICAL_REPRODUCE","optical-reproduce","Reproduce O1"),
 ]
 
 
@@ -331,7 +335,7 @@ def main():
         preflight={str(path.relative_to(SITE)):path.read_bytes() if path.suffix==".html" else b""
                    for path in SITE.rglob("*") if path.is_file()}
         for name in ("enpire-source.zip","enpire-designs.zip","enpire-site.zip","enpire-engineering-kit.zip",
-                     "k1-development.zip","k1-prototype.zip","fb1-prototype.zip","f1-prototype.zip","p1-prototype.zip"):
+                     "k1-development.zip","k1-prototype.zip","fb1-prototype.zip","f1-prototype.zip","p1-prototype.zip","o1-prototype.zip"):
             preflight["downloads/"+name]=b""
         record["page_links_before_archiving"]=verify_entries(preflight)
         print(f"Checked {record['page_links_before_archiving']} page links before building archives.",flush=True)
@@ -361,6 +365,9 @@ def main():
         p1=ROOT/"engineering/prototypes/pneumatic"
         write_zip(downloads/"p1-prototype.zip",
                   {str(p.relative_to(p1)):p.read_bytes() for p in p1.rglob("*") if p.is_file()})
+        o1=ROOT/"engineering/prototypes/optical"
+        write_zip(downloads/"o1-prototype.zip",
+                  {str(p.relative_to(o1)):p.read_bytes() for p in o1.rglob("*") if p.is_file()})
         # Offline pages carry CAD and source ZIPs. Links to the two enclosing
         # archives point at that included source packet, avoiding self-recursion.
         offline={}
@@ -376,7 +383,7 @@ def main():
         complete={"source/"+name:content for name,content in source.items()}
         complete.update({"website/"+name:content for name,content in offline.items()})
         complete["START_HERE.txt"]=(
-            "ENPIRE tactile engineering packet: ten digital prototype packages; physical tests pending\n\n"
+            "ENPIRE tactile engineering packet: twelve digital prototype packages; physical tests pending\n\n"
             "Open website/index.html for the visual build guide and downloads.\n"
             "Open website/designs.html for one clear page per design and research alternative.\n"
             "Editable code and documents: source/engineering.\n"
@@ -390,6 +397,8 @@ def main():
             "K1 capacitive tooling/readout modules: website/capacitive.html and source/engineering/development/capacitive/k1.\n"
             "K1.2 capacitive bench prototype: source/engineering/prototypes/capacitive; tests: website/capacitive-testing.html.\n"
             "FB1.1 force-button root prototype: website/force-button.html and source/engineering/prototypes/force_button.\n"
+            "P1.0 pneumatic prototype: website/pneumatic.html and source/engineering/prototypes/pneumatic.\n"
+            "O1.0 fixed-optics prototype: website/optical.html and source/engineering/prototypes/optical.\n"
             "The requested range is 20 N per finger. Hardware qualification is pending.\n"
             "This package contains digital geometry and test instructions, not fabricated results.\n"
         ).encode()

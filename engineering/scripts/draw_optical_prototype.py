@@ -61,7 +61,14 @@ def board_svg(board, destination):
         width, height, _ = part["body_mm"]
         color = "#75a4d5" if part["reference"].startswith("D") else "#dcc198"
         result.append(f'<rect x="{ox+x-width*scale/2}" y="{oy+y-height*scale/2}" width="{width*scale}" height="{height*scale}" fill="{color}" stroke="#526971" transform="rotate({-part["rotation_deg"]} {ox+x} {oy+y})"/>')
-        result.append(f'<text x="{ox+x}" y="{oy+y-25}" text-anchor="middle" font-size="16" font-weight="bold">{part["reference"]}</text>')
+        label_x, label_y = ox+x, oy+y-25
+        if part["reference"] == "R2":
+            label_x, label_y = ox+418, oy+205
+        elif part["reference"] == "R4":
+            label_x, label_y = ox-19, oy+205
+        elif part["reference"] == "D1":
+            label_x, label_y = ox+x+45, oy+y-20
+        result.append(f'<text x="{label_x}" y="{label_y}" text-anchor="middle" font-size="16" font-weight="bold">{part["reference"]}</text>')
     for pad in board["pads"]:
         x, y = pad["center"]; width, height = pad["size"]
         color = "#c4754d" if pad["net"] == "LED_5V" else "#466b81" if pad["net"] == "GND" else "#d6b34b"

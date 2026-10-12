@@ -35,7 +35,7 @@ The host and ADC are external bench components. Mount and insulate their wiring,
 
 ## Establish the optical reference
 
-On Raspberry Pi OS, install/use the official Picamera2 package and enable the Pi's I²C interface. Run these commands from the complete repository. Camera hardware is required; the workstation's CAD tests do not exercise it.
+On Raspberry Pi OS, install/use the [official Picamera2 package](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf) and enable the Pi's I²C interface. Run these commands from the complete repository. Camera hardware is required; the workstation's CAD tests do not exercise it.
 
 The initial camera file requests **2304 × 1296 at 10 fps**, fixed exposure/gain/color gains, and manual focus. These are starting settings for stationary bench tests. Inspect the entire gel image and adjust focus/exposure before freezing a reference.
 

@@ -408,26 +408,46 @@
       "related": ["B1", "R1", "FORCE_BUTTON", "O1"]
     },
     {
-      "id": "O1", "slug": "optical", "title": "Optical finger · Observe contact deformation", "group": "research",
-      "status": "Reference approach only", "status_detail": "Optical compliant fingers were reviewed. No optical ENPIRE finger, camera layout or sensor software is supplied.",
-      "summary": "Use illumination and a camera to observe a deformable sensing surface and recover richer contact geometry.",
-      "signal": "Images of contact/deformation; geometry, force and slip estimates require calibration and processing.",
-      "best_for": "Tasks that need dense contact shape or texture information.",
-      "tradeoff": "Optical path, lighting, gel fabrication, processing and the thin-nail interface require a substantial redesign.",
+      "id": "O1", "slug": "optical", "title": "O1 optical · Fixed camera, compliant gel", "group": "prototype",
+      "status": "Digital bench package · unbuilt", "status_detail": "87 CAD parts/tools/references, a checked blue-light PCB, casting and marker tools, lossless capture and physical force/contact analysis. No physical specimens or 20 N qualification.",
+      "summary": "A rigid camera and PET mirror observe 42 markers inside a removable clear silicone pad. Two separate N0 cells retain tactile coverage on the thin nail. This alternative preserves the original mounting interface and adds a 32 mm camera bay.",
+      "signal": "Marker motion and area changes in image pixels, plus two nail conductances. Force and contact estimates require physical training and held-out evaluation; no 3D pressure map is supplied.",
+      "best_for": "Testing whether distributed contact images help precision tasks enough to justify an optical cartridge and its maintenance.",
+      "tradeoff": "Adds 32 mm reach and a larger root enclosure. Mirror flatness, focus, coating, gel wear and image processing add work. Some edge contacts can bypass the sensed area.",
       "sensors": [
-        ["Sensing surface", "Not selected; Baby Fin Ray is a compliant optical reference", "At the object-contact interface"],
-        ["Camera and lighting", "Not selected for ENPIRE", "Inside or toward the base of a redesigned finger, with a clear view of the sensing surface"]
+        ["Camera ×1", "Raspberry Pi Camera Module 3 Wide, visible-light IR-cut variant", "Inside the root bay, rotated 180°. It views the gel through the fixed PET mirror."],
+        ["Optical gel ×1", "Smooth-On Solaris, 2.5 mm nominal normal thickness; 42 black dots and white Psycho Paint / Silc Pig coating", "13 mm-wide curved front pad. A 16 mm rear flange is retained by two removable clips."],
+        ["Mirror ×1", "0.20 mm reflective PET, 14 × 63.892 mm, on a rigid backing", "Inside the hollow finger. Keep its reflective face flat toward the gel/camera."],
+        ["Blue LEDs ×4", "Kingbright APT2012QBC/D, each with its own 220 Ω resistor", "16 × 16 mm ring around the camera lens; a carrier uses the camera mounting holes."],
+        ["Thin nail cells ×2", "Retained R1 N0 copper / pressure-film / polyimide laminates", "One per hard nail prong; nominal 0.4 mm addition including the mounting film. Separate A0/A1 readout."],
+        ["External readout", "Raspberry Pi 4 Model B + Adafruit ADS1115 #1085 at 3.3 V", "Insulated bench installation. CSI captures images; I²C reads the two nail cells and their supply."]
       ],
-      "placement": "The camera observes the back of a deforming surface through an engineered optical path. A camera body attached to the current finger does not make the opaque TPU/nail tactile.",
-      "schematic": ["Object deforms surface", "Controlled optical path", "Camera + illumination", "Contact-image processing"],
+      "placement": "The clear gel bends and compresses; the camera, mirror backing and frame remain rigid. Black dots sit on the gel's outer surface beneath the white contact coating. The camera sees them from inside. The original opaque insert is replaced, while the nail and drive attachment regions are retained. Use the separate nail cells for the hard prongs.",
+      "schematic": ["Gel and nail receive contact", "Fixed mirror + blue illumination", "Camera pixels + two nail ADCs", "Physical force/contact calibration"],
+      "visual": {"path": "assets/prototypes/optical/visuals/o1_sensor_placement.png", "alt": "Actual O1 side section showing the clear gel, fixed mirror, camera and blue light at the root, and two thin nail cells", "caption": "Nominal CAD sensor placement. Blue lines show sampled camera viewing rays. The two nail prongs overlap in side view and separate in 3D."},
+      "placement_visual": {"path": "assets/prototypes/optical/visuals/o1_wiring.svg", "alt": "Exact O1 camera, lighting, Pi GPIO and independent nail ADC connections", "caption": "The camera senses the gel; the ADS1115 senses two separate N0 nail cells. Each LED has its own resistor."},
+      "detail_visuals": [
+        {"path": "assets/prototypes/optical/visuals/o1_assembly.png", "alt": "O1 CAD assembly with transparent frame, gel, fixed mirror, camera bay and thin nail interfaces", "caption": "83 assembly parts and references. The camera bay adds 32 mm reach; actual drive, harness, stiffness and optical fit need bench acceptance."},
+        {"path": "assets/prototypes/optical/visuals/o1_led_assembly.svg", "alt": "Actual component-side light board positions, LED polarity and power connections", "caption": "All four LED pin-1 cathode ends face left in this view. J1 pin 1 is +5 V; J1 pin 2 is ground."},
+        {"path": "assets/prototypes/optical/visuals/o1_molds.png", "alt": "Exploded CAD of two gel mold halves, clear gel reference and marker stencil", "caption": "Cast and coat the sensing surface using these tools. Reference gel CAD is not a rigid printable sensor."},
+        {"path": "assets/prototypes/optical/visuals/o1_refraction.png", "alt": "Neutral-gel refraction screen retaining three distal edge-exit rays", "caption": "Model only: 3 of 105 sampled rays exit a distal gel edge. Actual pupil, focus, deformed visibility and contact coverage remain unqualified."}
+      ],
+      "prototype_cad_group": "optical", "viewer_model": "o1_assembly_reference",
+      "viewer_label": "Inspect O1's gel, fixed optics, camera and thin nail in 3D",
       "resources": [
-        ["Reference", "GelSight Baby Fin Ray paper", "https://arxiv.org/html/2303.14883v1"],
-        ["Review", "Optical comparison in the kit", "comparison.html"],
-        ["Study", "Architecture selection and tradeoffs", "architecture.html"]
+        ["Build", "Print, cast, coat and assemble O1", "build-optical.html"],
+        ["Electronics", "Exact light-board polarity, wiring and lossless capture", "optical-electronics.html"],
+        ["Tests", "Optical acceptance and held-out 20 N force/contact comparison", "optical-testing.html"],
+        ["Reproduce", "Regenerate the CAD, board, models and checks", "optical-reproduce.html"],
+        ["Download", "Complete O1 prototype files", "downloads/o1-prototype.zip"],
+        ["Files", "Every O1 CAD, circuit, code and evidence file", "assets/prototypes/optical/file-index.html"],
+        ["Materials", "O1 BOM and process selections", "assets/prototypes/optical/bom.csv"],
+        ["Reference", "GelSight Baby Fin Ray paper; a different compliant-mirror construction", "https://arxiv.org/html/2303.14883v1"],
+        ["Manufacturer", "Camera Module 3 Wide mechanical drawing", "https://datasheets.raspberrypi.com/camera/camera-module-3-wide-mechanical-drawing.pdf"]
       ],
-      "missing": ["Camera/lens/illumination selection and optical layout", "Gel, reflector and protective surface process", "A nail-coverage solution and ENPIRE fabrication files", "Calibration and task data"],
-      "next_steps": ["Define whether dense contact imagery is actually required.", "Prototype the optical path and surface visibility during bending.", "Validate a redesigned finger rather than treating the system as an add-on film."],
-      "related": ["PNEUMATIC", "B1", "NAIL"]
+      "missing": ["Fabricated specimens, actual drive/harness fit and measured frame stiffness", "Accepted mirror/gel/coating process, focus, loaded visibility and optical coverage", "Measured force/contact coefficients, held-out results, durability and precision-task data"],
+      "next_steps": ["Print and inspect the frame/cartridge tools; assemble the checked light board and selected camera.", "Cast, coat and retain the gel; fit both thin nail cells and inspect every marker in the actual image.", "Freeze the optical setup and train with physical force-reference holds, then evaluate new sessions through 20 N.", "Compare independent builds and task results against the other designs; no measured winner exists."],
+      "related": ["PNEUMATIC", "B1", "R1", "FORCE_BUTTON"]
     },
     {
       "id": "FORCE_BUTTON", "slug": "force-button", "title": "FB1 · Packaged force button at the root", "group": "prototype",

@@ -4,7 +4,7 @@ The website has [a separate page for each design](https://geyan21.github.io/yam-
 
 The R1 placement drawing is generated from the frozen R1 assembly by `scripts/draw_r1_page_map.py`, using the CAD environment's Python. The site build itself still needs only the standard library.
 
-The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Eleven have digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, **FB1.1** a packaged force button, **K1.2** capacitive cells, **F1.1 R4** a dense resistive matrix and **P1.0** paired air channels. All require physical assembly and testing.
+The [all-design campaign](docs/BUILD_ALL.md) now has twelve digital prototype packages: **R1** local resistive cells, **L1** root force, **B1** magnetic heads, **B2.1** consolidated magnetic electronics, **C1.1** a custom strain-sensing root, **N1.1** a bare sensing nail, **B3.1** a recessed magnetic board, **FB1.1** a packaged force button, **K1.2** capacitive cells, **F1.1 R4** a dense resistive matrix, **P1.0** paired air channels and **O1.0** fixed optics with compliant gel. All require physical assembly and testing.
 
 **Available:** editable CAD generators; checked STEP/STL parts, tools and component references; electrode cut sheets; assembly drawings; BOMs; editable PCBs and checked Gerbers/drills; firmware and raw recorders; force-analysis tools; material recipes; and student test plans.
 
@@ -14,6 +14,13 @@ The [all-design campaign](docs/BUILD_ALL.md) covers twelve approaches. Eleven ha
 ELVR transducers, a checked 40-component readout, eight labeled hoses and two
 thin N0 nail cells. Its separate electrical, physical-test and reproduction
 guides retain the gas model's range failures and common-pressure ambiguity.
+
+[O1](docs/BUILD_OPTICAL.md) supplies 87 CAD parts/tools/references, a fixed
+Camera Module 3 Wide and PET mirror, a retained Solaris gel with 42 marker
+dots, a checked blue-light ring and two thin N0 nail cells. Separate wiring,
+optical setup, physical force/contact evaluation and reproduction guides
+accompany its package. The 32 mm extension and optical/edge-coverage limits
+are explicit; no physical performance is claimed.
 
 1. Read [the student starting packet](docs/START.md).
 2. Inspect [the measured geometry and provenance](docs/GEOMETRY.md).

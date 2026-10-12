@@ -1,5 +1,85 @@
 # O1 optical development
 
+## Authoritative checkpoint, 2026-10-12
+
+Do not restart the optical design or P1 publication. P1 is live at public
+commit `2ebb6df24ae8cc1a346f03823d544522f46c0d15`; O1 publication is pending.
+The active goal still needs physical builds/data after the digital package.
+The user confirmed **no builds or data yet**. Do not ask that question again.
+
+O1 now has a **passing complete 83-part assembly**, plus four gel tools and
+references (87 total package CAD entries). Selected runs, beneath
+`build/engineering/prototypes/optical/`:
+
+- Refined path: `path_searches/20261012T065149.643835Z`.
+- Core: `core_witnesses/20261012T071941.242797Z`.
+- Camera: `camera_space_screens/20261012T074327.049703Z`.
+- Root bay: `root_bays/20261012T080302.568971Z`.
+- Retained gel: `gel_cartridges/20261012T084117.291170Z`:
+  63 parts, 1,953 material comparisons, no failures/ray blockers; all four
+  protected nail/drive/mount regions retained.
+- Gel tools: `gel_tools/20261012T083055.382375Z`: four parts, 2.860 mL cavity,
+  42-dot stencil and flat arc-length pattern; no nominal intersections.
+- LED placement: `led_placement/r2`, zero placement violations.
+- LED routing: `led_routes/20261012T082917.155633Z`, 109 tracks, four vias.
+- Checked board: `led_boards/r2`; final native/fabrication check
+  `checks/20261012T083049.813416Z`, KiCad 10.0.7, zero violations/unconnected.
+- Full assembly: **`assemblies/20261012T085929.368510Z`**:
+  83 parts, 3,403 material comparisons, zero findings and 210 clear
+  zero-width air-path segments.
+- Refraction: `refraction_screens/20261012T084021.272020Z`:
+  105 neutral gel rays, **three distal edge exits retained**, all at station
+  0 before the first painted row. Do not call this full physical coverage.
+
+The light board is 16 × 16 × 0.8 mm, with four Kingbright APT2012QBC/D LEDs,
+four independent 220 ohm / >=0.25 W resistors and J1 (+5 V, GND).
+The carrier uses the front camera holes, M2x14 screws and **three 0.5 mm
+washers at each head**. It has **four short side lips**, clear of the
+washers and autofocus barrel. Six M2x8, eight M2x6, two M2x14, twenty
+washers and sixteen nuts are specified per finger.
+
+The successful `optical_cad.py` cleanup is bounded to 0.00005 mm vertex
+displacement, preserves untreated STL evidence and never fills holes.
+The frame review measured only 0.000001908 mm displacement. Its previous
+seat-edge adjustment alone did not fix the mesh. Clip bridges were later
+trimmed to the gel rear profile and screw-head pockets added.
+The first full assembly had six washer/lip intersections; a notched lip
+variant made a tangent mesh defect. Both failed runs remain under build/.
+The four-lip revision above is the passing final geometry.
+
+Software is in `engineering/software/optical_*.py`. It supplies local Pi 4
+Picamera2 capture, fixed settings, lossless PGM/PPM images and receipts,
+two N0 ADS1115 channels plus supply, marker setup/replay, and physical
+force/contact fitting/evaluation. Pure-standard-library analysis; camera
+dependencies load only on explicit hardware capture. **18 synthetic tests
+pass**, including missing-marker, clipping, metadata, ADC, corruption,
+force-sign and train/test-separation checks. No physical coefficients exist.
+
+Primary host/ADC/Sil-Poxy references:
+`readout_sources/20261012T084826.302105Z`; bounded readable review:
+`readout_reviews/20261012T085106.775630Z`.
+Selected facts/hashes are in `optical_readout.json`. Solaris/Psycho Paint/
+Silc Pig/LED choices remain in the unchanged `optical_materials.json`.
+
+Four O1 docs, BOM, explicit wiring SVG, overview catalog entry and website
+integration have been authored. The current visual run
+`visuals/20261012T090357.916328Z` and card review
+`diagram_reviews/20261012T090603.069122Z` passed and were inspected.
+**One visual-only correction is pending:** move R2/R4/D1 board labels clear
+of pads (already edited in `draw_optical_prototype.py`). Rerun visuals and
+the two-card review, then use those new runs for the freeze.
+The side placement view and 3D frame/mold images were clear on inspection.
+
+Next: commit pending sources, regenerate/inspect corrected visuals, freeze
+with `freeze_optical.py`, stage ALL generated files and run
+`check_tracked_prototypes.py`. Then full software/clean-source checks,
+site/link/archive checks, browser checks on desktop/mobile and all 12
+designs, distribution staging/size checks, public push, Actions/release/
+Pages verification. **Do not claim O1 live until verified.**
+The complete archive was ~1.963 GB before O1; check the final asset limit.
+
+Older notes below are historical and may describe completed work.
+
 The active goal remains to build and compare all twelve designs. No physical
 builds or measurements exist. The user already confirmed common materials
 can be obtained and a student can assemble/test; do not ask again.
