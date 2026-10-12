@@ -1,0 +1,17 @@
+{
+  "schema": "yam-f1-terminal-mechanics/1",
+  "tip_plan": "engineering/designs/f1_finished_tip_r4.json",
+  "nail_reinforcement_gap_mm": 0.1,
+  "nail_reinforcement": "Use separate tip and transition PI pieces so one flat stiffener is not forced over the rear-coverlay/copper step.",
+  "single_layer_reinforcement": "One flat 8 mm PI piece; the substrate back has no copper or coverlay step.",
+  "adhesive_nominal_mm": 0.05,
+  "stiffener_nominal_mm": 0.2,
+  "limits": [
+    "Nominal material envelopes; incoming thickness and the actual seated connector position require measurement.",
+    "The short nail transition piece supports the static via region. Provide board-side strain relief so the narrow gap is not a cyclic flex hinge.",
+    "Do not put adhesive into the exposed gold-contact face.",
+    "The native R4 drawing's 8 mm rectangle is the overall reinforcement region; these separate cutting patterns define the two nail-row pieces.",
+    "The actual Hirose internal contact/cavity datum remains unverified. Do not report that interface as a passed collision check."
+  ],
+  "physical_specimens_tested": 0
+}

@@ -13,6 +13,122 @@ checks and explicit remaining work.
 No physical performance winner has been established. No physical specimens
 have been reported or tested in this workspace.
 
+K1.2 is now public at commit
+`a4c21794852925f8ef7c4edb58e6ffa38c4e4187`, release `kit-a4c217948529`.
+Actions run 38185969621 completed successfully. All four Release archive
+hashes match the local prepared distribution:
+source `64e7642cbcf63876950dda54bca4407546ee8322088a216acbc418601db2fb27`,
+designs `4dfa180d90d1201c90d5e04fe1c98104a8d2a485817840a2d1dc54904d53e901`,
+site `ef100591d5fb0ff4e994b2883af42697a30a79212a6aab11943c9f222127650c`,
+complete kit `ba449fb8ede40b73df1ab44e612afdb22782e46a4b26a9b7c0667bb4444a19b8`.
+The complete kit is 1,474,099,157 bytes. The hosted distribution is
+493,668,631 bytes; its 4,641 remaining local links pass verification.
+Hosted browser checks pass: 53 main-page and 131 design-page checks with
+all twelve design IDs covered.
+
+Live F1, K1 and FB1 pages return HTTP 200 with the expected release.
+K1 exposes the new prototype, stack, force-test guide and matching viewer.
+Its live prototype snapshot matches
+`5659f5e760c894a9ba158fff6e4dd520cbb1ad5f7d6b030a4b187ee2334b9413`.
+The public K1 ZIP returns HTTP 200 and matches the local size of 61,701,301
+bytes. This verifies delivery; physical specimens remain zero.
+
+Work continues on `design/f1-integration-r4`. Preserve every frozen package.
+F1 still needs the manufacturing/mating stack, full routed resistance and
+coupled-array review, motion slack, sealing, assembly and physical comparison.
+Pneumatic and optical integration also remain in scope. The full goal is
+active; no measured winner is claimed.
+
+The initial R4 terminal review is
+`build/engineering/prototypes/f1/finished_tip_reviews/20261012T001811.424747Z`.
+It uses the cached Hirose catalog's 1 mm terminal drawing and construction
+guidance (pages 11 and 14), rendered for working review in
+`mating_source_reviews/20261012T000947.685757Z`; page 8 is also available in
+`mating_source_reviews/20261012T001415.801218Z`.
+No complete proprietary catalog image is republished.
+The selected proposal is 200 µm PI stiffener plus 50 µm bond, with 3 µm
+nominal nickel and 0.2 µm gold on exposed contacts. A single-copper tongue is
+0.3132 mm nominal. Retaining the rear coverlay on the two nail-row foils
+would make that proposal 0.3632 mm, above the connector's 0.35 mm maximum.
+The first review measured 0.525 mm to the routed back-copper regions but
+omitted the separately represented plated annuli. The corrected review,
+`finished_tip_reviews/20261012T005629.615428Z`, includes those pads and
+finds **0.200 mm** nominal clearance for the same 6.4 mm relief. It still
+passes the declared 0.15 mm geometric screen; manufacturing registration
+is not established by this nominal result. The ten physical one-layer
+foils need no rear mask change.
+
+The new, separate R4 artwork run is
+`artwork_runs/20261012T002149.845595Z` under the same F1 working root.
+It changes only the two required rear windows and the native generator/
+metadata labels; serialized outlines, copper regions, contacts, vias, paths
+and stiffener footprints are exactly retained. The first attempt compared
+in-memory Shapely tuples with JSON arrays and failed that identity check;
+it is preserved. The successful generator compares serialized structures.
+Independent checks in
+`independent_checks/20261012T002212.346742Z` pass all twelve foils:
+286 retained unsuppressed shared-coverlay findings, zero unreviewed
+findings, and zero missing connections. These are still development
+exports; no completed F1 prototype is claimed.
+
+`f1_gold_wrist_link_r4.json` records a manufacturer-reviewed comparison
+candidate, Molex 150200545 (50 conductors, 0.5 mm pitch, 152 mm Type A,
+gold-finished). Its dimensional/plating limits do not establish a qualified
+pair with the selected Hirose connector. The newer sales drawing permits
+shorter exposed/support lengths than the initial Hirose targets; the gold
+and nickel minima also differ from Hirose's construction example. Treat
+those as incoming-inspection/material questions, not a completed
+compatibility proof. The thicker 0.27 mm insulated section needs a new
+route/bend check. No order has been placed.
+
+Actual routed-metal models are in
+`routed_network_reviews/20261012T004010.736105Z`: twenty current nets in two
+temperature/copper scenarios. They use actual fanout traces, pad locations
+and vias and retain the separate drive and sense-pickoff locations. Numerical
+controls check one strip, duplicate-overlap removal and a single via.
+Pads are idealized equipotential regions. A via star gives a full-barrel
+pair resistance without counting parallel copies; actual inner-layer Z
+and multi-terminal barrel fields remain approximations.
+
+The corresponding DC matrix study,
+`routed_matrix_screens/20261012T004244.848426Z`, includes the preserved
+foil-path resistance estimates plus declared 50 mΩ connector and 10 mΩ
+electrode-spreading allowances. All six scenarios pass the 1% electrical
+interaction criterion; the maximum is 0.9253% at the 100 Ω hot/minimum-copper
+case. This is an ideal-feedback, independent-resistor DC model, with no
+force mapping. Film lateral conduction, offsets/leakage, gain range,
+coupled transients and actual measurements remain.
+
+The normal-browser vendor-model attempt is preserved in
+`connector_browser_sources/20261012T004525.829733Z`. Both the product page
+and download returned a small “Forbidden.” document from this network.
+No login, challenge solving or security bypass was attempted. The real
+connector cavity and contact datum remain unverified.
+
+Corrected terminal CAD is
+`finished_terminal_cad/20261012T005754.311962Z`: forty parts/references for
+twelve foils. The two nail-row reinforcements are separate tip/transition
+pieces so a flat PI sheet is not forced over the backing-layer step;
+their terminal via annuli lie inside the static reinforcement regions.
+The first attempt used a pattern name instead of the actual
+`_fit_tail_reference` part ID and is preserved.
+`fit_reviews/20261012T010103.492486Z` passes 704 declared source/peer/
+component checks. All twelve real mating cavities remain excluded and
+explicitly unqualified, rather than being replaced with invented holes.
+
+Retained skin CAD is
+`retained_skin_cad/20261012T011152.010251Z`: 58 parts/references across six
+cells, including four compliant R1-derived fitting bases. All declared
+base-to-source checks pass. It includes plated-stack allowances, peripheral
+covers and explicit bond/foil-exit interfaces. The nominal top heights are
+0.4614 mm on the nails and 0.7264 mm above the R1 TPU datum; the variable
+fitting base below that datum is additional geometry.
+The first cover-mold test (CH0) is running in owned session 79752.
+Complete body/finish/tail envelope joining is running in owned session 71233.
+Inspect those terminal results before starting the remaining mold shapes
+or claiming joined-foil completion. Complete assembly checks, manufacturing
+drawings, seal/strain-relief installation and physical testing remain.
+
 At this prepublication checkpoint, K1.2 is frozen at `engineering/prototypes/capacitive` on
 `design/k1-integration`, but has not been published. The public site still
 has eight digital prototype packages; the local package count is now nine.
