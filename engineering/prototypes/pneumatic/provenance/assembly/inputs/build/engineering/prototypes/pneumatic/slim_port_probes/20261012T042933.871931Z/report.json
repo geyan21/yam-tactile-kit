@@ -1,0 +1,251 @@
+{
+  "schema": "yam-pneumatic-slim-port-probe/1",
+  "physical_specimens_tested": 0,
+  "cases": [
+    {
+      "sign": -1,
+      "center_native_yz_mm": [
+        -50.258591942934174,
+        12.794457842698323
+      ],
+      "stem_frame_overlap_mm3": 0.0,
+      "stem_insert_overlap_mm3": 0.0,
+      "stem_guard_frame_overlap_mm3": 0.0,
+      "hose_guard_frame_overlap_mm3": 0.0,
+      "hose_guard_insert_overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "sign": 1,
+      "center_native_yz_mm": [
+        -50.258591942934174,
+        12.794457842698323
+      ],
+      "stem_frame_overlap_mm3": 0.0,
+      "stem_insert_overlap_mm3": 0.0,
+      "stem_guard_frame_overlap_mm3": 0.0,
+      "hose_guard_frame_overlap_mm3": 0.0,
+      "hose_guard_insert_overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "parts": [
+    {
+      "id": "p1_ch4_front_slim_-1_stem",
+      "purpose": "Slim-port fit reference",
+      "material": "304/316 stainless dimensional target",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_-1_stem.step",
+      "stl": "cad/p1_ch4_front_slim_-1_stem.stl",
+      "sha256_step": "03c5fe0d21cb45b1585a91eb90df92b7c49ba797adaecd567a53c2b255ca5a6c",
+      "sha256_stl": "df53b8dcdb1f9c62913b4adc7e66b6427f654c4d98e5dab96316aacfa99c44d5",
+      "volume_mm3": 9.424777960769369,
+      "bounds_mm": [
+        [
+          -27.0,
+          -50.85840606689453,
+          12.1944580078125
+        ],
+        [
+          -12.0,
+          -49.65877914428711,
+          13.394457817077637
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_front_slim_-1_sleeve",
+      "purpose": "Slim-port fit reference",
+      "material": "304/316 stainless dimensional target",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_-1_sleeve.step",
+      "stl": "cad/p1_ch4_front_slim_-1_sleeve.stl",
+      "sha256_step": "ffff16c30a3676cc77df814ab7d351283d150cf0da4a6571a57260ba78296e8c",
+      "sha256_stl": "244e35fe61d2dbb5b698ca6e19fc2219f2ff59e7d0943f3369b01f56cf4faa7f",
+      "volume_mm3": 2.0498892064673426,
+      "bounds_mm": [
+        [
+          -27.0,
+          -51.05834197998047,
+          11.994458198547363
+        ],
+        [
+          -24.0,
+          -49.458839416503906,
+          13.594457626342773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_front_slim_-1_hose_guard",
+      "purpose": "Slim-port fit reference",
+      "material": "Clearance reference; not a physical tube",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_-1_hose_guard.step",
+      "stl": "cad/p1_ch4_front_slim_-1_hose_guard.stl",
+      "sha256_step": "266b3d1f2b9d58bd05f2c9a59064fed12f26611345b889570ee056f4bf39a9a7",
+      "sha256_stl": "659703707683b433908a28a606eb71dec617c796157e6927ffbc23a4b07b31ad",
+      "volume_mm3": 30.536280592892794,
+      "bounds_mm": [
+        [
+          -27.0,
+          -52.05803298950195,
+          10.994458198547363
+        ],
+        [
+          -24.0,
+          -48.45915222167969,
+          14.594457626342773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_front_slim_+1_stem",
+      "purpose": "Slim-port fit reference",
+      "material": "304/316 stainless dimensional target",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_+1_stem.step",
+      "stl": "cad/p1_ch4_front_slim_+1_stem.stl",
+      "sha256_step": "d917770bb626bb52e4a9ecd10584f97b23c253dd05a7e2322c5e62b1fe1d4a84",
+      "sha256_stl": "2f3ae131ee75a98438fc4360d06ba62d9add1d829b6e0bc6b174920b99824ca4",
+      "volume_mm3": 9.424777960769369,
+      "bounds_mm": [
+        [
+          -3.0,
+          -50.85840606689453,
+          12.1944580078125
+        ],
+        [
+          12.0,
+          -49.65877914428711,
+          13.394457817077637
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_front_slim_+1_sleeve",
+      "purpose": "Slim-port fit reference",
+      "material": "304/316 stainless dimensional target",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_+1_sleeve.step",
+      "stl": "cad/p1_ch4_front_slim_+1_sleeve.stl",
+      "sha256_step": "89e8020d954d7ede5f95f4828706e8c0954bc1db3c8672b053271af2ff6d53a4",
+      "sha256_stl": "0ce6de328890020e9dd44a4d8488390921125b1bdfa60b2a25dcd0165edf135c",
+      "volume_mm3": 2.0498892064673426,
+      "bounds_mm": [
+        [
+          9.0,
+          -51.05834197998047,
+          11.994458198547363
+        ],
+        [
+          12.0,
+          -49.458839416503906,
+          13.594457626342773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_front_slim_+1_hose_guard",
+      "purpose": "Slim-port fit reference",
+      "material": "Clearance reference; not a physical tube",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_front_slim_+1_hose_guard.step",
+      "stl": "cad/p1_ch4_front_slim_+1_hose_guard.stl",
+      "sha256_step": "61e35d90c3343afbd3e77eab9165d1f5254638b06fe5e589ef8ac4bebd881ef4",
+      "sha256_stl": "4019062aa04dcc4ce1e0ec61bf1b86e7c9cc7953e5ba58da10f6fe29eb9308f6",
+      "volume_mm3": 30.536280592892794,
+      "bounds_mm": [
+        [
+          9.0,
+          -52.05803298950195,
+          10.994458198547363
+        ],
+        [
+          12.0,
+          -48.45915222167969,
+          14.594457626342773
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "radial_clearance_guard_mm": 0.15,
+  "source_hard_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "input_sha256": {
+    "engineering/designs/pneumatic_slim_port.json": "7585007a9818795969ac5306a5628faa5a073f8e0b7711bd718626ccdda7f9be",
+    "engineering/scripts/probe_pneumatic_slim_port.py": "2e4c1b3db110d70a564c855dbaf1a7678f09b8ea0fa48db5afc46de70366827b",
+    "build/engineering/prototypes/pneumatic/wall_pair_layouts/20261012T033428.385609Z/report.json": "cc999f112d0298de5196acc4078209adf7af1d5df288580948f33ad74047a290",
+    "build/engineering/prototypes/pneumatic/insert_witnesses/20261012T034054.152615Z/report.json": "77c3de3445b50afd4c5bfcd9068a970bf52d31e5ab32feffddc01ecb374e1a28",
+    "engineering/scripts/build_pneumatic_ports.py": "baa885385e70f94cc5461a072abcdcfbe48ef947bd3ba559745306683f778e41",
+    "engineering/scripts/source_brep.py": "228fba41ef66f374a887c02452489991500467780584e18865b127057d2010be"
+  },
+  "limits": [
+    "A smaller bonded metal stem crosses the constrained frame region; the standard hose sleeve begins farther out.",
+    "Dimensions are procurement/fabrication targets and need actual stock and fit checks.",
+    "Static clearance does not establish loaded tube motion, bond strength, leakage or force accuracy."
+  ]
+}

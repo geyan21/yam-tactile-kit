@@ -1,4 +1,5 @@
-build/
+# Keep top-level working output ignored; frozen provenance may contain nested build paths.
+/build/
 __pycache__/
 *.pyc
 .venv/

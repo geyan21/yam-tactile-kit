@@ -1,0 +1,2693 @@
+{
+  "schema": "yam-pneumatic-port-pose-search-result/1",
+  "physical_specimens_tested": 0,
+  "poses": [
+    {
+      "id": "p1_ch2_front",
+      "site": 2,
+      "role": "front",
+      "kind": "straight",
+      "direction_native": [
+        -1,
+        0,
+        0
+      ],
+      "anchor_native_mm": [
+        -15.0,
+        -82.73981314136728,
+        1.101591225478114
+      ],
+      "holder_embed_mm": 0.0,
+      "branch_start_native_mm": null,
+      "plug_faces_x_mm": [
+        0.0
+      ],
+      "sign": -1,
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -21.5,
+        -82.73981314136728,
+        1.101591225478114
+      ],
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch2_back",
+      "site": 2,
+      "role": "back",
+      "kind": "angled",
+      "direction_native": [
+        -0.8365163037378079,
+        0.25881904510252074,
+        -0.4829629131445341
+      ],
+      "anchor_native_mm": [
+        -12.098421405911928,
+        -82.32498047268692,
+        9.301664490761134
+      ],
+      "branch_start_native_mm": [
+        -10.0,
+        -82.97423431516916,
+        10.51318865433766
+      ],
+      "branch_to_surface_length_mm": 2.5085242170840507,
+      "holder_embed_mm": 2.0,
+      "plug_faces_x_mm": [
+        -15.0,
+        0.0
+      ],
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -17.53577738020768,
+        -80.64265667952053,
+        6.162405555321662
+      ],
+      "sign": -1,
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 9.810988960484844,
+          "hose_guard_frame_overlap_mm3": 2.0760516985679662,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "straight",
+          "sign": 1,
+          "frame_overlap_mm3": 9.810988960485226,
+          "hose_guard_frame_overlap_mm3": 2.0760516985680386,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.145243473847836
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756604153
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 15.173858744771373
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 15.233612231334451
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.066225145442939
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 15.173858744771373
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 15.233612231334451
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.066225145442939
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 2.71606945213475
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 2.716069463670339
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 2.1252891520331785
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 2.71606945213475
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 2.716069463670339
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 2.1252891520331785
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.36787876159974703
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 4.556872808390533
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 4.48450027172292
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 1.3759673412729017
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 4.556872808390533
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 4.48450027172292
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 1.3759673412729017
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.4713228500149236
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0249129867819039
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.4713228500149236
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0249129867819039
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.03838396786728544
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.03838396748420346
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.03838396786728544
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.03838396748420346
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 32.84195598089646
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 32.84195598089646
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 11.032613611201736
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 10.898686268306884
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 11.032613611201736
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 10.898686268306884
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.7436274008617426
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.15649847893200095,
+          "peer_overlap_mm3": 34.81580632945923
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.15649847893200095,
+          "peer_overlap_mm3": 36.129001954498754
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.7436274008617426
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.15649847893200095,
+          "peer_overlap_mm3": 34.81580632945923
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.15649847893200095,
+          "peer_overlap_mm3": 36.129001954498754
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.7726902584921254
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.7726869440570512
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.7726902584921254
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.7726869440570512
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 25.737376920856008
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 23.672975436685658
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 25.737376920856008
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 23.672975436685658
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 6.6700532375550425
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 6.670054430346918
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 6.0538849208559835
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 6.6700532375550425
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 6.670054430346918
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 6.0538849208559835
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.03751207448526143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.010651959646446878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 10.314699576357807
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 10.242327149160246
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 6.717304981707582
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 10.314699576357807
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 10.242327149160246
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 30,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 6.717304981707582
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.3235052845771956
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.3235052845771956
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.05924910616369594
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.05924910616369594
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.8365521706830351
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0028091455771147053,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0028091455771147053,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.8365521706830351
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0028091455771147053,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0028091455771147053,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.168825360291972
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.168825360291972
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.15370283882105112
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 1.1254289419707009,
+          "peer_overlap_mm3": 34.03137440108514
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.15370283882105112
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 1.1254289419707009,
+          "peer_overlap_mm3": 34.03137440108514
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0167050669459589
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.016705066945968787
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0167050669459589
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.016705066945968787
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 2.1078301429257813
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 2.1078301429257813
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 2.1078301429257813
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 1.3194585434234485
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 1.3194585434234485
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 1.3194585434234485
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 33.61255729623848
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": 30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 33.61255729623848
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 11.817889319599878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 11.201719904840132
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 11.817889319599878
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 11.201719904840132
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 3.6357810010214258
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 13.51515774869101
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 27.823135798153704
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 3.6357810010214258
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 13.51515774869101
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 27.823135798153704
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.039586823164078085
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.039586823164078085
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.039586823164078085
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 5.0,
+          "elevation_deg": 30,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.0,
+          "other_channel_guard_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch3_front",
+      "site": 3,
+      "role": "front",
+      "kind": "straight",
+      "direction_native": [
+        -1,
+        0,
+        0
+      ],
+      "anchor_native_mm": [
+        -15.0,
+        -66.0080737865573,
+        -1.4304780704159392
+      ],
+      "holder_embed_mm": 0.0,
+      "branch_start_native_mm": null,
+      "plug_faces_x_mm": [
+        0.0
+      ],
+      "sign": -1,
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -21.5,
+        -66.0080737865573,
+        -1.4304780704159392
+      ],
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch3_back",
+      "site": 3,
+      "role": "back",
+      "kind": "straight",
+      "direction_native": [
+        -1,
+        0,
+        0
+      ],
+      "anchor_native_mm": [
+        -15.0,
+        -64.8578385408447,
+        18.69416626211178
+      ],
+      "holder_embed_mm": 0.0,
+      "branch_start_native_mm": null,
+      "plug_faces_x_mm": [
+        0.0
+      ],
+      "sign": -1,
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -21.5,
+        -64.8578385408447,
+        18.69416626211178
+      ],
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch4_back",
+      "site": 4,
+      "role": "back",
+      "kind": "straight",
+      "direction_native": [
+        -1,
+        0,
+        0
+      ],
+      "anchor_native_mm": [
+        -15.0,
+        -49.59343217810066,
+        24.84502478087793
+      ],
+      "holder_embed_mm": 0.0,
+      "branch_start_native_mm": null,
+      "plug_faces_x_mm": [
+        0.0
+      ],
+      "sign": -1,
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -21.5,
+        -49.59343217810066,
+        24.84502478087793
+      ],
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch5_front",
+      "site": 5,
+      "role": "front",
+      "kind": "straight",
+      "direction_native": [
+        -1,
+        0,
+        0
+      ],
+      "anchor_native_mm": [
+        -15.0,
+        -29.899816474390214,
+        2.4209366302862305
+      ],
+      "holder_embed_mm": 0.0,
+      "branch_start_native_mm": null,
+      "plug_faces_x_mm": [
+        0.0
+      ],
+      "sign": -1,
+      "metal_tube_length_mm": 6.0,
+      "outlet_native_mm": [
+        -21.5,
+        -29.899816474390214,
+        2.4209366302862305
+      ],
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "id": "p1_ch5_back",
+      "site": 5,
+      "role": "back",
+      "kind": "angled",
+      "direction_native": [
+        -0.7071067811865476,
+        0.0,
+        -0.7071067811865475
+      ],
+      "anchor_native_mm": [
+        -12.722640316207146,
+        -31.75716634124967,
+        21.57835479098555
+      ],
+      "branch_start_native_mm": [
+        -11.0,
+        -31.75716634124967,
+        23.300995107192694
+      ],
+      "branch_to_surface_length_mm": 2.436181298270822,
+      "holder_embed_mm": 2.0,
+      "plug_faces_x_mm": [
+        -15.0,
+        0.0
+      ],
+      "metal_tube_length_mm": 8.0,
+      "outlet_native_mm": [
+        -18.7330479562928,
+        -31.75716634124967,
+        15.567947150899897
+      ],
+      "sign": -1,
+      "trials": [
+        {
+          "kind": "straight",
+          "sign": -1,
+          "frame_overlap_mm3": 15.833667527586375,
+          "hose_guard_frame_overlap_mm3": 18.10644733642908,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "straight",
+          "sign": 1,
+          "frame_overlap_mm3": 14.949662226474073,
+          "hose_guard_frame_overlap_mm3": 11.322813947856604,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.021812817429992106
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.021812817429992106
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.021812817429992106
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.02181281742977253
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.02181281742977253
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.02181281742977253
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.12226939756608576
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 8.948181620521758
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 14.018994807565408
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.43700661684909
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 8.948181620521199
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 14.018994807564864
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 13.4370066168485
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 61.99134223375747
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 72.00282642939455
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 64.31424242433492
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 61.991342233757834
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 72.00282642939469
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 45,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 64.31424242433513
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 1.3381380943176295
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 1.3381380943176295
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 1.3381380943176295
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 1.3381380688990778
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 1.3381380688990778
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 1.3381380688990778
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 27.283731192283202
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 20.766272994445377
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 14.656660048030307
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 27.283731192282065
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 20.766272994444254
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 14.656660048029202
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 77.35460732939933
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 65.37740760672534
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 50.5918435523282
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 77.3546073293959
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 65.37740760672182
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 30,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 50.591843552325
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 5.369402696894865
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 23.1485892537351
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 5.369402696894865
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 23.1485892537351
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 2.1300773008006937
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 18.26292885635799
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 2.1300773008006937
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": 15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 18.26292885635799
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 28.101672125809433
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 32.74615499142831
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 28.10167212580943
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -15,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 32.74615499142829
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 41.89117952530475
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 3.0,
+          "elevation_deg": 60,
+          "yaw_deg": -30,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 41.89117952530452
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 1.5118531482743052
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.035172890640281645
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 1.25,
+          "metal_tube_length_mm": 10.0,
+          "frame_overlap_mm3": 0.16528579603476143
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 6.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 1.5118531482743052
+        },
+        {
+          "kind": "angled",
+          "sign": -1,
+          "inset_mm": 4.0,
+          "elevation_deg": 45,
+          "yaw_deg": 0,
+          "embed_mm": 2.0,
+          "metal_tube_length_mm": 8.0,
+          "frame_overlap_mm3": 0.0,
+          "hose_guard_insert_overlap_mm3": 0.0,
+          "branch_plug_guard_overlap_mm3": 0.0,
+          "free_tube_insert_overlap_mm3": 0.0,
+          "peer_overlap_mm3": 0.0,
+          "unsupported_branch_wall_mm3": 0.0,
+          "other_channel_guard_overlap_mm3": 0.0
+        }
+      ]
+    }
+  ],
+  "failed_ports": [
+    "p1_ch4_front"
+  ],
+  "parts": [
+    {
+      "id": "p1_ch2_front_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch2_front_fitting_envelope.step",
+      "stl": "cad/p1_ch2_front_fitting_envelope.stl",
+      "sha256_step": "064cd20f593987726d2249c2c87dc4f0873a047811c445cf3fe22450ceee6560",
+      "sha256_stl": "5272a719fc729f7ac3a4de2f851da5ad3fd7385d86960e540fd57a84ab9fa22e",
+      "volume_mm3": 98.08444963589031,
+      "bounds_mm": [
+        [
+          -26.5,
+          -84.47677612304688,
+          -0.6359087824821472
+        ],
+        [
+          -15.0,
+          -81.00285339355469,
+          2.8390913009643555
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch2_back_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch2_back_fitting_envelope.step",
+      "stl": "cad/p1_ch2_back_fitting_envelope.stl",
+      "sha256_step": "f5253555d602465ecfc188105ce9a3ecd7a31f5e4bf95663ec3b4ae81f115407",
+      "sha256_stl": "a04402bbd452faaeb951e271aca031b71813688f75645c4654a6c175a5325db2",
+      "volume_mm3": 112.22161657704439,
+      "bounds_mm": [
+        [
+          -22.670167922973633,
+          -84.29105377197266,
+          2.226166248321533
+        ],
+        [
+          -9.603683471679688,
+          -77.67078399658203,
+          11.581050872802734
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch3_front_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch3_front_fitting_envelope.step",
+      "stl": "cad/p1_ch3_front_fitting_envelope.stl",
+      "sha256_step": "a23d5f5a64137ed4690d99fe4bccdadcafe0a989f311eea123d65dc1ade33f70",
+      "sha256_stl": "9f9ba46ef4ad3c74adf12fa55c2a883d2c54244d7e73c360d1e9c121617f5448",
+      "volume_mm3": 98.08444963589032,
+      "bounds_mm": [
+        [
+          -26.5,
+          -67.74503326416016,
+          -3.167978048324585
+        ],
+        [
+          -15.0,
+          -64.27111053466797,
+          0.3070219159126282
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch3_back_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch3_back_fitting_envelope.step",
+      "stl": "cad/p1_ch3_back_fitting_envelope.stl",
+      "sha256_step": "ee46754cf3d3cb87135eb661d5341d894a297a01f2c5706e3d6f69487d7a9404",
+      "sha256_stl": "77a22a0964a081eb79ff1921027688a0d598b5a908b2635f3d70c98e0f264641",
+      "volume_mm3": 98.08444963589031,
+      "bounds_mm": [
+        [
+          -26.5,
+          -66.59479522705078,
+          16.956666946411133
+        ],
+        [
+          -15.0,
+          -63.120880126953125,
+          20.431665420532227
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch4_back_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch4_back_fitting_envelope.step",
+      "stl": "cad/p1_ch4_back_fitting_envelope.stl",
+      "sha256_step": "05c65696e980865f5adbfff48541931c7571dc8bf3ab8c7ab8c8e741e8f3a707",
+      "sha256_stl": "f48949ce6264db3fb05cf23bff5a2f6e7a033799439b7d1be69b1af5fad562fe",
+      "volume_mm3": 98.08444963589032,
+      "bounds_mm": [
+        [
+          -26.5,
+          -51.33039093017578,
+          23.107524871826172
+        ],
+        [
+          -15.0,
+          -47.85647201538086,
+          26.5825252532959
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch5_front_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch5_front_fitting_envelope.step",
+      "stl": "cad/p1_ch5_front_fitting_envelope.stl",
+      "sha256_step": "2da512aac298ca0c01744386e1279ba5b4c1c0ed86f7527aa98b7edfc5e11ae2",
+      "sha256_stl": "50a6617baec02904e57ac9d85bdda4824a2d587153ed6c31df816474163ca8a0",
+      "volume_mm3": 98.08444963589031,
+      "bounds_mm": [
+        [
+          -26.5,
+          -31.636775970458984,
+          0.6834366321563721
+        ],
+        [
+          -15.0,
+          -28.162857055664062,
+          4.1584367752075195
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "p1_ch5_back_fitting_envelope",
+      "purpose": "Conservative fitting and first hose-segment clearance reference; not a printable part",
+      "material": "Fitting envelope plus guarded hose engagement and straight departure",
+      "kind": "reference_only",
+      "step": "cad/p1_ch5_back_fitting_envelope.step",
+      "stl": "cad/p1_ch5_back_fitting_envelope.stl",
+      "sha256_step": "30ad7b6de52b3a5a6bc569455260247f3198f5ceac0b19c83cb75868ea40aaab",
+      "sha256_stl": "1863b67637ef12d4553a04e81670281104b1d2c3ca94ecb00c1472ab4c444ec0",
+      "volume_mm3": 116.24285517363933,
+      "bounds_mm": [
+        [
+          -23.49717903137207,
+          -33.49412536621094,
+          10.803814888000488
+        ],
+        [
+          -10.247766494750977,
+          -30.020206451416016,
+          24.0532283782959
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "passed": false,
+  "source_hard_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "input_sha256": {
+    "engineering/designs/pneumatic_port_search.json": "f3ebfa9a012d1d99b9d31ddc4eb7bee2fe4787bc7c74f7c045234d3766a0b583",
+    "engineering/designs/pneumatic_ports.json": "ed7c6325305930b0b8e7d7c9cc11601cf01739f2294bd27ec1ce5d51de4aeadc",
+    "engineering/scripts/search_pneumatic_port_poses.py": "5581c3b51043eb850ad8f1a8c6ae56cf3c60515815faa28b2f487ade5da04199",
+    "build/engineering/prototypes/pneumatic/wall_pair_layouts/20261012T033428.385609Z/report.json": "cc999f112d0298de5196acc4078209adf7af1d5df288580948f33ad74047a290",
+    "build/engineering/prototypes/pneumatic/insert_witnesses/20261012T034054.152615Z/report.json": "77c3de3445b50afd4c5bfcd9068a970bf52d31e5ab32feffddc01ecb374e1a28",
+    "engineering/scripts/build_pneumatic_ports.py": "baa885385e70f94cc5461a072abcdcfbe48ef947bd3ba559745306683f778e41",
+    "engineering/scripts/source_brep.py": "228fba41ef66f374a887c02452489991500467780584e18865b127057d2010be"
+  },
+  "limits": [
+    "Nominal fittings and branch-wall geometry only; actual hose bends, seal quality and loaded motion remain.",
+    "Angled ports branch from the channel into an existing open rib region and require flush plugs at both transverse ends.",
+    "The hard frame is an obstacle, not a volume to remove or waive.",
+    "Selected poses still require complete material assembly and air-path closure checks."
+  ]
+}
