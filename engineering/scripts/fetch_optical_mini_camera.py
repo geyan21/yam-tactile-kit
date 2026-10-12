@@ -13,9 +13,9 @@ from tactile_kit.records import execution
 from fetch_optical_camera_sources import fetch
 
 SOURCES = {
-    "waveshare_zero_camera": "https://www.waveshare.com/wiki/RPi_Zero_V1.3_Camera",
-    "arducam_spy_search": "https://www.arducam.com/?s=spy&post_type=product",
-    "spy_120_locator": "https://www.google.com/search?q=%22Raspberry+Pi+Zero+Spy+Camera%22+%22120%22",
+    "waveshare_zero_product": "https://www.waveshare.com/rpi-zero-v1.3-camera.htm",
+    "arducam_spy_catalog": "https://www.arducam.com/catalogsearch/result/?q=spy",
+    "spy_120_bing_locator": "https://www.bing.com/search?q=%22Raspberry+Pi+Zero+Spy+Camera%22+120",
 }
 
 

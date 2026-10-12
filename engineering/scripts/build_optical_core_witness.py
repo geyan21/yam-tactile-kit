@@ -99,8 +99,25 @@ def main():
         lower = np.minimum(lower, upper-.5)
         web_profile = Polygon(np.vstack((np.column_stack((sy, lower)), np.column_stack((sy, upper))[::-1])))
         webs = [yz_prism(web_profile, limits[0], limits[1]-limits[0]) for limits in cfg["side_web_x_mm"]]
+        def description(shape):
+            return {"valid": shape.isValid(), "solids": [
+                {"volume_mm3": abs(s.Volume()),
+                 "bounds": [[s.BoundingBox().xmin, s.BoundingBox().ymin, s.BoundingBox().zmin],
+                            [s.BoundingBox().xmax, s.BoundingBox().ymax, s.BoundingBox().zmax]]}
+                for s in shape.Solids()]}
+        elements = {"windowed_frame": frame, "backing": backing, "left_web": webs[0], "right_web": webs[1]}
+        joins = [{"a": name, "b": other, "common_volume_mm3": overlap(shape, elements[other])}
+                 for name, shape in elements.items() for other in elements if name < other]
+        debug = {"elements": {name: description(shape) for name, shape in elements.items()}, "joins": joins,
+                 "physical_specimens_tested": 0, "scope": "Intermediate join diagnostics; not fabrication acceptance"}
+        (folder/"debug_join.json").write_text(json.dumps(debug, indent=2)+"\n")
+        for name, shape in elements.items():
+            cq.exporters.export(shape, str(folder/("debug_"+name+".step")))
         frame = frame.fuse(backing, *webs).clean()
+        debug["after_union"] = description(frame)
+        (folder/"debug_union.json").write_text(json.dumps(debug, indent=2)+"\n")
         if not frame.isValid() or len(frame.Solids()) != 1:
+            print(json.dumps({"directory": str(folder.relative_to(ROOT)), "join_diagnostics": debug}, indent=2), flush=True)
             raise ValueError("Windowed frame and backing do not form one valid connected body")
         print("Fixed mirror backing and side webs joined.", flush=True)
         guards = [("nail", block(-40, 20, -150, cfg["nail_protection_y_max_mm"], -20, 60))]
