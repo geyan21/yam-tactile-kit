@@ -1,0 +1,28 @@
+{
+  "schema": "yam-o1-light-mount/1",
+  "carrier_outer_uv_half_mm": 8.6,
+  "carrier_aperture_diameter_mm": 8.2,
+  "carrier_floor_n_mm": [4.3, 4.8],
+  "pcb_edge_clearance_mm": 0.1,
+  "clip_lip_inner_abs_u_mm": 7.75,
+  "clip_lip_n_mm": [5.65, 6.25],
+  "clip_v_segments_mm": [[-5, -3], [3, 5]],
+  "camera_front_mount_uv_mm": [[-10.5, -0.1], [10.5, -0.1]],
+  "post_diameter_mm": 4.5,
+  "post_n_mm": [0, 4.8],
+  "mount_clear_hole_mm": 2.2,
+  "bridge_v_mm": [-1.8, 1.6],
+  "lead_exit_u_mm": [-7.8, -3.4],
+  "lead_exit_v_mm": [4.8, 8.7],
+  "replacement_screw_length_mm": 14,
+  "washer_count_per_light_mount": 3,
+  "washer_thickness_mm": 0.5,
+  "white_coating_vertical_thickness_target_mm": 0.1,
+  "limits": [
+    "The carrier uses two existing camera mounting holes and M2x14 screws with three 0.5 mm washers at each head; it does not load the autofocus barrel or housing.",
+    "The ring PCB snaps beneath four short side lips, separated from the camera washer stacks. Verify retention and solder-wire clearance on the actual print.",
+    "Camera component envelopes, screw lengths and the unidentified YAM drive require incoming/installed fit acceptance.",
+    "Only local LED wire departure and the camera-lid cable opening are specified; size and secure full cable slack on the actual gripper.",
+    "The white overcoat is a nominal process envelope, not a calibrated optical surface."
+  ]
+}

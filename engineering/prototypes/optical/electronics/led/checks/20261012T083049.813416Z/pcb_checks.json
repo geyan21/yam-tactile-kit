@@ -1,0 +1,26 @@
+{
+  "schema": "yam-o1-led-fabrication/1",
+  "violations": 0,
+  "unconnected": 0,
+  "tool": "10.0.7",
+  "source_sha256": "75993299357f89b31ea5047f20e054a61cd30b5fb1002a93ab5d7fba029bafd8",
+  "physical_boards_tested": 0,
+  "checked_pcb_sha256": "48e6501e3809daadac3df4be7b0029db068144526b10aef2eb655258c945cbb4",
+  "export_copper_layers": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "files": {
+    "o1_blue_ring-B_Cu.gbl": "0e542c941c9c349708e56d75dd1d7955cc1a003228c1ec8ec18abcdd6a93b7d8",
+    "o1_blue_ring-B_Mask.gbs": "72088c5035058b0e904583aade380d9d5f5409f2563789fdde7031c11d63ac77",
+    "o1_blue_ring-Edge_Cuts.gm1": "df03fcff8eed3b5cb867877119efc25028f2c532c1fbd3f7724c2b6ef70715ca",
+    "o1_blue_ring-F_Cu.gtl": "01bc697370cdd2f77bd3c7b552313fabfd880419775deb3679ab6186f43c79bd",
+    "o1_blue_ring-F_Mask.gts": "68dd53bd5e5008163302fab7763e41396521b69acc03d3158de002083df7e679",
+    "o1_blue_ring-F_Paste.gtp": "0263b5a34833bbec6def173e008285e751a110b8b41c090c5f267910ba8c1915",
+    "o1_blue_ring-F_Silkscreen.gto": "777d6e9c5ae1ce7ed8e112bcf08fde54139b7d40f9ad864c19df738153192a27",
+    "o1_blue_ring-job.gbrjob": "22a9fa929c4a5fe29dbecdc28c7ecef8e47dec074038ab55ad9e9eecb2c7d9ac",
+    "o1_blue_ring.drl": "3574b483888aa39629dbbf97aeb0db8871a529120d16b00798e853c5ce6efa3f"
+  },
+  "checker_sha256": "ed850119b6e2e4a11a8e0115374f50b1dd730aa06b8ce2283723d634eba9b3da",
+  "limits": "Digital copper/connectivity only. Physical assembly, brightness, optical uniformity and temperature are untested."
+}

@@ -1,0 +1,209 @@
+{
+  "schema": "yam-o1-gel-tools-result/1",
+  "parts": [
+    {
+      "id": "o1_gel_mold_contact_half",
+      "purpose": "Rigid cavity half, smooth object-facing surface and flange steps",
+      "material": "Sealed/smoothed rigid print or machined mold; cure compatibility required",
+      "kind": "fabricate",
+      "step": "cad/o1_gel_mold_contact_half.step",
+      "stl": "cad/o1_gel_mold_contact_half.stl",
+      "sha256_step": "ebdc4dba9c4cd7d75a797470756225ba099a8a76fbc3bf14a198d354633bd2f6",
+      "sha256_stl": "1f848f5bfd4ccda0d27c3fb31818924467f0031489cd13ed9e23463664845921",
+      "volume_mm3": 24209.358131009634,
+      "bounds_mm": [
+        [
+          -21.5,
+          -99.82112121582031,
+          -7.412248611450195
+        ],
+        [
+          6.5,
+          -16.99801254272461,
+          14.383660316467285
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_gel_mold_rear_half",
+      "purpose": "Matching rear-face lid with four fill and four vent holes",
+      "material": "Sealed/smoothed rigid mold",
+      "kind": "fabricate",
+      "step": "cad/o1_gel_mold_rear_half.step",
+      "stl": "cad/o1_gel_mold_rear_half.stl",
+      "sha256_step": "8b4c10512efad07b016dfff4663449e08abdc7a747570ff1989fc65ebdfe873c",
+      "sha256_stl": "4392d7eb690f7a61528a732f51bd6e8fe1f859de7aa9e005e73660dfebc6fb59",
+      "volume_mm3": 31355.872152146672,
+      "bounds_mm": [
+        [
+          -21.5,
+          -99.82112121582031,
+          -0.9122486710548401
+        ],
+        [
+          6.5,
+          -16.99801254272461,
+          18.3836612701416
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_gel_mold_cavity_reference",
+      "purpose": "Exact clear-gel cavity; cast Solaris, do not print this as a sensing replacement",
+      "material": "Smooth-On Solaris",
+      "kind": "reference_only",
+      "step": "cad/o1_gel_mold_cavity_reference.step",
+      "stl": "cad/o1_gel_mold_cavity_reference.stl",
+      "sha256_step": "990bca6115d9d0f02e06d98b560702094048808d0385d5a7801e98ece70e2037",
+      "sha256_stl": "70485315e67d4bb26944f095fa9e5f0c18eaca58b6edf32a3646ef7bd8556bb4",
+      "volume_mm3": 2860.0106218586193,
+      "bounds_mm": [
+        [
+          -15.5,
+          -94.0,
+          -3.4122486114501953
+        ],
+        [
+          0.5,
+          -22.99801254272461,
+          14.383660316467285
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_marker_stencil",
+      "purpose": "Flexible curved stencil for 42 black dots, 0.6 mm target diameter",
+      "material": "0.2 mm flexible stencil; qualify cut/drill and conformance",
+      "kind": "fabricate",
+      "step": "cad/o1_marker_stencil.step",
+      "stl": "cad/o1_marker_stencil.stl",
+      "sha256_step": "43e53210583e0ed2d5e5afa7a78ab42127f668f9a7ece3798311a8ba36ebc30c",
+      "sha256_stl": "365c38c90b968e5fba65fd7f69ad26ddf97e226db2727b35c73dfad4bb616b7a",
+      "volume_mm3": 182.39126979419044,
+      "bounds_mm": [
+        [
+          -14.0,
+          -94.0,
+          -3.6622486114501953
+        ],
+        [
+          -1.0,
+          -23.049999237060547,
+          11.833701133728027
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "checks": [
+    {
+      "a": "o1_gel_mold_contact_half",
+      "b": "o1_gel_mold_rear_half",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_mold_contact_half",
+      "b": "o1_gel_mold_cavity_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_mold_rear_half",
+      "b": "o1_gel_mold_cavity_reference",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "failures": [],
+  "passed_nominal_checks": true,
+  "physical_specimens_tested": 0,
+  "ports": [
+    {
+      "x_mm": -7.5,
+      "y_mm": -87,
+      "diameter_mm": 3,
+      "purpose": "fill"
+    },
+    {
+      "x_mm": -7.5,
+      "y_mm": -69,
+      "diameter_mm": 3,
+      "purpose": "fill"
+    },
+    {
+      "x_mm": -7.5,
+      "y_mm": -49,
+      "diameter_mm": 3,
+      "purpose": "fill"
+    },
+    {
+      "x_mm": -7.5,
+      "y_mm": -29,
+      "diameter_mm": 3,
+      "purpose": "fill"
+    },
+    {
+      "x_mm": -13.5,
+      "y_mm": -93,
+      "diameter_mm": 1,
+      "purpose": "vent"
+    },
+    {
+      "x_mm": -13.5,
+      "y_mm": -24,
+      "diameter_mm": 1,
+      "purpose": "vent"
+    },
+    {
+      "x_mm": -1.5,
+      "y_mm": -93,
+      "diameter_mm": 1,
+      "purpose": "vent"
+    },
+    {
+      "x_mm": -1.5,
+      "y_mm": -24,
+      "diameter_mm": 1,
+      "purpose": "vent"
+    }
+  ],
+  "cavity_volume_mm3": 2860.0106218586193,
+  "marker_count": 42,
+  "limits": [
+    "Two openable rigid mold halves form the clear gel; the parting surface is the gel rear face.",
+    "No cure shrinkage compensation is assumed. Use compatibility/thickness coupons, smooth the cavity and measure the cured result.",
+    "Load gel into the open cavity, lower the lid slowly, and use fill/vent openings to release excess and bubbles.",
+    "M3 mold bolts are shop fixtures: choose measured grip length plus washers/nuts; do not print bolts as substitutes.",
+    "The flat marker pattern has arc-length spacing; the matching flexible stencil has the nominal curved contact surface.",
+    "White coating thickness, dot opacity, demolding and adhesion remain physical process acceptance items."
+  ],
+  "input_sha256": {
+    "engineering/designs/optical_molds.json": "d2f603cbd51c124cbaea6f01354b7e2eb2991ab3aa271ef39afec2e27dc95f94",
+    "engineering/designs/optical_gel_cartridge.json": "d0914d7a2dfac0de0ce1aa7c2cf876a992c27dd2035b6559c50500a533f9906e",
+    "engineering/scripts/build_optical_gel_tools.py": "b2b63ac15818cd68843538dc7a26a4c892bff45783c93069ace00c25a2f40c83",
+    "build/engineering/prototypes/optical/path_searches/20261012T065149.643835Z/report.json": "66d6363916d486586e15d03107a797dd882ef8d3880dd09b48bf968e269d06d4",
+    "engineering/designs/optical_path_refinement.json": "deeaf3930dae5630c53bbb6cea7ea8f69221abeb8eebebf042436493b3e5a2dc",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa"
+  }
+}

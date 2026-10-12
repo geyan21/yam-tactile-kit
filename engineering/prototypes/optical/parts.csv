@@ -1,0 +1,88 @@
+id,kind,purpose,material,STEP,STL
+o1_retained_gel_frame,fabricate,"Fixed-optics frame with retained root bay, closed side walls and gel seats",Opaque rigid PETG/PA12 prototype,cad/o1_retained_gel_frame.step,cad/o1_retained_gel_frame.stl
+o1_retained_gel_blank,reference_only,"Cast clear silicone gel with rear flanges; use its mold, not a rigid printed substitution",Smooth-On Solaris clear platinum-cure silicone,cad/o1_retained_gel_blank.step,cad/o1_retained_gel_blank.stl
+o1_gel_retaining_clip_0,fabricate,Removable side clip retaining the gel's rear flange,Opaque rigid PETG/PA12 prototype,cad/o1_gel_retaining_clip_0.step,cad/o1_gel_retaining_clip_0.stl
+o1_gel_retaining_clip_1,fabricate,Removable side clip retaining the gel's rear flange,Opaque rigid PETG/PA12 prototype,cad/o1_gel_retaining_clip_1.step,cad/o1_gel_retaining_clip_1.stl
+o1_gel_seat_bond_0,reference_only,Nominal thin seating bond; qualify adhesion and cured thickness,Silicone-compatible bond/process reference,cad/o1_gel_seat_bond_0.step,cad/o1_gel_seat_bond_0.stl
+o1_gel_seat_bond_1,reference_only,Nominal thin seating bond; qualify adhesion and cured thickness,Silicone-compatible bond/process reference,cad/o1_gel_seat_bond_1.step,cad/o1_gel_seat_bond_1.stl
+o1_camera_bay_lid,fabricate,Removable opaque bay lid with captive-nut access and a baffled cable opening,Opaque PETG prototype,cad/o1_camera_bay_lid.step,cad/o1_camera_bay_lid.stl
+o1_mirror_sheet_witness,reference_only,Reflective PET plane on a fixed backing,0.2 mm reflective PET reference,cad/o1_mirror_sheet_witness.step,cad/o1_mirror_sheet_witness.stl
+o1_mirror_bond_witness,reference_only,Nominal thin mirror adhesive layer,0.05 mm adhesive reference,cad/o1_mirror_bond_witness.step,cad/o1_mirror_bond_witness.stl
+o1_camera_pcb_reference,reference_only,PCB outline and mounting holes,Purchased Camera Module 3 Wide reference,cad/o1_camera_pcb_reference.step,cad/o1_camera_pcb_reference.stl
+o1_camera_focus_housing_reference,reference_only,Nominal autofocus-housing envelope,Purchased Camera Module 3 Wide reference,cad/o1_camera_focus_housing_reference.step,cad/o1_camera_focus_housing_reference.stl
+o1_camera_lens_reference,reference_only,Nominal lens barrel; actual aperture and pupil require acceptance,Purchased Camera Module 3 Wide reference,cad/o1_camera_lens_reference.step,cad/o1_camera_lens_reference.stl
+o1_camera_rear_clearance_reference_0,reference_only,Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part,Purchased Camera Module 3 Wide reference,cad/o1_camera_rear_clearance_reference_0.step,cad/o1_camera_rear_clearance_reference_0.stl
+o1_camera_rear_clearance_reference_1,reference_only,Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part,Purchased Camera Module 3 Wide reference,cad/o1_camera_rear_clearance_reference_1.step,cad/o1_camera_rear_clearance_reference_1.stl
+o1_camera_rear_clearance_reference_2,reference_only,Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part,Purchased Camera Module 3 Wide reference,cad/o1_camera_rear_clearance_reference_2.step,cad/o1_camera_rear_clearance_reference_2.stl
+o1_camera_mount_0_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_0_nut.step,cad/o1_camera_mount_0_nut.stl
+o1_camera_mount_1_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_1_nut.step,cad/o1_camera_mount_1_nut.stl
+o1_camera_mount_2_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_2_washer.step,cad/o1_camera_mount_2_washer.stl
+o1_camera_mount_2_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_2_screw.step,cad/o1_camera_mount_2_screw.stl
+o1_camera_mount_2_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_2_nut.step,cad/o1_camera_mount_2_nut.stl
+o1_camera_mount_3_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_3_washer.step,cad/o1_camera_mount_3_washer.stl
+o1_camera_mount_3_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_3_screw.step,cad/o1_camera_mount_3_screw.stl
+o1_camera_mount_3_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_camera_mount_3_nut.step,cad/o1_camera_mount_3_nut.stl
+o1_lid_mount_0_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_0_washer.step,cad/o1_lid_mount_0_washer.stl
+o1_lid_mount_0_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_0_screw.step,cad/o1_lid_mount_0_screw.stl
+o1_lid_mount_0_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_0_nut.step,cad/o1_lid_mount_0_nut.stl
+o1_lid_mount_1_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_1_washer.step,cad/o1_lid_mount_1_washer.stl
+o1_lid_mount_1_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_1_screw.step,cad/o1_lid_mount_1_screw.stl
+o1_lid_mount_1_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_1_nut.step,cad/o1_lid_mount_1_nut.stl
+o1_lid_mount_2_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_2_washer.step,cad/o1_lid_mount_2_washer.stl
+o1_lid_mount_2_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_2_screw.step,cad/o1_lid_mount_2_screw.stl
+o1_lid_mount_2_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_2_nut.step,cad/o1_lid_mount_2_nut.stl
+o1_lid_mount_3_washer,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_3_washer.step,cad/o1_lid_mount_3_washer.stl
+o1_lid_mount_3_screw,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_3_screw.step,cad/o1_lid_mount_3_screw.stl
+o1_lid_mount_3_nut,reference_only,M2 dimensional hardware reference; thread form is not modeled,Measured M2 metal hardware,cad/o1_lid_mount_3_nut.step,cad/o1_lid_mount_3_nut.stl
+o1_gel_clip_0_0_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_0_washer.step,cad/o1_gel_clip_0_0_washer.stl
+o1_gel_clip_0_0_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_0_screw.step,cad/o1_gel_clip_0_0_screw.stl
+o1_gel_clip_0_0_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_0_nut.step,cad/o1_gel_clip_0_0_nut.stl
+o1_gel_clip_0_1_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_1_washer.step,cad/o1_gel_clip_0_1_washer.stl
+o1_gel_clip_0_1_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_1_screw.step,cad/o1_gel_clip_0_1_screw.stl
+o1_gel_clip_0_1_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_1_nut.step,cad/o1_gel_clip_0_1_nut.stl
+o1_gel_clip_0_2_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_2_washer.step,cad/o1_gel_clip_0_2_washer.stl
+o1_gel_clip_0_2_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_2_screw.step,cad/o1_gel_clip_0_2_screw.stl
+o1_gel_clip_0_2_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_2_nut.step,cad/o1_gel_clip_0_2_nut.stl
+o1_gel_clip_0_3_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_3_washer.step,cad/o1_gel_clip_0_3_washer.stl
+o1_gel_clip_0_3_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_3_screw.step,cad/o1_gel_clip_0_3_screw.stl
+o1_gel_clip_0_3_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_0_3_nut.step,cad/o1_gel_clip_0_3_nut.stl
+o1_gel_clip_1_0_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_0_washer.step,cad/o1_gel_clip_1_0_washer.stl
+o1_gel_clip_1_0_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_0_screw.step,cad/o1_gel_clip_1_0_screw.stl
+o1_gel_clip_1_0_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_0_nut.step,cad/o1_gel_clip_1_0_nut.stl
+o1_gel_clip_1_1_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_1_washer.step,cad/o1_gel_clip_1_1_washer.stl
+o1_gel_clip_1_1_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_1_screw.step,cad/o1_gel_clip_1_1_screw.stl
+o1_gel_clip_1_1_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_1_nut.step,cad/o1_gel_clip_1_1_nut.stl
+o1_gel_clip_1_2_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_2_washer.step,cad/o1_gel_clip_1_2_washer.stl
+o1_gel_clip_1_2_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_2_screw.step,cad/o1_gel_clip_1_2_screw.stl
+o1_gel_clip_1_2_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_2_nut.step,cad/o1_gel_clip_1_2_nut.stl
+o1_gel_clip_1_3_washer,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_3_washer.step,cad/o1_gel_clip_1_3_washer.stl
+o1_gel_clip_1_3_screw,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_3_screw.step,cad/o1_gel_clip_1_3_screw.stl
+o1_gel_clip_1_3_nut,reference_only,Gel-clip M2 dimensional hardware; thread form not modeled,Measured M2 hardware,cad/o1_gel_clip_1_3_nut.step,cad/o1_gel_clip_1_3_nut.stl
+o1_light_mount_0_washer_0,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_0_washer_0.step,cad/o1_light_mount_0_washer_0.stl
+o1_light_mount_0_washer_1,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_0_washer_1.step,cad/o1_light_mount_0_washer_1.stl
+o1_light_mount_0_washer_2,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_0_washer_2.step,cad/o1_light_mount_0_washer_2.stl
+o1_light_mount_0_screw,reference_only,M2x14 replaces the front camera M2x8; original nut remains,Measured M2x14 screw,cad/o1_light_mount_0_screw.step,cad/o1_light_mount_0_screw.stl
+o1_light_mount_1_washer_0,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_1_washer_0.step,cad/o1_light_mount_1_washer_0.stl
+o1_light_mount_1_washer_1,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_1_washer_1.step,cad/o1_light_mount_1_washer_1.stl
+o1_light_mount_1_washer_2,reference_only,One of three M2 washers on the carrier; stack provides screw-tip clearance,"Measured M2 washer, 0.5 mm",cad/o1_light_mount_1_washer_2.step,cad/o1_light_mount_1_washer_2.stl
+o1_light_mount_1_screw,reference_only,M2x14 replaces the front camera M2x8; original nut remains,Measured M2x14 screw,cad/o1_light_mount_1_screw.step,cad/o1_light_mount_1_screw.stl
+o1_led_carrier,fabricate,"Rigid carrier on existing camera screws, lens aperture and four short PCB edge lips",Opaque PETG/PA12 print; actual snap retention unqualified,cad/o1_led_carrier.step,cad/o1_led_carrier.stl
+o1_led_pcb_reference,reference_only,16x16x0.8 mm two-layer ring; component face toward mirror,FR4; order the checked fabrication ZIP,cad/o1_led_pcb_reference.step,cad/o1_led_pcb_reference.stl
+o1_D1_body_reference,reference_only,Nominal body: Kingbright APT2012QBC/D,Purchased component or solder-wire clearance reference,cad/o1_D1_body_reference.step,cad/o1_D1_body_reference.stl
+o1_D2_body_reference,reference_only,Nominal body: Kingbright APT2012QBC/D,Purchased component or solder-wire clearance reference,cad/o1_D2_body_reference.step,cad/o1_D2_body_reference.stl
+o1_D3_body_reference,reference_only,Nominal body: Kingbright APT2012QBC/D,Purchased component or solder-wire clearance reference,cad/o1_D3_body_reference.step,cad/o1_D3_body_reference.stl
+o1_D4_body_reference,reference_only,Nominal body: Kingbright APT2012QBC/D,Purchased component or solder-wire clearance reference,cad/o1_D4_body_reference.step,cad/o1_D4_body_reference.stl
+o1_R1_body_reference,reference_only,Nominal body: 220 ohm 1% 1206 >=0.25 W,Purchased component or solder-wire clearance reference,cad/o1_R1_body_reference.step,cad/o1_R1_body_reference.stl
+o1_R2_body_reference,reference_only,Nominal body: 220 ohm 1% 1206 >=0.25 W,Purchased component or solder-wire clearance reference,cad/o1_R2_body_reference.step,cad/o1_R2_body_reference.stl
+o1_R3_body_reference,reference_only,Nominal body: 220 ohm 1% 1206 >=0.25 W,Purchased component or solder-wire clearance reference,cad/o1_R3_body_reference.step,cad/o1_R3_body_reference.stl
+o1_R4_body_reference,reference_only,Nominal body: 220 ohm 1% 1206 >=0.25 W,Purchased component or solder-wire clearance reference,cad/o1_R4_body_reference.step,cad/o1_R4_body_reference.stl
+o1_J1_body_reference,reference_only,"Nominal body: 28 AWG soldered leads: 1=+5V, 2=GND",Purchased component or solder-wire clearance reference,cad/o1_J1_body_reference.step,cad/o1_J1_body_reference.stl
+o1_white_coating_reference,reference_only,Nominal 0.1 mm white coating over black marker dots; cured thickness/opacity must be measured,Psycho Paint / Silc Pig White,cad/o1_white_coating_reference.step,cad/o1_white_coating_reference.stl
+o1_ch0_mount,reference_only,Retained R1 CH0/CH1 thin nail construction; separate 100k continuity resistor at each cell,0.1 mm conformal mounting adhesive target,cad/o1_ch0_mount.step,cad/o1_ch0_mount.stl
+o1_ch0_n0_laminate,reference_only,Retained R1 CH0/CH1 thin nail construction; separate 100k continuity resistor at each cell,0.3 mm R1 N0 pressure-film laminate target,cad/o1_ch0_n0_laminate.step,cad/o1_ch0_n0_laminate.stl
+o1_ch1_mount,reference_only,Retained R1 CH0/CH1 thin nail construction; separate 100k continuity resistor at each cell,0.1 mm conformal mounting adhesive target,cad/o1_ch1_mount.step,cad/o1_ch1_mount.stl
+o1_ch1_n0_laminate,reference_only,Retained R1 CH0/CH1 thin nail construction; separate 100k continuity resistor at each cell,0.3 mm R1 N0 pressure-film laminate target,cad/o1_ch1_n0_laminate.step,cad/o1_ch1_n0_laminate.stl
+o1_gel_mold_contact_half,fabricate,"Rigid cavity half, smooth object-facing surface and flange steps",Sealed/smoothed rigid print or machined mold; cure compatibility required,cad/o1_gel_mold_contact_half.step,cad/o1_gel_mold_contact_half.stl
+o1_gel_mold_rear_half,fabricate,Matching rear-face lid with four fill and four vent holes,Sealed/smoothed rigid mold,cad/o1_gel_mold_rear_half.step,cad/o1_gel_mold_rear_half.stl
+o1_gel_mold_cavity_reference,reference_only,"Exact clear-gel cavity; cast Solaris, do not print this as a sensing replacement",Smooth-On Solaris,cad/o1_gel_mold_cavity_reference.step,cad/o1_gel_mold_cavity_reference.stl
+o1_marker_stencil,fabricate,"Flexible curved stencil for 42 black dots, 0.6 mm target diameter",0.2 mm flexible stencil; qualify cut/drill and conformance,cad/o1_marker_stencil.step,cad/o1_marker_stencil.stl

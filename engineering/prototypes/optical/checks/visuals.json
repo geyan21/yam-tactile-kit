@@ -1,0 +1,38 @@
+{
+  "schema": "yam-o1-prototype-visuals/1",
+  "physical_specimens_tested": 0,
+  "input_sha256": {
+    "engineering/scripts/draw_optical_prototype.py": "039d1371dae45794d9a6057c7767886a6db179f4d1f74df5e86ec5c1e49236f4",
+    "engineering/scripts/draw_capacitive_prototype.py": "be5480906e699b690a48e4cac61543d6516ace1a36c92ffe92c54e4d702d5c88",
+    "engineering/web/o1_wiring.svg": "e5952960e522934f98fc077ba568ae66eda5222359870e957301e4b605355e4c",
+    "build/engineering/prototypes/optical/path_searches/20261012T065149.643835Z/report.json": "66d6363916d486586e15d03107a797dd882ef8d3880dd09b48bf968e269d06d4",
+    "engineering/designs/optical_path_refinement.json": "deeaf3930dae5630c53bbb6cea7ea8f69221abeb8eebebf042436493b3e5a2dc",
+    "build/engineering/prototypes/optical/led_boards/r2/o1_blue_ring.json": "4499f5366751f5aebb0de0945b37f2087217f8a732dbce8a5d780fe8aed613ba",
+    "build/engineering/prototypes/optical/gel_tools/20261012T083055.382375Z/markers.json": "9bacceb68133efd276c060c7e0b6231fddee43fea494552a8635ef703f952f62",
+    "build/engineering/prototypes/optical/assemblies/20261012T085929.368510Z/report.json": "9649cc74fb4920a00dad046ab1a8be9d324fca47ba74ba6a4d188c1712500880",
+    "build/engineering/prototypes/optical/gel_tools/20261012T083055.382375Z/report.json": "1ea8422aa7d38c943250c687ba4ba004d040fb24af7432113aa56035430cade2",
+    "build/engineering/prototypes/optical/refraction_screens/20261012T084021.272020Z/report.json": "c1fbe72ec3df15c9ddb5c59fa6e827991077dd837e70e6d9eba529c6c84a6136",
+    "build/engineering/prototypes/optical/assemblies/20261012T085929.368510Z/models.json": "5ad421cd28730f4b9cb9eb2ced32a70abc126b55a6868c50a94bffc6b8cc3232",
+    "build/engineering/prototypes/optical/gel_tools/20261012T083055.382375Z/models.json": "0f765e19d52715aaf796e5fecaaa18e1bcf931d83e024f7479d0fd3044c1f32c"
+  },
+  "files_sha256": {
+    "o1_mirror_cut.svg": "ae5976955934a52b76973806280d6f004babcb42903d78e93effa4be7b611b1d",
+    "o1_molds.png": "859c7d8cf38d03721a02e1bdcfb566d96aca52ba5598599cb58253a7d3b52d41",
+    "o1_marker_pattern.svg": "ed24bb75df3b7e8c522f26d3989975197724b48f892516558465e8cdcc906e4f",
+    "o1_refraction.png": "7a34a504b60800f67f8050ac7b3b0b5789f2e084459d37d4672222efdce1938f",
+    "o1_assembly.svg": "2a38f22f44de19f3186e615be6d90cf0133e60dd9259b7f8b504039b783ede0d",
+    "o1_led_assembly.svg": "f4d20c4bb689f7ba6a0a64496ca4c6da08cdbdfab289073459476b510e54c674",
+    "o1_refraction.pdf": "f4fb25e6563093b9353d1e82b5a04143e35f5ba91f7b33bdfdd7196e6d876991",
+    "models.json": "ade665400687d7fdd5d064047a580f9fc9fa0a741762a969120eb32260a38911",
+    "o1_sensor_placement.pdf": "011eff425a985c213428c4da5faa88a544892c99fcf5b165341e667aaa9fed05",
+    "o1_sensor_placement.svg": "5291a6a452b0e4cc0169796606935bec5ceb4d3dc44f102d8e3d5e5658e21c27",
+    "o1_assembly.pdf": "55560ce6f422ac923913cfb947a32024070d9efb28c66fb4263f78af2e399fc1",
+    "o1_molds.pdf": "3050340d786fd8a2e4a292aed8b96027e3d7f0c703cf3af51a9e44d90378bf0a",
+    "o1_refraction.svg": "04073e84d1ed9fbd218def8bf74f9d9339e07a84509026b9bf53363805551f69",
+    "o1_assembly.png": "8f60699902af03669aa4cefab8c37765c355fc4a5899f198249149e3e581a20e",
+    "o1_molds.svg": "1d248bf6ea2bb2f4458e8fba5183ffe824fc1799447d1304a1126b5010003cae",
+    "o1_wiring.svg": "e5952960e522934f98fc077ba568ae66eda5222359870e957301e4b605355e4c",
+    "o1_sensor_placement.png": "4964df3b80189944402619f638d2bc12a8d24c1fa31a98cdbcd3dfee17626ce1"
+  },
+  "limits": "Nominal CAD and declared neutral optics model; no fabricated photographs or measured force data."
+}

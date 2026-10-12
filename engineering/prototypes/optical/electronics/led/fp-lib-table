@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "O1") (type "KiCad") (uri "${KIPRJMOD}/O1.pretty") (options "") (descr "Authored O1 light ring lands")))

@@ -1,0 +1,22 @@
+{
+  "schema": "yam-o1-diagram-review/1",
+  "physical_specimens_tested": 0,
+  "diagrams": [
+    {
+      "source": "build/engineering/prototypes/optical/visuals/20261012T091039.360002Z/o1_wiring.svg",
+      "source_sha256": "e5952960e522934f98fc077ba568ae66eda5222359870e957301e4b605355e4c",
+      "passed": true,
+      "outside": []
+    },
+    {
+      "source": "build/engineering/prototypes/optical/visuals/20261012T091039.360002Z/o1_led_assembly.svg",
+      "source_sha256": "f4d20c4bb689f7ba6a0a64496ca4c6da08cdbdfab289073459476b510e54c674",
+      "passed": true,
+      "outside": []
+    }
+  ],
+  "passed_canvas_bounds": true,
+  "limits": [
+    "Canvas bounds do not establish internal readability; inspect the saved images."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "method": "Merge vertices at 5 decimal places; remove duplicate/degenerate triangles only",
+  "source_stl_sha256": "adb4e29132d09cd2225897ca01fc7668c8dc5c78f03749038977ebaca01f3641",
+  "source_vertices": 30223,
+  "source_faces": 60680,
+  "result_vertices": 30219,
+  "result_faces": 60670,
+  "max_original_vertex_displacement_mm": 1.9082797281243946e-06,
+  "max_allowed_displacement_mm": 5e-05,
+  "volume_change_mm3": 9.853029041551054e-07,
+  "watertight": true,
+  "consistent_winding": true,
+  "connected_bodies": 1,
+  "passed": true
+}

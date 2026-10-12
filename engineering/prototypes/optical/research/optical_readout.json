@@ -1,0 +1,42 @@
+{
+  "schema": "yam-o1-host-and-bonding/1",
+  "host": {
+    "part": "Raspberry Pi 4 Model B",
+    "power": "Manufacturer-compatible 5.1 V / 3 A USB-C supply",
+    "camera_connection": "15-pin CSI ribbon; Camera Module 3 Wide visible-light variant",
+    "source_url": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf",
+    "source_sha256": "7e18898418a47cdbab2f6184ae93fbe6e4943c45475cecbe1db8eb11d32f4328"
+  },
+  "nail_readout": {
+    "part": "Adafruit ADS1115 16-bit ADC breakout #1085",
+    "quantity": 1,
+    "source_url": "https://www.adafruit.com/product/1085",
+    "source_sha256": "158dc0bf07b5b14acecf2669dfdf267f7de8c3693d7d23d8e5e1da73d012e663",
+    "chip_source_url": "https://www.ti.com/lit/ds/symlink/ads1115.pdf",
+    "chip_source_sha256": "eefff4d412ce2dcd7e659f47238edc9b2fa02e5971f2625af730502033701834",
+    "supply_v": 3.3,
+    "i2c_address": 72,
+    "i2c_device": "/dev/i2c-1",
+    "full_scale_v": 4.096,
+    "conversion_rate_sps": 860,
+    "mode": "Single shot; verify mux/gain/rate and ready bit on every conversion",
+    "channels": ["A0: nail0", "A1: nail1", "A2: 3.3 V monitor", "A3: grounded, unused"],
+    "pulldown_ohm_each": 10000,
+    "parallel_continuity_ohm_at_each_nail": 100000,
+    "gpio_physical_pins": {"3.3V": 1, "5V_LED": 2, "SDA_GPIO2": 3, "SCL_GPIO3": 5, "GND": 6}
+  },
+  "bonding": {
+    "gel_seats": "Smooth-On Sil-Poxy; nominal 0.10 mm seating bond; qualify Solaris-to-printed-substrate adhesion",
+    "gel_bond_source_url": "https://www.smooth-on.com/products/sil-poxy/",
+    "gel_bond_source_sha256": "5e2292d2b6d110949aa863efd3ce207e0a621abf55ebcf40de15a1ef5bd2ab4f",
+    "manufacturer_full_cure_hours": 24,
+    "mirror": "3M 467MP acrylic transfer adhesive, nominal 0.05 mm; retained material choice from the F1/K1 study; qualify actual PET/backing",
+    "nail": "Retain R1 N0: 0.30 mm laminate target plus measured non-foam mounting adhesive, nominal 0.10 mm"
+  },
+  "limits": [
+    "The supplier's ADC resolution/conversion rate is not complete-finger accuracy or acquisition rate.",
+    "The host/ADC and full wiring harness are bench components, not a qualified wrist enclosure.",
+    "The 100k resistor checks the local wire path; it cannot prove every pressure-film failure is detectable.",
+    "Actual camera optics, gel/coating, printed fit, electrical assembly and sensing performance remain untested."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "assembly": "build/engineering/prototypes/optical/assemblies/20261012T085929.368510Z",
+  "tools": "build/engineering/prototypes/optical/gel_tools/20261012T083055.382375Z",
+  "board": "build/engineering/prototypes/optical/led_boards/r2",
+  "refraction": "build/engineering/prototypes/optical/refraction_screens/20261012T084021.272020Z",
+  "visuals": "build/engineering/prototypes/optical/visuals/20261012T091039.360002Z",
+  "diagrams": "build/engineering/prototypes/optical/diagram_reviews/20261012T091201.149152Z"
+}

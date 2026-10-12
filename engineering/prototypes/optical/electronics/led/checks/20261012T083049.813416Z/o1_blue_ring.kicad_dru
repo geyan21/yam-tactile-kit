@@ -1,0 +1,7 @@
+(version 1)
+(rule "Clearance" (constraint clearance (min 0.20mm)))
+(rule "Hole clearance" (constraint hole_clearance (min 0.20mm)))
+(rule "Edge" (constraint edge_clearance (min 0.25mm)))
+(rule "Width" (constraint track_width (min 0.20mm)))
+(rule "Drill" (constraint hole_size (min 0.25mm)))
+(rule "Drill separation" (constraint hole_to_hole (min 0.25mm)))

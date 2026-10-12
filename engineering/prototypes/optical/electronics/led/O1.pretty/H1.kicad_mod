@@ -1,0 +1,60 @@
+(footprint "H1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "H1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7c463c48-4291-4b09-bae8-4ac4b4006f17")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "Lens aperture"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "84323980-7286-44fc-886e-292d9462f00b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9ae693d4-eeef-457c-bfde-e3d444295001")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e471c278-bff6-4ca6-8f9a-abacf78bed5f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr board_only exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 8 8)
+		(drill 8)
+		(layers "*.Cu" "*.Mask")
+		(uuid "9695e05c-f5d1-4136-96d9-71c6f8f5e849")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,28 @@
+{
+  "schema": "yam-o1-gel-tools/1",
+  "x_bounds_mm": [-21.5, 6.5],
+  "y_margin_mm": 6,
+  "bottom_wall_mm": 4,
+  "lid_wall_mm": 4,
+  "m3_clearance_mm": 3.4,
+  "bolt_x_mm": [-18.5, 3.5],
+  "bolt_end_margin_mm": 3,
+  "fill_y_mm": [-87, -69, -49, -29],
+  "fill_diameter_mm": 3,
+  "vent_y_mm": [-93, -24],
+  "vent_x_mm": [-13.5, -1.5],
+  "vent_diameter_mm": 1,
+  "marker_x_mm": [-11.5, -7.5, -3.5],
+  "marker_y_mm": [-91, -86, -81, -76, -71, -66, -61, -56, -51, -46, -41, -36, -31, -26],
+  "marker_diameter_mm": 0.6,
+  "stencil_thickness_mm": 0.2,
+  "stencil_clearance_mm": 0.05,
+  "limits": [
+    "Two openable rigid mold halves form the clear gel; the parting surface is the gel rear face.",
+    "No cure shrinkage compensation is assumed. Use compatibility/thickness coupons, smooth the cavity and measure the cured result.",
+    "Load gel into the open cavity, lower the lid slowly, and use fill/vent openings to release excess and bubbles.",
+    "M3 mold bolts are shop fixtures: choose measured grip length plus washers/nuts; do not print bolts as substitutes.",
+    "The flat marker pattern has arc-length spacing; the matching flexible stencil has the nominal curved contact surface.",
+    "White coating thickness, dot opacity, demolding and adhesion remain physical process acceptance items."
+  ]
+}

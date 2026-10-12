@@ -1,0 +1,10 @@
+reference,value,x_mm,y_mm,rotation_deg
+D1,Kingbright APT2012QBC/D,3.7,3.7,0
+D2,Kingbright APT2012QBC/D,12.3,3.7,0
+D3,Kingbright APT2012QBC/D,12.3,12.3,0
+D4,Kingbright APT2012QBC/D,3.7,12.3,0
+R1,220 ohm 1% 1206 >=0.25 W,8,1.6,0
+R2,220 ohm 1% 1206 >=0.25 W,14.4,8,90
+R3,220 ohm 1% 1206 >=0.25 W,8,14.4,0
+R4,220 ohm 1% 1206 >=0.25 W,1.6,8,90
+J1,"28 AWG soldered leads: 1=+5V, 2=GND",2.4,1.8,0

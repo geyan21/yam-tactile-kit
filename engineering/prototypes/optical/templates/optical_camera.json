@@ -1,0 +1,12 @@
+{
+  "schema": "yam-o1-camera-config/1",
+  "size": [2304, 1296],
+  "save_roi": [0, 0, 2304, 1296],
+  "frame_duration_us": 100000,
+  "exposure_us": 6000,
+  "analogue_gain": 1.0,
+  "colour_gains": [1.0, 1.0],
+  "lens_position_dioptres": 10.0,
+  "rotation_about_optical_axis_deg": 180,
+  "notes": "Initial setup values only. Inspect focus/brightness through the entire mirror, then freeze a reference and matching ROI/configuration. The 10 fps target is a stationary bench baseline, not qualified control latency."
+}

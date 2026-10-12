@@ -1,0 +1,4099 @@
+{
+  "schema": "yam-o1-root-bay-result/1",
+  "physical_specimens_tested": 0,
+  "parts": [
+    {
+      "id": "o1_frame_with_camera_bay",
+      "purpose": "Windowed optical frame, retained root cap, 32 mm bay and camera support bosses",
+      "material": "Rigid opaque PETG/PA12 prototype; stiffness unqualified",
+      "kind": "fabricate",
+      "step": "cad/o1_frame_with_camera_bay.step",
+      "stl": "cad/o1_frame_with_camera_bay.stl",
+      "sha256_step": "a50f45afd900bef8c058c5c1e106c1027bba0a1cfb1e28e20fddb47661cc2625",
+      "sha256_stl": "bb043be9a1b944ce4b30a9645871fc455fb3264e7cf6d4812dc91199b8975fbf",
+      "volume_mm3": 36882.265995275644,
+      "bounds_mm": [
+        [
+          -27.5,
+          -149.64706420898438,
+          -4.3130645751953125
+        ],
+        [
+          12.5,
+          -2.7699999809265137,
+          47.84284210205078
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_bay_lid",
+      "purpose": "Removable opaque bay lid with captive-nut access and a baffled cable opening",
+      "material": "Opaque PETG prototype",
+      "kind": "fabricate",
+      "step": "cad/o1_camera_bay_lid.step",
+      "stl": "cad/o1_camera_bay_lid.stl",
+      "sha256_step": "da0aa29f47776ae8e53638df4b35ad8562da4e95399a32b8cee71f0de134a584",
+      "sha256_stl": "e51881b0f84f51e19753c31ad1cff5ff813eaedb8285a249186a338cd68a9cff",
+      "volume_mm3": 1981.7916210460235,
+      "bounds_mm": [
+        [
+          -27.5,
+          -40.79999923706055,
+          25.0
+        ],
+        [
+          12.5,
+          -15.750041007995605,
+          33.5
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_gel_core_witness",
+      "purpose": "Candidate transparent gel section; chemistry/retention still to be completed",
+      "material": "Optical silicone material not yet qualified",
+      "kind": "reference_only",
+      "step": "cad/o1_gel_core_witness.step",
+      "stl": "cad/o1_gel_core_witness.stl",
+      "sha256_step": "3e5d74aa241472f49189b8da679c18b57b73edae0e6ee9ef0c19c3e510610b6a",
+      "sha256_stl": "0ebc7b5d5030c6a727133a9d7dd050cd5d45533715d1b5c4f1795d7ca17c0a86",
+      "volume_mm3": 2711.2158769371154,
+      "bounds_mm": [
+        [
+          -14.0,
+          -126.0,
+          -3.4122486114501953
+        ],
+        [
+          -1.0,
+          -54.99801254272461,
+          14.383660316467285
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_mirror_sheet_witness",
+      "purpose": "Reflective PET plane on a fixed backing",
+      "material": "0.2 mm reflective PET reference",
+      "kind": "reference_only",
+      "step": "cad/o1_mirror_sheet_witness.step",
+      "stl": "cad/o1_mirror_sheet_witness.stl",
+      "sha256_step": "bed2e1a9511fe27f8fe9fbb163b26fc4cf48818874d1326d49106974b7791bdc",
+      "sha256_stl": "4b12ca2c6158606fa939d7471cff26a0794d4499c2a93400b3edb57841988da9",
+      "volume_mm3": 178.89656348976172,
+      "bounds_mm": [
+        [
+          -14.5,
+          -114.85200500488281,
+          14.484407424926758
+        ],
+        [
+          -0.5,
+          -58.77275848388672,
+          45.450225830078125
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_mirror_bond_witness",
+      "purpose": "Nominal thin mirror adhesive layer",
+      "material": "0.05 mm adhesive reference",
+      "kind": "reference_only",
+      "step": "cad/o1_mirror_bond_witness.step",
+      "stl": "cad/o1_mirror_bond_witness.stl",
+      "sha256_step": "045b4939c22cc1555417a722d79577c1ebe085b383cf00519bd3e785bf2cf1cc",
+      "sha256_stl": "176f8e71ddea09d9211fe3614c667010d2d095fc8b9096eb63a0cdac6d45ecf1",
+      "volume_mm3": 44.7241408821427,
+      "bounds_mm": [
+        [
+          -14.5,
+          -114.8760986328125,
+          14.659650802612305
+        ],
+        [
+          -0.5,
+          -58.869144439697266,
+          45.49403762817383
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_pcb_reference",
+      "purpose": "PCB outline and mounting holes",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_pcb_reference.step",
+      "stl": "cad/o1_camera_pcb_reference.stl",
+      "sha256_step": "9d215d158757f3fca80a346a3ad24b7e43f5d99b2f3b72886fd9c578e47ed584",
+      "sha256_stl": "8ae7ee4b40a1539081b3c632654d12cbcdb8dd7d1b057014c4a71744d427bb5e",
+      "volume_mm3": 651.106054543288,
+      "bounds_mm": [
+        [
+          -20.0,
+          -29.388961791992188,
+          5.884249687194824
+        ],
+        [
+          5.0,
+          -21.52237319946289,
+          29.077770233154297
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_focus_housing_reference",
+      "purpose": "Nominal autofocus-housing envelope",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_focus_housing_reference.step",
+      "stl": "cad/o1_camera_focus_housing_reference.stl",
+      "sha256_step": "9ef3538f0b4a7b09239a6a5fbf68fd0e805f46ee90192f3ee47846f36b9d6d39",
+      "sha256_stl": "6f0487597f6187ea4aec8f70f7bf8a9bc92654b9b3b3ffed120ec5aaf7b796a1",
+      "volume_mm3": 474.724800000017,
+      "bounds_mm": [
+        [
+          -12.899999618530273,
+          -30.728479385375977,
+          14.83070182800293
+        ],
+        [
+          -2.0999999046325684,
+          -23.752384185791016,
+          26.342470169067383
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_lens_reference",
+      "purpose": "Nominal lens barrel; actual aperture and pupil require acceptance",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_lens_reference.step",
+      "stl": "cad/o1_camera_lens_reference.stl",
+      "sha256_step": "30f04124825a211e0cb3b5d1e740a351f44359288f43efa180b46bb21711d429",
+      "sha256_stl": "140577f430f1161a1af2db7311a63fee25cb2556b344c8f8b3fb76e458da4d79",
+      "volume_mm3": 160.4722189511354,
+      "bounds_mm": [
+        [
+          -10.975000381469727,
+          -34.23514938354492,
+          17.835718154907227
+        ],
+        [
+          -4.025000095367432,
+          -28.20229148864746,
+          25.700260162353516
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_rear_clearance_reference_0",
+      "purpose": "Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_rear_clearance_reference_0.step",
+      "stl": "cad/o1_camera_rear_clearance_reference_0.stl",
+      "sha256_step": "b2ecfe0df53835b693db4f12499f98e16963604f52cfe5f447a2c2548a6c2227",
+      "sha256_stl": "f5cd6b5bf45780abbab4a80e73f42e0e4c903bfb899cdf8053c110cec01c2cb5",
+      "volume_mm3": 1455.116352331882,
+      "bounds_mm": [
+        [
+          -20.0,
+          -28.3153018951416,
+          5.101391792297363
+        ],
+        [
+          5.0,
+          -18.886157989501953,
+          28.758934020996094
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_rear_clearance_reference_1",
+      "purpose": "Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_rear_clearance_reference_1.step",
+      "stl": "cad/o1_camera_rear_clearance_reference_1.stl",
+      "sha256_step": "853ad3dff535db022485ba86eda7da2266d1baba3632e53d4bc0781716798790",
+      "sha256_stl": "abf66589963eec2e43033777a98078cdc354d4a89017400e25cc2b9b0af2c4d1",
+      "volume_mm3": 0.608151626478215,
+      "bounds_mm": [
+        [
+          -20.0,
+          -28.3153018951416,
+          5.101391792297363
+        ],
+        [
+          -19.280868530273438,
+          -25.474367141723633,
+          6.5736260414123535
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_rear_clearance_reference_2",
+      "purpose": "Conservative rear clearance region outside the reserved mounting lands; not an individual purchased part",
+      "material": "Purchased Camera Module 3 Wide reference",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_rear_clearance_reference_2.step",
+      "stl": "cad/o1_camera_rear_clearance_reference_2.stl",
+      "sha256_step": "917b33a0249ee687b818f3a815a99972ecdd61b4b5c88564f54aa78e68b5e5f2",
+      "sha256_stl": "4b39470e141f57cb3cb922884892ec028f206342a93529f61e60b5cf0e83d047",
+      "volume_mm3": 0.608151626477372,
+      "bounds_mm": [
+        [
+          4.280869007110596,
+          -28.3153018951416,
+          5.101391792297363
+        ],
+        [
+          5.0,
+          -25.474367141723633,
+          6.5736260414123535
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_0_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_0_washer.step",
+      "stl": "cad/o1_camera_mount_0_washer.stl",
+      "sha256_step": "10127735e2c1fb5872b91f2bb6db34c5054f2188457fb683fa4391832b18be94",
+      "sha256_stl": "f6cc0ebd2f6ce57792f4fbe882562db40ded82b11d2be9ba7faf395c41d98c87",
+      "volume_mm3": 6.051492848977342,
+      "bounds_mm": [
+        [
+          0.75,
+          -26.38079833984375,
+          17.9468994140625
+        ],
+        [
+          5.25,
+          -24.6208438873291,
+          22.401704788208008
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_0_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_0_screw.step",
+      "stl": "cad/o1_camera_mount_0_screw.stl",
+      "sha256_step": "ca6f513b90226570112a478935b00b328d6d9bfcbdfa91d25fab319c4d936db6",
+      "sha256_stl": "f8328ed72f4aa9308fb598222680cf4c129e89b5cc932e4e974929d5e610fa7d",
+      "volume_mm3": 47.815040187636654,
+      "bounds_mm": [
+        [
+          1.100000023841858,
+          -28.198440551757812,
+          17.009740829467773
+        ],
+        [
+          4.900000095367432,
+          -17.786897659301758,
+          22.63564109802246
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_0_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_0_nut.step",
+      "stl": "cad/o1_camera_mount_0_nut.stl",
+      "sha256_step": "db3805010a4ac75171dcb4cac5b41208582ececfc98789695ab39de7bb5e87f1",
+      "sha256_stl": "3a03ce01ef3e70c332e29ba3bf5677fc9f31b2089d7744d0ce8a62113d257c2d",
+      "volume_mm3": 17.143702091137968,
+      "bounds_mm": [
+        [
+          1.0,
+          -20.626991271972656,
+          15.862396240234375
+        ],
+        [
+          5.0,
+          -17.778331756591797,
+          20.74557113647461
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_1_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_1_washer.step",
+      "stl": "cad/o1_camera_mount_1_washer.stl",
+      "sha256_step": "d5f6243cc79610140e51dc2159569a740bf0c52d8035559a90563dc0f82e95fa",
+      "sha256_stl": "b5329a502f10862d5b90df681d5fafb7ccdfd89d9df2ac279d13b6e336e33e61",
+      "volume_mm3": 6.051492848977342,
+      "bounds_mm": [
+        [
+          -20.25,
+          -26.38079833984375,
+          17.9468994140625
+        ],
+        [
+          -15.75,
+          -24.6208438873291,
+          22.401704788208008
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_1_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_1_screw.step",
+      "stl": "cad/o1_camera_mount_1_screw.stl",
+      "sha256_step": "9e0db00a69f6a80cb6b7eda25521ae5e552c1c66b4912ae66f9dafd9b612fbea",
+      "sha256_stl": "e8f83afa54d4dbd63d0bebee5a84e0266313d6f2d102e22137296703fdf0dd7b",
+      "volume_mm3": 47.81504018763664,
+      "bounds_mm": [
+        [
+          -19.899999618530273,
+          -28.198440551757812,
+          17.009740829467773
+        ],
+        [
+          -16.100000381469727,
+          -17.786897659301758,
+          22.63564109802246
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_1_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_1_nut.step",
+      "stl": "cad/o1_camera_mount_1_nut.stl",
+      "sha256_step": "89889eb7fbb0ec189fb3b1ca38e490fcbca41e250ff169c6847d5e935caf6842",
+      "sha256_stl": "265fd615cbcf59c076faea87929d5c1bd8383620ba73dc4e19224ecd4113db95",
+      "volume_mm3": 17.143702091137975,
+      "bounds_mm": [
+        [
+          -20.0,
+          -20.626991271972656,
+          15.862396240234375
+        ],
+        [
+          -16.0,
+          -17.778331756591797,
+          20.74557113647461
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_2_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_2_washer.step",
+      "stl": "cad/o1_camera_mount_2_washer.stl",
+      "sha256_step": "5303c9a0c68b4267c24e83f87f5e3b6ba23fb9006c8a2bd3d1da9cd36bedf08f",
+      "sha256_stl": "f9b6494c06095f18119d97d5845933bb917c8b913bf52d7a0671cf7c551bdd40",
+      "volume_mm3": 6.051492848977346,
+      "bounds_mm": [
+        [
+          0.75,
+          -29.93924331665039,
+          5.9641008377075195
+        ],
+        [
+          5.25,
+          -28.179288864135742,
+          10.418905258178711
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_2_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_2_screw.step",
+      "stl": "cad/o1_camera_mount_2_screw.stl",
+      "sha256_step": "d4261ec5c5354fbd1125214ac37647943772b292f83d60c6282df261f7b0fde5",
+      "sha256_stl": "6358bc9396ffe39cff35d5e39d79f0dadccade18fc7dd8e7e2cbf526da8cea28",
+      "volume_mm3": 47.815040187636654,
+      "bounds_mm": [
+        [
+          1.100000023841858,
+          -31.756885528564453,
+          5.026941299438477
+        ],
+        [
+          4.900000095367432,
+          -21.3453426361084,
+          10.65284252166748
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_2_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_2_nut.step",
+      "stl": "cad/o1_camera_mount_2_nut.stl",
+      "sha256_step": "8b61ac1bd858281642116a02f0a36b944582e147b2948727cece897b522afd0f",
+      "sha256_stl": "91ec9121fd06db7c1146bfdb82ddee2d03527bd7eb9ed20b433cd85dbd80f8e7",
+      "volume_mm3": 17.143702091137964,
+      "bounds_mm": [
+        [
+          1.0,
+          -24.185436248779297,
+          3.8795971870422363
+        ],
+        [
+          5.0,
+          -21.336776733398438,
+          8.762772560119629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_3_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_3_washer.step",
+      "stl": "cad/o1_camera_mount_3_washer.stl",
+      "sha256_step": "055f10bef3f027af1ea1261536f3b9fa44e81aec90fb7f87e843225dab4dfc19",
+      "sha256_stl": "87807c4088c2698e5a2e5fe7f132566d62752351dc17d0169f1b6121ef55255a",
+      "volume_mm3": 6.051492848977346,
+      "bounds_mm": [
+        [
+          -20.25,
+          -29.93924331665039,
+          5.9641008377075195
+        ],
+        [
+          -15.75,
+          -28.179288864135742,
+          10.418905258178711
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_3_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_3_screw.step",
+      "stl": "cad/o1_camera_mount_3_screw.stl",
+      "sha256_step": "0758f28c328d01c20f9fabb8a5bce93d18b6f45469986ad00da12ecee19361af",
+      "sha256_stl": "38c2b2789dfab807cf2b3607baecc20e5a7672a380aa66dcff5ce65eec8d8c18",
+      "volume_mm3": 47.81504018763664,
+      "bounds_mm": [
+        [
+          -19.899999618530273,
+          -31.756885528564453,
+          5.026941299438477
+        ],
+        [
+          -16.100000381469727,
+          -21.3453426361084,
+          10.65284252166748
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_camera_mount_3_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_camera_mount_3_nut.step",
+      "stl": "cad/o1_camera_mount_3_nut.stl",
+      "sha256_step": "878cfdbdf3caaa2dbcbc15747437abf66819ab51231ba7fa6f00ea399eecf80e",
+      "sha256_stl": "48507bb1c6528ad43392542fe8f962b13ebb04cea9fbf0e2e9f93262e11d17e0",
+      "volume_mm3": 17.14370209113796,
+      "bounds_mm": [
+        [
+          -20.0,
+          -24.185436248779297,
+          3.8795971870422363
+        ],
+        [
+          -16.0,
+          -21.336776733398438,
+          8.762772560119629
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_0_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_0_washer.step",
+      "stl": "cad/o1_lid_mount_0_washer.stl",
+      "sha256_step": "e724030a21a39d7e9383e1351edae01f9e649bc230d381ef294471cae989174b",
+      "sha256_stl": "3db586347549e5f273bf2705e46c744c9896b1bd748a5429b721992a5b9fc88a",
+      "volume_mm3": 6.051492848977338,
+      "bounds_mm": [
+        [
+          -26.5,
+          -39.74930191040039,
+          33.5
+        ],
+        [
+          -22.0,
+          -35.25069808959961,
+          34.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_0_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_0_screw.step",
+      "stl": "cad/o1_lid_mount_0_screw.stl",
+      "sha256_step": "a7a81088fbf1f90b3861b676066d4b58b9efd5d8663c1d56a8101cf356fcb829",
+      "sha256_stl": "67e4d1dd100d9952feed06e7623b38474e5168e6f17b4acb4e17862efd75158e",
+      "volume_mm3": 47.81504018763663,
+      "bounds_mm": [
+        [
+          -26.149999618530273,
+          -39.399410247802734,
+          26.0
+        ],
+        [
+          -22.350000381469727,
+          -35.600589752197266,
+          36.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_0_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_0_nut.step",
+      "stl": "cad/o1_lid_mount_0_nut.stl",
+      "sha256_step": "2806b5096c980da3c905fc0b224f6181e5aa441ee51183832bf3989198a46d2b",
+      "sha256_stl": "0eae0d71e85af7dc6f4a702b02144cc030407c6f5f98e0efed7d3dc79cd0b0a4",
+      "volume_mm3": 17.143702091137992,
+      "bounds_mm": [
+        [
+          -26.25,
+          -39.80940246582031,
+          26.5
+        ],
+        [
+          -22.25,
+          -35.19059753417969,
+          28.100000381469727
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_1_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_1_washer.step",
+      "stl": "cad/o1_lid_mount_1_washer.stl",
+      "sha256_step": "7b3dafbaa549add1a0e26fce9b9b53d8d5bbb31cddcf1ff813c1499a7cb6c707",
+      "sha256_stl": "3a8c31bf158f2d17824fee0a344bf1dac824c84f6b4577990da9daaada011ea6",
+      "volume_mm3": 6.05149284897734,
+      "bounds_mm": [
+        [
+          -26.5,
+          -21.249300003051758,
+          33.5
+        ],
+        [
+          -22.0,
+          -16.750699996948242,
+          34.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_1_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_1_screw.step",
+      "stl": "cad/o1_lid_mount_1_screw.stl",
+      "sha256_step": "5b7bf8471a5b5e86c3aebf455e956ce788b304dfc7d13d47cdfec445980051ef",
+      "sha256_stl": "429495e704a06acdd71841be87d43baa059acacc41bd718bc2ce28a9943568ee",
+      "volume_mm3": 47.81504018763665,
+      "bounds_mm": [
+        [
+          -26.149999618530273,
+          -20.899410247802734,
+          26.0
+        ],
+        [
+          -22.350000381469727,
+          -17.100589752197266,
+          36.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_1_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_1_nut.step",
+      "stl": "cad/o1_lid_mount_1_nut.stl",
+      "sha256_step": "b913bf5700197fa0a17c3a9018d974b15b57096a821390a10db6ff7b768d085d",
+      "sha256_stl": "ace4c004390b352c60be8b7e7dbd39956bb94579cc606baefbd734cd2b2f02a8",
+      "volume_mm3": 17.143702091137992,
+      "bounds_mm": [
+        [
+          -26.25,
+          -21.30940055847168,
+          26.5
+        ],
+        [
+          -22.25,
+          -16.69059944152832,
+          28.100000381469727
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_2_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_2_washer.step",
+      "stl": "cad/o1_lid_mount_2_washer.stl",
+      "sha256_step": "c5dc585aa0b959118e3aba4ae912b7e14d858c3e447f256b00b649a24c159d6d",
+      "sha256_stl": "781be72491430666b1b3f51a25d0235bea7f812fc9d61d7192c697c5cd535146",
+      "volume_mm3": 6.051492848977339,
+      "bounds_mm": [
+        [
+          7.0,
+          -39.74930191040039,
+          33.5
+        ],
+        [
+          11.5,
+          -35.25069808959961,
+          34.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_2_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_2_screw.step",
+      "stl": "cad/o1_lid_mount_2_screw.stl",
+      "sha256_step": "72ccdd11594924389f94196b62aea8bcdef93f14d60a4e97ada97c408386e0cf",
+      "sha256_stl": "5762efc97be1236b07dc58e2d04aadfceca1d2abf6f37fc06635fcbce6c85c0a",
+      "volume_mm3": 47.81504018763663,
+      "bounds_mm": [
+        [
+          7.349999904632568,
+          -39.399410247802734,
+          26.0
+        ],
+        [
+          11.149999618530273,
+          -35.600589752197266,
+          36.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_2_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_2_nut.step",
+      "stl": "cad/o1_lid_mount_2_nut.stl",
+      "sha256_step": "c4d520676d463a78849748423423062ccba74a50769483b32bfd93f4d1b8c3e9",
+      "sha256_stl": "9e7ad451a83488740c4b3013379ce1348ad92b43928cf4f4a724152642627581",
+      "volume_mm3": 17.143702091137992,
+      "bounds_mm": [
+        [
+          7.25,
+          -39.80940246582031,
+          26.5
+        ],
+        [
+          11.25,
+          -35.19059753417969,
+          28.100000381469727
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_3_washer",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_3_washer.step",
+      "stl": "cad/o1_lid_mount_3_washer.stl",
+      "sha256_step": "62ca27204fb69cb992ea2bb22756926800ee13ee1e7c5af35553c4c402d91fad",
+      "sha256_stl": "5bc308ec4dc2d1c903d05d7fc039367d9bf5e9c52448a881d4f5f56cd6b1866e",
+      "volume_mm3": 6.051492848977341,
+      "bounds_mm": [
+        [
+          7.0,
+          -21.249300003051758,
+          33.5
+        ],
+        [
+          11.5,
+          -16.750699996948242,
+          34.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_3_screw",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_3_screw.step",
+      "stl": "cad/o1_lid_mount_3_screw.stl",
+      "sha256_step": "e1a01b0b38e394ca483b0ef17695b3f2fbb52e0dbe7f3c2cfdb3264a094c2b0e",
+      "sha256_stl": "d6e56e73e2c1bbf53f489fb1a6d704292d980fb51fc63fec029b03ef13042e80",
+      "volume_mm3": 47.81504018763665,
+      "bounds_mm": [
+        [
+          7.349999904632568,
+          -20.899410247802734,
+          26.0
+        ],
+        [
+          11.149999618530273,
+          -17.100589752197266,
+          36.0
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    },
+    {
+      "id": "o1_lid_mount_3_nut",
+      "purpose": "M2 dimensional hardware reference; thread form is not modeled",
+      "material": "Measured M2 metal hardware",
+      "kind": "reference_only",
+      "step": "cad/o1_lid_mount_3_nut.step",
+      "stl": "cad/o1_lid_mount_3_nut.stl",
+      "sha256_step": "3bb56858bb07ccd3ba5b52e273e130a089ca54fc936c89650d5493c71b93f716",
+      "sha256_stl": "e407b639b8b7faf765c3fe65d49feff8d10d04db6d884e680bb256c90f2657df",
+      "volume_mm3": 17.143702091137996,
+      "bounds_mm": [
+        [
+          7.25,
+          -21.30940055847168,
+          26.5
+        ],
+        [
+          11.25,
+          -16.69059944152832,
+          28.100000381469727
+        ]
+      ],
+      "checks": {
+        "valid_single_solid": true,
+        "step_roundtrip": true,
+        "watertight_stl": true
+      },
+      "physical_fit_tested": false
+    }
+  ],
+  "added_reach_mm": 32,
+  "finger_to_drive_translation_mm": [
+    0.0,
+    -32.0,
+    0.0
+  ],
+  "protected_regions": [
+    {
+      "region": "leading_nail",
+      "symmetric_material_difference_mm3": 6.366462912410498e-12,
+      "passed": true
+    },
+    {
+      "region": "drive_interface",
+      "symmetric_material_difference_mm3": 1.8189894035458565e-12,
+      "passed": true
+    },
+    {
+      "region": "mount_0",
+      "symmetric_material_difference_mm3": 2.2737367544323206e-13,
+      "passed": true
+    },
+    {
+      "region": "mount_1",
+      "symmetric_material_difference_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_bay_lid",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_gel_core_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_mirror_sheet_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_mirror_bond_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_pcb_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_frame_with_camera_bay",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_gel_core_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_mirror_sheet_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_mirror_bond_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_pcb_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_bay_lid",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_mirror_sheet_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_mirror_bond_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_pcb_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_gel_core_witness",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_mirror_bond_witness",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_pcb_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_sheet_witness",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_pcb_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_mirror_bond_witness",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_focus_housing_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_pcb_reference",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_lens_reference",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_focus_housing_reference",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_rear_clearance_reference_0",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_lens_reference",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_rear_clearance_reference_1",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_0",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_rear_clearance_reference_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_1",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_rear_clearance_reference_2",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_0_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_1_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_camera_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_camera_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_camera_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_2_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_camera_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_camera_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_0_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_camera_mount_3_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_0_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_0_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_1_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_0_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_1_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_1_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_2_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_1_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_washer",
+      "b": "o1_lid_mount_2_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_washer",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_washer",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_screw",
+      "b": "o1_lid_mount_2_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_screw",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_screw",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_nut",
+      "b": "o1_lid_mount_3_washer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_nut",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_2_nut",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_3_washer",
+      "b": "o1_lid_mount_3_screw",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_3_washer",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "o1_lid_mount_3_screw",
+      "b": "o1_lid_mount_3_nut",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "failures": [],
+  "ray_segments": 210,
+  "opaque_ray_blockers": [],
+  "passed_nominal_checks": true,
+  "source_frame_conversion": {
+    "schema": "yam-source-solid/1",
+    "part": "hard_frame",
+    "source_sha256": "b59f7e26b280cd31e73f2efeb19d02583ff504edd83d70e6e508f0ce976856df",
+    "step_sha256": "fc6902f620400591caacbdf93d7afd5d487f2ff31bbff1871b64820d82a8683b",
+    "source_triangles": 9748,
+    "solid_faces": 5521,
+    "source_volume_mm3": 22747.22106269297,
+    "solid_volume_mm3": 22747.221062692883,
+    "volume_difference_mm3": 8.731149137020111e-11,
+    "bounds_mm": [
+      [
+        -24.710813522338867,
+        -117.6470718383789,
+        -4.3130645751953125
+      ],
+      [
+        6.889186382293701,
+        -2.7699999809265137,
+        28.283239364624023
+      ]
+    ],
+    "checks": {
+      "single_valid_solid": true,
+      "source_volume_and_bounds": true,
+      "step_roundtrip": true
+    },
+    "scope": "Faceted recovery of the pinned STL, not the original author's analytic CAD or a physical fit measurement."
+  },
+  "camera_plane": {
+    "origin": [
+      -7.5,
+      -25.28963259405314,
+      20.007270897184974
+    ],
+    "x_axis": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "normal": [
+      0.0,
+      -0.958623915135266,
+      0.2846755861164325
+    ]
+  },
+  "input_sha256": {
+    "engineering/designs/optical_root_bay.json": "e714b073a5351578aacf1cc94887e8d51dbcf574384aac6953262e96e0b01a98",
+    "engineering/scripts/build_optical_root_bay.py": "edde912813e9955028b6e3cd6b1096c4e7fa4b969b443803542f82633798b923",
+    "engineering/designs/optical_camera_space.json": "3942d9c4bf91f1676805f11a8468c7c40c0d04b2367f910af88f0cc8a125144a",
+    "engineering/research/optical_source_review.json": "67edf6c16d1d870678e6224ddfd1d4ff07599d013c87330a90c6c6560c1bb3d8",
+    "build/engineering/prototypes/optical/core_witnesses/20261012T071941.242797Z/report.json": "df6479705ff6a85ed7d56dada74dffb2990c8c7915f8af045311b3f7b796c243",
+    "build/engineering/prototypes/optical/camera_space_screens/20261012T074327.049703Z/report.json": "da5ca36fdab134674540adca37effe1871a50d23568e44b65f3797113f2432e3",
+    "engineering/scripts/prototype_cad.py": "398dd2aeb6029c068fa8d70fc70f2cf3bb4c67c5427495c9c038163b6535dfaa",
+    "engineering/scripts/source_brep.py": "228fba41ef66f374a887c02452489991500467780584e18865b127057d2010be",
+    "engineering/scripts/inspect_optical_obstructions.py": "2aecfb012f30a87ace54ecae8ebbe84c7feda43c1cc70817189b416dbaac7d71",
+    "build/engineering/prototypes/optical/path_searches/20261012T065149.643835Z/report.json": "66d6363916d486586e15d03107a797dd882ef8d3880dd09b48bf968e269d06d4",
+    "engineering/designs/optical_path_refinement.json": "deeaf3930dae5630c53bbb6cea7ea8f69221abeb8eebebf042436493b3e5a2dc"
+  },
+  "limits": [
+    "A source-matched root cap is retained while the sensing core moves distally by the camera-space screen's selected reach extension.",
+    "Actual drive fit, mounting hardware, body stiffness and precision must be tested. Preserved geometry is not a load rating.",
+    "Camera envelopes use the documented dimensions and an assumed pupil location; inspect actual camera/connector/nut fit.",
+    "Metal fasteners are dimensional references without detailed thread geometry.",
+    "Gel retention/molds, illumination, cable strain relief and optical/force qualification remain after this mechanical bay step.",
+    "The original mount geometry is retained at the drive; the sensing core and camera move distally.",
+    "Install the drive fasteners before the camera where tool access requires it.",
+    "Camera optical cavities and component details are not validated by these dimensional references."
+  ]
+}

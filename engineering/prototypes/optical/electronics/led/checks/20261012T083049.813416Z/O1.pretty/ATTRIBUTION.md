@@ -1,0 +1,1 @@
+Authored MIT-licensed footprints. LED functional land dimensions follow the Kingbright APT2012QBC/D data sheet; source hash is in optical_materials.json. Generic 1206 lands and solder-wire lands require purchased-component acceptance. No vendor artwork is redistributed.
