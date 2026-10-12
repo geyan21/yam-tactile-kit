@@ -49,7 +49,7 @@ def main():
     for name, expected in verify.items():
         if digest(ROOT/name) != expected:
             raise ValueError("Search input changed: "+name)
-    cfg_path = ROOT/"engineering/designs/optical_path_search.json"
+    cfg_path = ROOT/result.get("configuration", "engineering/designs/optical_path_search.json")
     cfg = json.loads(cfg_path.read_text())
     candidates = [(index, row) for index, row in enumerate(result["trials"]) if row["failed"] is None]
     targets = np.asarray(result["optical_targets_inner_yz_mm"])

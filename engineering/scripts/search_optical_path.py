@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Search a bounded neutral O1 folded path over the actual ENPIRE contact profile."""
 
+import argparse
 from datetime import datetime, timezone
 import itertools
 import json
@@ -88,6 +89,14 @@ def evaluate(camera, slope, intercept, target, normals, inner, cfg):
     if np.min(incidence_cos) < math.cos(math.radians(cfg["maximum_gel_incidence_deg"])):
         return {"failed": "gel_grazing_or_backface", "minimum_incidence_cos": float(np.min(incidence_cos))}
     incoming = mirror-camera
+    root_floor = None
+    if "root_ray_minimum_z_mm" in cfg:
+        probes = camera+np.linspace(0, 1, cfg["ray_samples_per_leg"])[None, :, None]*incoming[:, None, :]
+        zone = cfg["root_ray_y_zone_mm"]
+        within = (probes[:, :, 0] >= zone[0]) & (probes[:, :, 0] <= zone[1])
+        root_floor = float(np.min(probes[:, :, 1][within])) if np.any(within) else None
+        if root_floor is not None and root_floor < cfg["root_ray_minimum_z_mm"]:
+            return {"failed": "root_aperture_floor", "minimum_root_ray_z_mm": root_floor}
     pitch = np.arctan2(incoming[:, 1], -incoming[:, 0])
     if np.any(incoming[:, 0] >= 0):
         return {"failed": "mirror_behind_camera"}
@@ -123,17 +132,24 @@ def evaluate(camera, slope, intercept, target, normals, inner, cfg):
             "horizontal_ray_max_abs_deg": float(np.max(horizontal)),
             "maximum_gel_incidence_deg": math.degrees(math.acos(float(np.min(incidence_cos)))),
             "minimum_camera_leg_gap_mm": gap_a, "minimum_target_leg_gap_mm": gap_b,
+            "minimum_root_ray_z_mm": root_floor,
             "path_length_range_mm": [float(paths.min()), float(paths.max())],
             "reflection_tangent_residual": residual, "mirror_points_yz_mm": mirror.tolist()}
 
 
 def main():
-    cfg = json.loads(CONFIG.read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", type=Path, default=CONFIG)
+    args = parser.parse_args()
+    config_path = args.config.resolve()
+    if not config_path.is_relative_to(ROOT/"engineering/designs"):
+        parser.error("Use a versioned optical search configuration")
+    cfg = json.loads(config_path.read_text())
     folder = ROOT/"build/engineering/prototypes/optical/path_searches"/datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     with execution(ROOT/"build/records", "Search bounded neutral camera/PET-mirror poses over the real smoothed contact profile; distinguish geometric visibility from frame integration and optical/force qualification") as record:
         folder.mkdir(parents=True)
         record["run_directory"] = str(folder.relative_to(ROOT))
-        inputs = [CONFIG, ROOT/cfg["source_review"], Path(__file__), PARTS["hard_frame"], PARTS["soft_insert"],
+        inputs = [config_path, ROOT/cfg["source_review"], Path(__file__), PARTS["hard_frame"], PARTS["soft_insert"],
                   ROOT/"engineering/scripts/analyze_b1_interfaces.py", ROOT/"engineering/scripts/build_b1_parts.py"]
         for path in inputs:
             copied = folder/"inputs"/path.relative_to(ROOT)
@@ -186,6 +202,7 @@ def main():
             fig.savefig(folder/("optical_path."+extension), dpi=170)
         plt.close(fig)
         report = {"schema": "yam-o1-neutral-path-result/1", "physical_specimens_tested": 0,
+                  "configuration": str(config_path.relative_to(ROOT)),
                   "cases": len(trials), "passing_candidates": len(passing), "failure_counts": failures, "selected": chosen,
                   "source_frame_and_ribs_cleared": False, "physical_optics_validated": False,
                   "outer_gel_profile_yz_mm": outer.tolist(), "inner_gel_profile_yz_mm": inner.tolist(),
