@@ -1,0 +1,22 @@
+{
+  "schema": "yam-o1-camera-space/1",
+  "camera": "Raspberry Pi Camera Module 3 Wide, visible-light IR-cut variant",
+  "ray_origin_in_front_of_pcb_mm": 7.0,
+  "ray_origin_status": "Design assumption; the manufacturer does not specify the entrance-pupil location",
+  "pcb_thickness_mm": 1.12,
+  "front_housing_plan_mm": [10.8, 10.8],
+  "front_housing_height_mm": 4.07,
+  "lens_envelope_diameter_mm": 6.95,
+  "lens_front_height_mm": 8.3,
+  "rear_electronics_envelope_mm": 2.75,
+  "retained_root_cap_front_y_mm": -16,
+  "camera_to_root_cap_clearance_mm": 1.0,
+  "reach_extension_candidates_mm": [0, 5, 10, 15, 20, 25, 30, 32, 35],
+  "limits": [
+    "The PCB/optical housing follows named drawing dimensions; the rear full-board box is a conservative clearance envelope, not a manufacturer STEP model.",
+    "The assumed camera ray centre must be checked physically through focus and calibration.",
+    "A duplicated original root interface needs space behind the camera. Added reach is a design penalty to measure, not a claimed improvement.",
+    "This space screen does not provide the final camera mount, root adapter, cable routing or actual drive fit.",
+    "No physical force, precision or optical qualification is implied."
+  ]
+}
