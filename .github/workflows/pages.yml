@@ -24,6 +24,8 @@ jobs:
         id: python
         with:
           python-version: '3.12'
+      - name: Verify frozen artifacts are tracked
+        run: '"${{ steps.python.outputs.python-path }}" -I engineering/scripts/check_tracked_prototypes.py'
       - name: Verify software and clean reproduction
         run: '"${{ steps.python.outputs.python-path }}" -I engineering/scripts/run_ci_tests.py'
       - name: Verify geometry snapshot and build portable website
