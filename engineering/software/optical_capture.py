@@ -32,7 +32,7 @@ def main():
     from picamera2 import Picamera2
     from libcamera import controls
     from optical_adc import LinuxBus, scan
-    camera, bus, completed, failure, count = None, None, False, None, 0
+    camera, bus, completed, failure, count, started = None, None, False, None, 0, False
     folder = args.output.resolve()
     folder.mkdir(parents=True)
     (folder/"frames").mkdir()
@@ -62,6 +62,7 @@ def main():
             if args.mode == "capture":
                 bus = LinuxBus()
             camera.start()
+            started = True
             for _ in range(5):
                 request = camera.capture_request(wait=False).get_result(timeout=3)
                 request.release()
@@ -81,7 +82,10 @@ def main():
                         for key in ("SensorTimestamp", "ExposureTime", "AnalogueGain", "LensPosition", "FrameDuration", "ColourGains", "ScalerCrop"):
                             if key in metadata:
                                 value = metadata[key]
-                                keep[key] = list(value) if key in ("ColourGains", "ScalerCrop") else value
+                                if key == "ScalerCrop" and hasattr(value, "x"):
+                                    keep[key] = [value.x, value.y, value.width, value.height]
+                                else:
+                                    keep[key] = list(value) if key in ("ColourGains", "ScalerCrop") else value
                     finally:
                         request.release()
                     adc, faults = None, metadata_faults(keep, cfg, captured_ns, previous)
@@ -111,10 +115,22 @@ def main():
             failure = type(error).__name__+": "+str(error)
             raise
         finally:
+            cleanup = []
             if camera is not None:
-                camera.stop(); camera.close()
+                try:
+                    if started:
+                        camera.stop()
+                    camera.close()
+                except Exception as error:
+                    cleanup.append("camera:"+str(error))
             if bus is not None:
-                bus.close()
+                try:
+                    bus.close()
+                except Exception as error:
+                    cleanup.append("ADC:"+str(error))
+            if cleanup:
+                completed = False
+                failure = (failure+"; " if failure else "")+"cleanup "+repr(cleanup)
             receipt = {"schema": "yam-o1-capture-receipt/1", "capture_complete": completed, "failure": failure,
                        "requested_duration_s": args.duration, "frames": count,
                        "files_sha256": {name: digest(folder/name) for name in ("session.json", "frames.jsonl") if (folder/name).is_file()},
@@ -122,6 +138,8 @@ def main():
             (folder/"receipt.json").write_text(json.dumps(receipt, indent=2)+"\n")
             record["result"] = {"directory": str(folder), "frames": count, "capture_complete": completed, "failure": failure}
         print(json.dumps({"directory": str(folder), "frames": count, "capture_complete": completed}, indent=2))
+        if not completed:
+            raise RuntimeError(failure)
 
 
 if __name__ == "__main__":

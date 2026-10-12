@@ -37,6 +37,8 @@ def main():
     row = next((r for r in rows if r["index"] == args.frame), None)
     if row is None or metadata_faults(row["metadata"], header["camera_config"], row["host_monotonic_ns"]):
         raise ValueError("Use a frame with complete matching camera metadata")
+    if len(row["metadata"].get("ScalerCrop", [])) != 4:
+        raise ValueError("The actual camera crop must be recorded")
     image_path = (source/row["blue_path"]).resolve()
     if not image_path.is_relative_to(source) or digest(image_path) != row["blue_sha256"]:
         raise ValueError("Setup image changed")
@@ -52,6 +54,7 @@ def main():
                  "created_utc": datetime.now(timezone.utc).isoformat(), "specimen": header["specimen"],
                  "device_id": header["device_id"], "geometry_sha256": header["geometry_sha256"],
                  "camera_config": cfg, "camera_config_sha256": config_hash(cfg), "detection": detection,
+                 "camera_model": header["camera_model"], "scaler_crop": row["metadata"]["ScalerCrop"],
                  "markers": markers, "source_session_sha256": digest(source/"session.json"),
                  "source_frame_blue_sha256": row["blue_sha256"], "physical_performance_qualified": False,
                  "limits": "Inspect the overlay: all 42 numbered components must be the painted dots. Fixed image coordinates are not a calibrated millimetre/pressure/normal map."}

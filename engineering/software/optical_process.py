@@ -16,6 +16,8 @@ def load_reference(path):
     ref = json.loads(path.read_text())
     if ref.get("schema") != "yam-o1-marker-reference/1" or ref.get("evidence_kind") != "physical_setup_unreviewed":
         raise ValueError("Use an identified O1 setup reference")
+    if len(ref["markers"]) != 42 or ref["detection"]["expected_markers"] != 42:
+        raise ValueError("The O1 build has 42 painted markers")
     if digest(path.parent/"baseline.pgm") != ref["baseline_sha256"]:
         raise ValueError("Baseline image changed")
     if config_hash(validate_config(ref["camera_config"])) != ref["camera_config_sha256"]:
@@ -36,7 +38,7 @@ def recording_rows(source, reference):
     for name in ("session.json", "frames.jsonl"):
         if receipt.get("files_sha256", {}).get(name) != digest(source/name):
             raise ValueError("Capture index or header changed")
-    for key in ("specimen", "device_id", "geometry_sha256", "camera_config_sha256"):
+    for key in ("specimen", "device_id", "geometry_sha256", "camera_config_sha256", "camera_model"):
         if header.get(key) != reference.get(key):
             raise ValueError("Capture/reference mismatch: "+key)
     if config_hash(validate_config(header["camera_config"])) != reference["camera_config_sha256"]:
@@ -53,6 +55,8 @@ def recording_rows(source, reference):
                 faults.append("host_time_not_increasing")
             previous_host = row["host_elapsed_s"]
             faults += metadata_faults(row.get("metadata", {}), header["camera_config"], row["host_monotonic_ns"], previous_sensor)
+            if row.get("metadata", {}).get("ScalerCrop") != reference["scaler_crop"]:
+                faults.append("camera_scaler_crop_changed")
             previous_sensor = row.get("metadata", {}).get("SensorTimestamp", previous_sensor)
             observed = {"features": None}
             try:

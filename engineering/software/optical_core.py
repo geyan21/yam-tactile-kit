@@ -58,6 +58,8 @@ def pgm_bytes(width, height, pixels):
 
 
 def read_pgm(path):
+    if Path(path).stat().st_size > 12000128:
+        raise ValueError("Image exceeds the bounded O1 frame size")
     data = Path(path).read_bytes()
     try:
         magic, dimensions, maximum, pixels = data.split(b"\n", 3)
@@ -93,6 +95,8 @@ def detect_markers(image, cfg):
     threshold = cfg["threshold"]
     if type(threshold) is not int or not 1 <= threshold <= 254:
         raise ValueError("Threshold must be an 8-bit value")
+    if not (1 <= cfg["area_min_px"] <= cfg["area_max_px"] <= 10000):
+        raise ValueError("Invalid marker area limits")
     visited = bytearray(width*height)
     components = []
     for seed, value in enumerate(pixels):
