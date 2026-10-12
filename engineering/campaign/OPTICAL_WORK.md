@@ -62,20 +62,25 @@ Selected facts/hashes are in `optical_readout.json`. Solaris/Psycho Paint/
 Silc Pig/LED choices remain in the unchanged `optical_materials.json`.
 
 Four O1 docs, BOM, explicit wiring SVG, overview catalog entry and website
-integration have been authored. The current visual run
-`visuals/20261012T090357.916328Z` and card review
-`diagram_reviews/20261012T090603.069122Z` passed and were inspected.
-**One visual-only correction is pending:** move R2/R4/D1 board labels clear
-of pads (already edited in `draw_optical_prototype.py`). Rerun visuals and
-the two-card review, then use those new runs for the freeze.
-The side placement view and 3D frame/mold images were clear on inspection.
+integration are complete. Final visuals are
+`visuals/20261012T091039.360002Z`, with card review
+`diagram_reviews/20261012T091201.149152Z`. R2/R4/D1 board labels were
+moved clear of pads and visually checked. The side placement view and 3D
+frame/mold images were also inspected.
 
-Next: commit pending sources, regenerate/inspect corrected visuals, freeze
-with `freeze_optical.py`, stage ALL generated files and run
-`check_tracked_prototypes.py`. Then full software/clean-source checks,
+`engineering/prototypes/optical/` is now frozen: **304 files plus its
+snapshot, 87 CAD entries**, snapshot SHA256
+`4fc0774dd64467768ed51038a9876e369238c1c544ac1823a43e146fa7b75acb`.
+Commit `a7a23325a0caa1a4458551d0420edad5e539ac51` adds that packet.
+Git inclusion check `build/engineering/tracked_snapshot_checks/20261012T091415.394730Z`
+passes all 20 manifests and 4,774 expected paths. The frame STEP is about
+40 MB; final distribution sizes still need checking.
+
+Next: full software/clean-source checks from a fresh Git checkout,
 site/link/archive checks, browser checks on desktop/mobile and all 12
-designs, distribution staging/size checks, public push, Actions/release/
-Pages verification. **Do not claim O1 live until verified.**
+designs (`verify_browser.py --optical-views` is available), distribution
+staging/size checks, public push, Actions/release/Pages verification.
+**Do not claim O1 live until verified.**
 The complete archive was ~1.963 GB before O1; check the final asset limit.
 
 Older notes below are historical and may describe completed work.
