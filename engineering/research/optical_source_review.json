@@ -1,0 +1,54 @@
+{
+  "schema": "yam-o1-primary-source-review/1",
+  "reviewed_utc_date": "2026-10-12",
+  "physical_specimens_tested": 0,
+  "status": "Camera and reference construction review; O1 geometry and physical performance are not yet qualified",
+  "paper": {
+    "title": "GelSight Baby Fin Ray: A Compact, Compliant, Flexible Finger with High-Resolution Tactile Sensing",
+    "authors": ["Sandra Q. Liu", "Yuxiang Ma", "Edward H. Adelson"],
+    "url": "https://arxiv.org/pdf/2303.14883v1",
+    "sha256": "735006f17ac99ddb1ebdc4f032450cddff0d1571988a89f0278d9fc0e8fa8508",
+    "reference_construction": {
+      "structure": "Hollow TPU 95A Fin Ray with rigid backing; unobstructed inner optical path",
+      "gel_section_mm": [18, 2.5],
+      "gel_profile_radius_mm": 25,
+      "gel": "Paper reports XP-565 parts A/B and LC1550 plasticizer in 1:10:3 proportions; verify current supplier instructions before adopting",
+      "mirror": "0.2 mm reflective PET sheet on the inner back surface",
+      "camera": "Paper uses a Raspberry Pi Zero Spy Camera with nominal 120 degree FOV; this is not the selected O1 camera",
+      "lighting": "Blue 2835 LEDs at the base, fluorescent gel sides and a yellow filter",
+      "software": "Raspberry Pi capture and perspective warp of the mirror image"
+    },
+    "limits": ["Different finger geometry and material construction", "Does not qualify the new ENPIRE geometry or 20 N force accuracy", "No paper photograph or full paper is republished as new kit artwork"]
+  },
+  "camera_candidate": {
+    "name": "Raspberry Pi Camera Module 3 Wide, standard visible-light IR-cut variant",
+    "sensor": "Sony IMX708",
+    "product_brief_url": "https://datasheets.raspberrypi.com/camera/camera-module-3-product-brief.pdf",
+    "product_brief_sha256": "578efcad6337696a29b9c068815a01d63ddcf7beacf584051d61cf1cddeeaf0a",
+    "mechanical_url": "https://datasheets.raspberrypi.com/camera/camera-module-3-wide-mechanical-drawing.pdf",
+    "mechanical_sha256": "c5f87a9b48d63857fb3d9c0a3deeec797325c56d198c80bcb77a2062e6925b92",
+    "resolution_pixels": [4608, 2592],
+    "nominal_horizontal_vertical_fov_deg": [102, 67],
+    "product_overall_dimensions_mm": [25, 24, 12.4],
+    "drawing_board_dimensions_mm": [25, 23.862, 1.12],
+    "drawing_hole_diameter_mm": 2.2,
+    "drawing_holes_from_top_left_mm": [[2, 9.362], [23, 9.362], [2, 21.862], [23, 21.862]],
+    "drawing_lens_axis_from_top_left_mm": [12.5, 9.462],
+    "drawing_lens_diameter_mm": 6.95,
+    "drawing_focus_housing_plan_mm": [10.8, 10.8],
+    "drawing_axial_callouts_mm": [8.3, 4.07, 2.75, 12.0],
+    "entrance_pupil_position_mm": null,
+    "connector": "15 conductors, 1 mm pitch FPC; product brief lists a 200 mm cable",
+    "choice_reason": "Official mechanical drawing and maintained Raspberry Pi capture interface; base mounting can keep the rigid electronics off the flexible sensing body",
+    "limits": ["Nominal FOV is not calibrated distortion or usable edge quality", "Pupil location, focus across the folded path and actual body/connector seating require inspection", "Different camera from the published Baby Fin Ray"]
+  },
+  "capture": {
+    "manual_url": "https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf",
+    "manual_sha256": "7eb9cae4030fce5ba5270288d323cc7fd7fa202e1d37f7bef29e87f0edbac715",
+    "verified_notes": [
+      "Picamera2 RGB888 memory order is B,G,R and is suitable for OpenCV; do not assume its name means an R,G,B byte array.",
+      "Manual autofocus mode and LensPosition can freeze the lens; query the actual supported control range.",
+      "Exposure/gain/colour settings and frame timing need fixed recorded values for tactile comparison."
+    ]
+  }
+}

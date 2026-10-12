@@ -1,0 +1,33 @@
+{
+  "schema": "yam-o1-neutral-path-search/1",
+  "physical_specimens_tested": 0,
+  "source_review": "engineering/research/optical_source_review.json",
+  "gel_y_extent_mm": [-94, -17],
+  "profile_sampling_mm": 0.15,
+  "smoothing_sigma_mm": 2.0,
+  "outer_surface_z_offset_mm": -0.2,
+  "gel_normal_thickness_mm": 2.5,
+  "gel_width_mm": 13,
+  "active_half_width_mm": 5.5,
+  "target_pitch_mm": 2,
+  "camera_x_mm": -7.5,
+  "camera_pupil_y_candidates_mm": [0, 5, 10],
+  "camera_pupil_z_candidates_mm": [18, 22, 26],
+  "mirror_slope_candidates": [0.25, 0.35, 0.45, 0.5, 0.55, 0.65],
+  "mirror_intercept_candidates_mm": [35, 40, 45, 50, 53, 55, 60],
+  "mirror_y_limits_mm": [-98, -8],
+  "mirror_max_z_mm": 48,
+  "mirror_edge_extension_mm": 2,
+  "mirror_width_mm": 14,
+  "usable_horizontal_vertical_fov_deg": [92, 57],
+  "maximum_gel_incidence_deg": 72,
+  "ray_to_gel_gap_mm": 0.15,
+  "ray_samples_per_leg": 100,
+  "limits": [
+    "Neutral geometric visibility search only; the current opaque ribs and frame are not yet cleared by a manufactured design.",
+    "The optical target is the gel's inner face. Refraction, distortion, focus, coating/light quality, bending and force response remain.",
+    "A flat neutral reflective PET plane and a candidate camera ray origin are assumed. The actual entrance pupil is not specified by the mechanical drawing.",
+    "Camera/controller mounting, a hollow flexible insert, gel retention, a revised frame where required, illumination and thin nail sensing still need integration.",
+    "No force-to-deformation law or 20 N qualification is inferred."
+  ]
+}
