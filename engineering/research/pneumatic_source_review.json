@@ -29,7 +29,11 @@
     "i2c_clock_khz": [100, 400],
     "startup_max_ms": 25,
     "internal_dead_volume_mm3": null,
-    "pin_mapping_status": "Read the actual F1RD package drawing before layout; text extraction is insufficient.",
+    "pin_mapping_status": "Visually checked against the F1RD drawing on page 14; PAD-27 land layout still needs review.",
+    "f1rd_i2c_pins": {"1": "Vs", "2": "GND", "3": "analog Vout", "4": "do not connect", "5": "SCL", "6": "do not connect", "7": "do not connect", "8": "SDA"},
+    "differential_ports": {"B": "high pressure", "A": "low pressure"},
+    "port_outer_diameter_mm": 3.0,
+    "port_bore_diameter_mm": 2.0,
     "range_candidate": "ELVR-L30D-F1RD-C-NI3H",
     "candidate_status": "Ordering-table combination for range screening; availability and suitable chamber sensitivity are unconfirmed."
   },

@@ -1,0 +1,17 @@
+{
+  "schema": "yam-pneumatic-channel-space-screen/1",
+  "surface_basis": "engineering/development/f1/r3/configuration/f1_formed_stack.json",
+  "sites": [2, 3, 4, 5],
+  "candidate_channel_diameters_mm": [1.0, 1.5, 2.0],
+  "minimum_source_wall_mm": 0.6,
+  "minimum_between_channel_web_mm": 0.6,
+  "depth_range_mm": [0.25, 15.0],
+  "depth_step_mm": 0.025,
+  "nominal_transverse_channel_length_mm": 10.0,
+  "limits": [
+    "A geometric space survey, not a finished channel layout or a fabrication drawing.",
+    "Wall values are initial design assumptions, not a validated print/cast process.",
+    "Existing TPU holes remain obstacles; candidate channels must be inside actual source material.",
+    "Ports, channel washing, sealing, gas permeability, stiffness, pressure response and 20 N behavior are not checked."
+  ]
+}
