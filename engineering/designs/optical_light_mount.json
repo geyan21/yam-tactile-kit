@@ -17,6 +17,7 @@
   "replacement_screw_length_mm": 14,
   "washer_count_per_light_mount": 3,
   "washer_thickness_mm": 0.5,
+  "washer_radial_clearance_mm": 0.15,
   "white_coating_vertical_thickness_target_mm": 0.1,
   "limits": [
     "The carrier uses two existing camera mounting holes and M2x14 screws with three 0.5 mm washers at each head; it does not load the autofocus barrel or housing.",

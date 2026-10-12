@@ -95,6 +95,9 @@ def main():
                                      [u, v, cfg["post_n_mm"][0]], [0, 0, 1]),
                                  block(min(u, 0), max(u, 0), *cfg["bridge_v_mm"], floor0, floor1))
             holder = holder.cut(cyl(cfg["mount_clear_hole_mm"]/2, 7, [u, v, -.1], [0, 0, 1]))
+            holder = holder.cut(cyl(2.25+cfg["washer_radial_clearance_mm"],
+                                   cfg["clip_lip_n_mm"][1]-floor1+.2,
+                                   [u, v, floor1], [0, 0, 1]))
             washer_total = cfg["washer_count_per_light_mount"]*cfg["washer_thickness_mm"]
             seat = floor1+washer_total
             screw = cyl(1, cfg["replacement_screw_length_mm"], [u, v, seat-cfg["replacement_screw_length_mm"]], [0, 0, 1]).fuse(
